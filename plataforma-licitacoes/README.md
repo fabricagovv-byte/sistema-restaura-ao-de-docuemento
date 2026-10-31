@@ -28,6 +28,21 @@ O que está pronto e foi testado nesta entrega:
 
 O que ficou de fora ou depende de você está em [docs/fontes.md](docs/fontes.md#o-que-falta).
 
+## Coletor no GitHub Actions (quando o servidor não alcança as fontes)
+
+O workflow `.github/workflows/coletor-licitacoes.yml` roda a cada 6 horas (e a cada push no backend)
+nos servidores do GitHub, que têm acesso ao PNCP, ao Compras.gov, ao Querido Diário e ao IBGE. Ele
+roda os testes ao vivo, coleta tudo, baixa os documentos dos editais mais relevantes, extrai o texto
+página a página e publica o pacote no branch `dados-licitacoes`. Qualquer instalação importa:
+
+```bash
+git fetch origin dados-licitacoes
+git worktree add /tmp/pacote origin/dados-licitacoes
+cd plataforma-licitacoes/backend && python -m licitacoes.cli importar-coleta /tmp/pacote
+```
+
+Para rodar na hora: aba Actions do GitHub → "Coletor de licitações" → Run workflow.
+
 ## Instalar com Docker (produção)
 
 ```bash

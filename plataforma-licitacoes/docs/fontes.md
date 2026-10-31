@@ -23,6 +23,15 @@ contratações antigas (Lei 8.666), avisos que só saem em diário oficial e dad
 Não contornamos CAPTCHA, login nem bloqueio. Um 401/403 vira `AcessoNegado`, e o documento fica
 marcado como "requer autenticação" no ZIP e no painel.
 
+## Coletor remoto
+
+Quando o servidor da plataforma não alcança as fontes (como o ambiente onde ela foi construída), o
+workflow `coletor-licitacoes.yml` faz a coleta no GitHub Actions e publica um pacote no branch
+`dados-licitacoes`; `cli importar-coleta` traz tudo para o banco local, mantendo a fonte original de
+cada edital, as execuções de cada fonte (para o painel de qualidade) e o texto dos documentos com o
+número de página original (para a análise com IA). Repositório público: os minutos do Actions são
+gratuitos e os dados publicados são públicos (atos oficiais).
+
 ## Comportamento do PNCP (medido em chamadas reais, out/2026)
 
 Registrado pelo projeto público [Radar-PNCP](https://github.com/victor-ozores/Radar-PNCP) (MIT) e
