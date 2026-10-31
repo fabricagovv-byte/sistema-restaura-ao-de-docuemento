@@ -12,7 +12,7 @@ contratações antigas (Lei 8.666), avisos que só saem em diário oficial e dad
 | PNCP — API de consulta e integração | `conectores/pncp.py` | Pronto e testado com respostas reais gravadas | Rede desta sessão bloqueia `pncp.gov.br` (HTTP 403 do proxy) | Liberar `pncp.gov.br` na rede do servidor |
 | Compras.gov.br — Dados Abertos | `conectores/outras.py` | Pronto, nomes de campo do Swagger público | Não validado ao vivo (rede bloqueada) | Liberar `dadosabertos.compras.gov.br` e rodar `LIC_TESTES_AO_VIVO=1 pytest tests/test_ao_vivo.py` |
 | Portal da Transparência (CGU) | `conectores/outras.py` | Pronto | Exige chave | Cadastrar e-mail em portaldatransparencia.gov.br/api-de-dados/cadastrar-email; definir `LIC_TRANSPARENCIA_CHAVE` e `LIC_TRANSPARENCIA_ORGAOS` (códigos SIAFI) |
-| Querido Diário (diários municipais) | `conectores/outras.py` | Pronto | Rede bloqueada nesta sessão | Liberar `api.queridodiario.ok.org.br` |
+| Querido Diário (diários municipais) | `conectores/outras.py` | Pronto | Rede bloqueada nesta sessão | Liberar `queridodiario.ok.org.br` (o endereço antigo `api.queridodiario.ok.org.br` recusa TLS) |
 | IBGE (municípios) | `conectores/outras.py` | **Funcionando** pela cópia pública (MIT) quando a API do IBGE não responde | API do IBGE bloqueada aqui | Liberar `servicodados.ibge.gov.br` (opcional) |
 | Espelhos do PNCP no GitHub | `conectores/outras.py` | **Funcionando ao vivo** | Cobrem sobretudo SP, MG, PR e RJ (é o recorte de quem mantém) | Usar como contingência; o PNCP direto cobre o país todo |
 | Diário Oficial da União (INLABS) | — | Não implementado | Exige cadastro no INLABS | Avisos federais já chegam pelo PNCP; implementar se precisar do DOU em si |
@@ -76,7 +76,7 @@ inteiro com o acesso direto ao PNCP. A plataforma não declara cobertura que nã
 
 ## O que falta
 
-* Liberar a rede para `pncp.gov.br`, `dadosabertos.compras.gov.br`, `api.queridodiario.ok.org.br` e
+* Liberar a rede para `pncp.gov.br`, `dadosabertos.compras.gov.br`, `queridodiario.ok.org.br` e
   `servicodados.ibge.gov.br` e rodar os testes ao vivo.
 * `ANTHROPIC_API_KEY` para a análise com IA (testada com cliente simulado).
 * Credenciais de SMTP e do WhatsApp Business (Cloud API da Meta, com template aprovado) para os alertas.

@@ -148,7 +148,7 @@ def normalizar_comprasgov_legado(raw: dict) -> dict:
 # --------------------------------------------------------------------------- Querido Diário
 class ConectorQueridoDiario:
     codigo = "querido_diario"
-    BASE = "https://api.queridodiario.ok.org.br"
+    BASE = "https://queridodiario.ok.org.br/api"  # o antigo api.queridodiario.ok.org.br recusa TLS (out/2026)
 
     def __init__(self, http: ClienteHttp | None = None):
         self.http = http or ClienteHttp(intervalo_minimo_s=1.0)

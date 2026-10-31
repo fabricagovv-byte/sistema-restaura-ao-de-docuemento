@@ -31,7 +31,7 @@ CATALOGO = [
          procedimento="Cadastrar e-mail em portaldatransparencia.gov.br/api-de-dados/cadastrar-email e definir "
                       "LIC_TRANSPARENCIA_CHAVE e LIC_TRANSPARENCIA_ORGAOS."),
     dict(codigo="querido_diario", nome="Diários oficiais municipais (Querido Diário)", tipo="diario_oficial",
-         url_base="https://api.queridodiario.ok.org.br", status_integracao="ativo",
+         url_base="https://queridodiario.ok.org.br/api", status_integracao="ativo",
          como_coberto="Busca textual de avisos de licitação nos diários de centenas de municípios.",
          procedimento="Sem credencial. A cobertura de municípios é a do projeto Querido Diário."),
     dict(codigo="dou", nome="Diário Oficial da União (INLABS)", tipo="diario_oficial",
