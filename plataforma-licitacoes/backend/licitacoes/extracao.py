@@ -140,6 +140,13 @@ def _texto(nome: str, dados: bytes) -> list[Pagina]:
 
 def extrair(nome: str, dados: bytes, usar_ocr: bool = True, profundidade: int = 0) -> list[Pagina]:
     n = nome.lower()
+    if dados[:1] == b"{" and b'"paginas"' in dados[:4000]:
+        # texto já extraído página a página pelo coletor remoto (mantém o número de página original)
+        import json
+
+        doc = json.loads(dados.decode("utf-8"))
+        return [Pagina(p.get("documento") or doc.get("documento") or nome, p["numero"], p["texto"], ocr=p.get("ocr", False))
+                for p in doc.get("paginas", [])]
     if dados.startswith(b"%PDF") or n.endswith(".pdf"):
         return _pdf(nome, dados, usar_ocr)
     if dados.startswith(b"PK"):

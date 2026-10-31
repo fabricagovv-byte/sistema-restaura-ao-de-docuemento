@@ -42,6 +42,11 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("qualidade")
     sub.add_parser("reclassificar", help="reaplica as categorias a todos os editais")
     sub.add_parser("agendador", help="ciclo de monitoramento sem Celery")
+    co = sub.add_parser("coletar", help="coleta completa e exporta um pacote (para rodar no GitHub Actions)")
+    co.add_argument("saida"), co.add_argument("--top", type=int, default=40), co.add_argument("--rapido", action="store_true")
+    co.add_argument("--dias", type=int, default=2)
+    im = sub.add_parser("importar-coleta", help="importa o pacote gerado por `coletar`")
+    im.add_argument("pasta")
     sub.add_parser("servidor", help="sobe a API em :8000")
     a = p.parse_args(argv)
 
@@ -112,6 +117,15 @@ def main(argv: list[str] | None = None) -> int:
                 lic.aderencia = coleta.calcular_aderencia(lic)
                 n += 1
             print("reclassificados:", n)
+        elif a.cmd == "coletar":
+            from .coletor_remoto import coletar, exportar
+
+            r = coletar(s, dias=a.dias, detalhar_top=a.top, rapido=a.rapido)
+            _imprimir(exportar(s, a.saida, r))
+        elif a.cmd == "importar-coleta":
+            from .coletor_remoto import importar
+
+            _imprimir(importar(s, a.pasta))
         elif a.cmd == "agendador":
             tarefas.agendador_simples()
     return 0

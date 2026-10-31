@@ -1,0 +1,88 @@
+# Coletor da Plataforma Nacional de Licitações.
+# Roda onde há acesso às fontes oficiais (PNCP, Compras.gov, Querido Diário, IBGE) e publica um
+# pacote de dados no branch `dados-licitacoes`. Qualquer instalação importa com:
+#   git fetch origin dados-licitacoes && git worktree add /tmp/pacote origin/dados-licitacoes
+#   python -m licitacoes.cli importar-coleta /tmp/pacote
+name: Coletor de licitações
+
+on:
+  push:
+    branches: [claude/wizardly-albattani-dn0mei]
+    paths: ["plataforma-licitacoes/backend/**", ".github/workflows/coletor-licitacoes.yml"]
+  workflow_dispatch:
+    inputs:
+      rapido:
+        description: "Só propostas abertas e documentos (sem publicados, Compras.gov e diários)"
+        type: boolean
+        default: false
+      top:
+        description: "Quantos editais relevantes detalhar (itens + documentos)"
+        default: "40"
+  schedule:
+    - cron: "23 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: coletor-licitacoes
+  cancel-in-progress: false
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: plataforma-licitacoes/backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: plataforma-licitacoes/backend/requirements.txt
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+
+  coleta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      LIC_DATABASE_URL: sqlite:///${{ github.workspace }}/coleta.db
+      LIC_ARMAZENAMENTO_DIR: ${{ github.workspace }}/arquivos
+      LIC_EXECUCAO: local
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: plataforma-licitacoes/backend/requirements.txt
+      - name: Dependências (com OCR em português)
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q tesseract-ocr tesseract-ocr-por qpdf
+          pip install -r plataforma-licitacoes/backend/requirements.txt
+      - name: Testes contra as fontes reais
+        working-directory: plataforma-licitacoes/backend
+        continue-on-error: true
+        env:
+          LIC_TESTES_AO_VIVO: "1"
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/pacote"
+          pytest tests/test_ao_vivo.py -v -p no:cacheprovider 2>&1 | tee "$GITHUB_WORKSPACE/pacote/testes_ao_vivo.txt"
+      - name: Coleta nacional
+        working-directory: plataforma-licitacoes/backend
+        run: |
+          python -m licitacoes.cli coletar "$GITHUB_WORKSPACE/pacote" --top "${{ inputs.top || '40' }}" ${{ inputs.rapido && '--rapido' || '' }} 2>&1 | grep -v "HTTP Request" | tail -200
+      - name: Publicar no branch dados-licitacoes
+        if: always()
+        run: |
+          cd "$GITHUB_WORKSPACE/pacote"
+          test -f resumo.json || { echo "sem pacote para publicar"; exit 1; }
+          git init -q && git checkout -q -b dados-licitacoes
+          git config user.name "coletor-licitacoes"
+          git config user.email "coletor-licitacoes@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Coleta $(date -u +%Y-%m-%dT%H:%MZ) — execução ${GITHUB_RUN_ID}"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" dados-licitacoes
