@@ -27,6 +27,9 @@ TESTES = [
     ("comprasgov_api_docs", "https://dadosabertos.compras.gov.br/v3/api-docs", None),
     ("querido_diario_api", "https://api.queridodiario.ok.org.br/gazettes", {"querystring": "licitação", "size": 1}),
     ("querido_diario_site_api", "https://queridodiario.ok.org.br/api/gazettes", {"querystring": "licitação", "size": 1}),
+    ("querido_diario_busca_real", "https://queridodiario.ok.org.br/api/gazettes",
+     {"querystring": '"digitalização" licitação', "published_since": D(7), "published_until": D(0), "size": 2,
+      "excerpt_size": 300, "number_of_excerpts": 2, "sort_by": "descending_date"}),
     ("pncp_arquivos", "https://pncp.gov.br/api/pncp/v1/orgaos/44531788000138/compras/2026/168/arquivos", None),
 ]
 
@@ -39,8 +42,11 @@ def chamar(url, params, verify):
         if "api-docs" in url and r.status_code == 200:
             try:
                 d = r.json()
-                corpo = json.dumps({p: {m: [x.get("name") for x in (v.get("parameters") or [])] for m, v in ops.items()}
-                                    for p, ops in d.get("paths", {}).items()}, ensure_ascii=False)
+                corpo = json.dumps({p: {m: [(x.get("name"), x.get("required"), (x.get("schema") or {}).get("format"))
+                                            for x in (v.get("parameters") or [])] for m, v in ops.items()}
+                                    for p, ops in d.get("paths", {}).items()
+                                    if "contratac" in p or "legado/1_" in p or "pregao" in p.lower()}, ensure_ascii=False)
+                return {"status": r.status_code, "url": str(r.url), "corpo": corpo[:40000]}
             except ValueError:
                 pass
         return {"status": r.status_code, "url": str(r.url), "content_type": r.headers.get("content-type"),
