@@ -117,6 +117,8 @@ def baixar_documento(s: Session, doc: Documento, http: ClienteHttp | None = None
 
 
 def baixar_todos(s: Session, lic: Licitacao, http: ClienteHttp | None = None) -> dict:
+    s.flush()
+    s.refresh(lic, ["documentos"])  # documentos recém-listados pelo detalhar() precisam aparecer aqui
     res: dict[str, int] = {}
     for doc in lic.documentos:
         if doc.status == "baixado" and doc.caminho and armazenamento().existe(doc.caminho):

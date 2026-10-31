@@ -149,3 +149,26 @@ def test_analise_sem_ia_disponivel(banco):
     an = analise.analisar(s, lic)  # sem documentos
     assert an.status == "parcial" and "dados estruturados" in an.erro
     assert an.relatorio["campos"]["objeto"]["valor"].startswith("Serviços de digitalização")
+
+
+def test_detalhar_e_baixar_na_mesma_sessao(banco, edital_lins):
+    """Regressão: documentos listados por detalhar() têm de ser baixados na mesma sessão."""
+    from licitacoes.conectores.pncp import ConectorPncp
+
+    s = banco
+    _, lic = coleta.gravar(s, _registro(), catalogo.fonte(s, "pncp"))
+    s.commit()
+    pdf = _pdf_do_edital(edital_lins)
+
+    def handler(r: httpx.Request):
+        if r.url.path.endswith("/itens"):
+            return httpx.Response(200, json=[{"numeroItem": 1, "descricao": "Serviço", "quantidade": 1, "valorUnitarioEstimado": 10}])
+        if r.url.path.endswith("/arquivos"):
+            return httpx.Response(200, json=[{"sequencialDocumento": 1, "titulo": "Edital.pdf", "tipoDocumentoNome": "Outros Documentos",
+                                              "url": "https://pncp.gov.br/pncp-api/v1/orgaos/1/compras/2026/1/arquivos/1"}])
+        return httpx.Response(200, content=pdf, headers={"content-type": "application/pdf"})
+
+    http = ClienteHttp(intervalo_minimo_s=0, http=httpx.Client(transport=httpx.MockTransport(handler)), dormir=lambda x: None)
+    coleta.detalhar(s, lic, conector=ConectorPncp(http))
+    assert documentos.baixar_todos(s, lic, http) == {"baixado": 1}
+    assert lic.documentos[0].tipo == "edital"

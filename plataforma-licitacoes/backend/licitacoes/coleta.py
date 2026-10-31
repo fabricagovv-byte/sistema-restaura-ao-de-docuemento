@@ -310,7 +310,7 @@ def detalhar(s: Session, lic: Licitacao, conector=None) -> dict:
         doc = docs.get((d["sequencial"], d["titulo"]))
         if doc is None:
             doc = Documento(licitacao_id=lic.id, **d, tipo=classificar_documento(d["titulo"], d["tipo_fonte"]))
-            s.add(doc)
+            lic.documentos.append(doc)
             novos_docs += 1
             if lic.criado_em and lic.criado_em < agora() - timedelta(hours=1):
                 s.add(HistoricoAlteracao(licitacao_id=lic.id, campo="documento", antes=None, depois=d["titulo"],
