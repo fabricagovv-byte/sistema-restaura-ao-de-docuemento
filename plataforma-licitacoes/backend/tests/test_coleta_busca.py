@@ -115,6 +115,15 @@ def test_tecnologia_valor_fixo_mensal_com_casos_reais():
     assert "ti_mensal" not in cods("Aquisição de licença de uso do sistema operacional Microsoft Windows 11 Pro")
 
 
+def test_tecnologia_geral_com_casos_reais():
+    cods = lambda o: {c["codigo"] for c in classificar(o)}  # noqa: E731
+    assert "tecnologia" in cods("AQUISIÇÃO DE MATERIAL E EQUIPAMENTOS DE INFORMÁTICA PARA ATENDER AS NECESSIDADES DO CEO REGIONAL")
+    assert "tecnologia" in cods("Registro de preços para aquisição de tablets destinados aos agentes comunitários de saúde")
+    assert "tecnologia" in cods("Contratação de link dedicado de acesso à internet em fibra óptica")
+    assert "tecnologia" not in cods("prestação de serviços de exames de Tomografias Computadorizadas e Polissonografias Domiciliares")
+    assert "tecnologia" not in cods("Capacitação de servidores municipais em atendimento ao público")
+
+
 def test_expansao_semantica_digitalizacao():
     termos = expandir_consulta("digitalização")["grupos"][0]["termos"]
     for t in ["escaneamento", "conversao de documentos fisicos", "microfilmagem", "captura e processamento de imagens"]:
