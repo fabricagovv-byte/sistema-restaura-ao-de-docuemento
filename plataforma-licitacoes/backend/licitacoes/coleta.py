@@ -140,7 +140,8 @@ def gravar(s: Session, d: dict, fonte: Fonte) -> tuple[str, Licitacao]:
     if not lic.codigo_ibge and lic.municipio and lic.uf:
         lic.codigo_ibge = codigo_ibge_por_nome(s, lic.municipio, lic.uf)
     lic.orgao_id = _orgao(s, d) or lic.orgao_id
-    lic.plataforma_origem = catalogo.plataforma_de(lic.link_origem, lic.objeto, d.get("usuario_publicador")) or lic.plataforma_origem
+    publicador = d.get("usuario_publicador") or (d.get("bruto") or {}).get("usuarioNome")
+    lic.plataforma_origem = catalogo.plataforma_de(lic.link_origem, lic.objeto, publicador) or lic.plataforma_origem
     lic.texto_busca = _texto_busca({k: getattr(lic, k) for k in CAMPOS})
     lic.categorias = classificar(f"{lic.objeto} {lic.informacao_complementar or ''}", categorias_ativas(s))
     if not so_preencher:

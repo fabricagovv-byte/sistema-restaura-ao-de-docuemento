@@ -105,6 +105,15 @@ PLATAFORMAS = {
     "licitamaisbrasil.com.br": "Licita Mais Brasil",
     "compras.empro.com.br": "Empro (SP)",
 }
+# sistema que publicou no PNCP (campo usuarioNome) -> portal de disputa, quando o próprio sistema é o portal
+PUBLICADORES = {
+    "novo bbmnet licitacoes": "BBMNET", "bbmnet": "BBMNET", "compras.gov.br": "Compras.gov.br",
+    "bahia secretaria da administracao": "Comprasnet BA", "bll compras": "BLL Compras", "bll": "BLL Compras",
+    "licitanet": "Licitanet", "portal de compras publicas": "Portal de Compras Públicas", "bnc": "BNC",
+    "secretaria de estado da administracao e da previdencia do estado do parana - seap-pr": "Compras Paraná",
+    "secretaria de estado da administracao de santa catarina": "Compras SC", "licitacoes-e": "Licitações-e",
+}
+
 # plataformas cujos editais chegam pelo PNCP, por fonte do catálogo (para o controle de qualidade)
 PLATAFORMAS_DA_FONTE = {
     "licitacoes_e": ["Licitações-e"], "portal_compras_publicas": ["Portal de Compras Públicas"],
@@ -136,7 +145,7 @@ def plataforma_de(link_origem: str | None, objeto: str | None = None, publicador
         if host:
             return host.removeprefix("www.")
     if publicador:
-        return publicador
+        return PUBLICADORES.get(normalizar(publicador), f"publicado via {publicador.strip()}")[:80]
     return None
 
 
