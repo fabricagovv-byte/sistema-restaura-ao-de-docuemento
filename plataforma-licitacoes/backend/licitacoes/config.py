@@ -49,7 +49,7 @@ class Configuracao(BaseSettings):
     # Categorias que pesam na aderência (perfil da empresa)
     categorias_prioritarias: str = (
         "digitalizacao,indexacao,ged,triagem,guarda,higienizacao,restauracao,ocr,"
-        "desenvolvimento,fabrica_software,manutencao_software,sustentacao,dados,ia"
+        "desenvolvimento,fabrica_software,manutencao_software,sustentacao,dados,ia,ead,pesquisa,pd_inovacao"
     )
 
     # Monitoramento

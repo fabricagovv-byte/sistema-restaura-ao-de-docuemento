@@ -36,7 +36,10 @@ from .util import para_data, slug
 log = logging.getLogger("licitacoes.coletor")
 
 TERMOS_DIARIOS = ["digitalização", "indexação", "gestão documental", "fábrica de software",
-                  "sustentação de sistemas", "desenvolvimento de software", "tratamento de dados"]
+                  "sustentação de sistemas", "desenvolvimento de software", "tratamento de dados",
+                  "manutenção de software", "licença de uso de software", "sistema de gestão", "inteligência artificial",
+                  "arquivo", "microfilmagem", "educação a distância", "EAD", "plataforma educacional",
+                  "pesquisa de opinião", "pesquisa de satisfação", "inovação"]
 
 
 def _iso(v):
@@ -66,7 +69,7 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
     _passo("pncp_propostas_abertas", lambda: _sync(coleta.sincronizar_pncp(s, modo="propostas")), resumo)
     if not rapido:
         _passo("pncp_publicados_e_alterados", lambda: _sync(coleta.sincronizar_pncp(s, modo="diario", dias=dias)), resumo)
-        _passo("comprasgov", lambda: _sync(coleta.sincronizar_comprasgov(s, dias=1, modalidades=[6, 4])), resumo)
+        _passo("comprasgov", lambda: _sync(coleta.sincronizar_comprasgov(s, dias=7)), resumo)
         _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=7)), resumo)
         _passo("conferencia_individual", lambda: coleta.conferir_individual(s, limite=150), resumo)
         if config().transparencia_chave:
@@ -87,7 +90,7 @@ def relevantes(s: Session, limite: int) -> list[Licitacao]:
     return cand[:limite]
 
 
-SEGMENTOS_LISTADOS = {"gestao_documental", "ti"}
+SEGMENTOS_LISTADOS = {"gestao_documental", "ti", "educacao_pesquisa"}
 
 
 def listar_segmento(s: Session, limite: int) -> dict:

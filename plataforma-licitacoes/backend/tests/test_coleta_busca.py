@@ -90,6 +90,20 @@ def test_taxonomia_sem_falsos_positivos_medidos():
     assert any(c["codigo"] == "fabrica_software" for c in classificar("Fábrica de software medida em UST (unidade de serviço técnico)"))
 
 
+def test_ead_e_pesquisa_com_casos_reais():
+    cods = lambda o: {c["codigo"] for c in classificar(o)}  # noqa: E731
+    # objetos reais de editais abertos (PNCP, out/2026)
+    assert "ead" in cods("Contratação de empresa especializada para produção de cursos na modalidade de educação a distância (EaD)")
+    assert "pesquisa" in cods("Eventual contratação de empresa especializada na prestação de serviços de pesquisa de opinião pública")
+    assert "pd_inovacao" in cods("Seleção de proposta para celebração de Contrato Público para Solução Inovadora – CPSI")
+    # falsos positivos medidos: "ead" dentro de "readequação", nome de órgão, pesquisa de preços, compra de material
+    assert "ead" not in cods("[Portal de Compras Públicas] - Contratação de empresa para a readequação da iluminação da quadra")
+    assert "pesquisa" not in cods("Aquisição de tintas para as instalações do Instituto de Pesquisas da Marinha")
+    assert "pesquisa" not in cods("Aquisição de cadeiras conforme pesquisa de preços e pesquisa de campo")
+    assert "pd_inovacao" not in cods("Materiais laboratoriais para o desenvolvimento de projeto de pesquisa e aulas práticas")
+    assert "pd_inovacao" not in cods("Manutenção preventiva e corretiva dos sistemas de climatização, com transferência de tecnologia")
+
+
 def test_expansao_semantica_digitalizacao():
     termos = expandir_consulta("digitalização")["grupos"][0]["termos"]
     for t in ["escaneamento", "conversao de documentos fisicos", "microfilmagem", "captura e processamento de imagens"]:

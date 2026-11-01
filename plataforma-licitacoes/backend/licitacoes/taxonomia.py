@@ -27,6 +27,13 @@ NEG_IMPRESSAO = ["outsourcing de impressao", "impressao corporativa", "impressao
                  "scanners documentais", "escaneamento intraoral", "videomonitoramento", "video monitoramento", "cameras",
                  "certificado digital e-cpf", "token"]
 
+NEG_PESQUISA = ["pesquisa de precos", "pesquisa de preco", "pesquisa mercadologica", "levantamento de precos",
+                "aquisicao de materia", "aquisicao de equipamento", "aquisicao do equipamento", "aquisicao de insumos",
+                "materiais de consumo", "material de consumo", "materiais permanentes", "generos alimenticios",
+                "mobiliario", "permissao de uso", "permissao administrativa de uso", "obras e servicos de engenharia",
+                "reagentes", "aquisicao de livros", "fornecimento de livros", "materiais laboratoriais",
+                "climatizacao", "ar condicionado"]
+
 
 @dataclass
 class DefCategoria:
@@ -143,6 +150,39 @@ PADRAO: list[DefCategoria] = [
         "infraestrutura de ti", "infraestrutura de tic", "infraestrutura de tecnologia", "rede de dados",
         "cabeamento estruturado", "rede definida por software", " sdn ", "wi-fi", "switches",
     ]),
+    # ---------------------------------------------------------------- EAD, educação digital e pesquisa
+    DefCategoria("ead", "EAD e educação a distância", "educacao_pesquisa", [
+        "educacao a distancia", "ensino a distancia", "ensino remoto", " ead ", " ead/", "/ead ", "ambiente virtual de aprendizagem",
+        " ava ", " lms ", "learning management", "moodle", "e-learning", "elearning", "cursos online", "cursos on-line",
+        "curso online", "curso on-line", "cursos a distancia", "curso a distancia", "capacitacao a distancia",
+        "capacitacao online", "capacitacao on-line", "treinamento a distancia", "treinamento online", "treinamento on-line",
+        "plataforma de ensino", "plataforma educacional", "plataforma de aprendizagem", "plataforma de educacao",
+        "plataforma de cursos", "plataforma adaptativa", "conteudos educacionais digitais", "conteudo educacional digital",
+        "objetos de aprendizagem", "objetos digitais de aprendizagem", "videoaulas", "video aulas", "aulas gravadas",
+        "aulas remotas", "educacao digital", "universidade corporativa", "escola virtual", "trilhas de aprendizagem",
+        "trilhas formativas", "microlearning", "gamificacao educacional", "tecnologia educacional", "solucao educacional digital",
+        "recursos educacionais digitais", "livro digital interativo", "laboratorio virtual",
+    ], ["aquisicao de material", "aquisicao de acervo", "ensino a distancia de motoristas", "transporte escolar", "uniforme", "merenda", "generos alimenticios",
+        "kit escolar", "material escolar", "mobiliario"]),
+    DefCategoria("pesquisa", "Pesquisa (opinião, satisfação, campo)", "educacao_pesquisa", [
+        "pesquisa de opiniao", "pesquisa de satisfacao", "pesquisas de satisfacao", "pesquisa qualitativa",
+        "pesquisa quantitativa", "pesquisa quali", "pesquisa domiciliar", "pesquisa de campo", "pesquisas de campo",
+        "pesquisa socioeconomica", "diagnostico socioeconomico", "levantamento socioeconomico", "pesquisa amostral",
+        "pesquisa censitaria", "pesquisa estatistica", "levantamento estatistico", "realizacao de pesquisa",
+        "pesquisa de clima organizacional", "pesquisa de imagem", "pesquisa de percepcao", "pesquisa de avaliacao",
+        "pesquisa de origem e destino", "pesquisa origem-destino", "pesquisa de mobilidade", "pesquisa nacional",
+        "pesquisa de audiencia", "pesquisa eleitoral", "survey", "grupos focais", "grupo focal",
+    ], NEG_PESQUISA + ["cesta de precos", "banco de precos"]),
+    DefCategoria("pd_inovacao", "Pesquisa, desenvolvimento e inovação (P&D)", "educacao_pesquisa", [
+        "pesquisa e desenvolvimento", "pesquisa, desenvolvimento e inovacao", " p d ", " pd i ", " p d i ",
+        "pesquisa aplicada", "pesquisa tecnologica", "pesquisa e inovacao", "encomenda tecnologica",
+        "solucao inovadora", "solucoes inovadoras", "marco legal das startups", "lei complementar 182",
+        "lei complementar n 182", "contrato publico para solucao inovadora", " cpsi ", "bolsas de pesquisa",
+        "laboratorio de inovacao", "hub de inovacao", "sandbox regulatorio", "programa de inovacao aberta",
+    ], NEG_PESQUISA, ambiguos=["pesquisa cientifica", "inovacao tecnologica", "desenvolvimento tecnologico",
+                                "transferencia de tecnologia", "projetos de pesquisa", "projeto de pesquisa"],
+        contexto=["contratacao de servicos", "prestacao de servicos", "desenvolvimento de", "execucao de projeto",
+                  "consultoria", "estruturacao", "parceria"]),
     # ---------------------------------------------------------------- Engenharia e obras
     DefCategoria("projetos_engenharia", "Projetos de engenharia", "engenharia", [
         "projeto basico", "projeto executivo", "projetos basicos e executivos", "elaboracao de projetos",
@@ -170,6 +210,7 @@ SEGMENTOS = {
     "gestao_documental": "Gestão documental",
     "ti": "Tecnologia da informação",
     "engenharia": "Engenharia e obras",
+    "educacao_pesquisa": "EAD, educação digital e pesquisa",
 }
 
 
