@@ -104,6 +104,17 @@ def test_ead_e_pesquisa_com_casos_reais():
     assert "pd_inovacao" not in cods("Manutenção preventiva e corretiva dos sistemas de climatização, com transferência de tecnologia")
 
 
+def test_tecnologia_valor_fixo_mensal_com_casos_reais():
+    cods = lambda o: {c["codigo"] for c in classificar(o)}  # noqa: E731
+    assert "ti_mensal" in cods("Contratação de empresa especializada em cessão de direito de uso (locação) de sistemas integrados de Gestão Pública")
+    assert "ti_mensal" in cods("Contratação de serviços de subscrição de licenciamento de software na modalidade SaaS (Software as a Service)")
+    assert "ti_mensal" in cods("PRESTAÇÃO DE SERVIÇOS DE LOCAÇÃO DE COMPUTADORES")
+    assert "ti_mensal" not in cods("Concessão dos serviços de transporte coletivo por ônibus, envolvendo o provimento de solução de bilhetagem")
+    assert "ti_mensal" not in cods("Contratação de serviço de LOCAÇÃO DE SISTEMA DE HEMODIÁLISE COM OSMOSE REVERSA")
+    assert "ti_mensal" not in cods("Serviço de locação de equipamentos de fiscalização eletrônica de trânsito e videomonitoramento")
+    assert "ti_mensal" not in cods("Aquisição de licença de uso do sistema operacional Microsoft Windows 11 Pro")
+
+
 def test_expansao_semantica_digitalizacao():
     termos = expandir_consulta("digitalização")["grupos"][0]["termos"]
     for t in ["escaneamento", "conversao de documentos fisicos", "microfilmagem", "captura e processamento de imagens"]:
