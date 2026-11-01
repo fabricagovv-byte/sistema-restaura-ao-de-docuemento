@@ -6,3 +6,6 @@ __pycache__/
 saida/
 resultado_restauracao/
 *.zip
+
+# armazenamento local da plataforma (documentos baixados e textos extraídos)
+plataforma-licitacoes/backend/armazenamento/
