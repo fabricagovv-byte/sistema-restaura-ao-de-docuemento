@@ -64,6 +64,16 @@ def test_sincronizar_pncp_com_api_simulada(banco, pncp_pagina):
     assert catalogo.fonte(banco, "pncp").ultimo_sucesso is not None
 
 
+def test_pncp_para_no_prazo(banco, pncp_pagina):
+    import time
+
+    ultima = dict(pncp_pagina, paginasRestantes=0)
+    http = ClienteHttp(intervalo_minimo_s=0, http=httpx.Client(transport=httpx.MockTransport(
+        lambda r: httpx.Response(200, json=ultima))), dormir=lambda x: None)
+    r = coleta.sincronizar_pncp(banco, modo="propostas", conector=ConectorPncp(http), ate=time.monotonic() - 1)
+    assert r.status == "parcial" and r.lidos == 1 and "limite de tempo" in r.mensagem
+
+
 def test_falha_da_fonte_fica_registrada(banco):
     http = ClienteHttp(intervalo_minimo_s=0, max_tentativas=2, http=httpx.Client(transport=httpx.MockTransport(
         lambda r: httpx.Response(503))), dormir=lambda x: None)

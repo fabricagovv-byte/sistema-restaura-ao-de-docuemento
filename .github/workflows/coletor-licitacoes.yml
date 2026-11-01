@@ -74,7 +74,7 @@ jobs:
       - name: Coleta nacional
         working-directory: plataforma-licitacoes/backend
         run: |
-          python -m licitacoes.cli coletar "$GITHUB_WORKSPACE/pacote" --minutos 280 --top "${{ inputs.top || '40' }}" ${{ inputs.rapido && '--rapido' || '' }} 2>&1 | grep -v "HTTP Request" | tail -200
+          python -u -m licitacoes.cli coletar "$GITHUB_WORKSPACE/pacote" --minutos 280 --top "${{ inputs.top || '40' }}" ${{ inputs.rapido && '--rapido' || '' }} 2>&1 | grep --line-buffered -v "HTTP Request"
       - name: Publicar no branch dados-licitacoes
         if: always()
         run: |

@@ -227,8 +227,12 @@ def classificar_licitacao(s: Session, lic: Licitacao, cats=None) -> None:
 
 
 def sincronizar_pncp(s: Session, *, modo: str = "monitoramento", dias: int = 1, modalidades: list[int] | None = None,
-                     ufs: list[str] | None = None, conector=None, hoje: date | None = None) -> Sincronizacao:
-    """modo: 'monitoramento' (alterados e publicados hoje), 'diario' (últimos `dias`), 'propostas' (abertas)."""
+                     ufs: list[str] | None = None, conector=None, hoje: date | None = None,
+                     ate: float | None = None) -> Sincronizacao:
+    """modo: 'monitoramento' (alterados e publicados hoje), 'diario' (últimos `dias`), 'propostas' (abertas).
+    `ate`: prazo (time.monotonic()); ao passar dele, para e registra a execução como parcial."""
+    import time
+
     from .conectores.pncp import ConectorPncp, normalizar_contratacao
 
     c = conector or ConectorPncp()
@@ -236,8 +240,11 @@ def sincronizar_pncp(s: Session, *, modo: str = "monitoramento", dias: int = 1, 
     mods = modalidades or config().modalidades_pncp
     ex = Execucao(s, "pncp", {"modo": modo, "dias": dias, "modalidades": mods, "ufs": ufs})
     erro = None
+    cortado = False
     try:
         for uf in ufs or [None]:
+            if cortado:
+                break
             if modo == "propostas":
                 series = [c.propostas_abertas(hoje + timedelta(days=config().pncp_dias_proposta), None, uf)]
             else:
@@ -247,16 +254,25 @@ def sincronizar_pncp(s: Session, *, modo: str = "monitoramento", dias: int = 1, 
                     series.append(c.por_publicacao(inicio, hoje, m, uf))
                     series.append(c.por_atualizacao(inicio, hoje, m, uf))
             for serie in series:
+                if cortado:
+                    break
                 for i, raw in enumerate(serie, 1):
                     estado, _ = gravar(s, normalizar_contratacao(raw), ex.fonte)
                     ex.contar(estado)
                     if i % 200 == 0:
                         s.commit()
+                        log.info("PNCP %s: %d lidos, %d chamadas", modo, ex.reg.lidos, c.http.stats.chamadas)
+                    if ate is not None and time.monotonic() > ate:
+                        cortado = True
+                        break
                 s.commit()
     except ErroFonte as e:
         erro = e
         log.warning("PNCP: %s", e)
-    return ex.concluir(erro, c.http.stats.chamadas)
+    if cortado and erro is None:
+        ex.reg.mensagem = "interrompida pelo limite de tempo da coleta"
+        log.warning("PNCP %s interrompido pelo prazo com %d lidos", modo, ex.reg.lidos)
+    return ex.concluir(erro, c.http.stats.chamadas, parcial=cortado)
 
 
 def conferir_individual(s: Session, *, dias_prazo: int = 3, limite: int = 100, conector=None) -> dict:
