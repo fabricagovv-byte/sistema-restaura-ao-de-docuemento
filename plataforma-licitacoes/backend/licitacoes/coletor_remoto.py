@@ -252,6 +252,9 @@ def importar(s: Session, pasta: str | Path) -> dict:
                     if doc.id is None:
                         s.add(doc)
                     res["documentos"] += 1
+                s.flush()
+                coleta.classificar_licitacao(s, lic)
+                lic.aderencia = coleta.calcular_aderencia(lic)
                 s.commit()
     for e in json.loads((p / "execucoes.json").read_text(encoding="utf-8")):
         fonte = catalogo.fonte(s, e["fonte"])

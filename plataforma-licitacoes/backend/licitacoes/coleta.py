@@ -143,7 +143,7 @@ def gravar(s: Session, d: dict, fonte: Fonte) -> tuple[str, Licitacao]:
     publicador = d.get("usuario_publicador") or (d.get("bruto") or {}).get("usuarioNome")
     lic.plataforma_origem = catalogo.plataforma_de(lic.link_origem, lic.objeto, publicador) or lic.plataforma_origem
     lic.texto_busca = _texto_busca({k: getattr(lic, k) for k in CAMPOS})
-    lic.categorias = classificar(f"{lic.objeto} {lic.informacao_complementar or ''}", categorias_ativas(s))
+    classificar_licitacao(s, lic)
     if not so_preencher:
         lic.hash_conteudo = h
     lic.aderencia = calcular_aderencia(lic)
@@ -213,6 +213,17 @@ class Execucao:
             self.fonte.falhas_consecutivas = (self.fonte.falhas_consecutivas or 0) + 1
         self.s.commit()
         return self.reg
+
+
+def classificar_licitacao(s: Session, lic: Licitacao, cats=None) -> None:
+    """Categorias pelo objeto + forma de pagamento pelo objeto e pelos itens já coletados."""
+    from .taxonomia import remuneracao
+
+    texto = f"{lic.objeto} {lic.informacao_complementar or ''}"
+    base = classificar(texto, cats or categorias_ativas(s))
+    # consulta direta: ler lic.itens aqui deixaria em cache uma lista vazia antes de os itens serem gravados
+    itens = s.query(Item.unidade, Item.descricao).filter(Item.licitacao_id == lic.id).all() if lic.id is not None else []
+    lic.categorias = base + remuneracao(texto, itens, base)
 
 
 def sincronizar_pncp(s: Session, *, modo: str = "monitoramento", dias: int = 1, modalidades: list[int] | None = None,
@@ -319,6 +330,9 @@ def detalhar(s: Session, lic: Licitacao, conector=None) -> dict:
         else:
             doc.ativo = d["ativo"]
             doc.url = d["url"] or doc.url
+    s.flush()
+    classificar_licitacao(s, lic)  # a forma de pagamento (UST, PF, fixo mensal) costuma estar nos itens
+    lic.aderencia = calcular_aderencia(lic)
     s.commit()
     return {"itens": len(itens), "documentos": len(arquivos), "documentos_novos": novos_docs}
 

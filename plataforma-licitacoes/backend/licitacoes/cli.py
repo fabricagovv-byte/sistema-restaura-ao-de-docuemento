@@ -115,7 +115,7 @@ def main(argv: list[str] | None = None) -> int:
             cats = categorias_ativas(s)
             n = 0
             for lic in s.query(Licitacao).yield_per(500):
-                lic.categorias = classificar(f"{lic.objeto} {lic.informacao_complementar or ''}", cats)
+                coleta.classificar_licitacao(s, lic, cats)
                 lic.aderencia = coleta.calcular_aderencia(lic)
                 n += 1
             print("reclassificados:", n)

@@ -124,6 +124,23 @@ def test_tecnologia_geral_com_casos_reais():
     assert "tecnologia" not in cods("Capacitação de servidores municipais em atendimento ao público")
 
 
+def test_forma_de_pagamento_pelos_itens():
+    from licitacoes.taxonomia import remuneracao
+
+    ti = classificar("Contratação de serviços de sustentação de sistemas")
+    cods = lambda texto, itens, cats=ti: {c["codigo"] for c in remuneracao(texto, itens, cats)}  # noqa: E731
+    # unidades reais de itens do PNCP (nov/2026)
+    assert cods("Serviços técnicos de desenvolvimento", [("UND SERVIÇO TÉCNICO", "Desenvolvimento")]) == {"remun_ust"}
+    assert cods("Serviços técnicos", [("1 - UST", "Análise e desenvolvimento de sistemas")]) == {"remun_ust"}
+    assert cods("Fábrica de software", [("PONTO DE FUNÇÃO", "Implementação ágil de software")]) == {"remun_pf"}
+    assert cods("Sustentação", [("FIXO MENSAL", "Sustentação do Portal Institucional")]) == {"remun_fixo_mensal"}
+    assert cods("Sistemas de gestão", [("MÊS", "Folha de pagamento e e-Social")]) == {"remun_fixo_mensal"}
+    assert cods("Contratação de fábrica de software medida em pontos de função", []) == {"remun_pf"}
+    # "mês" fora de tecnologia não é fixo mensal de TI; "ponto de rede" não é ponto de função
+    assert cods("Locação de veículos", [("MÊS", "Veículo tipo sedan")], cats=[]) == set()
+    assert cods("Manutenção de rede local", [("PONTO DE REDE", "Instalação de ponto")]) == set()
+
+
 def test_expansao_semantica_digitalizacao():
     termos = expandir_consulta("digitalização")["grupos"][0]["termos"]
     for t in ["escaneamento", "conversao de documentos fisicos", "microfilmagem", "captura e processamento de imagens"]:

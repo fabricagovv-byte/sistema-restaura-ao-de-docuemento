@@ -285,6 +285,44 @@ def classificar(objeto: str, categorias: list[DefCategoria] | None = None) -> li
     return saida
 
 
+# Forma de pagamento dos contratos de TI. O objeto quase nunca diz; a unidade dos itens costuma dizer
+# ("UND SERVIÇO TÉCNICO", "PONTO DE FUNÇÃO", "VALOR FIXO MENSAL", "MÊS").
+REMUNERACAO = {
+    "remun_fixo_mensal": "Pagamento fixo mensal (TI)",
+    "remun_ust": "Remuneração por UST",
+    "remun_pf": "Remuneração por Ponto de Função",
+}
+_UST = [" ust ", " usts ", "unidade de servico tecnico", "unidades de servico tecnico", "und servico tecnico",
+        "unidade de servicos tecnicos", "unidades de servicos tecnicos", "unidade de servico de tecnologia"]
+_PF = ["ponto de funcao", "pontos de funcao", "function point", "function points"]
+_FIXO = ["valor fixo mensal", "preco fixo mensal", "remuneracao fixa mensal", "pagamento fixo mensal",
+         "pagamento mensal fixo", "valor mensal fixo", "parcela fixa mensal", "parcelas fixas mensais", "fixo mensal"]
+_MES = {"mes", "meses", "mensal", "mensalidade", "men"}
+_SEG_TEC = {"ti", "gestao_documental"}
+
+
+def remuneracao(texto: str, itens: list[tuple[str | None, str | None]], categorias: list[dict]) -> list[dict]:
+    """Formas de pagamento do edital (UST, ponto de função, fixo mensal), pelo texto e pelos itens
+    (unidade, descrição). Fixo mensal só conta em edital de tecnologia ou gestão documental."""
+    n = " " + normalizar(texto or "") + " "
+    unids = [" " + normalizar(u or "") + " " for u, _ in itens]
+    tudo = n + " ".join(" " + normalizar(d or "") + " " for _, d in itens)
+    achados: dict[str, list[str]] = {}
+    for cod, termos, extra in (("remun_ust", _UST, None), ("remun_pf", _PF, " pf ")):
+        ts = [x.strip() for x in termos if x in tudo or any(x in u for u in unids)]
+        if extra and any(extra in u for u in unids):
+            ts.append(f"unidade {extra.strip()}")
+        if ts:
+            achados[cod] = ts
+    if any(c["segmento"] in _SEG_TEC for c in categorias):
+        ts = [x for x in _FIXO if x in tudo or any(x in u for u in unids)]
+        if any(set(u.split()) & _MES for u in unids):
+            ts.append("itens cobrados por mês")
+        if ts:
+            achados["remun_fixo_mensal"] = ts
+    return [{"codigo": c, "nome": REMUNERACAO[c], "segmento": "ti", "termos": ts, "forca": 1.0} for c, ts in achados.items()]
+
+
 def expandir_consulta(consulta: str, categorias: list[DefCategoria] | None = None) -> dict:
     """Transforma a consulta em grupos de termos equivalentes.
 
