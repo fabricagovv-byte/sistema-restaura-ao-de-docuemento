@@ -22,6 +22,7 @@ import os
 from datetime import datetime
 from pathlib import Path
 
+from sqlalchemy import or_
 from sqlalchemy.orm import Session
 
 from . import catalogo, coleta, documentos
@@ -57,7 +58,7 @@ def _sync(r) -> dict:
             "chamadas": r.chamadas, "mensagem": r.mensagem}
 
 
-def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, rapido: bool = False) -> dict:
+def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 1200, rapido: bool = False) -> dict:
     resumo = {"inicio": agora().isoformat(), "execucao": os.environ.get("GITHUB_RUN_ID"), "passos": {}}
     catalogo.registrar_fontes(s)
     s.commit()
@@ -70,6 +71,7 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, rapido: bool =
         _passo("conferencia_individual", lambda: coleta.conferir_individual(s, limite=150), resumo)
         if config().transparencia_chave:
             _passo("transparencia", lambda: _sync(coleta.sincronizar_transparencia(s, dias=7)), resumo)
+    _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar), resumo)
     _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top), resumo)
     resumo["fim"] = agora().isoformat()
     return resumo
@@ -85,11 +87,35 @@ def relevantes(s: Session, limite: int) -> list[Licitacao]:
     return cand[:limite]
 
 
+SEGMENTOS_LISTADOS = {"gestao_documental", "ti"}
+
+
+def listar_segmento(s: Session, limite: int) -> dict:
+    """Itens e lista de documentos (sem baixar) de todos os editais abertos de TI e gestão documental,
+    para o painel abrir cada pregão com itens e links diretos dos arquivos."""
+    abertas = s.query(Licitacao).filter(coleta.abertas_filtro(), Licitacao.cnpj_orgao.isnot(None),
+                                        Licitacao.sequencial.isnot(None)).all()
+    alvo = [x for x in abertas if any(c["segmento"] in SEGMENTOS_LISTADOS for c in x.categorias or [])]
+    alvo.sort(key=lambda x: (-(x.aderencia or 0), -float(x.valor_estimado or 0)))
+    res = {"alvo": len(alvo), "detalhados": 0, "itens": 0, "documentos": 0, "falhas": 0}
+    for lic in alvo[:limite]:
+        try:
+            d = coleta.detalhar(s, lic)
+        except Exception:
+            s.rollback()
+            res["falhas"] += 1
+            continue
+        res["detalhados"] += 1
+        res["itens"] += d.get("itens", 0)
+        res["documentos"] += d.get("documentos", 0)
+    return res
+
+
 def detalhar_relevantes(s: Session, limite: int) -> dict:
     res = {"editais": 0, "itens": 0, "documentos": 0, "baixados": 0, "falhas": []}
     for lic in relevantes(s, limite):
         try:
-            d = coleta.detalhar(s, lic)
+            d = coleta.detalhar(s, lic) if not lic.documentos else {"itens": len(lic.itens), "documentos": len(lic.documentos)}
             b = documentos.baixar_todos(s, lic)
         except Exception as e:
             s.rollback()
@@ -116,7 +142,7 @@ def exportar(s: Session, pasta: str | Path, resumo: dict) -> dict:
             n += 1
     det = 0
     with gzip.open(p / "detalhes.jsonl.gz", "wt", encoding="utf-8") as f:
-        for lic in s.query(Licitacao).filter(Licitacao.documentos.any()).all():
+        for lic in s.query(Licitacao).filter(or_(Licitacao.documentos.any(), Licitacao.itens.any())).all():
             docs = []
             for d in lic.documentos:
                 item = {k: _iso(getattr(d, k)) for k in ("sequencial", "titulo", "tipo_fonte", "tipo", "url", "publicado_em",
