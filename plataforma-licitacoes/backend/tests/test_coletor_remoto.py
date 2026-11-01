@@ -40,3 +40,26 @@ def test_exportar_e_importar(banco, edital_lins, tmp_path, monkeypatch):
     paginas, _ = analise.paginas_da_licitacao(lic2)
     assert len(paginas) == len(edital_lins["paginas"]) and paginas[3].numero == 4 and "2.9.4" in paginas[3].texto
     s2.close()
+
+
+def test_coleta_para_no_prazo(banco):
+    """Etapas longas param quando o orçamento de tempo acaba, para o pacote sair mesmo assim."""
+    import time
+
+    from licitacoes.coletor_remoto import detalhar_relevantes, listar_segmento
+
+    class DiarioLento:
+        class http:
+            class stats:
+                chamadas = 0
+
+        def buscar(self, *a, **k):
+            raise AssertionError("não deveria consultar depois do prazo")
+
+    with db.sessao() as s:
+        catalogo.registrar_fontes(s)
+        passado = time.monotonic() - 1
+        r = coleta.sincronizar_querido_diario(s, ["digitalização"], conector=DiarioLento(), ate=passado)
+        assert r.status == "parcial" and "limite de tempo" in r.mensagem
+        assert listar_segmento(s, 10, ate=passado)["detalhados"] == 0
+        assert detalhar_relevantes(s, 10, ate=passado)["editais"] == 0

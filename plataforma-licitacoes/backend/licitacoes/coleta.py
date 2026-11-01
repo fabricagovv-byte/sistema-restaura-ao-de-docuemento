@@ -362,24 +362,37 @@ def sincronizar_comprasgov(s: Session, *, dias: int = 1, modalidades: list[int] 
     return ex.concluir(erro, c.http.stats.chamadas)
 
 
-def sincronizar_querido_diario(s: Session, termos: list[str], *, dias: int = 7, conector=None) -> Sincronizacao:
+def sincronizar_querido_diario(s: Session, termos: list[str], *, dias: int = 7, conector=None,
+                               ate: float | None = None) -> Sincronizacao:
+    """`ate`: prazo (time.monotonic()); ao passar dele, para e registra a execução como parcial."""
+    import time
+
     from .conectores.outras import ConectorQueridoDiario, normalizar_diario
 
     c = conector or ConectorQueridoDiario()
     hoje = date.today()
     ex = Execucao(s, "querido_diario", {"termos": termos, "dias": dias})
     erro = None
+    cortado = False
     try:
         for termo in termos:
+            if ate is not None and time.monotonic() > ate:
+                cortado = True
+                break
             consulta = f'"{termo}" licitação'
             for diario in c.buscar(consulta, hoje - timedelta(days=dias), hoje):
                 for d in normalizar_diario(diario, consulta):
                     estado, _ = gravar(s, d, ex.fonte)
                     ex.contar(estado)
+                if ate is not None and time.monotonic() > ate:
+                    cortado = True
+                    break
             s.commit()
     except ErroFonte as e:
         erro = e
-    return ex.concluir(erro, c.http.stats.chamadas)
+    if cortado and erro is None:
+        ex.reg.mensagem = "interrompida pelo limite de tempo da coleta"
+    return ex.concluir(erro, c.http.stats.chamadas, parcial=cortado)
 
 
 def sincronizar_transparencia(s: Session, *, dias: int = 7, orgaos: list[str] | None = None, conector=None) -> Sincronizacao:

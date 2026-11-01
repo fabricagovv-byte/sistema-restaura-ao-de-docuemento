@@ -46,6 +46,7 @@ def main(argv: list[str] | None = None) -> int:
     co.add_argument("saida"), co.add_argument("--top", type=int, default=40), co.add_argument("--rapido", action="store_true")
     co.add_argument("--dias", type=int, default=2)
     co.add_argument("--listar", type=int, default=1200, help="editais de TI/gestão documental com itens e documentos listados")
+    co.add_argument("--minutos", type=float, default=None, help="orçamento de tempo; as etapas longas param no prazo")
     im = sub.add_parser("importar-coleta", help="importa o pacote gerado por `coletar`")
     im.add_argument("pasta")
     sub.add_parser("servidor", help="sobe a API em :8000")
@@ -121,7 +122,7 @@ def main(argv: list[str] | None = None) -> int:
         elif a.cmd == "coletar":
             from .coletor_remoto import coletar, exportar
 
-            r = coletar(s, dias=a.dias, detalhar_top=a.top, listar=a.listar, rapido=a.rapido)
+            r = coletar(s, dias=a.dias, detalhar_top=a.top, listar=a.listar, rapido=a.rapido, minutos=a.minutos)
             _imprimir(exportar(s, a.saida, r))
         elif a.cmd == "importar-coleta":
             from .coletor_remoto import importar

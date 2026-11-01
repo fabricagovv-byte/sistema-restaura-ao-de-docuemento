@@ -19,6 +19,7 @@ import gzip
 import json
 import logging
 import os
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -61,8 +62,14 @@ def _sync(r) -> dict:
             "chamadas": r.chamadas, "mensagem": r.mensagem}
 
 
-def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 1200, rapido: bool = False) -> dict:
-    resumo = {"inicio": agora().isoformat(), "execucao": os.environ.get("GITHUB_RUN_ID"), "passos": {}}
+def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 1200, rapido: bool = False,
+            minutos: float | None = None) -> dict:
+    """`minutos`: orçamento total. Cada etapa longa para no seu prazo e o pacote sai com o que foi coletado,
+    em vez de a execução estourar o tempo do runner e não publicar nada."""
+    t0 = time.monotonic()
+    prazo = (lambda frac: t0 + minutos * 60 * frac) if minutos else (lambda frac: None)  # noqa: E731
+    resumo = {"inicio": agora().isoformat(), "execucao": os.environ.get("GITHUB_RUN_ID"), "passos": {},
+              "orcamento_minutos": minutos}
     catalogo.registrar_fontes(s)
     s.commit()
     _passo("ibge", lambda: coleta.carregar_municipios(s), resumo)
@@ -70,12 +77,12 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
     if not rapido:
         _passo("pncp_publicados_e_alterados", lambda: _sync(coleta.sincronizar_pncp(s, modo="diario", dias=dias)), resumo)
         _passo("comprasgov", lambda: _sync(coleta.sincronizar_comprasgov(s, dias=7)), resumo)
-        _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=7)), resumo)
+        _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=7, ate=prazo(0.35))), resumo)
         _passo("conferencia_individual", lambda: coleta.conferir_individual(s, limite=150), resumo)
         if config().transparencia_chave:
             _passo("transparencia", lambda: _sync(coleta.sincronizar_transparencia(s, dias=7)), resumo)
-    _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar), resumo)
-    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top), resumo)
+    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.6)), resumo)
+    _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(1.0)), resumo)
     resumo["fim"] = agora().isoformat()
     return resumo
 
@@ -93,7 +100,7 @@ def relevantes(s: Session, limite: int) -> list[Licitacao]:
 SEGMENTOS_LISTADOS = {"gestao_documental", "ti", "educacao_pesquisa"}
 
 
-def listar_segmento(s: Session, limite: int) -> dict:
+def listar_segmento(s: Session, limite: int, ate: float | None = None) -> dict:
     """Itens e lista de documentos (sem baixar) de todos os editais abertos de TI e gestão documental,
     para o painel abrir cada pregão com itens e links diretos dos arquivos."""
     abertas = s.query(Licitacao).filter(coleta.abertas_filtro(), Licitacao.cnpj_orgao.isnot(None),
@@ -102,6 +109,12 @@ def listar_segmento(s: Session, limite: int) -> dict:
     alvo.sort(key=lambda x: (-(x.aderencia or 0), -float(x.valor_estimado or 0)))
     res = {"alvo": len(alvo), "detalhados": 0, "itens": 0, "documentos": 0, "falhas": 0}
     for lic in alvo[:limite]:
+        if ate is not None and time.monotonic() > ate:
+            res["interrompido_por_tempo"] = True
+            break
+        if lic.itens or lic.documentos:  # já detalhado nesta execução (documentos relevantes)
+            res["detalhados"] += 1
+            continue
         try:
             d = coleta.detalhar(s, lic)
         except Exception:
@@ -114,9 +127,12 @@ def listar_segmento(s: Session, limite: int) -> dict:
     return res
 
 
-def detalhar_relevantes(s: Session, limite: int) -> dict:
+def detalhar_relevantes(s: Session, limite: int, ate: float | None = None) -> dict:
     res = {"editais": 0, "itens": 0, "documentos": 0, "baixados": 0, "falhas": []}
     for lic in relevantes(s, limite):
+        if ate is not None and time.monotonic() > ate:
+            res["interrompido_por_tempo"] = True
+            break
         try:
             d = coleta.detalhar(s, lic) if not lic.documentos else {"itens": len(lic.itens), "documentos": len(lic.documentos)}
             b = documentos.baixar_todos(s, lic)
