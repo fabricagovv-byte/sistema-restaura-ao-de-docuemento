@@ -74,16 +74,18 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
     catalogo.registrar_fontes(s)
     s.commit()
     _passo("ibge", lambda: coleta.carregar_municipios(s), resumo)
-    _passo("pncp_propostas_abertas", lambda: _sync(coleta.sincronizar_pncp(s, modo="propostas", ate=prazo(0.45))), resumo)
+    # ordem por importância: editais, itens/documentos do foco e só depois os diários (lentos e instáveis)
+    _passo("pncp_propostas_abertas", lambda: _sync(coleta.sincronizar_pncp(s, modo="propostas", ate=prazo(0.4))), resumo)
     if not rapido:
-        _passo("pncp_publicados_e_alterados", lambda: _sync(coleta.sincronizar_pncp(s, modo="diario", dias=dias, ate=prazo(0.5))), resumo)
+        _passo("pncp_publicados_e_alterados", lambda: _sync(coleta.sincronizar_pncp(s, modo="diario", dias=dias, ate=prazo(0.45))), resumo)
         _passo("comprasgov", lambda: _sync(coleta.sincronizar_comprasgov(s, dias=7)), resumo)
-        _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=7, ate=prazo(0.6))), resumo)
         _passo("conferencia_individual", lambda: coleta.conferir_individual(s, limite=150), resumo)
+    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.55)), resumo)
+    _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(0.85)), resumo)
+    if not rapido:
+        _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=7, ate=prazo(1.0))), resumo)
         if config().transparencia_chave:
             _passo("transparencia", lambda: _sync(coleta.sincronizar_transparencia(s, dias=7)), resumo)
-    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.7)), resumo)
-    _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(1.0)), resumo)
     resumo["fim"] = agora().isoformat()
     return resumo
 
