@@ -80,6 +80,14 @@ jobs:
         run: |
           cd "$GITHUB_WORKSPACE/pacote"
           test -f resumo.json || { echo "sem pacote para publicar"; exit 1; }
+          # PNCP fora do ar: não sobrescreve o último pacote bom com um quase vazio
+          python3 - <<'PY'
+          import json, sys
+          p = json.load(open("resumo.json"))["passos"].get("pncp_propostas_abertas") or {}
+          ok = p.get("status") == "ok" or (p.get("status") == "parcial" and (p.get("lidos") or 0) >= 10000)
+          if not ok:
+              sys.exit(f"PNCP não respondeu nesta execução ({p.get('mensagem') or p}); o último pacote publicado foi mantido.")
+          PY
           git init -q && git checkout -q -b dados-licitacoes
           git config user.name "coletor-licitacoes"
           git config user.email "coletor-licitacoes@users.noreply.github.com"
