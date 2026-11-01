@@ -151,6 +151,21 @@ def test_forma_de_pagamento_pelos_itens():
     assert cods("Manutenção de rede local", [("PONTO DE REDE", "Instalação de ponto")]) == set()
 
 
+def test_natureza_e_grande_volume():
+    from licitacoes.taxonomia import grande_volume, natureza, volumes
+
+    assert natureza("Aquisição de computadores e notebooks") == "material"
+    assert natureza("Prestação de serviços de digitalização de documentos") == "servico"
+    assert natureza("Objeto qualquer", [("Material", 100.0), ("Serviço", 900.0)]) == "servico"
+    assert natureza("Objeto qualquer", [("Material", 950.0), ("Serviço", 50.0)]) == "material"
+    v = volumes([("UND SERVIÇO TÉCNICO", "Desenvolvimento", 60000), ("UNIDADE", "Digitalização de documentos", 2_000_000),
+                 ("PONTO DE FUNÇÃO", "Implementação ágil", 24000), ("MÊS", "Sustentação", 12), ("UNIDADE", "Cadeira", 500)])
+    assert v == {"ust": 60000, "pagina": 2_000_000, "pf": 24000, "mes": 12}
+    assert set(grande_volume(v)) == {"ust", "pagina", "pf"}
+    assert "mes" in grande_volume(v, valor=3_000_000)
+    assert grande_volume(volumes([("UST", "Suporte", 87)])) == []
+
+
 def test_expansao_semantica_digitalizacao():
     termos = expandir_consulta("digitalização")["grupos"][0]["termos"]
     for t in ["escaneamento", "conversao de documentos fisicos", "microfilmagem", "captura e processamento de imagens"]:

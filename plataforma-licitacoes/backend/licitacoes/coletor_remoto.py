@@ -31,6 +31,7 @@ from .armazenamento import armazenamento
 from .coleta import CAMPOS
 from .config import config
 from .extracao import extrair
+from .taxonomia import natureza
 from .modelos import Documento, Fonte, Item, Licitacao, Municipio, Sincronizacao, agora
 from .util import para_data, slug
 
@@ -92,7 +93,7 @@ def relevantes(s: Session, limite: int) -> list[Licitacao]:
     abertas = s.query(Licitacao).filter(coleta.abertas_filtro(), Licitacao.cnpj_orgao.isnot(None),
                                         Licitacao.sequencial.isnot(None)).all()
     cand = [lic for lic in abertas if any(c["codigo"] in prio for c in lic.categorias or [])
-            and (lic.valor_estimado is None or float(lic.valor_estimado) >= 1_000_000)]
+            and (lic.valor_estimado is None or float(lic.valor_estimado) >= 1_000_000) and natureza(lic.objeto) != "material"]
     cand.sort(key=lambda x: (-(x.aderencia or 0), -float(x.valor_estimado or 0)))
     return cand[:limite]
 
@@ -105,7 +106,9 @@ def listar_segmento(s: Session, limite: int, ate: float | None = None) -> dict:
     para o painel abrir cada pregão com itens e links diretos dos arquivos."""
     abertas = s.query(Licitacao).filter(coleta.abertas_filtro(), Licitacao.cnpj_orgao.isnot(None),
                                         Licitacao.sequencial.isnot(None)).all()
-    alvo = [x for x in abertas if any(c["segmento"] in SEGMENTOS_LISTADOS for c in x.categorias or [])]
+    # compra de material (computadores, livros...) não interessa: o foco são serviços medidos em volume
+    alvo = [x for x in abertas if any(c["segmento"] in SEGMENTOS_LISTADOS for c in x.categorias or [])
+            and natureza(x.objeto) != "material"]
     alvo.sort(key=lambda x: (-(x.aderencia or 0), -float(x.valor_estimado or 0)))
     res = {"alvo": len(alvo), "detalhados": 0, "itens": 0, "documentos": 0, "falhas": 0}
     for lic in alvo[:limite]:

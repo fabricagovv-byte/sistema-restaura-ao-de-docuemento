@@ -9,6 +9,8 @@ Categorias novas podem ser cadastradas na tabela `categoria`; estas são as padr
 
 from __future__ import annotations
 
+import re
+
 from dataclasses import dataclass, field
 
 from .util import normalizar
@@ -321,6 +323,85 @@ def remuneracao(texto: str, itens: list[tuple[str | None, str | None]], categori
         if ts:
             achados["remun_fixo_mensal"] = ts
     return [{"codigo": c, "nome": REMUNERACAO[c], "segmento": "ti", "termos": ts, "forca": 1.0} for c, ts in achados.items()]
+
+
+# ------------------------------------------------------------------ serviço x material e volumes
+_AQUISICAO = re.compile(r"\b(aquisicao|aquisicoes|compra|compras|fornecimento de (materia|equipamento|bens|insumos|kits|livros|"
+                        r"computador|notebook|tablet|mobiliario|veiculo|generos|medicamento|uniforme)|"
+                        r"material permanente|materiais permanentes|material de consumo|materiais de consumo)\b")
+_SERVICO = re.compile(r"\b(servico|servicos|prestacao|locacao|licenciamento|cessao de uso|consultoria|assessoria|manutencao|"
+                      r"suporte|desenvolvimento|digitalizacao|sustentacao|implantacao|hospedagem|outsourcing|fabrica de software|"
+                      r"tratamento|gestao documental|treinamento|capacitacao|saas|software como servico)\b")
+
+
+def natureza(objeto: str | None, itens: list[tuple[str | None, float | None]] | None = None) -> str | None:
+    """'servico', 'material' ou 'misto'. Pelos itens do PNCP (campo material/serviço, pesado pelo valor) quando
+    houver; senão pelo objeto. None quando não dá para dizer."""
+    if itens:
+        tot = {"m": 0.0, "s": 0.0}
+        for ms, valor in itens:
+            k = "m" if normalizar(ms or "").startswith("m") else "s" if normalizar(ms or "").startswith("s") else None
+            if k:
+                tot[k] += float(valor or 0) or 1.0
+        soma = tot["m"] + tot["s"]
+        if soma:
+            if tot["m"] / soma >= 0.8:
+                return "material"
+            if tot["s"] / soma >= 0.8:
+                return "servico"
+            return "misto"
+    n = normalizar(objeto or "")
+    aq, sv = bool(_AQUISICAO.search(n)), bool(_SERVICO.search(n))
+    return "misto" if aq and sv else "material" if aq else "servico" if sv else None
+
+
+# tipo de volume -> (nome, quantidade mínima para "grande volume")
+VOLUMES = {
+    "ust": ("UST", 1_000), "pf": ("pontos de função", 300), "pagina": ("páginas/imagens", 100_000),
+    "registro": ("registros de dados", 100_000), "hora": ("horas técnicas", 1_000), "mes": ("meses de serviço", 12),
+}
+_V_PAGINA_UN = {"pagina", "paginas", "pag", "imagem", "imagens", "folha", "folhas", "lauda", "laudas", "fls", "pgs"}
+_V_PAGINA_TXT = ["por pagina", "por imagem", "por folha", "paginas digitalizadas", "imagens digitalizadas",
+                 "imagens geradas", "paginas de documentos", "folhas de documentos", "imagem digitalizada", "pagina digitalizada"]
+_V_REG_UN = {"registro", "registros", "dado", "dados", "cadastro", "cadastros", "transacao", "transacoes"}
+_V_REG_TXT = ["por registro", "registros tratados", "registros saneados", "registros processados", "registros digitados",
+              "registros indexados", "registros cadastrados", "registros migrados"]
+
+
+def volumes(itens: list[tuple[str | None, str | None, float | None]]) -> dict[str, float]:
+    """Soma das quantidades por tipo de volume (UST, PF, páginas, registros, horas, meses), pelos itens
+    (unidade, descrição, quantidade). Só itens de serviço de TI/documentos chegam aqui."""
+    tot: dict[str, float] = {}
+    for unidade, descricao, qtd in itens:
+        if not qtd:
+            continue
+        u = " " + normalizar(unidade or "") + " "
+        d = " " + normalizar(descricao or "") + " "
+        pal = set(u.split())
+        if any(x in u or x in d for x in _UST) or "ust" in pal:
+            k = "ust"
+        elif any(x in u or x in d for x in _PF) or " pf " in u:
+            k = "pf"
+        elif pal & _V_PAGINA_UN or any(x in d for x in _V_PAGINA_TXT):
+            k = "pagina"
+        elif qtd >= 10_000 and any(x in d for x in ("digitaliz", "escane", "microfilm", "captura de imagens")):
+            k = "pagina"  # digitalização cobrada por "unidade" = página/imagem
+        elif pal & _V_REG_UN or any(x in d for x in _V_REG_TXT):
+            k = "registro"
+        elif pal & {"hora", "horas", "hs", "h"} and ("tecnic" in u + d or "servico" in u + d):
+            k = "hora"
+        elif pal & _MES or "fixo mensal" in u:
+            k = "mes"
+        else:
+            continue
+        tot[k] = tot.get(k, 0.0) + float(qtd)
+    return tot
+
+
+def grande_volume(vol: dict[str, float], valor: float | None = None) -> list[str]:
+    """Tipos com volume grande. Meses de itens diferentes não se somam com sentido, então o pagamento
+    mensal conta como grande pelo valor do edital (a partir de R$ 1 milhão)."""
+    return [k for k, q in vol.items() if (k == "mes" and (valor or 0) >= 1_000_000) or (k != "mes" and q >= VOLUMES[k][1])]
 
 
 def expandir_consulta(consulta: str, categorias: list[DefCategoria] | None = None) -> dict:
