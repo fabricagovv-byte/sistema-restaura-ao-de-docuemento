@@ -1,0 +1,26 @@
+const { chromium } = require('playwright');
+(async () => {
+  const S = process.argv[2];
+  const b = await chromium.launch();
+  const p = await b.newPage({ viewport: { width: 1280, height: 900 } });
+  const erros = [];
+  p.on('console', m => { if (m.type() === 'error') erros.push(m.text()); });
+  await p.goto('http://localhost:3000/login');
+  await p.fill('#email', 'admin@teste.com'); await p.fill('#senha', 'senha-teste');
+  await p.click('button[type=submit]'); await p.waitForURL('http://localhost:3000/');
+  await p.waitForSelector('.kpi'); await p.click('button.uf:has-text("MG")'); await p.waitForTimeout(1200);
+  await p.screenshot({ path: `${S}/1-painel.png`, fullPage: false });
+  await p.goto('http://localhost:3000/busca?q=' + encodeURIComponent('digitalização') + '&valor_min=1000000&ordenar=valor');
+  await p.waitForSelector('.item'); await p.screenshot({ path: `${S}/2-busca.png` });
+  const txt = await p.textContent('main'); console.log('busca:', txt.match(/\d+ licitações encontradas/)?.[0]);
+  await p.click('.item >> text=Detalhes'); await p.waitForSelector('#proposta');
+  await p.fill('input[aria-label=Descrição]', 'Digitalização de páginas'); await p.fill('input[aria-label=Quantidade]', '2000000');
+  await p.fill('input[aria-label=Custo]', '0.35'); await p.click('text=Calcular'); await p.waitForSelector('text=Preço total');
+  await p.locator('#proposta').screenshot({ path: `${S}/3-proposta.png` });
+  await p.goto('http://localhost:3000/qualidade'); await p.waitForSelector('text=Cobertura comprovada');
+  await p.screenshot({ path: `${S}/4-qualidade.png`, fullPage: false });
+  await p.setViewportSize({ width: 400, height: 860 }); await p.goto('http://localhost:3000/busca?q=sustenta%C3%A7%C3%A3o%20de%20sistemas');
+  await p.waitForSelector('.item'); await p.screenshot({ path: `${S}/5-celular.png` });
+  console.log('erros no console:', erros.length ? erros : 'nenhum');
+  await b.close();
+})();

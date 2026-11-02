@@ -1,0 +1,913 @@
+<meta charset="utf-8">
+<title>Painel Nacional de Licitações</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: cabeçalho com números da coleta, painel de filtros, lista de fichas; fontes e cobertura no fim */
+:root {
+  --bg: #f3f5f7; --surface: #ffffff; --ink: #16202b; --muted: #5a6776; --line: #d9dfe6;
+  --accent: #1f5f8b; --accent-soft: #e3eef6;
+  --ok: #1d7a4a; --ok-bg: #e2f3e9; --warn: #8a6510; --warn-bg: #fbf0d6; --bad: #a3392b; --bad-bg: #f8e3df;
+  --off: #5f6872; --off-bg: #e9ecef;
+  --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f151c; --surface: #17202a; --ink: #e6ecf2; --muted: #9aa8b6; --line: #2a3644; --accent: #79b6e2; --accent-soft: #1b2c3b;
+    --ok: #7fd3a2; --ok-bg: #16301f; --warn: #e6c46a; --warn-bg: #33290f; --bad: #ee9a8b; --bad-bg: #3a1e19; --off: #aab3bc; --off-bg: #232c35;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f151c; --surface: #17202a; --ink: #e6ecf2; --muted: #9aa8b6; --line: #2a3644; --accent: #79b6e2; --accent-soft: #1b2c3b;
+  --ok: #7fd3a2; --ok-bg: #16301f; --warn: #e6c46a; --warn-bg: #33290f; --bad: #ee9a8b; --bad-bg: #3a1e19; --off: #aab3bc; --off-bg: #232c35;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.5 var(--f-body); padding-block: 24px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1000px; margin: 0 auto; display: grid; gap: 22px; }
+.wrap > *, .panel > *, .linha > label { min-width: 0; }
+select { text-overflow: ellipsis; }
+h1, h2, h3 { font-family: var(--f-display); margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(1.6rem, 4.5vw, 2.3rem); font-weight: 800; }
+h2 { font-size: 1.15rem; }
+.eyebrow { font-weight: 700; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.lede { color: var(--muted); margin: 0; max-width: 70ch; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+.kpi b { display: block; font: 800 clamp(1.2rem, 3vw, 1.55rem) var(--f-display); font-variant-numeric: tabular-nums; }
+.kpi span { font-size: .78rem; color: var(--muted); }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 12px; }
+.linha { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; align-items: end; }
+label { display: grid; gap: 4px; font-size: .74rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+input, select { font: 16px var(--f-body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; width: 100%; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips button { font: 600 .85rem var(--f-body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+.chips button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.conta { color: var(--muted); font-size: .92rem; margin: 0; }
+.conta b { color: var(--ink); font-family: var(--f-mono); font-weight: 500; }
+.lista { display: grid; gap: 10px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--ok); border-radius: 8px; padding: 12px 14px; display: grid; gap: 6px; min-width: 0; }
+.card.curto { border-left-color: var(--bad); }
+.card.medio { border-left-color: var(--warn); }
+.topo { display: flex; flex-wrap: wrap; gap: 4px 10px; justify-content: space-between; font-size: .85rem; color: var(--muted); }
+.topo b { color: var(--ink); }
+.obj { margin: 0; font-size: .98rem; }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: .88rem; color: var(--muted); }
+.valor { font-family: var(--f-mono); font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums; }
+.pill { font-size: .72rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+.p-ok { background: var(--ok-bg); color: var(--ok); } .p-warn { background: var(--warn-bg); color: var(--warn); }
+.p-bad { background: var(--bad-bg); color: var(--bad); } .p-off { background: var(--off-bg); color: var(--off); }
+.p-acc { background: var(--accent-soft); color: var(--accent); }
+.acoes { display: flex; flex-wrap: wrap; gap: 6px; }
+.acoes a { font: 700 .8rem var(--f-body); color: var(--accent); border: 1px solid var(--accent); border-radius: 6px; padding: 4px 10px; text-decoration: none; }
+.mais { justify-self: center; font: 700 .9rem var(--f-body); color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 6px; padding: 8px 16px; cursor: pointer; }
+.tabela { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+td, th { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--line); }
+th { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.num { text-align: right; font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.ufs { display: grid; grid-template-columns: repeat(auto-fill, minmax(74px, 1fr)); gap: 6px; }
+.ufs button { font: 700 .82rem var(--f-body); border: 1px solid var(--line); border-radius: 6px; padding: 6px 4px; cursor: pointer; color: var(--ink); line-height: 1.2; }
+.ufs button small { display: block; font: 500 .72rem var(--f-mono); color: inherit; opacity: .85; }
+.ufs button[aria-pressed="true"] { outline: 3px solid var(--accent); }
+.nota { background: var(--accent-soft); border-radius: 8px; padding: 12px 14px; font-size: .92rem; display: grid; gap: 6px; }
+.nota p { margin: 0; }
+a { color: var(--accent); }
+.abas { display: flex; gap: 6px; width: 100%; overflow-x: auto; }
+.abas button { flex: 1 0 auto; color: var(--ink) !important; border-color: var(--line) !important; background: var(--bg) !important; }
+.abas button[aria-selected="true"] { color: var(--surface) !important; background: var(--accent) !important; border-color: var(--accent) !important; }
+.ficha-topo { flex-wrap: wrap; }
+.form { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: 10px; }
+.form label { text-transform: none; letter-spacing: 0; font-size: .8rem; }
+textarea { font: 16px var(--f-body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; width: 100%; min-height: 80px; box-sizing: border-box; }
+.prec td input { width: 100%; min-width: 90px; box-sizing: border-box; padding: 5px 6px; font-size: 15px; }
+.prec td, .prec th { vertical-align: top; }
+@media (max-width: 640px) {
+  .prec thead { display: none; }
+  .prec table, .prec tbody { display: block; }
+  .prec tr { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; border-bottom: 1px solid var(--line); padding: 10px 0; }
+  .prec td { display: block; border: 0; padding: 0; text-align: left !important; }
+  .prec td:nth-child(1) { display: none; }
+  .prec td:nth-child(2) { grid-column: 1 / -1; }
+  .pisos thead { display: none; }
+  .pisos table, .pisos tbody { display: block; }
+  .pisos tr { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; border-bottom: 1px solid var(--line); padding: 10px 0; }
+  .pisos td { display: block; border: 0; padding: 0; }
+  .pisos td::before { content: attr(data-r); display: block; font-size: .68rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+  .prec td::before { content: attr(data-r); display: block; font-size: .68rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+}
+.ref { font-size: .76rem; color: var(--muted); display: block; margin-top: 3px; }
+.ref button { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
+.amostras { font-size: .78rem; margin: 4px 0 0; padding-left: 16px; }
+.totais { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); gap: 8px; }
+.totais div { background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; }
+.totais b { display: block; font-size: 1.05rem; }
+.totais span { font-size: .74rem; color: var(--muted); }
+.salvar { font: 700 .9rem var(--f-body); color: var(--surface); background: var(--ok); border: 1px solid var(--ok); border-radius: 6px; padding: 8px 16px; cursor: pointer; }
+.salvo { font-size: .8rem; color: var(--muted); }
+.notas { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.notas li { border-left: 3px solid var(--accent); padding: 2px 8px; font-size: .9rem; }
+.notas time { display: block; font-size: .72rem; color: var(--muted); }
+.crm-linha { cursor: pointer; }
+.crm-linha:hover td { background: var(--accent-soft); }
+.mapa svg { width: 100%; height: auto; max-height: 420px; display: block; background: var(--bg); border-radius: 8px; }
+.mapa .pontos { stroke: var(--muted); stroke-opacity: .35; stroke-linecap: round; }
+.mapa .rota { stroke: var(--accent); fill: none; }
+.mapa .sede { fill: var(--accent); stroke: var(--surface); }
+.mapa .cidade { fill: var(--bad); stroke: var(--surface); }
+.mapa text { font-family: var(--f-body); font-weight: 700; fill: var(--ink); paint-order: stroke; stroke: var(--surface); }
+.mapa .legenda { display: flex; gap: 14px; font-size: .8rem; margin-top: 6px; flex-wrap: wrap; }
+.mapa .legenda i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.dist { font: 700 .74rem var(--f-body); padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); white-space: nowrap; }
+.pisos td input, .pisos td select { width: 100%; min-width: 80px; box-sizing: border-box; padding: 5px 6px; font-size: 15px; }
+.abaixo { color: var(--bad); font-weight: 700; }
+.dica { margin: 0; font-size: .8rem; color: var(--muted); }
+.vol { font: 700 .74rem var(--f-body); padding: 2px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--ink); white-space: nowrap; }
+.vol.g { background: var(--accent); color: var(--surface); }
+a.baixar { color: var(--surface) !important; background: var(--ok); border-color: var(--ok) !important; }
+.abrir { font: 700 .82rem var(--f-body); color: var(--surface); background: var(--accent); border: 1px solid var(--accent); border-radius: 6px; padding: 5px 12px; cursor: pointer; }
+.obj-link { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.obj-link:hover { color: var(--accent); }
+dialog { width: min(900px, 100%); max-height: 92vh; border: 1px solid var(--line); border-radius: 12px; padding: 0; background: var(--surface); color: var(--ink); }
+dialog::backdrop { background: rgba(10, 16, 24, .55); }
+@media (max-width: 640px) { dialog { max-height: 100vh; height: 100%; border-radius: 0; margin: 0; max-width: 100%; } }
+.ficha { display: grid; gap: 14px; padding: 16px max(16px, env(safe-area-inset-left, 0px)) 24px; }
+.ficha-topo { position: sticky; top: 0; z-index: 2; background: var(--surface); border-bottom: 1px solid var(--line); padding: 10px 16px; display: flex; gap: 8px; align-items: center; justify-content: space-between; }
+.ficha-topo button { font: 700 .85rem var(--f-body); color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 6px; padding: 5px 12px; cursor: pointer; }
+.ficha > *, .ficha section { min-width: 0; }
+dialog { box-sizing: border-box; overflow-x: hidden; }
+.campos { grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)) !important; }
+.ficha h2 { font-size: 1.05rem; }
+.ficha .obj-full { font-size: 1.02rem; margin: 0; }
+.campos { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 18px; margin: 0; }
+.campos div { min-width: 0; }
+.campos dt { font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 700; }
+.campos dd { margin: 0; overflow-wrap: anywhere; }
+.docs { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.docs li { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.docs a { font-weight: 700; }
+.aviso { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; display: grid; gap: 4px; background: var(--surface); }
+.aviso { min-width: 0; }
+.aviso p { margin: 0; font-size: .9rem; overflow-wrap: anywhere; }
+.obj, .obj-full { overflow-wrap: anywhere; }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:8px">
+    <span class="eyebrow">Coleta ao vivo do PNCP · __GERADO__</span>
+    <h1>Painel Nacional de Licitações</h1>
+    <p class="lede">Todas as licitações abertas do Brasil, de todos os portais de disputa, coletadas direto da API do PNCP, do Compras.gov.br e dos diários oficiais. Foco em tecnologia, gestão documental, EAD e pesquisa; abra cada pregão antes de ir ao portal.</p>
+  </header>
+
+  <section class="kpis" id="kpis" aria-label="Números da coleta"></section>
+
+  <section class="panel" aria-label="Filtros">
+    <div class="linha">
+      <label for="q">Busca (objeto, itens, órgão, portal)<input id="q" type="search" placeholder='ex.: ust|pf, "gestão documental" -impressora'></label>
+      <label for="uf">Estado<select id="uf"><option value="">Todos</option></select></label>
+      <label for="vmin">Valor mínimo (R$ mi)<input id="vmin" type="number" min="0" step="0.5" inputmode="decimal" placeholder="0"></label>
+      <label for="sv">Sem valor divulgado<select id="sv"><option value="1">Mostrar</option><option value="0">Esconder</option></select></label>
+      <label for="tipo">Tipo<select id="tipo"><option value="servico">Somente serviços</option><option value="todos">Serviços e materiais</option><option value="material">Só compra de material</option></select></label>
+      <label for="plat">Portal da disputa<select id="plat"><option value="">Todos os portais</option></select></label>
+      <label for="ord">Ordenar<select id="ord"><option value="prazo">Prazo mais próximo</option><option value="valor">Maior valor</option><option value="ader">Aderência</option><option value="vol">Grande volume primeiro</option><option value="dist">Mais perto da sede</option></select></label>
+      <label for="dmax">Até quantos km da sede<input id="dmax" type="number" min="0" step="50" inputmode="numeric" placeholder="sem limite"></label>
+    </div>
+    <div class="chips" id="cats" role="group" aria-label="Categoria"></div>
+    <p class="dica">Várias palavras = todas precisam aparecer · <b>"frase exata"</b> · <b>-palavra</b> exclui · <b>ust|pf</b> = uma ou outra · UST, PF, GED, EAD, SaaS e IA já buscam os sinônimos.</p>
+    <p class="conta" id="conta" aria-live="polite"></p>
+    <div class="acoes"><button type="button" class="mais" id="exp-tabelas" hidden>Baixar tabelas de preço destas licitações (CSV)</button><a class="mais" href="#config-sec" style="text-decoration:none">Minha sede e meus pisos</a></div>
+  </section>
+
+  <section class="lista" id="lista" aria-label="Licitações"></section>
+  <button class="mais" id="mais" type="button">Mostrar mais</button>
+
+  <section class="panel" id="config-sec" aria-labelledby="h-config">
+    <h2 id="h-config">Minha sede e meus pisos</h2>
+    <p class="conta" id="cfg-estado"></p>
+    <div class="form">
+      <label for="cfg-sede">Cidade da sede<input id="cfg-sede" list="lista-cidades" placeholder="digite: Belo Horizonte/MG" autocomplete="off"></label>
+    </div>
+    <datalist id="lista-cidades"></datalist>
+    <p class="dica">A distância é em linha reta entre a sede e a cidade do órgão; por estrada costuma ser 20% a 40% maior.</p>
+    <h3 style="margin:6px 0 0">Meus pisos (preço mínimo por unidade)</h3>
+    <p class="dica">Cada piso vale para os itens do tipo escolhido ou que tenham as palavras-chave na descrição (as palavras têm prioridade). Com os pisos salvos, toda licitação com itens já sai com a tabela de preço pronta.</p>
+    <div class="tabela pisos"><table><thead><tr><th>Descrição</th><th>Tipo de item</th><th>Palavras-chave (opcional)</th><th>Piso R$ / unidade</th><th></th></tr></thead><tbody id="pisos-linhas"></tbody></table></div>
+    <div class="acoes">
+      <button type="button" class="abrir" id="piso-add">Adicionar piso</button>
+      <label class="abrir" style="display:inline-block;text-transform:none;letter-spacing:0;color:var(--surface);font-size:.82rem">Subir planilha (CSV)<input type="file" id="piso-arquivo" accept=".csv,text/csv,text/plain" hidden></label>
+      <button type="button" class="mais" id="piso-modelo" hidden>Baixar modelo da planilha</button>
+      <button type="button" class="salvar" id="cfg-salvar">Salvar sede e pisos</button>
+    </div>
+    <p class="dica">Planilha: uma linha por piso, colunas <b>descrição; tipo; palavras-chave; valor</b> (tipo = UST, PF, página, registro, hora, mês ou qualquer). Separador ponto e vírgula ou vírgula; no Excel, "Salvar como CSV".</p>
+  </section>
+
+  <section class="panel" id="crm-sec" aria-labelledby="h-crm">
+    <h2 id="h-crm">Meu CRM e propostas</h2>
+    <p class="conta" id="crm-estado">Carregando seus dados…</p>
+    <div class="chips" id="crm-filtro" role="group" aria-label="Situação no CRM"></div>
+    <div class="tabela" style="max-height:420px"><table><thead><tr><th>Licitação</th><th>Situação</th><th>Prazo</th><th class="num">Minha proposta</th><th>Próximo passo</th></tr></thead><tbody id="crm-lista"></tbody></table></div>
+    <div class="acoes"><button type="button" class="mais" id="crm-exportar" hidden>Exportar planilha (CSV)</button></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-portais">
+    <h2 id="h-portais">Todos os portais de disputa</h2>
+    <p class="conta" id="portais-conta"></p>
+    <div class="tabela" style="max-height:360px"><table><thead><tr><th>Portal</th><th class="num">Abertas (todas as áreas)</th></tr></thead><tbody id="portais"></tbody></table></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-diarios">
+    <h2 id="h-diarios">Avisos em diários oficiais municipais</h2>
+    <p class="conta">Trechos de diários oficiais dos últimos 10 dias (Querido Diário) que citam licitação de TI ou gestão documental. Muitos municípios publicam aqui antes, ou só aqui.</p>
+    <div class="lista" id="avisos"></div>
+    <button class="mais" id="mais-av" type="button">Mostrar mais avisos</button>
+  </section>
+
+  <section class="panel" aria-labelledby="h-uf">
+    <h2 id="h-uf">Todas as licitações abertas por estado</h2>
+    <p class="conta">Clique num estado para filtrar a lista acima. O número é o total de abertas de qualquer área.</p>
+    <div class="ufs" id="ufs"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-fontes">
+    <h2 id="h-fontes">Fontes e cobertura</h2>
+    <div class="tabela"><table><thead><tr><th>Fonte</th><th>Situação</th><th class="num">Editais</th></tr></thead><tbody id="fontes"></tbody></table></div>
+    <div class="nota" id="cob"></div>
+  </section>
+</div>
+
+<dialog id="ficha" aria-labelledby="ficha-titulo">
+  <div class="ficha-topo"><span class="eyebrow" id="ficha-eyebrow">Pregão</span><button type="button" id="fechar">Fechar</button>
+    <div class="abas" role="tablist" id="abas"><button type="button" role="tab" data-aba="ficha">Ficha</button><button type="button" role="tab" data-aba="preco">Precificar</button><button type="button" role="tab" data-aba="crm">CRM</button></div></div>
+  <div class="ficha" id="ficha-corpo"></div>
+</dialog>
+
+<script>
+const D = __DADOS__;
+const CATS = __CATS__;
+const PRIO = __PRIO__;
+const SAUDE = { funcionando: ["funcionando", "p-ok"], com_falha: ["com falha", "p-bad"], nunca_sincronizado: ["aguardando coleta", "p-warn"],
+  via_pncp: ["coberto via PNCP", "p-acc"], requer_credencial: ["requer credencial", "p-warn"], nao_integrado: ["não integrado", "p-off"] };
+const fmt = (n) => n.toLocaleString("pt-BR");
+const brl = (v) => v == null ? "Sem valor divulgado" : v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: v < 1000 ? 2 : 0 });
+const curto = (v) => v >= 1e9 ? `R$ ${(v / 1e9).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} bi` : v >= 1e6 ? `R$ ${(v / 1e6).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} mi` : brl(v);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const sem = (s) => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const dataHora = (s) => s ? new Date(s).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" }) : "não informada";
+const HOJE = new Date();
+const store = { modo: "carregando", data: {}, db: null, uid: null, aviso: "" };
+const LOCAL = "painel-licitacoes-meus-dados-v1";
+const registro = (id) => store.data["e" + id] || null;
+const TODAS_GZ = "__TODAS__";
+const norm = (s) => " " + sem(s).replace(/[^a-z0-9]+/g, " ").trim() + " ";
+const comBusca = (x) => ({ ...x, busca: norm(`${x.obj} ${x.o} ${x.un || ""} ${x.m || ""} ${x.n || ""} ${x.proc || ""} ${x.plat || ""} ${(x.it || []).map((i) => `${i[1]} ${i[3] || ""}`).join(" ")}`) });
+const itens = D.itens.map((x) => comBusca({ ...x, det: true }));
+const porId = new Map(itens.map((x) => [String(x.id), x]));
+window.itensTodos = itens;
+let todasProntas = false;
+const linkPncp = (ctl) => { const m = /^(\d{14})-\d-(\d+)\/(\d{4})$/.exec(ctl || ""); return m ? `https://pncp.gov.br/app/editais/${m[1]}/${m[3]}/${parseInt(m[2], 10)}` : null; };
+async function carregarTodas() {
+  try {
+    const bin = Uint8Array.from(atob(TODAS_GZ), (ch) => ch.charCodeAt(0));
+    const txt = await new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
+    for (const [id, o, uf, m, obj, v, enc, mod, n, ctl, orig, plat, c, ms] of JSON.parse(txt)) {
+      const x = comBusca({ id, o, uf, m, obj, v, enc, mod, n, ctl, orig, plat, c, ms, a: null, pncp: linkPncp(ctl), det: false });
+      itens.push(x); porId.set(String(id), x);
+    }
+  } catch (e) { console.warn("lista completa indisponível", e); }
+  todasProntas = true;
+  montarChips(); montarPortais(); render(); doHash();
+}
+
+const valorTotal = itens.reduce((s, x) => s + (x.v || 0), 0);
+document.getElementById("kpis").innerHTML = [
+  [fmt(D.total_coletado), "editais coletados"], [fmt(D.abertas), "abertas no Brasil"],
+  [fmt(D.relevantes), "abertas de TI e gestão documental"], [curto(valorTotal), "valor estimado dessas"],
+  [fmt(D.n_plataformas), "portais de disputa identificados"],
+  [`${D.cobertura.percentual_comprovado.toLocaleString("pt-BR")}%`, `dos municípios com edital (${fmt(D.cobertura.municipios_com_edital_90d)} de ${fmt(D.cobertura.municipios_na_base_ibge)})`],
+].map(([b, s]) => `<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
+
+const SINON = {
+  ust: [" ust ", "unidade de servico tecnico", "unidades de servico tecnico", "und servico tecnico"],
+  pf: [" pf ", "ponto de funcao", "pontos de funcao"], ged: [" ged ", "gestao eletronica de documentos", " ecm "],
+  ead: [" ead ", "educacao a distancia", "ensino a distancia", "ambiente virtual de aprendizagem"],
+  saas: [" saas ", "software como servico", "software as a service"], ia: [" ia ", "inteligencia artificial"],
+  bi: [" bi ", "business intelligence"], ocr: [" ocr ", "reconhecimento optico"], erp: [" erp ", "sistema integrado de gestao"],
+  nuvem: ["nuvem", " cloud "], digitalizacao: ["digitaliz", "escanea", "escaneamento"], mensal: ["mensal", " mes ", " meses "],
+  pagina: ["pagina", "imagem", "imagens"], paginas: ["pagina", "imagem", "imagens"],
+};
+function parseBusca(q) {
+  const grupos = [], nao = [];
+  for (const m of String(q).matchAll(/"([^"]+)"|(\S+)/g)) {
+    let tok = m[1] !== undefined ? m[1] : m[2], neg = false;
+    if (m[1] === undefined && tok.startsWith("-") && tok.length > 1) { neg = true; tok = tok.slice(1); }
+    const alts = tok.split("|").flatMap((a) => { const n = norm(a).trim(); if (!n) return [];
+      return SINON[n] || (n.length <= 3 ? [` ${n} `] : [n]); });
+    if (!alts.length) continue;
+    (neg ? nao : grupos).push(alts);
+  }
+  return { grupos, nao };
+}
+const casaBusca = (b, pb) => pb.grupos.every((g) => g.some((a) => b.includes(a))) && !pb.nao.some((g) => g.some((a) => b.includes(a)));
+const estado = { cat: "foco", uf: "", q: "", pb: { grupos: [], nao: [] }, vmin: 0, sv: true, plat: "", tipo: "servico", ord: "prazo", limite: 40 };
+const cEl = document.getElementById("cats");
+const PAGTO = ["remun_fixo_mensal", "remun_ust", "remun_pf"];  // forma de pagamento logo depois dos filtros principais
+const tipoOk = (x) => estado.tipo === "todos" || (estado.tipo === "material" ? x.ms === "material" : x.ms !== "material");
+function montarChips() {
+  const contagem = {};
+  const itens = window.itensTodos.filter(tipoOk);
+  itens.forEach((x) => x.c.forEach((c) => (contagem[c] = (contagem[c] || 0) + 1)));
+  const nFoco = itens.filter((x) => x.c.some((c) => PRIO.includes(c))).length;
+  const nSeg = itens.filter((x) => x.det).length;
+  const nGv = itens.filter((x) => (x.gv || []).length).length;
+  const chips = [["foco", "Seu foco", fmt(nFoco)], ["seg", "Tecnologia, documentos, EAD e pesquisa", fmt(nSeg)], ["gv", "Grande volume (UST, PF, páginas, dados, mensal)", fmt(nGv)], ["meucrm", "No meu CRM", fmt(Object.keys(store.data).filter((k) => k[0] === "e").length)],
+    ["todas", "Todas as licitações do Brasil", todasProntas ? fmt(itens.length) : "carregando…"]]
+    .concat([...new Set([...PAGTO, ...PRIO.filter((c) => CATS[c]), ...Object.keys(CATS)])].filter((c) => contagem[c]).map((c) => [c, CATS[c], fmt(contagem[c])]));
+  cEl.innerHTML = chips.map(([c, n, k]) => `<button type="button" id="cat-${c}" data-c="${c}">${esc(n)} <span style="opacity:.7">${k}</span></button>`).join("");
+  cEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.c === estado.cat)));
+}
+montarChips();
+cEl.addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; estado.cat = b.dataset.c; estado.limite = 40; render(); });
+
+const ufsTodas = Object.keys(D.por_uf).sort();
+document.getElementById("uf").innerHTML += ufsTodas.map((u) => `<option>${u}</option>`).join("");
+function montarPortais() {
+  const platConta = {};
+  itens.forEach((x) => { const p = x.plat || "Não identificado"; platConta[p] = (platConta[p] || 0) + 1; });
+  const sel = document.getElementById("plat");
+  sel.innerHTML = `<option value="">Todos os portais</option>` + Object.entries(platConta).sort((a, b) => b[1] - a[1])
+    .map(([p, n]) => `<option value="${esc(p)}">${esc(p)} (${fmt(n)})</option>`).join("");
+  sel.value = estado.plat;
+}
+montarPortais();
+const maxUf = Math.max(...Object.values(D.por_uf));
+const ufEl = document.getElementById("ufs");
+ufEl.innerHTML = ufsTodas.map((u) => { const pct = 10 + 70 * Math.log(1 + D.por_uf[u]) / Math.log(1 + maxUf);
+  return `<button type="button" id="uf-${u}" data-u="${u}" style="background:color-mix(in srgb, var(--accent) ${pct}%, var(--surface));color:${pct > 50 ? "var(--surface)" : "var(--ink)"}">${u}<small>${fmt(D.por_uf[u])}</small></button>`; }).join("");
+ufEl.addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return;
+  estado.uf = estado.uf === b.dataset.u ? "" : b.dataset.u; document.getElementById("uf").value = estado.uf; estado.limite = 40; render();
+  document.getElementById("lista").scrollIntoView({ behavior: "smooth", block: "start" }); });
+
+const liga = (id, k, conv) => document.getElementById(id).addEventListener("input", (e) => { estado[k] = conv(e.target.value); estado.limite = 40; render(); });
+document.getElementById("q").addEventListener("input", (e) => { estado.q = e.target.value.trim(); estado.pb = parseBusca(estado.q); estado.limite = 40; render(); });
+document.getElementById("dmax").addEventListener("input", (e) => { estado.dmax = parseFloat(e.target.value) || 0; estado.limite = 40; render(); });
+document.getElementById("tipo").addEventListener("input", (e) => { estado.tipo = e.target.value; estado.limite = 40; montarChips(); render(); }); liga("uf", "uf", (v) => v); liga("vmin", "vmin", (v) => parseFloat(String(v).replace(",", ".")) || 0);
+liga("sv", "sv", (v) => v === "1"); liga("plat", "plat", (v) => v); liga("ord", "ord", (v) => v);
+document.getElementById("mais").addEventListener("click", () => { estado.limite += 40; render(); });
+
+function dias(p) { return p ? Math.ceil((new Date(p) - HOJE) / 86400000) : null; }
+const prazoPill = (d) => d === null ? "" : `<span class="pill ${d <= 3 ? "p-bad" : d <= 7 ? "p-warn" : "p-ok"}">${d <= 0 ? "encerra hoje" : d === 1 ? "1 dia" : d + " dias"}</span>`;
+
+const VOLNOME = { ust: "UST", pf: "pontos de função", pagina: "páginas/imagens", registro: "registros", hora: "horas", mes: "meses" };
+const qtd = (q) => q >= 1e6 ? `${(q / 1e6).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} mi` : fmt(q);
+const pillsVol = (x) => Object.entries(x.vol || {}).sort((a, b) => ((x.gv || []).includes(b[0]) - (x.gv || []).includes(a[0])))
+  .map(([k, q]) => `<span class="vol${(x.gv || []).includes(k) ? " g" : ""}" title="${(x.gv || []).includes(k) ? "grande volume" : "volume"}">${k === "mes" ? "pagamento mensal" : `${qtd(q)} ${VOLNOME[k] || k}`}</span>`).join("");
+function arquivoEdital(x) {
+  if (x.doc && x.doc.length) { const d = x.doc.find((d) => d[1] === "edital") || x.doc[0]; return { url: d[2], rotulo: "Baixar edital" }; }
+  const m = /^(\d{14})-\d-(\d+)\/(\d{4})$/.exec(x.ctl || "");
+  return m ? { url: `https://pncp.gov.br/pncp-api/v1/orgaos/${m[1]}/compras/${m[3]}/${parseInt(m[2], 10)}/arquivos/1`, rotulo: "Baixar arquivo 1 (geralmente o edital)" } : null;
+}
+const botaoBaixar = (x) => { const a = arquivoEdital(x); return a ? `<a class="baixar" href="${esc(a.url)}" target="_blank" rel="noopener">${a.rotulo}</a>` : ""; };
+function card(x) {
+  const d = dias(x.enc);
+  const cls = d !== null && d <= 3 ? "curto" : d !== null && d <= 7 ? "medio" : "";
+  const extra = [x.nit ? `${x.nit} ${x.nit === 1 ? "item" : "itens"}` : "", x.doc && x.doc.length ? `${x.doc.length} ${x.doc.length === 1 ? "documento" : "documentos"}` : ""].filter(Boolean).join(" · ");
+  return `<article class="card ${cls}">
+    <div class="topo"><span><b>${esc(x.o)}</b> · ${esc(x.m ? x.m + "/" : "")}${esc(x.uf)}</span>
+      <span>${pillDist(x)}${pillCrm(x.id)}${prazoPill(d)} ${x.a != null ? `<span class="pill p-acc" title="Aderência ao perfil (0 a 100)">${x.a}</span>` : ""}</span></div>
+    <button type="button" class="obj-link" data-abrir="${x.id}"><p class="obj">${esc(x.obj)}</p></button>
+    <div class="meta"><span class="valor">${brl(x.v)}</span><span>Propostas até ${dataHora(x.enc)}</span>
+      <span>${esc(x.mod)}${x.n ? " nº " + esc(x.n) : ""}</span>${x.plat ? `<span>Disputa: ${esc(x.plat)}</span>` : ""}${extra ? `<span>${extra}</span>` : ""}</div>
+    ${x.vol && Object.keys(x.vol).length ? `<div class="acoes">${pillsVol(x)}</div>` : ""}
+    ${resumoPisos(x)}
+    <div class="acoes">${x.ms === "material" ? `<span class="pill p-warn">compra de material</span>` : ""}${x.c.map((c) => `<span class="pill p-off">${esc(CATS[c] || c)}</span>`).join("")}</div>
+    <div class="acoes"><button type="button" class="abrir" data-abrir="${x.id}">Abrir pregão</button><button type="button" class="abrir" data-abrir="${x.id}" data-aba="preco">Precificar</button>${botaoBaixar(x)}
+      ${x.pncp ? `<a href="${esc(x.pncp)}" target="_blank" rel="noopener">Ver no PNCP</a>` : ""}
+      ${x.orig ? `<a href="${esc(x.orig)}" target="_blank" rel="noopener">Portal da disputa</a>` : ""}</div>
+  </article>`;
+}
+
+function render() {
+  cEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.c === estado.cat)));
+  ufEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.u === estado.uf)));
+  let r = itens.filter((x) => (estado.cat === "todas" || (estado.cat === "seg" ? x.det : estado.cat === "meucrm" ? !!registro(x.id) : estado.cat === "gv" ? (x.gv || []).length > 0 : estado.cat === "foco" ? x.c.some((c) => PRIO.includes(c)) : x.c.includes(estado.cat)))
+    && (!estado.uf || x.uf === estado.uf) && (!estado.plat || (x.plat || "Não identificado") === estado.plat)
+    && (!estado.q || casaBusca(x.busca, estado.pb))
+    && tipoOk(x) && (!estado.dmax || (distSede(x) ?? Infinity) <= estado.dmax)
+    && (x.v == null ? estado.sv : x.v >= estado.vmin * 1e6));
+  if (estado.ord === "valor") r.sort((a, b) => (b.v || -1) - (a.v || -1));
+  else if (estado.ord === "dist") r.sort((a, b) => (distSede(a) ?? 1e9) - (distSede(b) ?? 1e9));
+  else if (estado.ord === "vol") r.sort((a, b) => (b.gv || []).length - (a.gv || []).length || (b.v || 0) - (a.v || 0));
+  else if (estado.ord === "ader") r.sort((a, b) => (b.a ?? -1) - (a.a ?? -1) || (b.v || 0) - (a.v || 0));
+  else r.sort((a, b) => (a.enc || "9") < (b.enc || "9") ? -1 : 1);
+  const soma = r.reduce((s, x) => s + (x.v || 0), 0);
+  document.getElementById("conta").innerHTML = `<b>${fmt(r.length)}</b> licitações · soma dos valores divulgados <b>${curto(soma)}</b>`;
+  document.getElementById("lista").innerHTML = r.slice(0, estado.limite).map(card).join("") ||
+    `<p class="conta">Nenhuma licitação com esses filtros.${estado.cat !== "todas" ? ` <button type="button" class="abrir" id="buscar-todas">Buscar em todas as licitações do Brasil</button>` : " Baixe o valor mínimo ou mostre as sem valor divulgado."}</p>`;
+  const bt = document.getElementById("buscar-todas");
+  if (bt) bt.addEventListener("click", () => { estado.cat = "todas"; estado.limite = 40; render(); });
+  document.getElementById("mais").hidden = r.length <= estado.limite;
+  ultimaLista = r;
+  const bt2 = document.getElementById("exp-tabelas"); if (bt2) bt2.hidden = !temDownload || !r.some((x) => x.det && (x.it || []).length);
+}
+
+/* Ficha do pregão */
+const dlg = document.getElementById("ficha");
+const TIPO_DOC = { edital: "Edital", termo_referencia: "Termo de referência", estudo_tecnico: "Estudo técnico preliminar", minuta_contrato: "Minuta do contrato",
+  anexo: "Anexo", planilha: "Planilha", aviso: "Aviso", ata: "Ata", esclarecimento: "Esclarecimento", impugnacao: "Impugnação", outro: "Documento" };
+const campo = (k, v) => v === null || v === undefined || v === "" ? "" : `<div><dt>${k}</dt><dd>${v}</dd></div>`;
+
+function ficha(x) {
+  const d = dias(x.enc);
+  const linkPortal = x.orig ? `<a href="${esc(x.orig)}" target="_blank" rel="noopener">${esc(x.plat || "abrir")}</a>` : esc(x.plat || "");
+  const itensHtml = x.it && x.it.length ? `<div class="tabela" style="max-height:340px"><table><thead><tr><th>Item</th><th>Descrição</th><th class="num">Qtd.</th><th>Un.</th><th class="num">Valor unit.</th><th class="num">Valor total</th></tr></thead><tbody>
+      ${x.it.map(([num, desc, qtd, un, vu, vt]) => `<tr><td>${num}</td><td>${esc(desc)}</td><td class="num">${qtd == null ? "" : fmt(qtd)}</td><td>${esc((un || "").trim())}</td><td class="num">${vu ? brl(vu) : "sigiloso"}</td><td class="num">${vt ? brl(vt) : "sigiloso"}</td></tr>`).join("")}
+    </tbody></table></div>${x.nit > x.it.length ? `<p class="conta">Mostrando ${x.it.length} de ${fmt(x.nit)} itens. A lista completa está no PNCP.</p>` : ""}`
+    : `<p class="conta">${x.det ? "Itens ainda não listados nesta coleta." : "Itens e documentos são carregados no painel só para tecnologia, documentos, EAD e pesquisa."} Veja a relação completa no PNCP.</p>`;
+  const docsHtml = x.doc && x.doc.length ? `<ul class="docs">${x.doc.map(([t, tipo, url, pg]) =>
+      `<li><a href="${esc(url)}" target="_blank" rel="noopener">⬇ ${esc(t)}</a><span class="pill p-off">${esc(TIPO_DOC[tipo] || tipo || "Documento")}</span>${pg ? `<span class="conta">${pg} ${pg === 1 ? "página" : "páginas"}</span>` : ""}</li>`).join("")}</ul>`
+    : `<p class="conta">Documentos ainda não listados nesta coleta. O edital e os anexos estão no PNCP.</p>`;
+  return `<p class="eyebrow">${esc(x.o)}${x.un && sem(x.un) !== sem(x.o) ? " · " + esc(x.un) : ""} · ${esc(x.m ? x.m + "/" : "")}${esc(x.uf)}</p>
+    <h2 id="ficha-titulo">${esc(x.mod)}${x.n ? " nº " + esc(x.n) : ""}</h2>
+    <p class="obj-full">${esc(x.obj)}</p>
+    <div class="meta"><span class="valor">${brl(x.v)}</span>${prazoPill(d)}<span>Propostas até ${dataHora(x.enc)}</span></div>
+    ${x.vol && Object.keys(x.vol).length ? `<div class="acoes">${pillsVol(x)}</div>` : ""}
+    <div class="acoes">${botaoBaixar(x)}${x.pncp ? `<a href="${esc(x.pncp)}" target="_blank" rel="noopener">Ver edital no PNCP</a>` : ""}
+      ${x.orig ? `<a href="${esc(x.orig)}" target="_blank" rel="noopener">Ir para o portal da disputa</a>` : ""}
+      ${x.pe ? `<a href="${esc(x.pe)}" target="_blank" rel="noopener">Processo eletrônico</a>` : ""}</div>
+    <div class="acoes"><button type="button" class="abrir" onclick="abrir(${x.id}, true, 'preco')">Precificar este edital</button><button type="button" class="abrir" onclick="abrir(${x.id}, true, 'crm')">${registro(x.id) ? "Ver no meu CRM" : "Adicionar ao meu CRM"}</button></div>
+    ${mapaHtml(x)}
+    <section><h2>Dados do pregão</h2><dl class="campos">
+      ${campo("Número", esc(x.n))}${campo("Processo", esc(x.proc))}${campo("Modalidade", esc(x.mod))}${campo("Modo de disputa", esc(x.md))}
+      ${campo("Amparo legal", esc(x.amp))}${campo("Registro de preços", x.srp == null ? "" : x.srp ? "Sim" : "Não")}${campo("Situação", esc(x.sit))}
+      ${campo("Valor estimado", brl(x.v))}${campo("Publicação", x.pub ? dataHora(x.pub) : "")}${campo("Abertura das propostas", x.ab ? dataHora(x.ab) : "")}
+      ${campo("Encerramento das propostas", x.enc ? dataHora(x.enc) : "")}${campo("Portal da disputa", linkPortal)}${campo("Nº de controle PNCP", esc(x.ctl))}
+      ${campo("Unidade compradora", esc(x.un))}${campo("Categorias", x.c.map((c) => esc(CATS[c] || c)).join(", "))}${campo("Natureza", { servico: "Serviço", material: "Compra de material", misto: "Serviço e material" }[x.ms] || "")}${campo("Aderência ao perfil", x.a != null ? x.a + " de 100" : "")}
+    </dl></section>
+    ${x.inf ? `<section><h2>Informações complementares</h2><p style="white-space:pre-line;margin:0">${esc(x.inf)}</p></section>` : ""}
+    <section><h2>Itens${x.nit ? ` (${fmt(x.nit)})` : ""}</h2>${itensHtml}</section>
+    <section><h2>Documentos${x.doc && x.doc.length ? ` (${x.doc.length})` : ""}</h2>${docsHtml}</section>
+    <p class="conta">Dados copiados do PNCP em ${esc(D.gerado)}. Valor estimado não é preço oficial de contratação; confira prazo e valor no edital antes de decidir.</p>`;
+}
+
+let fichaAtual = null;
+function abrir(id, empurra = true, aba = "ficha") {
+  const x = porId.get(String(id)); if (!x) return;
+  fichaAtual = { x, aba };
+  document.getElementById("ficha-eyebrow").textContent = x.plat ? `Disputa: ${x.plat}` : "Licitação";
+  renderFicha();
+  if (!dlg.open) dlg.showModal();
+  dlg.scrollTop = 0; document.getElementById("ficha-corpo").scrollTop = 0;
+  const h = `#p${x.id}${aba === "ficha" ? "" : "-" + aba}`;
+  if (empurra && location.hash !== h) history.pushState(null, "", h);
+}
+function renderFicha() {
+  const { x, aba } = fichaAtual;
+  document.querySelectorAll("#abas button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.aba === aba)));
+  const corpo = document.getElementById("ficha-corpo");
+  if (aba === "preco") { corpo.innerHTML = precoHtml(x); ligarPreco(x); }
+  else if (aba === "crm") { corpo.innerHTML = crmHtml(x); ligarCrm(x); }
+  else corpo.innerHTML = ficha(x);
+}
+document.getElementById("abas").addEventListener("click", (e) => { const b = e.target.closest("[data-aba]"); if (!b || !fichaAtual) return;
+  abrir(fichaAtual.x.id, true, b.dataset.aba); });
+function fechar() { if (dlg.open) dlg.close(); }
+dlg.addEventListener("close", () => { if (location.hash.startsWith("#p")) history.pushState(null, "", location.pathname + location.search); });
+document.getElementById("fechar").addEventListener("click", fechar);
+dlg.addEventListener("click", (e) => { if (e.target === dlg) fechar(); });
+document.getElementById("lista").addEventListener("click", (e) => { const b = e.target.closest("[data-abrir]"); if (b) abrir(b.dataset.abrir, true, b.dataset.aba || "ficha"); });
+const doHash = () => { const m = location.hash.match(/^#p(\d+)(?:-(preco|crm))?$/); if (m) { if (porId.has(m[1])) abrir(m[1], false, m[2] || "ficha"); } else fechar(); };
+window.addEventListener("popstate", doHash);
+
+/* ===================== Dados do usuário (privados) =====================
+   Na visualização do Claude: banco do artefato, área data/users/<id> — só a própria pessoa lê e grava,
+   em qualquer aparelho. Fora dela (arquivo aberto direto): só neste navegador. */
+function lerLocal() { try { return JSON.parse(localStorage.getItem(LOCAL) || "{}") || {}; } catch (e) { return {}; } }
+function gravarLocal() { try { localStorage.setItem(LOCAL, JSON.stringify(store.data)); return true; } catch (e) { return false; } }
+function aoMudarStore() { renderConfig(); renderCrm(); montarChips(); render(); if (dlg.open && fichaAtual && fichaAtual.aba === "ficha") renderFicha(); }
+async function iniciarStore() {
+  let db = null, user = null;
+  try { if (window.claude && window.claude.use) [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]); } catch (e) { db = null; }
+  const uid = user ? await user.id() : null;
+  if (db && uid) {
+    store.db = db; store.uid = uid; store.modo = "conta";
+    let espera = setTimeout(() => { store.aviso = "Seus dados salvos ainda não carregaram; a conexão pode estar lenta."; renderCrm(); }, 10000);
+    db.collection("data/users/" + uid).onSnapshot((snap) => {
+      if (!snap.metadata.fromCache && espera) { clearTimeout(espera); espera = null; store.aviso = ""; }
+      const novo = {}; snap.docs.forEach((d) => { if (d.exists) novo[d.id] = d.data(); });
+      store.data = novo; aoMudarStore();
+    }, (err) => { if (espera) clearTimeout(espera); store.aviso = "Não foi possível ler seus dados salvos agora (" + err.code + ")."; renderCrm(); });
+  } else {
+    store.modo = "local"; store.data = lerLocal(); aoMudarStore();
+  }
+}
+const filas = {};
+function salvarRegistro(x, patch) {
+  const chave = "e" + x.id;
+  const base = JSON.parse(JSON.stringify(store.data[chave] || {}));
+  const novo = { ...base, ...patch, id: x.id, atualizado: new Date().toISOString(),
+    resumo: { obj: (x.obj || "").slice(0, 300), o: x.o, uf: x.uf, m: x.m || "", enc: x.enc || null, v: x.v ?? null, n: x.n || "", pncp: x.pncp || null } };
+  if (store.modo === "conta") {
+    store.data = { ...store.data, [chave]: novo };
+    filas[chave] = (filas[chave] || Promise.resolve()).then(() => store.db.collection("data/users/" + store.uid).doc(chave).set(novo));
+    return filas[chave];
+  }
+  store.data = { ...store.data, [chave]: novo };
+  return gravarLocal() ? Promise.resolve() : Promise.reject({ code: "local", message: "o navegador bloqueou o armazenamento" });
+}
+const ondeSalva = () => store.modo === "conta" ? "salvo na sua conta, privado (só você vê)" : store.modo === "local" ? "salvo só neste navegador" : "carregando";
+
+/* ===================== Pesquisa de preços (todos os itens) ===================== */
+const PALAVRAS_FRACAS = new Set("de da do das dos e em para com por a o as os um uma no na nos nas ao aos servico servicos contratacao empresa especializada prestacao fornecimento item lote conforme termo referencia".split(" "));
+const tokens = (s) => [...new Set(norm(s).trim().split(" ").filter((w) => w.length > 2 && !PALAVRAS_FRACAS.has(w) && !/^\d+$/.test(w)))];
+const unidadeChave = (u) => { const n = norm(u).trim(); if (/ust|servico tecnico/.test(n)) return "ust"; if (/ponto de funcao|^pf$/.test(n)) return "pf";
+  if (/^(mes|meses|mensal)/.test(n) || /fixo mensal/.test(n)) return "mes"; if (/hora/.test(n)) return "hora"; if (/pagina|imagem|folha/.test(n)) return "pagina";
+  return n.split(" ")[0] || "un"; };
+let IDX = null;
+function indicePrecos() {
+  if (IDX) return IDX;
+  IDX = [];
+  for (const x of itens) if (x.det) for (const it of x.it || []) {
+    if (!it[4] || it[4] <= 0) continue;
+    IDX.push({ id: x.id, uf: x.uf, o: x.o, num: it[0], desc: it[1], un: it[3], vu: it[4], uk: unidadeChave(it[3] || ""), tk: new Set(tokens(it[1])) });
+  }
+  return IDX;
+}
+function pesquisarPreco(x, it) {
+  const tk = tokens(it[1]); if (!tk.length) return null;
+  const uk = unidadeChave(it[3] || "");
+  const cands = [];
+  for (const r of indicePrecos()) {
+    if (r.id === x.id || r.uk !== uk) continue;
+    let comum = 0; for (const w of tk) if (r.tk.has(w)) comum++;
+    const sim = comum / (tk.length + r.tk.size - comum);
+    if (comum >= 2 && sim >= 0.25) cands.push({ ...r, sim });
+  }
+  if (!cands.length) return null;
+  // um valor por edital (a mediana dele) para um órgão com muitos itens não dominar
+  const porEdital = {}; cands.forEach((c) => (porEdital[c.id] = porEdital[c.id] || []).push(c));
+  const vals = Object.values(porEdital).map((l) => mediana(l.map((c) => c.vu))).sort((a, b) => a - b);
+  cands.sort((a, b) => b.sim - a.sim);
+  return { n: vals.length, med: mediana(vals), min: vals[0], max: vals[vals.length - 1], amostras: cands.slice(0, 8) };
+}
+const mediana = (v) => { const s = [...v].sort((a, b) => a - b); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+const reais = (v) => v == null || isNaN(v) ? "—" : v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 2 });
+const numero = (s) => { if (s === "" || s == null) return null; const n = parseFloat(String(s).replace(/\./g, "").replace(",", ".")); return isNaN(n) ? null : n; };
+const numIn = (v) => v == null ? "" : String(v).replace(".", ",");
+
+/* ===================== Precificação ===================== */
+const rascunhos = {};
+function rascunhoPreco(x) {
+  if (!rascunhos[x.id]) {
+    const salvo = registro(x.id) && registro(x.id).preco;
+    rascunhos[x.id] = salvo ? JSON.parse(JSON.stringify(salvo)) : { bdi: 20, imp: 0, linhas: {}, global: null, notas: "" };
+  }
+  return rascunhos[x.id];
+}
+function linhasPreco(x) {
+  if (x.it && x.it.length) return x.it.map((it) => ({ chave: String(it[0]), it, desc: it[1], qtdRef: it[2], un: it[3], vu: it[4], vt: it[5] }));
+  return [{ chave: "global", it: null, desc: "Valor global do edital (itens ainda não coletados)", qtdRef: 1, un: "global", vu: x.v, vt: x.v }];
+}
+function calcPreco(x, r) {
+  const k = (1 + (r.bdi || 0) / 100) / (1 - Math.min(99, r.imp || 0) / 100);
+  let custo = 0, preco = 0, ref = 0;
+  const linhas = linhasPreco(x).map((l) => {
+    const s = r.linhas[l.chave] || {};
+    const qtd = s.qtd ?? l.qtdRef ?? 0;
+    const cu = s.custo ?? null;
+    const piso = l.it ? pisoPara(l.it) : null;
+    const pu = cu != null ? cu * k : piso ? piso.valor : null;
+    const tot = pu == null ? null : pu * qtd;
+    const refTot = l.vu != null ? l.vu * qtd : null;
+    if (cu != null) custo += cu * qtd;
+    if (tot != null) preco += tot;
+    if (refTot != null) ref += refTot;
+    return { ...l, qtd, cu, pu, tot, refTot, piso, abaixo: piso && pu != null && pu < piso.valor - 0.005 };
+  });
+  const refEdital = x.v ?? (ref || null);
+  return { linhas, custo, preco, ref: refEdital, feitos: linhas.filter((l) => l.pu != null).length, desconto: refEdital && preco ? 1 - preco / refEdital : null,
+    lucro: preco && custo ? preco * (1 - (r.imp || 0) / 100) - custo : null, fator: k };
+}
+function precoHtml(x) {
+  const r = rascunhoPreco(x), c = calcPreco(x, r), salvo = registro(x.id);
+  const linhas = c.linhas.map((l) => {
+    const pesq = l.it ? pesquisarPreco(x, l.it) : null;
+    return `<tr data-l="${esc(l.chave)}">
+      <td data-r="Item">${l.it ? esc(l.it[0]) : "—"}</td>
+      <td data-r="${l.it ? "Item " + esc(l.it[0]) : "Valor global"}">${esc((l.desc || "").slice(0, 160))}${pesq ? `<span class="ref">Pesquisa de preços: mediana <b>${reais(pesq.med)}</b> / ${esc((l.un || "").trim())} em ${pesq.n} ${pesq.n === 1 ? "edital" : "editais"} (faixa ${reais(pesq.min)} a ${reais(pesq.max)}) <button type="button" data-amostras="${esc(l.chave)}">ver</button></span>
+        <ol class="amostras" id="am-${esc(l.chave)}" hidden>${pesq.amostras.map((a) => `<li>${reais(a.vu)} · ${esc(a.o)}/${esc(a.uf)} — ${esc(a.desc.slice(0, 90))} <a href="#p${a.id}" onclick="event.preventDefault();abrir(${a.id})">abrir</a></li>`).join("")}</ol>` : l.it ? `<span class="ref">Pesquisa de preços: nenhum item parecido nos editais coletados.</span>` : ""}</td>
+      <td data-r="Quantidade"><input inputmode="decimal" data-campo="qtd" value="${esc(numIn(l.qtd))}" aria-label="Quantidade"><span class="ref">${esc((l.un || "").trim())}</span></td>
+      <td class="num" data-r="Ref. unitária">${reais(l.vu)}<span class="ref">estimado no edital</span></td>
+      <td data-r="Meu custo unitário"><input inputmode="decimal" data-campo="custo" value="${esc(numIn(l.cu))}" placeholder="seu custo" aria-label="Custo unitário"></td>
+      <td class="num" data-r="Preço unitário"><span data-pu>${reais(l.pu)}</span><span class="ref" data-piso>${pisoTxt(l)}</span></td><td class="num" data-r="Total" data-tot>${reais(l.tot)}</td></tr>`; }).join("");
+  return `<p class="eyebrow">${esc(x.o)} · ${esc(x.m ? x.m + "/" : "")}${esc(x.uf)}</p>
+    <h2 id="ficha-titulo">Precificar: ${esc(x.mod || "")}${x.n ? " nº " + esc(x.n) : ""}</h2>
+    <p class="obj-full" style="font-size:.92rem">${esc((x.obj || "").slice(0, 400))}</p>
+    <div class="form">
+      <label>BDI / margem (%)<input id="pr-bdi" inputmode="decimal" value="${esc(numIn(r.bdi))}"></label>
+      <label>Impostos sobre o faturamento (%)<input id="pr-imp" inputmode="decimal" value="${esc(numIn(r.imp))}"></label>
+    </div>
+    <p class="dica">Preço unitário = custo × (1 + BDI) ÷ (1 − impostos). Sem custo digitado, vale o seu piso (configure em "Minha sede e meus pisos"). O "estimado no edital" é a referência publicada pelo órgão, não o preço oficial da contratação.${x.nit > (x.it || []).length ? ` Mostrando ${(x.it || []).length} de ${fmt(x.nit)} itens.` : ""}</p>
+    <div class="tabela prec"><table><thead><tr><th>Item</th><th>Descrição e pesquisa de preços</th><th>Qtd.</th><th class="num">Ref. unit.</th><th>Custo unit. (R$)</th><th class="num">Preço unit.</th><th class="num">Total</th></tr></thead><tbody id="pr-linhas">${linhas}</tbody></table></div>
+    <div class="totais" id="pr-totais">${totaisHtml(c)}</div>
+    <label>Notas da precificação<textarea id="pr-notas" placeholder="premissas, fornecedores, riscos…">${esc(r.notas || "")}</textarea></label>
+    <div class="acoes"><button type="button" class="salvar" id="pr-salvar">Salvar precificação</button><button type="button" class="mais" id="pr-csv" hidden>Exportar precificação (CSV)</button>
+      <span class="salvo" id="pr-estado">${salvo && salvo.preco ? "Última gravação: " + new Date(salvo.atualizado).toLocaleString("pt-BR") + " · " + ondeSalva() : "Ainda não salvo · " + ondeSalva()}</span></div>`;
+}
+function totaisHtml(c) {
+  return [[reais(c.preco || null), "minha proposta (total)"], [reais(c.custo || null), "custo total"], [reais(c.ref), "valor estimado do edital"],
+    [c.desconto == null ? "—" : (c.desconto * 100).toLocaleString("pt-BR", { maximumFractionDigits: 1 }) + "%", "desconto sobre o estimado"],
+    [reais(c.lucro), "lucro bruto (após impostos)"], [`${c.feitos} de ${c.linhas.length}`, "itens precificados"]].map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join("");
+}
+function ligarPreco(x) {
+  const r = rascunhoPreco(x);
+  const atualiza = () => { const c = calcPreco(x, r);
+    c.linhas.forEach((l) => { const tr = document.querySelector(`#pr-linhas tr[data-l="${CSS.escape(l.chave)}"]`); if (!tr) return;
+      tr.querySelector("[data-pu]").textContent = reais(l.pu); tr.querySelector("[data-tot]").textContent = reais(l.tot);
+      const ps = tr.querySelector("[data-piso]"); ps.textContent = pisoTxt(l); ps.className = "ref" + (l.abaixo ? " abaixo" : ""); });
+    document.getElementById("pr-totais").innerHTML = totaisHtml(c);
+    document.getElementById("pr-estado").textContent = "Alterações não salvas"; };
+  document.getElementById("pr-bdi").addEventListener("input", (e) => { r.bdi = numero(e.target.value) || 0; atualiza(); });
+  document.getElementById("pr-imp").addEventListener("input", (e) => { r.imp = numero(e.target.value) || 0; atualiza(); });
+  document.getElementById("pr-notas").addEventListener("input", (e) => { r.notas = e.target.value; document.getElementById("pr-estado").textContent = "Alterações não salvas"; });
+  document.getElementById("pr-linhas").addEventListener("input", (e) => { const inp = e.target.closest("input[data-campo]"); if (!inp) return;
+    const chave = inp.closest("tr").dataset.l; r.linhas[chave] = { ...(r.linhas[chave] || {}), [inp.dataset.campo]: numero(inp.value) }; atualiza(); });
+  document.getElementById("pr-linhas").addEventListener("click", (e) => { const b = e.target.closest("[data-amostras]"); if (!b) return;
+    const ol = document.getElementById("am-" + b.dataset.amostras); ol.hidden = !ol.hidden; b.textContent = ol.hidden ? "ver" : "esconder"; });
+  document.getElementById("pr-salvar").addEventListener("click", async () => {
+    const est = document.getElementById("pr-estado"); est.textContent = "Salvando…";
+    const c = calcPreco(x, r);
+    try { await salvarRegistro(x, { preco: JSON.parse(JSON.stringify(r)), proposta: { total: c.preco || null, custo: c.custo || null, desconto: c.desconto },
+      crm: (registro(x.id) && registro(x.id).crm) || { status: "analise" } });
+      est.textContent = "Salvo às " + new Date().toLocaleTimeString("pt-BR") + " · " + ondeSalva(); }
+    catch (err) { est.textContent = "Não foi possível salvar (" + (err && err.code || "erro") + "). Tente de novo."; }
+  });
+  ligarCsv("pr-csv", () => csvPreco(x), `precificacao-${x.id}.csv`);
+}
+
+/* ===================== Sede, distância e mapa ===================== */
+const GEO = __GEO__;
+const GEO_ID = new Map(GEO.map((g) => [g[0], g]));
+const GEO_NOME = new Map(GEO.map((g) => [norm(g[1] + " " + g[2]).trim(), g]));
+const cfg = () => store.data.config || {};
+const geoDe = (x) => GEO_ID.get(String(x.ib || "")) || (x.m && x.uf ? GEO_NOME.get(norm(x.m + " " + x.uf).trim()) : null);
+function km(a, b) { const R = 6371, r = Math.PI / 180, dLa = (b[3] - a[3]) * r, dLo = (b[4] - a[4]) * r;
+  const h = Math.sin(dLa / 2) ** 2 + Math.cos(a[3] * r) * Math.cos(b[3] * r) * Math.sin(dLo / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)); }
+const sedeGeo = () => cfg().sede ? GEO_ID.get(String(cfg().sede)) : null;
+const distCache = new Map(); let distSedeChave = null;
+function distSede(x) { const s = sedeGeo(); if (!s) return null;
+  if (distSedeChave !== s[0]) { distCache.clear(); distSedeChave = s[0]; }
+  if (!distCache.has(x.id)) { const g = geoDe(x); distCache.set(x.id, g ? km(s, g) : null); } return distCache.get(x.id); }
+const kmTxt = (d) => d < 1 ? "na sede" : `${Math.round(d).toLocaleString("pt-BR")} km`;
+const pillDist = (x) => { const d = distSede(x); return d == null ? "" : `<span class="dist" title="distância em linha reta até a sede">📍 ${kmTxt(d)}</span> `; };
+const PROJ = { lo0: -74.2, lo1: -34.6, la0: 5.6, la1: -33.9, w: 600 };
+PROJ.h = Math.round(PROJ.w * (PROJ.la0 - PROJ.la1) / (PROJ.lo1 - PROJ.lo0) * 1.0);
+const xy = (g) => [((g[4] - PROJ.lo0) / (PROJ.lo1 - PROJ.lo0) * PROJ.w).toFixed(1), ((PROJ.la0 - g[3]) / (PROJ.la0 - PROJ.la1) * PROJ.h).toFixed(1)];
+let pontosD = null;
+const pontos = () => pontosD || (pontosD = GEO.map((g) => { const [a, b] = xy(g); return `M${a} ${b}h0`; }).join(""));
+function mapaHtml(x) {
+  const g = geoDe(x); if (!g) return "";
+  const s = sedeGeo(); const [cx, cy] = xy(g).map(Number);
+  let texto = `<b>${esc(g[1])}/${esc(g[2])}</b>`;
+  // enquadra a sede e a cidade com folga (zoom na região); sem sede, o Brasil inteiro
+  let vb = [0, 0, PROJ.w, PROJ.h];
+  const pts = [[cx, cy]];
+  if (s) { pts.push(xy(s).map(Number)); texto += ` fica a <b>${kmTxt(km(s, g))}</b> da sede em ${esc(s[1])}/${esc(s[2])} (em linha reta).`;
+    const xs = pts.map((q) => q[0]), ys = pts.map((q) => q[1]);
+    const lado = Math.max(200, Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys)) * 1.6;
+    const mx = (Math.max(...xs) + Math.min(...xs)) / 2, my = (Math.max(...ys) + Math.min(...ys)) / 2;
+    if (lado < PROJ.w * 0.9) vb = [mx - lado / 2, my - lado / 2 * 0.75, lado, lado * 0.75]; }
+  else texto += `. <a href="#config-sec" onclick="fechar()">Configure a cidade da sede</a> para ver a distância.`;
+  const k = vb[2] / PROJ.w, r = 9 * k, fs = 15 * k, sw = 2.4 * Math.sqrt(k);
+  const rot = (px, py, nome, cls, outro) => { const esq = outro && outro[0] > px; // rótulo para o lado oposto ao outro ponto
+    return `<circle class="${cls}" cx="${px}" cy="${py}" r="${r}" stroke-width="${2 * k}"/><text x="${esq ? px - r * 1.5 : px + r * 1.5}" y="${py + fs / 3}" text-anchor="${esq ? "end" : "start"}" font-size="${fs}" stroke-width="${3 * k}">${esc(nome)}</text>`; };
+  let extra = "";
+  if (s) { const [sx, sy] = pts[1]; extra = `<line class="rota" x1="${sx}" y1="${sy}" x2="${cx}" y2="${cy}" stroke-width="${2.5 * k}" stroke-dasharray="${6 * k} ${5 * k}"/>` + rot(sx, sy, "Sede", "sede", [cx, cy]); }
+  return `<section class="mapa"><h2>Onde fica</h2><p style="margin:0 0 6px">${texto}</p>
+    <svg viewBox="${vb.map((v) => v.toFixed(1)).join(" ")}" role="img" aria-label="Mapa com a cidade do órgão${s ? " e a sede" : ""}"><path class="pontos" d="${pontos()}" stroke-width="${sw}"/>${extra}${rot(cx, cy, g[1], "cidade", s ? pts[1] : null)}</svg>
+    <div class="legenda"><span><i style="background:var(--bad)"></i>${esc(g[1])}/${esc(g[2])}</span>${s ? `<span><i style="background:var(--accent)"></i>Sede: ${esc(s[1])}/${esc(s[2])}</span>` : ""}<span><i style="background:var(--muted);opacity:.4"></i>demais municípios</span></div></section>`;
+}
+
+/* ===================== Meus pisos ===================== */
+const TIPOS_PISO = [["qualquer", "Qualquer item"], ["ust", "UST"], ["pf", "Ponto de função"], ["pagina", "Página/imagem"], ["registro", "Registro de dados"], ["hora", "Hora técnica"], ["mes", "Mês (mensal)"]];
+const TIPO_PISO_NOME = Object.fromEntries(TIPOS_PISO);
+let pisosEdit = null;  // cópia em edição na seção de configuração
+const pisosSalvos = () => (cfg().pisos || []).filter((p) => p && p.valor > 0);
+function pisoPara(it) {
+  const ps = pisosSalvos(); if (!ps.length) return null;
+  const d = norm(it[1] || ""), tipo = it[6] || null;
+  const comPalavras = ps.filter((p) => (p.palavras || "").trim()).find((p) => p.palavras.split(",").map((w) => norm(w).trim()).filter(Boolean)
+    .every((w) => d.includes(w)) && (p.tipo === "qualquer" || p.tipo === tipo));
+  return comPalavras || ps.find((p) => !(p.palavras || "").trim() && p.tipo !== "qualquer" && p.tipo === tipo) || null;
+}
+const pisoTxt = (l) => !l.piso ? "" : l.cu == null ? `pelo piso "${l.piso.desc}"` : l.abaixo ? `abaixo do seu piso (${reais(l.piso.valor)})` : `piso ${reais(l.piso.valor)}`;
+function resumoPisos(x) {
+  if (!x.det || !(x.it || []).length || !pisosSalvos().length) return "";
+  let tot = 0, n = 0; for (const it of x.it) { const p = pisoPara(it); if (p && it[2]) { tot += p.valor * it[2]; n++; } }
+  if (!n) return "";
+  const pct = x.v ? ` · ${((tot / x.v) * 100).toLocaleString("pt-BR", { maximumFractionDigits: 0 })}% do estimado` : "";
+  return `<div class="acoes"><span class="vol" title="soma dos itens com piso">Pelos seus pisos: ${curto(tot)} em ${n} de ${(x.it || []).length} itens${pct}</span></div>`;
+}
+function lerCsvPisos(texto) {
+  const linhas = texto.replace(/^﻿/, "").split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+  if (!linhas.length) return [];
+  const sep = (linhas[0].match(/;/g) || []).length >= (linhas[0].match(/,/g) || []).length ? ";" : ",";
+  const cel = (l) => { const out = []; let cur = "", q = false; for (const ch of l) { if (ch === '"') q = !q; else if (ch === sep && !q) { out.push(cur); cur = ""; } else cur += ch; } out.push(cur); return out.map((c) => c.trim()); };
+  const tipoDe = (s) => { const n = norm(s).trim(); if (/ust|servico tecnico/.test(n)) return "ust"; if (/ponto|^pf$/.test(n)) return "pf"; if (/pagina|imagem|folha/.test(n)) return "pagina";
+    if (/registro|dado/.test(n)) return "registro"; if (/hora/.test(n)) return "hora"; if (/mes|mensal/.test(n)) return "mes"; return "qualquer"; };
+  const res = [];
+  for (const l of linhas) { const c = cel(l); const valor = numero((c[3] ?? c[c.length - 1] ?? "").replace(/r\$\s*/i, ""));
+    if (valor == null || valor <= 0) continue;  // cabeçalho ou linha sem valor
+    res.push({ desc: (c[0] || "Piso").slice(0, 120), tipo: tipoDe(c[1] || c[0] || ""), palavras: c.length >= 4 ? (c[2] || "").slice(0, 200) : "", valor }); }
+  return res;
+}
+function renderConfig() {
+  const c = cfg();
+  if (!pisosEdit) pisosEdit = JSON.parse(JSON.stringify(c.pisos || []));
+  const s = sedeGeo();
+  const inp = document.getElementById("cfg-sede"); if (document.activeElement !== inp) inp.value = s ? `${s[1]}/${s[2]}` : "";
+  document.getElementById("cfg-estado").textContent = (s ? `Sede: ${s[1]}/${s[2]}. ` : "Sede ainda não configurada. ") +
+    `${pisosSalvos().length} ${pisosSalvos().length === 1 ? "piso salvo" : "pisos salvos"} · ${ondeSalva()}.`;
+  const opt = (v) => TIPOS_PISO.map(([k, n]) => `<option value="${k}"${k === v ? " selected" : ""}>${esc(n)}</option>`).join("");
+  document.getElementById("pisos-linhas").innerHTML = pisosEdit.map((p, i) => `<tr data-i="${i}">
+    <td data-r="Descrição"><input data-c="desc" value="${esc(p.desc || "")}" placeholder="ex.: Digitalização A4"></td><td data-r="Tipo de item"><select data-c="tipo">${opt(p.tipo || "qualquer")}</select></td>
+    <td data-r="Palavras-chave"><input data-c="palavras" value="${esc(p.palavras || "")}" placeholder="ex.: digitalizacao, a4"></td>
+    <td data-r="Piso R$ / unidade"><input data-c="valor" inputmode="decimal" value="${esc(numIn(p.valor))}"></td><td data-r=" "><button type="button" class="mais" data-rem="${i}">Remover</button></td></tr>`).join("") ||
+    `<tr><td colspan="5">Nenhum piso. Adicione um ou suba a planilha.</td></tr>`;
+}
+document.getElementById("lista-cidades").innerHTML = GEO.map((g) => `<option value="${esc(g[1])}/${g[2]}">`).join("");
+document.getElementById("pisos-linhas").addEventListener("input", (e) => { const el = e.target.closest("[data-c]"); if (!el) return;
+  const i = +el.closest("tr").dataset.i; pisosEdit[i][el.dataset.c] = el.dataset.c === "valor" ? numero(el.value) : el.value;
+  document.getElementById("cfg-estado").textContent = "Alterações não salvas."; });
+document.getElementById("pisos-linhas").addEventListener("click", (e) => { const b = e.target.closest("[data-rem]"); if (!b) return; pisosEdit.splice(+b.dataset.rem, 1); renderConfig();
+  document.getElementById("cfg-estado").textContent = "Alterações não salvas."; });
+document.getElementById("piso-add").addEventListener("click", () => { pisosEdit.push({ desc: "", tipo: "ust", palavras: "", valor: null }); renderConfig(); });
+document.getElementById("piso-arquivo").addEventListener("change", async (e) => { const f = e.target.files && e.target.files[0]; if (!f) return;
+  const novos = lerCsvPisos(await f.text()); e.target.value = "";
+  pisosEdit = [...pisosEdit.filter((p) => p.valor > 0 || (p.desc || "").trim()), ...novos]; renderConfig();
+  document.getElementById("cfg-estado").textContent = novos.length ? `${novos.length} pisos lidos da planilha. Confira e toque em "Salvar sede e pisos".` : "Não achei pisos na planilha: confira as colunas descrição; tipo; palavras-chave; valor."; });
+document.getElementById("cfg-salvar").addEventListener("click", async () => {
+  const est = document.getElementById("cfg-estado");
+  const txt = norm(document.getElementById("cfg-sede").value.replace("/", " ")).trim();
+  const g = txt ? GEO_NOME.get(txt) : null;
+  if (txt && !g) { est.textContent = "Não achei essa cidade. Escolha da lista, no formato Cidade/UF."; return; }
+  const pisos = pisosEdit.filter((p) => p.valor > 0).map((p) => ({ desc: (p.desc || TIPO_PISO_NOME[p.tipo] || "Piso").slice(0, 120), tipo: p.tipo || "qualquer", palavras: (p.palavras || "").slice(0, 200), valor: p.valor }));
+  const novo = { sede: g ? g[0] : null, pisos, atualizado: new Date().toISOString() };
+  est.textContent = "Salvando…";
+  try { await salvarConfig(novo); pisosEdit = null; Object.keys(rascunhos).forEach((k) => delete rascunhos[k]); renderConfig(); render(); est.textContent = "Salvo · " + ondeSalva() + "."; }
+  catch (err) { est.textContent = "Não foi possível salvar (" + (err && err.code || "erro") + "). Tente de novo."; }
+});
+function salvarConfig(novo) {
+  store.data = { ...store.data, config: novo };
+  if (store.modo === "conta") { filas.config = (filas.config || Promise.resolve()).then(() => store.db.collection("data/users/" + store.uid).doc("config").set(novo)); return filas.config; }
+  return gravarLocal() ? Promise.resolve() : Promise.reject({ code: "local" });
+}
+
+/* ===================== Tabelas de preço em lote ===================== */
+let ultimaLista = [];
+function csvTabelas() {
+  const linhas = [["Órgão", "UF", "Município", "Distância da sede (km)", "Edital", "Prazo", "Valor estimado do edital", "Item", "Descrição", "Quantidade", "Unidade", "Ref. unit. edital", "Piso aplicado", "Preço unit.", "Total do item", "Link PNCP"]];
+  for (const x of ultimaLista) { if (!x.det || !(x.it || []).length) continue;
+    const c = calcPreco(x, rascunhoPreco(x)), d = distSede(x);
+    for (const l of c.linhas) linhas.push([x.o, x.uf, x.m || "", d == null ? "" : Math.round(d), `${x.mod || ""} ${x.n || ""}`.trim(), x.enc || "", brNum(x.v), l.it[0], l.desc, brNum(l.qtd), (l.un || "").trim(),
+      brNum(l.vu), l.piso ? `${l.piso.desc} (${brNum(l.piso.valor)})` : "", brNum(l.pu), brNum(l.tot), x.pncp || ""]);
+    linhas.push([x.o, x.uf, x.m || "", d == null ? "" : Math.round(d), `${x.mod || ""} ${x.n || ""}`.trim(), x.enc || "", brNum(x.v), "TOTAL", `${c.feitos} de ${c.linhas.length} itens com preço`, "", "", "", "", "", brNum(c.preco || null), x.pncp || ""]);
+  }
+  return csv(linhas);
+}
+const MODELO_PISOS = () => csv([["descrição", "tipo", "palavras-chave", "valor"], ["Fábrica de software", "UST", "", "120,00"], ["Contagem e desenvolvimento", "PF", "", "650,00"],
+  ["Digitalização A4", "página", "digitalizacao", "0,35"], ["Sustentação mensal", "mês", "sustentacao", "45000,00"]]);
+
+/* ===================== CRM ===================== */
+const ETAPAS = [["novo", "Novo"], ["analise", "Em análise"], ["participar", "Vou participar"], ["proposta", "Proposta enviada"],
+  ["ganhou", "Ganhou"], ["perdeu", "Perdeu"], ["descartado", "Descartado"]];
+const ETAPA_NOME = Object.fromEntries(ETAPAS);
+const ETAPA_COR = { novo: "p-off", analise: "p-warn", participar: "p-acc", proposta: "p-acc", ganhou: "p-ok", perdeu: "p-bad", descartado: "p-off" };
+const pillCrm = (id) => { const g = registro(id); const st = g && g.crm && g.crm.status; return st ? `<span class="pill ${ETAPA_COR[st] || "p-off"}">${esc(ETAPA_NOME[st] || st)}</span> ` : ""; };
+function crmHtml(x) {
+  const g = registro(x.id) || {}, c = g.crm || {};
+  const opt = (lista, v) => lista.map(([k, n]) => `<option value="${k}"${k === v ? " selected" : ""}>${esc(n)}</option>`).join("");
+  return `<p class="eyebrow">${esc(x.o)} · ${esc(x.m ? x.m + "/" : "")}${esc(x.uf)}</p>
+    <h2 id="ficha-titulo">CRM: ${esc(x.mod || "")}${x.n ? " nº " + esc(x.n) : ""}</h2>
+    <p class="obj-full" style="font-size:.92rem">${esc((x.obj || "").slice(0, 300))}</p>
+    <div class="meta"><span class="valor">${brl(x.v)}</span><span>Propostas até ${dataHora(x.enc)}</span>${g.proposta && g.proposta.total ? `<span>Minha proposta: <b>${reais(g.proposta.total)}</b></span>` : ""}</div>
+    <div class="form">
+      <label>Situação<select id="crm-status">${opt(ETAPAS, c.status || "novo")}</select></label>
+      <label>Prioridade<select id="crm-prio">${opt([["alta", "Alta"], ["media", "Média"], ["baixa", "Baixa"]], c.prio || "media")}</select></label>
+      <label>Responsável<input id="crm-resp" value="${esc(c.resp || "")}"></label>
+      <label>Próximo passo<input id="crm-passo" value="${esc(c.passo || "")}" placeholder="ex.: pedir esclarecimento"></label>
+      <label>Data do próximo passo<input id="crm-data" type="date" value="${esc(c.data || "")}"></label>
+      <label>Contato no órgão<input id="crm-contato" value="${esc(c.contato || "")}" placeholder="nome"></label>
+      <label>Telefone<input id="crm-tel" inputmode="tel" value="${esc(c.tel || "")}"></label>
+      <label>E-mail<input id="crm-email" inputmode="email" value="${esc(c.email || "")}"></label>
+      <label>Etiquetas<input id="crm-tags" value="${esc(c.tags || "")}" placeholder="ex.: parceiro X, atestado ok"></label>
+    </div>
+    <div class="acoes"><button type="button" class="salvar" id="crm-salvar">Salvar no CRM</button>
+      <span class="salvo" id="crm-estado-ficha">${g.atualizado ? "Última gravação: " + new Date(g.atualizado).toLocaleString("pt-BR") + " · " + ondeSalva() : "Ainda não está no seu CRM · " + ondeSalva()}</span></div>
+    <section><h2>Anotações</h2>
+      <label>Nova anotação<textarea id="crm-nota" placeholder="ligação, reunião, dúvida do edital…"></textarea></label>
+      <div class="acoes"><button type="button" class="abrir" id="crm-add">Adicionar anotação</button></div>
+      <ul class="notas">${(c.notas || []).slice().reverse().map((n) => `<li><time>${new Date(n.t).toLocaleString("pt-BR")}</time>${esc(n.txt)}</li>`).join("") || `<li>Sem anotações.</li>`}</ul>
+    </section>`;
+}
+function lerCrmForm(base) {
+  const v = (id) => document.getElementById(id).value.trim();
+  return { ...base, status: v("crm-status"), prio: v("crm-prio"), resp: v("crm-resp"), passo: v("crm-passo"), data: v("crm-data"),
+    contato: v("crm-contato"), tel: v("crm-tel"), email: v("crm-email"), tags: v("crm-tags") };
+}
+function ligarCrm(x) {
+  const est = document.getElementById("crm-estado-ficha");
+  const salvar = async (crm) => { est.textContent = "Salvando…";
+    try { await salvarRegistro(x, { crm }); est.textContent = "Salvo às " + new Date().toLocaleTimeString("pt-BR") + " · " + ondeSalva(); return true; }
+    catch (err) { est.textContent = "Não foi possível salvar (" + (err && err.code || "erro") + "). Tente de novo."; return false; } };
+  document.getElementById("crm-salvar").addEventListener("click", () => salvar(lerCrmForm(JSON.parse(JSON.stringify((registro(x.id) || {}).crm || {})))));
+  document.getElementById("crm-add").addEventListener("click", async () => {
+    const txt = document.getElementById("crm-nota").value.trim(); if (!txt) return;
+    const crm = lerCrmForm(JSON.parse(JSON.stringify((registro(x.id) || {}).crm || {})));
+    crm.notas = [...(crm.notas || []), { t: new Date().toISOString(), txt: txt.slice(0, 4000) }].slice(-200);
+    if (await salvar(crm)) renderFicha();
+  });
+}
+let crmFiltro = "";
+function renderCrm() {
+  const lista = Object.values(store.data).filter((g) => g && g.id);
+  const contagem = {}; lista.forEach((g) => { const s = (g.crm && g.crm.status) || "novo"; contagem[s] = (contagem[s] || 0) + 1; });
+  const ativos = lista.filter((g) => !["ganhou", "perdeu", "descartado"].includes((g.crm && g.crm.status) || "novo"));
+  const somaProp = lista.reduce((s, g) => s + ((g.proposta && g.proposta.total) || 0), 0);
+  document.getElementById("crm-estado").innerHTML = store.modo === "carregando" ? "Carregando seus dados…" :
+    `${lista.length ? `<b>${lista.length}</b> ${lista.length === 1 ? "licitação" : "licitações"} no seu CRM · <b>${ativos.length}</b> em andamento · propostas precificadas somam <b>${curto(somaProp)}</b> · ` : "Nada salvo ainda. Abra um pregão e use as abas <b>Precificar</b> ou <b>CRM</b>. "}${esc(ondeSalva())}.${store.aviso ? " " + esc(store.aviso) : ""}`;
+  const fEl = document.getElementById("crm-filtro");
+  fEl.innerHTML = lista.length ? [["", "Todas", lista.length], ...ETAPAS.filter(([k]) => contagem[k]).map(([k, n]) => [k, n, contagem[k]])]
+    .map(([k, n, q]) => `<button type="button" data-f="${k}" aria-pressed="${k === crmFiltro}">${esc(n)} <span style="opacity:.7">${q}</span></button>`).join("") : "";
+  const ordem = Object.fromEntries(ETAPAS.map(([k], i) => [k, i]));
+  const vis = lista.filter((g) => !crmFiltro || ((g.crm && g.crm.status) || "novo") === crmFiltro)
+    .sort((a, b) => (ordem[(a.crm && a.crm.status) || "novo"] - ordem[(b.crm && b.crm.status) || "novo"]) || String(a.resumo && a.resumo.enc || "9").localeCompare(String(b.resumo && b.resumo.enc || "9")));
+  document.getElementById("crm-lista").innerHTML = vis.map((g) => { const r = g.resumo || {}, c = g.crm || {};
+    return `<tr class="crm-linha" data-id="${g.id}"><td><b>${esc(r.o || "")}</b> · ${esc(r.uf || "")}<br><span class="ref">${esc((r.obj || "").slice(0, 110))}</span></td>
+      <td>${pillCrm(g.id)}${c.prio === "alta" ? `<span class="pill p-bad">alta</span>` : ""}</td><td>${r.enc ? dataHora(r.enc) : "—"}</td>
+      <td class="num">${g.proposta && g.proposta.total ? reais(g.proposta.total) : "—"}</td><td>${esc(c.passo || "")}${c.data ? `<span class="ref">${esc(new Date(c.data + "T12:00").toLocaleDateString("pt-BR"))}</span>` : ""}</td></tr>`; }).join("");
+  document.getElementById("crm-exportar").hidden = !lista.length || !temDownload;
+}
+document.getElementById("crm-filtro").addEventListener("click", (e) => { const b = e.target.closest("[data-f]"); if (!b) return; crmFiltro = b.dataset.f; renderCrm(); });
+document.getElementById("crm-lista").addEventListener("click", (e) => { const tr = e.target.closest("tr[data-id]"); if (!tr) return;
+  const id = tr.dataset.id; if (porId.has(id)) abrir(id, true, "crm");
+  else { const g = registro(id); if (g && g.resumo && g.resumo.pncp) window.open(g.resumo.pncp, "_blank", "noopener"); } });
+
+/* ===================== Planilhas (CSV) ===================== */
+let temDownload = false, dl = null;
+const csv = (linhas) => "﻿" + linhas.map((l) => l.map((v) => { const s = v == null ? "" : String(v); return /[";\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; }).join(";")).join("\n");
+const brNum = (v) => v == null || isNaN(v) ? "" : String(Math.round(v * 100) / 100).replace(".", ",");
+function csvPreco(x) {
+  const r = rascunhoPreco(x), c = calcPreco(x, r);
+  return csv([["Edital", `${x.mod || ""} ${x.n || ""}`.trim(), x.o, x.uf, x.pncp || ""], ["BDI %", brNum(r.bdi), "Impostos %", brNum(r.imp)], [],
+    ["Item", "Descrição", "Quantidade", "Unidade", "Ref. unit. edital", "Custo unit.", "Piso aplicado", "Preço unit.", "Total"],
+    ...c.linhas.map((l) => [l.it ? l.it[0] : "global", l.desc, brNum(l.qtd), (l.un || "").trim(), brNum(l.vu), brNum(l.cu), l.piso ? `${l.piso.desc} (${brNum(l.piso.valor)})` : "", brNum(l.pu), brNum(l.tot)]), [],
+    ["Proposta total", brNum(c.preco)], ["Custo total", brNum(c.custo)], ["Valor estimado do edital", brNum(c.ref)], ["Desconto %", c.desconto == null ? "" : brNum(c.desconto * 100)], ["Notas", r.notas || ""]]);
+}
+function csvCrm() {
+  return csv([["Órgão", "UF", "Município", "Objeto", "Número", "Prazo das propostas", "Valor estimado", "Situação", "Prioridade", "Responsável", "Próximo passo", "Data", "Contato", "Telefone", "E-mail", "Etiquetas", "Minha proposta", "Meu custo", "Desconto %", "Link PNCP", "Atualizado"],
+    ...Object.values(store.data).filter((g) => g && g.id).map((g) => { const r = g.resumo || {}, c = g.crm || {}, p = g.proposta || {};
+      return [r.o, r.uf, r.m, r.obj, r.n, r.enc, brNum(r.v), ETAPA_NOME[c.status] || c.status || "", c.prio || "", c.resp || "", c.passo || "", c.data || "", c.contato || "", c.tel || "", c.email || "", c.tags || "",
+        brNum(p.total), brNum(p.custo), p.desconto == null ? "" : brNum(p.desconto * 100), r.pncp || "", g.atualizado || ""]; })]);
+}
+function ligarCsv(idBotao, gerar, nome) {
+  const b = document.getElementById(idBotao); if (!b) return;
+  b.hidden = !temDownload;
+  b.onclick = async () => { try { await dl.save({ filename: nome, data: gerar() }); } catch (e) { /* o usuário recusou ou não foi possível */ } };
+}
+(async () => { try { dl = window.claude && window.claude.use ? await window.claude.use("downloads") : null; } catch (e) { dl = null; }
+  temDownload = !!dl; ligarCsv("crm-exportar", csvCrm, "meu-crm-licitacoes.csv"); ligarCsv("exp-tabelas", csvTabelas, "tabelas-de-preco-licitacoes.csv");
+  ligarCsv("piso-modelo", MODELO_PISOS, "modelo-pisos.csv"); renderCrm(); render(); })();
+
+/* Portais */
+document.getElementById("portais-conta").innerHTML = `<b>${fmt(D.n_plataformas)}</b> portais e sistemas de disputa identificados nos editais abertos (todas as áreas). Os ${D.plataformas.length} mais usados:`;
+document.getElementById("portais").innerHTML = D.plataformas.map(([p, n]) => `<tr><td>${esc(p)}</td><td class="num">${fmt(n)}</td></tr>`).join("");
+
+/* Avisos de diários */
+let limAv = 20;
+function renderAv() {
+  document.getElementById("avisos").innerHTML = D.avisos.slice(0, limAv).map((a) => `<article class="aviso">
+    <div class="topo"><span><b>${esc(a.m)}/${esc(a.uf)}</b> · diário de ${a.d ? new Date(a.d).toLocaleDateString("pt-BR") : "?"}</span>
+      <span>${(a.c || []).map((c) => `<span class="pill p-off">${esc(CATS[c] || c)}</span>`).join(" ")}</span></div>
+    <p>${esc(a.t)}</p>
+    <div class="acoes"><a href="${esc(a.url)}" target="_blank" rel="noopener">Abrir o diário oficial</a></div></article>`).join("");
+  document.getElementById("mais-av").hidden = D.avisos.length <= limAv;
+}
+document.getElementById("mais-av").addEventListener("click", () => { limAv += 20; renderAv(); });
+
+document.getElementById("fontes").innerHTML = D.fontes.map((f) => { const [n, c] = SAUDE[f.saude] || [f.saude, "p-off"];
+  return `<tr><td>${esc(f.nome)}</td><td><span class="pill ${c}">${n}</span></td><td class="num">${fmt(f.editais)}</td></tr>`; }).join("");
+document.getElementById("cob").innerHTML = `<p><b>Cobertura comprovada:</b> ${fmt(D.cobertura.municipios_com_edital_90d)} dos ${fmt(D.cobertura.municipios_na_base_ibge)} municípios do IBGE (${D.cobertura.percentual_comprovado.toLocaleString("pt-BR")}%) têm ao menos um edital na base.</p>
+  <p>Coleta feita pelo coletor da plataforma no GitHub Actions, que consulta a API oficial do PNCP, o Compras.gov.br e os diários do Querido Diário a cada 6 horas. Atualizado em ${esc(D.gerado)}.</p>`;
+render(); renderAv(); doHash();
+setTimeout(carregarTodas, 50);
+renderConfig(); renderCrm(); iniciarStore();
+</script>
+</body>
+</html>
