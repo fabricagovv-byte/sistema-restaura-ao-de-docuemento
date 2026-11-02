@@ -63,3 +63,17 @@ def test_coleta_para_no_prazo(banco):
         assert r.status == "parcial" and "limite de tempo" in r.mensagem
         assert listar_segmento(s, 10, ate=passado)["detalhados"] == 0
         assert detalhar_relevantes(s, 10, ate=passado)["editais"] == 0
+
+
+def test_disjuntor_para_com_fonte_fora_do_ar():
+    from licitacoes.coletor_remoto import Disjuntor
+    from licitacoes.conectores.base import FalhaTemporaria
+
+    dj = Disjuntor(limite=3)
+    fora = FalhaTemporaria("HTTP 503 persistente", 503)
+    assert not dj.falhou(fora) and not dj.falhou(fora)
+    assert dj.falhou(fora) and "503" in dj.motivo
+    dj.nova_chance(tentativas=2)
+    assert not dj.falhou(fora) and dj.falhou(fora)  # duas tentativas e para de novo
+    dj.sucesso()
+    assert not dj.falhou(ValueError("dado ruim")) and dj.seguidas == 0  # erro de dado não conta

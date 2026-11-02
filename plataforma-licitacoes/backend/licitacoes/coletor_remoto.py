@@ -30,6 +30,7 @@ from . import catalogo, coleta, documentos
 from .armazenamento import armazenamento
 from .coleta import CAMPOS
 from .config import config
+from .conectores.base import FalhaTemporaria
 from .extracao import extrair
 from .taxonomia import natureza
 from .modelos import Documento, Fonte, Item, Licitacao, Municipio, Sincronizacao, agora
@@ -80,8 +81,9 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
         _passo("pncp_publicados_e_alterados", lambda: _sync(coleta.sincronizar_pncp(s, modo="diario", dias=dias, ate=prazo(0.45))), resumo)
         _passo("comprasgov", lambda: _sync(coleta.sincronizar_comprasgov(s, dias=7)), resumo)
         _passo("conferencia_individual", lambda: coleta.conferir_individual(s, limite=150), resumo)
-    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.55)), resumo)
-    _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(0.85)), resumo)
+    dj = Disjuntor()
+    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.55), disjuntor=dj), resumo)
+    _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(0.85), disjuntor=dj), resumo)
     if not rapido:
         _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=7, ate=prazo(1.0))), resumo)
         if config().transparencia_chave:
@@ -103,7 +105,31 @@ def relevantes(s: Session, limite: int) -> list[Licitacao]:
 SEGMENTOS_LISTADOS = {"gestao_documental", "ti", "educacao_pesquisa"}
 
 
-def listar_segmento(s: Session, limite: int, ate: float | None = None) -> dict:
+class Disjuntor:
+    """Para a etapa quando a fonte devolve falha temporária (5xx ou rede) em vários editais seguidos.
+
+    Em 01-02/11 a API de itens/arquivos do PNCP respondeu 503 a tudo por horas, enquanto a de consulta
+    funcionava; cada edital esgotava as novas tentativas e a coleta inteira se foi nisso."""
+
+    def __init__(self, limite: int = 8):
+        self.limite, self.seguidas, self.motivo = limite, 0, None
+
+    def sucesso(self) -> None:
+        self.seguidas = 0
+
+    def falhou(self, erro: Exception) -> bool:
+        self.seguidas = self.seguidas + 1 if isinstance(erro, FalhaTemporaria) else 0
+        if self.seguidas >= self.limite:
+            self.motivo = f"{self.seguidas} falhas seguidas da fonte ({type(erro).__name__}: {erro})"[:300]
+            return True
+        return False
+
+    def nova_chance(self, tentativas: int = 3) -> None:
+        """Antes de outra etapa, alguns editais de teste: a fonte pode ter voltado."""
+        self.seguidas = min(self.seguidas, max(0, self.limite - tentativas))
+
+
+def listar_segmento(s: Session, limite: int, ate: float | None = None, disjuntor: Disjuntor | None = None) -> dict:
     """Itens e lista de documentos (sem baixar) de todos os editais abertos de TI e gestão documental,
     para o painel abrir cada pregão com itens e links diretos dos arquivos."""
     abertas = s.query(Licitacao).filter(coleta.abertas_filtro(), Licitacao.cnpj_orgao.isnot(None),
@@ -113,6 +139,8 @@ def listar_segmento(s: Session, limite: int, ate: float | None = None) -> dict:
             and natureza(x.objeto) != "material"]
     alvo.sort(key=lambda x: (-(x.aderencia or 0), -float(x.valor_estimado or 0)))
     res = {"alvo": len(alvo), "detalhados": 0, "itens": 0, "documentos": 0, "falhas": 0}
+    dj = disjuntor or Disjuntor()
+    dj.nova_chance()
     for lic in alvo[:limite]:
         if ate is not None and time.monotonic() > ate:
             res["interrompido_por_tempo"] = True
@@ -122,18 +150,23 @@ def listar_segmento(s: Session, limite: int, ate: float | None = None) -> dict:
             continue
         try:
             d = coleta.detalhar(s, lic)
-        except Exception:
+        except Exception as e:
             s.rollback()
             res["falhas"] += 1
+            if dj.falhou(e):
+                res["interrompido_fonte_indisponivel"] = dj.motivo
+                break
             continue
+        dj.sucesso()
         res["detalhados"] += 1
         res["itens"] += d.get("itens", 0)
         res["documentos"] += d.get("documentos", 0)
     return res
 
 
-def detalhar_relevantes(s: Session, limite: int, ate: float | None = None) -> dict:
+def detalhar_relevantes(s: Session, limite: int, ate: float | None = None, disjuntor: Disjuntor | None = None) -> dict:
     res = {"editais": 0, "itens": 0, "documentos": 0, "baixados": 0, "falhas": []}
+    dj = disjuntor or Disjuntor()
     for lic in relevantes(s, limite):
         if ate is not None and time.monotonic() > ate:
             res["interrompido_por_tempo"] = True
@@ -144,7 +177,11 @@ def detalhar_relevantes(s: Session, limite: int, ate: float | None = None) -> di
         except Exception as e:
             s.rollback()
             res["falhas"].append({"id": lic.chave, "erro": f"{type(e).__name__}: {e}"[:300]})
+            if dj.falhou(e):
+                res["interrompido_fonte_indisponivel"] = dj.motivo
+                break
             continue
+        dj.sucesso()
         res["editais"] += 1
         res["itens"] += d.get("itens", 0)
         res["documentos"] += d.get("documentos", 0)
