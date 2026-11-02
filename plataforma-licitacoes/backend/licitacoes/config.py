@@ -40,7 +40,7 @@ class Configuracao(BaseSettings):
     pncp_intervalo_s: float = 4.0
     pncp_tamanho_pagina: int = 50
     pncp_modalidades: str = "6,4,8,7,5,12,9,1,3,2,10,11,13"
-    pncp_dias_proposta: int = 120
+    pncp_dias_proposta: int = 180
 
     # Portal da Transparência (exige chave gratuita: portaldatransparencia.gov.br/api-de-dados/cadastrar-email)
     transparencia_chave: str | None = None

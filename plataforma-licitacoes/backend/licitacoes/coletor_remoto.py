@@ -42,7 +42,9 @@ TERMOS_DIARIOS = ["digitalização", "indexação", "gestão documental", "fábr
                   "sustentação de sistemas", "desenvolvimento de software", "tratamento de dados",
                   "manutenção de software", "licença de uso de software", "sistema de gestão", "inteligência artificial",
                   "arquivo", "microfilmagem", "educação a distância", "EAD", "plataforma educacional",
-                  "pesquisa de opinião", "pesquisa de satisfação", "inovação"]
+                  "pesquisa de opinião", "pesquisa de satisfação", "inovação", "ponto de função",
+                  "unidade de serviço técnico", "digitalização de documentos", "gestão eletrônica de documentos",
+                  "locação de software", "computação em nuvem", "outsourcing", "sustentação", "registro de preços tecnologia"]
 
 
 def _iso(v):
@@ -85,7 +87,7 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
     _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.55), disjuntor=dj), resumo)
     _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(0.85), disjuntor=dj), resumo)
     if not rapido:
-        _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=7, ate=prazo(1.0))), resumo)
+        _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=15, ate=prazo(1.0))), resumo)
         if config().transparencia_chave:
             _passo("transparencia", lambda: _sync(coleta.sincronizar_transparencia(s, dias=7)), resumo)
     resumo["fim"] = agora().isoformat()

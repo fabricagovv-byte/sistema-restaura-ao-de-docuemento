@@ -368,33 +368,38 @@ _V_REG_TXT = ["por registro", "registros tratados", "registros saneados", "regis
               "registros indexados", "registros cadastrados", "registros migrados"]
 
 
+def tipo_volume(unidade: str | None, descricao: str | None, qtd: float | None) -> str | None:
+    """Tipo de volume de um item (ust, pf, pagina, registro, hora, mes) ou None."""
+    if not qtd:
+        return None
+    u = " " + normalizar(unidade or "") + " "
+    d = " " + normalizar(descricao or "") + " "
+    pal = set(u.split())
+    if any(x in u or x in d for x in _UST) or "ust" in pal:
+        return "ust"
+    if any(x in u or x in d for x in _PF) or " pf " in u:
+        return "pf"
+    if pal & _V_PAGINA_UN or any(x in d for x in _V_PAGINA_TXT):
+        return "pagina"
+    if qtd >= 10_000 and any(x in d for x in ("digitaliz", "escane", "microfilm", "captura de imagens")):
+        return "pagina"  # digitalização cobrada por "unidade" = página/imagem
+    if pal & _V_REG_UN or any(x in d for x in _V_REG_TXT):
+        return "registro"
+    if pal & {"hora", "horas", "hs", "h"} and ("tecnic" in u + d or "servico" in u + d):
+        return "hora"
+    if pal & _MES or "fixo mensal" in u:
+        return "mes"
+    return None
+
+
 def volumes(itens: list[tuple[str | None, str | None, float | None]]) -> dict[str, float]:
     """Soma das quantidades por tipo de volume (UST, PF, páginas, registros, horas, meses), pelos itens
     (unidade, descrição, quantidade). Só itens de serviço de TI/documentos chegam aqui."""
     tot: dict[str, float] = {}
     for unidade, descricao, qtd in itens:
-        if not qtd:
-            continue
-        u = " " + normalizar(unidade or "") + " "
-        d = " " + normalizar(descricao or "") + " "
-        pal = set(u.split())
-        if any(x in u or x in d for x in _UST) or "ust" in pal:
-            k = "ust"
-        elif any(x in u or x in d for x in _PF) or " pf " in u:
-            k = "pf"
-        elif pal & _V_PAGINA_UN or any(x in d for x in _V_PAGINA_TXT):
-            k = "pagina"
-        elif qtd >= 10_000 and any(x in d for x in ("digitaliz", "escane", "microfilm", "captura de imagens")):
-            k = "pagina"  # digitalização cobrada por "unidade" = página/imagem
-        elif pal & _V_REG_UN or any(x in d for x in _V_REG_TXT):
-            k = "registro"
-        elif pal & {"hora", "horas", "hs", "h"} and ("tecnic" in u + d or "servico" in u + d):
-            k = "hora"
-        elif pal & _MES or "fixo mensal" in u:
-            k = "mes"
-        else:
-            continue
-        tot[k] = tot.get(k, 0.0) + float(qtd)
+        k = tipo_volume(unidade, descricao, qtd)
+        if k:
+            tot[k] = tot.get(k, 0.0) + float(qtd)
     return tot
 
 
