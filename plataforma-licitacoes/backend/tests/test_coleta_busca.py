@@ -164,6 +164,12 @@ def test_natureza_e_grande_volume():
     assert set(grande_volume(v)) == {"ust", "pagina", "pf"}
     assert "mes" in grande_volume(v, valor=3_000_000)
     assert grande_volume(volumes([("UST", "Suporte", 87)])) == []
+    # casos reais medidos (nov/2026)
+    assert volumes([("UNIDADE (UN)", "INDEXAÇÃO - tratamento, validação e indexação de documento digital", 2_000_000)]) == {"pagina": 2_000_000}
+    assert volumes([("U.I", "Integração dos dados de campo e chaveamento das informações cadastrais", 33_900)]) == {"registro": 33_900}
+    assert volumes([("PAGINA", "Outsourcing de impressão - páginas impressas A4", 418_000)]) == {}
+    assert volumes([("m²", "Levantamento topográfico planialtimétrico cadastral", 400_000)]) == {}
+    assert volumes([("MÊS", "Serviço de videomonitoramento 24h", 2988)]) == {}
 
 
 def test_expansao_semantica_digitalizacao():

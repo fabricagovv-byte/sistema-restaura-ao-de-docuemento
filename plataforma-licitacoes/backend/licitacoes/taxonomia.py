@@ -364,6 +364,11 @@ _V_PAGINA_UN = {"pagina", "paginas", "pag", "imagem", "imagens", "folha", "folha
 _V_PAGINA_TXT = ["por pagina", "por imagem", "por folha", "paginas digitalizadas", "imagens digitalizadas",
                  "imagens geradas", "paginas de documentos", "folhas de documentos", "imagem digitalizada", "pagina digitalizada"]
 _V_REG_UN = {"registro", "registros", "dado", "dados", "cadastro", "cadastros", "transacao", "transacoes"}
+# fora de volume de serviço de TI/documentos: impressão, monitoramento, alarme, área, distância, laudos médicos
+_V_FORA = ["impress", "toner", "copia", "videomonitoramento", "video monitoramento", "alarme", "sensores", "seguranca eletronica",
+           "laudo", "tomografia", "radiografia", "veiculo", "fibra"]
+_V_REG_DESC = ["cadastr", "recadastr", "digitacao", "saneamento de dados", "saneamento cadastral", "geocodific", "migracao de dados",
+               "base de dados", "higienizacao de dados", "processamento de dados", "tratamento de dados", "registros"]
 _V_REG_TXT = ["por registro", "registros tratados", "registros saneados", "registros processados", "registros digitados",
               "registros indexados", "registros cadastrados", "registros migrados"]
 
@@ -375,16 +380,21 @@ def tipo_volume(unidade: str | None, descricao: str | None, qtd: float | None) -
     u = " " + normalizar(unidade or "") + " "
     d = " " + normalizar(descricao or "") + " "
     pal = set(u.split())
+    fora = any(x in d for x in _V_FORA) or pal & {"m2", "km", "quilometro", "metro", "metros"}
     if any(x in u or x in d for x in _UST) or "ust" in pal:
         return "ust"
     if any(x in u or x in d for x in _PF) or " pf " in u:
         return "pf"
+    if fora:
+        return None
     if pal & _V_PAGINA_UN or any(x in d for x in _V_PAGINA_TXT):
         return "pagina"
-    if qtd >= 10_000 and any(x in d for x in ("digitaliz", "escane", "microfilm", "captura de imagens")):
-        return "pagina"  # digitalização cobrada por "unidade" = página/imagem
+    if qtd >= 10_000 and any(x in d for x in ("digitaliz", "escane", "microfilm", "captura de imagens", "indexac", "higieniza")):
+        return "pagina"  # digitalização/indexação cobrada por "unidade" = página/imagem
     if pal & _V_REG_UN or any(x in d for x in _V_REG_TXT):
         return "registro"
+    if qtd >= 10_000 and any(x in d for x in _V_REG_DESC):
+        return "registro"  # dados cobrados por "unidade" (cadastros, digitação, saneamento)
     if pal & {"hora", "horas", "hs", "h"} and ("tecnic" in u + d or "servico" in u + d):
         return "hora"
     if pal & _MES or "fixo mensal" in u:
