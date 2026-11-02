@@ -106,3 +106,26 @@ def test_diario_vira_aviso_com_link_original():
                                 "date": "2026-10-30", "url": "https://diario.exemplo/2026-10-30.pdf",
                                 "excerpts": ["AVISO DE LICITAÇÃO — digitalização de acervo", "outro trecho"]}, "x")
     assert len(avisos) == 2 and avisos[0]["link_origem"].endswith(".pdf") and avisos[0]["codigo_ibge"] == "3550308"
+
+
+def test_pncp_integracao_usa_caminho_alternativo_quando_o_principal_cai():
+    import httpx
+
+    from licitacoes.conectores.base import ClienteHttp
+    from licitacoes.conectores.pncp import INTEGRACAO_ALT, ConectorPncp
+
+    chamadas = []
+
+    def responder(req):
+        chamadas.append(str(req.url))
+        if "/api/pncp/v1/" in str(req.url):
+            return httpx.Response(503, text="Service Unavailable")
+        return httpx.Response(200, json=[{"numeroItem": 1, "descricao": "Digitalização", "unidadeMedida": "UST"}])
+
+    http = ClienteHttp(intervalo_minimo_s=0, http=httpx.Client(transport=httpx.MockTransport(responder)), dormir=lambda x: None)
+    c = ConectorPncp(http)
+    assert c.itens("00394502000144", 2026, 14826)[0]["descricao"] == "Digitalização"
+    assert c.bases_integracao[0] == INTEGRACAO_ALT
+    n = len(chamadas)
+    c.arquivos("00394502000144", 2026, 14826)
+    assert len(chamadas) == n + 1 and "/pncp-api/v1/" in chamadas[-1]  # vai direto no que respondeu

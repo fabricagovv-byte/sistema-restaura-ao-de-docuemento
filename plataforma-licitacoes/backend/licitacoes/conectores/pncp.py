@@ -19,10 +19,13 @@ from typing import Any
 
 from ..config import config
 from ..util import link_pncp, numero_controle, para_data, para_valor, so_digitos
-from .base import ClienteHttp, ErroFonte
+from .base import ClienteHttp, ErroFonte, FalhaTemporaria
 
 CONSULTA = "https://pncp.gov.br/api/consulta/v1"
 INTEGRACAO = "https://pncp.gov.br/api/pncp/v1"
+# mesmo serviço por outro caminho do PNCP (é o dos links de arquivo). Em 01-02/11/2026 o /api/pncp respondeu 503
+# por mais de 12 h enquanto a consulta funcionava; o coletor tenta o outro caminho e fica com o que responder.
+INTEGRACAO_ALT = "https://pncp.gov.br/pncp-api/v1"
 
 MODALIDADES = {
     1: "Leilão - Eletrônico", 2: "Diálogo Competitivo", 3: "Concurso", 4: "Concorrência - Eletrônica",
@@ -44,6 +47,24 @@ class ConectorPncp:
         cfg = config()
         self.http = http or ClienteHttp(intervalo_minimo_s=cfg.pncp_intervalo_s)
         self.tamanho = max(10, min(50, cfg.pncp_tamanho_pagina))
+        self.bases_integracao = [INTEGRACAO, INTEGRACAO_ALT]
+
+    def _get_integracao(self, caminho: str, params: dict[str, Any] | None = None):
+        """GET na API de integração; em falha temporária (5xx/rede) tenta o caminho alternativo e passa a
+        usar primeiro o que respondeu."""
+        ultimo: FalhaTemporaria | None = None
+        for base in list(self.bases_integracao):
+            try:
+                dados = self.http.get_json(f"{base}{caminho}", params)
+            except FalhaTemporaria as e:
+                ultimo = e
+                continue
+            if base != self.bases_integracao[0]:
+                self.bases_integracao.remove(base)
+                self.bases_integracao.insert(0, base)
+            return dados
+        assert ultimo is not None
+        raise ultimo
 
     # ----------------------------------------------------------------- listagens
     def _paginar(self, caminho: str, params: dict[str, Any], max_paginas: int = 1000) -> Iterator[dict]:
@@ -98,11 +119,11 @@ class ConectorPncp:
 
     # ----------------------------------------------------------------- detalhes
     def itens(self, cnpj: str, ano: int, sequencial: int) -> list[dict]:
-        url = f"{INTEGRACAO}/orgaos/{so_digitos(cnpj)}/compras/{ano}/{sequencial}/itens"
+        caminho = f"/orgaos/{so_digitos(cnpj)}/compras/{ano}/{sequencial}/itens"
         saida: list[dict] = []
         pagina = 1
         while True:
-            dados = self.http.get_json(url, {"pagina": pagina, "tamanhoPagina": 500})
+            dados = self._get_integracao(caminho, {"pagina": pagina, "tamanhoPagina": 500})
             if not dados:
                 break
             lote = dados if isinstance(dados, list) else dados.get("data") or []
@@ -113,9 +134,9 @@ class ConectorPncp:
         return saida
 
     def resultados_item(self, cnpj: str, ano: int, sequencial: int, numero_item: int) -> list[dict]:
-        url = f"{INTEGRACAO}/orgaos/{so_digitos(cnpj)}/compras/{ano}/{sequencial}/itens/{numero_item}/resultados"
+        caminho = f"/orgaos/{so_digitos(cnpj)}/compras/{ano}/{sequencial}/itens/{numero_item}/resultados"
         try:
-            dados = self.http.get_json(url)
+            dados = self._get_integracao(caminho)
         except ErroFonte as e:
             if e.status == 404:
                 return []
@@ -125,8 +146,7 @@ class ConectorPncp:
         return dados if isinstance(dados, list) else [dados]
 
     def arquivos(self, cnpj: str, ano: int, sequencial: int) -> list[dict]:
-        url = f"{INTEGRACAO}/orgaos/{so_digitos(cnpj)}/compras/{ano}/{sequencial}/arquivos"
-        dados = self.http.get_json(url)
+        dados = self._get_integracao(f"/orgaos/{so_digitos(cnpj)}/compras/{ano}/{sequencial}/arquivos")
         if not dados:
             return []
         return dados if isinstance(dados, list) else dados.get("data") or []
