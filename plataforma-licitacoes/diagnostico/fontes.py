@@ -31,6 +31,17 @@ TESTES = [
      {"querystring": '"digitalização" licitação', "published_since": D(7), "published_until": D(0), "size": 2,
       "excerpt_size": 300, "number_of_excerpts": 2, "sort_by": "descending_date"}),
     ("pncp_arquivos", "https://pncp.gov.br/api/pncp/v1/orgaos/44531788000138/compras/2026/168/arquivos", None),
+    # itens: API de integração do PNCP (dois caminhos) e a cópia no Compras.gov.br (edital real: Câmara de Praia Grande 42/2026)
+    ("pncp_itens_api", "https://pncp.gov.br/api/pncp/v1/orgaos/03100645000194/compras/2026/42/itens", {"pagina": 1, "tamanhoPagina": 10}),
+    ("pncp_itens_pncp_api", "https://pncp.gov.br/pncp-api/v1/orgaos/03100645000194/compras/2026/42/itens", {"pagina": 1, "tamanhoPagina": 10}),
+    ("comprasgov_itens_cnpj", "https://dadosabertos.compras.gov.br/modulo-contratacoes/2_consultarItensContratacoes_PNCP_14133",
+     {"pagina": 1, "tamanhoPagina": 10, "orgaoEntidadeCnpj": "03100645000194", "dataInclusaoPncpInicial": "2026-10-20", "dataInclusaoPncpFinal": "2026-10-24"}),
+    ("comprasgov_itens_id_controle", "https://dadosabertos.compras.gov.br/modulo-contratacoes/2.1_consultarItensContratacoes_PNCP_14133_Id",
+     {"tipo": "numeroControlePNCP", "codigo": "03100645000194-1-000042/2026"}),
+    ("comprasgov_itens_id_idcompra", "https://dadosabertos.compras.gov.br/modulo-contratacoes/2.1_consultarItensContratacoes_PNCP_14133_Id",
+     {"tipo": "idCompra", "codigo": "03100645000194-1-000042/2026"}),
+    ("comprasgov_contratacao_id", "https://dadosabertos.compras.gov.br/modulo-contratacoes/1.1_consultarContratacoes_PNCP_14133_Id",
+     {"tipo": "numeroControlePNCP", "codigo": "03100645000194-1-000042/2026"}),
 ]
 
 
