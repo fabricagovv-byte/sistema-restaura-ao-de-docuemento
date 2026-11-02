@@ -38,6 +38,8 @@ TESTES = [
      {"pagina": 1, "tamanhoPagina": 10, "orgaoEntidadeCnpj": "03100645000194", "dataInclusaoPncpInicial": "2026-10-20", "dataInclusaoPncpFinal": "2026-10-24"}),
     ("comprasgov_itens_id_controle", "https://dadosabertos.compras.gov.br/modulo-contratacoes/2.1_consultarItensContratacoes_PNCP_14133_Id",
      {"tipo": "numeroControlePNCP", "codigo": "03100645000194-1-000042/2026"}),
+    ("comprasgov_itens_id_controle_compra", "https://dadosabertos.compras.gov.br/modulo-contratacoes/2.1_consultarItensContratacoes_PNCP_14133_Id",
+     {"tipo": "numeroControlePNCPCompra", "codigo": "03100645000194-1-000042/2026"}),
     ("comprasgov_itens_id_idcompra", "https://dadosabertos.compras.gov.br/modulo-contratacoes/2.1_consultarItensContratacoes_PNCP_14133_Id",
      {"tipo": "idCompra", "codigo": "03100645000194-1-000042/2026"}),
     ("comprasgov_contratacao_id", "https://dadosabertos.compras.gov.br/modulo-contratacoes/1.1_consultarContratacoes_PNCP_14133_Id",

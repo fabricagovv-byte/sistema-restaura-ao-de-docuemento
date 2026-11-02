@@ -129,3 +129,39 @@ def test_pncp_integracao_usa_caminho_alternativo_quando_o_principal_cai():
     n = len(chamadas)
     c.arquivos("00394502000144", 2026, 14826)
     assert len(chamadas) == n + 1 and "/pncp-api/v1/" in chamadas[-1]  # vai direto no que respondeu
+
+
+def test_itens_pela_comprasgov_quando_o_pncp_cai(banco):
+    """PNCP responde 503 nos itens; os itens vêm da cópia do Compras.gov.br e os arquivos ficam para depois."""
+    import httpx
+
+    from licitacoes import coleta
+    from licitacoes.conectores.base import ClienteHttp
+    from licitacoes.conectores.outras import ConectorComprasGov
+    from licitacoes.conectores.pncp import ConectorPncp
+    from licitacoes.modelos import Licitacao
+
+    def pncp(req):
+        return httpx.Response(503, text="Service Unavailable")
+
+    pedidos = []
+
+    def comprasgov(req):
+        pedidos.append(dict(req.url.params))
+        return httpx.Response(200, json={"resultado": [{"numeroItem": 1, "descricao": "Digitalização de documentos",
+                                                        "materialOuServicoNome": "Serviço", "quantidade": 2000000,
+                                                        "unidadeMedida": "PÁGINA", "valorUnitarioEstimado": 0.3,
+                                                        "valorTotal": 600000}], "totalRegistros": 1})
+
+    mk = lambda f: ClienteHttp(intervalo_minimo_s=0, http=httpx.Client(transport=httpx.MockTransport(f)), dormir=lambda x: None)  # noqa: E731
+    from licitacoes import catalogo
+
+    lic = Licitacao(fonte_id=catalogo.fonte(banco, "pncp").id, chave="pncp:03100645000194-1-000042/2026", numero_controle_pncp="03100645000194-1-000042/2026",
+                    cnpj_orgao="03100645000194", ano=2026, sequencial=42, objeto="Digitalização", tipo_registro="contratacao")
+    banco.add(lic)
+    banco.flush()
+    r = coleta.detalhar(banco, lic, conector=ConectorPncp(mk(pncp)), comprasgov=ConectorComprasGov(mk(comprasgov)))
+    assert r["itens"] == 1 and r["documentos"] == 0
+    assert pedidos[0] == {"tipo": "numeroControlePNCPCompra", "codigo": "03100645000194-1-000042/2026"}
+    banco.refresh(lic, ["itens"])
+    assert lic.itens[0].unidade == "PÁGINA" and float(lic.itens[0].quantidade) == 2000000

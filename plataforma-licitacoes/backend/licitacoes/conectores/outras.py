@@ -58,6 +58,13 @@ class ConectorComprasGov:
                 return
             pagina += 1
 
+    def itens_contratacao(self, controle: str) -> list[dict]:
+        """Itens de uma contratação do PNCP pela cópia do Compras.gov.br, no formato da API do PNCP.
+        Usado quando a API de integração do PNCP cai (01-02/11/2026: 503 por mais de 12 h)."""
+        corpo = self.http.get_json(f"{self.BASE}/modulo-contratacoes/2.1_consultarItensContratacoes_PNCP_14133_Id",
+                                   {"tipo": "numeroControlePNCPCompra", "codigo": controle})
+        return [item_comprasgov_para_pncp(r) for r in ((corpo or {}).get("resultado") or [])]
+
     def contratacoes_14133(self, inicio: date, fim: date, modalidade: int) -> Iterator[dict]:
         yield from self._paginar("/modulo-contratacoes/1_consultarContratacoes_PNCP_14133", {
             "dataPublicacaoPncpInicial": inicio.isoformat(),
@@ -70,6 +77,22 @@ class ConectorComprasGov:
             "data_publicacao_inicial": inicio.isoformat(),
             "data_publicacao_final": fim.isoformat(),
         })
+
+
+def item_comprasgov_para_pncp(r: dict) -> dict:
+    """Item do Compras.gov.br com os nomes de campo da API do PNCP (para normalizar_item)."""
+    return {
+        "numeroItem": _primeiro(r, "numeroItem", "numeroItemPncp", "numeroItemCompra"),
+        "descricao": _primeiro(r, "descricao", "descricaoResumida", "descricaoDetalhada", "descricaoItem") or "",
+        "materialOuServicoNome": _primeiro(r, "materialOuServicoNome", "materialOuServico"),
+        "quantidade": _primeiro(r, "quantidade", "quantidadeItem"),
+        "unidadeMedida": _primeiro(r, "unidadeMedida", "unidadeFornecimento", "siglaUnidadeMedida"),
+        "valorUnitarioEstimado": _primeiro(r, "valorUnitarioEstimado", "valorUnitario"),
+        "valorTotal": _primeiro(r, "valorTotal", "valorTotalEstimado"),
+        "situacaoCompraItemNome": _primeiro(r, "situacaoCompraItemNome", "situacaoCompraItem"),
+        "criterioJulgamentoNome": _primeiro(r, "criterioJulgamentoNome"),
+        "fonte": "comprasgov",
+    }
 
 
 def normalizar_comprasgov_14133(raw: dict) -> dict:

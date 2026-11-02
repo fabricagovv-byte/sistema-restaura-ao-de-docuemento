@@ -19,7 +19,7 @@ from sqlalchemy.orm import Session
 
 from . import catalogo
 from .config import config
-from .conectores.base import ErroFonte
+from .conectores.base import ErroFonte, FalhaTemporaria
 from .modelos import (
     Documento, Fonte, HistoricoAlteracao, Item, Licitacao, Municipio, Orgao, Sincronizacao, agora,
 )
@@ -311,7 +311,19 @@ def conferir_individual(s: Session, *, dias_prazo: int = 3, limite: int = 100, c
     return res
 
 
-def detalhar(s: Session, lic: Licitacao, conector=None) -> dict:
+def _itens_pela_comprasgov(lic: Licitacao, conector=None) -> list[dict]:
+    from .conectores.outras import ConectorComprasGov
+
+    controle = lic.numero_controle_pncp
+    if not controle:
+        return []
+    try:
+        return (conector or ConectorComprasGov()).itens_contratacao(controle)
+    except ErroFonte:
+        return []
+
+
+def detalhar(s: Session, lic: Licitacao, conector=None, comprasgov=None) -> dict:
     """Busca itens e lista de arquivos do edital no PNCP."""
     from .conectores.pncp import ConectorPncp, normalizar_arquivo, normalizar_item
     from .documentos import classificar_documento
@@ -319,7 +331,15 @@ def detalhar(s: Session, lic: Licitacao, conector=None) -> dict:
     if not (lic.cnpj_orgao and lic.ano and lic.sequencial):
         return {"itens": 0, "documentos": 0, "motivo": "edital sem identificação do PNCP"}
     c = conector or ConectorPncp()
-    itens = c.itens(lic.cnpj_orgao, lic.ano, lic.sequencial)
+    try:
+        itens = c.itens(lic.cnpj_orgao, lic.ano, lic.sequencial)
+        pncp_ok = True
+    except FalhaTemporaria:
+        # PNCP fora do ar: a cópia do Compras.gov.br (itens apenas; os arquivos só existem no PNCP)
+        itens = _itens_pela_comprasgov(lic, comprasgov)
+        if not itens:
+            raise
+        pncp_ok = False
     existentes = {i.numero: i for i in lic.itens}
     for raw in itens:
         d = normalizar_item(raw)
@@ -330,7 +350,10 @@ def detalhar(s: Session, lic: Licitacao, conector=None) -> dict:
             setattr(it, k, v)
         if it.id is None:
             s.add(it)
-    arquivos = c.arquivos(lic.cnpj_orgao, lic.ano, lic.sequencial)
+    try:
+        arquivos = c.arquivos(lic.cnpj_orgao, lic.ano, lic.sequencial) if pncp_ok else []
+    except FalhaTemporaria:
+        arquivos = []  # mantém os itens já lidos; os arquivos ficam para a próxima execução
     docs = {(d.sequencial, d.titulo): d for d in lic.documentos}
     novos_docs = 0
     for raw in arquivos:
