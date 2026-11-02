@@ -712,7 +712,7 @@ function resumoPisos(x) {
   let tot = 0, n = 0; for (const it of x.it) { const p = pisoPara(it); if (p && it[2]) { tot += p.valor * it[2]; n++; } }
   if (!n) return "";
   const pct = x.v ? ` · ${((tot / x.v) * 100).toLocaleString("pt-BR", { maximumFractionDigits: 0 })}% do estimado` : "";
-  return `<div class="acoes"><span class="vol" title="soma dos itens com piso">Pelos seus pisos: ${curto(tot)} em ${n} de ${(x.it || []).length} itens${pct}</span></div>`;
+  return `<div class="acoes"><span class="vol" style="white-space:normal" title="soma dos itens com piso">Pelos seus pisos: ${curto(tot)} em ${n} de ${(x.it || []).length} itens${pct}</span></div>`;
 }
 function lerCsvPisos(texto) {
   const linhas = texto.replace(/^﻿/, "").split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
