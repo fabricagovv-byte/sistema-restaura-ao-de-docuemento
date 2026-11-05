@@ -102,8 +102,86 @@
       "ajustada_planejada": 66,
       "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
       "inicio": "2026-11-05T12:00:02-03:00",
-      "situacao": "EM_EXECUCAO",
-      "horas_humanas_comprovadas": 0
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-05T12:03:40-03:00",
+      "evidencias": [
+        {
+          "arquivo": "solicitacoes/rotas_solicitacoes.py",
+          "sha256": "6a996379a96581c433a1f95901de738fc76d3b8f1e4d2e40008f4b01af5edb6f",
+          "bytes": 16978
+        },
+        {
+          "arquivo": "solicitacoes/fluxo.py",
+          "sha256": "1dca17c2f4b15467a17edef8bf959c50b447b1f5c96568556a8d4ad4e98bf9f4",
+          "bytes": 4632
+        },
+        {
+          "arquivo": "solicitacoes/modelos.py",
+          "sha256": "05aa6d385819fe2a386a8a3663f424eebf56481b32ad3eb97af7daf118168f85",
+          "bytes": 4897
+        },
+        {
+          "arquivo": "solicitacoes/migracoes.py",
+          "sha256": "b41d26f559ff88b4f8dc49490a0f920a1f5ce4eaa7a84d0a82e5e07fa99d1734",
+          "bytes": 2247
+        },
+        {
+          "arquivo": "tests/test_fluxo.py",
+          "sha256": "e5015f57261d6ac2c2a1c18ecc1adbc733642b52415bfdc49b96483793c3cc97",
+          "bytes": 5939
+        },
+        {
+          "arquivo": "tests/test_solicitacoes.py",
+          "sha256": "90874bbeb53e95ead25397794cd904f01f6883c2922151403c6913a9878e2ebf",
+          "bytes": 5103
+        },
+        {
+          "arquivo": "tests/test_categorias.py",
+          "sha256": "d76f23fccb4a3a9946ce08a7958159683cbe12bcf6100fa4ad1fd75b93bb3d14",
+          "bytes": 1061
+        }
+      ],
+      "commit_base": "039a0b89df2caa515c349816818f75aa098f69ac",
+      "base_declarada": 22,
+      "ajustada_declarada": 66,
+      "observacao": null,
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia02.txt",
+        "sha256": "0737feb6e98d6f473d9c8d18601b7d8f32122b6ffd8a57774696b275fc32cd8f",
+        "em": "2026-11-05T12:04:01-03:00"
+      },
+      "ajustada_verificada": 66,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
+    },
+    "D2-B": {
+      "dia": 2,
+      "item": "M-01",
+      "entrega": "Modelagem do processo de tramitação: estados, regras, prazos e papéis",
+      "base_planejada": 17,
+      "ajustada_planejada": 34,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-05T12:03:40-03:00",
+      "situacao": "DECLARADA",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-05T12:04:25-03:00",
+      "evidencias": [
+        {
+          "arquivo": "docs/PROCESSO_TRAMITACAO.md",
+          "sha256": "34207a0e3ac7a7504c00be1bc97bea6c9a045b309f105d734f8cd9de0d271a06",
+          "bytes": 4526
+        },
+        {
+          "arquivo": "docs/MATRIZ_REQUISITOS.md",
+          "sha256": "5c363c8a33b757008fc3a9e75333fde6af3258af35620aa8970164efd232e0ec",
+          "bytes": 6691
+        }
+      ],
+      "commit_base": "039a0b89df2caa515c349816818f75aa098f69ac",
+      "base_declarada": 14,
+      "ajustada_declarada": 28,
+      "observacao": "Processo modelado a partir do código; 3 UST base ficam para a validação dos prazos e da pausa do prazo na entrevista."
     }
   }
 }

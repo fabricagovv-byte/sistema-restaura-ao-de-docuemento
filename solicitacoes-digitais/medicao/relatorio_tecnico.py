@@ -96,6 +96,8 @@ def main(argv=None) -> int:
     inicios = [dt(t["inicio"]) for t in tarefas.values() if t.get("inicio")]
     fins = [dt(t["fim"]) for t in tarefas.values() if t.get("fim")]
     gerado = datetime.now(FUSO).strftime("%d/%m/%Y %H:%M")
+    mem_arq = RAIZ / "medicao/memoria_tecnica.json"
+    memoria = (json.loads(mem_arq.read_text(encoding="utf-8")) if mem_arq.exists() else {}).get(str(dia), {})
 
     doc = docx.Document()
     st = doc.styles["Normal"]
@@ -148,25 +150,11 @@ def main(argv=None) -> int:
             reqs.append([m.group(1), m.group(2), m.group(5), m.group(3).replace("`", ""), m.group(4).replace("`", "")])
     tabela(doc, ["Requisito", "OS", "Status", "Artefato", "Teste"], reqs)
     doc.add_heading("2.1 Controle de mudanças e aprovações", level=2)
-    tabela(doc, ["Mudança", "Justificativa técnica", "Solicitante / aceite", "Versão"], [
-        ["Ritmo de 100 UST ajustadas por dia em 10 dias", "Prazo original (04/11/2026 18h) já vencido; OS de 1.000 UST distribuída em entregas verificáveis", "Pedido do contratante em 05/11/2026 / aceite formal pendente", "plano_os001.json"],
-        ["Auditoria e log estruturado antecipados para o dia 1", "São base da autenticação e do controle de acesso", "Execução / sem UST adicional", commits[-1][0] if commits else "—"],
-    ])
+    tabela(doc, ["Mudança", "Justificativa técnica", "Solicitante / aceite", "Versão"], memoria.get("mudancas") or [["Nenhuma", "—", "—", "—"]])
 
     # 3
     doc.add_heading("3. Memória técnica de implementação por camada", level=1)
-    camadas = [
-        ("Arquitetura e regras de negócio", "Quatro perfis do TR (administrador, gestor, operador, solicitante) com matriz central de permissões; "
-         "estados da solicitação definidos em docs/ARQUITETURA.md; premissas registradas até a entrevista obrigatória."),
-        ("Banco de dados", "SQLAlchemy 2 com PostgreSQL (produção) e SQLite (testes). Tabelas: usuario, token_revogado, solicitacao, "
-         "evento_auditoria, versao_esquema. Migrações numeradas e idempotentes (rodar de novo não altera nada)."),
-        ("Backend", "FastAPI com prefixo /api/v1: saúde, login, logout, sessão atual, usuários (listar, criar, alterar) e auditoria. "
-         "Senhas PBKDF2-SHA256 com 600 mil iterações e sal; token JWT com expiração e revogação no logout; mesma resposta para "
-         "e-mail inexistente e senha errada; administrador não pode desativar a si mesmo; auditoria só de inclusão, sem senha nos registros."),
-        ("Frontend", "Não previsto para o dia 1 (dias 5 a 7 do plano)."),
-        ("Integração e infraestrutura", "Configuração por variáveis SD_*, segredo obrigatório fora de desenvolvimento, X-Correlation-ID "
-         "gerado ou propagado e saneado, log em JSON por requisição, cabeçalhos nosniff e no-store. CI e contêineres nos dias 8 e 9."),
-    ]
+    camadas = memoria.get("camadas", [])
     for titulo, texto in camadas:
         doc.add_heading(titulo, level=2)
         doc.add_paragraph(texto)

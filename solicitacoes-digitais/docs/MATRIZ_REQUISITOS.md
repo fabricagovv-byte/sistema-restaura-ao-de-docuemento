@@ -49,11 +49,11 @@ O desenvolvimento usa apenas dados fictícios gerados pelos testes.
 
 | ID | OS | Artefato | Teste | Status |
 |---|---|---|---|---|
-| REQ-001 | OS-001 | `solicitacoes/seguranca.py`, `solicitacoes/api.py` (dia 1) | `tests/test_autenticacao.py` | Em execução |
-| REQ-002 | OS-001 | `solicitacoes/modelos.py` (dia 1), rotas de cadastro (dia 2) | `tests/test_solicitacoes.py` (dia 2) | Planejado |
-| REQ-003 | OS-001 | `solicitacoes/fluxo.py` (dia 2) | `tests/test_fluxo.py` (dia 2) | Planejado |
+| REQ-001 | OS-001 | `solicitacoes/seguranca.py`, `solicitacoes/dependencias.py` | `tests/test_autenticacao.py`, `tests/test_permissoes.py` | Implementado, recuperação de conta no dia 3 |
+| REQ-002 | OS-001 | `solicitacoes/rotas_solicitacoes.py`, `solicitacoes/modelos.py` | `tests/test_solicitacoes.py`, `tests/test_categorias.py` | Implementado, anexos no dia 3 |
+| REQ-003 | OS-001 | `solicitacoes/fluxo.py`, `docs/PROCESSO_TRAMITACAO.md` | `tests/test_fluxo.py` | Implementado |
 | REQ-004 | OS-001 | painel e exportação (dia 4) | `tests/test_painel.py` (dia 4) | Planejado |
-| REQ-005 | OS-001 | `solicitacoes/auditoria.py` (dia 1, completado no dia 2) | `tests/test_auditoria.py` | Em execução |
+| REQ-005 | OS-001 | `solicitacoes/auditoria.py`, histórico de tramitação | `tests/test_auditoria.py`, `tests/test_fluxo.py` | Implementado |
 | REQ-006 | OS-001 | OpenAPI e integrações (dias 4, 8, 9, 10) | testes de contrato e integração | Planejado |
 | REQ-007 | OS-001 | `solicitacoes/config.py`, `solicitacoes/migracoes.py` (dia 1), CI (dia 8) | `tests/test_migracoes.py` | Em execução |
 | REQ-008 | OS-001 | backup e restauração (dia 9) | restauração cronometrada | Planejado |
