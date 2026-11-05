@@ -1,0 +1,52 @@
+{
+  "os": "OS-001/2026",
+  "contrato": "DG-CONT-001 (minuta não assinada)",
+  "situacao_os": "PROPOSTA — PENDENTE DE ACEITE E AUTORIZAÇÃO DE PRODUÇÃO",
+  "meta_diaria_ust_ajustadas": 100,
+  "catalogo_proposto": {
+    "M-01": {"servico": "Análise de negócios e processos", "base": 80, "fator": 2},
+    "M-02": {"servico": "Desenvolvimento backend", "base": 75, "fator": 3},
+    "M-03": {"servico": "Desenvolvimento frontend", "base": 75, "fator": 3},
+    "M-04": {"servico": "Testes de sistemas", "base": 70, "fator": 2},
+    "M-05": {"servico": "Implantação DevOps", "base": 40, "fator": 3},
+    "M-06": {"servico": "Integrações", "base": 30, "fator": 3},
+    "M-07": {"servico": "Segurança da informação", "base": 10, "fator": 3},
+    "M-08": {"servico": "Suporte de primeiro nível", "base": 10, "fator": 1}
+  },
+  "dias": [
+    {"dia": 1, "entregas": [
+      {"id": "D1-A", "item": "M-01", "base": 30, "req": ["REQ-001..008"], "entrega": "E-01: matriz de requisitos, arquitetura e pendências de entrevista"},
+      {"id": "D1-B", "item": "M-02", "base": 13, "req": ["REQ-001", "REQ-002", "REQ-007"], "entrega": "Banco com migrações idempotentes, configuração por ambiente, autenticação, perfis e autorização"}]},
+    {"dia": 2, "entregas": [
+      {"id": "D2-A", "item": "M-02", "base": 22, "req": ["REQ-002", "REQ-003", "REQ-005"], "entrega": "Cadastro de solicitações (CRUD, arquivamento, validações), tramitação com transições válidas, atribuição e auditoria"},
+      {"id": "D2-B", "item": "M-01", "base": 17, "req": ["REQ-003"], "entrega": "Modelagem do processo de tramitação: estados, regras, prazos e papéis"}]},
+    {"dia": 3, "entregas": [
+      {"id": "D3-A", "item": "M-02", "base": 20, "req": ["REQ-002", "REQ-005"], "entrega": "Anexos com verificação de tipo e tamanho, recuperação de conta, log estruturado com correlação"},
+      {"id": "D3-B", "item": "M-04", "base": 20, "req": ["REQ-001..005"], "entrega": "Testes unitários e de integração do backend com relatório de cobertura"}]},
+    {"dia": 4, "entregas": [
+      {"id": "D4-A", "item": "M-02", "base": 20, "req": ["REQ-004", "REQ-006"], "entrega": "Painel gerencial (filtros, contagens, exportação CSV) e contrato de API versionado e documentado"},
+      {"id": "D4-B", "item": "M-04", "base": 20, "req": ["REQ-004", "REQ-006"], "entrega": "Testes do painel, da exportação e do contrato da API"}]},
+    {"dia": 5, "entregas": [
+      {"id": "D5-A", "item": "M-03", "base": 25, "req": ["REQ-001", "REQ-002"], "entrega": "Frontend: login, perfis, lista e cadastro de solicitações, estados de erro e carregamento"},
+      {"id": "D5-B", "item": "M-01", "base": 13, "req": ["REQ-001..008"], "entrega": "Validação dos requisitos com as respostas da entrevista e critérios de aceite detalhados"}]},
+    {"dia": 6, "entregas": [
+      {"id": "D6-A", "item": "M-03", "base": 25, "req": ["REQ-003", "REQ-005"], "entrega": "Frontend: tramitação, histórico, anexos e auditoria"},
+      {"id": "D6-B", "item": "M-04", "base": 12, "req": ["REQ-002", "REQ-003"], "entrega": "Teste ponta a ponta do fluxo crítico no navegador"}]},
+    {"dia": 7, "entregas": [
+      {"id": "D7-A", "item": "M-03", "base": 25, "req": ["REQ-004"], "entrega": "Frontend: painel gerencial, acessibilidade e responsividade"},
+      {"id": "D7-B", "item": "M-01", "base": 10, "req": ["REQ-004"], "entrega": "Especificação dos indicadores e relatórios gerenciais"}]},
+    {"dia": 8, "entregas": [
+      {"id": "D8-A", "item": "M-05", "base": 20, "req": ["REQ-007"], "entrega": "Contêineres, pipeline de CI e configuração por ambiente"},
+      {"id": "D8-B", "item": "M-06", "base": 10, "req": ["REQ-006"], "entrega": "Integração de notificações por e-mail (SMTP configurável) com teste em servidor de homologação local"},
+      {"id": "D8-C", "item": "M-01", "base": 5, "req": ["REQ-007", "REQ-008"], "entrega": "Requisitos de operação: RTO, RPO e rotina de backup propostos"}]},
+    {"dia": 9, "entregas": [
+      {"id": "D9-A", "item": "M-05", "base": 20, "req": ["REQ-007", "REQ-008"], "entrega": "Backup, restauração testada e instalação limpa reproduzível"},
+      {"id": "D9-B", "item": "M-06", "base": 10, "req": ["REQ-006"], "entrega": "Webhook de eventos para sistemas externos com assinatura HMAC e teste"},
+      {"id": "D9-C", "item": "M-08", "base": 10, "req": ["REQ-001..008"], "entrega": "Manual do usuário, base de conhecimento e roteiro de suporte de primeiro nível"}]},
+    {"dia": 10, "entregas": [
+      {"id": "D10-A", "item": "M-06", "base": 10, "req": ["REQ-006"], "entrega": "Importação/exportação em lote e documentação das integrações"},
+      {"id": "D10-B", "item": "M-07", "base": 10, "req": ["REQ-001", "REQ-005"], "entrega": "Revisão de segurança: análise estática, dependências, cabeçalhos e testes de autorização"},
+      {"id": "D10-C", "item": "M-04", "base": 18, "req": ["REQ-001..008"], "entrega": "Regressão completa, testes de carga leves e relatório final de testes"},
+      {"id": "D10-D", "item": "M-01", "base": 5, "req": ["REQ-001..008"], "entrega": "Matriz de rastreabilidade final e relatório técnico da OS"}]}
+  ]
+}

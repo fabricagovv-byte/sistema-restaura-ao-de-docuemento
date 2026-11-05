@@ -1,0 +1,48 @@
+{
+  "tarefas": {
+    "D1-A": {
+      "dia": 1,
+      "item": "M-01",
+      "entrega": "E-01: matriz de requisitos, arquitetura e pendências de entrevista",
+      "base_planejada": 30,
+      "ajustada_planejada": 60,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-05T11:49:29-03:00",
+      "situacao": "DECLARADA",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-05T11:50:24-03:00",
+      "evidencias": [
+        {
+          "arquivo": "docs/MATRIZ_REQUISITOS.md",
+          "sha256": "b298e6594431f7d019ac667d1847e08ea002946156f0572ced9972b303d50819",
+          "bytes": 6548
+        },
+        {
+          "arquivo": "docs/ARQUITETURA.md",
+          "sha256": "c4551f7c94aa06fe18ab4d04c5420cd2599f15293ef1163c7deca07e05511ab8",
+          "bytes": 2827
+        },
+        {
+          "arquivo": "docs/PENDENCIAS_ENTREVISTA.md",
+          "sha256": "8a9e8902a90aacdc65667ba635114b94f676b44a3bc1b523987488cb18444682",
+          "bytes": 2502
+        }
+      ],
+      "commit_base": "df796a1e864f869cb5795920a48937e78831fede",
+      "base_declarada": 25,
+      "ajustada_declarada": 50,
+      "observacao": "Matriz, arquitetura e pendências entregues; 5 UST base ficam para depois da entrevista obrigatória, que ainda não ocorreu."
+    },
+    "D1-B": {
+      "dia": 1,
+      "item": "M-02",
+      "entrega": "Banco com migrações idempotentes, configuração por ambiente, autenticação, perfis e autorização",
+      "base_planejada": 13,
+      "ajustada_planejada": 39,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-05T11:50:24-03:00",
+      "situacao": "EM_EXECUCAO",
+      "horas_humanas_comprovadas": 0
+    }
+  }
+}

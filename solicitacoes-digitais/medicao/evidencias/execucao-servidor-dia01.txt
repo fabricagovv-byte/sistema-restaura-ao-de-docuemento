@@ -1,0 +1,25 @@
+# Execução real do servidor — 2026-11-05T11:53:24-03:00
+## migrar (1ª vez)
+aplicadas: [1] | versão: 1
+## migrar (2ª vez, idempotente)
+aplicadas: nenhuma (já atualizado) | versão: 1
+## GET /api/v1/saude
+HTTP/1.1 200 OK
+x-correlation-id: b21a1745c9a74349b6b69214b1837345
+{"situacao":"ok","versao":"0.1.0","esquema":1}
+## GET /api/v1/usuarios sem token
+401
+## OpenAPI
+Solicitações Digitais 0.1.0
+  GET /api/v1/saude
+  POST /api/v1/auth/login
+  POST /api/v1/auth/logout
+  GET /api/v1/auth/eu
+  GET /api/v1/usuarios
+  POST /api/v1/usuarios
+  PATCH /api/v1/usuarios/{uid}
+  GET /api/v1/auditoria
+## log estruturado do servidor (amostra)
+{"em": "2026-11-05T14:53:27.308+00:00", "nivel": "INFO", "msg": "requisicao", "correlacao": "b21a1745c9a74349b6b69214b1837345", "metodo": "GET", "rota": "/api/v1/saude", "status": 200, "ms": 3.8}
+{"em": "2026-11-05T14:53:27.319+00:00", "nivel": "INFO", "msg": "requisicao", "correlacao": "9ccd7e620d5c406abc3165aec53e3e40", "metodo": "GET", "rota": "/api/v1/usuarios", "status": 401, "ms": 1.9}
+{"em": "2026-11-05T14:53:27.348+00:00", "nivel": "INFO", "msg": "requisicao", "correlacao": "829936dd7142464c9df495d7a5341d6b", "metodo": "GET", "rota": "/openapi.json", "status": 200, "ms": 20.6}
