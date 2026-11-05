@@ -118,6 +118,8 @@ def cmd_verificar(a, plano, reg):
     t = reg["tarefas"].get(a.tarefa)
     if not t or t.get("situacao") not in ("DECLARADA", "VERIFICADA_TECNICAMENTE"):
         sys.exit(f"{a.tarefa} precisa estar declarada")
+    if t["item"] == "M-01":
+        sys.exit("entrega de análise (M-01) é documental: a verificação é revisão por pessoa da contratante, não log de testes")
     log = (RAIZ / a.log).resolve()
     if not log.is_file():
         sys.exit("log de testes inexistente")
@@ -169,7 +171,38 @@ def cmd_relatorio(a, plano, reg):
             md.append(f"* Observação: {t['observacao']}")
     saida = RAIZ / "medicao" / "relatorios" / f"medicao-dia-{dia:02d}.md"
     saida.write_text("\n".join(md) + "\n", encoding="utf-8")
+    _docx(md, saida.with_suffix(".docx"))
     print(f"relatório: {saida.relative_to(RAIZ)} — planejadas {tot['plan']}, declaradas {tot['decl']}, verificadas {tot['verif']}")
+
+
+def _docx(md: list[str], destino: Path) -> None:
+    """Versão Word do relatório (o contrato pede relatórios em Word); sem python-docx, só o Markdown."""
+    try:
+        import docx
+        from docx.shared import Pt
+    except ImportError:
+        return
+    doc = docx.Document()
+    doc.styles["Normal"].font.size = Pt(9)
+    tabela = None
+    for linha in md:
+        if linha.startswith("# "):
+            doc.add_heading(linha[2:], level=1)
+        elif linha.startswith("|"):
+            cels = [c.strip().replace("**", "").replace("`", "").replace("<br>", "\n") for c in linha.strip("|").split("|")]
+            if set("".join(cels)) <= set("-: "):
+                continue
+            if tabela is None:
+                tabela = doc.add_table(rows=0, cols=len(cels))
+                tabela.style = "Table Grid"
+            row = tabela.add_row().cells
+            for i, c in enumerate(cels[: len(row)]):
+                row[i].text = c
+        else:
+            tabela = None
+            if linha.strip():
+                doc.add_paragraph(linha.lstrip("* ").replace("**", "").replace("`", ""), style="List Bullet" if linha.startswith("* ") else None)
+    doc.save(destino)
 
 
 def main(argv=None):

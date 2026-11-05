@@ -31,7 +31,7 @@
       "commit_base": "df796a1e864f869cb5795920a48937e78831fede",
       "base_declarada": 25,
       "ajustada_declarada": 50,
-      "observacao": "Matriz, arquitetura e pendências entregues; 5 UST base ficam para depois da entrevista obrigatória, que ainda não ocorreu."
+      "observacao": "Matriz, arquitetura e pendências entregues; 5 UST base ficam para depois da entrevista obrigatória, que ainda não ocorreu. Entrega documental: a verificação técnica exige revisão por pessoa da contratante (testes de código não a verificam)."
     },
     "D1-B": {
       "dia": 1,
@@ -41,8 +41,58 @@
       "ajustada_planejada": 39,
       "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
       "inicio": "2026-11-05T11:50:24-03:00",
-      "situacao": "EM_EXECUCAO",
-      "horas_humanas_comprovadas": 0
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-05T11:53:49-03:00",
+      "evidencias": [
+        {
+          "arquivo": "solicitacoes/api.py",
+          "sha256": "f196bf3b46140d60123c78070e74ebacd797aadf31e7f7dc28031866e80c7676",
+          "bytes": 9790
+        },
+        {
+          "arquivo": "solicitacoes/seguranca.py",
+          "sha256": "07107f60ec543e0353c18914e947c70d6e9d9cd51b416491633e6de521c32fc3",
+          "bytes": 3057
+        },
+        {
+          "arquivo": "solicitacoes/migracoes.py",
+          "sha256": "855274cc053a430bfe5d0c358023bbdfb4d7d0bab538a95d30f3d1f803dc053f",
+          "bytes": 1916
+        },
+        {
+          "arquivo": "solicitacoes/modelos.py",
+          "sha256": "f29e74b543c84c74f48041140128d7565a5d1ed23df18550bbb13b58a8aa6834",
+          "bytes": 3696
+        },
+        {
+          "arquivo": "solicitacoes/auditoria.py",
+          "sha256": "c525fba7c2b0284856a744fed02b0b50f720be2845cbb0327e86eb39d15928c4",
+          "bytes": 1043
+        },
+        {
+          "arquivo": "solicitacoes/config.py",
+          "sha256": "965c975d2932f5b4ff8d53c64ba3ea1ff5dc42fe9920e3c0db2c807af62a51e3",
+          "bytes": 1175
+        },
+        {
+          "arquivo": "medicao/evidencias/execucao-servidor-dia01.txt",
+          "sha256": "de14ae4b4e8e7afbfee906bcd6c165f6f78b29d32ef5f31c26b301e0cb7f9d2e",
+          "bytes": 1236
+        }
+      ],
+      "commit_base": "b0cb84fe331f707f87335abeb361d8e5ddfe3490",
+      "base_declarada": 13,
+      "ajustada_declarada": 39,
+      "observacao": "Também entregue antes do previsto: auditoria com correlação e log estruturado (previstos para os dias 2 e 3), sem contagem adicional.",
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia01.txt",
+        "sha256": "fafa5bbe6d5d94fdc71ceea34efb1b98e7906e87c9159284f24aa224bb20f604",
+        "em": "2026-11-05T11:53:49-03:00"
+      },
+      "ajustada_verificada": 39,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
     }
   }
 }

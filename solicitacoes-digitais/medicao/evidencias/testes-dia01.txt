@@ -1,0 +1,24 @@
+# Testes automatizados — dia 1 — 2026-11-05T11:53:43-03:00
+commit: b0cb84fe331f707f87335abeb361d8e5ddfe3490 (claude/wizardly-albattani-dn0mei)
+python: Python 3.13.18
+
+## SQLite
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.2.0, pluggy-1.7.0
+rootdir: /home/user/sistema-restaura-ao-de-docuemento/solicitacoes-digitais
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.15.1
+collected 22 items
+
+tests/test_auditoria.py ....                                             [ 18%]
+tests/test_autenticacao.py ....                                          [ 36%]
+tests/test_migracoes.py ..                                               [ 45%]
+tests/test_permissoes.py ......                                          [ 72%]
+tests/test_seguranca.py ......                                           [100%]
+
+============================== 22 passed in 1.51s ==============================
+
+## PostgreSQL 16
+......................                                                   [100%]
+22 passed in 2.73s
