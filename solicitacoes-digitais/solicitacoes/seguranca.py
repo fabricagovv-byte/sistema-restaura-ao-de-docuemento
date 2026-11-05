@@ -17,7 +17,7 @@ PERFIS = ("administrador", "gestor", "operador", "solicitante")
 
 # Matriz perfil -> permissões. Cada rota declara a permissão de que precisa.
 PERMISSOES: dict[str, frozenset[str]] = {
-    "administrador": frozenset({"usuarios:gerir", "usuarios:ver", "auditoria:ver"}),
+    "administrador": frozenset({"usuarios:gerir", "usuarios:ver", "auditoria:ver", "categorias:gerir"}),
     "gestor": frozenset({"usuarios:ver", "auditoria:ver", "solicitacoes:ver_todas", "solicitacoes:tramitar",
                          "solicitacoes:atribuir", "solicitacoes:arquivar", "solicitacoes:criar", "painel:ver"}),
     "operador": frozenset({"solicitacoes:ver_fila", "solicitacoes:tramitar", "solicitacoes:criar"}),

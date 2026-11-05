@@ -10,15 +10,11 @@ from contextlib import asynccontextmanager
 from datetime import datetime, timezone
 from typing import Annotated, Literal
 
-import jwt
 from fastapi import Depends, FastAPI, HTTPException, Request, status
-from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from pydantic import BaseModel, EmailStr, Field, field_validator
 from sqlalchemy import func, select
-from sqlalchemy.orm import Session
 
 from . import __version__, auditoria, seguranca
-from .banco import nova_sessao
 from .migracoes import aplicar, versao_atual
 from .modelos import EventoAuditoria, TokenRevogado, Usuario
 
@@ -71,49 +67,7 @@ async def correlacao(request: Request, call_next):
     return resp
 
 
-# ------------------------------------------------------------------ dependências
-def db():
-    s = nova_sessao()
-    try:
-        yield s
-        s.commit()
-    except Exception:
-        s.rollback()
-        raise
-    finally:
-        s.close()
-
-
-Db = Annotated[Session, Depends(db)]
-bearer = HTTPBearer(auto_error=False)
-NAO_AUTENTICADO = HTTPException(status.HTTP_401_UNAUTHORIZED, "sessão inválida ou expirada", headers={"WWW-Authenticate": "Bearer"})
-
-
-def usuario_atual(s: Db, cred: Annotated[HTTPAuthorizationCredentials | None, Depends(bearer)]) -> Usuario:
-    if cred is None:
-        raise NAO_AUTENTICADO
-    try:
-        dados = seguranca.ler_token(cred.credentials)
-    except jwt.PyJWTError:
-        raise NAO_AUTENTICADO from None
-    if s.get(TokenRevogado, dados["jti"]):
-        raise NAO_AUTENTICADO
-    u = s.get(Usuario, int(dados["sub"]))
-    if u is None or not u.ativo:
-        raise NAO_AUTENTICADO
-    u.__dict__["_token"] = dados
-    return u
-
-
-Atual = Annotated[Usuario, Depends(usuario_atual)]
-
-
-def exige(permissao: str):
-    def _dep(u: Atual) -> Usuario:
-        if not seguranca.pode(u.perfil, permissao):
-            raise HTTPException(status.HTTP_403_FORBIDDEN, "seu perfil não tem permissão para esta ação")
-        return u
-    return _dep
+from .dependencias import Atual, Db, exige  # noqa: E402
 
 
 # ------------------------------------------------------------------ esquemas
@@ -261,3 +215,8 @@ def listar_auditoria(s: Db, _: Annotated[Usuario, Depends(exige("auditoria:ver")
     if correlacao:
         q = q.where(EventoAuditoria.correlacao == correlacao)
     return [EventoSaida.model_validate(e, from_attributes=True) for e in s.scalars(q)]
+
+
+from .rotas_solicitacoes import router as _rotas_solicitacoes  # noqa: E402
+
+app.include_router(_rotas_solicitacoes)

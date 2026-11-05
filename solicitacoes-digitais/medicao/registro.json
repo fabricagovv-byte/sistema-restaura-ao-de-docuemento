@@ -93,6 +93,17 @@
       },
       "ajustada_verificada": 39,
       "revisor_independente": "PENDENTE — indicar pessoa da contratante"
+    },
+    "D2-A": {
+      "dia": 2,
+      "item": "M-02",
+      "entrega": "Cadastro de solicitações (CRUD, arquivamento, validações), tramitação com transições válidas, atribuição e auditoria",
+      "base_planejada": 22,
+      "ajustada_planejada": 66,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-05T12:00:02-03:00",
+      "situacao": "EM_EXECUCAO",
+      "horas_humanas_comprovadas": 0
     }
   }
 }

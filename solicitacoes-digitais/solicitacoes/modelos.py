@@ -74,3 +74,26 @@ class VersaoEsquema(Base):
     versao: Mapped[int] = mapped_column(primary_key=True)
     descricao: Mapped[str] = mapped_column(String(200))
     aplicada_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=agora)
+
+
+class Categoria(Base):
+    __tablename__ = "categoria"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    nome: Mapped[str] = mapped_column(String(60), unique=True)
+    prazo_dias: Mapped[int] = mapped_column(Integer)  # prazo de atendimento em dias corridos
+    ativa: Mapped[bool] = mapped_column(Boolean, default=True)
+    criado_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=agora)
+
+
+class HistoricoSolicitacao(Base):
+    """Cada passo da tramitação; só inclusão."""
+
+    __tablename__ = "historico_solicitacao"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    solicitacao_id: Mapped[int] = mapped_column(ForeignKey("solicitacao.id", ondelete="CASCADE"), index=True)
+    em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=agora)
+    ator_id: Mapped[int] = mapped_column(ForeignKey("usuario.id"))
+    evento: Mapped[str] = mapped_column(String(30))  # criacao, transicao, atribuicao, edicao, arquivamento
+    de_status: Mapped[str | None] = mapped_column(String(30), nullable=True)
+    para_status: Mapped[str | None] = mapped_column(String(30), nullable=True)
+    comentario: Mapped[str | None] = mapped_column(Text, nullable=True)

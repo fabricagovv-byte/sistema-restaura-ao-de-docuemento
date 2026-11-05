@@ -11,7 +11,7 @@ from sqlalchemy import inspect, select
 from sqlalchemy.engine import Connection
 
 from .banco import engine, sessao
-from .modelos import Base, EventoAuditoria, Solicitacao, TokenRevogado, Usuario, VersaoEsquema
+from .modelos import Base, Categoria, EventoAuditoria, HistoricoSolicitacao, Solicitacao, TokenRevogado, Usuario, VersaoEsquema
 
 
 def _v1(conn: Connection) -> None:
@@ -20,8 +20,15 @@ def _v1(conn: Connection) -> None:
         tabela.create(conn, checkfirst=True)
 
 
+def _v2(conn: Connection) -> None:
+    """Categorias com prazo de atendimento e histórico de tramitação."""
+    for tabela in (Categoria.__table__, HistoricoSolicitacao.__table__):
+        tabela.create(conn, checkfirst=True)
+
+
 MIGRACOES: list[tuple[int, str, Callable[[Connection], None]]] = [
     (1, "esquema inicial: usuários, tokens revogados, solicitações e auditoria", _v1),
+    (2, "categorias com prazo e histórico de tramitação", _v2),
 ]
 
 
