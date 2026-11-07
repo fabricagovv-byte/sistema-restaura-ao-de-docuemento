@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.12.16/x64/bin/python
+rootdir: /home/runner/work/sistema-restaura-ao-de-docuemento/sistema-restaura-ao-de-docuemento/plataforma-licitacoes/backend
+plugins: anyio-4.16.0
+collecting ... collected 4 items
+
+tests/test_ao_vivo.py::test_pncp_propostas_abertas PASSED                [ 25%]
+tests/test_ao_vivo.py::test_comprasgov_dados_abertos PASSED              [ 50%]
+tests/test_ao_vivo.py::test_querido_diario PASSED                        [ 75%]
+tests/test_ao_vivo.py::test_ibge_municipios PASSED                       [100%]
+
+======================== 4 passed in 137.43s (0:02:17) =========================

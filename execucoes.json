@@ -1,0 +1,126 @@
+[
+ {
+  "fonte": "pncp",
+  "inicio": "2026-11-07T06:20:05.607084",
+  "fim": "2026-11-07T07:00:20.647141",
+  "status": "parcial",
+  "parametros": {
+   "modo": "propostas",
+   "dias": 1,
+   "modalidades": [
+    6,
+    4,
+    8,
+    7,
+    5,
+    12,
+    9,
+    1,
+    3,
+    2,
+    10,
+    11,
+    13
+   ],
+   "ufs": null
+  },
+  "lidos": 16750,
+  "novos": 16750,
+  "atualizados": 0,
+  "erros": 1,
+  "chamadas": 343,
+  "mensagem": "FalhaTemporaria: HTTP 503 persistente"
+ },
+ {
+  "fonte": "pncp",
+  "inicio": "2026-11-07T07:00:20.676521",
+  "fim": "2026-11-07T07:00:37.527811",
+  "status": "erro",
+  "parametros": {
+   "modo": "diario",
+   "dias": 5,
+   "modalidades": [
+    6,
+    4,
+    8,
+    7,
+    5,
+    12,
+    9,
+    1,
+    3,
+    2,
+    10,
+    11,
+    13
+   ],
+   "ufs": null
+  },
+  "lidos": 0,
+  "novos": 0,
+  "atualizados": 0,
+  "erros": 1,
+  "chamadas": 4,
+  "mensagem": "FalhaTemporaria: HTTP 503 persistente"
+ },
+ {
+  "fonte": "comprasgov",
+  "inicio": "2026-11-07T07:00:37.548600",
+  "fim": "2026-11-07T07:01:23.715304",
+  "status": "ok",
+  "parametros": {
+   "dias": 7
+  },
+  "lidos": 4778,
+  "novos": 4778,
+  "atualizados": 0,
+  "erros": 0,
+  "chamadas": 21,
+  "mensagem": null
+ },
+ {
+  "fonte": "querido_diario",
+  "inicio": "2026-11-07T08:14:03.978484",
+  "fim": "2026-11-07T08:28:41.681358",
+  "status": "ok",
+  "parametros": {
+   "termos": [
+    "digitalização",
+    "indexação",
+    "gestão documental",
+    "fábrica de software",
+    "sustentação de sistemas",
+    "desenvolvimento de software",
+    "tratamento de dados",
+    "manutenção de software",
+    "licença de uso de software",
+    "sistema de gestão",
+    "inteligência artificial",
+    "arquivo",
+    "microfilmagem",
+    "educação a distância",
+    "EAD",
+    "plataforma educacional",
+    "pesquisa de opinião",
+    "pesquisa de satisfação",
+    "inovação",
+    "ponto de função",
+    "unidade de serviço técnico",
+    "digitalização de documentos",
+    "gestão eletrônica de documentos",
+    "locação de software",
+    "computação em nuvem",
+    "outsourcing",
+    "sustentação",
+    "registro de preços tecnologia"
+   ],
+   "dias": 15
+  },
+  "lidos": 187704,
+  "novos": 8181,
+  "atualizados": 2537,
+  "erros": 0,
+  "chamadas": 634,
+  "mensagem": null
+ }
+]

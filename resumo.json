@@ -1,0 +1,65 @@
+{
+ "inicio": "2026-11-07T06:18:01.447588",
+ "execucao": "42346148409",
+ "passos": {
+  "ibge": 5571,
+  "pncp_propostas_abertas": {
+   "status": "parcial",
+   "lidos": 16750,
+   "novos": 16750,
+   "atualizados": 0,
+   "chamadas": 343,
+   "mensagem": "FalhaTemporaria: HTTP 503 persistente"
+  },
+  "pncp_publicados_e_alterados": {
+   "status": "erro",
+   "lidos": 0,
+   "novos": 0,
+   "atualizados": 0,
+   "chamadas": 4,
+   "mensagem": "FalhaTemporaria: HTTP 503 persistente"
+  },
+  "comprasgov": {
+   "status": "ok",
+   "lidos": 4778,
+   "novos": 4778,
+   "atualizados": 0,
+   "chamadas": 21,
+   "mensagem": null
+  },
+  "conferencia_individual": {
+   "conferidos": 0,
+   "alterados": 0,
+   "excluidos": 0,
+   "erros": 2
+  },
+  "documentos_relevantes": {
+   "editais": 40,
+   "itens": 669,
+   "documentos": 144,
+   "baixados": 144,
+   "falhas": []
+  },
+  "itens_e_documentos_listados": {
+   "alvo": 959,
+   "detalhados": 959,
+   "itens": 7949,
+   "documentos": 3041,
+   "falhas": 0
+  },
+  "querido_diario": {
+   "status": "ok",
+   "lidos": 187704,
+   "novos": 8181,
+   "atualizados": 2537,
+   "chamadas": 634,
+   "mensagem": null
+  }
+ },
+ "orcamento_minutos": 280.0,
+ "fim": "2026-11-07T08:28:41.683142",
+ "editais_exportados": 29709,
+ "editais_detalhados": 959,
+ "municipios": 5571,
+ "exportado_em": "2026-11-07T08:29:16.387947"
+}
