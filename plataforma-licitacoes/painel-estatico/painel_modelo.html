@@ -478,7 +478,7 @@ function renderFicha() {
 document.getElementById("abas").addEventListener("click", (e) => { const b = e.target.closest("[data-aba]"); if (!b || !fichaAtual) return;
   abrir(fichaAtual.x.id, true, b.dataset.aba); });
 function fechar() { if (dlg.open) dlg.close(); }
-dlg.addEventListener("close", () => { if (location.hash.startsWith("#p")) history.pushState(null, "", location.pathname + location.search); });
+dlg.addEventListener("close", () => { if (location.hash.startsWith("#p")) history.replaceState(null, "", location.pathname + location.search); });
 document.getElementById("fechar").addEventListener("click", fechar);
 dlg.addEventListener("click", (e) => { if (e.target === dlg) fechar(); });
 document.getElementById("lista").addEventListener("click", (e) => { const b = e.target.closest("[data-abrir]"); if (b) abrir(b.dataset.abrir, true, b.dataset.aba || "ficha"); });

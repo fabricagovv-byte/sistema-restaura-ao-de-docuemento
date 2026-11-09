@@ -24,7 +24,7 @@ const { chromium } = require('playwright');
   await p.screenshot({ path: 'crmficha-cel.png' });
   await p.keyboard.press('Escape');
   // recarregar e conferir persistência
-  await p.reload(); await p.waitForFunction(() => !document.getElementById('cat-todas').textContent.includes('carregando'), null, { timeout: 30000 });
+  await p.goto(url); await p.waitForFunction(() => !document.getElementById('cat-todas').textContent.includes('carregando'), null, { timeout: 30000 });
   console.log('depois de recarregar:', (await p.textContent('#crm-estado')).slice(0, 140), '| linhas CRM', await p.locator('#crm-lista tr').count(), '| chip', await p.textContent('#cat-meucrm'));
   await p.click('#crm-lista tr'); await p.waitForTimeout(300);
   console.log('abre do CRM:', await p.textContent('#ficha-titulo'), await p.inputValue('#crm-passo'));
