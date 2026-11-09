@@ -27,7 +27,18 @@ def slug(texto: str, limite: int = 80) -> str:
 
 
 def para_data(valor: Any) -> datetime | None:
-    """Aceita ISO, 'AAAA-MM-DD HH:MM:SS', 'DD/MM/AAAA' e datas do JavaScript."""
+    """Aceita ISO, 'AAAA-MM-DD HH:MM:SS', 'DD/MM/AAAA' e datas do JavaScript. Data impossível ou fora do
+    intervalo (ano 0001 com fuso, por exemplo, que estoura na conversão) vira None em vez de derrubar a coleta."""
+    try:
+        d = _para_data(valor)
+    except (ValueError, OverflowError):
+        return None
+    if d is not None and not (1990 <= d.year <= 2100):  # ano 0001 ou 9999 em edital é erro de cadastro
+        return None
+    return d
+
+
+def _para_data(valor: Any) -> datetime | None:
     if valor in (None, "", "None"):
         return None
     if isinstance(valor, datetime):

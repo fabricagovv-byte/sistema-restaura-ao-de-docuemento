@@ -81,10 +81,14 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
     _passo("pncp_propostas_abertas", lambda: _sync(coleta.sincronizar_pncp(s, modo="propostas", ate=prazo(0.4))), resumo)
     if not rapido:
         _passo("pncp_publicados_e_alterados", lambda: _sync(coleta.sincronizar_pncp(s, modo="diario", dias=dias, ate=prazo(0.45))), resumo)
+        # busca maior de pregões: tudo o que foi publicado nos últimos 30 dias em pregão e concorrência,
+        # inclusive os que ainda não abriram propostas (a consulta de propostas abertas não traz esses)
+        _passo("pncp_pregoes_30_dias", lambda: _sync(coleta.sincronizar_pncp(
+            s, modo="diario", dias=30, modalidades=[6, 4, 7, 5], so_publicacao=True, ate=prazo(0.6))), resumo)
         _passo("comprasgov", lambda: _sync(coleta.sincronizar_comprasgov(s, dias=7)), resumo)
         _passo("conferencia_individual", lambda: coleta.conferir_individual(s, limite=150), resumo)
     dj = Disjuntor()
-    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.55), disjuntor=dj), resumo)
+    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.68), disjuntor=dj), resumo)
     _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(0.85), disjuntor=dj), resumo)
     if not rapido:
         _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=15, ate=prazo(1.0))), resumo)

@@ -64,6 +64,41 @@ def test_sincronizar_pncp_com_api_simulada(banco, pncp_pagina):
     assert catalogo.fonte(banco, "pncp").ultimo_sucesso is not None
 
 
+def test_registro_defeituoso_e_pulado_sem_derrubar_a_etapa(banco, pncp_pagina, monkeypatch):
+    """01-11/2026: um registro com data fora do intervalo derrubou a etapa inteira depois de 48 mil lidos."""
+    from licitacoes.conectores import pncp as mod_pncp
+    from licitacoes.util import para_data
+
+    assert para_data("0001-01-01T00:00:00+14:00") is None and para_data("31/02/2026") is None
+    original = mod_pncp.normalizar_contratacao
+    defeituoso = pncp_pagina["data"][3]["numeroControlePNCP"]
+
+    def normalizar(raw, *a, **k):
+        if raw.get("numeroControlePNCP") == defeituoso:
+            raise OverflowError("date value out of range")
+        return original(raw, *a, **k)
+
+    monkeypatch.setattr(mod_pncp, "normalizar_contratacao", normalizar)
+    ultima = dict(pncp_pagina, paginasRestantes=0)
+    http = ClienteHttp(intervalo_minimo_s=0, http=httpx.Client(transport=httpx.MockTransport(
+        lambda r: httpx.Response(200, json=ultima))), dormir=lambda x: None)
+    r = coleta.sincronizar_pncp(banco, modo="propostas", conector=ConectorPncp(http))
+    assert r.status == "ok" and r.lidos == 9 and r.erros == 1 and "1 registros com dados inválidos" in r.mensagem
+    assert banco.query(Licitacao).count() == 9
+
+
+def test_busca_de_30_dias_so_por_publicacao(banco):
+    chamadas = []
+
+    def responder(req):
+        chamadas.append(req.url.path)
+        return httpx.Response(204)
+
+    http = ClienteHttp(intervalo_minimo_s=0, http=httpx.Client(transport=httpx.MockTransport(responder)), dormir=lambda x: None)
+    r = coleta.sincronizar_pncp(banco, modo="diario", dias=30, modalidades=[6, 4], so_publicacao=True, conector=ConectorPncp(http))
+    assert r.status == "ok" and chamadas and all(c.endswith("/contratacoes/publicacao") for c in chamadas) and len(chamadas) == 2
+
+
 def test_pncp_para_no_prazo(banco, pncp_pagina):
     import time
 

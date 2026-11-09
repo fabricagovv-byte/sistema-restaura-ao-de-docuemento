@@ -228,7 +228,7 @@ def classificar_licitacao(s: Session, lic: Licitacao, cats=None) -> None:
 
 def sincronizar_pncp(s: Session, *, modo: str = "monitoramento", dias: int = 1, modalidades: list[int] | None = None,
                      ufs: list[str] | None = None, conector=None, hoje: date | None = None,
-                     ate: float | None = None) -> Sincronizacao:
+                     ate: float | None = None, so_publicacao: bool = False) -> Sincronizacao:
     """modo: 'monitoramento' (alterados e publicados hoje), 'diario' (últimos `dias`), 'propostas' (abertas).
     `ate`: prazo (time.monotonic()); ao passar dele, para e registra a execução como parcial."""
     import time
@@ -238,7 +238,8 @@ def sincronizar_pncp(s: Session, *, modo: str = "monitoramento", dias: int = 1, 
     c = conector or ConectorPncp()
     hoje = hoje or date.today()
     mods = modalidades or config().modalidades_pncp
-    ex = Execucao(s, "pncp", {"modo": modo, "dias": dias, "modalidades": mods, "ufs": ufs})
+    ex = Execucao(s, "pncp", {"modo": modo, "dias": dias, "modalidades": mods, "ufs": ufs, "so_publicacao": so_publicacao})
+    ignorados = 0
     erro = None
     cortado = False
     try:
@@ -252,12 +253,20 @@ def sincronizar_pncp(s: Session, *, modo: str = "monitoramento", dias: int = 1, 
                 series = []
                 for m in mods:
                     series.append(c.por_publicacao(inicio, hoje, m, uf))
-                    series.append(c.por_atualizacao(inicio, hoje, m, uf))
+                    if not so_publicacao:
+                        series.append(c.por_atualizacao(inicio, hoje, m, uf))
             for serie in series:
                 if cortado:
                     break
                 for i, raw in enumerate(serie, 1):
-                    estado, _ = gravar(s, normalizar_contratacao(raw), ex.fonte)
+                    # um registro defeituoso (data impossível, campo inesperado) é pulado e contado; não derruba a etapa
+                    try:
+                        with s.begin_nested():
+                            estado, _ = gravar(s, normalizar_contratacao(raw), ex.fonte)
+                    except (ValueError, OverflowError, TypeError, KeyError) as e:
+                        ignorados += 1
+                        log.warning("PNCP: registro ignorado (%s: %s) %s", type(e).__name__, e, (raw or {}).get("numeroControlePNCP"))
+                        continue
                     ex.contar(estado)
                     if i % 200 == 0:
                         s.commit()
@@ -272,6 +281,10 @@ def sincronizar_pncp(s: Session, *, modo: str = "monitoramento", dias: int = 1, 
     if cortado and erro is None:
         ex.reg.mensagem = "interrompida pelo limite de tempo da coleta"
         log.warning("PNCP %s interrompido pelo prazo com %d lidos", modo, ex.reg.lidos)
+    if ignorados:
+        ex.reg.erros += ignorados
+        if erro is None:
+            ex.reg.mensagem = ((ex.reg.mensagem + "; ") if ex.reg.mensagem else "") + f"{ignorados} registros com dados inválidos ignorados"
     return ex.concluir(erro, c.http.stats.chamadas, parcial=cortado)
 
 
