@@ -223,7 +223,31 @@ def classificar_licitacao(s: Session, lic: Licitacao, cats=None) -> None:
     base = classificar(texto, cats or categorias_ativas(s))
     # consulta direta: ler lic.itens aqui deixaria em cache uma lista vazia antes de os itens serem gravados
     itens = s.query(Item.unidade, Item.descricao).filter(Item.licitacao_id == lic.id).all() if lic.id is not None else []
-    lic.categorias = base + remuneracao(texto, itens, base)
+    lic.categorias = base + remuneracao(texto, itens, base, _texto_documentos(s, lic))
+
+
+def _texto_documentos(s: Session, lic: Licitacao, limite: int = 400_000) -> str:
+    """Texto extraído dos documentos já baixados do edital (termo de referência, edital), para achar UST, ponto de
+    função e valor fixo mensal que só aparecem lá."""
+    if lic.id is None:
+        return ""
+    import json
+
+    from .armazenamento import armazenamento
+
+    partes, total = [], 0
+    for (caminho,) in s.query(Documento.caminho).filter(Documento.licitacao_id == lic.id, Documento.caminho.isnot(None)):
+        try:
+            dados = json.loads(armazenamento().ler(caminho))
+        except (OSError, ValueError, KeyError):
+            continue
+        for p in dados.get("paginas") or []:
+            txt = p.get("texto") or ""
+            partes.append(txt)
+            total += len(txt)
+            if total >= limite:
+                return " ".join(partes)[:limite]
+    return " ".join(partes)
 
 
 def sincronizar_pncp(s: Session, *, modo: str = "monitoramento", dias: int = 1, modalidades: list[int] | None = None,

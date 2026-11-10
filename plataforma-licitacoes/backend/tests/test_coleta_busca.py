@@ -207,6 +207,19 @@ def test_natureza_e_grande_volume():
     assert volumes([("MÊS", "Serviço de videomonitoramento 24h", 2988)]) == {}
 
 
+def test_mensal_pelo_objeto_e_ust_pf_pelos_documentos():
+    from licitacoes.taxonomia import remuneracao
+
+    ti = classificar("Contratação de serviços de sustentação de sistemas")
+    cods = lambda texto, docs="", cats=ti: {c["codigo"] for c in remuneracao(texto, [], cats, docs)}  # noqa: E731
+    assert cods("Locação de sistema de gestão pública com pagamento mensal") == {"remun_fixo_mensal"}
+    assert cods("Licenciamento de software, cobrado por mensalidade") == {"remun_fixo_mensal"}
+    assert cods("Sustentação de sistemas pelo período de 12 meses") == set()  # duração não é forma de pagamento
+    assert cods("Sustentação de sistemas", docs="Os serviços serão medidos em Unidade de Serviço Técnico (UST)") == {"remun_ust"}
+    assert cods("Fábrica de software", docs="estimativa de 2.000 pontos de função") == {"remun_pf"}
+    assert cods("Locação de veículos com pagamento mensal", cats=[]) == set()  # fora de tecnologia não conta
+
+
 def test_expansao_semantica_digitalizacao():
     termos = expandir_consulta("digitalização")["grupos"][0]["termos"]
     for t in ["escaneamento", "conversao de documentos fisicos", "microfilmagem", "captura e processamento de imagens"]:

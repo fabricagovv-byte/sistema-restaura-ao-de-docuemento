@@ -300,18 +300,26 @@ _PF = ["ponto de funcao", "pontos de funcao", "function point", "function points
 _FIXO = ["valor fixo mensal", "preco fixo mensal", "remuneracao fixa mensal", "pagamento fixo mensal",
          "pagamento mensal fixo", "valor mensal fixo", "parcela fixa mensal", "parcelas fixas mensais", "fixo mensal"]
 _MES = {"mes", "meses", "mensal", "mensalidade", "men"}
+# no objeto de um edital de tecnologia/documentos, estes termos indicam cobrança mensal (contrato de duração em
+# "12 meses" sozinho não indica: todo serviço continuado diz isso)
+_MENSAL_TEXTO = [" mensal ", " mensais ", "mensalidade", " por mes ", " ao mes ", "valor mensal", "pagamento mensal",
+                 "locacao mensal", "licenca mensal", "assinatura mensal", "parcelas mensais", "cobranca mensal"]
 _SEG_TEC = {"ti", "gestao_documental"}
 
 
-def remuneracao(texto: str, itens: list[tuple[str | None, str | None]], categorias: list[dict]) -> list[dict]:
-    """Formas de pagamento do edital (UST, ponto de função, fixo mensal), pelo texto e pelos itens
-    (unidade, descrição). Fixo mensal só conta em edital de tecnologia ou gestão documental."""
+def remuneracao(texto: str, itens: list[tuple[str | None, str | None]], categorias: list[dict],
+                texto_documentos: str = "") -> list[dict]:
+    """Formas de pagamento do edital (UST, ponto de função, fixo mensal), pelo texto, pelos itens (unidade, descrição)
+    e pelo texto dos documentos baixados (termo de referência, edital). Fixo mensal só conta em edital de
+    tecnologia ou gestão documental."""
     n = " " + normalizar(texto or "") + " "
+    docs = " " + normalizar(texto_documentos or "") + " " if texto_documentos else ""
     unids = [" " + normalizar(u or "") + " " for u, _ in itens]
     tudo = n + " ".join(" " + normalizar(d or "") + " " for _, d in itens)
     achados: dict[str, list[str]] = {}
     for cod, termos, extra in (("remun_ust", _UST, None), ("remun_pf", _PF, " pf ")):
         ts = [x.strip() for x in termos if x in tudo or any(x in u for u in unids)]
+        ts += [f"documento: {x.strip()}" for x in termos if docs and x in docs and x.strip() not in ts]
         if extra and any(extra in u for u in unids):
             ts.append(f"unidade {extra.strip()}")
         if ts:
@@ -320,6 +328,8 @@ def remuneracao(texto: str, itens: list[tuple[str | None, str | None]], categori
         ts = [x for x in _FIXO if x in tudo or any(x in u for u in unids)]
         if any(set(u.split()) & _MES for u in unids):
             ts.append("itens cobrados por mês")
+        ts += [f"objeto: {x.strip()}" for x in _MENSAL_TEXTO if x in n][:2]
+        ts += [f"documento: {x}" for x in _FIXO if docs and x in docs][:1]
         if ts:
             achados["remun_fixo_mensal"] = ts
     return [{"codigo": c, "nome": REMUNERACAO[c], "segmento": "ti", "termos": ts, "forca": 1.0} for c, ts in achados.items()]

@@ -19,6 +19,7 @@ import gzip
 import json
 import logging
 import os
+import re
 import time
 from datetime import datetime
 from pathlib import Path
@@ -34,7 +35,7 @@ from .conectores.base import FalhaTemporaria
 from .extracao import extrair
 from .taxonomia import natureza
 from .modelos import Documento, Fonte, Item, Licitacao, Municipio, Sincronizacao, agora
-from .util import para_data, slug
+from .util import normalizar, para_data, slug
 
 log = logging.getLogger("licitacoes.coletor")
 
@@ -89,7 +90,7 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
         _passo("conferencia_individual", lambda: coleta.conferir_individual(s, limite=150), resumo)
     dj = Disjuntor()
     _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.68), disjuntor=dj), resumo)
-    _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(0.85), disjuntor=dj), resumo)
+    _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(0.93), disjuntor=dj), resumo)
     if not rapido:
         _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=15, ate=prazo(1.0))), resumo)
         if config().transparencia_chave:
@@ -109,6 +110,17 @@ def relevantes(s: Session, limite: int) -> list[Licitacao]:
 
 
 SEGMENTOS_LISTADOS = {"gestao_documental", "ti", "educacao_pesquisa"}
+
+
+_INDICIO = re.compile(r"\bust\b|servico tecnico|pontos? de funcao|mensal|mensalidade|digitaliz|escane|indexa|microfilm|"
+                     r"gestao documental|gestao eletronica de documentos|fabrica de software|sustentacao")
+_CATS_INDICIO = {"remun_ust", "remun_pf", "remun_fixo_mensal", "digitalizacao", "indexacao", "fabrica_software", "ged"}
+
+
+def _indicio(lic: Licitacao) -> int:
+    if any(c["codigo"] in _CATS_INDICIO for c in lic.categorias or []):
+        return 2
+    return 1 if _INDICIO.search(normalizar(f"{lic.objeto} {lic.informacao_complementar or ''}")) else 0
 
 
 class Disjuntor:
@@ -143,8 +155,9 @@ def listar_segmento(s: Session, limite: int, ate: float | None = None, disjuntor
     # compra de material (computadores, livros...) não interessa: o foco são serviços medidos em volume
     alvo = [x for x in abertas if any(c["segmento"] in SEGMENTOS_LISTADOS for c in x.categorias or [])
             and natureza(x.objeto) != "material"]
-    alvo.sort(key=lambda x: (-(x.aderencia or 0), -float(x.valor_estimado or 0)))
-    res = {"alvo": len(alvo), "detalhados": 0, "itens": 0, "documentos": 0, "falhas": 0}
+    # primeiro quem tem indício de UST, ponto de função, cobrança mensal, digitalização ou indexação
+    alvo.sort(key=lambda x: (-_indicio(x), -(x.aderencia or 0), -float(x.valor_estimado or 0)))
+    res = {"alvo": len(alvo), "com_indicio": sum(1 for x in alvo if _indicio(x)), "detalhados": 0, "itens": 0, "documentos": 0, "falhas": 0}
     dj = disjuntor or Disjuntor()
     dj.nova_chance()
     for lic in alvo[:limite]:
