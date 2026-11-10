@@ -25,6 +25,8 @@ def app_cliente(tmp_path, monkeypatch):
         e = create_engine(pg)
         Base.metadata.drop_all(e)
         e.dispose()
+    monkeypatch.setenv("SD_ANEXOS_DIR", str(tmp_path / "anexos"))
+    monkeypatch.setenv("SD_ANEXO_MAX_MB", "1")
     monkeypatch.setenv("SD_PBKDF2_ITERACOES", "1000")  # rápido nos testes; produção usa 600 mil
     cfg_mod.config.cache_clear()
     banco.reiniciar()

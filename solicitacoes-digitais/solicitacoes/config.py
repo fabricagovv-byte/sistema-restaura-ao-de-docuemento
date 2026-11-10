@@ -16,6 +16,10 @@ class Config:
     segredo: str
     token_minutos: int
     pbkdf2_iteracoes: int
+    anexos_dir: str
+    anexo_max_bytes: int
+    anexos_por_solicitacao: int
+    url_publica: str
 
     @property
     def producao(self) -> bool:
@@ -35,4 +39,8 @@ def config() -> Config:
         segredo=segredo or SEGREDO_DESENVOLVIMENTO,
         token_minutos=int(os.environ.get("SD_TOKEN_MINUTOS", "60")),
         pbkdf2_iteracoes=int(os.environ.get("SD_PBKDF2_ITERACOES", "600000")),
+        anexos_dir=os.environ.get("SD_ANEXOS_DIR", "./anexos"),
+        anexo_max_bytes=int(float(os.environ.get("SD_ANEXO_MAX_MB", "10")) * 1024 * 1024),
+        anexos_por_solicitacao=int(os.environ.get("SD_ANEXOS_POR_SOLICITACAO", "20")),
+        url_publica=os.environ.get("SD_URL_PUBLICA", "http://127.0.0.1:8000"),
     )

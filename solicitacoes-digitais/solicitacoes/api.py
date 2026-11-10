@@ -147,7 +147,7 @@ def login(dados: Login, s: Db) -> TokenSaida:
                             depois={"email": dados.email.lower()}, resultado="recusado")
         s.commit()
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "e-mail ou senha incorretos")
-    token, exp = seguranca.emitir_token(u.id, u.perfil)
+    token, exp = seguranca.emitir_token(u.id, u.perfil, u.sessao_versao or 0)
     auditoria.registrar(s, acao="login", recurso="sessao", recurso_id=u.id, ator_id=u.id)
     return TokenSaida(token=token, expira_em=exp)
 
@@ -220,3 +220,9 @@ def listar_auditoria(s: Db, _: Annotated[Usuario, Depends(exige("auditoria:ver")
 from .rotas_solicitacoes import router as _rotas_solicitacoes  # noqa: E402
 
 app.include_router(_rotas_solicitacoes)
+
+from .rotas_anexos import router as _rotas_anexos  # noqa: E402
+from .rotas_conta import router as _rotas_conta  # noqa: E402
+
+app.include_router(_rotas_anexos)
+app.include_router(_rotas_conta)

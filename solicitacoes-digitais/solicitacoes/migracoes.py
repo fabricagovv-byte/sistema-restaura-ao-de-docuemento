@@ -7,11 +7,12 @@ from __future__ import annotations
 
 from collections.abc import Callable
 
-from sqlalchemy import inspect, select
+from sqlalchemy import inspect, select, text
 from sqlalchemy.engine import Connection
 
 from .banco import engine, sessao
-from .modelos import Base, Categoria, EventoAuditoria, HistoricoSolicitacao, Solicitacao, TokenRevogado, Usuario, VersaoEsquema
+from .modelos import (Anexo, Base, Categoria, EventoAuditoria, HistoricoSolicitacao, MensagemSaida, Solicitacao, TokenRecuperacao,
+                      TokenRevogado, Usuario, VersaoEsquema)
 
 
 def _v1(conn: Connection) -> None:
@@ -26,9 +27,19 @@ def _v2(conn: Connection) -> None:
         tabela.create(conn, checkfirst=True)
 
 
+def _v3(conn: Connection) -> None:
+    """Anexos, recuperação de conta, caixa de saída de mensagens e versão de sessão do usuário."""
+    for tabela in (Anexo.__table__, TokenRecuperacao.__table__, MensagemSaida.__table__):
+        tabela.create(conn, checkfirst=True)
+    colunas = {c["name"] for c in inspect(conn).get_columns("usuario")}
+    if "sessao_versao" not in colunas:  # bancos criados antes desta versão
+        conn.execute(text("ALTER TABLE usuario ADD COLUMN sessao_versao INTEGER NOT NULL DEFAULT 0"))
+
+
 MIGRACOES: list[tuple[int, str, Callable[[Connection], None]]] = [
     (1, "esquema inicial: usuários, tokens revogados, solicitações e auditoria", _v1),
     (2, "categorias com prazo e histórico de tramitação", _v2),
+    (3, "anexos, recuperação de conta, caixa de saída e versão de sessão", _v3),
 ]
 
 

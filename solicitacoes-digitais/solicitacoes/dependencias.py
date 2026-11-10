@@ -41,7 +41,7 @@ def usuario_atual(s: Db, cred: Annotated[HTTPAuthorizationCredentials | None, De
     if s.get(TokenRevogado, dados["jti"]):
         raise NAO_AUTENTICADO
     u = s.get(Usuario, int(dados["sub"]))
-    if u is None or not u.ativo:
+    if u is None or not u.ativo or dados.get("sv", 0) != (u.sessao_versao or 0):  # senha redefinida depois do login
         raise NAO_AUTENTICADO
     u.__dict__["_token"] = dados
     return u

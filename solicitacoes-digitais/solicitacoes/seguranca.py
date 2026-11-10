@@ -65,9 +65,9 @@ def senha_aceitavel(senha: str) -> str | None:
     return None
 
 
-def emitir_token(usuario_id: int, perfil: str) -> tuple[str, datetime]:
+def emitir_token(usuario_id: int, perfil: str, sessao_versao: int = 0) -> tuple[str, datetime]:
     exp = datetime.now(timezone.utc) + timedelta(minutes=config().token_minutos)
-    corpo = {"sub": str(usuario_id), "perfil": perfil, "jti": uuid.uuid4().hex,
+    corpo = {"sub": str(usuario_id), "perfil": perfil, "jti": uuid.uuid4().hex, "sv": sessao_versao,
              "iat": datetime.now(timezone.utc), "exp": exp}
     return jwt.encode(corpo, config().segredo, algorithm="HS256"), exp
 

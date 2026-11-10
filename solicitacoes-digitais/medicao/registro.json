@@ -182,6 +182,17 @@
       "base_declarada": 14,
       "ajustada_declarada": 28,
       "observacao": "Processo modelado a partir do código; 3 UST base ficam para a validação dos prazos e da pausa do prazo na entrevista."
+    },
+    "D3-A": {
+      "dia": 3,
+      "item": "M-02",
+      "entrega": "Anexos com verificação de tipo e tamanho, recuperação de conta, log estruturado com correlação",
+      "base_planejada": 20,
+      "ajustada_planejada": 60,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-10T08:42:45-03:00",
+      "situacao": "EM_EXECUCAO",
+      "horas_humanas_comprovadas": 0
     }
   }
 }

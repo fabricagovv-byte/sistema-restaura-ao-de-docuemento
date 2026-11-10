@@ -24,6 +24,8 @@ class Usuario(Base):
     perfil: Mapped[str] = mapped_column(String(20), index=True)  # administrador, gestor, operador, solicitante
     senha_hash: Mapped[str] = mapped_column(String(200))
     ativo: Mapped[bool] = mapped_column(Boolean, default=True)
+    # sobe ao redefinir a senha: invalida todas as sessões abertas antes
+    sessao_versao: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     criado_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=agora)
     atualizado_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=agora, onupdate=agora)
 
@@ -97,3 +99,41 @@ class HistoricoSolicitacao(Base):
     de_status: Mapped[str | None] = mapped_column(String(30), nullable=True)
     para_status: Mapped[str | None] = mapped_column(String(30), nullable=True)
     comentario: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+
+class Anexo(Base):
+    __tablename__ = "anexo"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    solicitacao_id: Mapped[int] = mapped_column(ForeignKey("solicitacao.id", ondelete="CASCADE"), index=True)
+    nome: Mapped[str] = mapped_column(String(200))
+    tipo: Mapped[str] = mapped_column(String(100))
+    tamanho: Mapped[int] = mapped_column(Integer)
+    sha256: Mapped[str] = mapped_column(String(64))
+    caminho: Mapped[str] = mapped_column(String(300))
+    enviado_por: Mapped[int] = mapped_column(ForeignKey("usuario.id"))
+    em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=agora)
+    removido: Mapped[bool] = mapped_column(Boolean, default=False)
+
+
+class TokenRecuperacao(Base):
+    """Guarda só o hash do token enviado por e-mail."""
+
+    __tablename__ = "token_recuperacao"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    usuario_id: Mapped[int] = mapped_column(ForeignKey("usuario.id", ondelete="CASCADE"), index=True)
+    hash: Mapped[str] = mapped_column(String(64), unique=True)
+    criado_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=agora)
+    expira_em: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    usado_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+
+class MensagemSaida(Base):
+    """Caixa de saída: mensagens a enviar (e-mail). O envio por SMTP é a integração do dia 8."""
+
+    __tablename__ = "mensagem_saida"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    para: Mapped[str] = mapped_column(String(254), index=True)
+    assunto: Mapped[str] = mapped_column(String(200))
+    corpo: Mapped[str] = mapped_column(Text)
+    criado_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=agora)
+    enviado_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
