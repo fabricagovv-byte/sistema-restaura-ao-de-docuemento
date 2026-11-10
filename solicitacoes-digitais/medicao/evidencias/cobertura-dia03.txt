@@ -1,0 +1,24 @@
+# Cobertura de testes do backend — dia 3 — 2026-11-10T08:47:42-03:00
+Ferramenta: coverage.py 7.17.2, linhas e desvios (--branch), pacote solicitacoes/.
+Antes dos testes do dia 3: 90% (medido no início da entrega D3-B).
+
+Name                                 Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------------------
+solicitacoes/__init__.py                 1      0      0      0   100%
+solicitacoes/__main__.py                42      4     12      2    85%   44-47, 52
+solicitacoes/api.py                    160      0     24      0   100%
+solicitacoes/auditoria.py               15      0      2      0   100%
+solicitacoes/banco.py                   38      0      6      1    98%   24->28
+solicitacoes/config.py                  27      0      4      0   100%
+solicitacoes/dependencias.py            42      0      8      0   100%
+solicitacoes/fluxo.py                   54      0     26      0   100%
+solicitacoes/migracoes.py               41      1     14      1    96%   67
+solicitacoes/modelos.py                102      0      0      0   100%
+solicitacoes/rotas_anexos.py           116      1     36      1    99%   63
+solicitacoes/rotas_conta.py             66      1     12      1    97%   83
+solicitacoes/rotas_solicitacoes.py     264      2     66      1    99%   260, 315
+solicitacoes/seguranca.py               45      0      8      1    98%   54->56
+--------------------------------------------------------------------------------
+TOTAL                                 1013      9    218      8    98%
+
+Linhas sem teste: subida do servidor web (uvicorn) na linha de comando e ramos defensivos (arquivo removido do disco antes de baixar, token sem usuário).

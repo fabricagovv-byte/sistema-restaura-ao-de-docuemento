@@ -191,6 +191,67 @@
       "ajustada_planejada": 60,
       "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
       "inicio": "2026-11-10T08:42:45-03:00",
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-10T08:45:47-03:00",
+      "evidencias": [
+        {
+          "arquivo": "solicitacoes/rotas_anexos.py",
+          "sha256": "f75b29c5671f9205a4802e15520b7a0c6ccbad6e100105a17b92ffcc9cc04e71",
+          "bytes": 6532
+        },
+        {
+          "arquivo": "solicitacoes/rotas_conta.py",
+          "sha256": "58111bd087c3d5b606f22cd3a1eafe51a05479d2135bdf922a41bc20450c4d66",
+          "bytes": 4217
+        },
+        {
+          "arquivo": "solicitacoes/migracoes.py",
+          "sha256": "598686b9448ba6f424037757c093d00f7b48c25f7ed63ab58bcef35c85853715",
+          "bytes": 2931
+        },
+        {
+          "arquivo": "solicitacoes/modelos.py",
+          "sha256": "9ab31d538e2637735180be101bc7f280c49e142d62f0e7bb23e4dd4b67beda23",
+          "bytes": 6920
+        },
+        {
+          "arquivo": "tests/test_anexos.py",
+          "sha256": "2fef2c9ae7f0f6a590645ec5887f70db0c6ea1e094421ef1c42121b782798559",
+          "bytes": 5044
+        },
+        {
+          "arquivo": "tests/test_recuperacao.py",
+          "sha256": "017d0d16d5f308a3921dd2a7e11c10f6b69f8acc75e0f21393ed32284a6eccee",
+          "bytes": 3155
+        },
+        {
+          "arquivo": "tests/test_migracoes.py",
+          "sha256": "87ccfb12bce282168dbed88f09f6ede1cd34c5ce5389d4a1a2722e1ee2d75b47",
+          "bytes": 2357
+        }
+      ],
+      "commit_base": "0010bb9f01a745837d27e3f2a9328d0b8c930924",
+      "base_declarada": 20,
+      "ajustada_declarada": 60,
+      "observacao": "O log estruturado com correlação, previsto nesta entrega, foi entregue no dia 1 sem contagem e é contado aqui conforme o plano. O envio real do e-mail de recuperação depende da integração SMTP (dia 8); até lá a mensagem fica na caixa de saída.",
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia03.txt",
+        "sha256": "4c660d399163c2635453f7092e84605410a443681e0fdd430c46c8f4177a8b6b",
+        "em": "2026-11-10T08:45:47-03:00"
+      },
+      "ajustada_verificada": 60,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
+    },
+    "D3-B": {
+      "dia": 3,
+      "item": "M-04",
+      "entrega": "Testes unitários e de integração do backend com relatório de cobertura",
+      "base_planejada": 20,
+      "ajustada_planejada": 40,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-10T08:45:47-03:00",
       "situacao": "EM_EXECUCAO",
       "horas_humanas_comprovadas": 0
     }
