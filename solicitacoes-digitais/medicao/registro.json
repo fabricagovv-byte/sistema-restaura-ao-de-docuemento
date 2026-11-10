@@ -238,8 +238,8 @@
       "verificacao": {
         "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
         "log": "medicao/evidencias/testes-dia03.txt",
-        "sha256": "4c660d399163c2635453f7092e84605410a443681e0fdd430c46c8f4177a8b6b",
-        "em": "2026-11-10T08:45:47-03:00"
+        "sha256": "a873aa13a05384e8ceeee7a96130b6508e089389e61484ae67a37e55b53c5fe6",
+        "em": "2026-11-10T08:47:57-03:00"
       },
       "ajustada_verificada": 60,
       "revisor_independente": "PENDENTE — indicar pessoa da contratante"
@@ -252,8 +252,48 @@
       "ajustada_planejada": 40,
       "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
       "inicio": "2026-11-10T08:45:47-03:00",
-      "situacao": "EM_EXECUCAO",
-      "horas_humanas_comprovadas": 0
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-10T08:48:11-03:00",
+      "evidencias": [
+        {
+          "arquivo": "tests/test_cobertura_regras.py",
+          "sha256": "695a01a502f27b215a19b1c3687268222b6fe6aa5382854472cff75ec6ba7ccc",
+          "bytes": 7549
+        },
+        {
+          "arquivo": "tests/test_anexos.py",
+          "sha256": "2fef2c9ae7f0f6a590645ec5887f70db0c6ea1e094421ef1c42121b782798559",
+          "bytes": 5044
+        },
+        {
+          "arquivo": "tests/test_recuperacao.py",
+          "sha256": "017d0d16d5f308a3921dd2a7e11c10f6b69f8acc75e0f21393ed32284a6eccee",
+          "bytes": 3155
+        },
+        {
+          "arquivo": "medicao/evidencias/cobertura-dia03.txt",
+          "sha256": "1c7ea36658c7d2d12f89c082e384a74001a4f1ce44f7d8b19003295aac1d41f2",
+          "bytes": 2040
+        },
+        {
+          "arquivo": "medicao/evidencias/testes-dia03.txt",
+          "sha256": "a873aa13a05384e8ceeee7a96130b6508e089389e61484ae67a37e55b53c5fe6",
+          "bytes": 6402
+        }
+      ],
+      "commit_base": "2b4717008a2585cd0d04d65fff7582886ff92c58",
+      "base_declarada": 20,
+      "ajustada_declarada": 40,
+      "observacao": "Cobertura de linhas e desvios do backend de 90% para 98% (64 testes).",
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia03.txt",
+        "sha256": "a873aa13a05384e8ceeee7a96130b6508e089389e61484ae67a37e55b53c5fe6",
+        "em": "2026-11-10T08:48:11-03:00"
+      },
+      "ajustada_verificada": 40,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
     }
   }
 }

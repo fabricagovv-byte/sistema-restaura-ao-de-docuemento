@@ -21,4 +21,4 @@ solicitacoes/seguranca.py               45      0      8      1    98%   54->56
 --------------------------------------------------------------------------------
 TOTAL                                 1013      9    218      8    98%
 
-Linhas sem teste: subida do servidor web (uvicorn) na linha de comando e ramos defensivos (arquivo removido do disco antes de baixar, token sem usuário).
+Linhas sem teste: subida do servidor web pela linha de comando (__main__.py 44-47, 52); versão de esquema sem tabela (migracoes.py 67); arquivo enviado sem extensão compatível (rotas_anexos.py 63); redefinição de senha de usuário desativado (rotas_conta.py 83); resposta da edição de solicitação após a conferência (rotas_solicitacoes.py 260) e operador assumindo solicitação que já tem outro responsável (rotas_solicitacoes.py 315).

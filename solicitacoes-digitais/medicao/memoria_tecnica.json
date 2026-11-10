@@ -68,5 +68,37 @@
         "PROCESSO_TRAMITACAO.md"
       ]
     ]
+  },
+  "3": {
+    "camadas": [
+      [
+        "Arquitetura e regras de negócio",
+        "Anexos: aceitos PDF, PNG, JPEG e DOCX com tipo verificado pelo conteúdo; até 10 MB e 20 por solicitação (configuráveis); anexa quem pode atuar na solicitação em andamento (dono, responsável, gestor); remove quem enviou ou o gestor. Recuperação de conta: resposta igual para e-mail cadastrado ou não, link de uso único válido por 30 minutos, até 3 pedidos por hora; a troca de senha encerra todas as sessões abertas."
+      ],
+      [
+        "Banco de dados",
+        "Migração v3 idempotente: tabelas anexo, token_recuperacao (só o hash do token) e mensagem_saida (caixa de saída de e-mails); coluna usuario.sessao_versao adicionada também em bancos criados antes dela (teste de atualização a partir da v2)."
+      ],
+      [
+        "Backend",
+        "Rotas /api/v1/solicitacoes/{id}/anexos (enviar, listar, baixar com SHA-256 conferido e nosniff, remover) e /api/v1/auth/recuperar e /redefinir. Nome do arquivo saneado e gravado no disco com nome aleatório. Token de sessão leva a versão de sessão do usuário. Cobertura de testes do backend: 90% para 98% (linhas e desvios), 64 testes em SQLite e PostgreSQL."
+      ],
+      [
+        "Frontend",
+        "Não previsto para o dia 3 (dias 5 a 7 do plano)."
+      ],
+      [
+        "Integração e infraestrutura",
+        "Novas configurações SD_ANEXOS_DIR, SD_ANEXO_MAX_MB, SD_ANEXOS_POR_SOLICITACAO e SD_URL_PUBLICA. O envio do e-mail de recuperação fica na caixa de saída até a integração SMTP do dia 8. Log estruturado com correlação (entregue no dia 1) contado nesta entrega, conforme o plano."
+      ]
+    ],
+    "mudancas": [
+      [
+        "Envio real do e-mail de recuperação adiado para o dia 8",
+        "Depende da integração SMTP prevista no plano; até lá a mensagem é gravada na caixa de saída",
+        "Plano da OS",
+        "rotas_conta.py"
+      ]
+    ]
   }
 }

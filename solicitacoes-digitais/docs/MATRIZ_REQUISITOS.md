@@ -49,8 +49,8 @@ O desenvolvimento usa apenas dados fictícios gerados pelos testes.
 
 | ID | OS | Artefato | Teste | Status |
 |---|---|---|---|---|
-| REQ-001 | OS-001 | `solicitacoes/seguranca.py`, `solicitacoes/dependencias.py` | `tests/test_autenticacao.py`, `tests/test_permissoes.py` | Implementado, recuperação de conta no dia 3 |
-| REQ-002 | OS-001 | `solicitacoes/rotas_solicitacoes.py`, `solicitacoes/modelos.py` | `tests/test_solicitacoes.py`, `tests/test_categorias.py` | Implementado, anexos no dia 3 |
+| REQ-001 | OS-001 | `solicitacoes/seguranca.py`, `solicitacoes/dependencias.py` | `tests/test_autenticacao.py`, `tests/test_permissoes.py` | Implementado (inclui recuperação de conta: `solicitacoes/rotas_conta.py`, `tests/test_recuperacao.py`) |
+| REQ-002 | OS-001 | `solicitacoes/rotas_solicitacoes.py`, `solicitacoes/modelos.py` | `tests/test_solicitacoes.py`, `tests/test_categorias.py` | Implementado (inclui anexos: `solicitacoes/rotas_anexos.py`, `tests/test_anexos.py`) |
 | REQ-003 | OS-001 | `solicitacoes/fluxo.py`, `docs/PROCESSO_TRAMITACAO.md` | `tests/test_fluxo.py` | Implementado |
 | REQ-004 | OS-001 | painel e exportação (dia 4) | `tests/test_painel.py` (dia 4) | Planejado |
 | REQ-005 | OS-001 | `solicitacoes/auditoria.py`, histórico de tramitação | `tests/test_auditoria.py`, `tests/test_fluxo.py` | Implementado |
