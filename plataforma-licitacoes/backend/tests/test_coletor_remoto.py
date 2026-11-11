@@ -77,3 +77,59 @@ def test_disjuntor_para_com_fonte_fora_do_ar():
     assert not dj.falhou(fora) and dj.falhou(fora)  # duas tentativas e para de novo
     dj.sucesso()
     assert not dj.falhou(ValueError("dado ruim")) and dj.seguidas == 0  # erro de dado não conta
+
+
+def test_coleta_aproveita_pacote_anterior_e_detalha_so_os_novos(banco, tmp_path, monkeypatch):
+    """Cada execução no GitHub Actions começa com banco vazio. Com o pacote anterior, os editais abertos já
+    detalhados vêm prontos e o tempo vai para os que faltam; encerrados não são trazidos de volta."""
+    from datetime import timedelta
+
+    from licitacoes import coletor_remoto
+    from licitacoes.coletor_remoto import importar_detalhes, listar_segmento
+
+    s = banco
+    pncp = catalogo.fonte(s, "pncp")
+    _, velho = coleta.gravar(s, _registro(), pncp)
+    _, fechado = coleta.gravar(s, _registro(chave="pncp:12345678000190-1-000002/2026", numero_controle_pncp="12345678000190-1-000002/2026",
+                                            sequencial=2, data_encerramento=agora() + timedelta(days=5)), pncp)
+    for lic in (velho, fechado):
+        s.add(Item(licitacao_id=lic.id, numero=1, descricao="Digitalização de páginas", quantidade=500_000, unidade="página",
+                   valor_unitario=0.4, valor_total=200_000))
+    s.commit()
+    anterior = tmp_path / "anterior"
+    exportar(s, anterior, {"execucao": "1", "passos": {}})
+
+    # execução seguinte: banco novo; o segundo edital encerrou e um terceiro apareceu
+    monkeypatch.setenv("LIC_DATABASE_URL", f"sqlite:///{tmp_path / 'nova.db'}")
+    monkeypatch.setenv("LIC_ARMAZENAMENTO_DIR", str(tmp_path / "arq2"))
+    config.cache_clear()
+    db.reiniciar_engine()
+    reiniciar()
+    db.iniciar_banco()
+    s2 = db.nova_sessao()
+    pncp2 = catalogo.fonte(s2, "pncp")
+    coleta.gravar(s2, _registro(), pncp2)
+    coleta.gravar(s2, _registro(chave="pncp:12345678000190-1-000002/2026", numero_controle_pncp="12345678000190-1-000002/2026",
+                                sequencial=2, data_encerramento=agora() - timedelta(days=1)), pncp2)
+    _, novo = coleta.gravar(s2, _registro(chave="pncp:12345678000190-1-000003/2026", numero_controle_pncp="12345678000190-1-000003/2026",
+                                          sequencial=3, numero_compra="31/2026", valor_estimado=2_300_000.0,
+                                          objeto="Digitalização e indexação de prontuários do arquivo da saúde"), pncp2)
+    s2.commit()
+    r = importar_detalhes(s2, anterior, so_abertas=True)
+    assert r["editais"] == 1  # o encerrado ficou de fora
+    assert s2.query(Licitacao).filter_by(sequencial=1).one().itens[0].quantidade == 500_000
+    assert s2.query(Licitacao).filter_by(sequencial=2).one().itens == []
+
+    detalhados = []
+    monkeypatch.setattr(coletor_remoto.coleta, "detalhar", lambda sess, lic, **k: detalhados.append(lic.chave) or {"itens": 0, "documentos": 0})
+    res = listar_segmento(s2, 10)
+    assert detalhados == [novo.chave]  # só o que faltava
+    assert res["ja_detalhados"] == 1 and res["detalhados"] == 1
+    # o pacote novo sai acumulado: o detalhe aproveitado continua lá
+    pacote = tmp_path / "novo"
+    exportar(s2, pacote, {"execucao": "2", "passos": {}})
+    import gzip
+    import json
+    chaves = {json.loads(x)["chave"] for x in gzip.open(pacote / "detalhes.jsonl.gz", "rt", encoding="utf-8")}
+    assert velho.chave in chaves
+    s2.close()

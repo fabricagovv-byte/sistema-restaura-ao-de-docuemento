@@ -68,9 +68,12 @@ def _sync(r) -> dict:
 
 
 def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 1200, rapido: bool = False,
-            minutos: float | None = None) -> dict:
+            minutos: float | None = None, anterior: str | Path | None = None) -> dict:
     """`minutos`: orçamento total. Cada etapa longa para no seu prazo e o pacote sai com o que foi coletado,
-    em vez de a execução estourar o tempo do runner e não publicar nada."""
+    em vez de a execução estourar o tempo do runner e não publicar nada.
+
+    `anterior`: pacote publicado pela execução anterior. Os itens e documentos dos editais que continuam abertos são
+    aproveitados, e o tempo de detalhamento vai para editais ainda não detalhados; o pacote novo sai acumulado."""
     t0 = time.monotonic()
     prazo = (lambda frac: t0 + minutos * 60 * frac) if minutos else (lambda frac: None)  # noqa: E731
     resumo = {"inicio": agora().isoformat(), "execucao": os.environ.get("GITHUB_RUN_ID"), "passos": {},
@@ -88,6 +91,8 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
             s, modo="diario", dias=30, modalidades=[6, 4, 7, 5], so_publicacao=True, ate=prazo(0.6))), resumo)
         _passo("comprasgov", lambda: _sync(coleta.sincronizar_comprasgov(s, dias=7)), resumo)
         _passo("conferencia_individual", lambda: coleta.conferir_individual(s, limite=150), resumo)
+    if anterior and Path(anterior, "detalhes.jsonl.gz").exists():
+        _passo("pacote_anterior", lambda: importar_detalhes(s, anterior, so_abertas=True), resumo)
     dj = Disjuntor()
     _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.68), disjuntor=dj), resumo)
     _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(0.93), disjuntor=dj), resumo)
@@ -157,15 +162,16 @@ def listar_segmento(s: Session, limite: int, ate: float | None = None, disjuntor
             and natureza(x.objeto) != "material"]
     # primeiro quem tem indício de UST, ponto de função, cobrança mensal, digitalização ou indexação
     alvo.sort(key=lambda x: (-_indicio(x), -(x.aderencia or 0), -float(x.valor_estimado or 0)))
-    res = {"alvo": len(alvo), "com_indicio": sum(1 for x in alvo if _indicio(x)), "detalhados": 0, "itens": 0, "documentos": 0, "falhas": 0}
+    res = {"alvo": len(alvo), "com_indicio": sum(1 for x in alvo if _indicio(x)), "ja_detalhados": 0, "detalhados": 0,
+           "itens": 0, "documentos": 0, "falhas": 0}
     dj = disjuntor or Disjuntor()
     dj.nova_chance()
     for lic in alvo[:limite]:
         if ate is not None and time.monotonic() > ate:
             res["interrompido_por_tempo"] = True
             break
-        if lic.itens or lic.documentos:  # já detalhado nesta execução (documentos relevantes)
-            res["detalhados"] += 1
+        if lic.itens or lic.documentos:  # já detalhado (documentos relevantes ou pacote anterior)
+            res["ja_detalhados"] += 1
             continue
         try:
             d = coleta.detalhar(s, lic)
@@ -283,40 +289,8 @@ def importar(s: Session, pasta: str | Path) -> dict:
             if i % 1000 == 0:
                 s.commit()
     s.commit()
-    if (p / "detalhes.jsonl.gz").exists():
-        with gzip.open(p / "detalhes.jsonl.gz", "rt", encoding="utf-8") as f:
-            for linha in f:
-                d = json.loads(linha)
-                lic = s.query(Licitacao).filter_by(chave=d["chave"]).one_or_none()
-                if lic is None:
-                    continue
-                atuais = {i.numero: i for i in lic.itens}
-                for it in d["itens"]:
-                    obj = atuais.get(it["numero"]) or Item(licitacao_id=lic.id, numero=it["numero"], descricao="")
-                    for k, v in it.items():
-                        setattr(obj, k, v)
-                    if obj.id is None:
-                        s.add(obj)
-                docs = {(x.sequencial, x.titulo): x for x in lic.documentos}
-                for dd in d["documentos"]:
-                    doc = docs.get((dd["sequencial"], dd["titulo"])) or Documento(licitacao_id=lic.id, sequencial=dd["sequencial"],
-                                                                                  titulo=dd["titulo"], tipo=dd["tipo"])
-                    for k in ("tipo_fonte", "tipo", "url", "ativo", "status", "tamanho", "sha256", "mime", "erro"):
-                        setattr(doc, k, dd.get(k))
-                    doc.publicado_em = para_data(dd.get("publicado_em"))
-                    if dd.get("texto") and (p / "textos" / dd["texto"]).exists():
-                        chave = f"documentos/{slug(lic.chave, 120)}/{dd['texto'].rsplit('-', 1)[-1].replace('.json', '')}.paginas.json"
-                        armazenamento().salvar(chave, (p / "textos" / dd["texto"]).read_bytes(), "application/json")
-                        doc.caminho = chave
-                        doc.paginas = dd.get("paginas")
-                        res["textos"] += 1
-                    if doc.id is None:
-                        s.add(doc)
-                    res["documentos"] += 1
-                s.flush()
-                coleta.classificar_licitacao(s, lic)
-                lic.aderencia = coleta.calcular_aderencia(lic)
-                s.commit()
+    det = importar_detalhes(s, p)
+    res["documentos"], res["textos"] = det["documentos"], det["textos"]
     for e in json.loads((p / "execucoes.json").read_text(encoding="utf-8")):
         fonte = catalogo.fonte(s, e["fonte"])
         fim = para_data(e["fim"])
@@ -332,4 +306,53 @@ def importar(s: Session, pasta: str | Path) -> dict:
                 fonte.ultimo_erro = e["mensagem"]
     s.commit()
     res["origem"] = origem
+    return res
+
+
+def importar_detalhes(s: Session, pasta: str | Path, so_abertas: bool = False) -> dict:
+    """Itens, documentos e textos extraídos de um pacote, para editais que já estão no banco.
+
+    `so_abertas`: só editais ainda abertos (usado pelo coletor para aproveitar o pacote anterior e gastar o tempo
+    da execução com editais que ainda não foram detalhados)."""
+    p = Path(pasta)
+    res = {"editais": 0, "documentos": 0, "textos": 0}
+    if not (p / "detalhes.jsonl.gz").exists():
+        return res
+    abertas = {c for (c,) in s.query(Licitacao.chave).filter(coleta.abertas_filtro())} if so_abertas else None
+    with gzip.open(p / "detalhes.jsonl.gz", "rt", encoding="utf-8") as f:
+        for linha in f:
+            d = json.loads(linha)
+            if abertas is not None and d["chave"] not in abertas:
+                continue
+            lic = s.query(Licitacao).filter_by(chave=d["chave"]).one_or_none()
+            if lic is None:
+                continue
+            atuais = {i.numero: i for i in lic.itens}
+            for it in d["itens"]:
+                obj = atuais.get(it["numero"]) or Item(licitacao_id=lic.id, numero=it["numero"], descricao="")
+                for k, v in it.items():
+                    setattr(obj, k, v)
+                if obj.id is None:
+                    s.add(obj)
+            docs = {(x.sequencial, x.titulo): x for x in lic.documentos}
+            for dd in d["documentos"]:
+                doc = docs.get((dd["sequencial"], dd["titulo"])) or Documento(licitacao_id=lic.id, sequencial=dd["sequencial"],
+                                                                              titulo=dd["titulo"], tipo=dd["tipo"])
+                for k in ("tipo_fonte", "tipo", "url", "ativo", "status", "tamanho", "sha256", "mime", "erro"):
+                    setattr(doc, k, dd.get(k))
+                doc.publicado_em = para_data(dd.get("publicado_em"))
+                if dd.get("texto") and (p / "textos" / dd["texto"]).exists():
+                    chave = f"documentos/{slug(lic.chave, 120)}/{dd['texto'].rsplit('-', 1)[-1].replace('.json', '')}.paginas.json"
+                    armazenamento().salvar(chave, (p / "textos" / dd["texto"]).read_bytes(), "application/json")
+                    doc.caminho = chave
+                    doc.paginas = dd.get("paginas")
+                    res["textos"] += 1
+                if doc.id is None:
+                    s.add(doc)
+                res["documentos"] += 1
+            s.flush()
+            coleta.classificar_licitacao(s, lic)
+            lic.aderencia = coleta.calcular_aderencia(lic)
+            s.commit()
+            res["editais"] += 1
     return res

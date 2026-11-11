@@ -71,10 +71,17 @@ jobs:
         run: |
           mkdir -p "$GITHUB_WORKSPACE/pacote"
           pytest tests/test_ao_vivo.py -v -p no:cacheprovider 2>&1 | tee "$GITHUB_WORKSPACE/pacote/testes_ao_vivo.txt"
+      - name: Pacote anterior (itens e documentos já coletados)
+        continue-on-error: true
+        run: |
+          git fetch -q --depth 1 origin dados-licitacoes && git worktree add -q "$RUNNER_TEMP/anterior" FETCH_HEAD \
+            && cat "$RUNNER_TEMP/anterior/resumo.json" | head -c 300 || echo "sem pacote anterior"
       - name: Coleta nacional
         working-directory: plataforma-licitacoes/backend
         run: |
-          python -u -m licitacoes.cli coletar "$GITHUB_WORKSPACE/pacote" --minutos 280 --top "${{ inputs.top || '40' }}" ${{ inputs.rapido && '--rapido' || '' }} 2>&1 | grep --line-buffered -v "HTTP Request"
+          ANTERIOR=""
+          [ -f "$RUNNER_TEMP/anterior/detalhes.jsonl.gz" ] && ANTERIOR="--anterior $RUNNER_TEMP/anterior"
+          python -u -m licitacoes.cli coletar "$GITHUB_WORKSPACE/pacote" --minutos 280 --top "${{ inputs.top || '40' }}" ${{ inputs.rapido && '--rapido' || '' }} $ANTERIOR 2>&1 | grep --line-buffered -v "HTTP Request"
       - name: Publicar no branch dados-licitacoes
         if: always()
         run: |
