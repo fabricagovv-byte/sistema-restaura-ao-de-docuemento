@@ -19,7 +19,7 @@ def test_saude_informa_versao_do_esquema(app_cliente):
 
 
 def test_v3_atualiza_banco_criado_antes_da_coluna_de_sessao(tmp_path, monkeypatch):
-    """Banco na versão 2 (sem usuario.sessao_versao) sobe para a 3 sem perder dados."""
+    """Banco na versão 2 (sem usuario.sessao_versao) sobe para a 4 sem perder dados."""
     from sqlalchemy import create_engine, text
 
     from solicitacoes import banco, config as cfg_mod
@@ -37,7 +37,7 @@ def test_v3_atualiza_banco_criado_antes_da_coluna_de_sessao(tmp_path, monkeypatc
     cfg_mod.config.cache_clear()
     banco.reiniciar()
     try:
-        assert aplicar() == [3] and aplicar() == []
+        assert aplicar() == [3, 4] and aplicar() == []
         cols = {c["name"] for c in inspect(engine()).get_columns("usuario")}
         assert "sessao_versao" in cols and {"anexo", "token_recuperacao", "mensagem_saida"} <= set(inspect(engine()).get_table_names())
         with engine().connect() as conn:

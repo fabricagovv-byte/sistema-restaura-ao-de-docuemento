@@ -45,8 +45,15 @@ async def ciclo(app: FastAPI):
     yield
 
 
+API_PREFIXO = "/api/v1"
+ROTAS_PUBLICAS = {"/api/v1/saude", "/api/v1/auth/login", "/api/v1/auth/recuperar", "/api/v1/auth/redefinir"}
+
 app = FastAPI(title="Solicitações Digitais", version=__version__, lifespan=ciclo,
-              description="API do sistema de solicitações digitais (OS-001/2026). Todas as rotas exigem token, exceto login e saúde.")
+              openapi_url=f"{API_PREFIXO}/openapi.json", docs_url=f"{API_PREFIXO}/docs", redoc_url=None,
+              description="API do sistema de solicitações digitais (OS-001/2026), versão 1 (prefixo /api/v1). "
+                          "Todas as rotas exigem token Bearer, exceto saúde, login e recuperação de conta. "
+                          "Erros seguem o formato {\"detail\": ...}; toda resposta traz X-Correlation-ID. "
+                          "Contrato salvo em docs/api/openapi-v1.json.")
 
 
 @app.middleware("http")
@@ -224,5 +231,8 @@ app.include_router(_rotas_solicitacoes)
 from .rotas_anexos import router as _rotas_anexos  # noqa: E402
 from .rotas_conta import router as _rotas_conta  # noqa: E402
 
+from .rotas_painel import router as _rotas_painel  # noqa: E402
+
 app.include_router(_rotas_anexos)
 app.include_router(_rotas_conta)
+app.include_router(_rotas_painel)

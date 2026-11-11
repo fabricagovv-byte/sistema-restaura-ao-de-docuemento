@@ -7,6 +7,7 @@ from sqlalchemy import text
 
 from solicitacoes import banco, config as cfg_mod, fluxo, seguranca
 from solicitacoes.banco import sessao
+from solicitacoes.migracoes import MIGRACOES
 from solicitacoes.modelos import Categoria, Solicitacao, Usuario
 
 from .apoio import cenario, nova, tramitar
@@ -127,7 +128,7 @@ def test_linha_de_comando_migrar_e_criar_admin(tmp_path, monkeypatch, capsys):
     cfg_mod.config.cache_clear()
     banco.reiniciar()
     try:
-        assert main(["migrar"]) == 0 and "versão: 3" in capsys.readouterr().out
+        assert main(["migrar"]) == 0 and f"versão: {MIGRACOES[-1][0]}" in capsys.readouterr().out
         assert main(["migrar"]) == 0 and "nenhuma" in capsys.readouterr().out
         monkeypatch.setattr("getpass.getpass", lambda prompt="": "fraca")
         assert main(["criar-admin", "chefe@exemplo.gov.br", "Chefe"]) == 2

@@ -47,7 +47,7 @@ class Solicitacao(Base):
     prioridade: Mapped[str] = mapped_column(String(10), default="normal")
     solicitante_id: Mapped[int] = mapped_column(ForeignKey("usuario.id"), index=True)
     responsavel_id: Mapped[int | None] = mapped_column(ForeignKey("usuario.id"), index=True, nullable=True)
-    prazo_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    prazo_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True, index=True)
     arquivada: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
     criado_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=agora, index=True)
     atualizado_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=agora, onupdate=agora)
@@ -97,7 +97,7 @@ class HistoricoSolicitacao(Base):
     ator_id: Mapped[int] = mapped_column(ForeignKey("usuario.id"))
     evento: Mapped[str] = mapped_column(String(30))  # criacao, transicao, atribuicao, edicao, arquivamento
     de_status: Mapped[str | None] = mapped_column(String(30), nullable=True)
-    para_status: Mapped[str | None] = mapped_column(String(30), nullable=True)
+    para_status: Mapped[str | None] = mapped_column(String(30), nullable=True, index=True)
     comentario: Mapped[str | None] = mapped_column(Text, nullable=True)
 
 

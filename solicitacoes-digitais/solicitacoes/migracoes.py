@@ -36,10 +36,20 @@ def _v3(conn: Connection) -> None:
         conn.execute(text("ALTER TABLE usuario ADD COLUMN sessao_versao INTEGER NOT NULL DEFAULT 0"))
 
 
+def _v4(conn: Connection) -> None:
+    """Índices do painel gerencial: prazo das solicitações e estado de destino no histórico."""
+    for nome, tabela, coluna in (("ix_solicitacao_prazo_em", "solicitacao", "prazo_em"),
+                                 ("ix_historico_solicitacao_para_status", "historico_solicitacao", "para_status")):
+        if not inspect(conn).has_table(tabela):  # a tabela nasce já com o índice quando for criada pelo modelo
+            continue
+        conn.execute(text(f"CREATE INDEX IF NOT EXISTS {nome} ON {tabela} ({coluna})"))
+
+
 MIGRACOES: list[tuple[int, str, Callable[[Connection], None]]] = [
     (1, "esquema inicial: usuários, tokens revogados, solicitações e auditoria", _v1),
     (2, "categorias com prazo e histórico de tramitação", _v2),
     (3, "anexos, recuperação de conta, caixa de saída e versão de sessão", _v3),
+    (4, "índices do painel gerencial (prazo e estado de destino)", _v4),
 ]
 
 

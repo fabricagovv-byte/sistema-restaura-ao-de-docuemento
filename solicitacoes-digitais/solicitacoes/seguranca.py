@@ -19,7 +19,7 @@ PERFIS = ("administrador", "gestor", "operador", "solicitante")
 PERMISSOES: dict[str, frozenset[str]] = {
     "administrador": frozenset({"usuarios:gerir", "usuarios:ver", "auditoria:ver", "categorias:gerir"}),
     "gestor": frozenset({"usuarios:ver", "auditoria:ver", "solicitacoes:ver_todas", "solicitacoes:tramitar",
-                         "solicitacoes:atribuir", "solicitacoes:arquivar", "solicitacoes:criar", "painel:ver"}),
+                         "solicitacoes:atribuir", "solicitacoes:arquivar", "solicitacoes:criar", "painel:ver", "painel:exportar"}),
     "operador": frozenset({"solicitacoes:ver_fila", "solicitacoes:tramitar", "solicitacoes:criar"}),
     "solicitante": frozenset({"solicitacoes:criar", "solicitacoes:ver_proprias"}),
 }

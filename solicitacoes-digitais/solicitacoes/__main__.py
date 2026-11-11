@@ -20,6 +20,8 @@ def main(argv=None) -> int:
     sub.add_parser("migrar", help="aplica as migrações pendentes")
     ca = sub.add_parser("criar-admin", help="cria um administrador (senha lida do terminal)")
     ca.add_argument("email"), ca.add_argument("nome")
+    ct = sub.add_parser("contrato", help="grava docs/api/openapi-v1.json a partir do código (ou confere com --verificar)")
+    ct.add_argument("--verificar", action="store_true")
     sv = sub.add_parser("servidor", help="sobe a API")
     sv.add_argument("--porta", type=int, default=8000), sv.add_argument("--host", default="127.0.0.1")
     a = ap.parse_args(argv)
@@ -41,6 +43,10 @@ def main(argv=None) -> int:
             s.flush()
             auditoria.registrar(s, acao="criar", recurso="usuario", recurso_id=u.id, depois={"email": u.email, "perfil": u.perfil, "origem": "linha de comando"})
         print("administrador criado")
+    elif a.cmd == "contrato":
+        from . import contrato
+
+        return contrato.main(verificar=a.verificar)
     elif a.cmd == "servidor":
         import uvicorn
 
