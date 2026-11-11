@@ -1,0 +1,24 @@
+# Cobertura de testes do backend — dia 4 — 2026-11-11T16:42:40-03:00
+Ferramenta: coverage.py 7.17.2, linhas e desvios (--branch), pacote solicitacoes/.
+Commit: a213f3d. Módulos novos do dia: rotas_painel.py e contrato.py.
+
+Name                                 Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------------------
+solicitacoes/__init__.py                 1      0      0      0   100%
+solicitacoes/__main__.py                47      4     14      2    87%   50-53, 58
+solicitacoes/api.py                    164      0     24      0   100%
+solicitacoes/auditoria.py               15      0      2      0   100%
+solicitacoes/banco.py                   38      0      6      1    98%   24->28
+solicitacoes/config.py                  27      0      4      0   100%
+solicitacoes/contrato.py                60      0     24      0   100%
+solicitacoes/dependencias.py            42      0      8      0   100%
+solicitacoes/fluxo.py                   54      0     26      0   100%
+solicitacoes/migracoes.py               46      1     18      1    97%   77
+solicitacoes/modelos.py                102      0      0      0   100%
+solicitacoes/rotas_anexos.py           116      1     36      1    99%   63
+solicitacoes/rotas_conta.py             66      1     12      1    97%   83
+solicitacoes/rotas_painel.py           169      0     36      0   100%
+solicitacoes/rotas_solicitacoes.py     264      2     66      1    99%   260, 315
+solicitacoes/seguranca.py               45      0      8      1    98%   54->56
+--------------------------------------------------------------------------------
+TOTAL                                 1256      9    284      8    99%

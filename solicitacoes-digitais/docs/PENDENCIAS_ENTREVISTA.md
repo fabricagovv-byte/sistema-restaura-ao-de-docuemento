@@ -33,5 +33,11 @@ as premissas abaixo, registradas como tal. Nada aqui foi inventado como fato.
 * Quatro papéis do TR (administrador, operador, gestor, solicitante), com login para todos.
 * Fluxo de estados de `ARQUITETURA.md`.
 * Anexos: PDF, PNG, JPEG e DOCX até 10 MB cada (dia 3).
+* Painel (dia 4): indicadores por status, prioridade, categoria, responsável e prazo, só para o gestor; prazo do atendimento
+  medido até a conclusão ou o indeferimento (cancelamento pelo solicitante fica fora do percentual). Responde em parte a
+  pergunta 6: falta confirmar os indicadores que o gestor já usa e se precisa de outros recortes (unidade, canal).
+* Exportação CSV (dia 4): separador ponto e vírgula, UTF-8 com BOM, até 50 mil linhas, **sem a descrição e sem o nome do
+  solicitante** (só o identificador), por minimização de dados pessoais. Confirmar com o encarregado de dados (pergunta 10)
+  se o gestor pode exportar o nome.
 * Execução em contêiner com PostgreSQL; desenvolvimento e testes com SQLite.
 * Nenhuma integração externa real sem credenciais e autorização formal; testes com servidores locais de homologação.

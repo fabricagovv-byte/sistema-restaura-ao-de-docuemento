@@ -34,7 +34,7 @@ Situação: **proposta técnica**. Papéis, dados e regras precisam ser confirma
 | RNF-02 | Proteção contra injeção, falha de autenticação, exposição de dados e dependências vulneráveis | ORM com parâmetros; senhas com PBKDF2-SHA256 (600 mil iterações) e sal; token assinado com expiração; respostas sem hash de senha; verificação de dependências no CI | Testes de autorização e de entrada maliciosa; `pip-audit` no pipeline (dia 10) |
 | RNF-03 | Log estruturado com correlação | Cabeçalho `X-Correlation-ID` recebido ou gerado, gravado no log e na auditoria | Teste que segue um ID da requisição até o evento |
 | RNF-04 | Backup testado, RTO e RPO formais | Rotina de backup do banco e procedimento de restauração (dia 9) | Restauração cronometrada em ambiente limpo |
-| RNF-05 | Contrato de API versionado | Prefixo `/api/v1`, OpenAPI gerado e publicado com a versão | Teste que compara o contrato salvo com o gerado |
+| RNF-05 | Contrato de API versionado | Prefixo `/api/v1`, OpenAPI gerado e publicado em `/api/v1/openapi.json`, salvo em `docs/api/openapi-v1.json` (dia 4) | `tests/test_contrato.py`: salvo = gerado e detecção de mudança incompatível |
 | RNF-06 | Arquitetura modular, migrações idempotentes, configuração por ambiente | Pacote em módulos; migrações numeradas com controle de versão no banco; variáveis `SD_*` | Teste que aplica migrações duas vezes sem erro |
 | RNF-07 | Testes unitários, de integração e ponta a ponta do fluxo crítico | pytest + cliente HTTP; navegador headless no dia 6 | Log de execução anexado à medição |
 | RNF-08 | Evidência com versão, commit, tempo e status de testes | `medicao/registro.py` grava início/fim reais, hash dos artefatos e commit | Relatório diário em `medicao/relatorios/` |
@@ -52,8 +52,8 @@ O desenvolvimento usa apenas dados fictícios gerados pelos testes.
 | REQ-001 | OS-001 | `solicitacoes/seguranca.py`, `solicitacoes/dependencias.py` | `tests/test_autenticacao.py`, `tests/test_permissoes.py` | Implementado (inclui recuperação de conta: `solicitacoes/rotas_conta.py`, `tests/test_recuperacao.py`) |
 | REQ-002 | OS-001 | `solicitacoes/rotas_solicitacoes.py`, `solicitacoes/modelos.py` | `tests/test_solicitacoes.py`, `tests/test_categorias.py` | Implementado (inclui anexos: `solicitacoes/rotas_anexos.py`, `tests/test_anexos.py`) |
 | REQ-003 | OS-001 | `solicitacoes/fluxo.py`, `docs/PROCESSO_TRAMITACAO.md` | `tests/test_fluxo.py` | Implementado |
-| REQ-004 | OS-001 | painel e exportação (dia 4) | `tests/test_painel.py` (dia 4) | Planejado |
+| REQ-004 | OS-001 | `solicitacoes/rotas_painel.py` | `tests/test_painel.py` (conciliação com a listagem e com o CSV) | Implementado (indicadores definitivos dependem da pergunta 6 da entrevista) |
 | REQ-005 | OS-001 | `solicitacoes/auditoria.py`, histórico de tramitação | `tests/test_auditoria.py`, `tests/test_fluxo.py` | Implementado |
-| REQ-006 | OS-001 | OpenAPI e integrações (dias 4, 8, 9, 10) | testes de contrato e integração | Planejado |
+| REQ-006 | OS-001 | `solicitacoes/contrato.py`, `docs/api/openapi-v1.json` (dia 4); integrações (dias 8 a 10) | `tests/test_contrato.py`; testes de integração (dia 8) | Em execução (contrato versionado pronto; integrações planejadas) |
 | REQ-007 | OS-001 | `solicitacoes/config.py`, `solicitacoes/migracoes.py` (dia 1), CI (dia 8) | `tests/test_migracoes.py` | Em execução |
 | REQ-008 | OS-001 | backup e restauração (dia 9) | restauração cronometrada | Planejado |

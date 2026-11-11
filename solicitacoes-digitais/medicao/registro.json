@@ -294,6 +294,113 @@
       },
       "ajustada_verificada": 40,
       "revisor_independente": "PENDENTE — indicar pessoa da contratante"
+    },
+    "D4-A": {
+      "dia": 4,
+      "item": "M-02",
+      "entrega": "Painel gerencial (filtros, contagens, exportação CSV) e contrato de API versionado e documentado",
+      "base_planejada": 20,
+      "ajustada_planejada": 60,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-11T16:35:07-03:00",
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-11T16:42:48-03:00",
+      "evidencias": [
+        {
+          "arquivo": "solicitacoes/rotas_painel.py",
+          "sha256": "2c93b98db97edccb829260cb0247d91fb4f395644453c4ddf548f2c3a65eae25",
+          "bytes": 12851
+        },
+        {
+          "arquivo": "solicitacoes/contrato.py",
+          "sha256": "d4f59eefba22a2e4043b96c2db216e4025da9aafac6598575b6c9cb03109e45f",
+          "bytes": 3351
+        },
+        {
+          "arquivo": "docs/api/openapi-v1.json",
+          "sha256": "f22de4c66890f73c5aec9437e990bdb487a6b86853764358ac740c942b9d98ce",
+          "bytes": 69003
+        },
+        {
+          "arquivo": "solicitacoes/migracoes.py",
+          "sha256": "31f1eba3d9be38cf06838546fe23806cc90fbaf65c028fb5b0d7830a8fe74b39",
+          "bytes": 3570
+        },
+        {
+          "arquivo": "solicitacoes/seguranca.py",
+          "sha256": "1b1de470046fa197ce88814c94b6ff6a3545948ab832c412b32b7d0dc5f8495c",
+          "bytes": 3141
+        },
+        {
+          "arquivo": "solicitacoes/api.py",
+          "sha256": "2b0d5d95cffb25658e34315ab7d9cc86627cf45752396e939d90ee9270c81e77",
+          "bytes": 9358
+        }
+      ],
+      "commit_base": "a213f3daa2fafcf03530384594a7b83a6ceed507",
+      "base_declarada": 20,
+      "ajustada_declarada": 60,
+      "observacao": "painel com indicadores por status, prioridade, categoria, responsável e prazo; exportação CSV auditada; contrato OpenAPI v1 salvo e verificável; migração v4 (índices)",
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia04.txt",
+        "sha256": "31d22e767080addfcc82944788acd36015c9009102907affea8b4d8391d76995",
+        "em": "2026-11-11T16:42:48-03:00"
+      },
+      "ajustada_verificada": 60,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
+    },
+    "D4-B": {
+      "dia": 4,
+      "item": "M-04",
+      "entrega": "Testes do painel, da exportação e do contrato da API",
+      "base_planejada": 20,
+      "ajustada_planejada": 40,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-11T16:38:05-03:00",
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-11T16:42:48-03:00",
+      "evidencias": [
+        {
+          "arquivo": "tests/test_painel.py",
+          "sha256": "e1f592740f7d243d2dcd887e5f101271eaf7db7abdf6931162a88e3947291274",
+          "bytes": 14119
+        },
+        {
+          "arquivo": "tests/test_contrato.py",
+          "sha256": "8c949c4ae00628cf59395aa6dbfe3f7db4c39e862fdb16c5b34eb9b42982db08",
+          "bytes": 4497
+        },
+        {
+          "arquivo": "tests/test_permissoes.py",
+          "sha256": "ab61daea8057ea9f2b0a67f74f1966ca29a50b34ac3c737bf405432b7338a012",
+          "bytes": 2139
+        },
+        {
+          "arquivo": "medicao/evidencias/testes-dia04.txt",
+          "sha256": "31d22e767080addfcc82944788acd36015c9009102907affea8b4d8391d76995",
+          "bytes": 8461
+        },
+        {
+          "arquivo": "medicao/evidencias/cobertura-dia04.txt",
+          "sha256": "a8cb091a5ffc0c2f5f1e9908709d0eac15554824afd12c86eb68b34830f84e53",
+          "bytes": 1734
+        }
+      ],
+      "commit_base": "a213f3daa2fafcf03530384594a7b83a6ceed507",
+      "base_declarada": 20,
+      "ajustada_declarada": 40,
+      "observacao": "23 testes novos (painel 14, contrato 7, matriz perfil x rota 2); 87 aprovados no SQLite e no PostgreSQL; cobertura 99%",
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia04.txt",
+        "sha256": "31d22e767080addfcc82944788acd36015c9009102907affea8b4d8391d76995",
+        "em": "2026-11-11T16:42:48-03:00"
+      },
+      "ajustada_verificada": 40,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
     }
   }
 }

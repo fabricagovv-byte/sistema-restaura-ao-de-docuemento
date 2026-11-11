@@ -11,6 +11,8 @@ API /api/v1  (FastAPI)  ── log estruturado com X-Correlation-ID
    ├── modelos     usuários, solicitações, histórico, auditoria, anexos
    ├── fluxo       máquina de estados da tramitação (dia 2)
    ├── auditoria   eventos imutáveis com correlação
+   ├── painel      indicadores gerenciais e exportação CSV auditada (dia 4)
+   ├── contrato    OpenAPI v1 salvo em docs/api e verificado nos testes (dia 4)
    └── migracoes   versões numeradas e idempotentes
         │  SQLAlchemy 2
         ▼
@@ -31,6 +33,8 @@ Arquivos anexos: diretório configurável (dia 3), depois armazenamento de objet
 | Auditoria | Tabela só de inclusão; a API não expõe alteração nem exclusão | REQ-005 |
 | Configuração | Variáveis `SD_*` (banco, segredo, expiração, ambiente); segredo obrigatório fora de desenvolvimento | Separação por ambiente (TR seção 4) |
 | Correlação | Middleware lê ou gera `X-Correlation-ID`, devolve na resposta e grava no log e na auditoria | RNF-03 |
+| Contrato da API | OpenAPI gerado do código, salvo em `docs/api/openapi-v1.json` e servido em `/api/v1/openapi.json`; teste compara salvo e gerado e aponta mudança incompatível | RNF-05; clientes sabem quando a API muda |
+| Exportação | CSV com BOM e `;`, células com fórmula neutralizadas, sem dados pessoais além do identificador, cada exportação auditada com SHA-256 | Abre certo no Excel em português; evita injeção em planilha; LGPD |
 | Dados | Só dados fictícios até aprovação formal; nada de CPF real | TR seção 5 e LGPD |
 
 ## Estados da solicitação (detalhados no dia 2)
