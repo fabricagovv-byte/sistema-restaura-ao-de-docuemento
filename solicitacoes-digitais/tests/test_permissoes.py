@@ -10,6 +10,8 @@ CASOS = [
     ("POST", "/api/v1/usuarios", NOVO, {"administrador"}),
     ("GET", "/api/v1/auditoria", None, {"administrador", "gestor"}),
     ("GET", "/api/v1/auth/eu", None, {"administrador", "gestor", "operador", "solicitante"}),
+    ("GET", "/api/v1/painel/indicadores", None, {"gestor"}),
+    ("GET", "/api/v1/painel/exportacao.csv", None, {"gestor"}),
 ]
 
 
