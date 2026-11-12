@@ -169,6 +169,10 @@ ul.check label b { font-weight: 600; }
 .qa { border-top: 1px solid var(--line); padding-top: 8px; margin-top: 8px; } .qa .q { font-weight: 700; margin: 0 0 4px; }
 .pergunta textarea, #modelo-texto { width: 100%; box-sizing: border-box; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
 #modelo-texto { min-height: 260px; font-size: .88rem; }
+.itens-tipo { border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; font-size: .86rem; overflow-x: auto; margin: 0; }
+.itens-tipo p { margin: 0 0 4px; } .itens-tipo table { width: 100%; border-collapse: collapse; } .itens-tipo td, .itens-tipo th { padding: 3px 6px; border-top: 1px solid var(--line); text-align: left; vertical-align: top; }
+.itens-tipo th { font-size: .74rem; color: var(--muted); font-weight: 600; } .itens-tipo .num { text-align: right; white-space: nowrap; }
+.itens-tipo.vazio { color: var(--muted); border-style: dashed; }
 </style>
 
 <div class="wrap">
@@ -184,17 +188,19 @@ ul.check label b { font-weight: 600; }
     <div class="linha">
       <label for="q">Busca (objeto, itens, órgão, portal)<input id="q" type="search" placeholder='ex.: ust|pf, "gestão documental" -impressora'></label>
       <label for="uf">Estado<select id="uf"><option value="">Todos</option></select></label>
-      <label for="vmin">Valor mínimo (R$ mi)<input id="vmin" type="number" min="0" step="0.5" inputmode="decimal" placeholder="0"></label>
+      <label for="vmin">Valor do edital acima de (R$)<input id="vmin" inputmode="decimal" placeholder="ex.: 500 mil, 1,5 mi"></label>
+      <label for="itipo">Mostrar itens de<select id="itipo"><option value="auto">Conforme a categoria</option><option value="mensal">Fixo mensal</option><option value="ust">UST</option><option value="pf">Ponto de função</option><option value="digitalizacao">Digitalização</option><option value="indexacao">Indexação</option><option value="">Não mostrar</option></select></label>
+      <label for="imin">Itens do tipo acima de (R$)<input id="imin" inputmode="decimal" placeholder="ex.: 200 mil"></label>
       <label for="sv">Sem valor divulgado<select id="sv"><option value="1">Mostrar</option><option value="0">Esconder</option></select></label>
       <label for="tipo">Tipo<select id="tipo"><option value="servico">Somente serviços</option><option value="todos">Serviços e materiais</option><option value="material">Só compra de material</option></select></label>
       <label for="plat">Portal da disputa<select id="plat"><option value="">Todos os portais</option></select></label>
-      <label for="ord">Ordenar<select id="ord"><option value="prazo">Prazo mais próximo</option><option value="valor">Maior valor</option><option value="ader">Aderência</option><option value="vol">Grande volume primeiro</option><option value="dist">Mais perto da sede</option></select></label>
+      <label for="ord">Ordenar<select id="ord"><option value="prazo">Prazo mais próximo</option><option value="valor">Maior valor</option><option value="ader">Aderência</option><option value="vol">Grande volume primeiro</option><option value="itens">Maior valor nos itens do tipo</option><option value="dist">Mais perto da sede</option></select></label>
       <label for="dmax">Até quantos km da sede<input id="dmax" type="number" min="0" step="50" inputmode="numeric" placeholder="sem limite"></label>
     </div>
     <div class="chips" id="cats" role="group" aria-label="Categoria"></div>
     <p class="dica">Várias palavras = todas precisam aparecer · <b>"frase exata"</b> · <b>-palavra</b> exclui · <b>ust|pf</b> = uma ou outra · UST, PF, GED, EAD, SaaS e IA já buscam os sinônimos.</p>
     <p class="conta" id="conta" aria-live="polite"></p>
-    <div class="acoes"><button type="button" class="mais" id="exp-tabelas" hidden>Baixar tabelas de preço destas licitações (CSV)</button><a class="mais" href="#config-sec" style="text-decoration:none">Minha sede e meus pisos</a></div>
+    <div class="acoes"><button type="button" class="mais" id="exp-tabelas" hidden>Baixar tabelas de preço destas licitações (CSV)</button><button type="button" class="mais" id="exp-itens-tipo" hidden>Baixar itens do tipo (CSV)</button><a class="mais" href="#config-sec" style="text-decoration:none">Minha sede e meus pisos</a></div>
   </section>
 
   <section class="lista" id="lista" aria-label="Licitações"></section>
@@ -337,7 +343,7 @@ function parseBusca(q) {
   return { grupos, nao };
 }
 const casaBusca = (b, pb) => pb.grupos.every((g) => g.some((a) => b.includes(a))) && !pb.nao.some((g) => g.some((a) => b.includes(a)));
-const estado = { cat: "foco", uf: "", q: "", pb: { grupos: [], nao: [] }, vmin: 0, sv: true, plat: "", tipo: "servico", ord: "prazo", limite: 40 };
+const estado = { cat: "foco", uf: "", q: "", pb: { grupos: [], nao: [] }, vmin: 0, itipo: "auto", imin: 0, sv: true, plat: "", tipo: "servico", ord: "prazo", limite: 40 };
 const cEl = document.getElementById("cats");
 const PAGTO = ["remun_fixo_mensal", "remun_ust", "remun_pf"];  // forma de pagamento logo depois dos filtros principais
 const tipoOk = (x) => estado.tipo === "todos" || (estado.tipo === "material" ? x.ms === "material" : x.ms !== "material");
@@ -379,7 +385,7 @@ ufEl.addEventListener("click", (e) => { const b = e.target.closest("button"); if
 const liga = (id, k, conv) => document.getElementById(id).addEventListener("input", (e) => { estado[k] = conv(e.target.value); estado.limite = 40; render(); });
 document.getElementById("q").addEventListener("input", (e) => { estado.q = e.target.value.trim(); estado.pb = parseBusca(estado.q); estado.limite = 40; render(); });
 document.getElementById("dmax").addEventListener("input", (e) => { estado.dmax = parseFloat(e.target.value) || 0; estado.limite = 40; render(); });
-document.getElementById("tipo").addEventListener("input", (e) => { estado.tipo = e.target.value; estado.limite = 40; montarChips(); render(); }); liga("uf", "uf", (v) => v); liga("vmin", "vmin", (v) => parseFloat(String(v).replace(",", ".")) || 0);
+document.getElementById("tipo").addEventListener("input", (e) => { estado.tipo = e.target.value; estado.limite = 40; montarChips(); render(); }); liga("uf", "uf", (v) => v); liga("vmin", "vmin", (v) => valorDigitado(v) || 0); liga("imin", "imin", (v) => valorDigitado(v) || 0); liga("itipo", "itipo", (v) => v);
 liga("sv", "sv", (v) => v === "1"); liga("plat", "plat", (v) => v); liga("ord", "ord", (v) => v);
 document.getElementById("mais").addEventListener("click", () => { estado.limite += 40; render(); });
 
@@ -396,6 +402,52 @@ function arquivoEdital(x) {
   return m ? { url: `https://pncp.gov.br/pncp-api/v1/orgaos/${m[1]}/compras/${m[3]}/${parseInt(m[2], 10)}/arquivos/1`, rotulo: "Baixar arquivo 1 (geralmente o edital)" } : null;
 }
 const botaoBaixar = (x) => { const a = arquivoEdital(x); return a ? `<a class="baixar" href="${esc(a.url)}" target="_blank" rel="noopener">${a.rotulo}</a>` : ""; };
+/* Itens de um tipo (fixo mensal, UST, PF, digitalização, indexação) dentro de cada edital */
+const TIPO_ITEM = {
+  mensal: { nome: "fixo mensal", cat: "remun_fixo_mensal", casa: (d, u) => unidadeChave(u || "") === "mes" || /mensal|mensalidade| por mes | ao mes /.test(d) },
+  ust: { nome: "UST", cat: "remun_ust", casa: (d, u) => unidadeChave(u || "") === "ust" || / ust | usts |unidades? de servicos? tecnicos?/.test(d) },
+  pf: { nome: "ponto de função", cat: "remun_pf", casa: (d, u) => unidadeChave(u || "") === "pf" || /pontos? de funcao/.test(d) },
+  digitalizacao: { nome: "digitalização", cat: "digitalizacao", casa: (d) => /digitaliz|escaneamento|microfilm|captura de imagen/.test(d) && !/^ (scanner|impressora|multifuncional|mesa digitalizadora)| aquisicao /.test(d) },
+  indexacao: { nome: "indexação", cat: "indexacao", casa: (d) => /indexa/.test(d) },
+};
+const CAT_TIPO = Object.fromEntries(Object.entries(TIPO_ITEM).map(([k, v]) => [v.cat, k]));
+const tipoItensAtivo = () => estado.itipo === "auto" ? CAT_TIPO[estado.cat] || null : estado.itipo || null;
+const memoTipo = new Map();
+function itensDoTipo(x, tipo) {
+  const chave = x.id + "|" + tipo; if (memoTipo.has(chave)) return memoTipo.get(chave);
+  const lista = (x.it || []).filter((i) => TIPO_ITEM[tipo].casa(norm(i[1] || ""), i[3]));
+  const total = (i) => i[5] || (i[2] && i[4] ? i[2] * i[4] : 0);
+  const r = { coletado: !!(x.det && (x.it || []).length), lista, soma: lista.reduce((s, i) => s + total(i), 0), total };
+  memoTipo.set(chave, r); return r;
+}
+function blocoItensTipo(x) {
+  const tipo = tipoItensAtivo(); if (!tipo) return "";
+  const s = itensDoTipo(x, tipo); const nome = TIPO_ITEM[tipo].nome;
+  if (!s.coletado) return `<p class="itens-tipo vazio">Itens ainda não coletados para este edital: abra o edital para ver os de ${esc(nome)}.</p>`;
+  if (!s.lista.length) return `<p class="itens-tipo vazio">Nenhum item de ${esc(nome)} na lista de itens${x.c.includes(TIPO_ITEM[tipo].cat) ? " (a forma aparece no objeto ou nos documentos do edital)" : ""}.</p>`;
+  return `<div class="itens-tipo"><p><b>${s.lista.length} ${s.lista.length === 1 ? "item" : "itens"} de ${esc(nome)}</b> · soma ${s.soma ? brl(s.soma) : "sigilosa"}</p>
+    <table><thead><tr><th>Item</th><th class="num">Qtd.</th><th>Un.</th><th class="num">Unit.</th><th class="num">Total</th></tr></thead><tbody>
+    ${s.lista.slice(0, 4).map((i) => `<tr><td>${esc(i[0])} · ${esc((i[1] || "").slice(0, 90))}</td><td class="num">${i[2] == null ? "" : fmt(i[2])}</td><td>${esc((i[3] || "").trim())}</td><td class="num">${i[4] ? brl(i[4]) : "sigiloso"}</td><td class="num">${s.total(i) ? brl(s.total(i)) : "sigiloso"}</td></tr>`).join("")}
+    </tbody></table>${s.lista.length > 4 ? `<button type="button" class="mais" data-abrir="${x.id}">Ver os ${s.lista.length} itens na ficha</button>` : ""}</div>`;
+}
+/* "500 mil", "1,5 mi", "2 bi", "R$ 300.000,00" -> número */
+function valorDigitado(v) {
+  const s = sem(String(v || "")).replace(/r\$/g, " ").replace(/\s+/g, " ").trim(); if (!s) return 0;
+  const m = s.match(/^([\d.,]+)\s*(mil|k|mi|milhao|milhoes|m|bi|bilhao|bilhoes)?$/); if (!m) return 0;
+  let n = m[1];
+  if (n.includes(",")) n = n.replace(/\./g, "").replace(",", ".");       // 1.500.000,00 ou 1,5
+  else if ((n.match(/\./g) || []).length > 1 || /\.\d{3}$/.test(n)) n = n.replace(/\./g, "");  // 300.000
+  const mult = { mil: 1e3, k: 1e3, mi: 1e6, milhao: 1e6, milhoes: 1e6, m: 1e6, bi: 1e9, bilhao: 1e9, bilhoes: 1e9 }[m[2]] || 1;
+  return (parseFloat(n) || 0) * mult;
+}
+function csvItensTipo() {
+  const tipo = tipoItensAtivo(); if (!tipo) return "";
+  const linhas = [["Órgão", "UF", "Município", "Edital", "Prazo", "Valor do edital", "Item", "Descrição", "Quantidade", "Unidade", "Valor unitário", "Valor total", "Link PNCP"]];
+  for (const x of ultimaLista) for (const i of itensDoTipo(x, tipo).lista)
+    linhas.push([x.o, x.uf, x.m || "", `${x.mod || ""} ${x.n || ""}`, x.enc ? dataHora(x.enc) : "", brNum(x.v), i[0], i[1], brNum(i[2]), (i[3] || "").trim(), brNum(i[4]), brNum(itensDoTipo(x, tipo).total(i)), x.pncp || ""]);
+  return "﻿" + linhas.map((l) => l.map((c) => `"${String(c ?? "").replace(/"/g, '""')}"`).join(";")).join("\r\n");
+}
+
 function card(x) {
   const d = dias(x.enc);
   const cls = d !== null && d <= 3 ? "curto" : d !== null && d <= 7 ? "medio" : "";
@@ -407,6 +459,7 @@ function card(x) {
     <div class="meta"><span class="valor">${brl(x.v)}</span><span>Propostas até ${dataHora(x.enc)}</span>
       <span>${esc(x.mod)}${x.n ? " nº " + esc(x.n) : ""}</span>${x.plat ? `<span>Disputa: ${esc(x.plat)}</span>` : ""}${extra ? `<span>${extra}</span>` : ""}</div>
     ${x.vol && Object.keys(x.vol).length ? `<div class="acoes">${pillsVol(x)}</div>` : ""}
+    ${blocoItensTipo(x)}
     ${resumoPisos(x)}
     <div class="acoes">${x.ms === "material" ? `<span class="pill p-warn">compra de material</span>` : ""}${x.c.map((c) => `<span class="pill p-off">${esc(CATS[c] || c)}</span>`).join("")}</div>
     <div class="acoes"><button type="button" class="abrir" data-abrir="${x.id}">Abrir pregão</button><button type="button" class="abrir" data-abrir="${x.id}" data-aba="preco">Precificar</button><button type="button" class="abrir" data-abrir="${x.id}" data-aba="analise">Analisar</button>${botaoBaixar(x)}
@@ -422,14 +475,22 @@ function render() {
     && (!estado.uf || x.uf === estado.uf) && (!estado.plat || (x.plat || "Não identificado") === estado.plat)
     && (!estado.q || casaBusca(x.busca, estado.pb))
     && tipoOk(x) && (!estado.dmax || (distSede(x) ?? Infinity) <= estado.dmax)
-    && (x.v == null ? estado.sv : x.v >= estado.vmin * 1e6));
+    && (x.v == null ? estado.sv : x.v >= estado.vmin));
+  const tipoIt = tipoItensAtivo();
+  let semItens = 0;
+  if (tipoIt && estado.imin > 0) r = r.filter((x) => { const s = itensDoTipo(x, tipoIt); if (!s.coletado) semItens++; return s.soma >= estado.imin; });
   if (estado.ord === "valor") r.sort((a, b) => (b.v || -1) - (a.v || -1));
   else if (estado.ord === "dist") r.sort((a, b) => (distSede(a) ?? 1e9) - (distSede(b) ?? 1e9));
+  else if (estado.ord === "itens" && tipoIt) r.sort((a, b) => itensDoTipo(b, tipoIt).soma - itensDoTipo(a, tipoIt).soma || (b.v || 0) - (a.v || 0));
   else if (estado.ord === "vol") r.sort((a, b) => (b.gv || []).length - (a.gv || []).length || (b.v || 0) - (a.v || 0));
   else if (estado.ord === "ader") r.sort((a, b) => (b.a ?? -1) - (a.a ?? -1) || (b.v || 0) - (a.v || 0));
   else r.sort((a, b) => (a.enc || "9") < (b.enc || "9") ? -1 : 1);
   const soma = r.reduce((s, x) => s + (x.v || 0), 0);
-  document.getElementById("conta").innerHTML = `<b>${fmt(r.length)}</b> licitações · soma dos valores divulgados <b>${curto(soma)}</b>`;
+  const somaIt = tipoIt ? r.reduce((s, x) => s + itensDoTipo(x, tipoIt).soma, 0) : 0;
+  document.getElementById("conta").innerHTML = `<b>${fmt(r.length)}</b> licitações · soma dos valores divulgados <b>${curto(soma)}</b>` +
+    (tipoIt ? ` · itens de ${esc(TIPO_ITEM[tipoIt].nome)}: <b>${curto(somaIt)}</b>` : "") +
+    (semItens ? ` · ${fmt(semItens)} sem itens coletados ficaram de fora do filtro de itens` : "");
+  const bti = document.getElementById("exp-itens-tipo"); if (bti) bti.hidden = !temDownload || !tipoIt;
   document.getElementById("lista").innerHTML = r.slice(0, estado.limite).map(card).join("") ||
     `<p class="conta">Nenhuma licitação com esses filtros.${estado.cat !== "todas" ? ` <button type="button" class="abrir" id="buscar-todas">Buscar em todas as licitações do Brasil</button>` : " Baixe o valor mínimo ou mostre as sem valor divulgado."}</p>`;
   const bt = document.getElementById("buscar-todas");
@@ -906,7 +967,8 @@ function ligarCsv(idBotao, gerar, nome) {
 }
 (async () => { try { dl = window.claude && window.claude.use ? await window.claude.use("downloads") : null; } catch (e) { dl = null; }
   temDownload = !!dl; ligarCsv("crm-exportar", csvCrm, "meu-crm-licitacoes.csv"); ligarCsv("exp-tabelas", csvTabelas, "tabelas-de-preco-licitacoes.csv");
-  ligarCsv("piso-modelo", MODELO_PISOS, "modelo-pisos.csv"); renderCrm(); render(); })();
+  ligarCsv("piso-modelo", MODELO_PISOS, "modelo-pisos.csv");
+  ligarCsv("exp-itens-tipo", csvItensTipo, "itens-do-tipo-licitacoes.csv"); renderCrm(); render(); })();
 
 /* Portais */
 document.getElementById("portais-conta").innerHTML = `<b>${fmt(D.n_plataformas)}</b> portais e sistemas de disputa identificados nos editais abertos (todas as áreas). Os ${D.plataformas.length} mais usados:`;
