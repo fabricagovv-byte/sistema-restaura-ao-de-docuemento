@@ -165,3 +165,49 @@ def test_itens_pela_comprasgov_quando_o_pncp_cai(banco):
     assert pedidos[0] == {"tipo": "numeroControlePNCPCompra", "codigo": "03100645000194-1-000042/2026"}
     banco.refresh(lic, ["itens"])
     assert lic.itens[0].unidade == "PÁGINA" and float(lic.itens[0].quantidade) == 2000000
+
+
+def test_pncp_repete_a_pagina_que_falhou_e_continua_de_onde_parou():
+    from licitacoes.conectores.base import FalhaTemporaria
+    from licitacoes.conectores.pncp import ConectorPncp
+
+    class Http:
+        def __init__(self):
+            self.chamadas = []
+            self.falhas = {1: 2, 2: 1}  # página -> quantas vezes falha antes de responder
+
+        def get_json(self, url, params=None):
+            pg = params["pagina"]
+            self.chamadas.append(pg)
+            if self.falhas.get(pg):
+                self.falhas[pg] -= 1
+                raise FalhaTemporaria("falha de rede: ReadTimeout")
+            return {"data": [{"p": pg}], "paginasRestantes": 3 - pg}
+
+    http = Http()
+    c = ConectorPncp(http=http)
+    c.esperas_pagina = (30, 60, 120)
+    esperas = []
+    c.dormir = esperas.append
+    assert [r["p"] for r in c.propostas_abertas(date(2026, 12, 31))] == [1, 2, 3]
+    assert http.chamadas == [1, 1, 1, 2, 2, 3] and esperas == [30, 60, 30]
+
+    sempre = Http()
+    sempre.falhas = {1: 99}
+    c2 = ConectorPncp(http=sempre)
+    c2.esperas_pagina = (30, 60, 120)
+    c2.dormir = lambda s: None
+    try:
+        list(c2.propostas_abertas(date(2026, 12, 31)))
+        raise AssertionError("deveria desistir depois das rodadas")
+    except FalhaTemporaria:
+        assert sempre.chamadas == [1, 1, 1, 1]
+
+
+def test_esperas_por_pagina_vem_da_configuracao(monkeypatch):
+    from licitacoes import config
+    from licitacoes.conectores.pncp import ConectorPncp
+
+    monkeypatch.setenv("LIC_PNCP_ESPERAS_PAGINA", "30,60,120")
+    config.config.cache_clear()
+    assert ConectorPncp(http=object()).esperas_pagina == (30, 60, 120)

@@ -92,6 +92,12 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
         _passo("pncp_pregoes_30_dias", lambda: _sync(coleta.sincronizar_pncp(
             s, modo="diario", dias=30, modalidades=[6, 4, 7, 5], so_publicacao=True, ate=prazo(0.6))), resumo)
         _passo("comprasgov", lambda: _sync(coleta.sincronizar_comprasgov(s, dias=7)), resumo)
+    # sem as propostas abertas o pacote não é publicado: se a primeira tentativa falhou, outra antes dos itens
+    p = resumo["passos"].get("pncp_propostas_abertas") or {}
+    if p.get("status") != "ok" and (p.get("lidos") or 0) < 10000:
+        primeira = p
+        _passo("pncp_propostas_abertas", lambda: {**_sync(coleta.sincronizar_pncp(s, modo="propostas", ate=prazo(0.78))),
+                                                  "primeira_tentativa": primeira}, resumo)
         _passo("conferencia_individual", lambda: coleta.conferir_individual(s, limite=150), resumo)
     if anterior and Path(anterior, "detalhes.jsonl.gz").exists():
         _passo("pacote_anterior", lambda: importar_detalhes(s, anterior, so_abertas=True), resumo)

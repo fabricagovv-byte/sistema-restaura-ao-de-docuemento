@@ -38,6 +38,8 @@ class Configuracao(BaseSettings):
 
     # PNCP (limites medidos em chamadas reais: 4 s entre chamadas evita o 429)
     pncp_intervalo_s: float = 4.0
+    # rodadas extras por página do PNCP depois das tentativas do cliente HTTP (segundos entre elas; vazio = nenhuma)
+    pncp_esperas_pagina: str = "30,60,120"
     pncp_tamanho_pagina: int = 50
     pncp_modalidades: str = "6,4,8,7,5,12,9,1,3,2,10,11,13"
     pncp_dias_proposta: int = 180

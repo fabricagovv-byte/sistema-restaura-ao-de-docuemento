@@ -11,6 +11,17 @@ import pytest
 FIXTURES = Path(__file__).parent / "fixtures"
 
 
+@pytest.fixture(autouse=True)
+def _sem_esperas_longas(monkeypatch):
+    """Nos testes, falha simulada do PNCP não espera as rodadas extras de 30/60/120 s."""
+    monkeypatch.setenv("LIC_PNCP_ESPERAS_PAGINA", "")
+    from licitacoes import config
+
+    config.config.cache_clear()
+    yield
+    config.config.cache_clear()
+
+
 @pytest.fixture()
 def banco(tmp_path, monkeypatch):
     url = os.environ.get("LIC_TESTE_PG") or f"sqlite:///{tmp_path / 'teste.db'}"

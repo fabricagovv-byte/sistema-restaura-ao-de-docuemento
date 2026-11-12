@@ -19,7 +19,11 @@ from typing import Any
 
 from ..config import config
 from ..util import link_pncp, numero_controle, para_data, para_valor, so_digitos
+import logging
+
 from .base import ClienteHttp, ErroFonte, FalhaTemporaria
+
+log = logging.getLogger(__name__)
 
 CONSULTA = "https://pncp.gov.br/api/consulta/v1"
 INTEGRACAO = "https://pncp.gov.br/api/pncp/v1"
@@ -48,6 +52,10 @@ class ConectorPncp:
         self.http = http or ClienteHttp(intervalo_minimo_s=cfg.pncp_intervalo_s)
         self.tamanho = max(10, min(50, cfg.pncp_tamanho_pagina))
         self.bases_integracao = [INTEGRACAO, INTEGRACAO_ALT]
+        # além das tentativas do ClienteHttp, cada página ganha mais rodadas espaçadas: em 11/11 a primeira página
+        # das propostas abertas deu ReadTimeout nas 4 tentativas e a coleta inteira (4 h) não pôde ser publicada
+        self.esperas_pagina = tuple(float(x) for x in cfg.pncp_esperas_pagina.split(",") if x.strip())
+        self.dormir = __import__("time").sleep
 
     def _get_integracao(self, caminho: str, params: dict[str, Any] | None = None):
         """GET na API de integração; em falha temporária (5xx/rede) tenta o caminho alternativo e passa a
@@ -70,7 +78,7 @@ class ConectorPncp:
     def _paginar(self, caminho: str, params: dict[str, Any], max_paginas: int = 1000) -> Iterator[dict]:
         pagina = 1
         while pagina <= max_paginas:
-            corpo = self.http.get_json(f"{CONSULTA}{caminho}", {**params, "pagina": pagina, "tamanhoPagina": self.tamanho})
+            corpo = self._pagina(f"{CONSULTA}{caminho}", {**params, "pagina": pagina, "tamanhoPagina": self.tamanho})
             if not corpo:
                 return
             dados = corpo.get("data") or []
@@ -85,6 +93,16 @@ class ConectorPncp:
                 return
             pagina += 1
         raise ErroFonte(f"limite de {max_paginas} páginas em {caminho} {params}")
+
+    def _pagina(self, url: str, params: dict[str, Any]):
+        for espera in (*self.esperas_pagina, None):
+            try:
+                return self.http.get_json(url, params)
+            except FalhaTemporaria:
+                if espera is None:
+                    raise
+                log.warning("PNCP: página %s falhou; nova rodada em %ss", params.get("pagina"), espera)
+                self.dormir(espera)
 
     def por_publicacao(self, inicio: date, fim: date, modalidade: int, uf: str | None = None) -> Iterator[dict]:
         p = {"dataInicial": fmt(inicio), "dataFinal": fmt(fim), "codigoModalidadeContratacao": modalidade}
