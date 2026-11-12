@@ -214,6 +214,70 @@ PADRAO: list[DefCategoria] = [
         "infraestrutura de ti", "infraestrutura de tic", "infraestrutura de tecnologia", "rede de dados",
         "cabeamento estruturado", "rede definida por software", " sdn ", "wi-fi", "switches",
     ]),
+    # ---- Tecnologia ampliada (12/11): termos tirados de editais abertos que antes não caíam em categoria de TI
+    DefCategoria("sistemas_gestao", "Sistemas de gestão e licenças de software", "ti", [
+        "sistema de gestao escolar", "sistemas de gestao escolar", "gestao escolar informatizada", "sistema integrado de gestao",
+        "sistemas integrados de gestao", " erp ", "sistema de gestao hospitalar", "gestao hospitalar informatizada",
+        "prontuario eletronico", "nota fiscal eletronica", " nfs-e ", " nfse ", "sistema de folha de pagamento",
+        "sistema de arrecadacao", "sistema tributario", "sistema de protocolo", "processo eletronico", "processo administrativo eletronico",
+        "sistema de gestao patrimonial", "sistema de gestao de pessoas", "sistema de gestao de frota", "sistema de gestao de saude",
+        "software de gestao", "softwares de gestao", "solucao sistemica", "licenciamento de software", "licenciamento de sistema",
+        "licenca de uso de software", "licencas de uso de software", "sistema de gestao de documentos",
+    ], ["sistema de gestao ambiental", "gestao da qualidade", "sistema de gestao de abastecimento", "cartao magnetico",
+        "cartao fisico"], ambiguos=["sistema de gestao", "sistemas de gestao", "plataforma de gestao", "sistema web",
+                                    "sistema online", "gestao online"],
+        contexto=CTX_TI + ["online", " app ", "licen", "informatizad", "nuvem", "digital", "dados"]),
+    DefCategoria("cidades_inteligentes", "Cidades inteligentes e mobilidade", "ti", [
+        "cidade inteligente", "cidades inteligentes", "smart city", "monitoramento urbano inteligente", "gestao da mobilidade",
+        "mobilidade inteligente", "semaforos inteligentes", "semaforizacao inteligente", "centro de controle operacional",
+        "centro integrado de operacoes", "centro de operacoes integradas", "estacionamento rotativo digital",
+        "estacionamento rotativo eletronico", "zona azul digital", "telegestao", "iluminacao inteligente",
+        "leitura automatica de placas", "cercamento eletronico", "fiscalizacao eletronica de transito", "bilhetagem eletronica",
+    ], ["iluminacao publica convencional"]),
+    DefCategoria("telecom", "Telecomunicações e conectividade", "ti", [
+        "link dedicado", "links dedicados", "link de internet", "links de internet", "acesso a internet", "internet banda larga",
+        "banda larga", "rede mundial de computadores", " ip fixo ", " ips fixos ", "fibra optica", "telefonia fixa", "telefonia movel",
+        "telefonia ip", "telefonia em nuvem", " pabx ", " voip ", "central telefonica", "comunicacao via satelite",
+        "comunicacoes por satelite", "comunicacao por satelite", "internet via satelite", "radiocomunicacao", "radios digitais",
+        "rede mpls", " sd-wan ", " sdwan ", "wi-fi publico", "wifi publico", "telecomunicacoes", "servico movel pessoal",
+        "chips de dados", "plano de dados", "conectividade",
+    ], ["fibra de vidro", "emissoras de radio", "radiodifusao comercial", "veiculacao"]),
+    DefCategoria("seguranca_eletronica", "CFTV, videomonitoramento e segurança eletrônica", "ti", [
+        " cftv ", "circuito fechado de televisao", "circuito fechado de tv", "videomonitoramento", "video monitoramento",
+        "monitoramento por cameras", "monitoria por cameras", "cameras de seguranca", "cameras de videomonitoramento",
+        "controle de acesso eletronico", "catraca eletronica", "catracas eletronicas", "reconhecimento facial",
+        "alarme monitorado", "monitoramento de alarmes", "seguranca eletronica", "monitoramento eletronico",
+    ], ["camera fotografica", "cameras fotograficas"]),
+    DefCategoria("iot_telemetria", "Rastreamento, telemetria e IoT", "ti", [
+        "telemetria", "videotelemetria", "rastreamento veicular", "rastreamento de veiculos", "rastreador", "rastreadores",
+        "rastreamento por gps", "rastreamento via satelite", "sistema de rastreamento", "internet das coisas", " iot ", " rfid ",
+        "monitoramento remoto", "sensores inteligentes",
+    ], ["rastreamento do cancer", "rastreamento de cancer", "rastreamento neonatal", "rastreamento auditivo", "rastreamento oncologico",
+        "locacao de veiculo", "locacao de veiculos", "veiculos zero quilometro", "locacao de caminh", "locacao de onibus"]),
+    DefCategoria("edtech", "Tecnologia educacional", "ti", [
+        "robotica educacional", "robotica programavel", "kits de robotica", "kit de robotica", "kits educacionais de robotica",
+        "laboratorio de robotica", "lousa digital", "lousas digitais", "lousa interativa", "lousas interativas", "painel interativo",
+        "paineis interativos", "realidade virtual", "realidade aumentada", "laboratorio maker", "espaco maker", "impressora 3d",
+        "impressoras 3d", "plataforma educacional", "plataformas educacionais", "plataforma de ensino", "educacao digital",
+        "tecnologia educacional", "tecnologias educacionais", "conteudo educacional digital", "conteudos digitais",
+    ], ["lousa de vidro", "lousas de vidro", "quadro branco"]),
+    DefCategoria("audiovisual_tec", "Audiovisual, videoconferência e transmissão", "ti", [
+        "videoconferencia", "transmissao ao vivo", "streaming", "solucao audiovisual", "sistema audiovisual", "painel de led",
+        "paineis de led", "telao de led", "transmissao audiovisual", "transmissao das sessoes",
+    ], ["sonorizacao para eventos", "som e iluminacao"]),
+    DefCategoria("impressao", "Outsourcing de impressão", "ti", [
+        "outsourcing de impressao", "impressao corporativa", "locacao de impressoras", "locacao de multifuncionais",
+        "locacao de equipamentos multifuncionais", "comodato de impressoras", "impressoras em regime de comodato",
+        "franquia de impressao", "servicos de impressao e copia", "servico de impressao e copia", "servicos de reprografia",
+        "solucao de impressao", "gestao de impressao", "bilhetagem de impressao",
+    ], ["impressao grafica", "servicos graficos", "material grafico", "impressao 3d"]),
+    DefCategoria("equipamentos_ti", "Equipamentos de informática", "ti", [
+        " computador ", " computadores ", " microcomputador ", " microcomputadores ", " notebook ", " notebooks ", " desktop ",
+        " desktops ", "all in one", "all-in-one", " tablet ", " tablets ", " chromebook ", " chromebooks ", "monitor de video",
+        "monitores de video", "equipamentos de informatica", "equipamentos de tecnologia da informacao", "materiais de informatica",
+        "suprimentos de informatica", "perifericos de informatica", " nobreak ", " nobreaks ", " switch ", " switches ",
+        " roteador ", " roteadores ", "access point", " scanner ", " scanners ", " impressora ", " impressoras ",
+    ], ["tomografia computadorizada", "tomografo computadorizado", "impressora 3d", "impressoras 3d", "rede mundial de computadores"]),
     # ---------------------------------------------------------------- EAD, educação digital e pesquisa
     DefCategoria("ead", "EAD e educação a distância", "educacao_pesquisa", [
         "educacao a distancia", "ensino a distancia", "ensino remoto", " ead ", " ead/", "/ead ", "ambiente virtual de aprendizagem",
@@ -278,6 +342,17 @@ SEGMENTOS = {
 }
 
 
+_SEPARADORES = re.compile(r"[^a-z0-9]+")
+
+
+def texto_busca(texto: str | None) -> str:
+    """Texto normalizado para procurar termos: a forma original (para termos com pontuação, como "ged/" ou
+    "decreto 10.278") e a forma com pontuação trocada por espaço, para que termos de palavra inteira
+    (" cftv ", " ust ") casem também em "CFTV," ou "(UST)". Até 12/11 só a primeira forma era usada."""
+    n = normalizar(texto or "")
+    return " " + n + " \x00 " + _SEPARADORES.sub(" ", n).strip() + " "
+
+
 def termo_normalizado(termo: str) -> str:
     """Normaliza o termo, mantendo os espaços de borda que marcam palavra inteira (ex.: " ged ")."""
     n = normalizar(termo)
@@ -291,7 +366,7 @@ def _casa(texto_norm: str, termo: str) -> bool:
 def classificar(objeto: str, categorias: list[DefCategoria] | None = None) -> list[dict]:
     """Devolve as categorias do objeto, com os termos que casaram. Um termo de exclusão anula a categoria."""
     cats = categorias or PADRAO
-    n = " " + normalizar(objeto) + " "
+    n = texto_busca(objeto)
     saida = []
     for c in cats:
         casados = [t.strip() for t in c.termos if _casa(n, t)]
@@ -306,6 +381,11 @@ def classificar(objeto: str, categorias: list[DefCategoria] | None = None) -> li
             "codigo": c.codigo, "nome": c.nome, "segmento": c.segmento,
             "termos": casados, "forca": min(1.0, 0.5 + 0.25 * len(casados)),
         })
+    # "Tecnologia" reúne tudo o que caiu em alguma categoria de TI (o filtro geral de tecnologia vê todas)
+    geral = next((c for c in cats if c.codigo == "tecnologia"), None)
+    ti = [x["codigo"] for x in saida if x["segmento"] == "ti" and x["codigo"] != "tecnologia"]
+    if geral and ti and not any(x["codigo"] == "tecnologia" for x in saida):
+        saida.append({"codigo": "tecnologia", "nome": geral.nome, "segmento": "ti", "termos": [f"via {c}" for c in ti[:3]], "forca": 0.5})
     return saida
 
 
@@ -366,8 +446,8 @@ _SIM_UST = re.compile(r"desenvolv|sustenta|suporte|manutencao|analis|consultor|a
 def item_ust(unidade: str | None, descricao: str | None, qtd: float | None = None, preco: float | None = None) -> bool:
     """Item cobrado em UST: a descrição diz UST, a unidade é "UST", ou a unidade é "serviço técnico" com
     quantidade e preço unitário de UST (>= 100 unidades, até R$ 2.000 cada)."""
-    u = " " + normalizar(unidade or "") + " "
-    d = " " + normalizar(descricao or "") + " "
+    u = texto_busca(unidade)
+    d = texto_busca(descricao)
     if any(x in d for x in _UST) or set(u.split()) & {"ust", "usts"}:
         return True
     if "servico tecnico" in u or "servicos tecnicos" in u:
@@ -390,11 +470,11 @@ def remuneracao(texto: str, itens: list[tuple[str | None, str | None]], categori
     """Formas de pagamento do edital (UST, ponto de função, fixo mensal), pelo texto, pelos itens (unidade, descrição)
     e pelo texto dos documentos baixados (termo de referência, edital). Fixo mensal só conta em edital de
     tecnologia ou gestão documental."""
-    n = " " + normalizar(texto or "") + " "
-    docs = " " + normalizar(texto_documentos or "") + " " if texto_documentos else ""
+    n = texto_busca(texto)
+    docs = texto_busca(texto_documentos) if texto_documentos else ""
     itens = [tuple(i) + (None,) * (4 - len(i)) for i in itens]  # (unidade, descrição[, quantidade, preço unitário])
-    unids = [" " + normalizar(i[0] or "") + " " for i in itens]
-    tudo = n + " ".join(" " + normalizar(i[1] or "") + " " for i in itens)
+    unids = [texto_busca(i[0]) for i in itens]
+    tudo = n + " ".join(texto_busca(i[1]) for i in itens)
     achados: dict[str, list[str]] = {}
     n_ust = sum(item_ust(*i) for i in itens)
     for cod, termos, extra in (("remun_ust", _UST, None), ("remun_pf", _PF, " pf ")):
@@ -471,8 +551,8 @@ def tipo_volume(unidade: str | None, descricao: str | None, qtd: float | None, p
     """Tipo de volume de um item (ust, pf, pagina, registro, hora, mes) ou None."""
     if not qtd:
         return None
-    u = " " + normalizar(unidade or "") + " "
-    d = " " + normalizar(descricao or "") + " "
+    u = texto_busca(unidade)
+    d = texto_busca(descricao)
     pal = set(u.split())
     fora = any(x in d for x in _V_FORA) or pal & {"m2", "km", "quilometro", "metro", "metros"}
     if item_ust(unidade, descricao, qtd, preco):

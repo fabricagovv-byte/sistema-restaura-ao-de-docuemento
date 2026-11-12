@@ -342,3 +342,34 @@ def test_unidade_servico_tecnico_generica_nao_e_ust():
     # sem quantidade e preço (chamada antiga com 2 campos) a unidade genérica sozinha não decide
     assert not any(c["codigo"] == "remun_ust" for c in remuneracao("Serviços de TIC", [("UND SERVIÇO TÉCNICO", "Suporte")], cats))
     assert any(c["codigo"] == "remun_ust" for c in remuneracao("Contratação de serviços medidos em UST", [], cats))
+
+
+def test_termo_de_palavra_inteira_casa_junto_de_pontuacao():
+    """Até 12/11 " microcomputadores " não casava em "microcomputadores," nem " ust " em "(UST)"."""
+    cods = lambda t: {c["codigo"] for c in classificar(t)}  # noqa: E731
+    assert {"equipamentos_ti", "tecnologia"} <= cods("Compra de microcomputadores, conforme TR.")
+    assert "fabrica_software" in cods("Fábrica de software (UST), sob demanda")
+    assert {"ged", "ocr"} <= cods("Solução GED/ECM com OCR.")
+
+
+def test_tecnologia_ampliada():
+    cods = lambda t: {c["codigo"] for c in classificar(t)}  # noqa: E731
+    casos = {
+        "Serviços continuados de CFTV, monitoria por câmeras": "seguranca_eletronica",
+        "Prestação continuada de serviços de monitoramento urbano inteligente": "cidades_inteligentes",
+        "Acesso à rede mundial de computadores, internet de links dedicados e IPs fixos": "telecom",
+        "Licenças de sistema integrado de gestão escolar (SIGE), com customização e conversão de dados": "sistemas_gestao",
+        "Kits educacionais de robótica programável para as escolas": "edtech",
+        "Cartuchos de toner com impressoras em regime de comodato": "impressao",
+        "Transmissão ao vivo das sessões da Câmara Municipal": "audiovisual_tec",
+        "Solução informatizada de videotelemetria embarcada": "iot_telemetria",
+        "Sistema de gestão online via app para a prefeitura": "sistemas_gestao",
+    }
+    for texto, cod in casos.items():
+        r = cods(texto)
+        assert cod in r and "tecnologia" in r, (texto, r)  # toda categoria de TI também entra em "Tecnologia"
+    for texto in ("Rastreamento do câncer do colo do útero", "Serviços de vigilância armada", "Aquisição de lousas de vidro",
+                  "Contratação de emissoras de rádio para publicidade", "Tomografia computadorizada e ressonância",
+                  "Sistema de gestão ambiental ISO 14001", "Locação de veículos zero quilômetro com sistema de rastreamento"):
+        assert not cods(texto) & {"tecnologia", "iot_telemetria", "equipamentos_ti", "sistemas_gestao", "edtech"}, texto
+    assert "equipamentos_ti" not in cods("Internet de links dedicados (rede mundial de computadores)")
