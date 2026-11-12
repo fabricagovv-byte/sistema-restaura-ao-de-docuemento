@@ -8,6 +8,7 @@ import time
 import uuid
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Annotated, Literal
 
 from fastapi import Depends, FastAPI, HTTPException, Request, status
@@ -46,6 +47,9 @@ async def ciclo(app: FastAPI):
 
 
 API_PREFIXO = "/api/v1"
+WEB = Path(__file__).resolve().parent / "web"
+CSP = ("default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; "
+       "frame-ancestors 'none'; base-uri 'none'; form-action 'self'; object-src 'none'")
 ROTAS_PUBLICAS = {"/api/v1/saude", "/api/v1/auth/login", "/api/v1/auth/recuperar", "/api/v1/auth/redefinir"}
 
 app = FastAPI(title="Solicitações Digitais", version=__version__, lifespan=ciclo,
@@ -69,6 +73,10 @@ async def correlacao(request: Request, call_next):
     resp.headers["X-Correlation-ID"] = cid
     resp.headers["X-Content-Type-Options"] = "nosniff"
     resp.headers["Cache-Control"] = "no-store"
+    if not request.url.path.startswith(API_PREFIXO):  # telas do frontend: só código do próprio servidor
+        resp.headers["Content-Security-Policy"] = CSP
+        resp.headers["X-Frame-Options"] = "DENY"
+        resp.headers["Referrer-Policy"] = "no-referrer"
     log.info("requisicao", extra={"extra_campos": {"correlacao": cid, "metodo": request.method, "rota": request.url.path,
                                                    "status": resp.status_code, "ms": round((time.perf_counter() - t0) * 1000, 1)}})
     return resp
@@ -236,3 +244,16 @@ from .rotas_painel import router as _rotas_painel  # noqa: E402
 app.include_router(_rotas_anexos)
 app.include_router(_rotas_conta)
 app.include_router(_rotas_painel)
+
+# ------------------------------------------------------------------ frontend (dia 5): arquivos estáticos na raiz
+from fastapi.responses import FileResponse  # noqa: E402
+from fastapi.staticfiles import StaticFiles  # noqa: E402
+
+
+@app.get("/redefinir-senha", include_in_schema=False)
+def pagina_redefinir_senha() -> FileResponse:
+    """Destino do link do e-mail de recuperação; o token vem depois do # e não chega ao servidor."""
+    return FileResponse(WEB / "index.html", media_type="text/html")
+
+
+app.mount("/", StaticFiles(directory=WEB, html=True), name="web")

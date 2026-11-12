@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solicitações Digitais</title>
+  <link rel="stylesheet" href="/app.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <span class="marca">Solicitações Digitais</span>
+    <nav id="menu" aria-label="Menu principal" hidden></nav>
+    <div id="conta" class="conta" hidden>
+      <span id="conta-nome"></span> <span id="conta-perfil" class="etiqueta"></span>
+      <button type="button" id="sair" class="secundario">Sair</button>
+    </div>
+  </header>
+  <div id="aviso" class="aviso" role="status" aria-live="polite" hidden></div>
+  <main id="conteudo" tabindex="-1" aria-live="polite">
+    <p class="carregando">Carregando…</p>
+  </main>
+  <noscript><p class="erro">Este sistema precisa de JavaScript ativado no navegador.</p></noscript>
+</body>
+</html>
