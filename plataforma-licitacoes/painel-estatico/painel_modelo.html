@@ -157,6 +157,18 @@ dialog { box-sizing: border-box; overflow-x: hidden; }
 .aviso { min-width: 0; }
 .aviso p { margin: 0; font-size: .9rem; overflow-wrap: anywhere; }
 .obj, .obj-full { overflow-wrap: anywhere; }
+.md { line-height: 1.55; overflow-wrap: anywhere; }
+.md h2 { font-size: 1.05rem; margin: 18px 0 6px; } .md h3 { font-size: .98rem; margin: 14px 0 4px; } .md h4 { font-size: .92rem; margin: 10px 0 2px; }
+.md p { margin: 6px 0; } .md ul, .md ol { margin: 6px 0; padding-left: 22px; } .md code { background: var(--accent-soft); padding: 0 4px; border-radius: 4px; }
+ul.check { list-style: none; padding: 0; margin: 4px 0 10px; display: grid; gap: 6px; }
+ul.check label { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; text-transform: none; letter-spacing: 0; font-size: .95rem; font-weight: 400; color: var(--ink); }
+ul.check label b { font-weight: 600; }
+#ficha-corpo section h3 { font-size: .98rem; margin: 12px 0 4px; } ul.check input { margin-top: 4px; flex: none; width: 18px; height: 18px; }
+.ref { color: var(--muted); font-size: .85rem; }
+.aviso-an { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 8px 10px; border-radius: 6px; margin: 6px 0; }
+.qa { border-top: 1px solid var(--line); padding-top: 8px; margin-top: 8px; } .qa .q { font-weight: 700; margin: 0 0 4px; }
+.pergunta textarea, #modelo-texto { width: 100%; box-sizing: border-box; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+#modelo-texto { min-height: 260px; font-size: .88rem; }
 </style>
 
 <div class="wrap">
@@ -208,6 +220,16 @@ dialog { box-sizing: border-box; overflow-x: hidden; }
     <p class="dica">Planilha: uma linha por piso, colunas <b>descrição; tipo; palavras-chave; valor</b> (tipo = UST, PF, página, registro, hora, mês ou qualquer). Separador ponto e vírgula ou vírgula; no Excel, "Salvar como CSV".</p>
   </section>
 
+  <section class="panel" id="modelo-sec" aria-labelledby="h-modelo">
+    <h2 id="h-modelo">Meu modelo de análise</h2>
+    <p class="dica">O botão <b>Gerar análise</b> de cada pregão segue este modelo: mesmos títulos, na mesma ordem. Cole o modelo que a sua equipe usa (ou suba o arquivo em PDF, DOCX ou TXT) e salve.</p>
+    <p class="conta" id="modelo-estado"></p>
+    <textarea id="modelo-texto" aria-label="Modelo de análise" spellcheck="false"></textarea>
+    <div class="acoes"><button type="button" class="salvar" id="modelo-salvar">Salvar modelo</button>
+      <label class="abrir" style="display:inline-block;text-transform:none;letter-spacing:0;color:var(--surface);font-size:.82rem">Subir modelo (PDF, DOCX, TXT)<input type="file" id="modelo-arquivo" accept=".pdf,.docx,.txt,.md" hidden></label>
+      <button type="button" class="mais" id="modelo-padrao">Voltar ao modelo padrão</button></div>
+  </section>
+
   <section class="panel" id="crm-sec" aria-labelledby="h-crm">
     <h2 id="h-crm">Meu CRM e propostas</h2>
     <p class="conta" id="crm-estado">Carregando seus dados…</p>
@@ -244,7 +266,7 @@ dialog { box-sizing: border-box; overflow-x: hidden; }
 
 <dialog id="ficha" aria-labelledby="ficha-titulo">
   <div class="ficha-topo"><span class="eyebrow" id="ficha-eyebrow">Pregão</span><button type="button" id="fechar">Fechar</button>
-    <div class="abas" role="tablist" id="abas"><button type="button" role="tab" data-aba="ficha">Ficha</button><button type="button" role="tab" data-aba="preco">Precificar</button><button type="button" role="tab" data-aba="crm">CRM</button></div></div>
+    <div class="abas" role="tablist" id="abas"><button type="button" role="tab" data-aba="ficha">Ficha</button><button type="button" role="tab" data-aba="preco">Precificar</button><button type="button" role="tab" data-aba="crm">CRM</button><button type="button" role="tab" data-aba="analise">Análise</button></div></div>
   <div class="ficha" id="ficha-corpo"></div>
 </dialog>
 
@@ -387,7 +409,7 @@ function card(x) {
     ${x.vol && Object.keys(x.vol).length ? `<div class="acoes">${pillsVol(x)}</div>` : ""}
     ${resumoPisos(x)}
     <div class="acoes">${x.ms === "material" ? `<span class="pill p-warn">compra de material</span>` : ""}${x.c.map((c) => `<span class="pill p-off">${esc(CATS[c] || c)}</span>`).join("")}</div>
-    <div class="acoes"><button type="button" class="abrir" data-abrir="${x.id}">Abrir pregão</button><button type="button" class="abrir" data-abrir="${x.id}" data-aba="preco">Precificar</button>${botaoBaixar(x)}
+    <div class="acoes"><button type="button" class="abrir" data-abrir="${x.id}">Abrir pregão</button><button type="button" class="abrir" data-abrir="${x.id}" data-aba="preco">Precificar</button><button type="button" class="abrir" data-abrir="${x.id}" data-aba="analise">Analisar</button>${botaoBaixar(x)}
       ${x.pncp ? `<a href="${esc(x.pncp)}" target="_blank" rel="noopener">Ver no PNCP</a>` : ""}
       ${x.orig ? `<a href="${esc(x.orig)}" target="_blank" rel="noopener">Portal da disputa</a>` : ""}</div>
   </article>`;
@@ -441,7 +463,7 @@ function ficha(x) {
     <div class="acoes">${botaoBaixar(x)}${x.pncp ? `<a href="${esc(x.pncp)}" target="_blank" rel="noopener">Ver edital no PNCP</a>` : ""}
       ${x.orig ? `<a href="${esc(x.orig)}" target="_blank" rel="noopener">Ir para o portal da disputa</a>` : ""}
       ${x.pe ? `<a href="${esc(x.pe)}" target="_blank" rel="noopener">Processo eletrônico</a>` : ""}</div>
-    <div class="acoes"><button type="button" class="abrir" onclick="abrir(${x.id}, true, 'preco')">Precificar este edital</button><button type="button" class="abrir" onclick="abrir(${x.id}, true, 'crm')">${registro(x.id) ? "Ver no meu CRM" : "Adicionar ao meu CRM"}</button></div>
+    <div class="acoes"><button type="button" class="salvar" onclick="abrir(${x.id}, true, 'analise')">Gerar análise</button><button type="button" class="abrir" onclick="abrir(${x.id}, true, 'preco')">Precificar este edital</button><button type="button" class="abrir" onclick="abrir(${x.id}, true, 'crm')">${registro(x.id) ? "Ver no meu CRM" : "Adicionar ao meu CRM"}</button></div>
     ${mapaHtml(x)}
     <section><h2>Dados do pregão</h2><dl class="campos">
       ${campo("Número", esc(x.n))}${campo("Processo", esc(x.proc))}${campo("Modalidade", esc(x.mod))}${campo("Modo de disputa", esc(x.md))}
@@ -473,6 +495,7 @@ function renderFicha() {
   const corpo = document.getElementById("ficha-corpo");
   if (aba === "preco") { corpo.innerHTML = precoHtml(x); ligarPreco(x); }
   else if (aba === "crm") { corpo.innerHTML = crmHtml(x); ligarCrm(x); }
+  else if (aba === "analise") { corpo.innerHTML = analiseHtml(x); ligarAnalise(x); }
   else corpo.innerHTML = ficha(x);
 }
 document.getElementById("abas").addEventListener("click", (e) => { const b = e.target.closest("[data-aba]"); if (!b || !fichaAtual) return;
@@ -482,7 +505,7 @@ dlg.addEventListener("close", () => { if (location.hash.startsWith("#p")) histor
 document.getElementById("fechar").addEventListener("click", fechar);
 dlg.addEventListener("click", (e) => { if (e.target === dlg) fechar(); });
 document.getElementById("lista").addEventListener("click", (e) => { const b = e.target.closest("[data-abrir]"); if (b) abrir(b.dataset.abrir, true, b.dataset.aba || "ficha"); });
-const doHash = () => { const m = location.hash.match(/^#p(\d+)(?:-(preco|crm))?$/); if (m) { if (porId.has(m[1])) abrir(m[1], false, m[2] || "ficha"); } else fechar(); };
+const doHash = () => { const m = location.hash.match(/^#p(\d+)(?:-(preco|crm|analise))?$/); if (m) { if (porId.has(m[1])) abrir(m[1], false, m[2] || "ficha"); } else fechar(); };
 window.addEventListener("popstate", doHash);
 
 /* ===================== Dados do usuário (privados) =====================
@@ -490,7 +513,7 @@ window.addEventListener("popstate", doHash);
    em qualquer aparelho. Fora dela (arquivo aberto direto): só neste navegador. */
 function lerLocal() { try { return JSON.parse(localStorage.getItem(LOCAL) || "{}") || {}; } catch (e) { return {}; } }
 function gravarLocal() { try { localStorage.setItem(LOCAL, JSON.stringify(store.data)); return true; } catch (e) { return false; } }
-function aoMudarStore() { renderConfig(); renderCrm(); montarChips(); render(); if (dlg.open && fichaAtual && fichaAtual.aba === "ficha") renderFicha(); }
+function aoMudarStore() { renderConfig(); renderModelo(); renderCrm(); montarChips(); render(); if (dlg.open && fichaAtual && fichaAtual.aba === "ficha") renderFicha(); }
 async function iniciarStore() {
   let db = null, user = null;
   try { if (window.claude && window.claude.use) [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]); } catch (e) { db = null; }
@@ -905,9 +928,335 @@ document.getElementById("fontes").innerHTML = D.fontes.map((f) => { const [n, c]
   return `<tr><td>${esc(f.nome)}</td><td><span class="pill ${c}">${n}</span></td><td class="num">${fmt(f.editais)}</td></tr>`; }).join("");
 document.getElementById("cob").innerHTML = `<p><b>Cobertura comprovada:</b> ${fmt(D.cobertura.municipios_com_edital_90d)} dos ${fmt(D.cobertura.municipios_na_base_ibge)} municípios do IBGE (${D.cobertura.percentual_comprovado.toLocaleString("pt-BR")}%) têm ao menos um edital na base.</p>
   <p>Coleta feita pelo coletor da plataforma no GitHub Actions, que consulta a API oficial do PNCP, o Compras.gov.br e os diários do Querido Diário a cada 6 horas. Atualizado em ${esc(D.gerado)}.</p>`;
+/* ===================== Análise do edital com o Claude =====================
+   Gerar análise (no modelo da empresa), checklist de documentos e perguntas sobre o edital.
+   O texto vem do edital que a pessoa anexa (PDF, DOCX, TXT ou ZIP do PNCP), lido aqui no navegador.
+   Sem o edital, a análise sai PRELIMINAR, só com os dados do PNCP. Tudo fica salvo na conta, privado. */
+const MODELO_PADRAO = `# Análise do edital
+## 1. Resumo executivo
+Órgão, objeto em uma frase, modalidade e critério de julgamento, valor estimado, data e hora da sessão, portal da disputa, registro de preços (sim/não).
+## 2. Objeto e escopo
+Serviços e entregas, lotes/itens, quantidades e unidades de medida (UST, ponto de função, página/imagem, mês, hora), locais de execução.
+## 3. Forma de remuneração e medição
+Como se paga (UST, PF, página, valor fixo mensal), regras de medição, glosas e níveis de serviço (ANS/SLA).
+## 4. Prazos
+Esclarecimentos, impugnação, envio da proposta, início da execução, vigência e prorrogação, prazos de entrega.
+## 5. Habilitação
+### Jurídica
+### Fiscal, social e trabalhista
+### Econômico-financeira
+Índices (LG, SG, LC), capital ou patrimônio líquido mínimo, balanço.
+### Técnica
+Atestados exigidos e quantitativos mínimos, profissionais e certificações, registro em conselho, visita técnica.
+## 6. Proposta
+Modelo de proposta, planilha de custos, amostra ou prova de conceito, validade, exequibilidade.
+## 7. Garantias, penalidades e riscos contratuais
+Garantia contratual, multas, sanções, subcontratação, consórcio, cláusulas de risco.
+## 8. Pontos de atenção
+Exigências restritivas ou dúbias, possíveis pedidos de esclarecimento ou impugnação, documentos que faltam no processo.
+## 9. Viabilidade e recomendação
+Aderência à nossa empresa, riscos, recomendação final (Participar / Participar com ressalvas / Não participar) e próximos passos com datas.`;
+
+const ANALISE_LIMITE = 170000;  // caracteres de edital por chamada (o limite do Claude no painel é 256 KiB no total)
+const PALAVRAS_EDITAL = ["habilita", "qualificacao tecnica", "atestado", "capacidade tecnica", "patrimonio liquido", "capital social", "indice",
+  "balanco", "regularidade", "certidao", "visita tecnica", "vistoria", "garantia", "multa", "sanc", "penalidade", "prazo", "vigencia",
+  "ust", "ponto de funcao", "pagina", "imagem", "mensal", "medicao", "nivel de servico", "sla", "ans", "glosa", "amostra", "prova de conceito",
+  "proposta", "planilha", "criterio de julgamento", "menor preco", "tecnica e preco", "lote", "subcontrat", "consorcio", "impugna", "esclarecimento",
+  "declaracao", "registro de precos", "dotacao", "reajuste", "repactuacao", "profissional", "certificacao", "iso", "lgpd"];
+const textos = {};  // id -> {docs:[{nome, paginas:[texto]}], aviso}
+const anal = {};    // id -> {rodando: "analise"|"checklist"|"pergunta"|null, ctl, parcial, erro, turnos}
+let sampleFn = null, sampleOk = null;
+(async () => { try { sampleFn = window.claude && window.claude.use ? await window.claude.use("sample") : null; } catch (e) { sampleFn = null; }
+  sampleOk = !!sampleFn; if (dlg.open && fichaAtual && fichaAtual.aba === "analise") renderFicha(); })();
+
+const docAnalise = (id) => store.data["a" + id] || {};
+function salvarAnalise(x, patch) {
+  const chave = "a" + x.id;
+  const novo = { ...JSON.parse(JSON.stringify(store.data[chave] || {})), ...patch, edital: x.id, atualizado: new Date().toISOString(),
+    resumo: { obj: (x.obj || "").slice(0, 200), o: x.o, uf: x.uf, n: x.n || "", enc: x.enc || null } };
+  store.data = { ...store.data, [chave]: novo };
+  if (store.modo === "conta") { filas[chave] = (filas[chave] || Promise.resolve()).then(() => store.db.collection("data/users/" + store.uid).doc(chave).set(novo)); return filas[chave]; }
+  return gravarLocal() ? Promise.resolve() : Promise.reject({ code: "local" });
+}
+const meuModelo = () => (store.data["modelo-analise"] && store.data["modelo-analise"].texto) || "";
+function salvarModelo(texto) {
+  const novo = { texto: texto.slice(0, 20000), atualizado: new Date().toISOString() };
+  store.data = { ...store.data, "modelo-analise": novo };
+  if (store.modo === "conta") { filas.modelo = (filas.modelo || Promise.resolve()).then(() => store.db.collection("data/users/" + store.uid).doc("modelo-analise").set(novo)); return filas.modelo; }
+  return gravarLocal() ? Promise.resolve() : Promise.reject({ code: "local" });
+}
+
+/* ---------- leitura do edital no navegador ---------- */
+const libs = {};
+function carregarScript(url) {
+  return libs[url] || (libs[url] = new Promise((ok, falha) => { const s = document.createElement("script"); s.src = url; s.onload = ok;
+    s.onerror = () => { delete libs[url]; falha(new Error("não carregou " + url)); }; document.head.appendChild(s); }));
+}
+async function pdfjs() {
+  await carregarScript("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js");
+  window.pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  return window.pdfjsLib;
+}
+async function lerPdf(buf, progresso) {
+  const lib = await pdfjs();
+  const doc = await lib.getDocument({ data: buf, isEvalSupported: false }).promise;
+  const paginas = [];
+  for (let i = 1; i <= doc.numPages; i++) {
+    const pg = await doc.getPage(i); const c = await pg.getTextContent();
+    let t = "", y = null;
+    for (const it of c.items) { const ny = it.transform ? it.transform[5] : null; if (y !== null && ny !== null && Math.abs(ny - y) > 2) t += "\n"; t += it.str + (it.hasEOL ? "\n" : ""); y = ny; }
+    paginas.push(t.replace(/[ \t]+/g, " ").replace(/\n{3,}/g, "\n\n").trim());
+    if (progresso && i % 5 === 0) progresso(`lendo página ${i} de ${doc.numPages}…`);
+  }
+  return paginas;
+}
+async function lerDocx(buf) {
+  await carregarScript("https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js");
+  const r = await window.mammoth.extractRawText({ arrayBuffer: buf });
+  const t = r.value || ""; const partes = [];
+  for (let i = 0; i < t.length; i += 3500) partes.push(t.slice(i, i + 3500));  // "páginas" de ~3.500 caracteres
+  return partes;
+}
+async function lerArquivo(nome, buf, progresso) {
+  const n = nome.toLowerCase(); const b = new Uint8Array(buf.slice(0, 4));
+  const ehPdf = b[0] === 0x25 && b[1] === 0x50 && b[2] === 0x44 && b[3] === 0x46;
+  const ehZip = b[0] === 0x50 && b[1] === 0x4b;
+  if (ehPdf) return [{ nome, paginas: await lerPdf(buf, progresso) }];
+  if (ehZip && (n.endsWith(".docx") || !n.endsWith(".zip"))) {
+    try { return [{ nome, paginas: await lerDocx(buf) }]; } catch (e) { if (n.endsWith(".docx")) throw e; }
+  }
+  if (ehZip) {  // o PNCP entrega muitos editais como .zip com o PDF e os anexos dentro
+    await carregarScript("https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js");
+    const z = await window.JSZip.loadAsync(buf); const saida = [];
+    for (const f of Object.values(z.files)) {
+      if (f.dir || !/\.(pdf|docx|txt)$/i.test(f.name)) continue;
+      if (progresso) progresso(`abrindo ${f.name}…`);
+      saida.push(...await lerArquivo(f.name.split("/").pop(), await f.async("arraybuffer"), progresso));
+    }
+    return saida;
+  }
+  if (n.endsWith(".txt") || n.endsWith(".md") || n.endsWith(".csv")) { const t = new TextDecoder().decode(buf); const p = []; for (let i = 0; i < t.length; i += 3500) p.push(t.slice(i, i + 3500)); return [{ nome, paginas: p }]; }
+  throw new Error(`formato não suportado: ${nome} (use PDF, DOCX, TXT ou ZIP)`);
+}
+async function anexar(x, files) {
+  const st = anal[x.id] || (anal[x.id] = {}); st.lendo = "Lendo o edital…"; st.erro = ""; renderFicha();
+  const docs = [...((textos[x.id] && textos[x.id].docs) || [])];
+  try {
+    for (const f of files) {
+      if (f.size > 60 * 1024 * 1024) throw new Error(`${f.name} passa de 60 MB`);
+      const lidos = await lerArquivo(f.name, await f.arrayBuffer(), (m) => { st.lendo = m; const el = document.getElementById("an-lendo"); if (el) el.textContent = m; });
+      for (const d of lidos) if (!docs.some((o) => o.nome === d.nome)) docs.push(d);
+    }
+    const pag = docs.reduce((s, d) => s + d.paginas.length, 0), chars = docs.reduce((s, d) => s + d.paginas.join("").length, 0);
+    textos[x.id] = { docs, aviso: pag && chars / pag < 120 ? "Pouco texto por página: o arquivo parece ser imagem digitalizada. A análise vai achar pouca coisa; se tiver, anexe a versão em texto (PDF pesquisável ou DOCX)." : "" };
+    try { localStorage.setItem("edital-texto-" + x.id, JSON.stringify(textos[x.id])); } catch (e) { /* edital grande demais para guardar no navegador: anexar de novo depois */ }
+  } catch (e) { st.erro = "Não consegui ler o arquivo: " + (e && e.message || e); }
+  st.lendo = ""; renderFicha();
+}
+function textoDe(x) {
+  if (!textos[x.id]) { try { const t = JSON.parse(localStorage.getItem("edital-texto-" + x.id) || "null"); if (t && t.docs) textos[x.id] = t; } catch (e) { /* sem cópia local */ } }
+  return textos[x.id] || null;
+}
+/* escolhe as páginas que cabem: as primeiras de cada documento e as que falam de habilitação, prazos, medição, penalidades... */
+function contextoEdital(x, limite = ANALISE_LIMITE) {
+  const t = textoDe(x); if (!t || !t.docs.length) return { texto: "", omitidas: [], total: 0 };
+  const pags = []; t.docs.forEach((d) => d.paginas.forEach((txt, i) => pags.push({ doc: d.nome, n: i + 1, txt, pts: 0 })));
+  const total = pags.reduce((s, p) => s + p.txt.length, 0);
+  let escolhidas = pags;
+  if (total > limite) {
+    pags.forEach((p) => { const nt = norm(p.txt); p.pts = PALAVRAS_EDITAL.reduce((s, w) => s + (nt.split(w).length - 1), 0) + (p.n <= 3 ? 1000 : 0); });
+    let usado = 0; const ok = new Set();
+    for (const p of [...pags].sort((a, b) => b.pts - a.pts)) { if (usado + p.txt.length + 40 > limite) continue; ok.add(p); usado += p.txt.length + 40; }
+    escolhidas = pags.filter((p) => ok.has(p));
+  }
+  const omitidas = pags.filter((p) => !escolhidas.includes(p)).map((p) => `${p.doc} p.${p.n}`);
+  return { texto: escolhidas.map((p) => `=== ${p.doc} | página ${p.n} ===\n${p.txt}`).join("\n\n"), omitidas, total };
+}
+function dadosPncp(x) {
+  const it = (x.it || []).slice(0, 80).map(([n, d, q, u, vu, vt]) => `- item ${n}: ${d} | qtd ${q ?? "?"} ${u || ""} | unit. ${vu ? brl(vu) : "sigiloso"} | total ${vt ? brl(vt) : "sigiloso"}`).join("\n");
+  return [`Órgão: ${x.o}${x.un ? " / " + x.un : ""} (${x.m ? x.m + "/" : ""}${x.uf})`, `Modalidade: ${x.mod || ""} nº ${x.n || ""}; processo ${x.proc || "?"}; modo de disputa ${x.md || "?"}`,
+    `Objeto: ${x.obj}`, x.inf ? `Informações complementares: ${x.inf}` : "", `Valor estimado divulgado: ${x.v ? brl(x.v) : "não divulgado"}`,
+    `Registro de preços: ${x.srp == null ? "?" : x.srp ? "sim" : "não"}; amparo legal: ${x.amp || "?"}`,
+    `Abertura das propostas: ${x.ab ? dataHora(x.ab) : "?"}; encerramento: ${x.enc ? dataHora(x.enc) : "?"}`, `Portal da disputa: ${x.plat || "?"} ${x.orig || ""}`,
+    `Link PNCP: ${x.pncp || "?"}`, it ? `Itens (${x.nit || (x.it || []).length}):\n${it}` : "Itens: não coletados"].filter(Boolean).join("\n");
+}
+const REGRAS = `Você é analista de licitações públicas brasileiras (Lei 14.133/2021) de uma empresa de tecnologia e gestão documental (digitalização, indexação, desenvolvimento e sustentação de sistemas).
+Regras obrigatórias:
+- Use SOMENTE as informações dos DADOS DO PNCP e do TEXTO DO EDITAL abaixo. Não invente cláusulas, valores, datas nem exigências.
+- Para cada informação tirada do edital, cite a fonte entre parênteses no formato (nome do arquivo, p. N).
+- Quando algo não estiver no material, escreva "Não localizado no material enviado — verificar no edital".
+- Valor estimado divulgado não é o preço oficial da contratação; diga isso quando falar de valores.
+- Escreva em português do Brasil, direto e objetivo.`;
+
+function prompt(x, tarefa) {
+  const ctx = contextoEdital(x);
+  const base = ctx.texto ? `TEXTO DO EDITAL (extraído dos arquivos anexados${ctx.omitidas.length ? `; ${ctx.omitidas.length} páginas menos relevantes ficaram de fora por tamanho: ${ctx.omitidas.slice(0, 40).join(", ")}${ctx.omitidas.length > 40 ? "…" : ""}` : ""}):\n${ctx.texto}`
+    : "TEXTO DO EDITAL: não foi anexado. Faça a análise PRELIMINAR só com os dados do PNCP e marque claramente o que precisa ser confirmado no edital.";
+  return `${REGRAS}\n\n${tarefa}\n\nDADOS DO PNCP:\n${dadosPncp(x)}\n\n${base}`;
+}
+const fonteTexto = (x) => { const t = textoDe(x); return t && t.docs.length ? `edital anexado: ${t.docs.map((d) => `${d.nome} (${d.paginas.length} p.)`).join(", ")}` : "PRELIMINAR: só dados do PNCP, sem o edital"; };
+const ERROS_SAMPLE = { not_granted: "Você não autorizou o painel a usar o Claude. Para ativar, use o menu de permissões do artefato.", sampling_disabled: "O Claude não está disponível para esta conta.",
+  rate_limited: "Muitos pedidos seguidos ou limite de uso atingido. Espere um pouco e tente de novo.", prompt_too_large: "O edital é grande demais para uma chamada. Anexe só o edital e o termo de referência.",
+  refused: "O Claude recusou este pedido. Reformule a pergunta.", session_expired: "Sua sessão expirou: entre de novo no Claude.", invalid_json: "A resposta veio fora do formato. Toque em gerar de novo.",
+  empty_completion: "A resposta veio vazia. Tente de novo.", upstream_error: "Falha temporária de conexão. Tente de novo." };
+const msgErro = (e) => ERROS_SAMPLE[e && e.code] || "Não foi possível concluir (" + (e && e.code || "erro") + ").";
+
+async function gerarAnalise(x) {
+  const st = anal[x.id] || (anal[x.id] = {}); if (st.rodando) return;
+  st.rodando = "analise"; st.parcial = ""; st.erro = ""; st.ctl = new AbortController(); renderFicha();
+  const modelo = meuModelo() || MODELO_PADRAO;
+  const tarefa = `TAREFA: escreva a análise deste edital seguindo EXATAMENTE a estrutura do MODELO abaixo (mesmos títulos, na mesma ordem), em Markdown. Preencha cada seção com o que o material traz.\n\nMODELO:\n${modelo}`;
+  try {
+    const r = await sampleFn(prompt(x, tarefa), { signal: st.ctl.signal, cache: false, onText: ({ text }) => { st.parcial = text; const el = document.getElementById("an-texto"); if (el) el.innerHTML = md(text); } });
+    await salvarAnalise(x, { analise: { texto: r.text, em: new Date().toISOString(), fonte: fonteTexto(x), modelo: meuModelo() ? "meu modelo" : "modelo padrão", cortada: r.truncated } });
+  } catch (e) { if (e.code !== "cancelled") st.erro = msgErro(e); if (e.text) await salvarAnalise(x, { analise: { texto: e.text + "\n\n_(análise interrompida)_", em: new Date().toISOString(), fonte: fonteTexto(x), modelo: "parcial" } }).catch(() => {}); }
+  st.rodando = null; st.parcial = ""; renderFicha();
+}
+async function gerarChecklist(x) {
+  const st = anal[x.id] || (anal[x.id] = {}); if (st.rodando) return;
+  st.rodando = "checklist"; st.erro = ""; st.ctl = new AbortController(); renderFicha();
+  const tarefa = `TAREFA: monte o CHECKLIST de tudo o que a empresa precisa providenciar para participar: documentos de habilitação (jurídica; fiscal, social e trabalhista; econômico-financeira; técnica), declarações, proposta e anexos, garantia, visita técnica, amostra ou prova de conceito e prazos.
+Responda SOMENTE com JSON no formato {"itens":[{"grupo":"Habilitação jurídica","item":"Contrato social e alterações","detalhe":"exigência específica ou quantitativo","ref":"edital.pdf, p. 12, item 8.3","prazo":"junto com a proposta"}]}.
+Grupos permitidos: "Habilitação jurídica", "Fiscal, social e trabalhista", "Econômico-financeira", "Qualificação técnica", "Declarações", "Proposta", "Garantia e outros", "Prazos".
+Use "ref" vazio quando não houver página e "detalhe" com números exigidos (índices, capital, quantitativos de atestado).`;
+  try {
+    const r = await sampleFn.json(prompt(x, tarefa), { signal: st.ctl.signal, cache: false });
+    const itens = (r && Array.isArray(r.itens) ? r.itens : []).filter((i) => i && i.item).slice(0, 150)
+      .map((i) => ({ grupo: String(i.grupo || "Outros").slice(0, 60), item: String(i.item).slice(0, 300), detalhe: String(i.detalhe || "").slice(0, 600), ref: String(i.ref || "").slice(0, 120), prazo: String(i.prazo || "").slice(0, 120) }));
+    if (!itens.length) throw { code: "empty_completion" };
+    await salvarAnalise(x, { checklist: { itens, marcados: {}, em: new Date().toISOString(), fonte: fonteTexto(x) } });
+  } catch (e) { if (e.code !== "cancelled") st.erro = msgErro(e); }
+  st.rodando = null; renderFicha();
+}
+async function perguntar(x, pergunta) {
+  const st = anal[x.id] || (anal[x.id] = {}); if (st.rodando || !pergunta.trim()) return;
+  st.rodando = "pergunta"; st.erro = ""; st.parcial = ""; st.ctl = new AbortController();
+  const hist = (docAnalise(x.id).perguntas || []).slice(-4);
+  const turnos = [{ role: "user", content: prompt(x, "TAREFA: responda às perguntas da equipe sobre este edital, curto e com a fonte (arquivo, página) de cada resposta. Se a resposta não estiver no material, diga isso e onde procurar.") }];
+  hist.forEach((h) => { turnos.push({ role: "user", content: h.q }); turnos.push({ role: "assistant", content: h.r }); });
+  turnos.push({ role: "user", content: pergunta.trim() });
+  st.pergunta = pergunta.trim(); renderFicha();
+  try {
+    const r = await sampleFn(turnos, { signal: st.ctl.signal, cache: false, onText: ({ text }) => { st.parcial = text; const el = document.getElementById("an-resp-viva"); if (el) el.innerHTML = md(text); } });
+    const lista = [...(docAnalise(x.id).perguntas || []), { q: st.pergunta, r: r.text, em: new Date().toISOString(), fonte: fonteTexto(x) }].slice(-20);
+    await salvarAnalise(x, { perguntas: lista });
+  } catch (e) { if (e.code !== "cancelled") st.erro = msgErro(e); }
+  st.rodando = null; st.parcial = ""; st.pergunta = ""; renderFicha();
+}
+
+/* Markdown simples e seguro (escapa tudo antes) */
+function md(t) {
+  const linhas = esc(t || "").split("\n"); let html = "", lista = null, tabela = [];
+  const inline = (s) => s.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/(^|[^*])\*([^*\n]+)\*/g, "$1<i>$2</i>").replace(/`([^`]+)`/g, "<code>$1</code>");
+  const fechaLista = () => { if (lista) { html += `</${lista}>`; lista = null; } };
+  const fechaTabela = () => { if (tabela.length) { const cel = (l) => l.replace(/^\||\|$/g, "").split("|").map((c) => inline(c.trim()));
+      const corpo = tabela.filter((l) => !/^\|?\s*:?-{2,}/.test(l)); const [cab, ...resto] = corpo;
+      html += `<div class="tabela"><table><thead><tr>${cel(cab).map((c) => `<th>${c}</th>`).join("")}</tr></thead><tbody>${resto.map((l) => `<tr>${cel(l).map((c) => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`; tabela = []; } };
+  for (const l of linhas) {
+    if (/^\s*\|.*\|\s*$/.test(l)) { fechaLista(); tabela.push(l.trim()); continue; } else fechaTabela();
+    let m;
+    if ((m = l.match(/^(#{1,4})\s+(.*)/))) { fechaLista(); const n = Math.min(4, m[1].length + 1); html += `<h${n}>${inline(m[2])}</h${n}>`; }
+    else if ((m = l.match(/^\s*[-*•]\s+(.*)/))) { if (lista !== "ul") { fechaLista(); html += "<ul>"; lista = "ul"; } html += `<li>${inline(m[1])}</li>`; }
+    else if ((m = l.match(/^\s*\d+[.)]\s+(.*)/))) { if (lista !== "ol") { fechaLista(); html += "<ol>"; lista = "ol"; } html += `<li>${inline(m[1])}</li>`; }
+    else if (!l.trim()) fechaLista();
+    else { fechaLista(); html += `<p>${inline(l)}</p>`; }
+  }
+  fechaLista(); fechaTabela(); return html;
+}
+function arquivoWord(x, titulo, corpoHtml) {
+  return `<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><title>${esc(titulo)}</title>
+<style>body{font-family:Calibri,Arial,sans-serif;font-size:11pt}h1,h2,h3{color:#1f3b57}table{border-collapse:collapse}td,th{border:1px solid #999;padding:4px}</style></head><body>
+<h1>${esc(titulo)}</h1><p>${esc(x.o)} · ${esc(x.mod || "")} nº ${esc(x.n || "")} · ${esc(x.m ? x.m + "/" : "")}${esc(x.uf)}<br>${esc(x.obj)}<br>PNCP: ${esc(x.pncp || "")}</p>${corpoHtml}</body></html>`;
+}
+
+/* ---------- aba Análise ---------- */
+function analiseHtml(x) {
+  const st = anal[x.id] || {}; const a = docAnalise(x.id); const t = textoDe(x);
+  const ocupado = !!st.rodando || !!st.lendo;
+  const semClaude = sampleOk === false;
+  const docsPncp = (x.doc || []).filter(([, , url]) => url).slice(0, 6);
+  const cab = `<p class="eyebrow">${esc(x.o)} · ${esc(x.m ? x.m + "/" : "")}${esc(x.uf)}</p>
+    <h2 id="ficha-titulo">Análise: ${esc(x.mod || "")}${x.n ? " nº " + esc(x.n) : ""}</h2><p class="obj-full">${esc(x.obj)}</p>`;
+  const passo1 = `<section><h2>1. Edital</h2>
+    <p class="conta">${t && t.docs.length ? `<b>Anexado:</b> ${t.docs.map((d) => `${esc(d.nome)} (${d.paginas.length} p.)`).join(", ")}.` : "Baixe o edital e anexe aqui. O painel lê o arquivo no seu navegador; sem o edital, a análise sai <b>preliminar</b>, só com os dados do PNCP."}</p>
+    ${t && t.aviso ? `<p class="aviso-an">${esc(t.aviso)}</p>` : ""}
+    <div class="acoes">${botaoBaixar(x)}${docsPncp.map(([tt, , url]) => `<a href="${esc(url)}" target="_blank" rel="noopener">⬇ ${esc(tt.slice(0, 40))}</a>`).join("")}${!botaoBaixar(x) && !docsPncp.length && x.pncp ? `<a href="${esc(x.pncp)}" target="_blank" rel="noopener">Abrir no PNCP para baixar</a>` : ""}
+      <label class="abrir" style="display:inline-block;text-transform:none;letter-spacing:0;color:var(--surface)">${t && t.docs.length ? "Anexar mais arquivos" : "Anexar edital (PDF, DOCX, ZIP)"}<input type="file" id="an-arquivo" accept=".pdf,.docx,.zip,.txt,application/pdf" multiple hidden ${ocupado ? "disabled" : ""}></label>
+      ${t && t.docs.length ? `<button type="button" class="mais" id="an-limpar" ${ocupado ? "disabled" : ""}>Remover arquivos</button>` : ""}</div>
+    ${st.lendo ? `<p class="conta" id="an-lendo" role="status">${esc(st.lendo)}</p>` : ""}</section>`;
+  if (semClaude) return cab + passo1 + `<p class="aviso-an">A análise com o Claude funciona quando o painel é aberto dentro do Claude (claude.ai ou app). Aqui só dá para anexar e ler o edital.</p>`;
+  const botoes = `<div class="acoes">
+      <button type="button" class="salvar" id="an-gerar" ${ocupado || sampleOk === null ? "disabled" : ""}>${a.analise ? "Gerar análise de novo" : "Gerar análise"}</button>
+      <button type="button" class="abrir" id="an-check" ${ocupado || sampleOk === null ? "disabled" : ""}>${a.checklist ? "Refazer checklist" : "Gerar checklist de documentos"}</button>
+      ${st.rodando ? `<button type="button" class="mais" id="an-parar">Parar</button>` : ""}
+      ${a.analise && temDownload ? `<button type="button" class="mais" id="an-word">Baixar análise (Word)</button>` : ""}</div>
+    <p class="dica">Modelo usado: <b>${meuModelo() ? "o seu" : "padrão do painel"}</b> (troque em <a href="#modelo-sec">Meu modelo de análise</a>). Cada pedido usa o seu limite de uso do Claude. Confira sempre as citações no edital.</p>`;
+  const status = st.rodando === "analise" ? `<p class="conta" role="status">${st.parcial ? "Escrevendo a análise…" : "Analisando o edital… (costuma levar de 30 segundos a 2 minutos)"}</p>`
+    : st.rodando === "checklist" ? `<p class="conta" role="status">Montando o checklist…</p>` : "";
+  const erro = st.erro ? `<p class="aviso-an" role="alert">${esc(st.erro)}</p>` : "";
+  const analise = st.rodando === "analise" ? `<div class="md" id="an-texto">${md(st.parcial)}</div>`
+    : a.analise ? `<p class="conta">Gerada em ${new Date(a.analise.em).toLocaleString("pt-BR")} · ${esc(a.analise.fonte)} · ${esc(a.analise.modelo || "")}${a.analise.cortada ? " · <b>cortada no limite de tamanho</b>" : ""}</p><div class="md" id="an-texto">${md(a.analise.texto)}</div>`
+    : `<p class="conta">Nenhuma análise ainda.</p>`;
+  const ck = a.checklist; const marc = (ck && ck.marcados) || {};
+  const grupos = {}; (ck ? ck.itens : []).forEach((i, k) => (grupos[i.grupo] = grupos[i.grupo] || []).push([i, k]));
+  const feitos = ck ? ck.itens.filter((_, k) => marc[k]).length : 0;
+  const checklist = ck ? `<p class="conta" id="an-ck-conta">${feitos} de ${ck.itens.length} providenciados · gerado em ${new Date(ck.em).toLocaleString("pt-BR")} · ${esc(ck.fonte)}</p>
+    ${Object.entries(grupos).map(([g, l]) => `<h3>${esc(g)}</h3><ul class="check">${l.map(([i, k]) => `<li><label><input type="checkbox" data-ck="${k}" ${marc[k] ? "checked" : ""}> <span><b>${esc(i.item)}</b>${i.detalhe ? ` — ${esc(i.detalhe)}` : ""}${i.ref ? ` <span class="ref">(${esc(i.ref)})</span>` : ""}${i.prazo ? ` <span class="ref">· ${esc(i.prazo)}</span>` : ""}</span></label></li>`).join("")}</ul>`).join("")}
+    ${temDownload ? `<div class="acoes"><button type="button" class="mais" id="an-ck-csv">Baixar checklist (CSV)</button></div>` : ""}`
+    : `<p class="conta">Nenhum checklist ainda.</p>`;
+  const perguntas = (a.perguntas || []);
+  const qa = `${perguntas.map((p) => `<div class="qa"><p class="q">${esc(p.q)}</p><div class="md">${md(p.r)}</div><p class="ref">${new Date(p.em).toLocaleString("pt-BR")} · ${esc(p.fonte || "")}</p></div>`).join("")}
+    ${st.rodando === "pergunta" ? `<div class="qa"><p class="q">${esc(st.pergunta)}</p><div class="md" id="an-resp-viva">${st.parcial ? md(st.parcial) : "<p class='conta'>Procurando no edital…</p>"}</div></div>` : ""}
+    <form id="an-perg" class="pergunta"><label for="an-q" class="conta">Pergunte sobre o edital</label>
+      <textarea id="an-q" rows="2" placeholder="ex.: Quais atestados de capacidade técnica são exigidos e com que quantidade mínima?" ${ocupado ? "disabled" : ""}></textarea>
+      <div class="acoes"><button type="submit" class="abrir" ${ocupado || sampleOk === null ? "disabled" : ""}>Perguntar</button>
+      ${["Quais documentos de habilitação precisa?", "Tem visita técnica obrigatória?", "Qual a forma de pagamento e medição?", "Quais as multas e a garantia?"].map((s) => `<button type="button" class="mais" data-sug="${esc(s)}" ${ocupado ? "disabled" : ""}>${esc(s)}</button>`).join("")}</div></form>`;
+  return cab + passo1 + `<section><h2>2. Análise</h2>${botoes}${status}${erro}${analise}</section>
+    <section><h2>3. Checklist de documentos</h2>${checklist}</section>
+    <section><h2>4. Perguntas e respostas</h2>${qa}</section>`;
+}
+function ligarAnalise(x) {
+  const $ = (id) => document.getElementById(id);
+  const arq = $("an-arquivo"); if (arq) arq.onchange = () => { const f = [...arq.files]; arq.value = ""; if (f.length) anexar(x, f); };
+  if ($("an-limpar")) $("an-limpar").onclick = () => { delete textos[x.id]; try { localStorage.removeItem("edital-texto-" + x.id); } catch (e) { /* nada */ } renderFicha(); };
+  if ($("an-gerar")) $("an-gerar").onclick = () => gerarAnalise(x);
+  if ($("an-check")) $("an-check").onclick = () => gerarChecklist(x);
+  if ($("an-parar")) $("an-parar").onclick = () => { const st = anal[x.id]; if (st && st.ctl) st.ctl.abort(); };
+  if ($("an-word")) $("an-word").onclick = async () => { const a = docAnalise(x.id).analise; if (!a) return;
+    try { await dl.save({ filename: `analise-${slugNome(x)}.doc`, data: new Blob([arquivoWord(x, "Análise do edital", `<p><i>${esc(a.fonte)} · gerada em ${new Date(a.em).toLocaleString("pt-BR")}</i></p>` + md(a.texto))], { type: "application/msword" }) }); } catch (e) { /* recusado */ } };
+  if ($("an-ck-csv")) $("an-ck-csv").onclick = async () => { const ck = docAnalise(x.id).checklist; if (!ck) return;
+    const linhas = [["Grupo", "Item", "Detalhe", "Referência", "Prazo", "Providenciado"], ...ck.itens.map((i, k) => [i.grupo, i.item, i.detalhe, i.ref, i.prazo, (ck.marcados || {})[k] ? "sim" : "não"])];
+    try { await dl.save({ filename: `checklist-${slugNome(x)}.csv`, data: "﻿" + linhas.map((l) => l.map((c) => `"${String(c ?? "").replace(/"/g, '""')}"`).join(";")).join("\r\n") }); } catch (e) { /* recusado */ } };
+  document.querySelectorAll("[data-ck]").forEach((c) => c.onchange = () => { const ck = docAnalise(x.id).checklist; if (!ck) return;
+    const marcados = { ...(ck.marcados || {}), [c.dataset.ck]: c.checked };
+    const el = document.getElementById("an-ck-conta"); if (el) el.firstChild.textContent = `${ck.itens.filter((_, k) => marcados[k]).length} de ${ck.itens.length} providenciados`;
+    salvarAnalise(x, { checklist: { ...ck, marcados } }).catch(() => {}); });
+  const f = $("an-perg"); if (f) { f.onsubmit = (e) => { e.preventDefault(); perguntar(x, $("an-q").value); };
+    f.querySelectorAll("[data-sug]").forEach((b) => b.onclick = () => perguntar(x, b.dataset.sug)); }
+}
+const slugNome = (x) => norm(`${x.o} ${x.n || x.id}`).trim().replace(/[^a-z0-9]+/g, "-").slice(0, 60);
+
+/* ---------- Meu modelo de análise (configuração) ---------- */
+function renderModelo() {
+  const ta = document.getElementById("modelo-texto"); if (!ta) return;
+  if (document.activeElement !== ta && !ta.dataset.sujo) ta.value = meuModelo() || MODELO_PADRAO;
+  document.getElementById("modelo-estado").textContent = (meuModelo() ? "Usando o seu modelo." : "Usando o modelo padrão do painel.") + " " + ondeSalva() + ".";
+}
+document.getElementById("modelo-texto").addEventListener("input", (e) => { e.target.dataset.sujo = "1"; document.getElementById("modelo-estado").textContent = "Alterações não salvas."; });
+document.getElementById("modelo-salvar").addEventListener("click", async () => { const ta = document.getElementById("modelo-texto"); const est = document.getElementById("modelo-estado");
+  est.textContent = "Salvando…"; try { await salvarModelo(ta.value.trim() === MODELO_PADRAO.trim() ? "" : ta.value.trim()); delete ta.dataset.sujo; renderModelo(); est.textContent = "Salvo · " + ondeSalva() + "."; }
+  catch (e) { est.textContent = "Não foi possível salvar (" + (e && e.code || "erro") + ")."; } });
+document.getElementById("modelo-arquivo").addEventListener("change", async (e) => { const f = e.target.files && e.target.files[0]; e.target.value = ""; if (!f) return;
+  const est = document.getElementById("modelo-estado"); est.textContent = "Lendo o modelo…";
+  try { const docs = await lerArquivo(f.name, await f.arrayBuffer()); const ta = document.getElementById("modelo-texto");
+    ta.value = docs.map((d) => d.paginas.join("\n")).join("\n\n").slice(0, 20000); ta.dataset.sujo = "1";
+    est.textContent = `Modelo lido de ${f.name}. Confira e toque em "Salvar modelo".`; } catch (err) { est.textContent = "Não consegui ler: " + (err && err.message || err); } });
+document.getElementById("modelo-padrao").addEventListener("click", () => { const ta = document.getElementById("modelo-texto"); ta.value = MODELO_PADRAO; ta.dataset.sujo = "1";
+  document.getElementById("modelo-estado").textContent = "Modelo padrão carregado. Toque em \"Salvar modelo\" para voltar a usá-lo."; });
+
 render(); renderAv(); doHash();
 setTimeout(carregarTodas, 50);
-renderConfig(); renderCrm(); iniciarStore();
+renderConfig(); renderModelo(); renderCrm(); iniciarStore();
 </script>
 </body>
 </html>

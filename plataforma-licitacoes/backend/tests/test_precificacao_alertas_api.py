@@ -114,3 +114,16 @@ def test_api_exige_login(banco):
     with TestClient(app) as c:
         assert c.get("/licitacoes").status_code == 401
         assert c.post("/auth/login", json={"email": "x@x.com", "senha": "errada"}).status_code == 401
+
+
+def test_producao_recusa_configuracao_insegura(monkeypatch):
+    from licitacoes.config import Configuracao
+
+    dev = Configuracao(_env_file=None)
+    assert dev.conferir_producao() == []
+    ruim = Configuracao(_env_file=None, ambiente="producao")
+    erros = " ".join(ruim.conferir_producao())
+    assert "LIC_JWT_SEGREDO" in erros and "LIC_CORS_ORIGENS" in erros and "LIC_DATABASE_URL" in erros
+    boa = Configuracao(_env_file=None, ambiente="producao", jwt_segredo="x" * 40, cors_origens="https://licitacoes.exemplo.com.br",
+                       database_url="postgresql+psycopg://u:s@postgres/licitacoes")
+    assert boa.conferir_producao() == [] and boa.origens == ["https://licitacoes.exemplo.com.br"]

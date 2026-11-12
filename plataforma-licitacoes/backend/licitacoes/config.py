@@ -57,6 +57,11 @@ class Configuracao(BaseSettings):
     horas_prazo_proximo: int = 72
     valor_alto: float = 5_000_000.0
 
+    # Ambiente: "desenvolvimento" ou "producao". Em produção o segredo padrão é recusado.
+    ambiente: str = "desenvolvimento"
+    # Origens que o navegador pode usar para chamar a API (vírgula). Em produção, só o domínio do site.
+    cors_origens: str = "*"
+
     # Autenticação
     jwt_segredo: str = "troque-este-segredo-em-producao-0000000000"
     jwt_horas: int = 12
@@ -74,6 +79,25 @@ class Configuracao(BaseSettings):
     whatsapp_versao_api: str = "v21.0"
 
     user_agent: str = "PlataformaLicitacoes/5.0 (monitoramento de editais publicos)"
+
+    @property
+    def origens(self) -> list[str]:
+        return [x.strip() for x in self.cors_origens.split(",") if x.strip()] or ["*"]
+
+    def conferir_producao(self) -> list[str]:
+        """Problemas que impedem subir em produção (lista vazia = pode subir)."""
+        if self.ambiente != "producao":
+            return []
+        erros = []
+        if self.jwt_segredo.startswith("troque-este-segredo") or len(self.jwt_segredo) < 32:
+            erros.append("LIC_JWT_SEGREDO precisa de um segredo próprio com 32 caracteres ou mais")
+        if "*" in self.origens:
+            erros.append("LIC_CORS_ORIGENS precisa listar o domínio do site (ex.: https://licitacoes.suaempresa.com.br)")
+        if not self.auth_obrigatoria:
+            erros.append("LIC_AUTH_OBRIGATORIA não pode ser falso em produção")
+        if self.database_url.startswith("sqlite"):
+            erros.append("LIC_DATABASE_URL deve apontar para o PostgreSQL em produção")
+        return erros
 
     @property
     def prioritarias(self) -> list[str]:

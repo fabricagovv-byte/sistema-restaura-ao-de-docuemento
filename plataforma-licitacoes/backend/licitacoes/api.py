@@ -30,6 +30,9 @@ async def _ciclo_vida(_app):
     from .config import config
     from .db import sessao
 
+    problemas = config().conferir_producao()
+    if problemas:
+        raise RuntimeError("configuração de produção incompleta: " + "; ".join(problemas))
     if config().jwt_segredo.startswith("troque-este-segredo"):
         logging.getLogger("licitacoes").warning("LIC_JWT_SEGREDO padrão: defina um segredo próprio em produção")
     with sessao() as s:
@@ -38,7 +41,13 @@ async def _ciclo_vida(_app):
 
 
 app = FastAPI(title="Plataforma Nacional de Licitações", version="5.0", lifespan=_ciclo_vida)
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+def _origens() -> list[str]:
+    from .config import config
+
+    return config().origens
+
+
+app.add_middleware(CORSMiddleware, allow_origins=_origens(), allow_methods=["*"], allow_headers=["*"])
 
 LEITOR = Depends(exigir("leitor"))
 ANALISTA = Depends(exigir("analista"))

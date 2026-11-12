@@ -9,3 +9,6 @@ resultado_restauracao/
 
 # armazenamento local da plataforma (documentos baixados e textos extraídos)
 plataforma-licitacoes/backend/armazenamento/
+plataforma-licitacoes/producao/backups/
+plataforma-licitacoes/producao/atualizar.log
+.pacote-licitacoes/
