@@ -217,12 +217,13 @@ class Execucao:
 
 def classificar_licitacao(s: Session, lic: Licitacao, cats=None) -> None:
     """Categorias pelo objeto + forma de pagamento pelo objeto e pelos itens já coletados."""
-    from .taxonomia import remuneracao
+    from .taxonomia import documental_pelos_itens, remuneracao
 
     texto = f"{lic.objeto} {lic.informacao_complementar or ''}"
     base = classificar(texto, cats or categorias_ativas(s))
     # consulta direta: ler lic.itens aqui deixaria em cache uma lista vazia antes de os itens serem gravados
     itens = s.query(Item.unidade, Item.descricao).filter(Item.licitacao_id == lic.id).all() if lic.id is not None else []
+    base = base + documental_pelos_itens(texto, itens, {c["codigo"] for c in base})
     lic.categorias = base + remuneracao(texto, itens, base, _texto_documentos(s, lic))
 
 

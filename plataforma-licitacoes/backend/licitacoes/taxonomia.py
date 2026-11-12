@@ -28,6 +28,22 @@ NEG_IMPRESSAO = ["outsourcing de impressao", "impressao corporativa", "impressao
                  "impressao/copia", "multifuncion", "impressoras", "equipamentos de impressao", "locacao de scanners",
                  "scanners documentais", "escaneamento intraoral", "videomonitoramento", "video monitoramento", "cameras",
                  "certificado digital e-cpf", "token"]
+# digitalização que não é de documento: imagem médica e odontológica, gráfica, plotagem, equipamento avulso
+NEG_DIGITALIZACAO = NEG_IMPRESSAO + [
+    "radiolog", "radiograf", "radiodiagnost", "raio x", "raios x", "raio-x", "mamograf", "tomograf", "intraora",
+    "odontolog", "plotagem", "copia de engenharia", "copias coloridas", "copia e digitalizacao", "copias e digitalizacao",
+    "servicos graficos", "impressao 3d", "impressora", "mesa digitalizadora", "mesas digitalizadoras", "digitalizadora",
+    "camera fotografica", "escaneamento facial", "escaneamento 3d", "scanner 3d", "digitalizacao de sinais",
+    "transformacao digital", "imageamento aereo", "aerofotogram", "aerolevantamento", "georreferenc", "geoprocessamento",
+    "cartograf", "aquisicao de equipamentos", "novos equipamentos de digitalizacao", "equipamentos de digitalizacao de imagem"]
+# expressões que só aparecem em serviço documental de verdade: valem mesmo com termo de exclusão no texto
+# (ex.: "outsourcing de processamento de documentos, compreendendo digitalização, impressão...")
+FORTES_DIGITALIZACAO = [
+    "digitalizacao de acervo", "digitalizacao do acervo", "digitalizacao de prontuarios", "digitalizacao de processos",
+    "digitalizacao e indexacao", "digitalizacao, indexacao", "outsourcing de processamento de documentos",
+    "processamento de documentos do tipo outsourcing", "digitalizacao de documentos historicos",
+    "documentos fisicos", "preparo e digitalizacao", "preparacao para digitalizacao", "digitalizacao do arquivo",
+    "digitalizacao de livros", "digitalizacao de documentos do arquivo", "gestao documental"]
 
 NEG_PESQUISA = ["pesquisa de precos", "pesquisa de preco", "pesquisa mercadologica", "levantamento de precos",
                 "aquisicao de materia", "aquisicao de equipamento", "aquisicao do equipamento", "aquisicao de insumos",
@@ -47,6 +63,8 @@ class DefCategoria:
     # termos que só contam se aparecer também uma palavra de contexto (ex.: "manutenção do sistema" + "software")
     ambiguos: list[str] = field(default_factory=list)
     contexto: list[str] = field(default_factory=list)
+    # termos que confirmam a categoria mesmo havendo termo de exclusão no texto
+    fortes: list[str] = field(default_factory=list)
 
 
 PADRAO: list[DefCategoria] = [
@@ -56,13 +74,17 @@ PADRAO: list[DefCategoria] = [
         "documentos fisicos em digitais", "desmaterializacao", "captura e processamento de imagens",
         "imageamento", "digitalizacao de acervo", "digitalizacao de processos", "digitalizacao de prontuarios",
         "digitalizacao de plantas", "certificacao digital de documentos", "decreto 10.278", "bpo documental",
-        "outsourcing de digitalizacao", "microfilmagem", "arquivamento eletronico",
-    ], NEG_IMPRESSAO),
+        "outsourcing de digitalizacao", "microfilmagem", "arquivamento eletronico", "preparo e digitalizacao",
+        "imagens digitalizadas", "paginas digitalizadas", "outsourcing de processamento de documentos",
+        "processamento de documentos do tipo outsourcing",
+        "captura de documentos", "conversao do acervo", "conversao de acervo",
+    ], NEG_DIGITALIZACAO, fortes=FORTES_DIGITALIZACAO),
     DefCategoria("indexacao", "Indexação", "gestao_documental", [
         "indexacao", "catalogacao de documentos", "classificacao documental", "plano de classificacao",
         "descricao arquivistica", "indexacao de imagens",
     ], ["indexacao doi", "revista cientifica", "periodico", "indice de reajuste", "videomonitoramento",
-        "video monitoramento", "cameras"], ambiguos=["metadados"], contexto=CTX_DOC),
+        "video monitoramento", "cameras", "indexacao da revista", "revista ", "edicao de video", "gravacao e transmissao",
+        "sessoes de julgamento"], ambiguos=["metadados"], contexto=CTX_DOC),
     DefCategoria("restauracao", "Restauração de documentos", "gestao_documental", [
         "restauracao de documentos", "restauracao de acervo", "conservacao e restauracao", "conservacao preventiva",
         "restauracao de livros", "restauracao de bens culturais",
@@ -278,12 +300,47 @@ def classificar(objeto: str, categorias: list[DefCategoria] | None = None) -> li
         if not casados:
             continue
         bloqueio = [t for t in c.excluir if _casa(n, t)]
-        if bloqueio:
+        if bloqueio and not any(_casa(n, f) for f in c.fortes):
             continue
         saida.append({
             "codigo": c.codigo, "nome": c.nome, "segmento": c.segmento,
             "termos": casados, "forca": min(1.0, 0.5 + 0.25 * len(casados)),
         })
+    return saida
+
+
+# Serviço documental que só aparece nos itens: o objeto diz "gestão documental" ou "gerenciamento eletrônico de
+# processos" e os itens trazem "digitalização de documentos (página)", "indexação de documentos"...
+_ITEM_DOCUMENTAL = {
+    "digitalizacao": re.compile(
+        r"digitalizacao (de|do|dos|da|das) (documento|acervo|prontuario|processo|arquivo|livro|jornai|folha|pagina|"
+        r"registro|certid|matricula|ficha|pasta|plantas? (de|do|dos) (arquivo|acervo|processo))|"
+        r"(paginas?|imagens?|folhas?) digitalizad|escaneamento de document|microfilmagem|"
+        r"captura de imagens de document|prepar\w* (e|para) digitalizacao|digitalizacao e indexacao"),
+    "indexacao": re.compile(r"indexacao (de|do|dos|da|das) (documento|imagen|acervo|processo|arquivo|registro|pagina|metadado)|"
+                            r"digitalizacao e indexacao"),
+}
+_COMPRA_EQUIPAMENTO = re.compile(r"aquisica\w* .{0,40}(equipamento|materia|perifer|computador|suprimento|move)|"
+                                 r"equipamentos e suprimentos|materiais de processamento|equipamentos de informatica|"
+                                 r"fornecimento de moveis|aerolevantamento|fotogrametr")
+
+
+def documental_pelos_itens(objeto: str, itens: list[tuple[str | None, str | None]], ja: set[str]) -> list[dict]:
+    """Digitalização e indexação achadas na descrição dos itens, quando o objeto não diz. Compra de equipamento
+    (scanner, computador) não conta: o interesse é o serviço."""
+    obj = normalizar(objeto or "")
+    if natureza(objeto) == "material" or _COMPRA_EQUIPAMENTO.search(obj):
+        return []
+    textos = [normalizar(d or "") for _, d in itens]
+    saida = []
+    for codigo, rx in _ITEM_DOCUMENTAL.items():
+        if codigo in ja:
+            continue
+        achados = sorted({m.group(0) for t in textos for m in [rx.search(t)] if m})
+        if achados:
+            c = por_codigo(codigo)
+            saida.append({"codigo": codigo, "nome": c.nome, "segmento": c.segmento,
+                          "termos": [f"item: {a}" for a in achados[:3]], "forca": 0.5})
     return saida
 
 

@@ -8,7 +8,7 @@ from licitacoes import catalogo, coleta
 from licitacoes.busca import Filtros, buscar
 from licitacoes.conectores.base import ClienteHttp
 from licitacoes.conectores.pncp import ConectorPncp, normalizar_contratacao
-from licitacoes.modelos import HistoricoAlteracao, Licitacao, agora
+from licitacoes.modelos import HistoricoAlteracao, Item, Licitacao, agora
 from licitacoes.taxonomia import classificar, expandir_consulta
 
 
@@ -256,3 +256,64 @@ def test_plataforma_de_origem():
     assert catalogo.plataforma_de("https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/x") == "Compras.gov.br"
     assert catalogo.plataforma_de(None, "[Portal de Compras Públicas] - Locação de software") == "Portal de Compras Públicas"
     assert catalogo.plataforma_de("https://www.bllcompras.com/Process/1") == "BLL Compras"
+
+
+def test_digitalizacao_de_documento_e_nao_de_imagem_medica_grafica_ou_equipamento():
+    from licitacoes.taxonomia import classificar
+
+    def dig(t):
+        return "digitalizacao" in {c["codigo"] for c in classificar(t)}
+
+    # casos reais da base (11/11/2026) que eram falsos positivos
+    for t in ("Locação de sistema de digitalização de imagens radiográficas",
+              "Serviços de plotagem, cópia de engenharia, digitalização e cópias coloridas",
+              "Aquisição de impressora colorida com funções de cópia e digitalização para papel A4",
+              "Equipamentos de tecnologia: impressão 3D, digitalização, realidade virtual e audiovisual",
+              "Mocho odontológico e sistema de digitalização de imagens intraorais",
+              "Prestação de serviços gráficos e de digitalização para a Câmara Municipal",
+              "Exames de radiologia convencional digitalizada",
+              "Aerolevantamento aerofotogramétrico e imageamento aéreo de alta resolução",
+              "Aquisição de 15 novos equipamentos de digitalização de imagem",
+              "Aquisição de equipamentos de informática, impressão, digitalização e periféricos"):
+        assert not dig(t), t
+    for t in ("Serviços de digitalização, indexação e certificação do acervo documental",
+              "Outsourcing de processamento de documentos, compreendendo digitalização, impressão e guarda",
+              "Preparo e digitalização de documentos em meio físico",
+              "Conversão do acervo físico para documentos digitalizados com OCR",
+              "Microfilmagem e digitalização de prontuários"):
+        assert dig(t), t
+
+
+def test_indexacao_de_documento_e_nao_de_revista_ou_video():
+    from licitacoes.taxonomia import classificar
+
+    def idx(t):
+        return "indexacao" in {c["codigo"] for c in classificar(t)}
+
+    assert not idx("Indexação da Revista CFMV")
+    assert not idx("Gravação e transmissão das sessões de julgamento, transcrição, edição de vídeo, indexação e publicação")
+    assert idx("Serviços de digitalização, indexação e certificação do acervo documental")
+
+
+def test_digitalizacao_e_indexacao_pelos_itens_quando_o_objeto_nao_diz():
+    from licitacoes.taxonomia import documental_pelos_itens
+
+    itens = [("PÁGINA", "Digitalização de documentos A4 com OCR"), ("UN", "Indexação de documentos por 3 campos")]
+    r = documental_pelos_itens("Contratação de serviços de gestão documental, física e digital", itens, set())
+    assert {c["codigo"] for c in r} == {"digitalizacao", "indexacao"}
+    assert r[0]["termos"][0].startswith("item: ") and r[0]["forca"] == 0.5
+    # o que o objeto já trouxe não se repete
+    assert {c["codigo"] for c in documental_pelos_itens("Gestão documental", itens, {"digitalizacao"})} == {"indexacao"}
+    # compra de equipamento com scanner nos itens não é serviço de digitalização
+    assert documental_pelos_itens("Aquisição de equipamentos de informática e periféricos", itens, set()) == []
+    assert documental_pelos_itens("Gestão documental", [("UN", "Scanner de mesa 60 ppm")], set()) == []
+
+
+def test_classificar_licitacao_usa_os_itens_para_digitalizacao(banco):
+    s = banco
+    _, lic = coleta.gravar(s, _registro(objeto="Serviços contínuos de gestão documental e arquivística"), catalogo.fonte(s, "pncp"))
+    assert "digitalizacao" not in {c["codigo"] for c in lic.categorias}
+    s.add(Item(licitacao_id=lic.id, numero=1, descricao="Digitalização de documentos (imagem)", quantidade=2_000_000, unidade="imagem"))
+    s.flush()
+    coleta.classificar_licitacao(s, lic)
+    assert "digitalizacao" in {c["codigo"] for c in lic.categorias}

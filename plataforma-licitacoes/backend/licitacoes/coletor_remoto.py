@@ -45,6 +45,8 @@ TERMOS_DIARIOS = ["digitalização", "indexação", "gestão documental", "fábr
                   "arquivo", "microfilmagem", "educação a distância", "EAD", "plataforma educacional",
                   "pesquisa de opinião", "pesquisa de satisfação", "inovação", "ponto de função",
                   "unidade de serviço técnico", "digitalização de documentos", "gestão eletrônica de documentos",
+                  "digitalização de acervo", "digitalização de prontuários", "indexação de documentos",
+                  "processamento de documentos", "tratamento documental",
                   "locação de software", "computação em nuvem", "outsourcing", "sustentação", "registro de preços tecnologia"]
 
 
@@ -119,7 +121,9 @@ SEGMENTOS_LISTADOS = {"gestao_documental", "ti", "educacao_pesquisa"}
 
 _INDICIO = re.compile(r"\bust\b|servico tecnico|pontos? de funcao|mensal|mensalidade|digitaliz|escane|indexa|microfilm|"
                      r"gestao documental|gestao eletronica de documentos|fabrica de software|sustentacao")
-_CATS_INDICIO = {"remun_ust", "remun_pf", "remun_fixo_mensal", "digitalizacao", "indexacao", "fabrica_software", "ged"}
+# gestão documental inteira: muitas vezes o objeto diz só "gestão documental" e a digitalização está nos itens
+_CATS_INDICIO = {"remun_ust", "remun_pf", "remun_fixo_mensal", "digitalizacao", "indexacao", "fabrica_software", "ged",
+                 "triagem", "guarda", "higienizacao", "restauracao", "ocr"}
 
 
 def _indicio(lic: Licitacao) -> int:
