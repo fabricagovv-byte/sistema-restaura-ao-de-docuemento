@@ -195,8 +195,11 @@ PADRAO: list[DefCategoria] = [
         "cloud broker", "hospedagem em nuvem",
     ]),
     DefCategoria("servidores", "Servidores e data center", "ti", [
-        "servidores", "data center", "datacenter", "storage", "armazenamento de dados", "hiperconvergente", "exadata",
-        "solucao de backup",
+        # "servidores" sozinho pega servidor público (uniforme, consignado, plano de saúde): só com qualificador de TI
+        "servidores de rede", "servidor de rede", "servidores fisicos", "servidores virtuais", "servidores de aplicacao",
+        "servidores de banco de dados", "servidores rack", "servidores blade", "servidor rack", "servidores em nuvem",
+        "servidor de arquivos", "servidores de arquivos", "data center", "datacenter", "storage", "armazenamento de dados",
+        "hiperconvergente", "exadata", "solucao de backup",
     ], ["servidores publicos", "servidores municipais", "servidores do municipio", "capacitacao de servidores"]),
     DefCategoria("seguranca", "Segurança da informação", "ti", [
         "seguranca da informacao", "ciberseguranca", "seguranca cibernetica", "firewall", "siem", "soc ",
@@ -219,14 +222,16 @@ PADRAO: list[DefCategoria] = [
         "sistema de gestao escolar", "sistemas de gestao escolar", "gestao escolar informatizada", "sistema integrado de gestao",
         "sistemas integrados de gestao", " erp ", "sistema de gestao hospitalar", "gestao hospitalar informatizada",
         "prontuario eletronico", "nota fiscal eletronica", " nfs-e ", " nfse ", "sistema de folha de pagamento",
-        "sistema de arrecadacao", "sistema tributario", "sistema de protocolo", "processo eletronico", "processo administrativo eletronico",
+        "sistema de arrecadacao", "sistema tributario", "sistema de protocolo", "sistema de processo eletronico",
+        "solucao de processo eletronico",
         "sistema de gestao patrimonial", "sistema de gestao de pessoas", "sistema de gestao de frota", "sistema de gestao de saude",
         "software de gestao", "softwares de gestao", "solucao sistemica", "licenciamento de software", "licenciamento de sistema",
         "licenca de uso de software", "licencas de uso de software", "sistema de gestao de documentos",
     ], ["sistema de gestao ambiental", "gestao da qualidade", "sistema de gestao de abastecimento", "cartao magnetico",
-        "cartao fisico"], ambiguos=["sistema de gestao", "sistemas de gestao", "plataforma de gestao", "sistema web",
+        "cartao fisico", "alienacao", "leilao", "venda de imovel", "bens imoveis"], ambiguos=["sistema de gestao", "sistemas de gestao", "plataforma de gestao", "sistema web",
                                     "sistema online", "gestao online"],
-        contexto=CTX_TI + ["online", " app ", "licen", "informatizad", "nuvem", "digital", "dados"]),
+        # sem "sistema de gestao" no contexto: senão a expressão ambígua confirmaria a si mesma
+        contexto=[x for x in CTX_TI if "gestao" not in x] + [" app ", "licenca de uso", "licenciamento", "informatizad", "em nuvem"]),
     DefCategoria("cidades_inteligentes", "Cidades inteligentes e mobilidade", "ti", [
         "cidade inteligente", "cidades inteligentes", "smart city", "monitoramento urbano inteligente", "gestao da mobilidade",
         "mobilidade inteligente", "semaforos inteligentes", "semaforizacao inteligente", "centro de controle operacional",
@@ -262,9 +267,9 @@ PADRAO: list[DefCategoria] = [
         "tecnologia educacional", "tecnologias educacionais", "conteudo educacional digital", "conteudos digitais",
     ], ["lousa de vidro", "lousas de vidro", "quadro branco"]),
     DefCategoria("audiovisual_tec", "Audiovisual, videoconferência e transmissão", "ti", [
-        "videoconferencia", "transmissao ao vivo", "streaming", "solucao audiovisual", "sistema audiovisual", "painel de led",
-        "paineis de led", "telao de led", "transmissao audiovisual", "transmissao das sessoes",
-    ], ["sonorizacao para eventos", "som e iluminacao"]),
+        "videoconferencia", "transmissao ao vivo", "streaming", "solucao audiovisual", "sistema audiovisual", "telao de led", "transmissao audiovisual", "transmissao das sessoes",
+    ], ["sonorizacao para eventos", "som e iluminacao", "som iluminacao", "palco", "palcos", "tendas", "sonorizacao",
+        "iluminacao cenica", "shows", "festividades", "estruturas para eventos"]),
     DefCategoria("impressao", "Outsourcing de impressão", "ti", [
         "outsourcing de impressao", "impressao corporativa", "locacao de impressoras", "locacao de multifuncionais",
         "locacao de equipamentos multifuncionais", "comodato de impressoras", "impressoras em regime de comodato",
@@ -277,7 +282,8 @@ PADRAO: list[DefCategoria] = [
         "monitores de video", "equipamentos de informatica", "equipamentos de tecnologia da informacao", "materiais de informatica",
         "suprimentos de informatica", "perifericos de informatica", " nobreak ", " nobreaks ", " switch ", " switches ",
         " roteador ", " roteadores ", "access point", " scanner ", " scanners ", " impressora ", " impressoras ",
-    ], ["tomografia computadorizada", "tomografo computadorizado", "impressora 3d", "impressoras 3d", "rede mundial de computadores"]),
+    ], ["tomografia computadorizada", "tomografo computadorizado", "impressora 3d", "impressoras 3d", "rede mundial de computadores",
+        "raio x", "raios x", "backscatter", "inspecao de bagagem"]),
     # ---------------------------------------------------------------- EAD, educação digital e pesquisa
     DefCategoria("ead", "EAD e educação a distância", "educacao_pesquisa", [
         "educacao a distancia", "ensino a distancia", "ensino remoto", " ead ", " ead/", "/ead ", "ambiente virtual de aprendizagem",

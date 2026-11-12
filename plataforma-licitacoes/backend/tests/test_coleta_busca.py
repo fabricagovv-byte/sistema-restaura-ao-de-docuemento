@@ -370,6 +370,15 @@ def test_tecnologia_ampliada():
         assert cod in r and "tecnologia" in r, (texto, r)  # toda categoria de TI também entra em "Tecnologia"
     for texto in ("Rastreamento do câncer do colo do útero", "Serviços de vigilância armada", "Aquisição de lousas de vidro",
                   "Contratação de emissoras de rádio para publicidade", "Tomografia computadorizada e ressonância",
-                  "Sistema de gestão ambiental ISO 14001", "Locação de veículos zero quilômetro com sistema de rastreamento"):
-        assert not cods(texto) & {"tecnologia", "iot_telemetria", "equipamentos_ti", "sistemas_gestao", "edtech"}, texto
+                  "Sistema de gestão ambiental ISO 14001", "Locação de veículos zero quilômetro com sistema de rastreamento",
+                  "Registro de preços de uniformes para servidores do Departamento de Saúde",
+                  "Alienação de bem imóvel registrado no Sistema de Gestão de Bens Imóveis",
+                  "Assessoria e consultoria técnica em gestão documental, com sistema de gestão de arquivos físicos",
+                  "Painel de LED quadrado para embutir, 40 x 40 cm, 36 W",
+                  "Equipamento de inspeção por scanner portátil de raio X por backscatter",
+                  "Projeto executivo e obra; processo eletrônico SEI nº 123/2026",
+                  "Locação de estruturas para eventos, como som, iluminação, palco e transmissão ao vivo"):
+        assert not cods(texto) & {"tecnologia", "iot_telemetria", "equipamentos_ti", "sistemas_gestao", "edtech", "servidores",
+                                  "audiovisual_tec"}, texto
+    assert "servidores" in cods("Aquisição de servidores de rede e storage para o data center")
     assert "equipamentos_ti" not in cods("Internet de links dedicados (rede mundial de computadores)")
