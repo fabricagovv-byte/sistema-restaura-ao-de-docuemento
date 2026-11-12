@@ -28,6 +28,12 @@ as premissas abaixo, registradas como tal. Nada aqui foi inventado como fato.
 9. RTO e RPO desejados para backup e restauração?
 10. Política de segurança e LGPD: encarregado de dados, retenção, bases legais?
 
+## Entregas bloqueadas pela entrevista
+
+| Entrega | O que falta | Situação |
+|---|---|---|
+| D5-B — validação dos requisitos com as respostas da entrevista | Respostas das perguntas 1 a 10 e leitura de `docs/CRITERIOS_ACEITE.md` por responsável do contratante | Critérios detalhados entregues; validação pendente; declaradas 6 de 13 UST base |
+
 ## Premissas adotadas até a entrevista
 
 * Quatro papéis do TR (administrador, operador, gestor, solicitante), com login para todos.

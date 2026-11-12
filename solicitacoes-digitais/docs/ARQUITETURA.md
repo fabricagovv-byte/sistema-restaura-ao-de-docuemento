@@ -3,7 +3,7 @@
 ## Visão geral
 
 ```
-Navegador (frontend estático, dias 5-7)
+Navegador (frontend estático em solicitacoes/web, servido pela própria API; dias 5-7)
         │  HTTPS, JSON, token Bearer
         ▼
 API /api/v1  (FastAPI)  ── log estruturado com X-Correlation-ID
@@ -35,6 +35,8 @@ Arquivos anexos: diretório configurável (dia 3), depois armazenamento de objet
 | Correlação | Middleware lê ou gera `X-Correlation-ID`, devolve na resposta e grava no log e na auditoria | RNF-03 |
 | Contrato da API | OpenAPI gerado do código, salvo em `docs/api/openapi-v1.json` e servido em `/api/v1/openapi.json`; teste compara salvo e gerado e aponta mudança incompatível | RNF-05; clientes sabem quando a API muda |
 | Exportação | CSV com BOM e `;`, células com fórmula neutralizadas, sem dados pessoais além do identificador, cada exportação auditada com SHA-256 | Abre certo no Excel em português; evita injeção em planilha; LGPD |
+| Frontend | HTML, CSS e JavaScript sem etapa de build, servidos pela API na raiz; DOM montado só com `textContent`; token no `sessionStorage` | Instalação simples, CSP restritiva sem `unsafe-inline`, menos superfície para XSS |
+| Cabeçalhos das telas | `Content-Security-Policy` só com o próprio servidor, `X-Frame-Options: DENY`, `Referrer-Policy: no-referrer` | Impede script de terceiros, clickjacking e vazamento do link de redefinição |
 | Dados | Só dados fictícios até aprovação formal; nada de CPF real | TR seção 5 e LGPD |
 
 ## Estados da solicitação (detalhados no dia 2)

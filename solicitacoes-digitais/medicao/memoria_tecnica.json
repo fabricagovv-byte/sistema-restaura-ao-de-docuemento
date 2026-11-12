@@ -138,5 +138,43 @@
     "rotas_painel.py, docs/PENDENCIAS_ENTREVISTA.md"
    ]
   ]
+ },
+ "5": {
+  "camadas": [
+   [
+    "Arquitetura e regras de negócio",
+    "Frontend com menu e tela inicial por perfil: solicitante (minhas solicitações), operador (minha fila), gestor (todas) e administrador (usuários, sem abrir solicitação). As regras continuam todas na API; a tela só reflete o que a API permite e trata as recusas. 27 critérios de aceite detalhados (dado/quando/então) em docs/CRITERIOS_ACEITE.md, ligados a 56 testes; validação com o contratante pendente da entrevista."
+   ],
+   [
+    "Banco de dados",
+    "Sem mudança de esquema no dia 5 (versão 4)."
+   ],
+   [
+    "Backend",
+    "A API passou a servir as telas na raiz (arquivos estáticos), a página do link de redefinição de senha (/redefinir-senha) e os cabeçalhos das telas: Content-Security-Policy sem código embutido, X-Frame-Options DENY e Referrer-Policy no-referrer. Rota inexistente da API continua respondendo em JSON (404/405). 93 testes em SQLite e PostgreSQL."
+   ],
+   [
+    "Frontend",
+    "Telas de entrar, recuperar acesso, criar nova senha, lista com filtros (situação, busca, prazo) e paginação, nova solicitação com validação no navegador e mensagens do servidor por campo, detalhe com próximos passos possíveis e usuários. Estados: carregando (aria-busy), vazio, erro com 'Tentar de novo', sessão expirada volta ao login, 403 explicado. DOM montado só com textContent, token no sessionStorage, filtros zerados entre usuários. Verificado no navegador (Chromium) em 1280 e 390 px."
+   ],
+   [
+    "Integração e infraestrutura",
+    "Sem integração externa. A verificação no navegador roda contra servidor local com dados fictícios (tests/navegador/verificacao-dia05.js)."
+   ]
+  ],
+  "mudancas": [
+   [
+    "Validação dos requisitos com a entrevista (D5-B) não realizada",
+    "As respostas da entrevista não chegaram; entregues só os critérios detalhados, declaradas 6 de 13 UST base",
+    "Pendência do contratante",
+    "docs/CRITERIOS_ACEITE.md, docs/PENDENCIAS_ENTREVISTA.md"
+   ],
+   [
+    "Telas servidas pela própria API em vez de servidor separado",
+    "Instalação mais simples e mesma origem (CSP 'self', sem CORS)",
+    "Decisão técnica",
+    "solicitacoes/api.py, solicitacoes/web/"
+   ]
+  ]
  }
 }

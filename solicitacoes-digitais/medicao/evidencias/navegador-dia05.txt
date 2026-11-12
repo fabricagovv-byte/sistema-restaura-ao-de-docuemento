@@ -1,0 +1,49 @@
+# Verificação no navegador — dia 5 — 2026-11-12T08:51:24-03:00
+commit: fdb46b3eaf5e8ba141ad493544d70e10eec2cf36
+navegador: Chromium (Playwright 1.63.0), larguras 1280 e 390 px
+dados: fictícios (4 usuários, 2 categorias), servidor local em SQLite
+roteiro: tests/navegador/verificacao-dia05.js
+
+[1280] tela inicial sem sessão: Entrar
+ login vazio: Informe o e-mail. | Informe a senha.
+ senha errada: E-mail ou senha incorretos
+ solicitante entrou: Minhas solicitações | perfil: Solicitante | menu: Minhas solicitaçõesNova solicitação | lista: Nenhuma solicitação ainda. Abrir uma solicitação
+ cadastro vazio: Use pelo menos 5 caracteres. | Escolha a categoria.
+ criada: Solicitação 2026000001 | Solicitação 2026000001 aberta. Prazo de atendimento: 22/11/2026, 11:51.
+ detalhe: TítuloSegunda via da carteiraSituaçãoRecebidaCategoriaCertidãoPrioridadeAltaPrazo22/11/2026, 11:51SolicitanteClara Cidad | Próximos passos possíveis para o seu perfil: Cancelada.
+ lista: 1 linha(s); 2026000001Segunda via da carteiraCertidãoRecebidaAlta22/11/2026, 11:51—
+ filtro sem resultado: Nenhuma solicitação com esses filtros. Abrir uma solicitação
+ token inválido: Entrar | Sua sessão expirou ou foi encerrada. Entre de novo.
+ gestor: Solicitações | vê 1 solicitação(ões) | menu: SolicitaçõesNova solicitação
+ sem rede: Sem conexão com o servidor. Verifique a internet e tente de novo.  | botão: Tentar de novo
+ carregando: true | Carregando solicitações…
+ sair: Você saiu do sistema. | token: null
+ admin: Usuários | 4 usuários | menu: Usuários
+ admin em #/nova: O administrador não abre solicitações.
+ recuperar: Você saiu do sistema.
+ senhas diferentes: As duas senhas precisam ser iguais.
+ link inválido: Link inválido ou expirado; peça um novo
+ operador: Minha fila | 1 solicitaçãoSolicitaçõesProtocoloTítuloCategoriaSituaçãoPrioridadePrazoResponsá
+ largura da página: 1280 | CSP bloqueou algo: false
+[390] tela inicial sem sessão: Entrar
+ login vazio: Informe o e-mail. | Informe a senha.
+ senha errada: E-mail ou senha incorretos
+ solicitante entrou: Minhas solicitações | perfil: Solicitante | menu: Minhas solicitaçõesNova solicitação | lista: 1 solicitaçãoSolicitaçõesProtocoloTítuloCategoriaSituaçãoPrioridadePrazoResponsável2026000001Segunda via da carteiraCertidãoRecebidaAlta22/11/2026, 11:51—
+ cadastro vazio: Use pelo menos 5 caracteres. | Escolha a categoria.
+ criada: Solicitação 2026000002 | Solicitação 2026000002 aberta. Prazo de atendimento: 22/11/2026, 11:51.
+ detalhe: TítuloSegunda via da carteiraSituaçãoRecebidaCategoriaCertidãoPrioridadeAltaPrazo22/11/2026, 11:51SolicitanteClara Cidad | Próximos passos possíveis para o seu perfil: Cancelada.
+ lista: 2 linha(s); 2026000001Segunda via da carteiraCertidãoRecebidaAlta22/11/2026, 11:51—
+ filtro sem resultado: Nenhuma solicitação com esses filtros. Abrir uma solicitação
+ token inválido: Entrar | Sua sessão expirou ou foi encerrada. Entre de novo.
+ gestor: Solicitações | vê 2 solicitação(ões) | menu: SolicitaçõesNova solicitação
+ sem rede: Sem conexão com o servidor. Verifique a internet e tente de novo.  | botão: Tentar de novo
+ carregando: true | Carregando solicitações…
+ sair: Você saiu do sistema. | token: null
+ admin: Usuários | 4 usuários | menu: Usuários
+ admin em #/nova: O administrador não abre solicitações.
+ recuperar: Você saiu do sistema.
+ senhas diferentes: As duas senhas precisam ser iguais.
+ link inválido: Link inválido ou expirado; peça um novo
+ operador: Minha fila | 2 solicitaçõesSolicitaçõesProtocoloTítuloCategoriaSituaçãoPrioridadePrazoRespons
+ largura da página: 390 | CSP bloqueou algo: false
+erros provocados no teste: 4 | erros inesperados no navegador: []

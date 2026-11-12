@@ -401,6 +401,90 @@
       },
       "ajustada_verificada": 40,
       "revisor_independente": "PENDENTE — indicar pessoa da contratante"
+    },
+    "D5-A": {
+      "dia": 5,
+      "item": "M-03",
+      "entrega": "Frontend: login, perfis, lista e cadastro de solicitações, estados de erro e carregamento",
+      "base_planejada": 25,
+      "ajustada_planejada": 75,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-12T08:43:10-03:00",
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-12T08:52:32-03:00",
+      "evidencias": [
+        {
+          "arquivo": "solicitacoes/web/index.html",
+          "sha256": "ce6c6d89238200013c0fb8d3f27a53675e9a31baa7017df72d6e22ff9461d2dc",
+          "bytes": 1014
+        },
+        {
+          "arquivo": "solicitacoes/web/app.js",
+          "sha256": "72242ecc65643407c084318745bb5147753c46fbffbef360f5e0bb86ba1a8b9c",
+          "bytes": 21801
+        },
+        {
+          "arquivo": "solicitacoes/web/app.css",
+          "sha256": "fd0f2888c47cebc1c7712652c5fc202237f27f9537d07a719631095cd77edde3",
+          "bytes": 4826
+        },
+        {
+          "arquivo": "solicitacoes/api.py",
+          "sha256": "6d4c44d7c446c2a7f9e18c783fa8741f81145f20cd9cfd9cdbc6ba91fce31cb0",
+          "bytes": 10467
+        },
+        {
+          "arquivo": "tests/test_web.py",
+          "sha256": "41bc14a3c0f788f6898cbda39317afed461ad2e56f8166030ac37f63792a1e8a",
+          "bytes": 3949
+        },
+        {
+          "arquivo": "tests/navegador/verificacao-dia05.js",
+          "sha256": "67fc30f76f9939aedf1fb275dae1602d881abc88764345a64ff3cc76ba57db70",
+          "bytes": 7362
+        },
+        {
+          "arquivo": "medicao/evidencias/navegador-dia05.txt",
+          "sha256": "83cd0c969c69e1b3d6d3975dfc3afca1b1e5c2aa68c9a9622878c6ee7c074eca",
+          "bytes": 3799
+        }
+      ],
+      "commit_base": "fdb46b3eaf5e8ba141ad493544d70e10eec2cf36",
+      "base_declarada": 25,
+      "ajustada_declarada": 75,
+      "observacao": "frontend: entrar, recuperar acesso, nova senha pelo link, lista com filtros e paginação, cadastro, detalhe e usuários (admin); menu por perfil; estados de carregamento, vazio e erro (401, 403, 422 por campo, sem rede); CSP sem inline; verificado no navegador em 1280 e 390 px",
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia05.txt",
+        "sha256": "6533f6f872068c9e5a4f22ba5a299cd9f5adf370dfd209169a2dd4274a74570a",
+        "em": "2026-11-12T08:52:32-03:00"
+      },
+      "ajustada_verificada": 75,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
+    },
+    "D5-B": {
+      "dia": 5,
+      "item": "M-01",
+      "entrega": "Validação dos requisitos com as respostas da entrevista e critérios de aceite detalhados",
+      "base_planejada": 13,
+      "ajustada_planejada": 26,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-12T08:50:25-03:00",
+      "situacao": "DECLARADA",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-12T08:52:32-03:00",
+      "evidencias": [
+        {
+          "arquivo": "docs/CRITERIOS_ACEITE.md",
+          "sha256": "4eb1a43f78922220b9ba753d54018078cdc2296fa57bc030cac67d92b9960d89",
+          "bytes": 9261
+        }
+      ],
+      "commit_base": "fdb46b3eaf5e8ba141ad493544d70e10eec2cf36",
+      "base_declarada": 6,
+      "ajustada_declarada": 12,
+      "observacao": "PARCIAL: 27 critérios de aceite detalhados (dado/quando/então) para REQ-001 a REQ-008, ligados a 56 testes existentes; a validação com as respostas da entrevista NÃO foi feita porque as respostas não chegaram (perguntas 1 a 10 de PENDENCIAS_ENTREVISTA.md). Declaradas 6 de 13 UST base; o restante depende do contratante"
     }
   }
 }

@@ -1,7 +1,7 @@
 # Matriz de requisitos — Sistema de Solicitações Digitais (OS-001/2026)
 
 Base: Termo de Referência (minuta DG-CONT-001, 04/11/2026), seções 1 a 7; Ordem de Serviço OS-001/2026.
-Situação: **proposta técnica**. Papéis, dados e regras precisam ser confirmados na entrevista obrigatória
+Situação: **proposta técnica**. Critérios de aceite detalhados por requisito: `docs/CRITERIOS_ACEITE.md` (dia 5, pendentes de validação). Papéis, dados e regras precisam ser confirmados na entrevista obrigatória
 (`docs/PENDENCIAS_ENTREVISTA.md`). O que depende dessa confirmação está marcado como *premissa*.
 
 ## Papéis
@@ -38,7 +38,7 @@ Situação: **proposta técnica**. Papéis, dados e regras precisam ser confirma
 | RNF-06 | Arquitetura modular, migrações idempotentes, configuração por ambiente | Pacote em módulos; migrações numeradas com controle de versão no banco; variáveis `SD_*` | Teste que aplica migrações duas vezes sem erro |
 | RNF-07 | Testes unitários, de integração e ponta a ponta do fluxo crítico | pytest + cliente HTTP; navegador headless no dia 6 | Log de execução anexado à medição |
 | RNF-08 | Evidência com versão, commit, tempo e status de testes | `medicao/registro.py` grava início/fim reais, hash dos artefatos e commit | Relatório diário em `medicao/relatorios/` |
-| RNF-09 | Acessibilidade razoável e estados de erro/carregamento | Frontend com rótulos, foco visível, contraste e mensagens de estado (dias 5 a 7) | Revisão com verificação automática de acessibilidade |
+| RNF-09 | Acessibilidade razoável e estados de erro/carregamento | Frontend com rótulos, foco visível, contraste e mensagens de estado; dia 5: rótulos, erros por campo ligados por `aria-describedby`, `aria-busy`, `aria-live`, pular para o conteúdo, tabela responsiva (dias 5 a 7) | Revisão com verificação automática de acessibilidade (dia 7) |
 
 ## Escopo excluído até aprovação (TR seção 5)
 
@@ -49,8 +49,8 @@ O desenvolvimento usa apenas dados fictícios gerados pelos testes.
 
 | ID | OS | Artefato | Teste | Status |
 |---|---|---|---|---|
-| REQ-001 | OS-001 | `solicitacoes/seguranca.py`, `solicitacoes/dependencias.py` | `tests/test_autenticacao.py`, `tests/test_permissoes.py` | Implementado (inclui recuperação de conta: `solicitacoes/rotas_conta.py`, `tests/test_recuperacao.py`) |
-| REQ-002 | OS-001 | `solicitacoes/rotas_solicitacoes.py`, `solicitacoes/modelos.py` | `tests/test_solicitacoes.py`, `tests/test_categorias.py` | Implementado (inclui anexos: `solicitacoes/rotas_anexos.py`, `tests/test_anexos.py`) |
+| REQ-001 | OS-001 | `solicitacoes/seguranca.py`, `solicitacoes/dependencias.py`, telas de entrar e recuperar acesso em `solicitacoes/web/` (dia 5) | `tests/test_autenticacao.py`, `tests/test_permissoes.py`, `tests/test_web.py` | Implementado (inclui recuperação de conta: `solicitacoes/rotas_conta.py`, `tests/test_recuperacao.py`; telas verificadas no navegador, `medicao/evidencias/navegador-dia05.txt`) |
+| REQ-002 | OS-001 | `solicitacoes/rotas_solicitacoes.py`, `solicitacoes/modelos.py`, telas de lista, cadastro e detalhe (dia 5) | `tests/test_solicitacoes.py`, `tests/test_categorias.py`, `tests/test_web.py` | Implementado (inclui anexos: `solicitacoes/rotas_anexos.py`, `tests/test_anexos.py`; tela de anexos no dia 6) |
 | REQ-003 | OS-001 | `solicitacoes/fluxo.py`, `docs/PROCESSO_TRAMITACAO.md` | `tests/test_fluxo.py` | Implementado |
 | REQ-004 | OS-001 | `solicitacoes/rotas_painel.py` | `tests/test_painel.py` (conciliação com a listagem e com o CSV) | Implementado (indicadores definitivos dependem da pergunta 6 da entrevista) |
 | REQ-005 | OS-001 | `solicitacoes/auditoria.py`, histórico de tramitação | `tests/test_auditoria.py`, `tests/test_fluxo.py` | Implementado |
