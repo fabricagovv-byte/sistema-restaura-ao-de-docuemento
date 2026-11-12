@@ -351,8 +351,29 @@ REMUNERACAO = {
     "remun_ust": "Remuneração por UST",
     "remun_pf": "Remuneração por Ponto de Função",
 }
-_UST = [" ust ", " usts ", "unidade de servico tecnico", "unidades de servico tecnico", "und servico tecnico",
+_UST = [" ust ", " usts ", "unidade de servico tecnico", "unidades de servico tecnico",
         "unidade de servicos tecnicos", "unidades de servicos tecnicos", "unidade de servico de tecnologia"]
+# "UND SERVIÇO TÉCNICO" é a unidade genérica de serviço do catálogo do Compras.gov (na base de 11/11: mediana
+# R$ 5.134 por unidade, até R$ 47 mi), não UST. Só conta como UST com volume e preço de UST.
+UST_QTD_MIN, UST_PRECO_MAX = 100, 2000.0
+# com a unidade genérica, item que é licença, assinatura, locação, link ou nuvem não é UST mesmo com volume
+_NAO_UST = re.compile(r"licen|assinatura|ramal|locacao|link|nuvem|cloud|saas|software como servico|hospedagem|colocation|"
+                      r"equipamento|aparelho|telefon|internet|datacenter|data center|armazenamento|backup|certificado|"
+                      r"minut|chamada|ligac|voz|sms|dados moveis")
+_SIM_UST = re.compile(r"desenvolv|sustenta|suporte|manutencao|analis|consultor|atendimento|operac|implanta|treinament|projeto|especializad|programac|teste|banco de dados|infraestrutura|gestao de servicos")
+
+
+def item_ust(unidade: str | None, descricao: str | None, qtd: float | None = None, preco: float | None = None) -> bool:
+    """Item cobrado em UST: a descrição diz UST, a unidade é "UST", ou a unidade é "serviço técnico" com
+    quantidade e preço unitário de UST (>= 100 unidades, até R$ 2.000 cada)."""
+    u = " " + normalizar(unidade or "") + " "
+    d = " " + normalizar(descricao or "") + " "
+    if any(x in d for x in _UST) or set(u.split()) & {"ust", "usts"}:
+        return True
+    if "servico tecnico" in u or "servicos tecnicos" in u:
+        return ((qtd or 0) >= UST_QTD_MIN and (preco is None or float(preco) <= UST_PRECO_MAX)
+                and _SIM_UST.search(d) is not None and not _NAO_UST.search(d))
+    return False
 _PF = ["ponto de funcao", "pontos de funcao", "function point", "function points"]
 _FIXO = ["valor fixo mensal", "preco fixo mensal", "remuneracao fixa mensal", "pagamento fixo mensal",
          "pagamento mensal fixo", "valor mensal fixo", "parcela fixa mensal", "parcelas fixas mensais", "fixo mensal"]
@@ -371,11 +392,17 @@ def remuneracao(texto: str, itens: list[tuple[str | None, str | None]], categori
     tecnologia ou gestão documental."""
     n = " " + normalizar(texto or "") + " "
     docs = " " + normalizar(texto_documentos or "") + " " if texto_documentos else ""
-    unids = [" " + normalizar(u or "") + " " for u, _ in itens]
-    tudo = n + " ".join(" " + normalizar(d or "") + " " for _, d in itens)
+    itens = [tuple(i) + (None,) * (4 - len(i)) for i in itens]  # (unidade, descrição[, quantidade, preço unitário])
+    unids = [" " + normalizar(i[0] or "") + " " for i in itens]
+    tudo = n + " ".join(" " + normalizar(i[1] or "") + " " for i in itens)
     achados: dict[str, list[str]] = {}
+    n_ust = sum(item_ust(*i) for i in itens)
     for cod, termos, extra in (("remun_ust", _UST, None), ("remun_pf", _PF, " pf ")):
-        ts = [x.strip() for x in termos if x in tudo or any(x in u for u in unids)]
+        ts = [x.strip() for x in termos if x in n]
+        if cod == "remun_ust" and n_ust:
+            ts.append(f"{n_ust} {'item' if n_ust == 1 else 'itens'} em UST")
+        elif cod == "remun_pf":
+            ts += [f"item: {x.strip()}" for x in termos if x not in n and (x in tudo or any(x in u for u in unids))]
         ts += [f"documento: {x.strip()}" for x in termos if docs and x in docs and x.strip() not in ts]
         if extra and any(extra in u for u in unids):
             ts.append(f"unidade {extra.strip()}")
@@ -440,7 +467,7 @@ _V_REG_TXT = ["por registro", "registros tratados", "registros saneados", "regis
               "registros indexados", "registros cadastrados", "registros migrados"]
 
 
-def tipo_volume(unidade: str | None, descricao: str | None, qtd: float | None) -> str | None:
+def tipo_volume(unidade: str | None, descricao: str | None, qtd: float | None, preco: float | None = None) -> str | None:
     """Tipo de volume de um item (ust, pf, pagina, registro, hora, mes) ou None."""
     if not qtd:
         return None
@@ -448,7 +475,7 @@ def tipo_volume(unidade: str | None, descricao: str | None, qtd: float | None) -
     d = " " + normalizar(descricao or "") + " "
     pal = set(u.split())
     fora = any(x in d for x in _V_FORA) or pal & {"m2", "km", "quilometro", "metro", "metros"}
-    if any(x in u or x in d for x in _UST) or "ust" in pal:
+    if item_ust(unidade, descricao, qtd, preco):
         return "ust"
     if any(x in u or x in d for x in _PF) or " pf " in u:
         return "pf"
@@ -473,8 +500,9 @@ def volumes(itens: list[tuple[str | None, str | None, float | None]]) -> dict[st
     """Soma das quantidades por tipo de volume (UST, PF, páginas, registros, horas, meses), pelos itens
     (unidade, descrição, quantidade). Só itens de serviço de TI/documentos chegam aqui."""
     tot: dict[str, float] = {}
-    for unidade, descricao, qtd in itens:
-        k = tipo_volume(unidade, descricao, qtd)
+    for item in itens:
+        unidade, descricao, qtd, preco = (tuple(item) + (None,))[:4]
+        k = tipo_volume(unidade, descricao, qtd, preco)
         if k:
             tot[k] = tot.get(k, 0.0) + float(qtd)
     return tot

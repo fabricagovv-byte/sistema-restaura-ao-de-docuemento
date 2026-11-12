@@ -173,6 +173,10 @@ ul.check label b { font-weight: 600; }
 .itens-tipo p { margin: 0 0 4px; } .itens-tipo table { width: 100%; border-collapse: collapse; } .itens-tipo td, .itens-tipo th { padding: 3px 6px; border-top: 1px solid var(--line); text-align: left; vertical-align: top; }
 .itens-tipo th { font-size: .74rem; color: var(--muted); font-weight: 600; } .itens-tipo .num { text-align: right; white-space: nowrap; }
 .itens-tipo.vazio { color: var(--muted); border-style: dashed; }
+.calc { display: grid; gap: 10px; } .calc-campos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 12px; }
+.calc-res { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; background: var(--accent-soft); }
+.calc-l { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; border-bottom: 1px dashed var(--line); } .calc-l:last-child { border-bottom: 0; }
+.calc-l span { color: var(--muted); } .calc-l.forte b { font-size: 1.08rem; color: var(--accent); }
 </style>
 
 <div class="wrap">
@@ -200,11 +204,17 @@ ul.check label b { font-weight: 600; }
     <div class="chips" id="cats" role="group" aria-label="Categoria"></div>
     <p class="dica">Várias palavras = todas precisam aparecer · <b>"frase exata"</b> · <b>-palavra</b> exclui · <b>ust|pf</b> = uma ou outra · UST, PF, GED, EAD, SaaS e IA já buscam os sinônimos.</p>
     <p class="conta" id="conta" aria-live="polite"></p>
-    <div class="acoes"><button type="button" class="mais" id="exp-tabelas" hidden>Baixar tabelas de preço destas licitações (CSV)</button><button type="button" class="mais" id="exp-itens-tipo" hidden>Baixar itens do tipo (CSV)</button><a class="mais" href="#config-sec" style="text-decoration:none">Minha sede e meus pisos</a></div>
+    <div class="acoes"><button type="button" class="mais" id="exp-tabelas" hidden>Baixar tabelas de preço destas licitações (CSV)</button><button type="button" class="mais" id="exp-itens-tipo" hidden>Baixar itens do tipo (CSV)</button><a class="mais" href="#calc-sec" style="text-decoration:none">Calculadora</a><a class="mais" href="#config-sec" style="text-decoration:none">Minha sede e meus pisos</a></div>
   </section>
 
   <section class="lista" id="lista" aria-label="Licitações"></section>
   <button class="mais" id="mais" type="button">Mostrar mais</button>
+
+  <section class="panel" id="calc-sec" aria-labelledby="h-calc">
+    <h2 id="h-calc">Calculadora</h2>
+    <p class="dica">Preço de venda com despesas, impostos e lucro (BDI), UST, digitalização por página, fixo mensal e lance. Dentro de cada pregão, a aba <b>Calculadora</b> já vem com os números do edital.</p>
+    <div id="calc-corpo"></div>
+  </section>
 
   <section class="panel" id="config-sec" aria-labelledby="h-config">
     <h2 id="h-config">Minha sede e meus pisos</h2>
@@ -272,7 +282,7 @@ ul.check label b { font-weight: 600; }
 
 <dialog id="ficha" aria-labelledby="ficha-titulo">
   <div class="ficha-topo"><span class="eyebrow" id="ficha-eyebrow">Pregão</span><button type="button" id="fechar">Fechar</button>
-    <div class="abas" role="tablist" id="abas"><button type="button" role="tab" data-aba="ficha">Ficha</button><button type="button" role="tab" data-aba="preco">Precificar</button><button type="button" role="tab" data-aba="crm">CRM</button><button type="button" role="tab" data-aba="analise">Análise</button></div></div>
+    <div class="abas" role="tablist" id="abas"><button type="button" role="tab" data-aba="ficha">Ficha</button><button type="button" role="tab" data-aba="preco">Precificar</button><button type="button" role="tab" data-aba="crm">CRM</button><button type="button" role="tab" data-aba="analise">Análise</button><button type="button" role="tab" data-aba="calc">Calculadora</button></div></div>
   <div class="ficha" id="ficha-corpo"></div>
 </dialog>
 
@@ -322,7 +332,7 @@ document.getElementById("kpis").innerHTML = [
 ].map(([b, s]) => `<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
 
 const SINON = {
-  ust: [" ust ", "unidade de servico tecnico", "unidades de servico tecnico", "und servico tecnico"],
+  ust: [" ust ", " usts ", "unidade de servico tecnico", "unidades de servico tecnico"],
   pf: [" pf ", "ponto de funcao", "pontos de funcao"], ged: [" ged ", "gestao eletronica de documentos", " ecm "],
   ead: [" ead ", "educacao a distancia", "ensino a distancia", "ambiente virtual de aprendizagem"],
   saas: [" saas ", "software como servico", "software as a service"], ia: [" ia ", "inteligencia artificial"],
@@ -405,7 +415,11 @@ const botaoBaixar = (x) => { const a = arquivoEdital(x); return a ? `<a class="b
 /* Itens de um tipo (fixo mensal, UST, PF, digitalização, indexação) dentro de cada edital */
 const TIPO_ITEM = {
   mensal: { nome: "fixo mensal", cat: "remun_fixo_mensal", casa: (d, u) => unidadeChave(u || "") === "mes" || /mensal|mensalidade| por mes | ao mes /.test(d) },
-  ust: { nome: "UST", cat: "remun_ust", casa: (d, u) => unidadeChave(u || "") === "ust" || / ust | usts |unidades? de servicos? tecnicos?/.test(d) },
+  // "UND SERVIÇO TÉCNICO" é a unidade genérica de serviço do Compras.gov: só vale como UST com volume e preço de UST
+  ust: { nome: "UST", cat: "remun_ust", casa: (d, u, i) => unidadeChave(u || "") === "ust" || / ust | usts |unidades? de servicos? tecnicos?/.test(d)
+    || (unidadeChave(u || "") === "servtec" && (i[2] || 0) >= 100 && (!i[4] || i[4] <= 2000)
+      && /desenvolv|sustenta|suporte|manutencao|analis|consultor|atendimento|operac|implanta|treinament|projeto|especializad|programac|teste|banco de dados|infraestrutura|gestao de servicos/.test(d)
+      && !/licen|assinatura|ramal|locacao|link|nuvem|cloud|saas|software como servico|hospedagem|colocation|equipamento|aparelho|telefon|internet|datacenter|data center|armazenamento|backup|certificado|minut|chamada|ligac|voz|sms|dados moveis/.test(d)) },
   pf: { nome: "ponto de função", cat: "remun_pf", casa: (d, u) => unidadeChave(u || "") === "pf" || /pontos? de funcao/.test(d) },
   digitalizacao: { nome: "digitalização", cat: "digitalizacao", casa: (d) => /digitaliz|escaneamento|microfilm|captura de imagen/.test(d) && !/^ (scanner|impressora|multifuncional|mesa digitalizadora)| aquisicao /.test(d) },
   indexacao: { nome: "indexação", cat: "indexacao", casa: (d) => /indexa/.test(d) },
@@ -415,7 +429,7 @@ const tipoItensAtivo = () => estado.itipo === "auto" ? CAT_TIPO[estado.cat] || n
 const memoTipo = new Map();
 function itensDoTipo(x, tipo) {
   const chave = x.id + "|" + tipo; if (memoTipo.has(chave)) return memoTipo.get(chave);
-  const lista = (x.it || []).filter((i) => TIPO_ITEM[tipo].casa(norm(i[1] || ""), i[3]));
+  const lista = (x.it || []).filter((i) => TIPO_ITEM[tipo].casa(norm(i[1] || ""), i[3], i));
   const total = (i) => i[5] || (i[2] && i[4] ? i[2] * i[4] : 0);
   const r = { coletado: !!(x.det && (x.it || []).length), lista, soma: lista.reduce((s, i) => s + total(i), 0), total };
   memoTipo.set(chave, r); return r;
@@ -524,7 +538,7 @@ function ficha(x) {
     <div class="acoes">${botaoBaixar(x)}${x.pncp ? `<a href="${esc(x.pncp)}" target="_blank" rel="noopener">Ver edital no PNCP</a>` : ""}
       ${x.orig ? `<a href="${esc(x.orig)}" target="_blank" rel="noopener">Ir para o portal da disputa</a>` : ""}
       ${x.pe ? `<a href="${esc(x.pe)}" target="_blank" rel="noopener">Processo eletrônico</a>` : ""}</div>
-    <div class="acoes"><button type="button" class="salvar" onclick="abrir(${x.id}, true, 'analise')">Gerar análise</button><button type="button" class="abrir" onclick="abrir(${x.id}, true, 'preco')">Precificar este edital</button><button type="button" class="abrir" onclick="abrir(${x.id}, true, 'crm')">${registro(x.id) ? "Ver no meu CRM" : "Adicionar ao meu CRM"}</button></div>
+    <div class="acoes"><button type="button" class="salvar" onclick="abrir(${x.id}, true, 'analise')">Gerar análise</button><button type="button" class="abrir" onclick="abrir(${x.id}, true, 'calc')">Calculadora</button><button type="button" class="abrir" onclick="abrir(${x.id}, true, 'preco')">Precificar este edital</button><button type="button" class="abrir" onclick="abrir(${x.id}, true, 'crm')">${registro(x.id) ? "Ver no meu CRM" : "Adicionar ao meu CRM"}</button></div>
     ${mapaHtml(x)}
     <section><h2>Dados do pregão</h2><dl class="campos">
       ${campo("Número", esc(x.n))}${campo("Processo", esc(x.proc))}${campo("Modalidade", esc(x.mod))}${campo("Modo de disputa", esc(x.md))}
@@ -557,6 +571,8 @@ function renderFicha() {
   if (aba === "preco") { corpo.innerHTML = precoHtml(x); ligarPreco(x); }
   else if (aba === "crm") { corpo.innerHTML = crmHtml(x); ligarCrm(x); }
   else if (aba === "analise") { corpo.innerHTML = analiseHtml(x); ligarAnalise(x); }
+  else if (aba === "calc") { corpo.innerHTML = `<p class="eyebrow">${esc(x.o)} · ${esc(x.m ? x.m + "/" : "")}${esc(x.uf)}</p><h2 id="ficha-titulo">Calculadora: ${esc(x.mod || "")}${x.n ? " nº " + esc(x.n) : ""}</h2><p class="obj-full">${esc(x.obj)}</p><div id="calc-ficha"></div>`;
+    const r = document.getElementById("calc-ficha"); r.innerHTML = calcHtml(String(x.id), x); ligarCalc(r); }
   else corpo.innerHTML = ficha(x);
 }
 document.getElementById("abas").addEventListener("click", (e) => { const b = e.target.closest("[data-aba]"); if (!b || !fichaAtual) return;
@@ -566,7 +582,7 @@ dlg.addEventListener("close", () => { if (location.hash.startsWith("#p")) histor
 document.getElementById("fechar").addEventListener("click", fechar);
 dlg.addEventListener("click", (e) => { if (e.target === dlg) fechar(); });
 document.getElementById("lista").addEventListener("click", (e) => { const b = e.target.closest("[data-abrir]"); if (b) abrir(b.dataset.abrir, true, b.dataset.aba || "ficha"); });
-const doHash = () => { const m = location.hash.match(/^#p(\d+)(?:-(preco|crm|analise))?$/); if (m) { if (porId.has(m[1])) abrir(m[1], false, m[2] || "ficha"); } else fechar(); };
+const doHash = () => { const m = location.hash.match(/^#p(\d+)(?:-(preco|crm|analise|calc))?$/); if (m) { if (porId.has(m[1])) abrir(m[1], false, m[2] || "ficha"); } else fechar(); };
 window.addEventListener("popstate", doHash);
 
 /* ===================== Dados do usuário (privados) =====================
@@ -610,7 +626,7 @@ const ondeSalva = () => store.modo === "conta" ? "salvo na sua conta, privado (s
 /* ===================== Pesquisa de preços (todos os itens) ===================== */
 const PALAVRAS_FRACAS = new Set("de da do das dos e em para com por a o as os um uma no na nos nas ao aos servico servicos contratacao empresa especializada prestacao fornecimento item lote conforme termo referencia".split(" "));
 const tokens = (s) => [...new Set(norm(s).trim().split(" ").filter((w) => w.length > 2 && !PALAVRAS_FRACAS.has(w) && !/^\d+$/.test(w)))];
-const unidadeChave = (u) => { const n = norm(u).trim(); if (/ust|servico tecnico/.test(n)) return "ust"; if (/ponto de funcao|^pf$/.test(n)) return "pf";
+const unidadeChave = (u) => { const n = norm(u).trim(); if (/(^| )usts?( |$)/.test(n)) return "ust"; if (/servicos? tecnicos?/.test(n)) return "servtec"; if (/ponto de funcao|^pf$/.test(n)) return "pf";
   if (/^(mes|meses|mensal)/.test(n) || /fixo mensal/.test(n)) return "mes"; if (/hora/.test(n)) return "hora"; if (/pagina|imagem|folha/.test(n)) return "pagina";
   return n.split(" ")[0] || "un"; };
 let IDX = null;
@@ -1316,9 +1332,134 @@ document.getElementById("modelo-arquivo").addEventListener("change", async (e) =
 document.getElementById("modelo-padrao").addEventListener("click", () => { const ta = document.getElementById("modelo-texto"); ta.value = MODELO_PADRAO; ta.dataset.sujo = "1";
   document.getElementById("modelo-estado").textContent = "Modelo padrão carregado. Toque em \"Salvar modelo\" para voltar a usá-lo."; });
 
+/* ===================== Calculadora de preço =====================
+   Na seção Calculadora (livre) e na aba Calculadora de cada pregão (já preenchida com os números do edital).
+   Fórmula do preço: preço = custo × (1 + despesas indiretas) ÷ (1 − impostos − lucro), os percentuais sobre o preço. */
+const CALC_MODOS = [["preco", "Preço de venda (BDI)"], ["ust", "UST"], ["pagina", "Digitalização por página"], ["mensal", "Fixo mensal"], ["lance", "Lance e desconto"], ["simples", "Calculadora"]];
+const CALC_PADRAO = { di: 10, imp: 16.33, lucro: 8 };
+const calcPadroes = () => ({ ...CALC_PADRAO, ...((store.data["calc-padroes"] || {}).v || {}) });
+const calcs = {};  // instância -> {modo, v}
+const num = (s) => { if (s == null || s === "") return null; const n = typeof s === "number" ? s : valorDigitado(s) || parseFloat(String(s).replace(/\./g, "").replace(",", ".")); return isNaN(n) ? null : n; };
+const pct = (s) => { const n = num(s); return n == null ? null : n / 100; };
+const r$ = (v) => v == null || !isFinite(v) ? "—" : v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", minimumFractionDigits: 2, maximumFractionDigits: v !== 0 && Math.abs(v) < 1 ? 4 : 2 });
+const pc = (v) => v == null || !isFinite(v) ? "—" : (v * 100).toLocaleString("pt-BR", { maximumFractionDigits: 2 }) + "%";
+const n0 = (v) => v == null || !isFinite(v) ? "—" : v.toLocaleString("pt-BR", { maximumFractionDigits: 2 });
+function precoVenda(custo, di, imp, lucro) {
+  if (custo == null || di == null || imp == null || lucro == null) return null;
+  if (imp + lucro >= 1) return { erro: "Impostos + lucro precisam somar menos de 100%." };
+  const preco = custo * (1 + di) / (1 - imp - lucro);
+  return { preco, bdi: custo ? preco / custo - 1 : null, impR: preco * imp, lucroR: preco * lucro, diR: custo * di };
+}
+const linha = (rot, val, forte) => `<div class="calc-l${forte ? " forte" : ""}"><span>${rot}</span><b>${val}</b></div>`;
+const desconto = (preco, ref) => ref ? linha("Desconto sobre a referência do edital", pc(1 - preco / ref)) + (preco < ref * 0.75 ? `<p class="aviso-an">Abaixo de 75% da referência: risco de proposta inexequível (Lei 14.133, art. 59; em serviços comuns o órgão pode pedir que você demonstre a exequibilidade).</p>` : "") : "";
+
+const CAMPOS = {
+  preco: [["custo", "Custo direto total (R$)", "ex.: 850 mil"]],
+  ust: [["hora", "Custo da hora do profissional (R$, com encargos)", "ex.: 95"], ["horas", "Horas por UST", "1"], ["fator", "Fator de complexidade", "1"],
+    ["qtd", "Quantidade de UST", ""], ["ref", "Valor unitário de referência do edital (R$)", ""]],
+  pagina: [["paginas", "Páginas a digitalizar", "ex.: 2 mi"], ["prod", "Produtividade (páginas por operador por dia)", "3000"], ["dias", "Prazo (dias úteis)", "120"],
+    ["operador", "Custo mensal de um operador (R$, com encargos)", "4500"], ["fixos", "Outros custos no contrato (equipamentos, software, transporte) (R$)", "0"], ["ref", "Preço por página de referência do edital (R$)", ""]],
+  mensal: [["custoMes", "Custo mensal (R$)", ""], ["meses", "Meses de contrato", "12"], ["reaj", "Reajuste anual (%)", "0"], ["ref", "Valor mensal de referência do edital (R$)", ""]],
+  lance: [["estimado", "Valor estimado do edital (R$)", ""], ["meu", "Meu preço (R$)", ""], ["desc", "…ou o desconto que quero dar (%)", ""], ["custoTotal", "Meu custo total (R$), para achar o lance mínimo", ""]],
+  simples: [["expr", "Conta (ex.: 2.000.000 * 0,42 / 12 + 15%)", ""]],
+};
+const BDI_CAMPOS = [["di", "Despesas indiretas (% do custo)"], ["imp", "Impostos (% do preço)"], ["lucro", "Lucro (% do preço)"]];
+
+function calcular(modo, v) {
+  const di = pct(v.di), imp = pct(v.imp), lucro = pct(v.lucro);
+  if (modo === "preco") {
+    const r = precoVenda(num(v.custo), di, imp, lucro); if (!r) return "<p class='conta'>Preencha o custo.</p>"; if (r.erro) return `<p class="aviso-an">${r.erro}</p>`;
+    return linha("Preço de venda", r$(r.preco), true) + linha("BDI equivalente", pc(r.bdi)) + linha("Despesas indiretas", r$(r.diR)) + linha("Impostos", r$(r.impR)) + linha("Lucro", r$(r.lucroR));
+  }
+  if (modo === "ust") {
+    const custoUst = (num(v.hora) ?? NaN) * (num(v.horas) ?? 1) * (num(v.fator) ?? 1);
+    if (!isFinite(custoUst)) return "<p class='conta'>Preencha o custo da hora.</p>";
+    const r = precoVenda(custoUst, di, imp, lucro); if (r.erro) return `<p class="aviso-an">${r.erro}</p>`;
+    const q = num(v.qtd);
+    return linha("Custo de 1 UST", r$(custoUst)) + linha("Preço de 1 UST", r$(r.preco), true) + (q ? linha(`Total de ${n0(q)} UST`, r$(r.preco * q), true) + linha("Lucro no contrato", r$(r.lucroR * q)) : "") + desconto(r.preco, num(v.ref));
+  }
+  if (modo === "pagina") {
+    const N = num(v.paginas), p = num(v.prod) || 3000, d = num(v.dias) || 120, m = num(v.operador) || 4500, x = num(v.fixos) || 0;
+    if (!N) return "<p class='conta'>Preencha as páginas.</p>";
+    const ops = Math.ceil(N / (p * d)), meses = d / 22, mao = ops * m * meses, custo = mao + x, cp = custo / N;
+    const r = precoVenda(cp, di, imp, lucro); if (r.erro) return `<p class="aviso-an">${r.erro}</p>`;
+    return linha("Operadores necessários", n0(ops)) + linha("Meses de produção (22 dias úteis/mês)", n0(meses)) + linha("Custo de mão de obra", r$(mao)) + linha("Custo por página", r$(cp))
+      + linha("Preço por página", r$(r.preco), true) + linha("Total do contrato", r$(r.preco * N), true) + linha("Lucro no contrato", r$(r.lucroR * N)) + desconto(r.preco, num(v.ref));
+  }
+  if (modo === "mensal") {
+    const cm = num(v.custoMes), n = Math.round(num(v.meses) || 12), rj = pct(v.reaj) || 0;
+    if (cm == null) return "<p class='conta'>Preencha o custo mensal.</p>";
+    const r = precoVenda(cm, di, imp, lucro); if (r.erro) return `<p class="aviso-an">${r.erro}</p>`;
+    let total = 0; for (let i = 0; i < n; i++) total += r.preco * Math.pow(1 + rj, Math.floor(i / 12));
+    return linha("Preço mensal", r$(r.preco), true) + linha(`Total em ${n} meses${rj ? " com reajuste" : ""}`, r$(total), true) + linha("Lucro por mês", r$(r.lucroR)) + desconto(r.preco, num(v.ref));
+  }
+  if (modo === "lance") {
+    const E = num(v.estimado); let P = num(v.meu); const d = pct(v.desc), ct = num(v.custoTotal);
+    if (P == null && E && d != null) P = E * (1 - d);
+    let h = "";
+    if (E && P) h += linha("Meu preço", r$(P), true) + linha("Desconto sobre o estimado", pc(1 - P / E)) + (P < E * 0.75 ? `<p class="aviso-an">Abaixo de 75% do estimado: risco de inexequibilidade (Lei 14.133, art. 59).</p>` : "");
+    if (ct != null && imp != null) { if (imp >= 1) return "<p class='aviso-an'>Impostos precisam ser menos de 100%.</p>";
+      const piso = ct / (1 - imp); h += linha("Lance mínimo (empata custo + impostos, lucro zero)", r$(piso), true) + (E ? linha("Desconto máximo possível", pc(1 - piso / E)) : "") + (P ? linha("Folga do meu preço sobre o mínimo", r$(P - piso)) : ""); }
+    return h || "<p class='conta'>Preencha o estimado e o seu preço (ou o desconto).</p>";
+  }
+  if (modo === "simples") { const r = conta(v.expr || ""); return r == null ? "<p class='conta'>Digite uma conta.</p>" : typeof r === "string" ? `<p class="aviso-an">${esc(r)}</p>` : linha("Resultado", n0(r), true) + linha("Em reais", r$(r)); }
+  return "";
+}
+/* conta segura (sem eval): + − × ÷, parênteses, números brasileiros (1.500,25), "mil/mi/bi" e "x%" (percentual do valor à esquerda) */
+function conta(expr) {
+  const s = sem(expr).replace(/r\$/g, "").replace(/×|x(?=\s*[\d(])/g, "*").replace(/÷/g, "/");
+  const toks = []; const re = /\s*(\d[\d.]*(?:,\d+)?|\d*,\d+)\s*(mil|mi|bi)?\s*(%)?|\s*([-+*/()])/gy; let m, i = 0;
+  while (i < s.length) { re.lastIndex = i; m = re.exec(s); if (!m || m[0] === "") { if (/^\s+$/.test(s.slice(i))) break; return "Não entendi a conta a partir de: " + s.slice(i, i + 12); } i = re.lastIndex;
+    if (m[4]) toks.push(m[4]); else { let n = m[1]; n = n.includes(",") ? n.replace(/\./g, "").replace(",", ".") : (n.match(/\./g) || []).length > 1 || /\.\d{3}$/.test(n) ? n.replace(/\./g, "") : n;
+      toks.push({ n: parseFloat(n) * ({ mil: 1e3, mi: 1e6, bi: 1e9 }[m[2]] || 1), pct: !!m[3] }); } }
+  let k = 0;
+  const prim = () => { const t = toks[k++]; if (t === "(") { const v = soma(); if (toks[k++] !== ")") throw "falta fechar parêntese"; return v; } if (t === "-") return -val(prim()); if (t && typeof t === "object") return t; throw "conta incompleta"; };
+  const val = (t, base) => typeof t === "object" ? (t.pct ? (base ?? 1) * t.n / 100 : t.n) : t;
+  const prod = () => { let a = val(prim()); while (toks[k] === "*" || toks[k] === "/") { const op = toks[k++]; const b = val(prim(), 1); a = op === "*" ? a * b : a / b; } return a; };
+  const soma = () => { let a = prod(); while (toks[k] === "+" || toks[k] === "-") { const op = toks[k++]; const t = toks[k]; const b = t && typeof t === "object" && t.pct && (toks[k + 1] === undefined || toks[k + 1] === ")" || toks[k + 1] === "+" || toks[k + 1] === "-") ? (k++, a * t.n / 100) : prod(); a = op === "+" ? a + b : a - b; } return a; };
+  try { if (!toks.length) return null; const r = soma(); if (k < toks.length) return "sobrou algo na conta"; return isFinite(r) ? r : "divisão por zero"; } catch (e) { return typeof e === "string" ? e : "conta inválida"; }
+}
+function prefCalc(x) {
+  if (!x) return {};
+  const med = (tipo) => { const l = itensDoTipo(x, tipo).lista.map((i) => i[4]).filter((v) => v > 0); return l.length ? mediana(l) : null; };
+  const vol = x.vol || {};
+  return { estimado: x.v ?? "", qtd: vol.ust ?? "", ref_ust: med("ust") ?? "", paginas: vol.pagina ?? "", ref_pagina: med("digitalizacao") ?? "", ref_mensal: med("mensal") ?? "",
+    meses: vol.mes ?? "", modo: vol.ust ? "ust" : vol.pagina ? "pagina" : vol.mes || x.c.includes("remun_fixo_mensal") ? "mensal" : "lance" };
+}
+function calcHtml(inst, x) {
+  if (!calcs[inst]) { const p = prefCalc(x); const pad = calcPadroes();
+    calcs[inst] = { modo: p.modo || "preco", v: { ...pad, estimado: p.estimado, qtd: p.qtd, paginas: p.paginas, meses: p.meses || 12, horas: 1, fator: 1, prod: 3000, dias: 120, operador: 4500, fixos: 0, reaj: 0 }, ref: { ust: p.ref_ust, pagina: p.ref_pagina, mensal: p.ref_mensal } }; }
+  const c = calcs[inst];
+  const val = (k) => k === "ref" ? (c.v["ref_" + c.modo] ?? c.ref[c.modo] ?? "") : (c.v[k] ?? "");
+  const campo = ([k, rot, ph]) => `<label>${esc(rot)}<input data-k="${k === "ref" ? "ref_" + c.modo : k}" inputmode="decimal" value="${esc(typeof val(k) === "number" ? n0(val(k)) : val(k))}" placeholder="${esc(ph)}"></label>`;
+  const usaBdi = !["simples"].includes(c.modo);
+  return `<div class="calc" data-inst="${inst}">
+    <div class="chips" role="group" aria-label="Tipo de cálculo">${CALC_MODOS.map(([k, n]) => `<button type="button" data-modo="${k}" aria-pressed="${k === c.modo}">${esc(n)}</button>`).join("")}</div>
+    ${x ? `<p class="dica">Preenchida com os números deste edital (valor estimado, quantidades e preço de referência dos itens). Confira antes de usar.</p>` : ""}
+    <div class="form calc-campos">${CAMPOS[c.modo].map(campo).join("")}
+      ${usaBdi && c.modo !== "lance" ? BDI_CAMPOS.map(([k, rot]) => campo([k, rot, ""])).join("") : c.modo === "lance" ? campo(["imp", "Impostos (% do preço)", ""]) : ""}</div>
+    <div class="calc-res" aria-live="polite">${calcular(c.modo, { ...c.v, ref: val("ref") })}</div>
+    ${usaBdi ? `<div class="acoes"><button type="button" class="mais" data-salvar-bdi>Salvar despesas, impostos e lucro como meu padrão</button><span class="conta" data-bdi-estado></span></div>` : ""}
+  </div>`;
+}
+function ligarCalc(raiz) {
+  const box = raiz.querySelector(".calc"); if (!box) return;
+  const inst = box.dataset.inst; const c = calcs[inst];
+  const atualizar = () => { box.querySelector(".calc-res").innerHTML = calcular(c.modo, { ...c.v, ref: c.v["ref_" + c.modo] ?? c.ref[c.modo] }); };
+  box.addEventListener("input", (e) => { const el = e.target.closest("[data-k]"); if (!el) return; c.v[el.dataset.k] = el.value; atualizar(); });
+  box.querySelectorAll("[data-modo]").forEach((b) => b.onclick = () => { c.modo = b.dataset.modo; raiz.innerHTML = calcHtml(inst, inst === "secao" ? null : porId.get(inst)); ligarCalc(raiz); });
+  const sb = box.querySelector("[data-salvar-bdi]");
+  if (sb) sb.onclick = async () => { const est = box.querySelector("[data-bdi-estado]"); const novo = { v: { di: num(c.v.di), imp: num(c.v.imp), lucro: num(c.v.lucro) }, atualizado: new Date().toISOString() };
+    store.data = { ...store.data, "calc-padroes": novo };
+    try { if (store.modo === "conta") await (filas.calc = (filas.calc || Promise.resolve()).then(() => store.db.collection("data/users/" + store.uid).doc("calc-padroes").set(novo)));
+      else if (!gravarLocal()) throw { code: "local" };
+      est.textContent = "Salvo · " + ondeSalva() + "."; } catch (e) { est.textContent = "Não foi possível salvar (" + (e && e.code || "erro") + ")."; } };
+}
+function renderCalcSecao() { const r = document.getElementById("calc-corpo"); if (!r) return; r.innerHTML = calcHtml("secao", null); ligarCalc(r); }
+
 render(); renderAv(); doHash();
 setTimeout(carregarTodas, 50);
-renderConfig(); renderModelo(); renderCrm(); iniciarStore();
+renderConfig(); renderModelo(); renderCrm(); renderCalcSecao(); iniciarStore();
 </script>
 </body>
 </html>

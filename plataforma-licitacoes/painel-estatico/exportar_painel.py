@@ -20,13 +20,13 @@ with sessao() as s:
         b = l.bruto or {}
         ii = l.itens
         for i in ii:
-            k = tipo_volume(i.unidade, i.descricao, num(i.quantidade))
+            k = tipo_volume(i.unidade, i.descricao, num(i.quantidade), num(i.valor_unitario))
             # só quando a própria unidade diz o tipo (ou digitalização em volume): "UST" citada na descrição
             # de um item cobrado por pacote daria preços sem sentido
-            forte = k and (tipo_volume(i.unidade, None, num(i.quantidade)) == k or (k == "pagina" and (num(i.quantidade) or 0) >= 10_000))
+            forte = k and (tipo_volume(i.unidade, None, num(i.quantidade), num(i.valor_unitario)) == k or (k == "pagina" and (num(i.quantidade) or 0) >= 10_000))
             if forte and not (i.material_servico or "").lower().startswith("m") and num(i.valor_unitario):
                 precos[k].append([round(num(i.valor_unitario), 2), l.id, l.uf])
-        vol = volumes([(i.unidade, i.descricao, num(i.quantidade)) for i in ii if not (i.material_servico or "").lower().startswith("m")])
+        vol = volumes([(i.unidade, i.descricao, num(i.quantidade), num(i.valor_unitario)) for i in ii if not (i.material_servico or "").lower().startswith("m")])
         out.append({"ms": natureza(l.objeto, [(i.material_servico, num(i.valor_total)) for i in ii]),
                     "ib": l.codigo_ibge, "vol": {k: round(q) for k, q in vol.items()}, "gv": grande_volume(vol, num(l.valor_estimado)),"id": l.id, "o": l.orgao_nome, "un": l.unidade_nome, "uf": l.uf, "m": l.municipio, "obj": limpa(l.objeto, 2500),
                     "inf": limpa(l.informacao_complementar, 1500), "v": num(l.valor_estimado), "pub": fmt(l.data_publicacao),
@@ -34,7 +34,7 @@ with sessao() as s:
                     "sit": l.situacao, "srp": l.srp, "n": l.numero_compra, "proc": l.processo, "amp": (b.get("amparoLegal") or {}).get("nome"),
                     "pncp": l.link_pncp, "orig": l.link_origem, "pe": b.get("linkProcessoEletronico"), "plat": l.plataforma_origem,
                     "c": [c["codigo"] for c in l.categorias if c["segmento"] in seg], "a": round(l.aderencia), "ctl": l.numero_controle_pncp,
-                    "it": [[i.numero, limpa(i.descricao, 300), num(i.quantidade), i.unidade, num(i.valor_unitario), num(i.valor_total), tipo_volume(i.unidade, i.descricao, num(i.quantidade))]
+                    "it": [[i.numero, limpa(i.descricao, 300), num(i.quantidade), i.unidade, num(i.valor_unitario), num(i.valor_total), tipo_volume(i.unidade, i.descricao, num(i.quantidade), num(i.valor_unitario))]
                            for i in sorted(l.itens, key=lambda x: x.numero)[:60]],
                     "nit": len(l.itens),
                     "doc": [[d.titulo, d.tipo, d.url, d.paginas] for d in sorted(l.documentos, key=lambda x: x.sequencial or 0)]})

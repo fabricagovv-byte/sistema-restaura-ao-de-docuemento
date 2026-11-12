@@ -175,7 +175,9 @@ def test_forma_de_pagamento_pelos_itens():
     ti = classificar("Contratação de serviços de sustentação de sistemas")
     cods = lambda texto, itens, cats=ti: {c["codigo"] for c in remuneracao(texto, itens, cats)}  # noqa: E731
     # unidades reais de itens do PNCP (nov/2026)
-    assert cods("Serviços técnicos de desenvolvimento", [("UND SERVIÇO TÉCNICO", "Desenvolvimento")]) == {"remun_ust"}
+    # "UND SERVIÇO TÉCNICO" é unidade genérica do catálogo: só é UST com volume e preço de UST
+    assert cods("Serviços técnicos de desenvolvimento", [("UND SERVIÇO TÉCNICO", "Desenvolvimento", 60_000, 150)]) == {"remun_ust"}
+    assert cods("Serviços técnicos de desenvolvimento", [("UND SERVIÇO TÉCNICO", "Desenvolvimento", 1, 900_000)]) == set()
     assert cods("Serviços técnicos", [("1 - UST", "Análise e desenvolvimento de sistemas")]) == {"remun_ust"}
     assert cods("Fábrica de software", [("PONTO DE FUNÇÃO", "Implementação ágil de software")]) == {"remun_pf"}
     assert cods("Sustentação", [("FIXO MENSAL", "Sustentação do Portal Institucional")]) == {"remun_fixo_mensal"}
@@ -317,3 +319,26 @@ def test_classificar_licitacao_usa_os_itens_para_digitalizacao(banco):
     s.flush()
     coleta.classificar_licitacao(s, lic)
     assert "digitalizacao" in {c["codigo"] for c in lic.categorias}
+
+
+def test_unidade_servico_tecnico_generica_nao_e_ust():
+    from licitacoes.taxonomia import item_ust, remuneracao, tipo_volume
+
+    # catálogo do Compras.gov: "UND SERVIÇO TÉCNICO" vale para qualquer serviço (ex.: SaaS de R$ 47 mi, 1 unidade)
+    assert not item_ust("UND SERVIÇO TÉCNICO", "Software como Serviço - SaaS", 1, 47_016_200)
+    assert not item_ust("UND SERVIÇO TÉCNICO", "Central de Serviços de TIC", 12, 1_328_476)
+    assert item_ust("UND SERVIÇO TÉCNICO", "Serviços técnicos especializados de TIC", 5_000, 180)
+    assert not item_ust("UND SERVIÇO TÉCNICO", "Solução de telefonia em nuvem: licença ramal PABX virtual", 11_800, 46.9)
+    assert not item_ust("UND SERVIÇO TÉCNICO", "Central de Serviços de TIC - minutagem ilimitada, chamadas LDN", 11_800, 9.45)
+    assert not item_ust("UND SERVIÇO TÉCNICO", "Serviço comum", 500, 100)  # sem sinal de serviço técnico de TI
+    assert item_ust("UST", "Desenvolvimento sob demanda", 20, 4_409)
+    assert item_ust("UN", "Serviço técnico medido em UST - perfil sênior", 10, 900)
+    assert tipo_volume("UND SERVIÇO TÉCNICO", "Central de Serviços", 12, 1_328_476) is None
+    assert tipo_volume("UND SERVIÇO TÉCNICO", "Sustentação de sistemas", 12_000, 210) == "ust"
+    cats = [{"codigo": "desenvolvimento", "segmento": "ti"}]
+    assert not any(c["codigo"] == "remun_ust" for c in remuneracao("Serviços de TIC", [("UND SERVIÇO TÉCNICO", "Central de serviços", 12, 1_328_476)], cats))
+    r = {c["codigo"]: c for c in remuneracao("Serviços de TIC", [("UND SERVIÇO TÉCNICO", "Sustentação de sistemas", 12_000, 210)], cats)}
+    assert r["remun_ust"]["termos"] == ["1 item em UST"]
+    # sem quantidade e preço (chamada antiga com 2 campos) a unidade genérica sozinha não decide
+    assert not any(c["codigo"] == "remun_ust" for c in remuneracao("Serviços de TIC", [("UND SERVIÇO TÉCNICO", "Suporte")], cats))
+    assert any(c["codigo"] == "remun_ust" for c in remuneracao("Contratação de serviços medidos em UST", [], cats))
