@@ -133,3 +133,27 @@ def test_coleta_aproveita_pacote_anterior_e_detalha_so_os_novos(banco, tmp_path,
     chaves = {json.loads(x)["chave"] for x in gzip.open(pacote / "detalhes.jsonl.gz", "rt", encoding="utf-8")}
     assert velho.chave in chaves
     s2.close()
+
+
+def test_relevantes_le_editais_novos_com_indicio(banco):
+    from licitacoes.coletor_remoto import relevantes
+    from licitacoes.modelos import Documento
+
+    from .test_coleta_busca import _registro
+
+    s = banco
+    pncp = catalogo.fonte(s, "pncp")
+    _, ust = coleta.gravar(s, _registro(objeto="Serviços técnicos de sustentação medidos em UST", valor_estimado=400_000.0), pncp)
+    _, lido = coleta.gravar(s, _registro(chave="pncp:12345678000190-1-000009/2026", numero_controle_pncp="12345678000190-1-000009/2026",
+                                         sequencial=9, numero_compra="9/2026", objeto="Digitalização de 2 milhões de páginas do acervo",
+                                         valor_estimado=5_000_000.0), pncp)
+    _, pequeno = coleta.gravar(s, _registro(chave="pncp:12345678000190-1-000010/2026", numero_controle_pncp="12345678000190-1-000010/2026",
+                                            sequencial=10, numero_compra="10/2026", objeto="Fábrica de software por pontos de função",
+                                            valor_estimado=50_000.0), pncp)
+    s.add(Documento(licitacao_id=lido.id, sequencial=1, titulo="Edital", tipo="edital", url="https://x/1", status="baixado",
+                    caminho="documentos/x/1.paginas.json"))
+    s.commit()
+    r = [x.id for x in relevantes(s, 10)]
+    assert ust.id in r            # indício de UST, acima de R$ 300 mil
+    assert lido.id not in r       # texto já veio do pacote anterior
+    assert pequeno.id not in r    # abaixo de R$ 300 mil

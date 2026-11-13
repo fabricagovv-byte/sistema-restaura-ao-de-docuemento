@@ -249,7 +249,7 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
   <section class="panel destaques" id="destaques-sec" aria-labelledby="h-destaques">
     <div class="vista-barra"><h2 id="h-destaques" style="margin:0">Em destaque: pregões de grande volume</h2>
       <label class="marca"><input type="checkbox" id="dst-so-pregao" checked> Só pregões</label></div>
-    <p class="dica" style="margin:0">Editais abertos com muita UST, ponto de função, horas técnicas (HST), páginas de digitalização ou pagamento fixo mensal de software. Quantidades somadas dos itens do PNCP; clique para a prévia.</p>
+    <p class="dica" style="margin:0">Editais abertos com muita UST, ponto de função, horas técnicas (HST), páginas de digitalização ou pagamento fixo mensal de software. Quantidades somadas dos itens do PNCP ou, quando os itens não trazem, lidas no objeto e no termo de referência ("pelo edital"); clique para a prévia.</p>
     <div class="destaques-grade" id="destaques"></div>
   </section>
 
@@ -699,7 +699,7 @@ const DESTAQUES = [
 const qtdCurta = (q) => q >= 1e6 ? `${(q / 1e6).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} mi` : q >= 1e4 ? `${(q / 1e3).toLocaleString("pt-BR", { maximumFractionDigits: 0 })} mil` : fmt(Math.round(q));
 function grandeVolume(x) {
   const out = [];
-  for (const d of DESTAQUES) { if (d.valor) continue; const q = d.f(x); if (q && q >= d.min) out.push(`${qtdCurta(q)} ${d.un}`); }
+  for (const d of DESTAQUES) { if (d.valor) continue; const q = d.f(x); if (q && q >= d.min) out.push(`${qtdCurta(q)} ${d.un}${(x.volt || []).includes(d.k) ? " (pelo edital)" : ""}`); }
   return out;
 }
 function renderDestaques() {
@@ -711,7 +711,7 @@ function renderDestaques() {
     const soma = l.reduce((s, [x]) => s + (x.v || 0), 0);
     return `<div class="dst-bloco"><h3><span>${esc(d.t)}</span><span class="conta">${fmt(l.length)} · ${curto(soma)}</span></h3>
       ${l.length ? l.slice(0, 6).map(([x, q]) => `<button type="button" class="dst-item" data-dst="${x.id}">
-        <span class="dst-qtd">${d.valor ? (x.v ? curto(x.v) : "sem valor") : qtdCurta(q)}<small>${d.valor ? "valor do edital" : esc(d.un)}</small></span>
+        <span class="dst-qtd">${d.valor ? (x.v ? curto(x.v) : "sem valor") : qtdCurta(q)}<small>${d.valor ? "valor do edital" : esc(d.un) + ((x.volt || []).includes(d.k) ? " · pelo edital" : "")}</small></span>
         <span class="dst-o">${esc(x.o)} · ${esc(x.uf)} · ${prazoTxt(x.enc)}</span>
         <span class="dst-obj">${esc(x.obj)}</span></button>`).join("") : `<p class="conta" style="margin:0">Nenhum aberto agora${soPregao ? " em pregão" : ""}.</p>`}
       ${l.length > 6 ? `<button type="button" class="mais" data-dst-todos="${d.k}">Ver os ${fmt(l.length)}</button>` : ""}</div>`;

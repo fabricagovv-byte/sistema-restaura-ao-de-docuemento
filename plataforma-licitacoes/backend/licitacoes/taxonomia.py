@@ -454,7 +454,11 @@ def item_ust(unidade: str | None, descricao: str | None, qtd: float | None = Non
     quantidade e preço unitário de UST (>= 100 unidades, até R$ 2.000 cada)."""
     u = texto_busca(unidade)
     d = texto_busca(descricao)
-    if any(x in d for x in _UST) or set(u.split()) & {"ust", "usts"}:
+    if set(u.split()) & {"ust", "usts"}:
+        return True
+    if set(u.split()) & {"hora", "horas", "hst", "hh", "hs", "h"}:  # "Hora Serviço Técnico" (HST) é hora técnica, não UST
+        return False
+    if any(x in d for x in _UST):
         return True
     if "servico tecnico" in u or "servicos tecnicos" in u:
         return ((qtd or 0) >= UST_QTD_MIN and (preco is None or float(preco) <= UST_PRECO_MAX)
@@ -655,3 +659,59 @@ def categorias_ativas(s) -> list[DefCategoria]:
         codigos = {c.codigo for c in extras}
         s.info["categorias"] = [c for c in PADRAO if c.codigo not in codigos] + extras
     return s.info["categorias"]
+
+
+# ------------------------------------------------------------------ volume escrito no texto (objeto, termo de referência)
+# Muitos editais têm um único item "serviço" (quantidade 1) e a quantidade real fica no texto:
+# "estimativa de 1.250.000 UST", "3,9 milhões de páginas", "32.900 horas técnicas".
+# número por extenso entre o valor e a unidade ("1.250.000 (um milhão duzentos e cinquenta mil) UST"; a normalização tira
+# os parênteses)
+_EXTENSO = (r"(?:(?:um|uma|dois|duas|tres|quatro|cinco|seis|sete|oito|nove|dez|onze|doze|treze|quatorze|catorze|quinze|dezesseis|"
+            r"dezessete|dezoito|dezenove|vinte|trinta|quarenta|cinquenta|sessenta|setenta|oitenta|noventa|cem|cento|duzentos|duzentas|"
+            r"trezentos|trezentas|quatrocentos|quatrocentas|quinhentos|quinhentas|seiscentos|seiscentas|setecentos|setecentas|"
+            r"oitocentos|oitocentas|novecentos|novecentas|mil|milhao|milhoes|e)\s+){0,16}")
+_NUM_TXT = r"(\d{1,3}(?:\.\d{3})+|\d+(?:,\d+)?)\s*(mil|milhoes|milhao)?\s*(?:\([^)]{0,60}\)\s*)?" + _EXTENSO + r"(?:de\s+)?"
+_VOL_TXT = {
+    "ust": re.compile(_NUM_TXT + r"(?:ust|usts|unidades? de servicos? tecnicos?)\b"),
+    "pf": re.compile(_NUM_TXT + r"(?:pontos? de funcao)\b"),
+    "hora": re.compile(_NUM_TXT + r"(?:horas?[ -](?:tecnicas?|de servicos? tecnicos?|homem)|hst|homens?[ -]hora)\b"),
+    "pagina": re.compile(_NUM_TXT + r"(?:paginas?|imagens?|folhas?)\b"),
+}
+VOL_TXT_MIN = {"ust": 100, "pf": 50, "hora": 100, "pagina": 10_000}
+VOL_TXT_MAX = {"ust": 50_000_000, "pf": 1_000_000, "hora": 5_000_000, "pagina": 2_000_000_000}
+
+
+def _numero_txt(n: str, mult: str | None) -> float:
+    v = float(n.replace(".", "").replace(",", "."))
+    if "." in n:  # "1.800 (mil e oitocentas)": o "mil" é do número por extenso, não multiplicador
+        return v
+    return v * (1e3 if mult == "mil" else 1e6 if mult and mult.startswith("milh") else 1)
+
+
+# quantidade exigida em atestado de habilitação não é o volume do contrato
+_CTX_HABILITACAO = re.compile(r"atestado|quantitativo minimo|no minimo|minimo de|comprovacao|comprovar|qualificacao tecnica|experiencia|"
+                              r"capacidade tecnica|parcela de maior relevancia|similar")
+
+
+def preco_plausivel(tipo: str, quantidade: float, valor: float | None) -> bool:
+    """Valor do edital dividido pela quantidade dentro de uma faixa possível para o tipo (sem valor: aceita)."""
+    if not valor or not quantidade:
+        return True
+    faixa = {"ust": (10, 5_000), "pf": (100, 10_000), "hora": (15, 3_000), "pagina": (0.01, 30)}[tipo]
+    return faixa[0] <= valor / quantidade <= faixa[1] * 20  # o edital pode ter outros itens além deste volume
+
+
+def volumes_no_texto(texto: str, documental: bool = False) -> dict[str, float]:
+    """Maior quantidade de UST, ponto de função, horas técnicas e (só em edital de digitalização/indexação) páginas
+    citada no texto. Valores fora da faixa plausível são ignorados."""
+    n = normalizar(texto or "")
+    out: dict[str, float] = {}
+    for k, rx in _VOL_TXT.items():
+        if k == "pagina" and not documental:
+            continue
+        vals = [_numero_txt(m.group(1), m.group(2)) for m in rx.finditer(n)
+                if not _CTX_HABILITACAO.search(n[max(0, m.start() - 120):m.start()])]
+        vals = [v for v in vals if VOL_TXT_MIN[k] <= v <= VOL_TXT_MAX[k]]
+        if vals:
+            out[k] = max(vals)
+    return out

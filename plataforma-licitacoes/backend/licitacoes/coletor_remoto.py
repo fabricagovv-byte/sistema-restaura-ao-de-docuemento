@@ -112,13 +112,23 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
     return resumo
 
 
+def _texto_ja_baixado(lic: Licitacao) -> bool:
+    """O edital já tem documento baixado e lido (desta execução ou trazido do pacote anterior)."""
+    return any(d.status == "baixado" and d.caminho for d in lic.documentos or [])
+
+
 def relevantes(s: Session, limite: int) -> list[Licitacao]:
+    """Editais cujo edital/termo de referência vale baixar e ler: categoria prioritária ou indício de UST, ponto de
+    função, pagamento mensal, horas técnicas ou digitalização; a partir de R$ 300 mil (ou sem valor divulgado);
+    serviço. Os que já têm texto (pacote anterior) ficam de fora, para cada execução ler editais novos."""
     prio = set(config().prioritarias)
     abertas = s.query(Licitacao).filter(coleta.abertas_filtro(), Licitacao.cnpj_orgao.isnot(None),
                                         Licitacao.sequencial.isnot(None)).all()
-    cand = [lic for lic in abertas if any(c["codigo"] in prio for c in lic.categorias or [])
-            and (lic.valor_estimado is None or float(lic.valor_estimado) >= 1_000_000) and natureza(lic.objeto) != "material"]
-    cand.sort(key=lambda x: (-(x.aderencia or 0), -float(x.valor_estimado or 0)))
+    cand = [lic for lic in abertas
+            if (any(c["codigo"] in prio for c in lic.categorias or []) or _indicio(lic))
+            and (lic.valor_estimado is None or float(lic.valor_estimado) >= 300_000) and natureza(lic.objeto) != "material"
+            and not _texto_ja_baixado(lic)]
+    cand.sort(key=lambda x: (-_indicio(x), -(x.aderencia or 0), -float(x.valor_estimado or 0)))
     return cand[:limite]
 
 
@@ -126,6 +136,7 @@ SEGMENTOS_LISTADOS = {"gestao_documental", "ti", "educacao_pesquisa"}
 
 
 _INDICIO = re.compile(r"\bust\b|servico tecnico|pontos? de funcao|mensal|mensalidade|digitaliz|escane|indexa|microfilm|"
+                     r"horas? tecnicas?|banco de horas|homem.hora|\bhst\b|"
                      r"gestao documental|gestao eletronica de documentos|fabrica de software|sustentacao")
 # gestão documental inteira: muitas vezes o objeto diz só "gestão documental" e a digitalização está nos itens
 _CATS_INDICIO = {"remun_ust", "remun_pf", "remun_fixo_mensal", "digitalizacao", "indexacao", "fabrica_software", "ged",

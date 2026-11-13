@@ -395,3 +395,35 @@ def test_horas_tecnicas_hst_e_homem_hora():
     for un, desc in (("HORA", "Sistema de som PDR - propaganda de rua (carro de som)"), ("HORAS", "Instalação e reparo de câmeras de segurança"),
                      ("UN", "Computador desktop"), ("HORA", "Serviços de mecânica (hora/homem)")):
         assert tipo_volume(un, desc, 500, 200) is None, (un, desc)
+
+
+def test_volume_escrito_no_texto_do_edital():
+    from licitacoes.taxonomia import volumes_no_texto
+
+    assert volumes_no_texto("Quantidade estimada de 1.250.000 (um milhão duzentos e cinquenta mil) UST por ano") == {"ust": 1_250_000}
+    assert volumes_no_texto("até 3.067 pontos de função e 32.900 horas técnicas") == {"pf": 3067, "hora": 32_900}
+    assert volumes_no_texto("digitalização de 3,9 milhões de páginas", documental=True) == {"pagina": 3_900_000}
+    assert volumes_no_texto("digitalização de 3,9 milhões de páginas") == {}  # páginas só em edital documental
+    # números separados por espaço não se juntam; quantidades pequenas demais ou absurdas são ignoradas
+    assert volumes_no_texto("serão 384 000 768 000 UST") == {}
+    assert volumes_no_texto("tabela 1 com 12 UST") == {}
+
+
+def test_volume_no_texto_ignora_atestado_e_extenso_com_mil():
+    from licitacoes.taxonomia import preco_plausivel, volumes_no_texto
+
+    assert volumes_no_texto("o quantitativo mínimo de 1.800 (mil e oitocentas) horas de serviços técnicos no atestado") == {}
+    assert volumes_no_texto("serão contratadas 1.800 (mil e oitocentas) horas técnicas") == {"hora": 1800}
+    assert volumes_no_texto("estimativa de 20 mil UST") == {"ust": 20_000}
+    assert preco_plausivel("hora", 1_800_000, 7_200_000) is False  # R$ 4 a hora
+    assert preco_plausivel("ust", 1_250_000, 97_900_000) is True
+    assert preco_plausivel("pagina", 900_000, None) is True
+
+
+def test_hora_de_servico_tecnico_nao_e_ust():
+    from licitacoes.taxonomia import item_ust, tipo_volume
+
+    # MJSP 2026: "768.000 HST" em 24 meses, unidade "Hora Serviço Técnico"
+    assert not item_ust("HORA SERVIÇO TÉCNICO", "Desenvolvimento, manutenção e sustentação de software", 768_000, 139.8)
+    assert tipo_volume("HORA SERVIÇO TÉCNICO", "Desenvolvimento, manutenção e sustentação de software", 768_000, 139.8) == "hora"
+    assert item_ust("UST", "Desenvolvimento", 1000, 150)

@@ -17,7 +17,7 @@ on:
         default: false
       top:
         description: "Quantos editais relevantes detalhar (itens + documentos)"
-        default: "40"
+        default: "120"
   schedule:
     - cron: "23 */6 * * *"
 
@@ -81,7 +81,7 @@ jobs:
         run: |
           ANTERIOR=""
           [ -f "$RUNNER_TEMP/anterior/detalhes.jsonl.gz" ] && ANTERIOR="--anterior $RUNNER_TEMP/anterior"
-          python -u -m licitacoes.cli coletar "$GITHUB_WORKSPACE/pacote" --minutos 280 --top "${{ inputs.top || '40' }}" ${{ inputs.rapido && '--rapido' || '' }} $ANTERIOR 2>&1 | grep --line-buffered -v "HTTP Request"
+          python -u -m licitacoes.cli coletar "$GITHUB_WORKSPACE/pacote" --minutos 280 --top "${{ inputs.top || '120' }}" ${{ inputs.rapido && '--rapido' || '' }} $ANTERIOR 2>&1 | grep --line-buffered -v "HTTP Request"
       - name: Publicar no branch dados-licitacoes
         if: always()
         run: |

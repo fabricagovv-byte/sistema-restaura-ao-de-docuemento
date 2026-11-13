@@ -43,7 +43,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("reclassificar", help="reaplica as categorias a todos os editais")
     sub.add_parser("agendador", help="ciclo de monitoramento sem Celery")
     co = sub.add_parser("coletar", help="coleta completa e exporta um pacote (para rodar no GitHub Actions)")
-    co.add_argument("saida"), co.add_argument("--top", type=int, default=40), co.add_argument("--rapido", action="store_true")
+    co.add_argument("saida"), co.add_argument("--top", type=int, default=120), co.add_argument("--rapido", action="store_true")
     co.add_argument("--dias", type=int, default=3)
     co.add_argument("--listar", type=int, default=2500, help="editais de TI/gestão documental com itens e documentos listados")
     co.add_argument("--minutos", type=float, default=None, help="orçamento de tempo; as etapas longas param no prazo")

@@ -4,7 +4,23 @@ from licitacoes.db import sessao
 from licitacoes.modelos import Licitacao, agora
 from licitacoes.coleta import abertas_filtro
 from licitacoes import painel
-from licitacoes.taxonomia import natureza, volumes, grande_volume, tipo_volume
+from licitacoes.taxonomia import natureza, volumes, grande_volume, tipo_volume, volumes_no_texto, preco_plausivel
+from licitacoes.armazenamento import armazenamento
+
+
+def texto_docs(l, limite=600_000):
+    partes, tot = [], 0
+    for d in l.documentos:
+        if not d.caminho or not d.caminho.endswith('.json'):
+            continue
+        try:
+            for pg in (json.loads(armazenamento().ler(d.caminho)).get('paginas') or []):
+                partes.append(pg.get('texto') or ''); tot += len(partes[-1])
+                if tot > limite:
+                    return ' '.join(partes)
+        except Exception:
+            continue
+    return ' '.join(partes)
 SAIDA = sys.argv[1]
 seg = {"gestao_documental", "ti", "educacao_pesquisa"}
 fmt = lambda d: d.strftime("%Y-%m-%dT%H:%M") if d else None  # noqa: E731
@@ -27,8 +43,13 @@ with sessao() as s:
             if forte and not (i.material_servico or "").lower().startswith("m") and num(i.valor_unitario):
                 precos[k].append([round(num(i.valor_unitario), 2), l.id, l.uf])
         vol = volumes([(i.unidade, i.descricao, num(i.quantidade), num(i.valor_unitario)) for i in ii if not (i.material_servico or "").lower().startswith("m")])
+        # quantidade escrita no objeto ou no termo de referência quando os itens não trazem (item único "serviço")
+        documental = any(c["codigo"] in ("digitalizacao", "indexacao") for c in l.categorias or [])
+        vt = volumes_no_texto(f"{l.objeto} {l.informacao_complementar or ''} {texto_docs(l)}", documental=documental)
+        volt = {k: q for k, q in vt.items() if q > vol.get(k, 0) * 1.5 and preco_plausivel(k, q, num(l.valor_estimado))}
+        vol = {**vol, **volt}
         out.append({"ms": natureza(l.objeto, [(i.material_servico, num(i.valor_total)) for i in ii]),
-                    "ib": l.codigo_ibge, "vol": {k: round(q) for k, q in vol.items()}, "gv": grande_volume(vol, num(l.valor_estimado)),"id": l.id, "o": l.orgao_nome, "un": l.unidade_nome, "uf": l.uf, "m": l.municipio, "obj": limpa(l.objeto, 2500),
+                    "ib": l.codigo_ibge, "vol": {k: round(q) for k, q in vol.items()}, "volt": sorted(volt), "gv": grande_volume(vol, num(l.valor_estimado)),"id": l.id, "o": l.orgao_nome, "un": l.unidade_nome, "uf": l.uf, "m": l.municipio, "obj": limpa(l.objeto, 2500),
                     "inf": limpa(l.informacao_complementar, 1500), "v": num(l.valor_estimado), "pub": fmt(l.data_publicacao),
                     "ab": fmt(l.data_abertura), "enc": fmt(l.data_encerramento), "mod": l.modalidade, "md": l.modo_disputa,
                     "sit": l.situacao, "srp": l.srp, "n": l.numero_compra, "proc": l.processo, "amp": (b.get("amparoLegal") or {}).get("nome"),
