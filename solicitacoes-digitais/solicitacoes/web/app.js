@@ -63,10 +63,11 @@ export async function api(metodo, caminho, corpo) {
   const cab = { Accept: "application/json" };
   const token = sessionStorage.getItem(TOKEN);
   if (token) cab.Authorization = `Bearer ${token}`;
-  if (corpo !== undefined) cab["Content-Type"] = "application/json";
+  const ehArquivo = typeof FormData !== "undefined" && corpo instanceof FormData;  // envio de anexo (multipart)
+  if (corpo !== undefined && !ehArquivo) cab["Content-Type"] = "application/json";
   let r;
   try {
-    r = await fetch(`/api/v1${caminho}`, { method: metodo, headers: cab, body: corpo === undefined ? undefined : JSON.stringify(corpo) });
+    r = await fetch(`/api/v1${caminho}`, { method: metodo, headers: cab, body: corpo === undefined ? undefined : ehArquivo ? corpo : JSON.stringify(corpo) });
   } catch {
     throw new ErroApi(0, "Sem conexão com o servidor. Verifique a internet e tente de novo.");
   }
@@ -169,8 +170,8 @@ function telaRedefinir(token) {
 const MENU = {
   solicitante: [["#/solicitacoes", "Minhas solicitações"], ["#/nova", "Nova solicitação"]],
   operador: [["#/solicitacoes", "Minha fila"], ["#/nova", "Nova solicitação"]],
-  gestor: [["#/solicitacoes", "Solicitações"], ["#/nova", "Nova solicitação"]],
-  administrador: [["#/usuarios", "Usuários"]],
+  gestor: [["#/solicitacoes", "Solicitações"], ["#/nova", "Nova solicitação"], ["#/auditoria", "Auditoria"]],
+  administrador: [["#/usuarios", "Usuários"], ["#/auditoria", "Auditoria"]],
 };
 const inicial = () => eu && eu.perfil === "administrador" ? "#/usuarios" : "#/solicitacoes";
 function etiquetaStatus(s) {
@@ -259,19 +260,178 @@ async function telaNova() {
   campo("categoria_id", "Categoria", categoria), campo("prioridade", "Prioridade", prioridade), el("div", { class: "acoes" }, botao, el("a", { href: "#/solicitacoes" }, "Cancelar")));
   tela("Nova solicitação", el("div", { class: "cartao" }, form));
 }
+const PODE_ANEXAR_TIPOS = ".pdf,.png,.jpg,.jpeg,.docx,application/pdf,image/png,image/jpeg";
+const tamanho = (b) => b >= 1048576 ? `${(b / 1048576).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} MB` : `${Math.max(1, Math.round(b / 1024))} KB`;
+const EVENTOS = { criacao: "Abertura", transicao: "Mudança de situação", atribuicao: "Atribuição", edicao: "Edição", arquivamento: "Arquivamento",
+  desarquivamento: "Desarquivamento", anexo: "Anexo" };
+function blocoCarregando(titulo) {
+  return el("section", { class: "cartao", "aria-busy": "true" }, el("h2", {}, titulo), el("p", { class: "carregando" }, "Carregando…"));
+}
+function preencherBloco(sec, ...conteudo) { sec.removeAttribute("aria-busy"); sec.replaceChildren(sec.firstChild, ...conteudo.filter((c) => c != null && c !== false)); }
+function erroBloco(sec, e, recarregar) {
+  if (e.status === 401) return;
+  preencherBloco(sec, el("p", { class: "erro", role: "alert" }, e.message, " "),
+    recarregar ? el("button", { type: "button", class: "secundario", on: { click: recarregar } }, "Tentar de novo") : null);
+}
+async function apiBaixar(metodo, caminho, nome) {
+  const r = await fetch(`/api/v1${caminho}`, { method: metodo, headers: { Authorization: `Bearer ${sessionStorage.getItem(TOKEN)}` } });
+  if (!r.ok) { let d = null; try { d = (await r.json()).detail; } catch { /* sem corpo */ } throw new ErroApi(r.status, typeof d === "string" ? d : "Não foi possível baixar o arquivo."); }
+  const url = URL.createObjectURL(await r.blob());
+  const a = el("a", { href: url, download: nome }); document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 30000);
+}
+const recarregarDetalhe = (id, msg) => { if (msg) avisar(msg, "ok"); telaDetalhe(id); };
+
 async function telaDetalhe(id) {
   carregando("Carregando a solicitação…");
   let s;
   try { s = await api("GET", `/solicitacoes/${id}`); }
   catch (e) { if (e.status !== 401) tela("Solicitação", el("p", { class: "erro", role: "alert" }, e.status === 404 ? "Solicitação não encontrada ou sem permissão para vê-la." : e.message), el("a", { href: "#/solicitacoes" }, "Voltar à lista")); return; }
   const linha = (rot, ...val) => [el("dt", {}, rot), el("dd", {}, ...val)];
+  const finalizada = FINAIS.has(s.status);
+  const blocos = [];
+  // 1. tramitação
+  if (s.acoes_possiveis.length && !s.arquivada) blocos.push(blocoTramitar(s));
+  // 2. atribuição
+  if (!finalizada && !s.arquivada && eu.perfil === "gestor") blocos.push(blocoAtribuirGestor(s));
+  if (!finalizada && !s.arquivada && eu.perfil === "operador" && !s.responsavel && ["recebida", "em_triagem"].includes(s.status)) {
+    const b = el("button", { type: "button", on: { click: async () => { b.disabled = true;
+      try { await api("POST", `/solicitacoes/${s.id}/atribuir`, { responsavel_id: eu.id }); recarregarDetalhe(s.id, "Solicitação assumida por você."); }
+      catch (e) { b.disabled = false; if (e.status !== 401) avisar(e.message, "erro"); } } } }, "Assumir para mim");
+    blocos.push(el("section", { class: "cartao" }, el("h2", {}, "Atendimento"), el("p", { class: "ajuda" }, "Ninguém está atendendo esta solicitação."), b));
+  }
+  // 3. arquivamento (gestor)
+  if (eu.perfil === "gestor" && (finalizada || s.arquivada)) blocos.push(blocoArquivar(s));
+  const secAnexos = blocoCarregando("Anexos"), secHist = blocoCarregando("Histórico");
+  const secAud = eu.perfil === "gestor" ? blocoCarregando("Auditoria desta solicitação") : null;
   tela(`Solicitação ${s.protocolo}`, el("div", { class: "cartao" }, el("dl", { class: "dados" },
-    ...linha("Título", s.titulo), ...linha("Situação", etiquetaStatus(s)), ...linha("Categoria", s.categoria),
-    ...linha("Prioridade", PRIORIDADES[s.prioridade] || s.prioridade), ...linha("Prazo", dataHora(s.prazo_em), s.atrasada ? el("span", { class: "etiqueta atrasada" }, " atrasada") : ""),
+    ...linha("Título", s.titulo), ...linha("Situação", etiquetaStatus(s), s.arquivada ? el("span", { class: "etiqueta" }, " arquivada") : ""),
+    ...linha("Categoria", s.categoria), ...linha("Prioridade", PRIORIDADES[s.prioridade] || s.prioridade),
+    ...linha("Prazo", dataHora(s.prazo_em), s.atrasada ? el("span", { class: "etiqueta atrasada" }, " atrasada") : ""),
     ...linha("Solicitante", s.solicitante.nome), ...linha("Responsável", s.responsavel ? s.responsavel.nome : "ainda não atribuído"),
     ...linha("Aberta em", dataHora(s.criado_em)), ...linha("Descrição", s.descricao))),
-  el("p", { class: "ajuda" }, s.acoes_possiveis.length ? `Próximos passos possíveis para o seu perfil: ${s.acoes_possiveis.map((a) => STATUS[a] || a).join(", ")}.` : "Não há ação disponível para o seu perfil nesta situação."),
-  el("a", { href: "#/solicitacoes" }, "Voltar à lista"));
+  ...blocos, secAnexos, secHist, secAud, el("a", { href: "#/solicitacoes" }, "Voltar à lista"));
+  carregarAnexos(s, secAnexos); carregarHistorico(s, secHist); if (secAud) carregarAuditoria(secAud, { recurso: "solicitacao", recurso_id: String(s.id) }, true);
+}
+
+function blocoTramitar(s) {
+  const comentario = el("textarea", { rows: 3, maxlength: 5000, placeholder: "Obrigatório para concluir, indeferir, pedir complemento, cancelar e reabrir." });
+  const form = el("form", { novalidate: true, on: { submit: (ev) => ev.preventDefault() } }, campo("comentario", "Comentário ou resposta", comentario));
+  const botoes = s.acoes_possiveis.map((para) => {
+    const b = el("button", { type: "button", class: para === "indeferida" || para === "cancelada" ? "secundario" : "", dados: { para } }, `Mover para: ${STATUS[para] || para}`);
+    b.addEventListener("click", () => enviar(form, b, async () => {
+      await api("POST", `/solicitacoes/${s.id}/tramitar`, { para, comentario: comentario.value.trim() || null });
+      recarregarDetalhe(s.id, `Situação alterada para "${STATUS[para] || para}".`);
+    }));
+    return b;
+  });
+  form.append(el("div", { class: "acoes" }, ...botoes));
+  return el("section", { class: "cartao" }, el("h2", {}, "Tramitar"), form);
+}
+function blocoAtribuirGestor(s) {
+  const sel = el("select", {}, el("option", { value: "" }, "Carregando pessoas…"));
+  const botao = el("button", { type: "submit" }, s.responsavel ? "Trocar responsável" : "Atribuir");
+  const form = el("form", { novalidate: true, on: { submit: (ev) => { ev.preventDefault();
+    if (!sel.value) { mostrarErros(form, { responsavel_id: "Escolha quem vai atender." }); return; }
+    enviar(form, botao, async () => {
+      await api("POST", `/solicitacoes/${s.id}/atribuir`, { responsavel_id: Number(sel.value) });
+      recarregarDetalhe(s.id, "Responsável definido.");
+    });
+  } } }, campo("responsavel_id", "Responsável", sel, "Só operadores e gestores ativos."), el("div", { class: "acoes" }, botao));
+  api("GET", "/usuarios?ativo=true").then((us) => {
+    const aptos = us.filter((u) => u.perfil === "operador" || u.perfil === "gestor");
+    sel.replaceChildren(el("option", { value: "" }, "Escolha…"), ...aptos.map((u) => el("option", { value: u.id, selected: s.responsavel && s.responsavel.id === u.id }, `${u.nome} (${PERFIS[u.perfil]})`)));
+  }).catch((e) => { if (e.status !== 401) sel.replaceChildren(el("option", { value: "" }, "Não foi possível carregar as pessoas")); });
+  return el("section", { class: "cartao" }, el("h2", {}, "Atribuição"), form);
+}
+function blocoArquivar(s) {
+  const comentario = el("input", { maxlength: 2000, placeholder: "opcional" });
+  const botao = el("button", { type: "submit", class: "secundario" }, s.arquivada ? "Desarquivar" : "Arquivar");
+  const form = el("form", { novalidate: true, on: { submit: (ev) => { ev.preventDefault();
+    enviar(form, botao, async () => {
+      await api("POST", `/solicitacoes/${s.id}/arquivamento`, { arquivar: !s.arquivada, comentario: comentario.value.trim() || null });
+      recarregarDetalhe(s.id, s.arquivada ? "Solicitação desarquivada." : "Solicitação arquivada.");
+    });
+  } } }, campo("arq-comentario", "Comentário", comentario), el("div", { class: "acoes" }, botao));
+  return el("section", { class: "cartao" }, el("h2", {}, "Arquivo"), el("p", { class: "ajuda" }, s.arquivada ? "Arquivada: não tramita até ser desarquivada." : "Finalizada: pode ser arquivada."), form);
+}
+function podeAnexar(s) {
+  if (s.arquivada || FINAIS.has(s.status)) return false;
+  if (eu.perfil === "solicitante") return s.solicitante.id === eu.id;
+  if (eu.perfil === "operador") return !!s.responsavel && s.responsavel.id === eu.id;
+  return eu.perfil === "gestor";
+}
+async function carregarAnexos(s, sec) {
+  let lista;
+  try { lista = await api("GET", `/solicitacoes/${s.id}/anexos`); }
+  catch (e) { erroBloco(sec, e, () => carregarAnexos(s, sec)); return; }
+  const itens = lista.map((a) => {
+    const baixar = el("button", { type: "button", class: "secundario", on: { click: async () => {
+      baixar.disabled = true; try { await apiBaixar("GET", `/solicitacoes/${s.id}/anexos/${a.id}`, a.nome); } catch (e) { avisar(e.message, "erro"); } finally { baixar.disabled = false; } } } }, "Baixar");
+    const pode = podeAnexar(s) && (a.enviado_por === eu.id || eu.perfil === "gestor");
+    const remover = pode ? el("button", { type: "button", class: "secundario", on: { click: async () => {
+      if (!window.confirm(`Remover o anexo "${a.nome}"? Ele continua guardado para a auditoria.`)) return;
+      remover.disabled = true;
+      try { await api("DELETE", `/solicitacoes/${s.id}/anexos/${a.id}`); avisar("Anexo removido.", "ok"); carregarAnexos(s, sec); carregarHistorico(s, document.querySelector("[data-bloco=historico]")); }
+      catch (e) { remover.disabled = false; if (e.status !== 401) avisar(e.message, "erro"); } } } }, "Remover") : null;
+    return el("li", { class: "anexo" }, el("span", {}, el("b", {}, a.nome), ` · ${tamanho(a.tamanho)} · ${dataHora(a.em)}`), el("span", { class: "acoes" }, baixar, remover));
+  });
+  let envio = null;
+  if (podeAnexar(s)) {
+    const arq = el("input", { type: "file", accept: PODE_ANEXAR_TIPOS });
+    const botao = el("button", { type: "submit" }, "Enviar anexo");
+    envio = el("form", { novalidate: true, on: { submit: (ev) => { ev.preventDefault();
+      if (!arq.files.length) { mostrarErros(envio, { arquivo: "Escolha um arquivo." }); return; }
+      const dados = new FormData(); dados.append("arquivo", arq.files[0]);
+      enviar(envio, botao, async () => { await api("POST", `/solicitacoes/${s.id}/anexos`, dados); avisar("Anexo enviado.", "ok"); carregarAnexos(s, sec);
+        carregarHistorico(s, document.querySelector("[data-bloco=historico]")); });
+    } } }, campo("arquivo", "Novo anexo", arq, "PDF, PNG, JPEG ou DOCX, até 10 MB."), el("div", { class: "acoes" }, botao));
+  }
+  preencherBloco(sec, itens.length ? el("ul", { class: "anexos" }, itens) : el("p", { class: "vazio" }, "Nenhum anexo."), envio);
+}
+async function carregarHistorico(s, sec) {
+  if (!sec) return;
+  sec.dataset.bloco = "historico";
+  let h;
+  try { h = await api("GET", `/solicitacoes/${s.id}/historico`); }
+  catch (e) { erroBloco(sec, e, () => carregarHistorico(s, sec)); return; }
+  preencherBloco(sec, el("ol", { class: "linha-tempo" }, h.map((x) => el("li", {},
+    el("span", { class: "quando" }, dataHora(x.em)), " ",
+    el("b", {}, EVENTOS[x.evento] || x.evento),
+    x.de_status || x.para_status ? ` ${x.de_status ? (STATUS[x.de_status] || x.de_status) + " → " : ""}${STATUS[x.para_status] || x.para_status || ""}` : "",
+    ` · ${x.ator.nome}`, x.comentario ? el("p", { class: "comentario" }, x.comentario) : null))));
+}
+const ACOES_AUD = { criar: "Criação", alterar: "Alteração", tramitar: "Tramitação", atribuir: "Atribuição", arquivar: "Arquivamento", desarquivar: "Desarquivamento",
+  anexar: "Anexo enviado", remover_anexo: "Anexo removido", login: "Entrada", logout: "Saída", exportar: "Exportação", pedir_recuperacao: "Pedido de nova senha", redefinir_senha: "Nova senha" };
+async function carregarAuditoria(sec, filtros, compacto = false) {
+  const p = new URLSearchParams({ limite: compacto ? 50 : 200 });
+  for (const [k, v] of Object.entries(filtros)) if (v) p.set(k, v);
+  let evs;
+  try { evs = await api("GET", `/auditoria?${p}`); }
+  catch (e) { erroBloco(sec, e, () => carregarAuditoria(sec, filtros, compacto)); return; }
+  if (!evs.length) { preencherBloco(sec, el("p", { class: "vazio" }, "Nenhum evento com esses filtros.")); return; }
+  const json = (o) => o ? JSON.stringify(o, null, 1) : "";
+  preencherBloco(sec, el("p", { class: "ajuda" }, `${evs.length} ${evs.length === 1 ? "evento" : "eventos"} (mais recentes primeiro). A auditoria não pode ser alterada.`),
+    el("div", { class: "tabela" }, el("table", { class: "responsiva" },
+      el("thead", {}, el("tr", {}, ...["Quando", "Ação", "Recurso", "Ator", "Resultado", "Antes → depois", "Correlação"].map((t) => el("th", { scope: "col" }, t)))),
+      el("tbody", {}, evs.map((e) => el("tr", {},
+        el("td", { "data-rotulo": "Quando" }, dataHora(e.em)), el("td", { "data-rotulo": "Ação" }, ACOES_AUD[e.acao] || e.acao),
+        el("td", { "data-rotulo": "Recurso" }, `${e.recurso}${e.recurso_id ? " #" + e.recurso_id : ""}`), el("td", { "data-rotulo": "Ator" }, e.ator_id ? `usuário ${e.ator_id}` : "—"),
+        el("td", { "data-rotulo": "Resultado" }, e.resultado),
+        el("td", { "data-rotulo": "Antes → depois" }, e.antes || e.depois ? el("details", {}, el("summary", {}, "ver"), el("pre", {}, `${json(e.antes)}${e.antes && e.depois ? "\n→\n" : ""}${json(e.depois)}`)) : "—"),
+        el("td", { "data-rotulo": "Correlação" }, el("code", {}, e.correlacao || "—"))))))));
+}
+async function telaAuditoria() {
+  const recurso = el("select", {}, ...[["", "Todos"], ["solicitacao", "Solicitação"], ["usuario", "Usuário"], ["categoria", "Categoria"], ["sessao", "Sessão (entrada e saída)"], ["painel", "Painel e exportação"]]
+    .map(([v, n]) => el("option", { value: v }, n)));
+  const recursoId = el("input", { inputmode: "numeric", placeholder: "ex.: 12" });
+  const correl = el("input", { placeholder: "X-Correlation-ID" });
+  const sec = el("section", { class: "cartao", "aria-busy": "true" }, el("h2", {}, "Eventos"), el("p", { class: "carregando" }, "Carregando…"));
+  const filtrar = () => { sec.setAttribute("aria-busy", "true"); carregarAuditoria(sec, { recurso: recurso.value, recurso_id: recursoId.value.trim(), correlacao: correl.value.trim() }); };
+  const form = el("form", { class: "filtros", role: "search", on: { submit: (ev) => { ev.preventDefault(); filtrar(); } } },
+    campo("a-recurso", "Recurso", recurso), campo("a-id", "Número do recurso", recursoId), campo("a-correl", "Correlação", correl), el("div", {}, el("button", { type: "submit" }, "Filtrar")));
+  tela("Auditoria", el("div", { class: "cartao" }, form), sec);
+  filtrar();
 }
 async function telaUsuarios() {
   carregando("Carregando usuários…");
@@ -299,7 +459,7 @@ function sairDaTela() {
   document.getElementById("conta").hidden = true; document.getElementById("menu").hidden = true;
 }
 function ir(hash) { if (location.hash === hash) rota(); else location.hash = hash; }
-const PROTEGIDAS = /^#\/(solicitacoes|nova|usuarios)/;
+const PROTEGIDAS = /^#\/(solicitacoes|nova|usuarios|auditoria)/;
 async function rota() {
   if (location.pathname === "/redefinir-senha") { const t = new URLSearchParams(location.hash.slice(1)).get("token"); sairDaTela(); return telaRedefinir(t || ""); }
   const h = location.hash || "#/";
@@ -311,6 +471,7 @@ async function rota() {
   if (m) return telaDetalhe(m[1]);
   if (h.startsWith("#/nova")) return eu.perfil === "administrador" ? tela("Nova solicitação", el("p", { class: "erro" }, "O administrador não abre solicitações.")) : telaNova();
   if (h.startsWith("#/usuarios")) return telaUsuarios();
+  if (h.startsWith("#/auditoria")) return ["gestor", "administrador"].includes(eu.perfil) ? telaAuditoria() : tela("Auditoria", el("p", { class: "erro" }, "Seu perfil não vê a auditoria."));
   if (eu.perfil === "administrador") return ir("#/usuarios");
   return telaLista();
 }

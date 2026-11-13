@@ -62,7 +62,7 @@ def test_codigo_do_frontend_nao_monta_html_a_partir_de_texto():
 def _chamadas_do_frontend() -> set[tuple[str, str]]:
     js = (WEB / "app.js").read_text(encoding="utf-8")
     chamadas = set()
-    for metodo, caminho in re.findall(r'api\("(GET|POST|PUT|PATCH|DELETE)",\s*[`"]([^`"?]+)', js):
+    for metodo, caminho in re.findall(r'api(?:Baixar)?\("(GET|POST|PUT|PATCH|DELETE)",\s*[`"]([^`"?]+)', js):
         chamadas.add((metodo, re.sub(r"\$\{[^}]+\}", "{}", caminho)))
     return chamadas
 
@@ -72,6 +72,10 @@ def test_frontend_so_chama_rotas_do_contrato():
     chamadas = _chamadas_do_frontend()
     assert {("POST", "/auth/login"), ("GET", "/auth/eu"), ("POST", "/auth/logout"), ("POST", "/auth/recuperar"),
             ("POST", "/auth/redefinir"), ("GET", "/solicitacoes"), ("POST", "/solicitacoes"), ("GET", "/solicitacoes/{}"),
-            ("GET", "/categorias"), ("GET", "/usuarios")} <= chamadas
+            ("GET", "/categorias"), ("GET", "/usuarios"),
+            # dia 6: tramitação, atribuição, arquivamento, histórico, anexos e auditoria
+            ("POST", "/solicitacoes/{}/tramitar"), ("POST", "/solicitacoes/{}/atribuir"), ("POST", "/solicitacoes/{}/arquivamento"),
+            ("GET", "/solicitacoes/{}/historico"), ("GET", "/solicitacoes/{}/anexos"), ("POST", "/solicitacoes/{}/anexos"),
+            ("GET", "/solicitacoes/{}/anexos/{}"), ("DELETE", "/solicitacoes/{}/anexos/{}"), ("GET", "/auditoria")} <= chamadas
     fora = sorted(chamadas - ops)
     assert not fora, f"o frontend chama rotas que não existem no contrato: {fora}"

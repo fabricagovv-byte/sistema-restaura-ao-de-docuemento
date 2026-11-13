@@ -62,3 +62,10 @@ dl.dados dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
   table.responsiva td::before { content: attr(data-rotulo); color: var(--suave); font-size: .85rem; }
   dl.dados { grid-template-columns: 1fr; }
 }
+h2 { font-size: 1.1rem; margin: 0 0 10px; }
+ul.anexos { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 8px; }
+li.anexo { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--linha); padding-bottom: 8px; overflow-wrap: anywhere; }
+ol.linha-tempo { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+ol.linha-tempo .quando { color: var(--suave); font-size: .88rem; }
+ol.linha-tempo .comentario { margin: 2px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .8rem; margin: 4px 0 0; }
