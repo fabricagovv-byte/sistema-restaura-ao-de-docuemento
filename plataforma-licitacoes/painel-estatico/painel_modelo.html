@@ -177,6 +177,50 @@ ul.check label b { font-weight: 600; }
 .calc-res { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; background: var(--accent-soft); }
 .calc-l { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; border-bottom: 1px dashed var(--line); } .calc-l:last-child { border-bottom: 0; }
 .calc-l span { color: var(--muted); } .calc-l.forte b { font-size: 1.08rem; color: var(--accent); }
+.vista-barra { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; }
+.area-lista { display: grid; gap: 16px; }
+.col-lista { display: grid; gap: 10px; min-width: 0; }
+.card { cursor: pointer; }
+.card:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.card[aria-current="true"] { box-shadow: 0 0 0 2px var(--accent); }
+.previa { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.previa h3 { margin: 0; font-size: 1.05rem; line-height: 1.35; }
+.previa .obj-previa { margin: 0; overflow-wrap: anywhere; }
+.previa .contagem { font-size: 1.15rem; font-weight: 700; }
+.previa .contagem.urgente { color: var(--bad); }
+.previa dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; margin: 0; font-size: .9rem; }
+.previa dt { color: var(--muted); } .previa dd { margin: 0; overflow-wrap: anywhere; }
+.previa table { width: 100%; border-collapse: collapse; font-size: .84rem; } .previa td, .previa th { padding: 3px 4px; border-top: 1px solid var(--line); text-align: left; vertical-align: top; }
+.previa .num { text-align: right; white-space: nowrap; }
+.previa[hidden] { display: none !important; }
+.previa .docs a, .previa .docs li { overflow-wrap: anywhere; word-break: break-word; }
+.previa { grid-template-columns: minmax(0, 1fr); overflow-x: hidden; } .previa > * { min-width: 0; } .previa .acoes { flex-wrap: wrap; } .previa table { table-layout: fixed; } .previa td:first-child { overflow-wrap: anywhere; } .previa .num { width: 92px; }
+.previa-topo { display: flex; justify-content: space-between; gap: 8px; align-items: start; }
+.previa-fechar { display: none; }
+@media (min-width: 1100px) {
+  .wrap { max-width: 1380px; }
+  .area-lista.com-previa { grid-template-columns: minmax(0, 1fr) 430px; align-items: start; }
+  .previa { position: sticky; top: 12px; max-height: calc(100vh - 24px); overflow: auto; }
+}
+@media (max-width: 1099px) {
+  .previa { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; max-height: 78vh; overflow: auto; border-radius: 14px 14px 0 0;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, .25); padding-bottom: 20px; }
+  .previa-fechar { display: inline-block; }
+}
+.agenda-dias { display: flex; flex-wrap: wrap; gap: 6px; }
+.agenda-dias button { display: grid; gap: 0; text-align: center; min-width: 74px; }
+.agenda-dias button small { font-size: .72rem; color: var(--muted); }
+.agenda-dia { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 6px; }
+.agenda-dia h3 { margin: 0; font-size: 1rem; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.agenda-item { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 10px; align-items: start; padding: 6px 4px; border-top: 1px solid var(--line); cursor: pointer; border-radius: 6px; }
+.agenda-item:hover, .agenda-item[aria-current="true"] { background: var(--accent-soft); }
+.agenda-item .hora { font-weight: 700; } .agenda-item .o { font-size: .8rem; color: var(--muted); }
+.agenda-item p { margin: 0; overflow-wrap: anywhere; } .agenda-item .v { text-align: right; white-space: nowrap; font-size: .88rem; }
+@media (max-width: 640px) { .agenda-item { grid-template-columns: 48px minmax(0, 1fr); } .agenda-item .v { grid-column: 2; text-align: left; } }
+.avancada { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; }
+.avancada summary { cursor: pointer; font-weight: 600; }
+.avancada[open] summary { margin-bottom: 8px; }
+label.marca { display: inline-flex; gap: 6px; align-items: center; text-transform: none; letter-spacing: 0; font-size: .9rem; color: var(--ink); }
 </style>
 
 <div class="wrap">
@@ -201,14 +245,40 @@ ul.check label b { font-weight: 600; }
       <label for="ord">Ordenar<select id="ord"><option value="prazo">Prazo mais próximo</option><option value="valor">Maior valor</option><option value="ader">Aderência</option><option value="vol">Grande volume primeiro</option><option value="itens">Maior valor nos itens do tipo</option><option value="dist">Mais perto da sede</option></select></label>
       <label for="dmax">Até quantos km da sede<input id="dmax" type="number" min="0" step="50" inputmode="numeric" placeholder="sem limite"></label>
     </div>
+    <details class="avancada" id="avancada">
+      <summary>Busca avançada <span class="conta" id="adv-conta"></span></summary>
+      <div class="linha">
+        <label for="adv-mod">Modalidade<select id="adv-mod"><option value="">Todas</option><option value="pregao">Pregão</option><option value="concorrencia">Concorrência</option>
+          <option value="dispensa">Dispensa</option><option value="credenciamento">Credenciamento</option><option value="inexigibilidade">Inexigibilidade</option><option value="outra">Outras</option></select></label>
+        <label for="adv-de">Encerra a partir de<input id="adv-de" type="date"></label>
+        <label for="adv-ate">Encerra até<input id="adv-ate" type="date"></label>
+        <label for="adv-orgao">Órgão contém<input id="adv-orgao" type="search" placeholder="ex.: tribunal, prefeitura de"></label>
+        <label for="adv-excluir">Excluir palavras<input id="adv-excluir" type="search" placeholder="ex.: impressora, veículo"></label>
+        <label for="adv-vmax">Valor do edital até (R$)<input id="adv-vmax" inputmode="decimal" placeholder="ex.: 5 mi"></label>
+        <label for="adv-ader">Aderência mínima (0 a 100)<input id="adv-ader" type="number" min="0" max="100" step="5" placeholder="0"></label>
+        <label for="adv-srp">Registro de preços<select id="adv-srp"><option value="">Tanto faz</option><option value="1">Só registro de preços</option><option value="0">Sem registro de preços</option></select></label>
+      </div>
+      <div class="acoes"><label class="marca"><input type="checkbox" id="adv-itens"> Só com itens coletados</label>
+        <label class="marca"><input type="checkbox" id="adv-docs"> Só com documentos (edital) listados</label>
+        <button type="button" class="mais" id="adv-limpar">Limpar busca avançada</button></div>
+    </details>
     <div class="chips" id="cats" role="group" aria-label="Categoria"></div>
     <p class="dica">Várias palavras = todas precisam aparecer · <b>"frase exata"</b> · <b>-palavra</b> exclui · <b>ust|pf</b> = uma ou outra · UST, PF, GED, EAD, SaaS e IA já buscam os sinônimos.</p>
     <p class="conta" id="conta" aria-live="polite"></p>
     <div class="acoes"><button type="button" class="mais" id="exp-tabelas" hidden>Baixar tabelas de preço destas licitações (CSV)</button><button type="button" class="mais" id="exp-itens-tipo" hidden>Baixar itens do tipo (CSV)</button><a class="mais" href="#calc-sec" style="text-decoration:none">Calculadora</a><a class="mais" href="#config-sec" style="text-decoration:none">Minha sede e meus pisos</a></div>
   </section>
 
-  <section class="lista" id="lista" aria-label="Licitações"></section>
-  <button class="mais" id="mais" type="button">Mostrar mais</button>
+  <div class="vista-barra">
+    <div class="chips" role="group" aria-label="Modo de ver" id="vistas"><button type="button" data-vista="lista" aria-pressed="true">Lista com prévia</button><button type="button" data-vista="agenda" aria-pressed="false">Agenda de disputas</button></div>
+    <span class="dica" id="vista-dica">Clique numa licitação para ver a prévia; as setas ↑ ↓ passam para a próxima.</span>
+  </div>
+  <div class="area-lista">
+    <div class="col-lista">
+      <section class="lista" id="lista" aria-label="Licitações"></section>
+      <button class="mais" id="mais" type="button">Mostrar mais</button>
+    </div>
+    <aside class="previa" id="previa" aria-label="Prévia da licitação" hidden></aside>
+  </div>
 
   <section class="panel" id="calc-sec" aria-labelledby="h-calc">
     <h2 id="h-calc">Calculadora</h2>
@@ -353,7 +423,8 @@ function parseBusca(q) {
   return { grupos, nao };
 }
 const casaBusca = (b, pb) => pb.grupos.every((g) => g.some((a) => b.includes(a))) && !pb.nao.some((g) => g.some((a) => b.includes(a)));
-const estado = { cat: "foco", uf: "", q: "", pb: { grupos: [], nao: [] }, vmin: 0, itipo: "auto", imin: 0, sv: true, plat: "", tipo: "servico", ord: "prazo", limite: 40 };
+const ADV0 = { mod: "", de: "", ate: "", orgao: "", excluir: "", vmax: 0, ader: 0, srp: "", itens: false, docs: false };
+const estado = { adv: { ...ADV0 }, cat: "foco", uf: "", q: "", pb: { grupos: [], nao: [] }, vmin: 0, itipo: "auto", imin: 0, vista: "lista", sv: true, plat: "", tipo: "servico", ord: "prazo", limite: 40 };
 const cEl = document.getElementById("cats");
 const PAGTO = ["remun_fixo_mensal", "remun_ust", "remun_pf"];  // forma de pagamento logo depois dos filtros principais
 const tipoOk = (x) => estado.tipo === "todos" || (estado.tipo === "material" ? x.ms === "material" : x.ms !== "material");
@@ -462,14 +533,146 @@ function csvItensTipo() {
   return "﻿" + linhas.map((l) => l.map((c) => `"${String(c ?? "").replace(/"/g, '""')}"`).join(";")).join("\r\n");
 }
 
+/* ===================== Prévia da licitação (antes de abrir a ficha) e agenda de disputas ===================== */
+let previaAtual = null;
+function faltaTxt(enc) {
+  if (!enc) return { txt: "prazo não informado", urg: false };
+  const ms = new Date(enc) - new Date();
+  if (ms <= 0) return { txt: "propostas encerradas", urg: true };
+  const d = Math.floor(ms / 86400000), h = Math.floor(ms % 86400000 / 3600000), m = Math.floor(ms % 3600000 / 60000);
+  return { txt: d ? `faltam ${d} ${d === 1 ? "dia" : "dias"} e ${h} h` : h ? `faltam ${h} h e ${m} min` : `faltam ${m} min`, urg: d < 3 };
+}
+function previaHtml(x) {
+  const f = faltaTxt(x.enc);
+  const reg = registro(x.id);
+  const it = (x.it || []).slice(0, 6);
+  const docs = (x.doc || []).slice(0, 5);
+  const tipo = typeof tipoItensAtivo === "function" ? tipoItensAtivo() : null;
+  const campo = (k, v) => v ? `<dt>${k}</dt><dd>${v}</dd>` : "";
+  return `<div class="previa-topo"><span class="eyebrow">Prévia${x.plat ? " · " + esc(x.plat) : ""}</span>
+      <button type="button" class="mais previa-fechar" data-fechar-previa>Fechar</button></div>
+    <h3>${esc(x.o)}</h3>
+    <p class="conta" style="margin:0">${esc(x.m ? x.m + "/" : "")}${esc(x.uf)} ${pillDist(x)}${pillCrm(x.id)}</p>
+    <p class="obj-previa">${esc(x.obj)}</p>
+    <div class="meta"><span class="valor">${brl(x.v)}</span>${prazoPill(dias(x.enc))}</div>
+    <p class="contagem${f.urg ? " urgente" : ""}" style="margin:0">${esc(f.txt)}</p>
+    <dl>${campo("Modalidade", esc(`${x.mod || ""}${x.n ? " nº " + x.n : ""}`))}${campo("Propostas até", x.enc ? esc(dataHora(x.enc)) : "")}
+      ${campo("Abertura", x.ab ? esc(dataHora(x.ab)) : "")}${campo("Portal", esc(x.plat || ""))}${campo("Natureza", { servico: "Serviço", material: "Compra de material", misto: "Serviço e material" }[x.ms] || "")}
+      ${campo("Registro de preços", x.srp == null ? "" : x.srp ? "Sim" : "Não")}${campo("Aderência", x.a != null ? x.a + " de 100" : "")}</dl>
+    ${x.vol && Object.keys(x.vol).length ? `<div class="acoes">${pillsVol(x)}</div>` : ""}
+    <div class="acoes">${x.c.map((c) => `<span class="pill p-off">${esc(CATS[c] || c)}</span>`).join("")}</div>
+    ${tipo ? blocoItensTipo(x) : ""}
+    ${it.length ? `<div><b>Itens</b>${x.nit > it.length ? ` <span class="conta">(${it.length} de ${fmt(x.nit)})</span>` : ""}<table><tbody>${it.map(([n, d, q, u, vu, vt]) =>
+      `<tr><td>${esc(n)} · ${esc((d || "").slice(0, 80))}</td><td class="num">${q == null ? "" : fmt(q)} ${esc((u || "").trim())}</td><td class="num">${vt ? brl(vt) : vu ? brl(vu) : "sigiloso"}</td></tr>`).join("")}</tbody></table></div>`
+      : `<p class="conta" style="margin:0">${x.det ? "Itens ainda não coletados." : "Itens no PNCP (abra a ficha)."}</p>`}
+    ${docs.length ? `<div><b>Documentos</b><ul class="docs" style="margin:4px 0 0">${docs.map(([tt, tp, url]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">⬇ ${esc(tt)}</a></li>`).join("")}</ul></div>` : ""}
+    ${resumoPisos(x)}
+    ${reg && reg.crm && reg.crm.passo ? `<p class="conta" style="margin:0">Próximo passo no CRM: ${esc(reg.crm.passo)}</p>` : ""}
+    <div class="acoes"><button type="button" class="salvar" data-abrir="${x.id}">Abrir pregão</button><button type="button" class="abrir" data-abrir="${x.id}" data-aba="analise">Analisar</button>
+      <button type="button" class="abrir" data-abrir="${x.id}" data-aba="calc">Calculadora</button><button type="button" class="abrir" data-abrir="${x.id}" data-aba="preco">Precificar</button>
+      <button type="button" class="abrir" data-abrir="${x.id}" data-aba="crm">${reg ? "Ver no CRM" : "Pôr no CRM"}</button></div>
+    <div class="acoes">${botaoBaixar(x)}${x.pncp ? `<a href="${esc(x.pncp)}" target="_blank" rel="noopener">Ver no PNCP</a>` : ""}${x.orig ? `<a href="${esc(x.orig)}" target="_blank" rel="noopener">Portal da disputa</a>` : ""}</div>`;
+}
+function mostrarPrevia(id, rolar = true) {
+  const x = porId.get(String(id)); if (!x) return;
+  previaAtual = String(id);
+  const el = document.getElementById("previa");
+  el.innerHTML = previaHtml(x); el.hidden = false; el.scrollTop = 0;
+  document.querySelector(".area-lista").classList.add("com-previa");
+  document.querySelectorAll("#lista [data-id]").forEach((c) => c.setAttribute("aria-current", String(c.dataset.id === previaAtual)));
+  if (rolar && window.matchMedia("(max-width: 1099px)").matches) el.focus?.();
+}
+function fecharPrevia() {
+  previaAtual = null; const el = document.getElementById("previa"); el.hidden = true; el.innerHTML = "";
+  document.querySelector(".area-lista").classList.remove("com-previa");
+  document.querySelectorAll("#lista [data-id]").forEach((c) => c.setAttribute("aria-current", "false"));
+}
+document.getElementById("previa").setAttribute("tabindex", "-1");
+document.getElementById("previa").addEventListener("click", (e) => {
+  if (e.target.closest("[data-fechar-previa]")) { fecharPrevia(); return; }
+  const b = e.target.closest("[data-abrir]"); if (b) abrir(b.dataset.abrir, true, b.dataset.aba || "ficha");
+});
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && previaAtual && !dlg.open) fecharPrevia(); });
+
+const DIA = 86400000;
+const chaveDia = (d) => { const z = new Date(d); return `${z.getFullYear()}-${String(z.getMonth() + 1).padStart(2, "0")}-${String(z.getDate()).padStart(2, "0")}`; };
+function nomeDia(chave) {
+  const hoje = chaveDia(new Date()), amanha = chaveDia(Date.now() + DIA);
+  const d = new Date(chave + "T12:00:00");
+  const base = d.toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit" });
+  return chave === hoje ? `Hoje · ${base}` : chave === amanha ? `Amanhã · ${base}` : base;
+}
+let agendaDiaSel = null;
+function agendaHtml(r) {
+  const agora = Date.now();
+  const futuras = r.filter((x) => x.enc && new Date(x.enc) >= agora - 3600000).sort((a, b) => (a.enc < b.enc ? -1 : 1));
+  if (!futuras.length) return `<p class="conta">Nenhuma licitação com data de disputa nesses filtros.</p>`;
+  const dias = new Map(); futuras.forEach((x) => { const k = chaveDia(x.enc); if (!dias.has(k)) dias.set(k, []); dias.get(k).push(x); });
+  const chaves = [...dias.keys()];
+  const sel = agendaDiaSel && dias.has(agendaDiaSel) ? agendaDiaSel : null;
+  const mostrar = sel ? [sel] : chaves.slice(0, 7);
+  const tira = `<div class="agenda-dias" role="group" aria-label="Dias">${[["", "Próximos 7 dias", futuras.filter((x) => new Date(x.enc) < agora + 7 * DIA).length]]
+    .concat(chaves.slice(0, 21).map((k) => [k, nomeDia(k), dias.get(k).length])).map(([k, n, q]) =>
+      `<button type="button" class="mais" data-agenda-dia="${k}" aria-pressed="${(sel || "") === k}">${esc(n)}<small>${fmt(q)} ${q === 1 ? "disputa" : "disputas"}</small></button>`).join("")}</div>`;
+  const bloco = (k) => { const l = dias.get(k); const soma = l.reduce((s, x) => s + (x.v || 0), 0);
+    return `<section class="agenda-dia"><h3><span>${esc(nomeDia(k))}</span><span class="conta">${fmt(l.length)} ${l.length === 1 ? "licitação" : "licitações"} · ${curto(soma)}</span></h3>
+      ${l.slice(0, sel ? 300 : 25).map((x) => `<div class="agenda-item" data-id="${x.id}" tabindex="0" aria-current="${previaAtual === String(x.id)}">
+        <span class="hora">${new Date(x.enc).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</span>
+        <div><p class="o">${esc(x.o)} · ${esc(x.m ? x.m + "/" : "")}${esc(x.uf)}${x.plat ? " · " + esc(x.plat) : ""}</p><p>${esc((x.obj || "").slice(0, 170))}</p></div>
+        <span class="v">${brl(x.v)}</span></div>`).join("")}
+      ${!sel && l.length > 25 ? `<button type="button" class="mais" data-agenda-dia="${k}">Ver as ${fmt(l.length)} do dia</button>` : ""}</section>`; };
+  return tira + mostrar.map(bloco).join("");
+}
+document.getElementById("vistas").addEventListener("click", (e) => { const b = e.target.closest("[data-vista]"); if (!b) return;
+  estado.vista = b.dataset.vista; agendaDiaSel = null;
+  document.querySelectorAll("#vistas [data-vista]").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.vista === estado.vista)));
+  document.getElementById("vista-dica").textContent = estado.vista === "agenda" ? "Disputas pela data de encerramento das propostas, com os filtros acima. Clique numa para a prévia."
+    : "Clique numa licitação para ver a prévia; as setas ↑ ↓ passam para a próxima.";
+  render(); });
+document.getElementById("lista").addEventListener("click", (e) => { const d = e.target.closest("[data-agenda-dia]"); if (!d) return;
+  agendaDiaSel = d.dataset.agendaDia || null; render(); });
+
+/* ===================== Busca avançada ===================== */
+const MODS = { pregao: /preg/, concorrencia: /concorr/, dispensa: /dispensa/, credenciamento: /credenc/, inexigibilidade: /inexig/ };
+function filtrarAvancada(r) {
+  const a = estado.adv;
+  const de = a.de ? new Date(a.de + "T00:00:00") : null, ate = a.ate ? new Date(a.ate + "T23:59:59") : null;
+  const orgao = a.orgao ? norm(a.orgao).trim() : "";
+  const fora = a.excluir ? a.excluir.split(/[,;]/).map((w) => norm(w).trim()).filter(Boolean) : [];
+  return r.filter((x) => {
+    if (a.mod) { const m = sem(x.mod || ""); if (a.mod === "outra" ? Object.values(MODS).some((rx) => rx.test(m)) : !MODS[a.mod].test(m)) return false; }
+    if (de || ate) { if (!x.enc) return false; const e = new Date(x.enc); if ((de && e < de) || (ate && e > ate)) return false; }
+    if (orgao && !norm(`${x.o} ${x.un || ""}`).includes(orgao)) return false;
+    if (fora.length && fora.some((w) => x.busca.includes(w))) return false;
+    if (a.vmax && (x.v == null || x.v > a.vmax)) return false;
+    if (a.ader && (x.a == null || x.a < a.ader)) return false;
+    if (a.srp !== "" && (x.srp == null || Number(x.srp) !== Number(a.srp))) return false;
+    if (a.itens && !(x.it && x.it.length)) return false;
+    if (a.docs && !(x.doc && x.doc.length)) return false;
+    return true;
+  });
+}
+function contarAvancada() {
+  const a = estado.adv; const n = Object.entries(a).filter(([k, v]) => v && v !== ADV0[k]).length;
+  document.getElementById("adv-conta").textContent = n ? `(${n} ${n === 1 ? "filtro ativo" : "filtros ativos"})` : "";
+}
+const ADV_CAMPOS = { "adv-mod": ["mod", (v) => v], "adv-de": ["de", (v) => v], "adv-ate": ["ate", (v) => v], "adv-orgao": ["orgao", (v) => v.trim()],
+  "adv-excluir": ["excluir", (v) => v.trim()], "adv-vmax": ["vmax", (v) => valorDigitado(v) || 0], "adv-ader": ["ader", (v) => Math.max(0, Math.min(100, parseFloat(v) || 0))],
+  "adv-srp": ["srp", (v) => v] };
+for (const [id, [k, conv]] of Object.entries(ADV_CAMPOS)) document.getElementById(id).addEventListener("input", (e) => { estado.adv[k] = conv(e.target.value); estado.limite = 40; contarAvancada(); render(); });
+for (const [id, k] of [["adv-itens", "itens"], ["adv-docs", "docs"]]) document.getElementById(id).addEventListener("change", (e) => { estado.adv[k] = e.target.checked; estado.limite = 40; contarAvancada(); render(); });
+document.getElementById("adv-limpar").addEventListener("click", () => { estado.adv = { ...ADV0 };
+  for (const id of Object.keys(ADV_CAMPOS)) document.getElementById(id).value = ""; document.getElementById("adv-itens").checked = false; document.getElementById("adv-docs").checked = false;
+  contarAvancada(); render(); });
+
 function card(x) {
   const d = dias(x.enc);
   const cls = d !== null && d <= 3 ? "curto" : d !== null && d <= 7 ? "medio" : "";
   const extra = [x.nit ? `${x.nit} ${x.nit === 1 ? "item" : "itens"}` : "", x.doc && x.doc.length ? `${x.doc.length} ${x.doc.length === 1 ? "documento" : "documentos"}` : ""].filter(Boolean).join(" · ");
-  return `<article class="card ${cls}">
+  return `<article class="card ${cls}" data-id="${x.id}" tabindex="0" aria-current="${previaAtual === String(x.id)}">
     <div class="topo"><span><b>${esc(x.o)}</b> · ${esc(x.m ? x.m + "/" : "")}${esc(x.uf)}</span>
       <span>${pillDist(x)}${pillCrm(x.id)}${prazoPill(d)} ${x.a != null ? `<span class="pill p-acc" title="Aderência ao perfil (0 a 100)">${x.a}</span>` : ""}</span></div>
-    <button type="button" class="obj-link" data-abrir="${x.id}"><p class="obj">${esc(x.obj)}</p></button>
+    <button type="button" class="obj-link" data-previa="${x.id}"><p class="obj">${esc(x.obj)}</p></button>
     <div class="meta"><span class="valor">${brl(x.v)}</span><span>Propostas até ${dataHora(x.enc)}</span>
       <span>${esc(x.mod)}${x.n ? " nº " + esc(x.n) : ""}</span>${x.plat ? `<span>Disputa: ${esc(x.plat)}</span>` : ""}${extra ? `<span>${extra}</span>` : ""}</div>
     ${x.vol && Object.keys(x.vol).length ? `<div class="acoes">${pillsVol(x)}</div>` : ""}
@@ -490,6 +693,7 @@ function render() {
     && (!estado.q || casaBusca(x.busca, estado.pb))
     && tipoOk(x) && (!estado.dmax || (distSede(x) ?? Infinity) <= estado.dmax)
     && (x.v == null ? estado.sv : x.v >= estado.vmin));
+  r = filtrarAvancada(r);
   const tipoIt = tipoItensAtivo();
   let semItens = 0;
   if (tipoIt && estado.imin > 0) r = r.filter((x) => { const s = itensDoTipo(x, tipoIt); if (!s.coletado) semItens++; return s.soma >= estado.imin; });
@@ -505,6 +709,12 @@ function render() {
     (tipoIt ? ` · itens de ${esc(TIPO_ITEM[tipoIt].nome)}: <b>${curto(somaIt)}</b>` : "") +
     (semItens ? ` · ${fmt(semItens)} sem itens coletados ficaram de fora do filtro de itens` : "");
   const bti = document.getElementById("exp-itens-tipo"); if (bti) bti.hidden = !temDownload || !tipoIt;
+  if (estado.vista === "agenda") {
+    document.getElementById("lista").innerHTML = agendaHtml(r);
+    document.getElementById("mais").hidden = true;
+    ultimaLista = r;
+    return;
+  }
   document.getElementById("lista").innerHTML = r.slice(0, estado.limite).map(card).join("") ||
     `<p class="conta">Nenhuma licitação com esses filtros.${estado.cat !== "todas" ? ` <button type="button" class="abrir" id="buscar-todas">Buscar em todas as licitações do Brasil</button>` : " Baixe o valor mínimo ou mostre as sem valor divulgado."}</p>`;
   const bt = document.getElementById("buscar-todas");
@@ -581,7 +791,19 @@ function fechar() { if (dlg.open) dlg.close(); }
 dlg.addEventListener("close", () => { if (location.hash.startsWith("#p")) history.replaceState(null, "", location.pathname + location.search); });
 document.getElementById("fechar").addEventListener("click", fechar);
 dlg.addEventListener("click", (e) => { if (e.target === dlg) fechar(); });
-document.getElementById("lista").addEventListener("click", (e) => { const b = e.target.closest("[data-abrir]"); if (b) abrir(b.dataset.abrir, true, b.dataset.aba || "ficha"); });
+document.getElementById("lista").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-abrir]"); if (b) { abrir(b.dataset.abrir, true, b.dataset.aba || "ficha"); return; }
+  if (e.target.closest("a, select, input, label")) return;
+  const alvo = e.target.closest("[data-previa], [data-id]"); if (alvo) mostrarPrevia(alvo.dataset.previa || alvo.dataset.id);
+});
+document.getElementById("lista").addEventListener("keydown", (e) => {
+  const c = e.target.closest("[data-id]"); if (!c || e.target !== c) return;
+  if (e.key === "Enter" || e.key === " ") { e.preventDefault(); mostrarPrevia(c.dataset.id); }
+  else if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+    const todos = [...document.querySelectorAll("#lista [data-id]")]; const i = todos.indexOf(c) + (e.key === "ArrowDown" ? 1 : -1);
+    if (todos[i]) { e.preventDefault(); todos[i].focus(); mostrarPrevia(todos[i].dataset.id, false); }
+  }
+});
 const doHash = () => { const m = location.hash.match(/^#p(\d+)(?:-(preco|crm|analise|calc))?$/); if (m) { if (porId.has(m[1])) abrir(m[1], false, m[2] || "ficha"); } else fechar(); };
 window.addEventListener("popstate", doHash);
 
