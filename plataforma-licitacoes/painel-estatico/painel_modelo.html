@@ -221,6 +221,20 @@ ul.check label b { font-weight: 600; }
 .avancada summary { cursor: pointer; font-weight: 600; }
 .avancada[open] summary { margin-bottom: 8px; }
 label.marca { display: inline-flex; gap: 6px; align-items: center; text-transform: none; letter-spacing: 0; font-size: .9rem; color: var(--ink); }
+.destaques-grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+.dst-bloco { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; background: var(--bg); min-width: 0; }
+.dst-bloco h3 { margin: 0; font-size: .98rem; display: flex; justify-content: space-between; gap: 8px; }
+.dst-item { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 10px; padding: 6px 4px; border-top: 1px solid var(--line); cursor: pointer; border-radius: 6px; text-align: left;
+  background: none; border-left: 0; border-right: 0; border-bottom: 0; font: inherit; color: inherit; width: 100%; }
+.dst-item:hover, .dst-item:focus-visible { background: var(--accent-soft); }
+.dst-qtd { grid-row: span 2; font-weight: 800; font-size: 1.05rem; color: var(--accent); min-width: 88px; }
+.dst-qtd small { display: block; font-size: .7rem; font-weight: 600; color: var(--muted); }
+.dst-o { font-size: .78rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dst-obj { font-size: .86rem; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.card.destaque { border-left-color: #c58b00; background: linear-gradient(90deg, color-mix(in srgb, #f5b400 9%, var(--surface)), var(--surface) 40%); }
+.faixa-destaque { justify-self: start; font-size: .74rem; font-weight: 700; color: #7a5600; background: #ffe9a8; border-radius: 999px; padding: 2px 10px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .faixa-destaque { color: #ffe08a; background: #4a3a10; } }
+:root[data-theme="dark"] .faixa-destaque { color: #ffe08a; background: #4a3a10; }
 </style>
 
 <div class="wrap">
@@ -231,6 +245,13 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
   </header>
 
   <section class="kpis" id="kpis" aria-label="Números da coleta"></section>
+
+  <section class="panel destaques" id="destaques-sec" aria-labelledby="h-destaques">
+    <div class="vista-barra"><h2 id="h-destaques" style="margin:0">Em destaque: pregões de grande volume</h2>
+      <label class="marca"><input type="checkbox" id="dst-so-pregao" checked> Só pregões</label></div>
+    <p class="dica" style="margin:0">Editais abertos com muita UST, ponto de função, horas técnicas (HST), páginas de digitalização ou pagamento fixo mensal de software. Quantidades somadas dos itens do PNCP; clique para a prévia.</p>
+    <div class="destaques-grade" id="destaques"></div>
+  </section>
 
   <section class="panel" aria-label="Filtros">
     <div class="linha">
@@ -665,13 +686,59 @@ document.getElementById("adv-limpar").addEventListener("click", () => { estado.a
   for (const id of Object.keys(ADV_CAMPOS)) document.getElementById(id).value = ""; document.getElementById("adv-itens").checked = false; document.getElementById("adv-docs").checked = false;
   contarAvancada(); render(); });
 
+/* ===================== Em destaque: grandes volumes ===================== */
+const SOFTWARE = ["desenvolvimento", "fabrica_software", "manutencao_software", "sustentacao", "sistemas_gestao", "ti_mensal"];
+const DESTAQUES = [
+  { k: "ust", t: "UST", un: "UST", min: 1000, f: (x) => (x.vol || {}).ust },
+  { k: "pf", t: "Pontos de função", un: "PF", min: 300, f: (x) => (x.vol || {}).pf },
+  { k: "hora", t: "Horas técnicas (HST)", un: "horas", min: 1000, f: (x) => (x.vol || {}).hora },
+  { k: "pagina", t: "Digitalização (páginas)", un: "páginas", min: 100000, f: (x) => x.c.some((c) => ["digitalizacao", "indexacao"].includes(c)) ? (x.vol || {}).pagina : null },
+  { k: "mensal", t: "Fixo mensal de software", un: "", min: 0, valor: true,
+    f: (x) => x.c.includes("remun_fixo_mensal") && x.c.some((c) => SOFTWARE.includes(c)) ? (x.v || 0.01) : null },
+];
+const qtdCurta = (q) => q >= 1e6 ? `${(q / 1e6).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} mi` : q >= 1e4 ? `${(q / 1e3).toLocaleString("pt-BR", { maximumFractionDigits: 0 })} mil` : fmt(Math.round(q));
+function grandeVolume(x) {
+  const out = [];
+  for (const d of DESTAQUES) { if (d.valor) continue; const q = d.f(x); if (q && q >= d.min) out.push(`${qtdCurta(q)} ${d.un}`); }
+  return out;
+}
+function renderDestaques() {
+  const soPregao = document.getElementById("dst-so-pregao").checked;
+  const agora = Date.now();
+  const base = itens.filter((x) => x.det && x.ms !== "material" && x.enc && new Date(x.enc) > agora && (!soPregao || /preg/i.test(x.mod || "")));
+  document.getElementById("destaques").innerHTML = DESTAQUES.map((d) => {
+    const l = base.map((x) => [x, d.f(x)]).filter(([, q]) => q && q >= d.min).sort((a, b) => b[1] - a[1]);
+    const soma = l.reduce((s, [x]) => s + (x.v || 0), 0);
+    return `<div class="dst-bloco"><h3><span>${esc(d.t)}</span><span class="conta">${fmt(l.length)} · ${curto(soma)}</span></h3>
+      ${l.length ? l.slice(0, 6).map(([x, q]) => `<button type="button" class="dst-item" data-dst="${x.id}">
+        <span class="dst-qtd">${d.valor ? (x.v ? curto(x.v) : "sem valor") : qtdCurta(q)}<small>${d.valor ? "valor do edital" : esc(d.un)}</small></span>
+        <span class="dst-o">${esc(x.o)} · ${esc(x.uf)} · ${prazoTxt(x.enc)}</span>
+        <span class="dst-obj">${esc(x.obj)}</span></button>`).join("") : `<p class="conta" style="margin:0">Nenhum aberto agora${soPregao ? " em pregão" : ""}.</p>`}
+      ${l.length > 6 ? `<button type="button" class="mais" data-dst-todos="${d.k}">Ver os ${fmt(l.length)}</button>` : ""}</div>`;
+  }).join("");
+}
+const prazoTxt = (enc) => { const d = dias(enc); return d === null ? "" : d <= 0 ? "encerra hoje" : d === 1 ? "encerra amanhã" : `encerra em ${d} dias`; };
+document.getElementById("dst-so-pregao").addEventListener("change", renderDestaques);
+document.getElementById("destaques").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-dst]");
+  if (b) { mostrarPrevia(b.dataset.dst); document.getElementById("previa").scrollIntoView({ behavior: "smooth", block: "nearest" }); return; }
+  const t = e.target.closest("[data-dst-todos]"); if (!t) return;
+  const k = t.dataset.dstTodos;
+  estado.cat = k === "mensal" ? "remun_fixo_mensal" : "gv"; estado.ord = k === "mensal" ? "valor" : "vol"; estado.limite = 40;
+  document.getElementById("ord").value = estado.ord;
+  if (document.getElementById("dst-so-pregao").checked) { estado.adv.mod = "pregao"; document.getElementById("adv-mod").value = "pregao"; contarAvancada(); }
+  render(); document.getElementById("lista").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
 function card(x) {
   const d = dias(x.enc);
   const cls = d !== null && d <= 3 ? "curto" : d !== null && d <= 7 ? "medio" : "";
   const extra = [x.nit ? `${x.nit} ${x.nit === 1 ? "item" : "itens"}` : "", x.doc && x.doc.length ? `${x.doc.length} ${x.doc.length === 1 ? "documento" : "documentos"}` : ""].filter(Boolean).join(" · ");
-  return `<article class="card ${cls}" data-id="${x.id}" tabindex="0" aria-current="${previaAtual === String(x.id)}">
+  const gv = grandeVolume(x);
+  return `<article class="card ${cls}${gv.length ? " destaque" : ""}" data-id="${x.id}" tabindex="0" aria-current="${previaAtual === String(x.id)}">
     <div class="topo"><span><b>${esc(x.o)}</b> · ${esc(x.m ? x.m + "/" : "")}${esc(x.uf)}</span>
       <span>${pillDist(x)}${pillCrm(x.id)}${prazoPill(d)} ${x.a != null ? `<span class="pill p-acc" title="Aderência ao perfil (0 a 100)">${x.a}</span>` : ""}</span></div>
+    ${gv.length ? `<span class="faixa-destaque">★ Grande volume: ${esc(gv.join(" · "))}</span>` : ""}
     <button type="button" class="obj-link" data-previa="${x.id}"><p class="obj">${esc(x.obj)}</p></button>
     <div class="meta"><span class="valor">${brl(x.v)}</span><span>Propostas até ${dataHora(x.enc)}</span>
       <span>${esc(x.mod)}${x.n ? " nº " + esc(x.n) : ""}</span>${x.plat ? `<span>Disputa: ${esc(x.plat)}</span>` : ""}${extra ? `<span>${extra}</span>` : ""}</div>
@@ -1679,7 +1746,7 @@ function ligarCalc(raiz) {
 }
 function renderCalcSecao() { const r = document.getElementById("calc-corpo"); if (!r) return; r.innerHTML = calcHtml("secao", null); ligarCalc(r); }
 
-render(); renderAv(); doHash();
+render(); renderAv(); doHash(); renderDestaques();
 setTimeout(carregarTodas, 50);
 renderConfig(); renderModelo(); renderCrm(); renderCalcSecao(); iniciarStore();
 </script>

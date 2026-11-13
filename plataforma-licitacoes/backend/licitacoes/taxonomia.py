@@ -543,10 +543,14 @@ VOLUMES = {
 _V_PAGINA_UN = {"pagina", "paginas", "pag", "imagem", "imagens", "folha", "folhas", "lauda", "laudas", "fls", "pgs"}
 _V_PAGINA_TXT = ["por pagina", "por imagem", "por folha", "paginas digitalizadas", "imagens digitalizadas",
                  "imagens geradas", "paginas de documentos", "folhas de documentos", "imagem digitalizada", "pagina digitalizada"]
+_HORA_UN = {"hora", "horas", "hs", "h", "hrs", "hr", "hst", "hh"}
+_HORA_SERV = re.compile(r"tecnic|servico|consultor|customiz|desenvolv|suporte|parametriz|implant|treinament|manutenc|sistema|"
+                        r"software|analis|programa|infraestrutura|evoluti|especializad")
+_HORA_DESC = re.compile(r"^ ?(horas? tecnicas?|horas? de servicos? tecnicos?|banco de horas tecnicas|horas? homem|homem hora)")
 _V_REG_UN = {"registro", "registros", "dado", "dados", "cadastro", "cadastros", "transacao", "transacoes"}
 # fora de volume de serviço de TI/documentos: impressão, monitoramento, alarme, área, distância, laudos médicos
 _V_FORA = ["impress", "toner", "copia", "videomonitoramento", "video monitoramento", "alarme", "sensores", "seguranca eletronica",
-           "laudo", "tomografia", "radiografia", "veiculo", "fibra"]
+           "laudo", "tomografia", "radiografia", "veiculo", "fibra", "camera", "carro de som", "propaganda", "mecanica"]
 _V_REG_DESC = ["cadastr", "recadastr", "digitacao", "saneamento de dados", "saneamento cadastral", "geocodific", "migracao de dados",
                "base de dados", "higienizacao de dados", "processamento de dados", "tratamento de dados", "registros"]
 _V_REG_TXT = ["por registro", "registros tratados", "registros saneados", "registros processados", "registros digitados",
@@ -575,7 +579,10 @@ def tipo_volume(unidade: str | None, descricao: str | None, qtd: float | None, p
         return "registro"
     if qtd >= 10_000 and any(x in d for x in _V_REG_DESC):
         return "registro"  # dados cobrados por "unidade" (cadastros, digitação, saneamento)
-    if pal & {"hora", "horas", "hs", "h"} and ("tecnic" in u + d or "servico" in u + d):
+    # horas técnicas (HST, homem-hora): unidade de hora + descrição de serviço de TI, ou "hora técnica" na descrição
+    if (pal & _HORA_UN or any(x in u for x in ("homem hora", "hora homem", "h/h", "hora servico", "hora tecnica"))) and _HORA_SERV.search(u + d):
+        return "hora"
+    if _HORA_DESC.search(d):
         return "hora"
     if pal & _MES or "fixo mensal" in u:
         return "mes"

@@ -382,3 +382,16 @@ def test_tecnologia_ampliada():
                                   "audiovisual_tec"}, texto
     assert "servidores" in cods("Aquisição de servidores de rede e storage para o data center")
     assert "equipamentos_ti" not in cods("Internet de links dedicados (rede mundial de computadores)")
+
+
+def test_horas_tecnicas_hst_e_homem_hora():
+    from licitacoes.taxonomia import tipo_volume
+
+    for un, desc in (("HORA", "CONSULTORIA DAS FUNCIONALIDADES DOS SISTEMAS"), ("H", "HORAS DE CUSTOMIZAÇÃO"), ("HST", "Desenvolvimento sob demanda"),
+                     ("H/H", "Suporte técnico especializado"), ("UNID", "Hora técnica para customização do sistema"),
+                     ("UNIDADE (UN)", "HORA TÉCNICA de serviços suplementares"), ("HRS", "Horas técnicas para treinamentos"),
+                     ("HORAS", "Customização extraordinária")):
+        assert tipo_volume(un, desc, 500, 200) == "hora", (un, desc)
+    for un, desc in (("HORA", "Sistema de som PDR - propaganda de rua (carro de som)"), ("HORAS", "Instalação e reparo de câmeras de segurança"),
+                     ("UN", "Computador desktop"), ("HORA", "Serviços de mecânica (hora/homem)")):
+        assert tipo_volume(un, desc, 500, 200) is None, (un, desc)
