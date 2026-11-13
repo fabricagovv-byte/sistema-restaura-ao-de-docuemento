@@ -1,0 +1,25 @@
+# Teste ponta a ponta do fluxo crítico — dia 6 — 2026-11-13T08:49:05-03:00
+commit: be1fadfa832b3a4be4290273c74689b597b7048a
+roteiro: tests/navegador/e2e_fluxo_critico.js, chamado por tests/test_e2e_navegador.py (servidor local, SQLite temporário, dados fictícios)
+
+ok 1 - solicitante abriu a solicitação 2026000001 (recebida)
+ok 2 - anexo enviado aparece na lista
+ok 3 - histórico registra o anexo
+ok 4 - gestor moveu para Em triagem
+ok 5 - gestor atribuiu ao operador
+ok 6 - solicitação aparece na fila do operador
+ok 7 - operador iniciou o atendimento
+ok 8 - pedir complemento sem comentário é recusado com mensagem
+ok 9 - operador pediu complemento
+ok 10 - solicitante respondeu e a solicitação voltou ao atendimento
+ok 11 - solicitante não vê a ação de concluir
+ok 12 - operador concluiu
+ok 13 - solicitação concluída não aceita novo anexo
+ok 14 - gestor baixou o anexo com o conteúdo original
+ok 15 - gestor arquivou
+ok 16 - histórico completo na ordem: Abertura > Anexo > Mudança de situação > Atribuição > Mudança de situação > Mudança de situação > Mudança de situação > Mudança de situação > Arquivamento
+ok 17 - auditoria tem os eventos: Arquivamento, Tramitação, Atribuição, Anexo enviado, Criação
+ok 18 - tela de auditoria do gestor abre com eventos
+ok 19 - sem erro de JavaScript no navegador []
+fluxo crítico aprovado: 19 verificações
+1 passed in 5.02s

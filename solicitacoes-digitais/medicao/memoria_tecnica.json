@@ -176,5 +176,37 @@
     "solicitacoes/api.py, solicitacoes/web/"
    ]
   ]
+ },
+ "6": {
+  "camadas": [
+   [
+    "Arquitetura e regras de negócio",
+    "As telas mostram só as transições que a API devolve em acoes_possiveis para o perfil; a regra continua toda no servidor e a recusa (comentário obrigatório, responsável exigido, perfil sem permissão) aparece no formulário. Atribuição pelo gestor a operador ou gestor ativo; operador só assume para si."
+   ],
+   [
+    "Banco de dados",
+    "Sem mudança de esquema no dia 6 (versão 4)."
+   ],
+   [
+    "Backend",
+    "Sem rota nova: o frontend passou a usar tramitar, atribuir, arquivamento, histórico, anexos (envio multipart, download e remoção) e auditoria. 94 testes em SQLite e PostgreSQL, incluindo o ponta a ponta."
+   ],
+   [
+    "Frontend",
+    "Detalhe da solicitação com blocos independentes (cada um com carregando e erro próprios): tramitar, atribuição ou assumir, arquivo, anexos, linha do tempo do histórico e auditoria da solicitação (gestor). Tela de auditoria com filtros por recurso, número e correlação para gestor e administrador. Download do anexo com o token, entregando o arquivo original."
+   ],
+   [
+    "Integração e infraestrutura",
+    "Teste ponta a ponta no Chromium (Playwright do Node) chamado pelo pytest: sobe a API num processo com SQLite temporário e dados fictícios e percorre o fluxo crítico com três perfis (19 verificações). Pulado em máquina sem Node com Playwright."
+   ]
+  ],
+  "mudancas": [
+   [
+    "Teste ponta a ponta com o Playwright do Node, chamado pelo pytest",
+    "O ambiente tem o Chromium e o Playwright do Node; instalar o Playwright do Python traria outra versão incompatível com o navegador instalado",
+    "Decisão técnica",
+    "tests/test_e2e_navegador.py"
+   ]
+  ]
  }
 }

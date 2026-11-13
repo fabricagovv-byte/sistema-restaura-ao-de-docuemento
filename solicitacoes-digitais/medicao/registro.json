@@ -485,6 +485,98 @@
       "base_declarada": 6,
       "ajustada_declarada": 12,
       "observacao": "PARCIAL: 27 critérios de aceite detalhados (dado/quando/então) para REQ-001 a REQ-008, ligados a 56 testes existentes; a validação com as respostas da entrevista NÃO foi feita porque as respostas não chegaram (perguntas 1 a 10 de PENDENCIAS_ENTREVISTA.md). Declaradas 6 de 13 UST base; o restante depende do contratante"
+    },
+    "D6-A": {
+      "dia": 6,
+      "item": "M-03",
+      "entrega": "Frontend: tramitação, histórico, anexos e auditoria",
+      "base_planejada": 25,
+      "ajustada_planejada": 75,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-13T08:43:34-03:00",
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-13T08:49:17-03:00",
+      "evidencias": [
+        {
+          "arquivo": "solicitacoes/web/app.js",
+          "sha256": "b95e222bb755c5d98334a39fdf0fb0a76f9d63d559ea8c155c06b927312e1a82",
+          "bytes": 35054
+        },
+        {
+          "arquivo": "solicitacoes/web/app.css",
+          "sha256": "fd3d0393b032b72fc957f012c62434d60e54777746e46b3e8f6878478201134c",
+          "bytes": 5479
+        },
+        {
+          "arquivo": "tests/test_web.py",
+          "sha256": "c6c6a8c04d76e65e61c40202e8b72483e59b267bd65802b29303d3efdfa9f5d4",
+          "bytes": 4427
+        },
+        {
+          "arquivo": "medicao/evidencias/navegador-dia06.txt",
+          "sha256": "fe2673045c9c7325c40780bf2c0d6fadc7f8cd20e316946a2aa80513e42e1065",
+          "bytes": 1419
+        }
+      ],
+      "commit_base": "be1fadfa832b3a4be4290273c74689b597b7048a",
+      "base_declarada": 25,
+      "ajustada_declarada": 75,
+      "observacao": "detalhe com tramitação (só ações permitidas ao perfil), atribuição (gestor) e assumir (operador), arquivar/desarquivar, anexos (enviar, baixar, remover), linha do tempo do histórico, auditoria da solicitação e tela de auditoria com filtros; exercitado pelo teste ponta a ponta do dia",
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia06.txt",
+        "sha256": "81361b54e8a927857c1e480d220af3a9297d27793d84f930875edb29542071b3",
+        "em": "2026-11-13T08:49:17-03:00"
+      },
+      "ajustada_verificada": 75,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
+    },
+    "D6-B": {
+      "dia": 6,
+      "item": "M-04",
+      "entrega": "Teste ponta a ponta do fluxo crítico no navegador",
+      "base_planejada": 12,
+      "ajustada_planejada": 24,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-13T08:46:11-03:00",
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-13T08:49:17-03:00",
+      "evidencias": [
+        {
+          "arquivo": "tests/test_e2e_navegador.py",
+          "sha256": "68ee55a46d3f6887a5a667727efa0bac3999785fb343c382f8a2ee51632822ec",
+          "bytes": 3036
+        },
+        {
+          "arquivo": "tests/navegador/e2e_fluxo_critico.js",
+          "sha256": "f828a9de67a912a094a549ba1d0532ad1e67cc66c0771d9945b8f78b292cf1d7",
+          "bytes": 7835
+        },
+        {
+          "arquivo": "medicao/evidencias/navegador-dia06.txt",
+          "sha256": "fe2673045c9c7325c40780bf2c0d6fadc7f8cd20e316946a2aa80513e42e1065",
+          "bytes": 1419
+        },
+        {
+          "arquivo": "medicao/evidencias/testes-dia06.txt",
+          "sha256": "81361b54e8a927857c1e480d220af3a9297d27793d84f930875edb29542071b3",
+          "bytes": 9094
+        }
+      ],
+      "commit_base": "be1fadfa832b3a4be4290273c74689b597b7048a",
+      "base_declarada": 12,
+      "ajustada_declarada": 24,
+      "observacao": "fluxo crítico no Chromium com 3 perfis e 19 verificações (abertura com anexo, triagem, atribuição, atendimento, complemento com recusa sem comentário, resposta, conclusão, download, arquivamento, histórico e auditoria); roda dentro do pytest; o roteiro foi começado durante a D6-A e a D6-B foi iniciada no registro logo depois",
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia06.txt",
+        "sha256": "81361b54e8a927857c1e480d220af3a9297d27793d84f930875edb29542071b3",
+        "em": "2026-11-13T08:49:17-03:00"
+      },
+      "ajustada_verificada": 24,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
     }
   }
 }

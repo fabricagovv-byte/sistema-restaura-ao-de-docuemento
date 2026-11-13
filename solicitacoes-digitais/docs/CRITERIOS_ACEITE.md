@@ -40,7 +40,7 @@ que já verifica o critério hoje; "—" quando ainda não há teste (planejado 
 | 003.2 | Iniciar atendimento exige responsável; operador só atua no que é dele e só assume para si; gestor atribui | `test_somente_responsavel_atende_e_operador_so_assume_para_si`, `test_atribuicao_em_finalizada_e_por_perfil_sem_poder` | 4 |
 | 003.3 | Indeferir, concluir, pedir complemento, cancelar e reabrir exigem comentário | `test_regras_de_fluxo_isoladas`, `test_cancelamento_pelo_solicitante_e_reabertura_pelo_gestor` | 4 |
 | 003.4 | Cada passo grava histórico (quem, quando, de, para, comentário) e auditoria | `test_fluxo_completo_com_historico_e_auditoria` | — |
-| 003.5 | Telas de tramitação e histórico no navegador | — (dia 6) | 4 |
+| 003.5 | Telas de tramitação e histórico no navegador | `test_fluxo_critico_no_navegador` (dia 6) | 4 |
 
 ## REQ-004 — Consulta gerencial
 
