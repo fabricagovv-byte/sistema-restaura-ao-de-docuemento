@@ -173,7 +173,9 @@ PADRAO: list[DefCategoria] = [
         "internet das coisas", " iot ", "georreferenciamento", "geoprocessamento", "drone", "drones",
     ], ["servidores publicos", "servidores municipais", "servidores efetivos", "capacitacao de servidores",
         "tecnologia de pavimentacao", "tecnologia led", "luminarias", "iluminacao publica", "agenciamento de viagens",
-        "tomografia", "pulverizador agricola"]),
+        "tomografia", "pulverizador agricola", "analises clinicas", "exames laboratoriais", "complementares de engenharia",
+        "projetos basico", "projeto basico e executivo", "alvara de construcao", "organizacao e producao de evento",
+        "producao de eventos", "caminhonete tipo picape", "zero quilometro"]),
     DefCategoria("ia", "Inteligência artificial", "ti", [
         "inteligencia artificial", "aprendizado de maquina", "machine learning", "ia generativa", "modelo de linguagem",
         " llm ", "visao computacional", "chatbot",
@@ -183,7 +185,7 @@ PADRAO: list[DefCategoria] = [
         "business intelligence", "data lake", "data warehouse", "governanca de dados", "qualidade de dados",
         "saneamento cadastral", "saneamento de dados", "requalificacao cadastral", "requalificacao de dados",
         "recadastramento", "higienizacao de dados", "higienizacao de base", "mineracao de dados",
-        "inteligencia de dados", "analytics", "cadastro territorial multifinalitario", "geoprocessamento",
+        "inteligencia de dados", "analytics",
     ], ["equipamentos de processamento de dados", "materiais de processamento de dados", "material de processamento de dados",
         "dados variaveis", "centro de processamento de dados", "nobreak", "computadores", "plano de dados",
         "comunicacao de dados", "link de dados", "dados moveis", "teamviewer"],
@@ -192,7 +194,7 @@ PADRAO: list[DefCategoria] = [
                   "carga de dados historicos", "legado", "cadastr", "analise de dados", "digitacao"]),
     DefCategoria("cloud", "Cloud computing", "ti", [
         "computacao em nuvem", "cloud computing", "servicos de nuvem", "nuvem publica", " iaas ", " paas ",
-        "cloud broker", "hospedagem em nuvem",
+        "cloud broker", "hospedagem em nuvem", "creditos de nuvem", "nuvem computacional", "backup em nuvem", "armazenamento em nuvem",
     ]),
     DefCategoria("servidores", "Servidores e data center", "ti", [
         # "servidores" sozinho pega servidor público (uniforme, consignado, plano de saúde): só com qualificador de TI
@@ -200,11 +202,17 @@ PADRAO: list[DefCategoria] = [
         "servidores de banco de dados", "servidores rack", "servidores blade", "servidor rack", "servidores em nuvem",
         "servidor de arquivos", "servidores de arquivos", "data center", "datacenter", "storage", "armazenamento de dados",
         "hiperconvergente", "exadata", "solucao de backup",
-    ], ["servidores publicos", "servidores municipais", "servidores do municipio", "capacitacao de servidores"]),
+    ], ["servidores publicos", "servidores municipais", "servidores do municipio", "capacitacao de servidores", "server datacenter",
+        "climatizacao de precisao", "hospedagem dos sistemas", "hospedagem do sistema", "hospedagem de dados", "hospedagem dos dados",
+        "hospedagem em data center", "hospedagem em datacenter", "hospedado em data center", "hospedados em data center"],
+        fortes=["colocation", "espaco em datacenter", "espaco em data center", "servidores de rede", "servidor de rede", "storage",
+                "servidores rack", "servidores blade", "hiperconvergente"]),
     DefCategoria("seguranca", "Segurança da informação", "ti", [
-        "seguranca da informacao", "ciberseguranca", "seguranca cibernetica", "firewall", "siem", "soc ",
+        "seguranca da informacao", "ciberseguranca", "seguranca cibernetica", "firewall", " siem ",
         "antivirus", "endpoint", "prevencao de vazamento de dados", "pentest", "teste de intrusao",
-    ]),
+        "certificado digital", "certificados digitais", "certificacao digital icp", "icp-brasil", "icp brasil", "certificado ssl",
+        "certificados ssl", "certificado tls",
+    ], ambiguos=[" soc "], contexto=["seguranca", "ciber", "monitoramento", "centro de operacoes", "incidente"]),
     DefCategoria("suporte", "Suporte técnico de TI", "ti", [
         "suporte tecnico de ti", "service desk", "central de servicos", "suporte a usuarios", "help desk",
         "atendimento ao usuario de tic",
@@ -221,17 +229,24 @@ PADRAO: list[DefCategoria] = [
     DefCategoria("sistemas_gestao", "Sistemas de gestão e licenças de software", "ti", [
         "sistema de gestao escolar", "sistemas de gestao escolar", "gestao escolar informatizada", "sistema integrado de gestao",
         "sistemas integrados de gestao", " erp ", "sistema de gestao hospitalar", "gestao hospitalar informatizada",
-        "prontuario eletronico", "nota fiscal eletronica", " nfs-e ", " nfse ", "sistema de folha de pagamento",
+        "prontuario eletronico", " nfs-e ", " nfse ", "sistema de folha de pagamento",
         "sistema de arrecadacao", "sistema tributario", "sistema de protocolo", "sistema de processo eletronico",
         "solucao de processo eletronico",
         "sistema de gestao patrimonial", "sistema de gestao de pessoas", "sistema de gestao de frota", "sistema de gestao de saude",
         "software de gestao", "softwares de gestao", "solucao sistemica", "licenciamento de software", "licenciamento de sistema",
         "licenca de uso de software", "licencas de uso de software", "sistema de gestao de documentos",
+        "plataforma integrada de gestao", "solucao integrada de gestao", "gestao publica municipal", "sistema de gestao publica",
+        "sistemas de gestao publica", "sistema integrado de gestao publica", "licenca de software", "licencas de software", "subscricao de software",
+        "subscricoes de software", "licenca temporaria de software",
+        "licencas de direito de uso", "licenca de direito de uso", "licenca perpetua", "licencas perpetuas", "licencas do software",
+        "licenca do software", "licencas de uso dos softwares", "licencas de uso do software",
+        "direitos sobre programas de computador", "software assurance", "suite de escritorio", "solucao tecnologica integrada", "plataforma web integrada", "plataforma web para gerenciamento",
     ], ["sistema de gestao ambiental", "gestao da qualidade", "sistema de gestao de abastecimento", "cartao magnetico",
         "cartao fisico", "alienacao", "leilao", "venda de imovel", "bens imoveis"], ambiguos=["sistema de gestao", "sistemas de gestao", "plataforma de gestao", "sistema web",
-                                    "sistema online", "gestao online"],
+                                    "sistema online", "gestao online", "nota fiscal eletronica"],
         # sem "sistema de gestao" no contexto: senão a expressão ambígua confirmaria a si mesma
-        contexto=[x for x in CTX_TI if "gestao" not in x] + [" app ", "licenca de uso", "licenciamento", "informatizad", "em nuvem"]),
+        contexto=[x for x in CTX_TI if "gestao" not in x] + [" app ", "licenca de uso", "licenciamento", "informatizad", "em nuvem",
+                                                            "plataforma web", " saas "]),
     DefCategoria("cidades_inteligentes", "Cidades inteligentes e mobilidade", "ti", [
         "cidade inteligente", "cidades inteligentes", "smart city", "monitoramento urbano inteligente", "gestao da mobilidade",
         "mobilidade inteligente", "semaforos inteligentes", "semaforizacao inteligente", "centro de controle operacional",
@@ -245,8 +260,10 @@ PADRAO: list[DefCategoria] = [
         "telefonia ip", "telefonia em nuvem", " pabx ", " voip ", "central telefonica", "comunicacao via satelite",
         "comunicacoes por satelite", "comunicacao por satelite", "internet via satelite", "radiocomunicacao", "radios digitais",
         "rede mpls", " sd-wan ", " sdwan ", "wi-fi publico", "wifi publico", "telecomunicacoes", "servico movel pessoal",
-        "chips de dados", "plano de dados", "conectividade",
-    ], ["fibra de vidro", "emissoras de radio", "radiodifusao comercial", "veiculacao"]),
+        "chips de dados", "plano de dados", "servico de conectividade", "servicos de conectividade", "solucao de conectividade",
+        "conectividade de dados", "conectividade a internet", "conectividade com a internet",
+    ], ["fibra de vidro", "emissoras de radio", "radiodifusao comercial", "veiculacao", "producao de evento", "producao de eventos"],
+        ambiguos=["conectividade"], contexto=["internet", " link ", " links ", "anatel", "operadora", "banda larga", "mbps", "provedor"]),
     DefCategoria("seguranca_eletronica", "CFTV, videomonitoramento e segurança eletrônica", "ti", [
         " cftv ", "circuito fechado de televisao", "circuito fechado de tv", "videomonitoramento", "video monitoramento",
         "monitoramento por cameras", "monitoria por cameras", "cameras de seguranca", "cameras de videomonitoramento",
@@ -258,7 +275,8 @@ PADRAO: list[DefCategoria] = [
         "rastreamento por gps", "rastreamento via satelite", "sistema de rastreamento", "internet das coisas", " iot ", " rfid ",
         "monitoramento remoto", "sensores inteligentes",
     ], ["rastreamento do cancer", "rastreamento de cancer", "rastreamento neonatal", "rastreamento auditivo", "rastreamento oncologico",
-        "locacao de veiculo", "locacao de veiculos", "veiculos zero quilometro", "locacao de caminh", "locacao de onibus"]),
+        "locacao de veiculo", "locacao de veiculos", "veiculos zero quilometro", "locacao de caminh", "locacao de onibus",
+        "veiculos automotores", "sem condutor", "sem motorista", "fotovoltaic", "minigeracao"]),
     DefCategoria("edtech", "Tecnologia educacional", "ti", [
         "robotica educacional", "robotica programavel", "kits de robotica", "kit de robotica", "kits educacionais de robotica",
         "laboratorio de robotica", "lousa digital", "lousas digitais", "lousa interativa", "lousas interativas", "painel interativo",
@@ -267,9 +285,22 @@ PADRAO: list[DefCategoria] = [
         "tecnologia educacional", "tecnologias educacionais", "conteudo educacional digital", "conteudos digitais",
     ], ["lousa de vidro", "lousas de vidro", "quadro branco"]),
     DefCategoria("audiovisual_tec", "Audiovisual, videoconferência e transmissão", "ti", [
-        "videoconferencia", "transmissao ao vivo", "streaming", "solucao audiovisual", "sistema audiovisual", "telao de led", "transmissao audiovisual", "transmissao das sessoes",
+        "videoconferencia", "transmissao ao vivo", "video wall", "videowall", "streaming", "solucao audiovisual", "sistema audiovisual", "telao de led", "transmissao audiovisual", "transmissao das sessoes",
     ], ["sonorizacao para eventos", "som e iluminacao", "som iluminacao", "palco", "palcos", "tendas", "sonorizacao",
         "iluminacao cenica", "shows", "festividades", "estruturas para eventos"]),
+    DefCategoria("geotecnologia", "Geoprocessamento, drones e mapeamento", "ti", [
+        "geoprocessamento", "georreferenciamento", "georreferenciado", "georreferenciada", " drone ", " drones ", " vant ",
+        "aerolevantamento", "aerofotogrametria", "aerofotogrametrico", "levantamento aerofotogrametrico", "ortofoto",
+        "ortofotos", "ortoimagem", "imagens de satelite", "imagem de satelite", "sistema de informacoes geograficas",
+        "sistema de informacao geografica", "informacoes geograficas", "webgis", "mapeamento digital",
+        "cadastro territorial multifinalitario", "cadastro multifinalitario", "perfilamento a laser", " lidar ",
+    ], ["georreferenciamento de imoveis rurais para regularizacao", "caminhonete", "zero quilometro", "veiculo utilitario"]),
+    DefCategoria("consultoria_ti", "Consultoria, governança de TI e LGPD", "ti", [
+        "governanca de ti", "governanca de tic", "governanca de tecnologia", "consultoria em ti", "consultoria de ti",
+        "consultoria em tecnologia da informacao", "consultoria em tic", "plano diretor de tecnologia", "plano diretor de ti",
+        " pdti ", " pdtic ", "lei geral de protecao de dados", " lgpd ", "protecao de dados pessoais", "encarregado de dados",
+        "encarregado pelo tratamento", " dpo ", "gestao de servicos de ti", " itil ", " cobit ",
+    ]),
     DefCategoria("impressao", "Outsourcing de impressão", "ti", [
         "outsourcing de impressao", "impressao corporativa", "locacao de impressoras", "locacao de multifuncionais",
         "locacao de equipamentos multifuncionais", "comodato de impressoras", "impressoras em regime de comodato",
@@ -280,10 +311,18 @@ PADRAO: list[DefCategoria] = [
         " computador ", " computadores ", " microcomputador ", " microcomputadores ", " notebook ", " notebooks ", " desktop ",
         " desktops ", "all in one", "all-in-one", " tablet ", " tablets ", " chromebook ", " chromebooks ", "monitor de video",
         "monitores de video", "equipamentos de informatica", "equipamentos de tecnologia da informacao", "materiais de informatica",
-        "suprimentos de informatica", "perifericos de informatica", " nobreak ", " nobreaks ", " switch ", " switches ",
+        "suprimentos de informatica", "perifericos de informatica", "material de informatica", "acessorios de informatica", "componentes e perifericos",
+        "perifericos de tic", "equipamentos de tic", "materiais de tic", "material de tecnologia da informacao",
+        "materiais de tecnologia da informacao", "material de consumo de tecnologia", "insumos de informatica",
+        "permanente de informatica", "laboratorio de informatica", "equipamentos e acessorios de informatica", " nobreak ", " nobreaks ", " switch ", " switches ",
         " roteador ", " roteadores ", "access point", " scanner ", " scanners ", " impressora ", " impressoras ",
     ], ["tomografia computadorizada", "tomografo computadorizado", "impressora 3d", "impressoras 3d", "rede mundial de computadores",
-        "raio x", "raios x", "backscatter", "inspecao de bagagem"]),
+        "raio x", "raios x", "backscatter", "inspecao de bagagem", "ar-condicionado", "ar condicionado", "climatizacao", "comodato",
+        "outsourcing de impressao", "servicos de impressao", "servico de impressao"],
+        fortes=["equipamentos de informatica", " notebooks ", " microcomputadores ", "materiais de informatica",
+                "perifericos de informatica"],
+        ambiguos=[" informatica "], contexto=["aquisicao", "fornecimento de equipamento", "fornecimento de materia", "equipamento",
+                                             "material", "materiais", "componentes", "acessorios", "perifericos"]),
     # ---------------------------------------------------------------- EAD, educação digital e pesquisa
     DefCategoria("ead", "EAD e educação a distância", "educacao_pesquisa", [
         "educacao a distancia", "ensino a distancia", "ensino remoto", " ead ", " ead/", "/ead ", "ambiente virtual de aprendizagem",
@@ -523,9 +562,20 @@ _SERVICO = re.compile(r"\b(servico|servicos|prestacao|locacao|licenciamento|cess
                       r"tratamento|gestao documental|treinamento|capacitacao|saas|software como servico)\b")
 
 
+# serviço de tecnologia que o catálogo costuma registrar como material (licença, SaaS, sustentação, link, nuvem)
+_SERVICO_TEC = re.compile(r"\b(licenc\w*|saas|software|softwares|sistema|sistemas|plataforma|sustentacao|desenvolvimento|"
+                          r"hospedagem|cessao de (uso|direito)|suporte tecnico|digitalizacao|gestao documental|"
+                          r"fabrica de software|outsourcing|consultoria|nuvem|link|links|internet|telefonia|monitoramento)\b")
+
+
 def natureza(objeto: str | None, itens: list[tuple[str | None, float | None]] | None = None) -> str | None:
     """'servico', 'material' ou 'misto'. Pelos itens do PNCP (campo material/serviço, pesado pelo valor) quando
-    houver; senão pelo objeto. None quando não dá para dizer."""
+    houver; senão pelo objeto. None quando não dá para dizer.
+
+    Exceção (auditoria de 14/11): licença, SaaS, sustentação de ERP e afins costumam vir com os itens marcados como
+    "Material" no catálogo; se o objeto fala só em serviço (sem aquisição/compra/fornecimento de bens), vale o objeto."""
+    n = normalizar(objeto or "")
+    aq, sv = bool(_AQUISICAO.search(n)), bool(_SERVICO.search(n))
     if itens:
         tot = {"m": 0.0, "s": 0.0}
         for ms, valor in itens:
@@ -534,13 +584,13 @@ def natureza(objeto: str | None, itens: list[tuple[str | None, float | None]] | 
                 tot[k] += float(valor or 0) or 1.0
         soma = tot["m"] + tot["s"]
         if soma:
+            if sv and not aq and _SERVICO_TEC.search(n):
+                return "servico"
             if tot["m"] / soma >= 0.8:
                 return "material"
             if tot["s"] / soma >= 0.8:
                 return "servico"
             return "misto"
-    n = normalizar(objeto or "")
-    aq, sv = bool(_AQUISICAO.search(n)), bool(_SERVICO.search(n))
     return "misto" if aq and sv else "material" if aq else "servico" if sv else None
 
 
@@ -720,3 +770,74 @@ def volumes_no_texto(texto: str, documental: bool = False) -> dict[str, float]:
         if vals:
             out[k] = max(vals)
     return out
+
+
+# ------------------------------------------------------------------ categoria principal e grupos (14/11)
+# Um edital pode casar com várias categorias (o objeto cita "sistema", "link" e "computadores"). Para organizar a
+# lista, cada edital ganha UMA categoria principal: aquela em que está o dinheiro (valor dos itens) e o objeto.
+GRUPOS: list[tuple[str, str, list[str]]] = [
+    ("software", "Software e sistemas", ["desenvolvimento", "fabrica_software", "manutencao_software", "sustentacao",
+                                         "sistemas_gestao", "integracao", "dados", "ia"]),
+    ("documental", "Gestão documental", ["digitalizacao", "indexacao", "ged", "ocr", "triagem", "restauracao", "higienizacao", "guarda"]),
+    ("servicos_ti", "Suporte, consultoria e impressão", ["suporte", "consultoria_ti", "impressao"]),
+    ("infra", "Infraestrutura, nuvem e data center", ["cloud", "servidores", "infra_ti"]),
+    ("seguranca", "Segurança da informação e eletrônica", ["seguranca", "seguranca_eletronica"]),
+    ("telecom", "Telecom e internet", ["telecom"]),
+    ("cidades", "Cidades inteligentes, IoT e geotecnologia", ["cidades_inteligentes", "iot_telemetria", "geotecnologia"]),
+    ("educacao", "Educação, EAD e pesquisa", ["edtech", "ead", "pesquisa", "pd_inovacao"]),
+    ("audiovisual", "Audiovisual e videoconferência", ["audiovisual_tec"]),
+    ("equipamentos", "Equipamentos de informática", ["equipamentos_ti"]),
+    ("outros", "Só cita tecnologia (conferir)", ["outros_ti"]),
+]
+# o objeto só cita tecnologia de passagem ("sistema informatizado", "aplicativo"): pode não ser de TI, conferir
+OUTROS_TI = ("outros_ti", "Só cita tecnologia (conferir)")
+GRUPO_DA_CATEGORIA = {c: g for g, _, cs in GRUPOS for c in cs}
+_ORDEM_PRINCIPAL = [c for _, _, cs in GRUPOS for c in cs]
+# não são assunto: "tecnologia" é a união de TI e as outras são forma de pagamento
+_NAO_PRINCIPAL = {"tecnologia", "ti_mensal", "remun_fixo_mensal", "remun_ust", "remun_pf"}
+_LOCACAO_EQUIP = re.compile(r"locacao de (equipamentos de informatica|computadores|notebooks|microcomputadores|servidores|"
+                            r"estacoes)|outsourcing de estacoes|estacoes de trabalho como servico|desktop como servico")
+_LOCACAO_NUVEM = re.compile(r"infraestrutura como servico|plataforma como servico")
+
+
+def _assuntos(texto: str) -> dict[str, int]:
+    """Categorias de assunto do texto e quantos termos casaram. Valor fixo mensal (licença, SaaS, locação) conta para o
+    que está sendo alugado: software (sistemas de gestão), computador (equipamentos) ou infraestrutura (nuvem)."""
+    r = {c["codigo"]: len(c["termos"]) for c in classificar(texto) if c["codigo"] in GRUPO_DA_CATEGORIA or c["codigo"] == "ti_mensal"}
+    if "ti_mensal" in r:
+        n = normalizar(texto)
+        alvo = "equipamentos_ti" if _LOCACAO_EQUIP.search(n) else "cloud" if _LOCACAO_NUVEM.search(n) else "sistemas_gestao"
+        r[alvo] = r.get(alvo, 0) + r.pop("ti_mensal")
+    return r
+
+
+def categoria_principal(objeto: str | None, itens: list[tuple[str | None, float | None]] | None = None,
+                        categorias: list[str] | None = None, cache: dict | None = None) -> str:
+    """A categoria que define o edital. Pontos: objeto (2 + 0,5 por termo, até 4 termos) e itens (4 × fatia do valor
+    total do edital que o item representa, pela descrição). Empate: ordem de GRUPOS (serviço antes de equipamento).
+    Sem assunto específico: valor fixo mensal vira sistema de gestão (locação/licença de software) ou equipamento
+    (locação de computadores); o resto fica em "Tecnologia — outros"."""
+    cache = {} if cache is None else cache
+    pontos: dict[str, float] = {}
+    obj = objeto or ""
+    for c, n in _assuntos(obj).items():
+        pontos[c] = pontos.get(c, 0) + 2 + 0.5 * min(n, 4)
+    itens = [(d, v) for d, v in (itens or []) if d]
+    total = sum(float(v or 0) for _, v in itens)
+    for d, v in itens:
+        fatia = float(v or 0) / total if total else 1 / len(itens)
+        if d not in cache:
+            cache[d] = _assuntos(d)
+        for c in cache[d]:
+            pontos[c] = pontos.get(c, 0) + 4 * fatia
+    for c in categorias or []:  # categoria achada pelo coletor (itens ou documentos) que o objeto não cita
+        if c in GRUPO_DA_CATEGORIA and c not in pontos:
+            pontos[c] = 1.0
+    if pontos:
+        return max(pontos, key=lambda c: (round(pontos[c], 6), -_ORDEM_PRINCIPAL.index(c)))
+    n = normalizar(obj)
+    if "ti_mensal" in (categorias or []):
+        if _LOCACAO_EQUIP.search(n):
+            return "equipamentos_ti"
+        return "cloud" if _LOCACAO_NUVEM.search(n) else "sistemas_gestao"
+    return OUTROS_TI[0]

@@ -4,7 +4,7 @@ from licitacoes.db import sessao
 from licitacoes.modelos import Licitacao, agora
 from licitacoes.coleta import abertas_filtro
 from licitacoes import painel
-from licitacoes.taxonomia import natureza, volumes, grande_volume, tipo_volume, volumes_no_texto, preco_plausivel
+from licitacoes.taxonomia import categoria_principal, GRUPO_DA_CATEGORIA, natureza, volumes, grande_volume, tipo_volume, volumes_no_texto, preco_plausivel
 from licitacoes.armazenamento import armazenamento
 
 
@@ -31,6 +31,7 @@ with sessao() as s:
     contr = [l for l in ab if l.tipo_registro == "contratacao"]
     rel = [l for l in contr if any(c["segmento"] in seg for c in l.categorias or [])]
     out = []
+    cache_cat = {}  # categoria das descrições de item já vistas
     precos = collections.defaultdict(list)  # pesquisa de preços: valor unitário estimado por tipo de volume
     for l in rel:
         b = l.bruto or {}
@@ -54,7 +55,10 @@ with sessao() as s:
                     "ab": fmt(l.data_abertura), "enc": fmt(l.data_encerramento), "mod": l.modalidade, "md": l.modo_disputa,
                     "sit": l.situacao, "srp": l.srp, "n": l.numero_compra, "proc": l.processo, "amp": (b.get("amparoLegal") or {}).get("nome"),
                     "pncp": l.link_pncp, "orig": l.link_origem, "pe": b.get("linkProcessoEletronico"), "plat": l.plataforma_origem,
-                    "c": [c["codigo"] for c in l.categorias if c["segmento"] in seg], "a": round(l.aderencia), "ctl": l.numero_controle_pncp,
+                    "c": [c["codigo"] for c in l.categorias if c["segmento"] in seg], "a": round(l.aderencia),
+                    "cp": (cp := categoria_principal(l.objeto, [(i.descricao, num(i.valor_total)) for i in ii],
+                                                     [c["codigo"] for c in l.categorias or []], cache_cat)),
+                    "g": GRUPO_DA_CATEGORIA.get(cp, "outros"), "ctl": l.numero_controle_pncp,
                     "it": [[i.numero, limpa(i.descricao, 300), num(i.quantidade), i.unidade, num(i.valor_unitario), num(i.valor_total), tipo_volume(i.unidade, i.descricao, num(i.quantidade), num(i.valor_unitario))]
                            for i in sorted(l.itens, key=lambda x: x.numero)[:60]],
                     "nit": len(l.itens),

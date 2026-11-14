@@ -1,1055 +1,1428 @@
-﻿segmento;categoria;uso;termo
-gestao_documental;Digitalização;busca;digitalizacao
-gestao_documental;Digitalização;busca;escaneamento
-gestao_documental;Digitalização;busca;conversao de documentos fisicos
-gestao_documental;Digitalização;busca;conversao de suporte
-gestao_documental;Digitalização;busca;documentos fisicos em digitais
-gestao_documental;Digitalização;busca;desmaterializacao
-gestao_documental;Digitalização;busca;captura e processamento de imagens
-gestao_documental;Digitalização;busca;imageamento
-gestao_documental;Digitalização;busca;digitalizacao de acervo
-gestao_documental;Digitalização;busca;digitalizacao de processos
-gestao_documental;Digitalização;busca;digitalizacao de prontuarios
-gestao_documental;Digitalização;busca;digitalizacao de plantas
-gestao_documental;Digitalização;busca;certificacao digital de documentos
-gestao_documental;Digitalização;busca;decreto 10.278
-gestao_documental;Digitalização;busca;bpo documental
-gestao_documental;Digitalização;busca;outsourcing de digitalizacao
-gestao_documental;Digitalização;busca;microfilmagem
-gestao_documental;Digitalização;busca;arquivamento eletronico
-gestao_documental;Digitalização;busca;preparo e digitalizacao
-gestao_documental;Digitalização;busca;imagens digitalizadas
-gestao_documental;Digitalização;busca;paginas digitalizadas
-gestao_documental;Digitalização;busca;outsourcing de processamento de documentos
-gestao_documental;Digitalização;busca;processamento de documentos do tipo outsourcing
-gestao_documental;Digitalização;busca;captura de documentos
-gestao_documental;Digitalização;busca;conversao do acervo
-gestao_documental;Digitalização;busca;conversao de acervo
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);digitalizacao de acervo
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);digitalizacao do acervo
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);digitalizacao de prontuarios
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);digitalizacao de processos
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);digitalizacao e indexacao
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);digitalizacao, indexacao
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);outsourcing de processamento de documentos
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);processamento de documentos do tipo outsourcing
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);digitalizacao de documentos historicos
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);documentos fisicos
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);preparo e digitalizacao
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);preparacao para digitalizacao
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);digitalizacao do arquivo
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);digitalizacao de livros
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);digitalizacao de documentos do arquivo
-gestao_documental;Digitalização;forte (vale mesmo com exclusão);gestao documental
-gestao_documental;Digitalização;exclui;outsourcing de impressao
-gestao_documental;Digitalização;exclui;impressao corporativa
-gestao_documental;Digitalização;exclui;impressao, copia
-gestao_documental;Digitalização;exclui;impressao e digitalizacao
-gestao_documental;Digitalização;exclui;impressao/copia
-gestao_documental;Digitalização;exclui;multifuncion
-gestao_documental;Digitalização;exclui;impressoras
-gestao_documental;Digitalização;exclui;equipamentos de impressao
-gestao_documental;Digitalização;exclui;locacao de scanners
-gestao_documental;Digitalização;exclui;scanners documentais
-gestao_documental;Digitalização;exclui;escaneamento intraoral
-gestao_documental;Digitalização;exclui;videomonitoramento
-gestao_documental;Digitalização;exclui;video monitoramento
-gestao_documental;Digitalização;exclui;cameras
-gestao_documental;Digitalização;exclui;certificado digital e-cpf
-gestao_documental;Digitalização;exclui;token
-gestao_documental;Digitalização;exclui;radiolog
-gestao_documental;Digitalização;exclui;radiograf
-gestao_documental;Digitalização;exclui;radiodiagnost
-gestao_documental;Digitalização;exclui;raio x
-gestao_documental;Digitalização;exclui;raios x
-gestao_documental;Digitalização;exclui;raio-x
-gestao_documental;Digitalização;exclui;mamograf
-gestao_documental;Digitalização;exclui;tomograf
-gestao_documental;Digitalização;exclui;intraora
-gestao_documental;Digitalização;exclui;odontolog
-gestao_documental;Digitalização;exclui;plotagem
-gestao_documental;Digitalização;exclui;copia de engenharia
-gestao_documental;Digitalização;exclui;copias coloridas
-gestao_documental;Digitalização;exclui;copia e digitalizacao
-gestao_documental;Digitalização;exclui;copias e digitalizacao
-gestao_documental;Digitalização;exclui;servicos graficos
-gestao_documental;Digitalização;exclui;impressao 3d
-gestao_documental;Digitalização;exclui;impressora
-gestao_documental;Digitalização;exclui;mesa digitalizadora
-gestao_documental;Digitalização;exclui;mesas digitalizadoras
-gestao_documental;Digitalização;exclui;digitalizadora
-gestao_documental;Digitalização;exclui;camera fotografica
-gestao_documental;Digitalização;exclui;escaneamento facial
-gestao_documental;Digitalização;exclui;escaneamento 3d
-gestao_documental;Digitalização;exclui;scanner 3d
-gestao_documental;Digitalização;exclui;digitalizacao de sinais
-gestao_documental;Digitalização;exclui;transformacao digital
-gestao_documental;Digitalização;exclui;imageamento aereo
-gestao_documental;Digitalização;exclui;aerofotogram
-gestao_documental;Digitalização;exclui;aerolevantamento
-gestao_documental;Digitalização;exclui;georreferenc
-gestao_documental;Digitalização;exclui;geoprocessamento
-gestao_documental;Digitalização;exclui;cartograf
-gestao_documental;Digitalização;exclui;aquisicao de equipamentos
-gestao_documental;Digitalização;exclui;novos equipamentos de digitalizacao
-gestao_documental;Digitalização;exclui;equipamentos de digitalizacao de imagem
-gestao_documental;Indexação;busca;indexacao
-gestao_documental;Indexação;busca;catalogacao de documentos
-gestao_documental;Indexação;busca;classificacao documental
-gestao_documental;Indexação;busca;plano de classificacao
-gestao_documental;Indexação;busca;descricao arquivistica
-gestao_documental;Indexação;busca;indexacao de imagens
-gestao_documental;Indexação;só com contexto de TI;metadados
-gestao_documental;Indexação;exclui;indexacao doi
-gestao_documental;Indexação;exclui;revista cientifica
-gestao_documental;Indexação;exclui;periodico
-gestao_documental;Indexação;exclui;indice de reajuste
-gestao_documental;Indexação;exclui;videomonitoramento
-gestao_documental;Indexação;exclui;video monitoramento
-gestao_documental;Indexação;exclui;cameras
-gestao_documental;Indexação;exclui;indexacao da revista
-gestao_documental;Indexação;exclui;revista
-gestao_documental;Indexação;exclui;edicao de video
-gestao_documental;Indexação;exclui;gravacao e transmissao
-gestao_documental;Indexação;exclui;sessoes de julgamento
-gestao_documental;Restauração de documentos;busca;restauracao de documentos
-gestao_documental;Restauração de documentos;busca;restauracao de acervo
-gestao_documental;Restauração de documentos;busca;conservacao e restauracao
-gestao_documental;Restauração de documentos;busca;conservacao preventiva
-gestao_documental;Restauração de documentos;busca;restauracao de livros
-gestao_documental;Restauração de documentos;busca;restauracao de bens culturais
-gestao_documental;Restauração de documentos;exclui;restauracao de pavimento
-gestao_documental;Restauração de documentos;exclui;restauracao de fachada
-gestao_documental;Restauração de documentos;exclui;restauracao predial
-gestao_documental;Higienização documental;busca;higienizacao de documentos
-gestao_documental;Higienização documental;busca;higienizacao documental
-gestao_documental;Higienização documental;busca;higienizacao de acervo
-gestao_documental;Higienização documental;busca;desinfestacao de acervo
-gestao_documental;Higienização documental;busca;higienizacao, acondicionamento
-gestao_documental;Triagem e organização de acervo;busca;triagem documental
-gestao_documental;Triagem e organização de acervo;busca;organizacao de acervo
-gestao_documental;Triagem e organização de acervo;busca;organizacao de arquivo
-gestao_documental;Triagem e organização de acervo;busca;tratamento documental
-gestao_documental;Triagem e organização de acervo;busca;tratamento arquivistico
-gestao_documental;Triagem e organização de acervo;busca;gestao arquivistica
-gestao_documental;Triagem e organização de acervo;busca;massa documental acumulada
-gestao_documental;Triagem e organização de acervo;busca;tabela de temporalidade
-gestao_documental;Triagem e organização de acervo;busca;diagnostico arquivistico
-gestao_documental;Triagem e organização de acervo;busca;gestao documental
-gestao_documental;Triagem e organização de acervo;busca;servicos arquivisticos
-gestao_documental;Guarda e armazenamento físico;busca;guarda de documentos
-gestao_documental;Guarda e armazenamento físico;busca;custodia de documentos
-gestao_documental;Guarda e armazenamento físico;busca;armazenamento de documentos
-gestao_documental;Guarda e armazenamento físico;busca;guarda documental
-gestao_documental;Guarda e armazenamento físico;busca;desarquivamento
-gestao_documental;Guarda e armazenamento físico;busca;arquivo morto
-gestao_documental;Guarda e armazenamento físico;busca;guarda terceirizada
-gestao_documental;Guarda e armazenamento físico;busca;fragmentacao e descarte de documentos
-gestao_documental;GED / ECM;busca;gestao eletronica de documentos
-gestao_documental;GED / ECM;busca;ged
-gestao_documental;GED / ECM;busca;ged/
-gestao_documental;GED / ECM;busca;/ged
-gestao_documental;GED / ECM;busca;ecm
-gestao_documental;GED / ECM;busca;gerenciamento eletronico de documentos
-gestao_documental;GED / ECM;busca;processos digitais
-gestao_documental;GED / ECM;busca;protocolo digital
-gestao_documental;GED / ECM;busca;repositorio arquivistico
-gestao_documental;GED / ECM;busca;preservacao digital
-gestao_documental;OCR e extração de dados de documentos;busca;ocr
-gestao_documental;OCR e extração de dados de documentos;busca;reconhecimento optico de caracteres
-gestao_documental;OCR e extração de dados de documentos;busca;icr
-gestao_documental;OCR e extração de dados de documentos;busca;extracao de dados de documentos
-gestao_documental;OCR e extração de dados de documentos;busca;processamento inteligente de documentos
-gestao_documental;OCR e extração de dados de documentos;exclui;cameras ocr
-gestao_documental;OCR e extração de dados de documentos;exclui;ocr/lpr
-gestao_documental;OCR e extração de dados de documentos;exclui;leitura de placas
-ti;Desenvolvimento de software;busca;desenvolvimento de software
-ti;Desenvolvimento de software;busca;desenvolvimento de sistemas
-ti;Desenvolvimento de software;busca;desenvolvimento de solucoes de software
-ti;Desenvolvimento de software;busca;desenvolvimento e manutencao de solucoes
-ti;Desenvolvimento de software;busca;desenvolvimento sob demanda
-ti;Desenvolvimento de software;busca;desenvolvimento de aplicativos
-ti;Desenvolvimento de software;busca;desenvolvimento de aplicacoes
-ti;Desenvolvimento de software;busca;software sob medida
-ti;Desenvolvimento de software;busca;software personalizado
-ti;Desenvolvimento de software;busca;custom software development
-ti;Desenvolvimento de software;busca;desenvolvimento de portal
-ti;Desenvolvimento de software;busca;desenvolvimento de plataforma
-ti;Desenvolvimento de software;busca;desenvolvimento de solucao inovadora
-ti;Desenvolvimento de software;busca;desenvolvimento de sistema
-ti;Desenvolvimento de software;só com contexto de TI;construcao de sistemas
-ti;Desenvolvimento de software;só com contexto de TI;evolucao de sistemas
-ti;Desenvolvimento de software;exclui;manutencao predial
-ti;Desenvolvimento de software;exclui;ar condicionado
-ti;Desenvolvimento de software;exclui;ar-condicionado
-ti;Desenvolvimento de software;exclui;veiculo
-ti;Desenvolvimento de software;exclui;elevador
-ti;Desenvolvimento de software;exclui;material de expediente
-ti;Desenvolvimento de software;exclui;generos alimenticios
-ti;Desenvolvimento de software;exclui;esquadria
-ti;Desenvolvimento de software;exclui;fotovoltaic
-ti;Desenvolvimento de software;exclui;drenagem
-ti;Desenvolvimento de software;exclui;iluminacao publica
-ti;Desenvolvimento de software;exclui;videomonitoramento
-ti;Desenvolvimento de software;exclui;video monitoramento
-ti;Desenvolvimento de software;exclui;motobomba
-ti;Desenvolvimento de software;exclui;climatizacao
-ti;Desenvolvimento de software;exclui;alarmes
-ti;Desenvolvimento de software;exclui;cameras
-ti;Desenvolvimento de software;exclui;monitoramento eletronico
-ti;Desenvolvimento de software;exclui;seguranca eletronica
-ti;Desenvolvimento de software;exclui;aquisicao de materiais
-ti;Desenvolvimento de software;exclui;materiais de informatica
-ti;Desenvolvimento de software;exclui;equipamentos de informatica
-ti;Desenvolvimento de software;exclui;computadores
-ti;Desenvolvimento de software;exclui;perifericos
-ti;Fábrica de software;busca;fabrica de software
-ti;Fábrica de software;busca;ponto de funcao
-ti;Fábrica de software;busca;pontos de funcao
-ti;Fábrica de software;busca;unidade de servico tecnico
-ti;Fábrica de software;busca;ust
-ti;Fábrica de software;busca;squad
-ti;Fábrica de software;busca;squads
-ti;Fábrica de software;busca;metodos ageis
-ti;Fábrica de software;busca;praticas ageis
-ti;Fábrica de software;busca;alocacao de profissionais de ti
-ti;Fábrica de software;busca;servicos tecnicos especializados de tic
-ti;Fábrica de software;busca;outsourcing de desenvolvimento
-ti;Fábrica de software;exclui;manutencao predial
-ti;Fábrica de software;exclui;ar condicionado
-ti;Fábrica de software;exclui;ar-condicionado
-ti;Fábrica de software;exclui;veiculo
-ti;Fábrica de software;exclui;elevador
-ti;Fábrica de software;exclui;material de expediente
-ti;Fábrica de software;exclui;generos alimenticios
-ti;Fábrica de software;exclui;esquadria
-ti;Fábrica de software;exclui;fotovoltaic
-ti;Fábrica de software;exclui;drenagem
-ti;Fábrica de software;exclui;iluminacao publica
-ti;Fábrica de software;exclui;videomonitoramento
-ti;Fábrica de software;exclui;video monitoramento
-ti;Fábrica de software;exclui;motobomba
-ti;Fábrica de software;exclui;climatizacao
-ti;Fábrica de software;exclui;alarmes
-ti;Fábrica de software;exclui;cameras
-ti;Fábrica de software;exclui;monitoramento eletronico
-ti;Fábrica de software;exclui;seguranca eletronica
-ti;Fábrica de software;exclui;aquisicao de materiais
-ti;Fábrica de software;exclui;materiais de informatica
-ti;Fábrica de software;exclui;equipamentos de informatica
-ti;Fábrica de software;exclui;computadores
-ti;Fábrica de software;exclui;perifericos
-ti;Manutenção de software;busca;manutencao corretiva e evolutiva
-ti;Manutenção de software;busca;manutencao evolutiva
-ti;Manutenção de software;busca;manutencao adaptativa
-ti;Manutenção de software;busca;manutencao de software
-ti;Manutenção de software;busca;sistemas legados
-ti;Manutenção de software;busca;reengenharia de software
-ti;Manutenção de software;só com contexto de TI;manutencao de sistemas
-ti;Manutenção de software;só com contexto de TI;manutencao do sistema
-ti;Manutenção de software;só com contexto de TI;manutencao corretiva
-ti;Manutenção de software;só com contexto de TI;modernizacao de sistemas
-ti;Manutenção de software;só com contexto de TI;migracao de sistemas
-ti;Manutenção de software;só com contexto de TI;evolucao funcional
-ti;Manutenção de software;exclui;manutencao predial
-ti;Manutenção de software;exclui;ar condicionado
-ti;Manutenção de software;exclui;ar-condicionado
-ti;Manutenção de software;exclui;veiculo
-ti;Manutenção de software;exclui;elevador
-ti;Manutenção de software;exclui;material de expediente
-ti;Manutenção de software;exclui;generos alimenticios
-ti;Manutenção de software;exclui;esquadria
-ti;Manutenção de software;exclui;fotovoltaic
-ti;Manutenção de software;exclui;drenagem
-ti;Manutenção de software;exclui;iluminacao publica
-ti;Manutenção de software;exclui;videomonitoramento
-ti;Manutenção de software;exclui;video monitoramento
-ti;Manutenção de software;exclui;motobomba
-ti;Manutenção de software;exclui;climatizacao
-ti;Manutenção de software;exclui;alarmes
-ti;Manutenção de software;exclui;cameras
-ti;Manutenção de software;exclui;monitoramento eletronico
-ti;Manutenção de software;exclui;seguranca eletronica
-ti;Manutenção de software;exclui;aquisicao de materiais
-ti;Manutenção de software;exclui;materiais de informatica
-ti;Manutenção de software;exclui;equipamentos de informatica
-ti;Manutenção de software;exclui;computadores
-ti;Manutenção de software;exclui;perifericos
-ti;Manutenção de software;exclui;sistema de iluminacao
-ti;Manutenção de software;exclui;sistema de abastecimento
-ti;Manutenção de software;exclui;sistema de rodagem
-ti;Manutenção de software;exclui;sistemas de alarme
-ti;Manutenção de software;exclui;cftv
-ti;Sustentação de sistemas;busca;sustentacao de sistemas
-ti;Sustentação de sistemas;busca;sustentacao de software
-ti;Sustentação de sistemas;busca;sustentacao de aplicacoes
-ti;Sustentação de sistemas;busca;sustentacao e evolucao
-ti;Sustentação de sistemas;busca;sustentacao tecnica
-ti;Sustentação de sistemas;busca;sustentacao de solucoes
-ti;Sustentação de sistemas;busca;sustentacao do sistema
-ti;Sustentação de sistemas;busca;application management
-ti;Sustentação de sistemas;busca;suporte n2
-ti;Sustentação de sistemas;busca;suporte n3
-ti;Sustentação de sistemas;busca;niveis minimos de servico de sistemas
-ti;Sustentação de sistemas;exclui;manutencao predial
-ti;Sustentação de sistemas;exclui;ar condicionado
-ti;Sustentação de sistemas;exclui;ar-condicionado
-ti;Sustentação de sistemas;exclui;veiculo
-ti;Sustentação de sistemas;exclui;elevador
-ti;Sustentação de sistemas;exclui;material de expediente
-ti;Sustentação de sistemas;exclui;generos alimenticios
-ti;Sustentação de sistemas;exclui;esquadria
-ti;Sustentação de sistemas;exclui;fotovoltaic
-ti;Sustentação de sistemas;exclui;drenagem
-ti;Sustentação de sistemas;exclui;iluminacao publica
-ti;Sustentação de sistemas;exclui;videomonitoramento
-ti;Sustentação de sistemas;exclui;video monitoramento
-ti;Sustentação de sistemas;exclui;motobomba
-ti;Sustentação de sistemas;exclui;climatizacao
-ti;Sustentação de sistemas;exclui;alarmes
-ti;Sustentação de sistemas;exclui;cameras
-ti;Sustentação de sistemas;exclui;monitoramento eletronico
-ti;Sustentação de sistemas;exclui;seguranca eletronica
-ti;Sustentação de sistemas;exclui;aquisicao de materiais
-ti;Sustentação de sistemas;exclui;materiais de informatica
-ti;Sustentação de sistemas;exclui;equipamentos de informatica
-ti;Sustentação de sistemas;exclui;computadores
-ti;Sustentação de sistemas;exclui;perifericos
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de software
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de softwares
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de licenca
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de licencas
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de programa
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao e licenciamento
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao mensal de software
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;licenciamento mensal
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;licenca mensal
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;licencas mensais
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;cessao de uso de software
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;cessao de uso de sistema
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;cessao do direito de uso
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;cessao de direito de uso
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;direito de uso de software
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;direito de uso de sistema
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;software como servico
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;software as a service
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;saas
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;assinatura de software
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;assinatura de plataforma
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;assinatura de licencas
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;assinatura de sistema
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;subscricao de licencas
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;subscricao de software
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;sistema de gestao publica
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;sistemas de gestao publica
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;sistema integrado de gestao publica
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;sistemas integrados de gestao publica
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de equipamentos de informatica
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de computadores
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de notebooks
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de microcomputadores
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de servidores
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;outsourcing de ti
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;outsourcing de estacoes
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;estacoes de trabalho como servico
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;desktop como servico
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;infraestrutura como servico
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;plataforma como servico
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;licenciamento de uso
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;licenca de uso
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;licencas de uso
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;licenciamento de direito de uso
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;mensalidade
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;valor mensal
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;pagamento mensal
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;parcelas mensais
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;custo mensal
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;preco mensal
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;assinatura
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;hospedagem
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;locacao de sistema
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;locacao de sistemas
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;locacao de solucao
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;provimento de sistema
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);só com contexto de TI;provimento de solucao
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;licenca perpetua
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;licencas perpetuas
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;locacao de veiculo
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;locacao de maquinas
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;locacao de imovel
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;locacao de impressoras
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;outsourcing de impressao
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;multifuncion
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;videomonitoramento
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;video monitoramento
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;fiscalizacao eletronica
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;cameras
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;radares
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;sistema operacional
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;windows 11
-ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);exclui;windows 10
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tecnologia da informacao
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tecnologia de informacao
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tecnologia da informacao e comunicacao
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tic
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;ti
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;informatica
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;software
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;softwares
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;sistema informatizado
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;sistemas informatizados
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;sistema web
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;aplicativo
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;aplicativos
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;solucao tecnologica
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;solucoes tecnologicas
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;plataforma digital
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;plataforma web
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;computador
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;computadores
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;microcomputador
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;microcomputadores
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;notebook
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;notebooks
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;desktop
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;desktops
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;chromebook
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;chromebooks
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tablet
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tablets
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;estacoes de trabalho
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;workstation
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;servidor de rede
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;servidores de rede
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;rack
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;switch
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;switches
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;roteador
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;roteadores
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;access point
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;wi-fi
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;wifi
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;rede logica
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;redes logicas
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;cabeamento estruturado
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;fibra optica
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;link de internet
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;links de internet
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;link dedicado
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;acesso a internet
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;servico de internet
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;internet banda larga
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;conectividade
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;telefonia
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;telecomunicacao
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;telecomunicacoes
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;voip
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;pabx
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;central telefonica
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;rede de dados
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;data center
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;datacenter
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;em nuvem
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;computacao em nuvem
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;cloud
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;licenca de software
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;licencas de software
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;antivirus
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;certificado digital
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;certificados digitais
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;nobreak
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;nobreaks
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;lousa digital
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;lousas digitais
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;painel interativo
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;paineis interativos
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;robotica educacional
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;kit de robotica
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;impressora 3d
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;videomonitoramento
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;video monitoramento
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;cftv
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;biometria
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;biometrico
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;totem de autoatendimento
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;inteligencia artificial
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;transformacao digital
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;governo digital
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;cidade inteligente
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;cidades inteligentes
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;internet das coisas
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;iot
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;georreferenciamento
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;geoprocessamento
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;drone
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;drones
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);exclui;servidores publicos
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);exclui;servidores municipais
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);exclui;servidores efetivos
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);exclui;capacitacao de servidores
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);exclui;tecnologia de pavimentacao
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);exclui;tecnologia led
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);exclui;luminarias
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);exclui;iluminacao publica
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);exclui;agenciamento de viagens
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);exclui;tomografia
-ti;Tecnologia (geral: equipamentos, software, internet, telecom);exclui;pulverizador agricola
-ti;Inteligência artificial;busca;inteligencia artificial
-ti;Inteligência artificial;busca;aprendizado de maquina
-ti;Inteligência artificial;busca;machine learning
-ti;Inteligência artificial;busca;ia generativa
-ti;Inteligência artificial;busca;modelo de linguagem
-ti;Inteligência artificial;busca;llm
-ti;Inteligência artificial;busca;visao computacional
-ti;Inteligência artificial;busca;chatbot
-ti;Tratamento e processamento de dados;busca;tratamento de dados
-ti;Tratamento e processamento de dados;busca;ciencia de dados
-ti;Tratamento e processamento de dados;busca;engenharia de dados
-ti;Tratamento e processamento de dados;busca;analise de dados
-ti;Tratamento e processamento de dados;busca;business intelligence
-ti;Tratamento e processamento de dados;busca;data lake
-ti;Tratamento e processamento de dados;busca;data warehouse
-ti;Tratamento e processamento de dados;busca;etl
-ti;Tratamento e processamento de dados;busca;governanca de dados
-ti;Tratamento e processamento de dados;busca;qualidade de dados
-ti;Tratamento e processamento de dados;busca;saneamento cadastral
-ti;Tratamento e processamento de dados;busca;saneamento de dados
-ti;Tratamento e processamento de dados;busca;requalificacao cadastral
-ti;Tratamento e processamento de dados;busca;requalificacao de dados
-ti;Tratamento e processamento de dados;busca;recadastramento
-ti;Tratamento e processamento de dados;busca;higienizacao de dados
-ti;Tratamento e processamento de dados;busca;higienizacao de base
-ti;Tratamento e processamento de dados;busca;mineracao de dados
-ti;Tratamento e processamento de dados;busca;inteligencia de dados
-ti;Tratamento e processamento de dados;busca;analytics
-ti;Tratamento e processamento de dados;busca;cadastro territorial multifinalitario
-ti;Tratamento e processamento de dados;busca;geoprocessamento
-ti;Tratamento e processamento de dados;só com contexto de TI;migracao de dados
-ti;Tratamento e processamento de dados;só com contexto de TI;processamento de dados
-ti;Tratamento e processamento de dados;exclui;equipamentos de processamento de dados
-ti;Tratamento e processamento de dados;exclui;materiais de processamento de dados
-ti;Tratamento e processamento de dados;exclui;material de processamento de dados
-ti;Tratamento e processamento de dados;exclui;dados variaveis
-ti;Tratamento e processamento de dados;exclui;centro de processamento de dados
-ti;Tratamento e processamento de dados;exclui;nobreak
-ti;Tratamento e processamento de dados;exclui;computadores
-ti;Tratamento e processamento de dados;exclui;plano de dados
-ti;Tratamento e processamento de dados;exclui;comunicacao de dados
-ti;Tratamento e processamento de dados;exclui;link de dados
-ti;Tratamento e processamento de dados;exclui;dados moveis
-ti;Tratamento e processamento de dados;exclui;teamviewer
-ti;Cloud computing;busca;computacao em nuvem
-ti;Cloud computing;busca;cloud computing
-ti;Cloud computing;busca;servicos de nuvem
-ti;Cloud computing;busca;nuvem publica
-ti;Cloud computing;busca;iaas
-ti;Cloud computing;busca;paas
-ti;Cloud computing;busca;cloud broker
-ti;Cloud computing;busca;hospedagem em nuvem
-ti;Servidores e data center;busca;servidores de rede
-ti;Servidores e data center;busca;servidor de rede
-ti;Servidores e data center;busca;servidores fisicos
-ti;Servidores e data center;busca;servidores virtuais
-ti;Servidores e data center;busca;servidores de aplicacao
-ti;Servidores e data center;busca;servidores de banco de dados
-ti;Servidores e data center;busca;servidores rack
-ti;Servidores e data center;busca;servidores blade
-ti;Servidores e data center;busca;servidor rack
-ti;Servidores e data center;busca;servidores em nuvem
-ti;Servidores e data center;busca;servidor de arquivos
-ti;Servidores e data center;busca;servidores de arquivos
-ti;Servidores e data center;busca;data center
-ti;Servidores e data center;busca;datacenter
-ti;Servidores e data center;busca;storage
-ti;Servidores e data center;busca;armazenamento de dados
-ti;Servidores e data center;busca;hiperconvergente
-ti;Servidores e data center;busca;exadata
-ti;Servidores e data center;busca;solucao de backup
-ti;Servidores e data center;exclui;servidores publicos
-ti;Servidores e data center;exclui;servidores municipais
-ti;Servidores e data center;exclui;servidores do municipio
-ti;Servidores e data center;exclui;capacitacao de servidores
-ti;Segurança da informação;busca;seguranca da informacao
-ti;Segurança da informação;busca;ciberseguranca
-ti;Segurança da informação;busca;seguranca cibernetica
-ti;Segurança da informação;busca;firewall
-ti;Segurança da informação;busca;siem
-ti;Segurança da informação;busca;soc
-ti;Segurança da informação;busca;antivirus
-ti;Segurança da informação;busca;endpoint
-ti;Segurança da informação;busca;prevencao de vazamento de dados
-ti;Segurança da informação;busca;pentest
-ti;Segurança da informação;busca;teste de intrusao
-ti;Suporte técnico de TI;busca;suporte tecnico de ti
-ti;Suporte técnico de TI;busca;service desk
-ti;Suporte técnico de TI;busca;central de servicos
-ti;Suporte técnico de TI;busca;suporte a usuarios
-ti;Suporte técnico de TI;busca;help desk
-ti;Suporte técnico de TI;busca;atendimento ao usuario de tic
-ti;Integração de sistemas;busca;integracao de sistemas
-ti;Integração de sistemas;busca;integracao sistemica
-ti;Integração de sistemas;busca;barramento de servicos
-ti;Integração de sistemas;busca;interoperabilidade
-ti;Integração de sistemas;busca;api
-ti;Integração de sistemas;busca;apis
-ti;Integração de sistemas;busca;middleware
-ti;Infraestrutura de TI e TIC;busca;infraestrutura de ti
-ti;Infraestrutura de TI e TIC;busca;infraestrutura de tic
-ti;Infraestrutura de TI e TIC;busca;infraestrutura de tecnologia
-ti;Infraestrutura de TI e TIC;busca;rede de dados
-ti;Infraestrutura de TI e TIC;busca;cabeamento estruturado
-ti;Infraestrutura de TI e TIC;busca;rede definida por software
-ti;Infraestrutura de TI e TIC;busca;sdn
-ti;Infraestrutura de TI e TIC;busca;wi-fi
-ti;Infraestrutura de TI e TIC;busca;switches
-ti;Sistemas de gestão e licenças de software;busca;sistema de gestao escolar
-ti;Sistemas de gestão e licenças de software;busca;sistemas de gestao escolar
-ti;Sistemas de gestão e licenças de software;busca;gestao escolar informatizada
-ti;Sistemas de gestão e licenças de software;busca;sistema integrado de gestao
-ti;Sistemas de gestão e licenças de software;busca;sistemas integrados de gestao
-ti;Sistemas de gestão e licenças de software;busca;erp
-ti;Sistemas de gestão e licenças de software;busca;sistema de gestao hospitalar
-ti;Sistemas de gestão e licenças de software;busca;gestao hospitalar informatizada
-ti;Sistemas de gestão e licenças de software;busca;prontuario eletronico
-ti;Sistemas de gestão e licenças de software;busca;nota fiscal eletronica
-ti;Sistemas de gestão e licenças de software;busca;nfs-e
-ti;Sistemas de gestão e licenças de software;busca;nfse
-ti;Sistemas de gestão e licenças de software;busca;sistema de folha de pagamento
-ti;Sistemas de gestão e licenças de software;busca;sistema de arrecadacao
-ti;Sistemas de gestão e licenças de software;busca;sistema tributario
-ti;Sistemas de gestão e licenças de software;busca;sistema de protocolo
-ti;Sistemas de gestão e licenças de software;busca;sistema de processo eletronico
-ti;Sistemas de gestão e licenças de software;busca;solucao de processo eletronico
-ti;Sistemas de gestão e licenças de software;busca;sistema de gestao patrimonial
-ti;Sistemas de gestão e licenças de software;busca;sistema de gestao de pessoas
-ti;Sistemas de gestão e licenças de software;busca;sistema de gestao de frota
-ti;Sistemas de gestão e licenças de software;busca;sistema de gestao de saude
-ti;Sistemas de gestão e licenças de software;busca;software de gestao
-ti;Sistemas de gestão e licenças de software;busca;softwares de gestao
-ti;Sistemas de gestão e licenças de software;busca;solucao sistemica
-ti;Sistemas de gestão e licenças de software;busca;licenciamento de software
-ti;Sistemas de gestão e licenças de software;busca;licenciamento de sistema
-ti;Sistemas de gestão e licenças de software;busca;licenca de uso de software
-ti;Sistemas de gestão e licenças de software;busca;licencas de uso de software
-ti;Sistemas de gestão e licenças de software;busca;sistema de gestao de documentos
-ti;Sistemas de gestão e licenças de software;só com contexto de TI;sistema de gestao
-ti;Sistemas de gestão e licenças de software;só com contexto de TI;sistemas de gestao
-ti;Sistemas de gestão e licenças de software;só com contexto de TI;plataforma de gestao
-ti;Sistemas de gestão e licenças de software;só com contexto de TI;sistema web
-ti;Sistemas de gestão e licenças de software;só com contexto de TI;sistema online
-ti;Sistemas de gestão e licenças de software;só com contexto de TI;gestao online
-ti;Sistemas de gestão e licenças de software;exclui;sistema de gestao ambiental
-ti;Sistemas de gestão e licenças de software;exclui;gestao da qualidade
-ti;Sistemas de gestão e licenças de software;exclui;sistema de gestao de abastecimento
-ti;Sistemas de gestão e licenças de software;exclui;cartao magnetico
-ti;Sistemas de gestão e licenças de software;exclui;cartao fisico
-ti;Sistemas de gestão e licenças de software;exclui;alienacao
-ti;Sistemas de gestão e licenças de software;exclui;leilao
-ti;Sistemas de gestão e licenças de software;exclui;venda de imovel
-ti;Sistemas de gestão e licenças de software;exclui;bens imoveis
-ti;Cidades inteligentes e mobilidade;busca;cidade inteligente
-ti;Cidades inteligentes e mobilidade;busca;cidades inteligentes
-ti;Cidades inteligentes e mobilidade;busca;smart city
-ti;Cidades inteligentes e mobilidade;busca;monitoramento urbano inteligente
-ti;Cidades inteligentes e mobilidade;busca;gestao da mobilidade
-ti;Cidades inteligentes e mobilidade;busca;mobilidade inteligente
-ti;Cidades inteligentes e mobilidade;busca;semaforos inteligentes
-ti;Cidades inteligentes e mobilidade;busca;semaforizacao inteligente
-ti;Cidades inteligentes e mobilidade;busca;centro de controle operacional
-ti;Cidades inteligentes e mobilidade;busca;centro integrado de operacoes
-ti;Cidades inteligentes e mobilidade;busca;centro de operacoes integradas
-ti;Cidades inteligentes e mobilidade;busca;estacionamento rotativo digital
-ti;Cidades inteligentes e mobilidade;busca;estacionamento rotativo eletronico
-ti;Cidades inteligentes e mobilidade;busca;zona azul digital
-ti;Cidades inteligentes e mobilidade;busca;telegestao
-ti;Cidades inteligentes e mobilidade;busca;iluminacao inteligente
-ti;Cidades inteligentes e mobilidade;busca;leitura automatica de placas
-ti;Cidades inteligentes e mobilidade;busca;cercamento eletronico
-ti;Cidades inteligentes e mobilidade;busca;fiscalizacao eletronica de transito
-ti;Cidades inteligentes e mobilidade;busca;bilhetagem eletronica
-ti;Cidades inteligentes e mobilidade;exclui;iluminacao publica convencional
-ti;Telecomunicações e conectividade;busca;link dedicado
-ti;Telecomunicações e conectividade;busca;links dedicados
-ti;Telecomunicações e conectividade;busca;link de internet
-ti;Telecomunicações e conectividade;busca;links de internet
-ti;Telecomunicações e conectividade;busca;acesso a internet
-ti;Telecomunicações e conectividade;busca;internet banda larga
-ti;Telecomunicações e conectividade;busca;banda larga
-ti;Telecomunicações e conectividade;busca;rede mundial de computadores
-ti;Telecomunicações e conectividade;busca;ip fixo
-ti;Telecomunicações e conectividade;busca;ips fixos
-ti;Telecomunicações e conectividade;busca;fibra optica
-ti;Telecomunicações e conectividade;busca;telefonia fixa
-ti;Telecomunicações e conectividade;busca;telefonia movel
-ti;Telecomunicações e conectividade;busca;telefonia ip
-ti;Telecomunicações e conectividade;busca;telefonia em nuvem
-ti;Telecomunicações e conectividade;busca;pabx
-ti;Telecomunicações e conectividade;busca;voip
-ti;Telecomunicações e conectividade;busca;central telefonica
-ti;Telecomunicações e conectividade;busca;comunicacao via satelite
-ti;Telecomunicações e conectividade;busca;comunicacoes por satelite
-ti;Telecomunicações e conectividade;busca;comunicacao por satelite
-ti;Telecomunicações e conectividade;busca;internet via satelite
-ti;Telecomunicações e conectividade;busca;radiocomunicacao
-ti;Telecomunicações e conectividade;busca;radios digitais
-ti;Telecomunicações e conectividade;busca;rede mpls
-ti;Telecomunicações e conectividade;busca;sd-wan
-ti;Telecomunicações e conectividade;busca;sdwan
-ti;Telecomunicações e conectividade;busca;wi-fi publico
-ti;Telecomunicações e conectividade;busca;wifi publico
-ti;Telecomunicações e conectividade;busca;telecomunicacoes
-ti;Telecomunicações e conectividade;busca;servico movel pessoal
-ti;Telecomunicações e conectividade;busca;chips de dados
-ti;Telecomunicações e conectividade;busca;plano de dados
-ti;Telecomunicações e conectividade;busca;conectividade
-ti;Telecomunicações e conectividade;exclui;fibra de vidro
-ti;Telecomunicações e conectividade;exclui;emissoras de radio
-ti;Telecomunicações e conectividade;exclui;radiodifusao comercial
-ti;Telecomunicações e conectividade;exclui;veiculacao
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;cftv
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;circuito fechado de televisao
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;circuito fechado de tv
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;videomonitoramento
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;video monitoramento
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;monitoramento por cameras
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;monitoria por cameras
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;cameras de seguranca
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;cameras de videomonitoramento
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;controle de acesso eletronico
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;catraca eletronica
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;catracas eletronicas
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;reconhecimento facial
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;alarme monitorado
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;monitoramento de alarmes
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;seguranca eletronica
-ti;CFTV, videomonitoramento e segurança eletrônica;busca;monitoramento eletronico
-ti;CFTV, videomonitoramento e segurança eletrônica;exclui;camera fotografica
-ti;CFTV, videomonitoramento e segurança eletrônica;exclui;cameras fotograficas
-ti;Rastreamento, telemetria e IoT;busca;telemetria
-ti;Rastreamento, telemetria e IoT;busca;videotelemetria
-ti;Rastreamento, telemetria e IoT;busca;rastreamento veicular
-ti;Rastreamento, telemetria e IoT;busca;rastreamento de veiculos
-ti;Rastreamento, telemetria e IoT;busca;rastreador
-ti;Rastreamento, telemetria e IoT;busca;rastreadores
-ti;Rastreamento, telemetria e IoT;busca;rastreamento por gps
-ti;Rastreamento, telemetria e IoT;busca;rastreamento via satelite
-ti;Rastreamento, telemetria e IoT;busca;sistema de rastreamento
-ti;Rastreamento, telemetria e IoT;busca;internet das coisas
-ti;Rastreamento, telemetria e IoT;busca;iot
-ti;Rastreamento, telemetria e IoT;busca;rfid
-ti;Rastreamento, telemetria e IoT;busca;monitoramento remoto
-ti;Rastreamento, telemetria e IoT;busca;sensores inteligentes
-ti;Rastreamento, telemetria e IoT;exclui;rastreamento do cancer
-ti;Rastreamento, telemetria e IoT;exclui;rastreamento de cancer
-ti;Rastreamento, telemetria e IoT;exclui;rastreamento neonatal
-ti;Rastreamento, telemetria e IoT;exclui;rastreamento auditivo
-ti;Rastreamento, telemetria e IoT;exclui;rastreamento oncologico
-ti;Rastreamento, telemetria e IoT;exclui;locacao de veiculo
-ti;Rastreamento, telemetria e IoT;exclui;locacao de veiculos
-ti;Rastreamento, telemetria e IoT;exclui;veiculos zero quilometro
-ti;Rastreamento, telemetria e IoT;exclui;locacao de caminh
-ti;Rastreamento, telemetria e IoT;exclui;locacao de onibus
-ti;Tecnologia educacional;busca;robotica educacional
-ti;Tecnologia educacional;busca;robotica programavel
-ti;Tecnologia educacional;busca;kits de robotica
-ti;Tecnologia educacional;busca;kit de robotica
-ti;Tecnologia educacional;busca;kits educacionais de robotica
-ti;Tecnologia educacional;busca;laboratorio de robotica
-ti;Tecnologia educacional;busca;lousa digital
-ti;Tecnologia educacional;busca;lousas digitais
-ti;Tecnologia educacional;busca;lousa interativa
-ti;Tecnologia educacional;busca;lousas interativas
-ti;Tecnologia educacional;busca;painel interativo
-ti;Tecnologia educacional;busca;paineis interativos
-ti;Tecnologia educacional;busca;realidade virtual
-ti;Tecnologia educacional;busca;realidade aumentada
-ti;Tecnologia educacional;busca;laboratorio maker
-ti;Tecnologia educacional;busca;espaco maker
-ti;Tecnologia educacional;busca;impressora 3d
-ti;Tecnologia educacional;busca;impressoras 3d
-ti;Tecnologia educacional;busca;plataforma educacional
-ti;Tecnologia educacional;busca;plataformas educacionais
-ti;Tecnologia educacional;busca;plataforma de ensino
-ti;Tecnologia educacional;busca;educacao digital
-ti;Tecnologia educacional;busca;tecnologia educacional
-ti;Tecnologia educacional;busca;tecnologias educacionais
-ti;Tecnologia educacional;busca;conteudo educacional digital
-ti;Tecnologia educacional;busca;conteudos digitais
-ti;Tecnologia educacional;exclui;lousa de vidro
-ti;Tecnologia educacional;exclui;lousas de vidro
-ti;Tecnologia educacional;exclui;quadro branco
-ti;Audiovisual, videoconferência e transmissão;busca;videoconferencia
-ti;Audiovisual, videoconferência e transmissão;busca;transmissao ao vivo
-ti;Audiovisual, videoconferência e transmissão;busca;streaming
-ti;Audiovisual, videoconferência e transmissão;busca;solucao audiovisual
-ti;Audiovisual, videoconferência e transmissão;busca;sistema audiovisual
-ti;Audiovisual, videoconferência e transmissão;busca;telao de led
-ti;Audiovisual, videoconferência e transmissão;busca;transmissao audiovisual
-ti;Audiovisual, videoconferência e transmissão;busca;transmissao das sessoes
-ti;Audiovisual, videoconferência e transmissão;exclui;sonorizacao para eventos
-ti;Audiovisual, videoconferência e transmissão;exclui;som e iluminacao
-ti;Audiovisual, videoconferência e transmissão;exclui;som iluminacao
-ti;Audiovisual, videoconferência e transmissão;exclui;palco
-ti;Audiovisual, videoconferência e transmissão;exclui;palcos
-ti;Audiovisual, videoconferência e transmissão;exclui;tendas
-ti;Audiovisual, videoconferência e transmissão;exclui;sonorizacao
-ti;Audiovisual, videoconferência e transmissão;exclui;iluminacao cenica
-ti;Audiovisual, videoconferência e transmissão;exclui;shows
-ti;Audiovisual, videoconferência e transmissão;exclui;festividades
-ti;Audiovisual, videoconferência e transmissão;exclui;estruturas para eventos
-ti;Outsourcing de impressão;busca;outsourcing de impressao
-ti;Outsourcing de impressão;busca;impressao corporativa
-ti;Outsourcing de impressão;busca;locacao de impressoras
-ti;Outsourcing de impressão;busca;locacao de multifuncionais
-ti;Outsourcing de impressão;busca;locacao de equipamentos multifuncionais
-ti;Outsourcing de impressão;busca;comodato de impressoras
-ti;Outsourcing de impressão;busca;impressoras em regime de comodato
-ti;Outsourcing de impressão;busca;franquia de impressao
-ti;Outsourcing de impressão;busca;servicos de impressao e copia
-ti;Outsourcing de impressão;busca;servico de impressao e copia
-ti;Outsourcing de impressão;busca;servicos de reprografia
-ti;Outsourcing de impressão;busca;solucao de impressao
-ti;Outsourcing de impressão;busca;gestao de impressao
-ti;Outsourcing de impressão;busca;bilhetagem de impressao
-ti;Outsourcing de impressão;exclui;impressao grafica
-ti;Outsourcing de impressão;exclui;servicos graficos
-ti;Outsourcing de impressão;exclui;material grafico
-ti;Outsourcing de impressão;exclui;impressao 3d
-ti;Equipamentos de informática;busca;computador
-ti;Equipamentos de informática;busca;computadores
-ti;Equipamentos de informática;busca;microcomputador
-ti;Equipamentos de informática;busca;microcomputadores
-ti;Equipamentos de informática;busca;notebook
-ti;Equipamentos de informática;busca;notebooks
-ti;Equipamentos de informática;busca;desktop
-ti;Equipamentos de informática;busca;desktops
-ti;Equipamentos de informática;busca;all in one
-ti;Equipamentos de informática;busca;all-in-one
-ti;Equipamentos de informática;busca;tablet
-ti;Equipamentos de informática;busca;tablets
-ti;Equipamentos de informática;busca;chromebook
-ti;Equipamentos de informática;busca;chromebooks
-ti;Equipamentos de informática;busca;monitor de video
-ti;Equipamentos de informática;busca;monitores de video
-ti;Equipamentos de informática;busca;equipamentos de informatica
-ti;Equipamentos de informática;busca;equipamentos de tecnologia da informacao
-ti;Equipamentos de informática;busca;materiais de informatica
-ti;Equipamentos de informática;busca;suprimentos de informatica
-ti;Equipamentos de informática;busca;perifericos de informatica
-ti;Equipamentos de informática;busca;nobreak
-ti;Equipamentos de informática;busca;nobreaks
-ti;Equipamentos de informática;busca;switch
-ti;Equipamentos de informática;busca;switches
-ti;Equipamentos de informática;busca;roteador
-ti;Equipamentos de informática;busca;roteadores
-ti;Equipamentos de informática;busca;access point
-ti;Equipamentos de informática;busca;scanner
-ti;Equipamentos de informática;busca;scanners
-ti;Equipamentos de informática;busca;impressora
-ti;Equipamentos de informática;busca;impressoras
-ti;Equipamentos de informática;exclui;tomografia computadorizada
-ti;Equipamentos de informática;exclui;tomografo computadorizado
-ti;Equipamentos de informática;exclui;impressora 3d
-ti;Equipamentos de informática;exclui;impressoras 3d
-ti;Equipamentos de informática;exclui;rede mundial de computadores
-ti;Equipamentos de informática;exclui;raio x
-ti;Equipamentos de informática;exclui;raios x
-ti;Equipamentos de informática;exclui;backscatter
-ti;Equipamentos de informática;exclui;inspecao de bagagem
-educacao_pesquisa;EAD e educação a distância;busca;educacao a distancia
-educacao_pesquisa;EAD e educação a distância;busca;ensino a distancia
-educacao_pesquisa;EAD e educação a distância;busca;ensino remoto
-educacao_pesquisa;EAD e educação a distância;busca;ead
-educacao_pesquisa;EAD e educação a distância;busca;ead/
-educacao_pesquisa;EAD e educação a distância;busca;/ead
-educacao_pesquisa;EAD e educação a distância;busca;ambiente virtual de aprendizagem
-educacao_pesquisa;EAD e educação a distância;busca;ava
-educacao_pesquisa;EAD e educação a distância;busca;lms
-educacao_pesquisa;EAD e educação a distância;busca;learning management
-educacao_pesquisa;EAD e educação a distância;busca;moodle
-educacao_pesquisa;EAD e educação a distância;busca;e-learning
-educacao_pesquisa;EAD e educação a distância;busca;elearning
-educacao_pesquisa;EAD e educação a distância;busca;cursos online
-educacao_pesquisa;EAD e educação a distância;busca;cursos on-line
-educacao_pesquisa;EAD e educação a distância;busca;curso online
-educacao_pesquisa;EAD e educação a distância;busca;curso on-line
-educacao_pesquisa;EAD e educação a distância;busca;cursos a distancia
-educacao_pesquisa;EAD e educação a distância;busca;curso a distancia
-educacao_pesquisa;EAD e educação a distância;busca;capacitacao a distancia
-educacao_pesquisa;EAD e educação a distância;busca;capacitacao online
-educacao_pesquisa;EAD e educação a distância;busca;capacitacao on-line
-educacao_pesquisa;EAD e educação a distância;busca;treinamento a distancia
-educacao_pesquisa;EAD e educação a distância;busca;treinamento online
-educacao_pesquisa;EAD e educação a distância;busca;treinamento on-line
-educacao_pesquisa;EAD e educação a distância;busca;plataforma de ensino
-educacao_pesquisa;EAD e educação a distância;busca;plataforma educacional
-educacao_pesquisa;EAD e educação a distância;busca;plataforma de aprendizagem
-educacao_pesquisa;EAD e educação a distância;busca;plataforma de educacao
-educacao_pesquisa;EAD e educação a distância;busca;plataforma de cursos
-educacao_pesquisa;EAD e educação a distância;busca;plataforma adaptativa
-educacao_pesquisa;EAD e educação a distância;busca;conteudos educacionais digitais
-educacao_pesquisa;EAD e educação a distância;busca;conteudo educacional digital
-educacao_pesquisa;EAD e educação a distância;busca;objetos de aprendizagem
-educacao_pesquisa;EAD e educação a distância;busca;objetos digitais de aprendizagem
-educacao_pesquisa;EAD e educação a distância;busca;videoaulas
-educacao_pesquisa;EAD e educação a distância;busca;video aulas
-educacao_pesquisa;EAD e educação a distância;busca;aulas gravadas
-educacao_pesquisa;EAD e educação a distância;busca;aulas remotas
-educacao_pesquisa;EAD e educação a distância;busca;educacao digital
-educacao_pesquisa;EAD e educação a distância;busca;universidade corporativa
-educacao_pesquisa;EAD e educação a distância;busca;escola virtual
-educacao_pesquisa;EAD e educação a distância;busca;trilhas de aprendizagem
-educacao_pesquisa;EAD e educação a distância;busca;trilhas formativas
-educacao_pesquisa;EAD e educação a distância;busca;microlearning
-educacao_pesquisa;EAD e educação a distância;busca;gamificacao educacional
-educacao_pesquisa;EAD e educação a distância;busca;tecnologia educacional
-educacao_pesquisa;EAD e educação a distância;busca;solucao educacional digital
-educacao_pesquisa;EAD e educação a distância;busca;recursos educacionais digitais
-educacao_pesquisa;EAD e educação a distância;busca;livro digital interativo
-educacao_pesquisa;EAD e educação a distância;busca;laboratorio virtual
-educacao_pesquisa;EAD e educação a distância;exclui;aquisicao de material
-educacao_pesquisa;EAD e educação a distância;exclui;aquisicao de acervo
-educacao_pesquisa;EAD e educação a distância;exclui;ensino a distancia de motoristas
-educacao_pesquisa;EAD e educação a distância;exclui;transporte escolar
-educacao_pesquisa;EAD e educação a distância;exclui;uniforme
-educacao_pesquisa;EAD e educação a distância;exclui;merenda
-educacao_pesquisa;EAD e educação a distância;exclui;generos alimenticios
-educacao_pesquisa;EAD e educação a distância;exclui;kit escolar
-educacao_pesquisa;EAD e educação a distância;exclui;material escolar
-educacao_pesquisa;EAD e educação a distância;exclui;mobiliario
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de opiniao
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de satisfacao
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisas de satisfacao
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa qualitativa
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa quantitativa
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa quali
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa domiciliar
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de campo
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisas de campo
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa socioeconomica
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;diagnostico socioeconomico
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;levantamento socioeconomico
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa amostral
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa censitaria
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa estatistica
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;levantamento estatistico
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;realizacao de pesquisa
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de clima organizacional
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de imagem
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de percepcao
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de avaliacao
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de origem e destino
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa origem-destino
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de mobilidade
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa nacional
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de audiencia
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa eleitoral
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;survey
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;grupos focais
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;grupo focal
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;pesquisa de precos
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;pesquisa de preco
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;pesquisa mercadologica
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;levantamento de precos
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;aquisicao de materia
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;aquisicao de equipamento
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;aquisicao do equipamento
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;aquisicao de insumos
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;materiais de consumo
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;material de consumo
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;materiais permanentes
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;generos alimenticios
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;mobiliario
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;permissao de uso
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;permissao administrativa de uso
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;obras e servicos de engenharia
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;reagentes
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;aquisicao de livros
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;fornecimento de livros
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;materiais laboratoriais
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;climatizacao
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;ar condicionado
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;cesta de precos
-educacao_pesquisa;Pesquisa (opinião, satisfação, campo);exclui;banco de precos
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pesquisa e desenvolvimento
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pesquisa, desenvolvimento e inovacao
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;p d
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pd i
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;p d i
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pesquisa aplicada
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pesquisa tecnologica
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pesquisa e inovacao
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;encomenda tecnologica
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;solucao inovadora
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;solucoes inovadoras
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;marco legal das startups
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;lei complementar 182
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;lei complementar n 182
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;contrato publico para solucao inovadora
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;cpsi
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;bolsas de pesquisa
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;laboratorio de inovacao
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;hub de inovacao
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;sandbox regulatorio
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;programa de inovacao aberta
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);só com contexto de TI;pesquisa cientifica
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);só com contexto de TI;inovacao tecnologica
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);só com contexto de TI;desenvolvimento tecnologico
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);só com contexto de TI;transferencia de tecnologia
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);só com contexto de TI;projetos de pesquisa
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);só com contexto de TI;projeto de pesquisa
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;pesquisa de precos
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;pesquisa de preco
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;pesquisa mercadologica
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;levantamento de precos
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;aquisicao de materia
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;aquisicao de equipamento
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;aquisicao do equipamento
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;aquisicao de insumos
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;materiais de consumo
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;material de consumo
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;materiais permanentes
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;generos alimenticios
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;mobiliario
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;permissao de uso
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;permissao administrativa de uso
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;obras e servicos de engenharia
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;reagentes
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;aquisicao de livros
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;fornecimento de livros
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;materiais laboratoriais
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;climatizacao
-educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);exclui;ar condicionado
-engenharia;Projetos de engenharia;busca;projeto basico
-engenharia;Projetos de engenharia;busca;projeto executivo
-engenharia;Projetos de engenharia;busca;projetos basicos e executivos
-engenharia;Projetos de engenharia;busca;elaboracao de projetos
-engenharia;Projetos de engenharia;busca;projetos de engenharia
-engenharia;Projetos de engenharia;busca;projeto arquitetonico
-engenharia;BIM;busca;bim
-engenharia;BIM;busca;modelagem da informacao da construcao
-engenharia;BIM;busca;geobim
-engenharia;Fiscalização e gerenciamento de obras;busca;fiscalizacao de obras
-engenharia;Fiscalização e gerenciamento de obras;busca;supervisao de obras
-engenharia;Fiscalização e gerenciamento de obras;busca;gerenciamento de obras
-engenharia;Fiscalização e gerenciamento de obras;busca;verificacao independente
-engenharia;Fiscalização e gerenciamento de obras;busca;apoio a fiscalizacao
-engenharia;Orçamentos e planejamento de obras;busca;orcamento de obras
-engenharia;Orçamentos e planejamento de obras;busca;planilha orcamentaria
-engenharia;Orçamentos e planejamento de obras;busca;composicao de custos
-engenharia;Orçamentos e planejamento de obras;busca;cronograma fisico-financeiro
-engenharia;Orçamentos e planejamento de obras;busca;planejamento de obras
-engenharia;Infraestrutura pública;busca;pavimentacao
-engenharia;Infraestrutura pública;busca;drenagem
-engenharia;Infraestrutura pública;busca;saneamento basico
-engenharia;Infraestrutura pública;busca;recapeamento
-engenharia;Infraestrutura pública;busca;obras de infraestrutura
-engenharia;Infraestrutura pública;busca;construcao de
-engenharia;Infraestrutura pública;busca;reforma de
-engenharia;Infraestrutura pública;busca;ampliacao de
-engenharia;Infraestrutura pública;exclui;mao de obra
-engenharia;Infraestrutura pública;exclui;sistema de gestao
-engenharia;Sistemas de gestão de obras;busca;sistema de gestao de obras
-engenharia;Sistemas de gestão de obras;busca;gestao de obras publicas
-engenharia;Sistemas de gestão de obras;busca;software de obras
-engenharia;Sistemas de gestão de obras;busca;plataforma de gestao de obras
+﻿segmento;categoria;uso;termo;grupo
+gestao_documental;Digitalização;busca;digitalizacao;Gestão documental
+gestao_documental;Digitalização;busca;escaneamento;Gestão documental
+gestao_documental;Digitalização;busca;conversao de documentos fisicos;Gestão documental
+gestao_documental;Digitalização;busca;conversao de suporte;Gestão documental
+gestao_documental;Digitalização;busca;documentos fisicos em digitais;Gestão documental
+gestao_documental;Digitalização;busca;desmaterializacao;Gestão documental
+gestao_documental;Digitalização;busca;captura e processamento de imagens;Gestão documental
+gestao_documental;Digitalização;busca;imageamento;Gestão documental
+gestao_documental;Digitalização;busca;digitalizacao de acervo;Gestão documental
+gestao_documental;Digitalização;busca;digitalizacao de processos;Gestão documental
+gestao_documental;Digitalização;busca;digitalizacao de prontuarios;Gestão documental
+gestao_documental;Digitalização;busca;digitalizacao de plantas;Gestão documental
+gestao_documental;Digitalização;busca;certificacao digital de documentos;Gestão documental
+gestao_documental;Digitalização;busca;decreto 10.278;Gestão documental
+gestao_documental;Digitalização;busca;bpo documental;Gestão documental
+gestao_documental;Digitalização;busca;outsourcing de digitalizacao;Gestão documental
+gestao_documental;Digitalização;busca;microfilmagem;Gestão documental
+gestao_documental;Digitalização;busca;arquivamento eletronico;Gestão documental
+gestao_documental;Digitalização;busca;preparo e digitalizacao;Gestão documental
+gestao_documental;Digitalização;busca;imagens digitalizadas;Gestão documental
+gestao_documental;Digitalização;busca;paginas digitalizadas;Gestão documental
+gestao_documental;Digitalização;busca;outsourcing de processamento de documentos;Gestão documental
+gestao_documental;Digitalização;busca;processamento de documentos do tipo outsourcing;Gestão documental
+gestao_documental;Digitalização;busca;captura de documentos;Gestão documental
+gestao_documental;Digitalização;busca;conversao do acervo;Gestão documental
+gestao_documental;Digitalização;busca;conversao de acervo;Gestão documental
+gestao_documental;Digitalização;excluir;outsourcing de impressao;Gestão documental
+gestao_documental;Digitalização;excluir;impressao corporativa;Gestão documental
+gestao_documental;Digitalização;excluir;impressao, copia;Gestão documental
+gestao_documental;Digitalização;excluir;impressao e digitalizacao;Gestão documental
+gestao_documental;Digitalização;excluir;impressao/copia;Gestão documental
+gestao_documental;Digitalização;excluir;multifuncion;Gestão documental
+gestao_documental;Digitalização;excluir;impressoras;Gestão documental
+gestao_documental;Digitalização;excluir;equipamentos de impressao;Gestão documental
+gestao_documental;Digitalização;excluir;locacao de scanners;Gestão documental
+gestao_documental;Digitalização;excluir;scanners documentais;Gestão documental
+gestao_documental;Digitalização;excluir;escaneamento intraoral;Gestão documental
+gestao_documental;Digitalização;excluir;videomonitoramento;Gestão documental
+gestao_documental;Digitalização;excluir;video monitoramento;Gestão documental
+gestao_documental;Digitalização;excluir;cameras;Gestão documental
+gestao_documental;Digitalização;excluir;certificado digital e-cpf;Gestão documental
+gestao_documental;Digitalização;excluir;token;Gestão documental
+gestao_documental;Digitalização;excluir;radiolog;Gestão documental
+gestao_documental;Digitalização;excluir;radiograf;Gestão documental
+gestao_documental;Digitalização;excluir;radiodiagnost;Gestão documental
+gestao_documental;Digitalização;excluir;raio x;Gestão documental
+gestao_documental;Digitalização;excluir;raios x;Gestão documental
+gestao_documental;Digitalização;excluir;raio-x;Gestão documental
+gestao_documental;Digitalização;excluir;mamograf;Gestão documental
+gestao_documental;Digitalização;excluir;tomograf;Gestão documental
+gestao_documental;Digitalização;excluir;intraora;Gestão documental
+gestao_documental;Digitalização;excluir;odontolog;Gestão documental
+gestao_documental;Digitalização;excluir;plotagem;Gestão documental
+gestao_documental;Digitalização;excluir;copia de engenharia;Gestão documental
+gestao_documental;Digitalização;excluir;copias coloridas;Gestão documental
+gestao_documental;Digitalização;excluir;copia e digitalizacao;Gestão documental
+gestao_documental;Digitalização;excluir;copias e digitalizacao;Gestão documental
+gestao_documental;Digitalização;excluir;servicos graficos;Gestão documental
+gestao_documental;Digitalização;excluir;impressao 3d;Gestão documental
+gestao_documental;Digitalização;excluir;impressora;Gestão documental
+gestao_documental;Digitalização;excluir;mesa digitalizadora;Gestão documental
+gestao_documental;Digitalização;excluir;mesas digitalizadoras;Gestão documental
+gestao_documental;Digitalização;excluir;digitalizadora;Gestão documental
+gestao_documental;Digitalização;excluir;camera fotografica;Gestão documental
+gestao_documental;Digitalização;excluir;escaneamento facial;Gestão documental
+gestao_documental;Digitalização;excluir;escaneamento 3d;Gestão documental
+gestao_documental;Digitalização;excluir;scanner 3d;Gestão documental
+gestao_documental;Digitalização;excluir;digitalizacao de sinais;Gestão documental
+gestao_documental;Digitalização;excluir;transformacao digital;Gestão documental
+gestao_documental;Digitalização;excluir;imageamento aereo;Gestão documental
+gestao_documental;Digitalização;excluir;aerofotogram;Gestão documental
+gestao_documental;Digitalização;excluir;aerolevantamento;Gestão documental
+gestao_documental;Digitalização;excluir;georreferenc;Gestão documental
+gestao_documental;Digitalização;excluir;geoprocessamento;Gestão documental
+gestao_documental;Digitalização;excluir;cartograf;Gestão documental
+gestao_documental;Digitalização;excluir;aquisicao de equipamentos;Gestão documental
+gestao_documental;Digitalização;excluir;novos equipamentos de digitalizacao;Gestão documental
+gestao_documental;Digitalização;excluir;equipamentos de digitalizacao de imagem;Gestão documental
+gestao_documental;Digitalização;forte;digitalizacao de acervo;Gestão documental
+gestao_documental;Digitalização;forte;digitalizacao do acervo;Gestão documental
+gestao_documental;Digitalização;forte;digitalizacao de prontuarios;Gestão documental
+gestao_documental;Digitalização;forte;digitalizacao de processos;Gestão documental
+gestao_documental;Digitalização;forte;digitalizacao e indexacao;Gestão documental
+gestao_documental;Digitalização;forte;digitalizacao, indexacao;Gestão documental
+gestao_documental;Digitalização;forte;outsourcing de processamento de documentos;Gestão documental
+gestao_documental;Digitalização;forte;processamento de documentos do tipo outsourcing;Gestão documental
+gestao_documental;Digitalização;forte;digitalizacao de documentos historicos;Gestão documental
+gestao_documental;Digitalização;forte;documentos fisicos;Gestão documental
+gestao_documental;Digitalização;forte;preparo e digitalizacao;Gestão documental
+gestao_documental;Digitalização;forte;preparacao para digitalizacao;Gestão documental
+gestao_documental;Digitalização;forte;digitalizacao do arquivo;Gestão documental
+gestao_documental;Digitalização;forte;digitalizacao de livros;Gestão documental
+gestao_documental;Digitalização;forte;digitalizacao de documentos do arquivo;Gestão documental
+gestao_documental;Digitalização;forte;gestao documental;Gestão documental
+gestao_documental;Indexação;busca;indexacao;Gestão documental
+gestao_documental;Indexação;busca;catalogacao de documentos;Gestão documental
+gestao_documental;Indexação;busca;classificacao documental;Gestão documental
+gestao_documental;Indexação;busca;plano de classificacao;Gestão documental
+gestao_documental;Indexação;busca;descricao arquivistica;Gestão documental
+gestao_documental;Indexação;busca;indexacao de imagens;Gestão documental
+gestao_documental;Indexação;excluir;indexacao doi;Gestão documental
+gestao_documental;Indexação;excluir;revista cientifica;Gestão documental
+gestao_documental;Indexação;excluir;periodico;Gestão documental
+gestao_documental;Indexação;excluir;indice de reajuste;Gestão documental
+gestao_documental;Indexação;excluir;videomonitoramento;Gestão documental
+gestao_documental;Indexação;excluir;video monitoramento;Gestão documental
+gestao_documental;Indexação;excluir;cameras;Gestão documental
+gestao_documental;Indexação;excluir;indexacao da revista;Gestão documental
+gestao_documental;Indexação;excluir;revista;Gestão documental
+gestao_documental;Indexação;excluir;edicao de video;Gestão documental
+gestao_documental;Indexação;excluir;gravacao e transmissao;Gestão documental
+gestao_documental;Indexação;excluir;sessoes de julgamento;Gestão documental
+gestao_documental;Indexação;ambiguo (precisa de contexto);metadados;Gestão documental
+gestao_documental;Indexação;contexto;documento;Gestão documental
+gestao_documental;Indexação;contexto;documental;Gestão documental
+gestao_documental;Indexação;contexto;acervo;Gestão documental
+gestao_documental;Indexação;contexto;arquivo;Gestão documental
+gestao_documental;Indexação;contexto;processos fisicos;Gestão documental
+gestao_documental;Indexação;contexto;prontuario;Gestão documental
+gestao_documental;Indexação;contexto;papel;Gestão documental
+gestao_documental;Restauração de documentos;busca;restauracao de documentos;Gestão documental
+gestao_documental;Restauração de documentos;busca;restauracao de acervo;Gestão documental
+gestao_documental;Restauração de documentos;busca;conservacao e restauracao;Gestão documental
+gestao_documental;Restauração de documentos;busca;conservacao preventiva;Gestão documental
+gestao_documental;Restauração de documentos;busca;restauracao de livros;Gestão documental
+gestao_documental;Restauração de documentos;busca;restauracao de bens culturais;Gestão documental
+gestao_documental;Restauração de documentos;excluir;restauracao de pavimento;Gestão documental
+gestao_documental;Restauração de documentos;excluir;restauracao de fachada;Gestão documental
+gestao_documental;Restauração de documentos;excluir;restauracao predial;Gestão documental
+gestao_documental;Higienização documental;busca;higienizacao de documentos;Gestão documental
+gestao_documental;Higienização documental;busca;higienizacao documental;Gestão documental
+gestao_documental;Higienização documental;busca;higienizacao de acervo;Gestão documental
+gestao_documental;Higienização documental;busca;desinfestacao de acervo;Gestão documental
+gestao_documental;Higienização documental;busca;higienizacao, acondicionamento;Gestão documental
+gestao_documental;Triagem e organização de acervo;busca;triagem documental;Gestão documental
+gestao_documental;Triagem e organização de acervo;busca;organizacao de acervo;Gestão documental
+gestao_documental;Triagem e organização de acervo;busca;organizacao de arquivo;Gestão documental
+gestao_documental;Triagem e organização de acervo;busca;tratamento documental;Gestão documental
+gestao_documental;Triagem e organização de acervo;busca;tratamento arquivistico;Gestão documental
+gestao_documental;Triagem e organização de acervo;busca;gestao arquivistica;Gestão documental
+gestao_documental;Triagem e organização de acervo;busca;massa documental acumulada;Gestão documental
+gestao_documental;Triagem e organização de acervo;busca;tabela de temporalidade;Gestão documental
+gestao_documental;Triagem e organização de acervo;busca;diagnostico arquivistico;Gestão documental
+gestao_documental;Triagem e organização de acervo;busca;gestao documental;Gestão documental
+gestao_documental;Triagem e organização de acervo;busca;servicos arquivisticos;Gestão documental
+gestao_documental;Guarda e armazenamento físico;busca;guarda de documentos;Gestão documental
+gestao_documental;Guarda e armazenamento físico;busca;custodia de documentos;Gestão documental
+gestao_documental;Guarda e armazenamento físico;busca;armazenamento de documentos;Gestão documental
+gestao_documental;Guarda e armazenamento físico;busca;guarda documental;Gestão documental
+gestao_documental;Guarda e armazenamento físico;busca;desarquivamento;Gestão documental
+gestao_documental;Guarda e armazenamento físico;busca;arquivo morto;Gestão documental
+gestao_documental;Guarda e armazenamento físico;busca;guarda terceirizada;Gestão documental
+gestao_documental;Guarda e armazenamento físico;busca;fragmentacao e descarte de documentos;Gestão documental
+gestao_documental;GED / ECM;busca;gestao eletronica de documentos;Gestão documental
+gestao_documental;GED / ECM;busca;ged;Gestão documental
+gestao_documental;GED / ECM;busca;ged/;Gestão documental
+gestao_documental;GED / ECM;busca;/ged;Gestão documental
+gestao_documental;GED / ECM;busca;ecm;Gestão documental
+gestao_documental;GED / ECM;busca;gerenciamento eletronico de documentos;Gestão documental
+gestao_documental;GED / ECM;busca;processos digitais;Gestão documental
+gestao_documental;GED / ECM;busca;protocolo digital;Gestão documental
+gestao_documental;GED / ECM;busca;repositorio arquivistico;Gestão documental
+gestao_documental;GED / ECM;busca;preservacao digital;Gestão documental
+gestao_documental;OCR e extração de dados de documentos;busca;ocr;Gestão documental
+gestao_documental;OCR e extração de dados de documentos;busca;reconhecimento optico de caracteres;Gestão documental
+gestao_documental;OCR e extração de dados de documentos;busca;icr;Gestão documental
+gestao_documental;OCR e extração de dados de documentos;busca;extracao de dados de documentos;Gestão documental
+gestao_documental;OCR e extração de dados de documentos;busca;processamento inteligente de documentos;Gestão documental
+gestao_documental;OCR e extração de dados de documentos;excluir;cameras ocr;Gestão documental
+gestao_documental;OCR e extração de dados de documentos;excluir;ocr/lpr;Gestão documental
+gestao_documental;OCR e extração de dados de documentos;excluir;leitura de placas;Gestão documental
+ti;Desenvolvimento de software;busca;desenvolvimento de software;Software e sistemas
+ti;Desenvolvimento de software;busca;desenvolvimento de sistemas;Software e sistemas
+ti;Desenvolvimento de software;busca;desenvolvimento de solucoes de software;Software e sistemas
+ti;Desenvolvimento de software;busca;desenvolvimento e manutencao de solucoes;Software e sistemas
+ti;Desenvolvimento de software;busca;desenvolvimento sob demanda;Software e sistemas
+ti;Desenvolvimento de software;busca;desenvolvimento de aplicativos;Software e sistemas
+ti;Desenvolvimento de software;busca;desenvolvimento de aplicacoes;Software e sistemas
+ti;Desenvolvimento de software;busca;software sob medida;Software e sistemas
+ti;Desenvolvimento de software;busca;software personalizado;Software e sistemas
+ti;Desenvolvimento de software;busca;custom software development;Software e sistemas
+ti;Desenvolvimento de software;busca;desenvolvimento de portal;Software e sistemas
+ti;Desenvolvimento de software;busca;desenvolvimento de plataforma;Software e sistemas
+ti;Desenvolvimento de software;busca;desenvolvimento de solucao inovadora;Software e sistemas
+ti;Desenvolvimento de software;busca;desenvolvimento de sistema;Software e sistemas
+ti;Desenvolvimento de software;excluir;manutencao predial;Software e sistemas
+ti;Desenvolvimento de software;excluir;ar condicionado;Software e sistemas
+ti;Desenvolvimento de software;excluir;ar-condicionado;Software e sistemas
+ti;Desenvolvimento de software;excluir;veiculo;Software e sistemas
+ti;Desenvolvimento de software;excluir;elevador;Software e sistemas
+ti;Desenvolvimento de software;excluir;material de expediente;Software e sistemas
+ti;Desenvolvimento de software;excluir;generos alimenticios;Software e sistemas
+ti;Desenvolvimento de software;excluir;esquadria;Software e sistemas
+ti;Desenvolvimento de software;excluir;fotovoltaic;Software e sistemas
+ti;Desenvolvimento de software;excluir;drenagem;Software e sistemas
+ti;Desenvolvimento de software;excluir;iluminacao publica;Software e sistemas
+ti;Desenvolvimento de software;excluir;videomonitoramento;Software e sistemas
+ti;Desenvolvimento de software;excluir;video monitoramento;Software e sistemas
+ti;Desenvolvimento de software;excluir;motobomba;Software e sistemas
+ti;Desenvolvimento de software;excluir;climatizacao;Software e sistemas
+ti;Desenvolvimento de software;excluir;alarmes;Software e sistemas
+ti;Desenvolvimento de software;excluir;cameras;Software e sistemas
+ti;Desenvolvimento de software;excluir;monitoramento eletronico;Software e sistemas
+ti;Desenvolvimento de software;excluir;seguranca eletronica;Software e sistemas
+ti;Desenvolvimento de software;excluir;aquisicao de materiais;Software e sistemas
+ti;Desenvolvimento de software;excluir;materiais de informatica;Software e sistemas
+ti;Desenvolvimento de software;excluir;equipamentos de informatica;Software e sistemas
+ti;Desenvolvimento de software;excluir;computadores;Software e sistemas
+ti;Desenvolvimento de software;excluir;perifericos;Software e sistemas
+ti;Desenvolvimento de software;excluir;aquisicao de equipamentos;Software e sistemas
+ti;Desenvolvimento de software;ambiguo (precisa de contexto);construcao de sistemas;Software e sistemas
+ti;Desenvolvimento de software;ambiguo (precisa de contexto);evolucao de sistemas;Software e sistemas
+ti;Desenvolvimento de software;contexto;software;Software e sistemas
+ti;Desenvolvimento de software;contexto;sistema informatizado;Software e sistemas
+ti;Desenvolvimento de software;contexto;sistemas informatizados;Software e sistemas
+ti;Desenvolvimento de software;contexto;tecnologia da informacao;Software e sistemas
+ti;Desenvolvimento de software;contexto;ti;Software e sistemas
+ti;Desenvolvimento de software;contexto;tic;Software e sistemas
+ti;Desenvolvimento de software;contexto;aplicacao web;Software e sistemas
+ti;Desenvolvimento de software;contexto;aplicacoes web;Software e sistemas
+ti;Desenvolvimento de software;contexto;aplicacoes de ti;Software e sistemas
+ti;Desenvolvimento de software;contexto;aplicativo;Software e sistemas
+ti;Desenvolvimento de software;contexto;web;Software e sistemas
+ti;Desenvolvimento de software;contexto;erp;Software e sistemas
+ti;Desenvolvimento de software;contexto;banco de dados;Software e sistemas
+ti;Desenvolvimento de software;contexto;codigo fonte;Software e sistemas
+ti;Desenvolvimento de software;contexto;plataforma digital;Software e sistemas
+ti;Desenvolvimento de software;contexto;sistema de gestao;Software e sistemas
+ti;Desenvolvimento de software;contexto;sistemas de gestao;Software e sistemas
+ti;Desenvolvimento de software;contexto;solucao tecnologica;Software e sistemas
+ti;Fábrica de software;busca;fabrica de software;Software e sistemas
+ti;Fábrica de software;busca;ponto de funcao;Software e sistemas
+ti;Fábrica de software;busca;pontos de funcao;Software e sistemas
+ti;Fábrica de software;busca;unidade de servico tecnico;Software e sistemas
+ti;Fábrica de software;busca;ust;Software e sistemas
+ti;Fábrica de software;busca;squad;Software e sistemas
+ti;Fábrica de software;busca;squads;Software e sistemas
+ti;Fábrica de software;busca;metodos ageis;Software e sistemas
+ti;Fábrica de software;busca;praticas ageis;Software e sistemas
+ti;Fábrica de software;busca;alocacao de profissionais de ti;Software e sistemas
+ti;Fábrica de software;busca;servicos tecnicos especializados de tic;Software e sistemas
+ti;Fábrica de software;busca;outsourcing de desenvolvimento;Software e sistemas
+ti;Fábrica de software;excluir;manutencao predial;Software e sistemas
+ti;Fábrica de software;excluir;ar condicionado;Software e sistemas
+ti;Fábrica de software;excluir;ar-condicionado;Software e sistemas
+ti;Fábrica de software;excluir;veiculo;Software e sistemas
+ti;Fábrica de software;excluir;elevador;Software e sistemas
+ti;Fábrica de software;excluir;material de expediente;Software e sistemas
+ti;Fábrica de software;excluir;generos alimenticios;Software e sistemas
+ti;Fábrica de software;excluir;esquadria;Software e sistemas
+ti;Fábrica de software;excluir;fotovoltaic;Software e sistemas
+ti;Fábrica de software;excluir;drenagem;Software e sistemas
+ti;Fábrica de software;excluir;iluminacao publica;Software e sistemas
+ti;Fábrica de software;excluir;videomonitoramento;Software e sistemas
+ti;Fábrica de software;excluir;video monitoramento;Software e sistemas
+ti;Fábrica de software;excluir;motobomba;Software e sistemas
+ti;Fábrica de software;excluir;climatizacao;Software e sistemas
+ti;Fábrica de software;excluir;alarmes;Software e sistemas
+ti;Fábrica de software;excluir;cameras;Software e sistemas
+ti;Fábrica de software;excluir;monitoramento eletronico;Software e sistemas
+ti;Fábrica de software;excluir;seguranca eletronica;Software e sistemas
+ti;Fábrica de software;excluir;aquisicao de materiais;Software e sistemas
+ti;Fábrica de software;excluir;materiais de informatica;Software e sistemas
+ti;Fábrica de software;excluir;equipamentos de informatica;Software e sistemas
+ti;Fábrica de software;excluir;computadores;Software e sistemas
+ti;Fábrica de software;excluir;perifericos;Software e sistemas
+ti;Fábrica de software;excluir;aquisicao de equipamentos;Software e sistemas
+ti;Manutenção de software;busca;manutencao corretiva e evolutiva;Software e sistemas
+ti;Manutenção de software;busca;manutencao evolutiva;Software e sistemas
+ti;Manutenção de software;busca;manutencao adaptativa;Software e sistemas
+ti;Manutenção de software;busca;manutencao de software;Software e sistemas
+ti;Manutenção de software;busca;sistemas legados;Software e sistemas
+ti;Manutenção de software;busca;reengenharia de software;Software e sistemas
+ti;Manutenção de software;excluir;manutencao predial;Software e sistemas
+ti;Manutenção de software;excluir;ar condicionado;Software e sistemas
+ti;Manutenção de software;excluir;ar-condicionado;Software e sistemas
+ti;Manutenção de software;excluir;veiculo;Software e sistemas
+ti;Manutenção de software;excluir;elevador;Software e sistemas
+ti;Manutenção de software;excluir;material de expediente;Software e sistemas
+ti;Manutenção de software;excluir;generos alimenticios;Software e sistemas
+ti;Manutenção de software;excluir;esquadria;Software e sistemas
+ti;Manutenção de software;excluir;fotovoltaic;Software e sistemas
+ti;Manutenção de software;excluir;drenagem;Software e sistemas
+ti;Manutenção de software;excluir;iluminacao publica;Software e sistemas
+ti;Manutenção de software;excluir;videomonitoramento;Software e sistemas
+ti;Manutenção de software;excluir;video monitoramento;Software e sistemas
+ti;Manutenção de software;excluir;motobomba;Software e sistemas
+ti;Manutenção de software;excluir;climatizacao;Software e sistemas
+ti;Manutenção de software;excluir;alarmes;Software e sistemas
+ti;Manutenção de software;excluir;cameras;Software e sistemas
+ti;Manutenção de software;excluir;monitoramento eletronico;Software e sistemas
+ti;Manutenção de software;excluir;seguranca eletronica;Software e sistemas
+ti;Manutenção de software;excluir;aquisicao de materiais;Software e sistemas
+ti;Manutenção de software;excluir;materiais de informatica;Software e sistemas
+ti;Manutenção de software;excluir;equipamentos de informatica;Software e sistemas
+ti;Manutenção de software;excluir;computadores;Software e sistemas
+ti;Manutenção de software;excluir;perifericos;Software e sistemas
+ti;Manutenção de software;excluir;aquisicao de equipamentos;Software e sistemas
+ti;Manutenção de software;excluir;sistema de iluminacao;Software e sistemas
+ti;Manutenção de software;excluir;sistema de abastecimento;Software e sistemas
+ti;Manutenção de software;excluir;sistema de rodagem;Software e sistemas
+ti;Manutenção de software;excluir;sistemas de alarme;Software e sistemas
+ti;Manutenção de software;excluir;cftv;Software e sistemas
+ti;Manutenção de software;ambiguo (precisa de contexto);manutencao de sistemas;Software e sistemas
+ti;Manutenção de software;ambiguo (precisa de contexto);manutencao do sistema;Software e sistemas
+ti;Manutenção de software;ambiguo (precisa de contexto);manutencao corretiva;Software e sistemas
+ti;Manutenção de software;ambiguo (precisa de contexto);modernizacao de sistemas;Software e sistemas
+ti;Manutenção de software;ambiguo (precisa de contexto);migracao de sistemas;Software e sistemas
+ti;Manutenção de software;ambiguo (precisa de contexto);evolucao funcional;Software e sistemas
+ti;Manutenção de software;contexto;software;Software e sistemas
+ti;Manutenção de software;contexto;sistema informatizado;Software e sistemas
+ti;Manutenção de software;contexto;sistemas informatizados;Software e sistemas
+ti;Manutenção de software;contexto;tecnologia da informacao;Software e sistemas
+ti;Manutenção de software;contexto;ti;Software e sistemas
+ti;Manutenção de software;contexto;tic;Software e sistemas
+ti;Manutenção de software;contexto;aplicacao web;Software e sistemas
+ti;Manutenção de software;contexto;aplicacoes web;Software e sistemas
+ti;Manutenção de software;contexto;aplicacoes de ti;Software e sistemas
+ti;Manutenção de software;contexto;aplicativo;Software e sistemas
+ti;Manutenção de software;contexto;web;Software e sistemas
+ti;Manutenção de software;contexto;erp;Software e sistemas
+ti;Manutenção de software;contexto;banco de dados;Software e sistemas
+ti;Manutenção de software;contexto;codigo fonte;Software e sistemas
+ti;Manutenção de software;contexto;plataforma digital;Software e sistemas
+ti;Manutenção de software;contexto;sistema de gestao;Software e sistemas
+ti;Manutenção de software;contexto;sistemas de gestao;Software e sistemas
+ti;Manutenção de software;contexto;solucao tecnologica;Software e sistemas
+ti;Sustentação de sistemas;busca;sustentacao de sistemas;Software e sistemas
+ti;Sustentação de sistemas;busca;sustentacao de software;Software e sistemas
+ti;Sustentação de sistemas;busca;sustentacao de aplicacoes;Software e sistemas
+ti;Sustentação de sistemas;busca;sustentacao e evolucao;Software e sistemas
+ti;Sustentação de sistemas;busca;sustentacao de solucoes;Software e sistemas
+ti;Sustentação de sistemas;busca;sustentacao do sistema;Software e sistemas
+ti;Sustentação de sistemas;busca;application management;Software e sistemas
+ti;Sustentação de sistemas;busca;suporte n2;Software e sistemas
+ti;Sustentação de sistemas;busca;suporte n3;Software e sistemas
+ti;Sustentação de sistemas;busca;niveis minimos de servico de sistemas;Software e sistemas
+ti;Sustentação de sistemas;excluir;manutencao predial;Software e sistemas
+ti;Sustentação de sistemas;excluir;ar condicionado;Software e sistemas
+ti;Sustentação de sistemas;excluir;ar-condicionado;Software e sistemas
+ti;Sustentação de sistemas;excluir;veiculo;Software e sistemas
+ti;Sustentação de sistemas;excluir;elevador;Software e sistemas
+ti;Sustentação de sistemas;excluir;material de expediente;Software e sistemas
+ti;Sustentação de sistemas;excluir;generos alimenticios;Software e sistemas
+ti;Sustentação de sistemas;excluir;esquadria;Software e sistemas
+ti;Sustentação de sistemas;excluir;fotovoltaic;Software e sistemas
+ti;Sustentação de sistemas;excluir;drenagem;Software e sistemas
+ti;Sustentação de sistemas;excluir;iluminacao publica;Software e sistemas
+ti;Sustentação de sistemas;excluir;videomonitoramento;Software e sistemas
+ti;Sustentação de sistemas;excluir;video monitoramento;Software e sistemas
+ti;Sustentação de sistemas;excluir;motobomba;Software e sistemas
+ti;Sustentação de sistemas;excluir;climatizacao;Software e sistemas
+ti;Sustentação de sistemas;excluir;alarmes;Software e sistemas
+ti;Sustentação de sistemas;excluir;cameras;Software e sistemas
+ti;Sustentação de sistemas;excluir;monitoramento eletronico;Software e sistemas
+ti;Sustentação de sistemas;excluir;seguranca eletronica;Software e sistemas
+ti;Sustentação de sistemas;excluir;aquisicao de materiais;Software e sistemas
+ti;Sustentação de sistemas;excluir;materiais de informatica;Software e sistemas
+ti;Sustentação de sistemas;excluir;equipamentos de informatica;Software e sistemas
+ti;Sustentação de sistemas;excluir;computadores;Software e sistemas
+ti;Sustentação de sistemas;excluir;perifericos;Software e sistemas
+ti;Sustentação de sistemas;excluir;aquisicao de equipamentos;Software e sistemas
+ti;Sustentação de sistemas;ambiguo (precisa de contexto);sustentacao tecnica;Software e sistemas
+ti;Sustentação de sistemas;contexto;software;Software e sistemas
+ti;Sustentação de sistemas;contexto;sistema informatizado;Software e sistemas
+ti;Sustentação de sistemas;contexto;sistemas informatizados;Software e sistemas
+ti;Sustentação de sistemas;contexto;tecnologia da informacao;Software e sistemas
+ti;Sustentação de sistemas;contexto;ti;Software e sistemas
+ti;Sustentação de sistemas;contexto;tic;Software e sistemas
+ti;Sustentação de sistemas;contexto;aplicacao web;Software e sistemas
+ti;Sustentação de sistemas;contexto;aplicacoes web;Software e sistemas
+ti;Sustentação de sistemas;contexto;aplicacoes de ti;Software e sistemas
+ti;Sustentação de sistemas;contexto;aplicativo;Software e sistemas
+ti;Sustentação de sistemas;contexto;web;Software e sistemas
+ti;Sustentação de sistemas;contexto;erp;Software e sistemas
+ti;Sustentação de sistemas;contexto;banco de dados;Software e sistemas
+ti;Sustentação de sistemas;contexto;codigo fonte;Software e sistemas
+ti;Sustentação de sistemas;contexto;plataforma digital;Software e sistemas
+ti;Sustentação de sistemas;contexto;sistema de gestao;Software e sistemas
+ti;Sustentação de sistemas;contexto;sistemas de gestao;Software e sistemas
+ti;Sustentação de sistemas;contexto;solucao tecnologica;Software e sistemas
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de software;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de softwares;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de licenca;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de licencas;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de programa;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao e licenciamento;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao mensal de software;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;licenciamento mensal;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;licenca mensal;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;licencas mensais;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;cessao de uso de software;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;cessao de uso de sistema;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;cessao do direito de uso;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;cessao de direito de uso;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;direito de uso de software;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;direito de uso de sistema;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;software como servico;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;software as a service;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;saas;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;assinatura de software;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;assinatura de plataforma;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;assinatura de licencas;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;assinatura de sistema;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;subscricao de licencas;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;subscricao de software;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;sistema de gestao publica;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;sistemas de gestao publica;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;sistema integrado de gestao publica;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;sistemas integrados de gestao publica;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de equipamentos de informatica;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de computadores;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de notebooks;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de microcomputadores;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;locacao de servidores;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;outsourcing de ti;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;outsourcing de estacoes;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;estacoes de trabalho como servico;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;desktop como servico;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;infraestrutura como servico;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);busca;plataforma como servico;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;licenca perpetua;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;licencas perpetuas;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;locacao de veiculo;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;locacao de maquinas;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;locacao de imovel;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;locacao de impressoras;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;outsourcing de impressao;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;multifuncion;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;videomonitoramento;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;video monitoramento;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;fiscalizacao eletronica;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;cameras;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;radares;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;sistema operacional;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;windows 11;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);excluir;windows 10;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);licenciamento de uso;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);licenca de uso;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);licencas de uso;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);licenciamento de direito de uso;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);mensalidade;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);valor mensal;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);pagamento mensal;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);parcelas mensais;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);custo mensal;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);preco mensal;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);assinatura;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);hospedagem;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);locacao de sistema;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);locacao de sistemas;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);locacao de solucao;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);provimento de sistema;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);ambiguo (precisa de contexto);provimento de solucao;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;software;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;sistema informatizado;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;sistemas informatizados;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;tecnologia da informacao;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;ti;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;tic;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;aplicacao web;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;aplicacoes web;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;aplicacoes de ti;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;aplicativo;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;web;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;erp;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;banco de dados;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;codigo fonte;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;plataforma digital;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;sistema de gestao;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;sistemas de gestao;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;solucao tecnologica;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;sistemas de gestao;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;sistema web;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;software;
+ti;Tecnologia com valor fixo mensal (locação, licença, SaaS);contexto;licenca;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tecnologia da informacao;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tecnologia de informacao;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tecnologia da informacao e comunicacao;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tic;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;ti;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;informatica;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;software;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;softwares;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;sistema informatizado;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;sistemas informatizados;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;sistema web;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;aplicativo;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;aplicativos;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;solucao tecnologica;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;solucoes tecnologicas;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;plataforma digital;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;plataforma web;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;computador;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;computadores;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;microcomputador;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;microcomputadores;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;notebook;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;notebooks;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;desktop;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;desktops;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;chromebook;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;chromebooks;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tablet;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;tablets;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;estacoes de trabalho;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;workstation;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;servidor de rede;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;servidores de rede;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;rack;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;switch;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;switches;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;roteador;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;roteadores;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;access point;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;wi-fi;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;wifi;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;rede logica;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;redes logicas;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;cabeamento estruturado;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;fibra optica;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;link de internet;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;links de internet;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;link dedicado;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;acesso a internet;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;servico de internet;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;internet banda larga;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;conectividade;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;telefonia;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;telecomunicacao;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;telecomunicacoes;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;voip;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;pabx;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;central telefonica;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;rede de dados;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;data center;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;datacenter;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;em nuvem;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;computacao em nuvem;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;cloud;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;licenca de software;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;licencas de software;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;antivirus;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;certificado digital;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;certificados digitais;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;nobreak;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;nobreaks;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;lousa digital;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;lousas digitais;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;painel interativo;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;paineis interativos;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;robotica educacional;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;kit de robotica;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;impressora 3d;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;videomonitoramento;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;video monitoramento;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;cftv;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;biometria;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;biometrico;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;totem de autoatendimento;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;inteligencia artificial;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;transformacao digital;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;governo digital;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;cidade inteligente;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;cidades inteligentes;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;internet das coisas;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;iot;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;georreferenciamento;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;geoprocessamento;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;drone;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);busca;drones;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;servidores publicos;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;servidores municipais;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;servidores efetivos;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;capacitacao de servidores;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;tecnologia de pavimentacao;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;tecnologia led;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;luminarias;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;iluminacao publica;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;agenciamento de viagens;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;tomografia;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;pulverizador agricola;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;analises clinicas;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;exames laboratoriais;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;complementares de engenharia;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;projetos basico;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;projeto basico e executivo;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;alvara de construcao;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;organizacao e producao de evento;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;producao de eventos;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;caminhonete tipo picape;
+ti;Tecnologia (geral: equipamentos, software, internet, telecom);excluir;zero quilometro;
+ti;Inteligência artificial;busca;inteligencia artificial;Software e sistemas
+ti;Inteligência artificial;busca;aprendizado de maquina;Software e sistemas
+ti;Inteligência artificial;busca;machine learning;Software e sistemas
+ti;Inteligência artificial;busca;ia generativa;Software e sistemas
+ti;Inteligência artificial;busca;modelo de linguagem;Software e sistemas
+ti;Inteligência artificial;busca;llm;Software e sistemas
+ti;Inteligência artificial;busca;visao computacional;Software e sistemas
+ti;Inteligência artificial;busca;chatbot;Software e sistemas
+ti;Inteligência artificial;excluir;agenciamento de viagens;Software e sistemas
+ti;Inteligência artificial;excluir;passagens aereas;Software e sistemas
+ti;Inteligência artificial;excluir;reserva, emissao;Software e sistemas
+ti;Inteligência artificial;excluir;emissao, marcacao;Software e sistemas
+ti;Inteligência artificial;excluir;hospedagem em hoteis;Software e sistemas
+ti;Tratamento e processamento de dados;busca;tratamento de dados;Software e sistemas
+ti;Tratamento e processamento de dados;busca;ciencia de dados;Software e sistemas
+ti;Tratamento e processamento de dados;busca;engenharia de dados;Software e sistemas
+ti;Tratamento e processamento de dados;busca;analise de dados;Software e sistemas
+ti;Tratamento e processamento de dados;busca;business intelligence;Software e sistemas
+ti;Tratamento e processamento de dados;busca;data lake;Software e sistemas
+ti;Tratamento e processamento de dados;busca;data warehouse;Software e sistemas
+ti;Tratamento e processamento de dados;busca;governanca de dados;Software e sistemas
+ti;Tratamento e processamento de dados;busca;qualidade de dados;Software e sistemas
+ti;Tratamento e processamento de dados;busca;saneamento cadastral;Software e sistemas
+ti;Tratamento e processamento de dados;busca;saneamento de dados;Software e sistemas
+ti;Tratamento e processamento de dados;busca;requalificacao cadastral;Software e sistemas
+ti;Tratamento e processamento de dados;busca;requalificacao de dados;Software e sistemas
+ti;Tratamento e processamento de dados;busca;recadastramento;Software e sistemas
+ti;Tratamento e processamento de dados;busca;higienizacao de dados;Software e sistemas
+ti;Tratamento e processamento de dados;busca;higienizacao de base;Software e sistemas
+ti;Tratamento e processamento de dados;busca;mineracao de dados;Software e sistemas
+ti;Tratamento e processamento de dados;busca;inteligencia de dados;Software e sistemas
+ti;Tratamento e processamento de dados;busca;analytics;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;equipamentos de processamento de dados;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;materiais de processamento de dados;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;material de processamento de dados;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;dados variaveis;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;centro de processamento de dados;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;nobreak;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;computadores;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;plano de dados;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;comunicacao de dados;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;link de dados;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;dados moveis;Software e sistemas
+ti;Tratamento e processamento de dados;excluir;teamviewer;Software e sistemas
+ti;Tratamento e processamento de dados;ambiguo (precisa de contexto);migracao de dados;Software e sistemas
+ti;Tratamento e processamento de dados;ambiguo (precisa de contexto);processamento de dados;Software e sistemas
+ti;Tratamento e processamento de dados;ambiguo (precisa de contexto);etl;Software e sistemas
+ti;Tratamento e processamento de dados;contexto;saneamento;Software e sistemas
+ti;Tratamento e processamento de dados;contexto;higienizacao;Software e sistemas
+ti;Tratamento e processamento de dados;contexto;qualidade de dados;Software e sistemas
+ti;Tratamento e processamento de dados;contexto;tratamento de dados;Software e sistemas
+ti;Tratamento e processamento de dados;contexto;base de dados;Software e sistemas
+ti;Tratamento e processamento de dados;contexto;carga de dados historicos;Software e sistemas
+ti;Tratamento e processamento de dados;contexto;legado;Software e sistemas
+ti;Tratamento e processamento de dados;contexto;cadastr;Software e sistemas
+ti;Tratamento e processamento de dados;contexto;analise de dados;Software e sistemas
+ti;Tratamento e processamento de dados;contexto;digitacao;Software e sistemas
+ti;Cloud computing;busca;computacao em nuvem;Infraestrutura, nuvem e data center
+ti;Cloud computing;busca;cloud computing;Infraestrutura, nuvem e data center
+ti;Cloud computing;busca;servicos de nuvem;Infraestrutura, nuvem e data center
+ti;Cloud computing;busca;nuvem publica;Infraestrutura, nuvem e data center
+ti;Cloud computing;busca;iaas;Infraestrutura, nuvem e data center
+ti;Cloud computing;busca;paas;Infraestrutura, nuvem e data center
+ti;Cloud computing;busca;cloud broker;Infraestrutura, nuvem e data center
+ti;Cloud computing;busca;hospedagem em nuvem;Infraestrutura, nuvem e data center
+ti;Cloud computing;busca;creditos de nuvem;Infraestrutura, nuvem e data center
+ti;Cloud computing;busca;nuvem computacional;Infraestrutura, nuvem e data center
+ti;Cloud computing;busca;backup em nuvem;Infraestrutura, nuvem e data center
+ti;Cloud computing;busca;armazenamento em nuvem;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidores de rede;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidor de rede;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidores fisicos;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidores virtuais;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidores de aplicacao;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidores de banco de dados;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidores rack;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidores blade;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidor rack;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidores em nuvem;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidor de arquivos;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;servidores de arquivos;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;data center;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;datacenter;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;storage;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;armazenamento de dados;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;hiperconvergente;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;exadata;Infraestrutura, nuvem e data center
+ti;Servidores e data center;busca;solucao de backup;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;servidores publicos;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;servidores municipais;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;servidores do municipio;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;capacitacao de servidores;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;server datacenter;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;climatizacao de precisao;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;hospedagem dos sistemas;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;hospedagem do sistema;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;hospedagem de dados;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;hospedagem dos dados;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;hospedagem em data center;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;hospedagem em datacenter;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;hospedado em data center;Infraestrutura, nuvem e data center
+ti;Servidores e data center;excluir;hospedados em data center;Infraestrutura, nuvem e data center
+ti;Servidores e data center;forte;colocation;Infraestrutura, nuvem e data center
+ti;Servidores e data center;forte;espaco em datacenter;Infraestrutura, nuvem e data center
+ti;Servidores e data center;forte;espaco em data center;Infraestrutura, nuvem e data center
+ti;Servidores e data center;forte;servidores de rede;Infraestrutura, nuvem e data center
+ti;Servidores e data center;forte;servidor de rede;Infraestrutura, nuvem e data center
+ti;Servidores e data center;forte;storage;Infraestrutura, nuvem e data center
+ti;Servidores e data center;forte;servidores rack;Infraestrutura, nuvem e data center
+ti;Servidores e data center;forte;servidores blade;Infraestrutura, nuvem e data center
+ti;Servidores e data center;forte;hiperconvergente;Infraestrutura, nuvem e data center
+ti;Segurança da informação;busca;seguranca da informacao;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;ciberseguranca;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;seguranca cibernetica;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;firewall;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;siem;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;antivirus;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;endpoint;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;prevencao de vazamento de dados;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;pentest;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;teste de intrusao;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;certificado digital;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;certificados digitais;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;certificacao digital icp;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;icp-brasil;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;icp brasil;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;certificado ssl;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;certificados ssl;Segurança da informação e eletrônica
+ti;Segurança da informação;busca;certificado tls;Segurança da informação e eletrônica
+ti;Segurança da informação;ambiguo (precisa de contexto);soc;Segurança da informação e eletrônica
+ti;Segurança da informação;contexto;seguranca;Segurança da informação e eletrônica
+ti;Segurança da informação;contexto;ciber;Segurança da informação e eletrônica
+ti;Segurança da informação;contexto;monitoramento;Segurança da informação e eletrônica
+ti;Segurança da informação;contexto;centro de operacoes;Segurança da informação e eletrônica
+ti;Segurança da informação;contexto;incidente;Segurança da informação e eletrônica
+ti;Suporte técnico de TI;busca;suporte tecnico de ti;Suporte, consultoria e impressão
+ti;Suporte técnico de TI;busca;service desk;Suporte, consultoria e impressão
+ti;Suporte técnico de TI;busca;central de servicos;Suporte, consultoria e impressão
+ti;Suporte técnico de TI;busca;suporte a usuarios;Suporte, consultoria e impressão
+ti;Suporte técnico de TI;busca;help desk;Suporte, consultoria e impressão
+ti;Suporte técnico de TI;busca;atendimento ao usuario de tic;Suporte, consultoria e impressão
+ti;Integração de sistemas;busca;integracao de sistemas;Software e sistemas
+ti;Integração de sistemas;busca;integracao sistemica;Software e sistemas
+ti;Integração de sistemas;busca;barramento de servicos;Software e sistemas
+ti;Integração de sistemas;busca;interoperabilidade;Software e sistemas
+ti;Integração de sistemas;busca;middleware;Software e sistemas
+ti;Integração de sistemas;excluir;instituicao financeira;Software e sistemas
+ti;Integração de sistemas;excluir;instituicoes financeiras;Software e sistemas
+ti;Integração de sistemas;excluir;cobranca bancaria;Software e sistemas
+ti;Integração de sistemas;excluir;consignad;Software e sistemas
+ti;Integração de sistemas;excluir;torniquete;Software e sistemas
+ti;Integração de sistemas;ambiguo (precisa de contexto);api;Software e sistemas
+ti;Integração de sistemas;ambiguo (precisa de contexto);apis;Software e sistemas
+ti;Integração de sistemas;contexto;software;Software e sistemas
+ti;Integração de sistemas;contexto;sistema informatizado;Software e sistemas
+ti;Integração de sistemas;contexto;sistemas informatizados;Software e sistemas
+ti;Integração de sistemas;contexto;tecnologia da informacao;Software e sistemas
+ti;Integração de sistemas;contexto;ti;Software e sistemas
+ti;Integração de sistemas;contexto;tic;Software e sistemas
+ti;Integração de sistemas;contexto;aplicacao web;Software e sistemas
+ti;Integração de sistemas;contexto;aplicacoes web;Software e sistemas
+ti;Integração de sistemas;contexto;aplicacoes de ti;Software e sistemas
+ti;Integração de sistemas;contexto;aplicativo;Software e sistemas
+ti;Integração de sistemas;contexto;web;Software e sistemas
+ti;Integração de sistemas;contexto;erp;Software e sistemas
+ti;Integração de sistemas;contexto;banco de dados;Software e sistemas
+ti;Integração de sistemas;contexto;codigo fonte;Software e sistemas
+ti;Integração de sistemas;contexto;plataforma digital;Software e sistemas
+ti;Integração de sistemas;contexto;sistema de gestao;Software e sistemas
+ti;Integração de sistemas;contexto;sistemas de gestao;Software e sistemas
+ti;Integração de sistemas;contexto;solucao tecnologica;Software e sistemas
+ti;Infraestrutura de TI e TIC;busca;infraestrutura de ti;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;infraestrutura de tic;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;infraestrutura de tecnologia;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;cabeamento estruturado;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;rede definida por software;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;sdn;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;switches;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;wi-fi corporativ;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;rede wi-fi;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;wi-fi gerenciad;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;rede sem fio;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;polan;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;busca;rede optica passiva;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;execucao da obra;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;execucao de obra;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;execucao das obras;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;obra de;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;obras de;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;construcao de;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;reforma de;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;quadra poliesportiva;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;plotter;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;cortinas;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;climatizacao;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;ar condicionado;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;excluir;pulpito;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;ambiguo (precisa de contexto);wi-fi;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;ambiguo (precisa de contexto);rede de dados;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;software;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;sistema informatizado;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;sistemas informatizados;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;tecnologia da informacao;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;ti;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;tic;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;aplicacao web;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;aplicacoes web;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;aplicacoes de ti;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;aplicativo;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;web;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;erp;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;banco de dados;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;codigo fonte;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;plataforma digital;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;sistema de gestao;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;sistemas de gestao;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;solucao tecnologica;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;internet;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;rede logica;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;conectividade;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;switch;Infraestrutura, nuvem e data center
+ti;Infraestrutura de TI e TIC;contexto;access point;Infraestrutura, nuvem e data center
+ti;Sistemas de gestão e licenças de software;busca;sistema de gestao escolar;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistemas de gestao escolar;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;gestao escolar informatizada;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema integrado de gestao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistemas integrados de gestao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;erp;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema de gestao hospitalar;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;gestao hospitalar informatizada;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;prontuario eletronico;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;nfs-e;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;nfse;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema de folha de pagamento;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema de arrecadacao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema tributario;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema de protocolo;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema de processo eletronico;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;solucao de processo eletronico;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema de gestao patrimonial;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema de gestao de pessoas;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema de gestao de frota;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema de gestao de saude;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;software de gestao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;softwares de gestao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;solucao sistemica;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licenciamento de software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licenciamento de sistema;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licenca de uso de software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licencas de uso de software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema de gestao de documentos;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;plataforma integrada de gestao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;solucao integrada de gestao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;gestao publica municipal;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema de gestao publica;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistemas de gestao publica;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;sistema integrado de gestao publica;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licenca de software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licencas de software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;subscricao de software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;subscricoes de software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licenca temporaria de software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licencas de direito de uso;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licenca de direito de uso;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licenca perpetua;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licencas perpetuas;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licencas do software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licenca do software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licencas de uso dos softwares;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;licencas de uso do software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;direitos sobre programas de computador;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;software assurance;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;suite de escritorio;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;solucao tecnologica integrada;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;plataforma web integrada;Software e sistemas
+ti;Sistemas de gestão e licenças de software;busca;plataforma web para gerenciamento;Software e sistemas
+ti;Sistemas de gestão e licenças de software;excluir;sistema de gestao ambiental;Software e sistemas
+ti;Sistemas de gestão e licenças de software;excluir;gestao da qualidade;Software e sistemas
+ti;Sistemas de gestão e licenças de software;excluir;sistema de gestao de abastecimento;Software e sistemas
+ti;Sistemas de gestão e licenças de software;excluir;cartao magnetico;Software e sistemas
+ti;Sistemas de gestão e licenças de software;excluir;cartao fisico;Software e sistemas
+ti;Sistemas de gestão e licenças de software;excluir;alienacao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;excluir;leilao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;excluir;venda de imovel;Software e sistemas
+ti;Sistemas de gestão e licenças de software;excluir;bens imoveis;Software e sistemas
+ti;Sistemas de gestão e licenças de software;ambiguo (precisa de contexto);sistema de gestao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;ambiguo (precisa de contexto);sistemas de gestao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;ambiguo (precisa de contexto);plataforma de gestao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;ambiguo (precisa de contexto);sistema web;Software e sistemas
+ti;Sistemas de gestão e licenças de software;ambiguo (precisa de contexto);sistema online;Software e sistemas
+ti;Sistemas de gestão e licenças de software;ambiguo (precisa de contexto);gestao online;Software e sistemas
+ti;Sistemas de gestão e licenças de software;ambiguo (precisa de contexto);nota fiscal eletronica;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;software;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;sistema informatizado;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;sistemas informatizados;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;tecnologia da informacao;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;ti;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;tic;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;aplicacao web;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;aplicacoes web;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;aplicacoes de ti;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;aplicativo;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;web;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;erp;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;banco de dados;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;codigo fonte;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;plataforma digital;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;solucao tecnologica;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;app;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;licenca de uso;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;licenciamento;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;informatizad;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;em nuvem;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;plataforma web;Software e sistemas
+ti;Sistemas de gestão e licenças de software;contexto;saas;Software e sistemas
+ti;Cidades inteligentes e mobilidade;busca;cidade inteligente;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;cidades inteligentes;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;smart city;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;monitoramento urbano inteligente;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;gestao da mobilidade;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;mobilidade inteligente;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;semaforos inteligentes;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;semaforizacao inteligente;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;centro de controle operacional;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;centro integrado de operacoes;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;centro de operacoes integradas;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;estacionamento rotativo digital;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;estacionamento rotativo eletronico;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;zona azul digital;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;telegestao;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;iluminacao inteligente;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;leitura automatica de placas;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;cercamento eletronico;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;fiscalizacao eletronica de transito;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;busca;bilhetagem eletronica;Cidades inteligentes, IoT e geotecnologia
+ti;Cidades inteligentes e mobilidade;excluir;iluminacao publica convencional;Cidades inteligentes, IoT e geotecnologia
+ti;Telecomunicações e conectividade;busca;link dedicado;Telecom e internet
+ti;Telecomunicações e conectividade;busca;links dedicados;Telecom e internet
+ti;Telecomunicações e conectividade;busca;link de internet;Telecom e internet
+ti;Telecomunicações e conectividade;busca;links de internet;Telecom e internet
+ti;Telecomunicações e conectividade;busca;acesso a internet;Telecom e internet
+ti;Telecomunicações e conectividade;busca;internet banda larga;Telecom e internet
+ti;Telecomunicações e conectividade;busca;banda larga;Telecom e internet
+ti;Telecomunicações e conectividade;busca;rede mundial de computadores;Telecom e internet
+ti;Telecomunicações e conectividade;busca;ip fixo;Telecom e internet
+ti;Telecomunicações e conectividade;busca;ips fixos;Telecom e internet
+ti;Telecomunicações e conectividade;busca;fibra optica;Telecom e internet
+ti;Telecomunicações e conectividade;busca;telefonia fixa;Telecom e internet
+ti;Telecomunicações e conectividade;busca;telefonia movel;Telecom e internet
+ti;Telecomunicações e conectividade;busca;telefonia ip;Telecom e internet
+ti;Telecomunicações e conectividade;busca;telefonia em nuvem;Telecom e internet
+ti;Telecomunicações e conectividade;busca;pabx;Telecom e internet
+ti;Telecomunicações e conectividade;busca;voip;Telecom e internet
+ti;Telecomunicações e conectividade;busca;central telefonica;Telecom e internet
+ti;Telecomunicações e conectividade;busca;comunicacao via satelite;Telecom e internet
+ti;Telecomunicações e conectividade;busca;comunicacoes por satelite;Telecom e internet
+ti;Telecomunicações e conectividade;busca;comunicacao por satelite;Telecom e internet
+ti;Telecomunicações e conectividade;busca;internet via satelite;Telecom e internet
+ti;Telecomunicações e conectividade;busca;radiocomunicacao;Telecom e internet
+ti;Telecomunicações e conectividade;busca;radios digitais;Telecom e internet
+ti;Telecomunicações e conectividade;busca;rede mpls;Telecom e internet
+ti;Telecomunicações e conectividade;busca;sd-wan;Telecom e internet
+ti;Telecomunicações e conectividade;busca;sdwan;Telecom e internet
+ti;Telecomunicações e conectividade;busca;wi-fi publico;Telecom e internet
+ti;Telecomunicações e conectividade;busca;wifi publico;Telecom e internet
+ti;Telecomunicações e conectividade;busca;telecomunicacoes;Telecom e internet
+ti;Telecomunicações e conectividade;busca;servico movel pessoal;Telecom e internet
+ti;Telecomunicações e conectividade;busca;chips de dados;Telecom e internet
+ti;Telecomunicações e conectividade;busca;plano de dados;Telecom e internet
+ti;Telecomunicações e conectividade;busca;servico de conectividade;Telecom e internet
+ti;Telecomunicações e conectividade;busca;servicos de conectividade;Telecom e internet
+ti;Telecomunicações e conectividade;busca;solucao de conectividade;Telecom e internet
+ti;Telecomunicações e conectividade;busca;conectividade de dados;Telecom e internet
+ti;Telecomunicações e conectividade;busca;conectividade a internet;Telecom e internet
+ti;Telecomunicações e conectividade;busca;conectividade com a internet;Telecom e internet
+ti;Telecomunicações e conectividade;excluir;fibra de vidro;Telecom e internet
+ti;Telecomunicações e conectividade;excluir;emissoras de radio;Telecom e internet
+ti;Telecomunicações e conectividade;excluir;radiodifusao comercial;Telecom e internet
+ti;Telecomunicações e conectividade;excluir;veiculacao;Telecom e internet
+ti;Telecomunicações e conectividade;excluir;producao de evento;Telecom e internet
+ti;Telecomunicações e conectividade;excluir;producao de eventos;Telecom e internet
+ti;Telecomunicações e conectividade;ambiguo (precisa de contexto);conectividade;Telecom e internet
+ti;Telecomunicações e conectividade;contexto;internet;Telecom e internet
+ti;Telecomunicações e conectividade;contexto;link;Telecom e internet
+ti;Telecomunicações e conectividade;contexto;links;Telecom e internet
+ti;Telecomunicações e conectividade;contexto;anatel;Telecom e internet
+ti;Telecomunicações e conectividade;contexto;operadora;Telecom e internet
+ti;Telecomunicações e conectividade;contexto;banda larga;Telecom e internet
+ti;Telecomunicações e conectividade;contexto;mbps;Telecom e internet
+ti;Telecomunicações e conectividade;contexto;provedor;Telecom e internet
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;cftv;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;circuito fechado de televisao;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;circuito fechado de tv;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;videomonitoramento;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;video monitoramento;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;monitoramento por cameras;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;monitoria por cameras;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;cameras de seguranca;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;cameras de videomonitoramento;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;controle de acesso eletronico;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;catraca eletronica;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;catracas eletronicas;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;reconhecimento facial;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;alarme monitorado;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;monitoramento de alarmes;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;seguranca eletronica;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;busca;monitoramento eletronico;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;excluir;camera fotografica;Segurança da informação e eletrônica
+ti;CFTV, videomonitoramento e segurança eletrônica;excluir;cameras fotograficas;Segurança da informação e eletrônica
+ti;Rastreamento, telemetria e IoT;busca;telemetria;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;videotelemetria;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;rastreamento veicular;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;rastreamento de veiculos;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;rastreador;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;rastreadores;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;rastreamento por gps;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;rastreamento via satelite;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;sistema de rastreamento;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;internet das coisas;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;iot;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;rfid;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;monitoramento remoto;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;busca;sensores inteligentes;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;rastreamento do cancer;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;rastreamento de cancer;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;rastreamento neonatal;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;rastreamento auditivo;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;rastreamento oncologico;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;locacao de veiculo;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;locacao de veiculos;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;veiculos zero quilometro;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;locacao de caminh;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;locacao de onibus;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;veiculos automotores;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;sem condutor;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;sem motorista;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;fotovoltaic;Cidades inteligentes, IoT e geotecnologia
+ti;Rastreamento, telemetria e IoT;excluir;minigeracao;Cidades inteligentes, IoT e geotecnologia
+ti;Tecnologia educacional;busca;robotica educacional;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;robotica programavel;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;kits de robotica;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;kit de robotica;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;kits educacionais de robotica;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;laboratorio de robotica;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;lousa digital;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;lousas digitais;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;lousa interativa;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;lousas interativas;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;painel interativo;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;paineis interativos;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;realidade virtual;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;realidade aumentada;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;laboratorio maker;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;espaco maker;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;impressora 3d;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;impressoras 3d;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;plataforma educacional;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;plataformas educacionais;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;plataforma de ensino;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;educacao digital;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;tecnologia educacional;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;tecnologias educacionais;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;conteudo educacional digital;Educação, EAD e pesquisa
+ti;Tecnologia educacional;busca;conteudos digitais;Educação, EAD e pesquisa
+ti;Tecnologia educacional;excluir;lousa de vidro;Educação, EAD e pesquisa
+ti;Tecnologia educacional;excluir;lousas de vidro;Educação, EAD e pesquisa
+ti;Tecnologia educacional;excluir;quadro branco;Educação, EAD e pesquisa
+ti;Audiovisual, videoconferência e transmissão;busca;videoconferencia;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;busca;transmissao ao vivo;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;busca;video wall;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;busca;videowall;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;busca;streaming;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;busca;solucao audiovisual;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;busca;sistema audiovisual;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;busca;telao de led;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;busca;transmissao audiovisual;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;busca;transmissao das sessoes;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;excluir;sonorizacao para eventos;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;excluir;som e iluminacao;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;excluir;som iluminacao;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;excluir;palco;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;excluir;palcos;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;excluir;tendas;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;excluir;sonorizacao;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;excluir;iluminacao cenica;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;excluir;shows;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;excluir;festividades;Audiovisual e videoconferência
+ti;Audiovisual, videoconferência e transmissão;excluir;estruturas para eventos;Audiovisual e videoconferência
+ti;Geoprocessamento, drones e mapeamento;busca;geoprocessamento;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;georreferenciamento;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;georreferenciado;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;georreferenciada;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;drone;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;drones;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;vant;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;aerolevantamento;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;aerofotogrametria;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;aerofotogrametrico;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;levantamento aerofotogrametrico;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;ortofoto;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;ortofotos;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;ortoimagem;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;imagens de satelite;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;imagem de satelite;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;sistema de informacoes geograficas;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;sistema de informacao geografica;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;informacoes geograficas;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;webgis;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;mapeamento digital;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;cadastro territorial multifinalitario;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;cadastro multifinalitario;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;perfilamento a laser;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;busca;lidar;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;excluir;georreferenciamento de imoveis rurais para regularizacao;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;excluir;caminhonete;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;excluir;zero quilometro;Cidades inteligentes, IoT e geotecnologia
+ti;Geoprocessamento, drones e mapeamento;excluir;veiculo utilitario;Cidades inteligentes, IoT e geotecnologia
+ti;Consultoria, governança de TI e LGPD;busca;governanca de ti;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;governanca de tic;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;governanca de tecnologia;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;consultoria em ti;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;consultoria de ti;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;consultoria em tecnologia da informacao;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;consultoria em tic;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;plano diretor de tecnologia;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;plano diretor de ti;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;pdti;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;pdtic;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;lei geral de protecao de dados;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;lgpd;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;protecao de dados pessoais;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;encarregado de dados;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;encarregado pelo tratamento;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;dpo;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;gestao de servicos de ti;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;itil;Suporte, consultoria e impressão
+ti;Consultoria, governança de TI e LGPD;busca;cobit;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;outsourcing de impressao;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;impressao corporativa;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;locacao de impressoras;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;locacao de multifuncionais;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;locacao de equipamentos multifuncionais;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;comodato de impressoras;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;impressoras em regime de comodato;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;franquia de impressao;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;servicos de impressao e copia;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;servico de impressao e copia;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;servicos de reprografia;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;solucao de impressao;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;gestao de impressao;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;busca;bilhetagem de impressao;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;excluir;impressao grafica;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;excluir;servicos graficos;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;excluir;material grafico;Suporte, consultoria e impressão
+ti;Outsourcing de impressão;excluir;impressao 3d;Suporte, consultoria e impressão
+ti;Equipamentos de informática;busca;computador;Equipamentos de informática
+ti;Equipamentos de informática;busca;computadores;Equipamentos de informática
+ti;Equipamentos de informática;busca;microcomputador;Equipamentos de informática
+ti;Equipamentos de informática;busca;microcomputadores;Equipamentos de informática
+ti;Equipamentos de informática;busca;notebook;Equipamentos de informática
+ti;Equipamentos de informática;busca;notebooks;Equipamentos de informática
+ti;Equipamentos de informática;busca;desktop;Equipamentos de informática
+ti;Equipamentos de informática;busca;desktops;Equipamentos de informática
+ti;Equipamentos de informática;busca;all in one;Equipamentos de informática
+ti;Equipamentos de informática;busca;all-in-one;Equipamentos de informática
+ti;Equipamentos de informática;busca;tablet;Equipamentos de informática
+ti;Equipamentos de informática;busca;tablets;Equipamentos de informática
+ti;Equipamentos de informática;busca;chromebook;Equipamentos de informática
+ti;Equipamentos de informática;busca;chromebooks;Equipamentos de informática
+ti;Equipamentos de informática;busca;monitor de video;Equipamentos de informática
+ti;Equipamentos de informática;busca;monitores de video;Equipamentos de informática
+ti;Equipamentos de informática;busca;equipamentos de informatica;Equipamentos de informática
+ti;Equipamentos de informática;busca;equipamentos de tecnologia da informacao;Equipamentos de informática
+ti;Equipamentos de informática;busca;materiais de informatica;Equipamentos de informática
+ti;Equipamentos de informática;busca;suprimentos de informatica;Equipamentos de informática
+ti;Equipamentos de informática;busca;perifericos de informatica;Equipamentos de informática
+ti;Equipamentos de informática;busca;material de informatica;Equipamentos de informática
+ti;Equipamentos de informática;busca;acessorios de informatica;Equipamentos de informática
+ti;Equipamentos de informática;busca;componentes e perifericos;Equipamentos de informática
+ti;Equipamentos de informática;busca;perifericos de tic;Equipamentos de informática
+ti;Equipamentos de informática;busca;equipamentos de tic;Equipamentos de informática
+ti;Equipamentos de informática;busca;materiais de tic;Equipamentos de informática
+ti;Equipamentos de informática;busca;material de tecnologia da informacao;Equipamentos de informática
+ti;Equipamentos de informática;busca;materiais de tecnologia da informacao;Equipamentos de informática
+ti;Equipamentos de informática;busca;material de consumo de tecnologia;Equipamentos de informática
+ti;Equipamentos de informática;busca;insumos de informatica;Equipamentos de informática
+ti;Equipamentos de informática;busca;permanente de informatica;Equipamentos de informática
+ti;Equipamentos de informática;busca;laboratorio de informatica;Equipamentos de informática
+ti;Equipamentos de informática;busca;equipamentos e acessorios de informatica;Equipamentos de informática
+ti;Equipamentos de informática;busca;nobreak;Equipamentos de informática
+ti;Equipamentos de informática;busca;nobreaks;Equipamentos de informática
+ti;Equipamentos de informática;busca;switch;Equipamentos de informática
+ti;Equipamentos de informática;busca;switches;Equipamentos de informática
+ti;Equipamentos de informática;busca;roteador;Equipamentos de informática
+ti;Equipamentos de informática;busca;roteadores;Equipamentos de informática
+ti;Equipamentos de informática;busca;access point;Equipamentos de informática
+ti;Equipamentos de informática;busca;scanner;Equipamentos de informática
+ti;Equipamentos de informática;busca;scanners;Equipamentos de informática
+ti;Equipamentos de informática;busca;impressora;Equipamentos de informática
+ti;Equipamentos de informática;busca;impressoras;Equipamentos de informática
+ti;Equipamentos de informática;excluir;tomografia computadorizada;Equipamentos de informática
+ti;Equipamentos de informática;excluir;tomografo computadorizado;Equipamentos de informática
+ti;Equipamentos de informática;excluir;impressora 3d;Equipamentos de informática
+ti;Equipamentos de informática;excluir;impressoras 3d;Equipamentos de informática
+ti;Equipamentos de informática;excluir;rede mundial de computadores;Equipamentos de informática
+ti;Equipamentos de informática;excluir;raio x;Equipamentos de informática
+ti;Equipamentos de informática;excluir;raios x;Equipamentos de informática
+ti;Equipamentos de informática;excluir;backscatter;Equipamentos de informática
+ti;Equipamentos de informática;excluir;inspecao de bagagem;Equipamentos de informática
+ti;Equipamentos de informática;excluir;ar-condicionado;Equipamentos de informática
+ti;Equipamentos de informática;excluir;ar condicionado;Equipamentos de informática
+ti;Equipamentos de informática;excluir;climatizacao;Equipamentos de informática
+ti;Equipamentos de informática;excluir;comodato;Equipamentos de informática
+ti;Equipamentos de informática;excluir;outsourcing de impressao;Equipamentos de informática
+ti;Equipamentos de informática;excluir;servicos de impressao;Equipamentos de informática
+ti;Equipamentos de informática;excluir;servico de impressao;Equipamentos de informática
+ti;Equipamentos de informática;ambiguo (precisa de contexto);informatica;Equipamentos de informática
+ti;Equipamentos de informática;contexto;aquisicao;Equipamentos de informática
+ti;Equipamentos de informática;contexto;fornecimento de equipamento;Equipamentos de informática
+ti;Equipamentos de informática;contexto;fornecimento de materia;Equipamentos de informática
+ti;Equipamentos de informática;contexto;equipamento;Equipamentos de informática
+ti;Equipamentos de informática;contexto;material;Equipamentos de informática
+ti;Equipamentos de informática;contexto;materiais;Equipamentos de informática
+ti;Equipamentos de informática;contexto;componentes;Equipamentos de informática
+ti;Equipamentos de informática;contexto;acessorios;Equipamentos de informática
+ti;Equipamentos de informática;contexto;perifericos;Equipamentos de informática
+ti;Equipamentos de informática;forte;equipamentos de informatica;Equipamentos de informática
+ti;Equipamentos de informática;forte;notebooks;Equipamentos de informática
+ti;Equipamentos de informática;forte;microcomputadores;Equipamentos de informática
+ti;Equipamentos de informática;forte;materiais de informatica;Equipamentos de informática
+ti;Equipamentos de informática;forte;perifericos de informatica;Equipamentos de informática
+educacao_pesquisa;EAD e educação a distância;busca;educacao a distancia;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;ensino a distancia;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;ensino remoto;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;ead;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;ead/;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;/ead;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;ambiente virtual de aprendizagem;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;ava;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;lms;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;learning management;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;moodle;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;e-learning;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;elearning;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;cursos online;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;cursos on-line;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;curso online;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;curso on-line;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;cursos a distancia;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;curso a distancia;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;capacitacao a distancia;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;capacitacao online;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;capacitacao on-line;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;treinamento a distancia;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;treinamento online;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;treinamento on-line;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;plataforma de ensino;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;plataforma educacional;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;plataforma de aprendizagem;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;plataforma de educacao;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;plataforma de cursos;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;plataforma adaptativa;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;conteudos educacionais digitais;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;conteudo educacional digital;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;objetos de aprendizagem;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;objetos digitais de aprendizagem;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;videoaulas;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;video aulas;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;aulas gravadas;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;aulas remotas;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;educacao digital;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;universidade corporativa;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;escola virtual;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;trilhas de aprendizagem;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;trilhas formativas;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;microlearning;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;gamificacao educacional;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;tecnologia educacional;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;solucao educacional digital;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;recursos educacionais digitais;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;livro digital interativo;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;busca;laboratorio virtual;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;excluir;aquisicao de material;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;excluir;aquisicao de acervo;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;excluir;ensino a distancia de motoristas;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;excluir;transporte escolar;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;excluir;uniforme;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;excluir;merenda;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;excluir;generos alimenticios;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;excluir;kit escolar;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;excluir;material escolar;Educação, EAD e pesquisa
+educacao_pesquisa;EAD e educação a distância;excluir;mobiliario;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de opiniao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de satisfacao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisas de satisfacao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa qualitativa;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa quantitativa;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa quali;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa domiciliar;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de campo;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisas de campo;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa socioeconomica;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;diagnostico socioeconomico;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;levantamento socioeconomico;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa amostral;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa censitaria;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa estatistica;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;levantamento estatistico;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;realizacao de pesquisa;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de clima organizacional;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de imagem;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de percepcao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de avaliacao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de origem e destino;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa origem-destino;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de mobilidade;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa nacional;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa de audiencia;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;pesquisa eleitoral;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;survey;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;grupos focais;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);busca;grupo focal;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;pesquisa de precos;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;pesquisa de preco;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;pesquisa mercadologica;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;levantamento de precos;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;aquisicao de materia;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;aquisicao de equipamento;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;aquisicao do equipamento;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;aquisicao de insumos;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;materiais de consumo;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;material de consumo;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;materiais permanentes;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;generos alimenticios;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;mobiliario;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;permissao de uso;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;permissao administrativa de uso;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;obras e servicos de engenharia;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;reagentes;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;aquisicao de livros;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;fornecimento de livros;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;materiais laboratoriais;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;climatizacao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;ar condicionado;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;cesta de precos;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa (opinião, satisfação, campo);excluir;banco de precos;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pesquisa e desenvolvimento;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pesquisa, desenvolvimento e inovacao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;p d;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pd i;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;p d i;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pesquisa aplicada;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pesquisa tecnologica;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;pesquisa e inovacao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;encomenda tecnologica;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;solucao inovadora;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;solucoes inovadoras;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;marco legal das startups;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;lei complementar 182;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;lei complementar n 182;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;contrato publico para solucao inovadora;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;cpsi;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;bolsas de pesquisa;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;laboratorio de inovacao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;hub de inovacao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;sandbox regulatorio;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);busca;programa de inovacao aberta;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;pesquisa de precos;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;pesquisa de preco;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;pesquisa mercadologica;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;levantamento de precos;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;aquisicao de materia;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;aquisicao de equipamento;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;aquisicao do equipamento;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;aquisicao de insumos;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;materiais de consumo;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;material de consumo;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;materiais permanentes;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;generos alimenticios;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;mobiliario;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;permissao de uso;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;permissao administrativa de uso;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;obras e servicos de engenharia;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;reagentes;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;aquisicao de livros;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;fornecimento de livros;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;materiais laboratoriais;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;climatizacao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);excluir;ar condicionado;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);ambiguo (precisa de contexto);pesquisa cientifica;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);ambiguo (precisa de contexto);inovacao tecnologica;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);ambiguo (precisa de contexto);desenvolvimento tecnologico;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);ambiguo (precisa de contexto);transferencia de tecnologia;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);ambiguo (precisa de contexto);projetos de pesquisa;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);ambiguo (precisa de contexto);projeto de pesquisa;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);contexto;contratacao de servicos;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);contexto;prestacao de servicos;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);contexto;desenvolvimento de;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);contexto;execucao de projeto;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);contexto;consultoria;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);contexto;estruturacao;Educação, EAD e pesquisa
+educacao_pesquisa;Pesquisa, desenvolvimento e inovação (P&D);contexto;parceria;Educação, EAD e pesquisa
+engenharia;Projetos de engenharia;busca;projeto basico;
+engenharia;Projetos de engenharia;busca;projeto executivo;
+engenharia;Projetos de engenharia;busca;projetos basicos e executivos;
+engenharia;Projetos de engenharia;busca;elaboracao de projetos;
+engenharia;Projetos de engenharia;busca;projetos de engenharia;
+engenharia;Projetos de engenharia;busca;projeto arquitetonico;
+engenharia;BIM;busca;bim;
+engenharia;BIM;busca;modelagem da informacao da construcao;
+engenharia;BIM;busca;geobim;
+engenharia;Fiscalização e gerenciamento de obras;busca;fiscalizacao de obras;
+engenharia;Fiscalização e gerenciamento de obras;busca;supervisao de obras;
+engenharia;Fiscalização e gerenciamento de obras;busca;gerenciamento de obras;
+engenharia;Fiscalização e gerenciamento de obras;busca;verificacao independente;
+engenharia;Fiscalização e gerenciamento de obras;busca;apoio a fiscalizacao;
+engenharia;Orçamentos e planejamento de obras;busca;orcamento de obras;
+engenharia;Orçamentos e planejamento de obras;busca;planilha orcamentaria;
+engenharia;Orçamentos e planejamento de obras;busca;composicao de custos;
+engenharia;Orçamentos e planejamento de obras;busca;cronograma fisico-financeiro;
+engenharia;Orçamentos e planejamento de obras;busca;planejamento de obras;
+engenharia;Infraestrutura pública;busca;pavimentacao;
+engenharia;Infraestrutura pública;busca;drenagem;
+engenharia;Infraestrutura pública;busca;saneamento basico;
+engenharia;Infraestrutura pública;busca;recapeamento;
+engenharia;Infraestrutura pública;busca;obras de infraestrutura;
+engenharia;Infraestrutura pública;busca;construcao de;
+engenharia;Infraestrutura pública;busca;reforma de;
+engenharia;Infraestrutura pública;busca;ampliacao de;
+engenharia;Infraestrutura pública;excluir;mao de obra;
+engenharia;Infraestrutura pública;excluir;sistema de gestao;
+engenharia;Sistemas de gestão de obras;busca;sistema de gestao de obras;
+engenharia;Sistemas de gestão de obras;busca;gestao de obras publicas;
+engenharia;Sistemas de gestão de obras;busca;software de obras;
+engenharia;Sistemas de gestão de obras;busca;plataforma de gestao de obras;

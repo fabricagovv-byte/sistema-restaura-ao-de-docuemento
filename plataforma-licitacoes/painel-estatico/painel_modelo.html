@@ -65,6 +65,14 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .p-ok { background: var(--ok-bg); color: var(--ok); } .p-warn { background: var(--warn-bg); color: var(--warn); }
 .p-bad { background: var(--bad-bg); color: var(--bad); } .p-off { background: var(--off-bg); color: var(--off); }
 .p-acc { background: var(--accent-soft); color: var(--accent); }
+#cats { display: grid; gap: 10px; }
+.gcat { display: grid; gap: 6px; border-top: 1px solid var(--line); padding-top: 10px; }
+.gcat-t { margin: 0; font-size: .78rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.grow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.grow + .grow { padding-top: 2px; }
+.chips button.gchip { font-weight: 800; border-width: 2px; }
+.chips button.sub { font-weight: 500; font-size: .8rem; }
+.p-acc { background: var(--accent-soft); color: var(--accent); }
 .acoes { display: flex; flex-wrap: wrap; gap: 6px; }
 .acoes a { font: 700 .8rem var(--f-body); color: var(--accent); border: 1px solid var(--accent); border-radius: 6px; padding: 4px 10px; text-decoration: none; }
 .mais { justify-self: center; font: 700 .9rem var(--f-body); color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 6px; padding: 8px 16px; cursor: pointer; }
@@ -313,7 +321,8 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
         <label class="marca"><input type="checkbox" id="adv-docs"> Só com documentos (edital) listados</label>
         <button type="button" class="mais" id="adv-limpar">Limpar busca avançada</button></div>
     </details>
-    <div class="chips" id="cats" role="group" aria-label="Categoria"></div>
+    <div id="cats" role="group" aria-label="Filtros e categorias"></div>
+    <label class="marca"><input type="checkbox" id="cat-cit"> Ao escolher uma categoria, mostrar também os editais em que ela não é a principal (só citada)</label>
     <p class="dica">Várias palavras = todas precisam aparecer · <b>"frase exata"</b> · <b>-palavra</b> exclui · <b>ust|pf</b> = uma ou outra · UST, PF, GED, EAD, SaaS e IA já buscam os sinônimos.</p>
     <p class="conta" id="conta" aria-live="polite"></p>
     <div class="acoes"><button type="button" class="mais" id="exp-tabelas" hidden>Baixar tabelas de preço destas licitações (CSV)</button><button type="button" class="mais" id="exp-itens-tipo" hidden>Baixar itens do tipo (CSV)</button><a class="mais" href="#calc-sec" style="text-decoration:none">Calculadora</a><a class="mais" href="#config-sec" style="text-decoration:none">Minha sede e meus pisos</a></div>
@@ -423,6 +432,23 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
 <script>
 const D = __DADOS__;
 const CATS = __CATS__;
+const GRUPOS = __GRUPOS__;  // [código, nome, [categorias]] na ordem de exibição
+const GRUPO_DE = Object.fromEntries(GRUPOS.flatMap(([g, , cs]) => cs.map((c) => [c, g])));
+const NAO_ASSUNTO = ["tecnologia", "ti_mensal", "remun_fixo_mensal", "remun_ust", "remun_pf"];
+// categoria principal: vem pronta da exportação; nas licitações gerais (sem itens) é a primeira de assunto
+const principal = (x) => x.cp || x.c.find((c) => GRUPO_DE[c]) || null;
+const grupoDe = (x) => x.g || GRUPO_DE[principal(x)] || null;
+function naCategoria(x, cat) {
+  if (cat.startsWith("g:")) return grupoDe(x) === cat.slice(2);
+  if (principal(x) === cat) return true;
+  return (PAGTO.includes(cat) || !x.cp || document.getElementById("cat-cit").checked) && x.c.includes(cat);
+}
+function pillsCat(x) {
+  const p = principal(x);
+  const outras = x.c.filter((c) => c !== p && c !== "tecnologia");
+  return (p ? `<span class="pill p-acc" title="Categoria principal">${esc(CATS[p] || p)}</span>` : "") +
+    outras.map((c) => `<span class="pill p-off">${esc(CATS[c] || c)}</span>`).join("");
+}
 const PRIO = __PRIO__;
 const SAUDE = { funcionando: ["funcionando", "p-ok"], com_falha: ["com falha", "p-bad"], nunca_sincronizado: ["aguardando coleta", "p-warn"],
   via_pncp: ["coberto via PNCP", "p-acc"], requer_credencial: ["requer credencial", "p-warn"], nao_integrado: ["não integrado", "p-off"] };
@@ -501,11 +527,20 @@ function montarChips() {
   const nGv = itens.filter((x) => (x.gv || []).length).length;
   const chips = [["foco", "Seu foco", fmt(nFoco)], ["seg", "Tecnologia, documentos, EAD e pesquisa", fmt(nSeg)], ["gv", "Grande volume (UST, PF, páginas, dados, mensal)", fmt(nGv)], ["meucrm", "No meu CRM", fmt(Object.keys(store.data).filter((k) => k[0] === "e").length)], ["marc", "Com meus marcadores", fmt(itens.filter((x) => marcadoresEdital(x).length).length)], ["premiadas", "Premiadas", fmt(itens.filter((x) => notaOportunidade(x).nota >= notaMin()).length)],
     ["todas", "Todas as licitações do Brasil", todasProntas ? fmt(itens.length) : "carregando…"]]
-    .concat([...new Set([...PAGTO, ...PRIO.filter((c) => CATS[c]), ...Object.keys(CATS)])].filter((c) => contagem[c]).map((c) => [c, CATS[c], fmt(contagem[c])]));
-  cEl.innerHTML = chips.map(([c, n, k]) => `<button type="button" id="cat-${c}" data-c="${c}">${esc(n)} <span style="opacity:.7">${k}</span></button>`).join("");
+    .concat(PAGTO.filter((c) => contagem[c]).map((c) => [c, CATS[c], fmt(contagem[c])]));
+  const porP = {}, porG = {};
+  itens.forEach((x) => { const p = principal(x), g = grupoDe(x); if (p) porP[p] = (porP[p] || 0) + 1; if (g) porG[g] = (porG[g] || 0) + 1; });
+  const btn = ([c, n, k], cls = "") => `<button type="button" id="cat-${c.replace(":", "-")}" data-c="${c}"${cls ? ` class="${cls}"` : ""}>${esc(n)} <span style="opacity:.7">${k}</span></button>`;
+  const linhas = GRUPOS.filter(([g]) => porG[g]).map(([g, nome, cs]) => {
+    const subs = cs.filter((c) => porP[c]);
+    return `<div class="grow">${btn(["g:" + g, nome, fmt(porG[g])], "gchip")}${subs.length > 1 ? subs.map((c) => btn([c, CATS[c] || c, fmt(porP[c])], "sub")).join("") : ""}</div>`;
+  }).join("");
+  cEl.innerHTML = `<div class="chips">${chips.map((c) => btn(c)).join("")}</div>
+    <div class="gcat chips" role="group" aria-label="Categoria principal"><p class="gcat-t">Categoria principal de cada licitação</p>${linhas}</div>`;
   cEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.c === estado.cat)));
 }
 cEl.addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; estado.cat = b.dataset.c; estado.limite = 40; render(); });
+document.getElementById("cat-cit").addEventListener("change", () => { estado.limite = 40; render(); });
 
 const ufsTodas = Object.keys(D.por_uf).sort();
 document.getElementById("uf").innerHTML += ufsTodas.map((u) => `<option>${u}</option>`).join("");
@@ -623,7 +658,7 @@ function previaHtml(x) {
       ${campo("Abertura", x.ab ? esc(dataHora(x.ab)) : "")}${campo("Portal", esc(x.plat || ""))}${campo("Natureza", { servico: "Serviço", material: "Compra de material", misto: "Serviço e material" }[x.ms] || "")}
       ${campo("Registro de preços", x.srp == null ? "" : x.srp ? "Sim" : "Não")}${campo("Aderência", x.a != null ? x.a + " de 100" : "")}</dl>
     ${x.vol && Object.keys(x.vol).length ? `<div class="acoes">${pillsVol(x)}</div>` : ""}
-    <div class="acoes">${x.c.map((c) => `<span class="pill p-off">${esc(CATS[c] || c)}</span>`).join("")}</div>
+    <div class="acoes">${pillsCat(x)}</div>
     ${tipo ? blocoItensTipo(x) : ""}
     ${it.length ? `<div><b>Itens</b>${x.nit > it.length ? ` <span class="conta">(${it.length} de ${fmt(x.nit)})</span>` : ""}<table><tbody>${it.map(([n, d, q, u, vu, vt]) =>
       `<tr><td>${esc(n)} · ${esc((d || "").slice(0, 80))}${marcasHtml(marcasItem(d, u, (x.it.find((i) => i[0] === n) || [])[6]))}</td><td class="num">${q == null ? "" : fmt(q)} ${esc((u || "").trim())}</td><td class="num">${vt ? brl(vt) : vu ? brl(vu) : "sigiloso"}</td></tr>`).join("")}</tbody></table></div>`
@@ -911,7 +946,7 @@ function card(x) {
     ${x.vol && Object.keys(x.vol).length ? `<div class="acoes">${pillsVol(x)}</div>` : ""}
     ${blocoItensTipo(x)}
     ${resumoPisos(x)}
-    <div class="acoes">${x.ms === "material" ? `<span class="pill p-warn">compra de material</span>` : ""}${x.c.map((c) => `<span class="pill p-off">${esc(CATS[c] || c)}</span>`).join("")}</div>
+    <div class="acoes">${x.ms === "material" ? `<span class="pill p-warn">compra de material</span>` : ""}${pillsCat(x)}</div>
     <div class="acoes"><button type="button" class="abrir" data-abrir="${x.id}">Abrir pregão</button><button type="button" class="abrir" data-abrir="${x.id}" data-aba="preco">Precificar</button><button type="button" class="abrir" data-abrir="${x.id}" data-aba="analise">Analisar</button>${botaoBaixar(x)}
       ${x.pncp ? `<a href="${esc(x.pncp)}" target="_blank" rel="noopener">Ver no PNCP</a>` : ""}
       ${x.orig ? `<a href="${esc(x.orig)}" target="_blank" rel="noopener">Portal da disputa</a>` : ""}</div>
@@ -921,7 +956,7 @@ function card(x) {
 function render() {
   cEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.c === estado.cat)));
   ufEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.u === estado.uf)));
-  let r = itens.filter((x) => (estado.cat === "todas" || (estado.cat === "seg" ? x.det : estado.cat === "meucrm" ? !!registro(x.id) : estado.cat === "marc" ? marcadoresEdital(x).length > 0 : estado.cat === "premiadas" ? notaOportunidade(x).nota >= notaMin() : estado.cat === "gv" ? (x.gv || []).length > 0 : estado.cat === "foco" ? x.c.some((c) => PRIO.includes(c)) : x.c.includes(estado.cat)))
+  let r = itens.filter((x) => (estado.cat === "todas" || (estado.cat === "seg" ? x.det : estado.cat === "meucrm" ? !!registro(x.id) : estado.cat === "marc" ? marcadoresEdital(x).length > 0 : estado.cat === "premiadas" ? notaOportunidade(x).nota >= notaMin() : estado.cat === "gv" ? (x.gv || []).length > 0 : estado.cat === "foco" ? x.c.some((c) => PRIO.includes(c)) : naCategoria(x, estado.cat)))
     && (!estado.uf || x.uf === estado.uf) && (!estado.plat || (x.plat || "Não identificado") === estado.plat)
     && (!estado.q || casaBusca(x.busca, estado.pb))
     && tipoOk(x) && (!estado.dmax || (distSede(x) ?? Infinity) <= estado.dmax)
@@ -988,7 +1023,7 @@ function ficha(x) {
       ${campo("Amparo legal", esc(x.amp))}${campo("Registro de preços", x.srp == null ? "" : x.srp ? "Sim" : "Não")}${campo("Situação", esc(x.sit))}
       ${campo("Valor estimado", brl(x.v))}${campo("Publicação", x.pub ? dataHora(x.pub) : "")}${campo("Abertura das propostas", x.ab ? dataHora(x.ab) : "")}
       ${campo("Encerramento das propostas", x.enc ? dataHora(x.enc) : "")}${campo("Portal da disputa", linkPortal)}${campo("Nº de controle PNCP", esc(x.ctl))}
-      ${campo("Unidade compradora", esc(x.un))}${campo("Categorias", x.c.map((c) => esc(CATS[c] || c)).join(", "))}${campo("Natureza", { servico: "Serviço", material: "Compra de material", misto: "Serviço e material" }[x.ms] || "")}${campo("Aderência ao perfil", x.a != null ? x.a + " de 100" : "")}
+      ${campo("Unidade compradora", esc(x.un))}${campo("Categoria principal", esc(CATS[principal(x)] || "") + (grupoDe(x) ? ` <span class="conta">(${esc((GRUPOS.find(([g]) => g === grupoDe(x)) || [])[1] || "")})</span>` : ""))}${campo("Também cita", x.c.filter((c) => c !== principal(x) && c !== "tecnologia").map((c) => esc(CATS[c] || c)).join(", "))}${campo("Natureza", { servico: "Serviço", material: "Compra de material", misto: "Serviço e material" }[x.ms] || "")}${campo("Aderência ao perfil", x.a != null ? x.a + " de 100" : "")}
     </dl></section>
     ${x.inf ? `<section><h2>Informações complementares</h2><p style="white-space:pre-line;margin:0">${esc(x.inf)}</p></section>` : ""}
     <section><h2>Itens${x.nit ? ` (${fmt(x.nit)})` : ""}</h2>${itensHtml}</section>

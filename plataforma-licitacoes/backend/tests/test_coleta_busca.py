@@ -465,3 +465,61 @@ def test_auditoria_de_precisao_13_11():
     assert not any(c["codigo"] == "remun_fixo_mensal" for c in remuneracao("link de internet", [("MÊS", "Link dedicado 500 Mbps", 12, 900)], link))
     soft = classificar("Locação de software de gestão pública")
     assert any(c["codigo"] == "remun_fixo_mensal" for c in remuneracao("locação de software", [("MÊS", "Licença do sistema", 12, 9000)], soft))
+
+
+def test_categoria_principal_e_grupos_14_11():
+    """Cada edital ganha uma categoria principal (onde está o objeto e o dinheiro); casos da auditoria de 14/11."""
+    from licitacoes.taxonomia import GRUPOS, GRUPO_DA_CATEGORIA, PADRAO, categoria_principal, classificar
+
+    def cp(obj, itens=None):
+        return categoria_principal(obj, itens, [c["codigo"] for c in classificar(obj)])
+
+    # toda categoria de assunto tem grupo, e cada uma está em um só grupo
+    assuntos = {c.codigo for c in PADRAO if c.segmento in ("ti", "gestao_documental", "educacao_pesquisa")} - {"tecnologia", "ti_mensal"}
+    assert assuntos <= set(GRUPO_DA_CATEGORIA)
+    assert len([c for _, _, cs in GRUPOS for c in cs]) == len(GRUPO_DA_CATEGORIA)
+    # licença de sistema de gestão com hospedagem em data center/nuvem é software, não servidor nem nuvem
+    assert cp("Fornecimento de licença de uso de sistemas de gestão da assistência social, hospedagem dos sistemas em servidor "
+              "virtual datacenter, implantação e treinamento") == "sistemas_gestao"
+    assert cp("Licenciamento de uso de sistema digital de gestão da assistência social, ambiente 100% web, com hospedagem de dados "
+              "em data center (nuvem)") == "sistemas_gestao"
+    assert cp("Prestação de serviços de locação de espaço em datacenter (colocation)") == "servidores"
+    # o valor dos itens decide entre categorias citadas no objeto
+    assert cp("Aquisição de equipamentos e serviços de informática", [("Notebook i7 16GB", 900_000.0), ("Instalação", 10_000.0)]) == "equipamentos_ti"
+    # objeto só com locação mensal: software ou equipamento conforme o que é alugado
+    assert cp("Locação de software de gestão pública, sem limitação de usuários") == "sistemas_gestao"
+    assert cp("Locação de computadores tipo desktop com monitor") == "equipamentos_ti"
+    # categorias novas
+    assert cp("Aquisição de drone com câmera térmica") == "geotecnologia"
+    assert cp("Serviços de aerolevantamento aerofotogramétrico e cadastro territorial multifinalitário") == "geotecnologia"
+    assert cp("Consultoria para adequação à Lei Geral de Proteção de Dados (LGPD) e governança de TI") == "consultoria_ti"
+    assert cp("Fornecimento de certificados digitais padrão ICP-Brasil") == "seguranca"
+    # sem assunto específico: fica separado para conferir
+    assert cp("Serviços de análises clínicas com sistema informatizado de laudos") == "outros_ti"
+
+
+def test_falsos_positivos_da_auditoria_14_11():
+    cods = lambda t: {c["codigo"] for c in classificar(t)}  # noqa: E731
+    # "conectividade Wi-Fi" de ficha de produto e evento não é telecom
+    assert "telecom" not in cods("Aquisição de 02 púlpitos digitais com tela de LED, conectividade Wi-Fi e Bluetooth")
+    assert "telecom" not in cods("Organização e produção de evento, decoração, infraestrutura técnica, conectividade")
+    assert "telecom" in cods("Solução de conectividade à internet via satélite")
+    # "lidar" dentro de "validar"; "SOC." de sociedade; "SIEM" dentro de "Siemens"
+    assert "geotecnologia" not in cods("Coleta seletiva; a cooperativa deverá validar e consolidar os dados")
+    assert "seguranca" not in cods("Contratação de soc. empresária para varrição mecanizada")
+    assert "seguranca" not in cods("Manutenção do equipamento de tomografia da marca Siemens")
+    assert "seguranca" in cods("Serviços gerenciados de centro de operações de segurança (SOC) e monitoramento de incidentes")
+    # NF-e citada como exigência de pagamento
+    assert "sistemas_gestao" not in cods("Credenciamento de táxi; pagamento mediante nota fiscal eletrônica")
+    assert "iot_telemetria" not in cods("Locação mensal de veículos automotores, sem condutor, com seguro e telemetria")
+
+
+def test_natureza_servico_de_ti_com_itens_marcados_como_material():
+    from licitacoes.taxonomia import natureza
+
+    # o catálogo marca licença/SaaS/sustentação como material; o objeto diz que é serviço
+    assert natureza("Contratação de empresa para sustentação do ERP TOTVS Protheus", [("Material", 1_000_000.0)]) == "servico"
+    assert natureza("Licenciamento de plataforma de gestão da saúde em SaaS", [("Material", 500.0)]) == "servico"
+    # compra continua compra
+    assert natureza("Aquisição de licenças perpétuas de software", [("Material", 500.0)]) == "material"
+    assert natureza("Contratação de empresa para fornecimento de toner", [("Material", 500.0)]) == "material"
