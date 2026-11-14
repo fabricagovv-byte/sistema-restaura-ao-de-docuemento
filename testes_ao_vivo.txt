@@ -1,0 +1,79 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.12.16/x64/bin/python
+rootdir: /home/runner/work/sistema-restaura-ao-de-docuemento/sistema-restaura-ao-de-docuemento/plataforma-licitacoes/backend
+plugins: anyio-4.16.0
+collecting ... collected 4 items
+
+tests/test_ao_vivo.py::test_pncp_propostas_abertas PASSED                [ 25%]
+tests/test_ao_vivo.py::test_comprasgov_dados_abertos PASSED              [ 50%]
+tests/test_ao_vivo.py::test_querido_diario FAILED                        [ 75%]
+tests/test_ao_vivo.py::test_ibge_municipios PASSED                       [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_querido_diario ______________________________
+
+    def test_querido_diario():
+        from licitacoes.conectores.outras import ConectorQueridoDiario
+    
+        hoje = date.today()
+>       diarios = list(c for _, c in zip(range(5), ConectorQueridoDiario().buscar('"digitalização" licitação', hoje - timedelta(days=30), hoje)))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_ao_vivo.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_ao_vivo.py:42: in <genexpr>
+    diarios = list(c for _, c in zip(range(5), ConectorQueridoDiario().buscar('"digitalização" licitação', hoje - timedelta(days=30), hoje)))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+licitacoes/conectores/outras.py:182: in buscar
+    corpo = self.http.get_json(f"{self.BASE}/gazettes", {
+licitacoes/conectores/base.py:136: in get_json
+    r = self.requisitar("GET", url, params=params, **kw)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <licitacoes.conectores.base.ClienteHttp object at 0x7fcf47ab7bf0>
+metodo = 'GET', url = 'https://queridodiario.ok.org.br/api/gazettes'
+kw = {'params': {'querystring': '"digitalização" licitação', 'published_since': '2026-10-14', 'published_until': '2026-11-13', 'excerpt_size': 600, ...}}
+
+    def requisitar(self, metodo: str, url: str, **kw: Any) -> httpx.Response | None:
+        t429 = 0
+        tfalha = 0
+        while True:
+            self._ritmo()
+            self.stats.chamadas += 1
+            try:
+                r = self._http.request(metodo, url, **kw)
+            except (httpx.TimeoutException, httpx.TransportError) as exc:
+                self.stats.falhas_rede += 1
+                tfalha += 1
+                if tfalha >= self.max_tentativas:
+                    raise FalhaTemporaria(f"falha de rede: {type(exc).__name__}: {exc}", url=url) from exc
+                self.stats.novas_tentativas += 1
+                self._dormir(2 ** tfalha)
+                continue
+            st = r.status_code
+            self.stats.por_status[st] = self.stats.por_status.get(st, 0) + 1
+            if st == 204:
+                self.stats.http_204 += 1
+                return None
+            if st == 429:
+                self.stats.http_429 += 1
+                if t429 >= len(self.esperas_429_s):
+                    raise LimiteDeAcesso("limite de acesso (429) persistente", 429, url)
+                espera = _retry_after(r) or self.esperas_429_s[t429]
+                t429 += 1
+                self.stats.novas_tentativas += 1
+                log.warning("429 em %s; esperando %.0fs", url, espera)
+                self._dormir(espera)
+                continue
+            if st >= 500:
+                self.stats.http_5xx += 1
+                tfalha += 1
+                if tfalha >= self.max_tentativas:
+>                   raise FalhaTemporaria(f"HTTP {st} persistente", st, url)
+E                   licitacoes.conectores.base.FalhaTemporaria: HTTP 520 persistente
+
+licitacoes/conectores/base.py:125: FalhaTemporaria
+=========================== short test summary info ============================
+FAILED tests/test_ao_vivo.py::test_querido_diario - licitacoes.conectores.base.FalhaTemporaria: HTTP 520 persistente
+=================== 1 failed, 3 passed in 304.89s (0:05:04) ====================

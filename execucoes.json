@@ -1,0 +1,157 @@
+[
+ {
+  "fonte": "pncp",
+  "inicio": "2026-11-13T22:32:25.260128",
+  "fim": "2026-11-14T00:18:57.268778",
+  "status": "ok",
+  "parametros": {
+   "modo": "propostas",
+   "dias": 1,
+   "modalidades": [
+    6,
+    4,
+    8,
+    7,
+    5,
+    12,
+    9,
+    1,
+    3,
+    2,
+    10,
+    11,
+    13
+   ],
+   "ufs": null,
+   "so_publicacao": false
+  },
+  "lidos": 31500,
+  "novos": 31496,
+  "atualizados": 0,
+  "erros": 0,
+  "chamadas": 632,
+  "mensagem": null
+ },
+ {
+  "fonte": "pncp",
+  "inicio": "2026-11-14T00:18:57.284321",
+  "fim": "2026-11-14T00:36:27.710657",
+  "status": "parcial",
+  "parametros": {
+   "modo": "diario",
+   "dias": 3,
+   "modalidades": [
+    6,
+    4,
+    8,
+    7,
+    5,
+    12,
+    9,
+    1,
+    3,
+    2,
+    10,
+    11,
+    13
+   ],
+   "ufs": null,
+   "so_publicacao": false
+  },
+  "lidos": 8860,
+  "novos": 3620,
+  "atualizados": 0,
+  "erros": 0,
+  "chamadas": 179,
+  "mensagem": "interrompida pelo limite de tempo da coleta"
+ },
+ {
+  "fonte": "pncp",
+  "inicio": "2026-11-14T00:36:27.726048",
+  "fim": "2026-11-14T01:18:33.390193",
+  "status": "parcial",
+  "parametros": {
+   "modo": "diario",
+   "dias": 30,
+   "modalidades": [
+    6,
+    4,
+    7,
+    5
+   ],
+   "ufs": null,
+   "so_publicacao": true
+  },
+  "lidos": 9601,
+  "novos": 8330,
+  "atualizados": 5,
+  "erros": 0,
+  "chamadas": 193,
+  "mensagem": "interrompida pelo limite de tempo da coleta"
+ },
+ {
+  "fonte": "comprasgov",
+  "inicio": "2026-11-14T01:18:33.405024",
+  "fim": "2026-11-14T01:19:21.564873",
+  "status": "ok",
+  "parametros": {
+   "dias": 7
+  },
+  "lidos": 5962,
+  "novos": 2672,
+  "atualizados": 16,
+  "erros": 0,
+  "chamadas": 23,
+  "mensagem": null
+ },
+ {
+  "fonte": "querido_diario",
+  "inicio": "2026-11-14T01:53:16.091359",
+  "fim": "2026-11-14T01:56:02.716734",
+  "status": "erro",
+  "parametros": {
+   "termos": [
+    "digitalização",
+    "indexação",
+    "gestão documental",
+    "fábrica de software",
+    "sustentação de sistemas",
+    "desenvolvimento de software",
+    "tratamento de dados",
+    "manutenção de software",
+    "licença de uso de software",
+    "sistema de gestão",
+    "inteligência artificial",
+    "arquivo",
+    "microfilmagem",
+    "educação a distância",
+    "EAD",
+    "plataforma educacional",
+    "pesquisa de opinião",
+    "pesquisa de satisfação",
+    "inovação",
+    "ponto de função",
+    "unidade de serviço técnico",
+    "digitalização de documentos",
+    "gestão eletrônica de documentos",
+    "digitalização de acervo",
+    "digitalização de prontuários",
+    "indexação de documentos",
+    "processamento de documentos",
+    "tratamento documental",
+    "locação de software",
+    "computação em nuvem",
+    "outsourcing",
+    "sustentação",
+    "registro de preços tecnologia"
+   ],
+   "dias": 15
+  },
+  "lidos": 0,
+  "novos": 0,
+  "atualizados": 0,
+  "erros": 1,
+  "chamadas": 4,
+  "mensagem": "FalhaTemporaria: HTTP 520 persistente"
+ }
+]

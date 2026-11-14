@@ -1,0 +1,74 @@
+{
+ "inicio": "2026-11-13T22:30:21.357178",
+ "execucao": "43496352480",
+ "passos": {
+  "ibge": 5571,
+  "pncp_propostas_abertas": {
+   "status": "ok",
+   "lidos": 31500,
+   "novos": 31496,
+   "atualizados": 0,
+   "chamadas": 632,
+   "mensagem": null
+  },
+  "pncp_publicados_e_alterados": {
+   "status": "parcial",
+   "lidos": 8860,
+   "novos": 3620,
+   "atualizados": 0,
+   "chamadas": 179,
+   "mensagem": "interrompida pelo limite de tempo da coleta"
+  },
+  "pncp_pregoes_30_dias": {
+   "status": "parcial",
+   "lidos": 9601,
+   "novos": 8330,
+   "atualizados": 5,
+   "chamadas": 193,
+   "mensagem": "interrompida pelo limite de tempo da coleta"
+  },
+  "comprasgov": {
+   "status": "ok",
+   "lidos": 5962,
+   "novos": 2672,
+   "atualizados": 16,
+   "chamadas": 23,
+   "mensagem": null
+  },
+  "pacote_anterior": {
+   "editais": 1571,
+   "documentos": 4981,
+   "textos": 661
+  },
+  "documentos_relevantes": {
+   "editais": 120,
+   "itens": 1631,
+   "documentos": 395,
+   "baixados": 392,
+   "falhas": []
+  },
+  "itens_e_documentos_listados": {
+   "alvo": 1577,
+   "com_indicio": 423,
+   "ja_detalhados": 1355,
+   "detalhados": 221,
+   "itens": 1915,
+   "documentos": 531,
+   "falhas": 1
+  },
+  "querido_diario": {
+   "status": "erro",
+   "lidos": 0,
+   "novos": 0,
+   "atualizados": 0,
+   "chamadas": 4,
+   "mensagem": "FalhaTemporaria: HTTP 520 persistente"
+  }
+ },
+ "orcamento_minutos": 280.0,
+ "fim": "2026-11-14T01:56:02.719197",
+ "editais_exportados": 46118,
+ "editais_detalhados": 1829,
+ "municipios": 5571,
+ "exportado_em": "2026-11-14T01:56:54.534117"
+}
