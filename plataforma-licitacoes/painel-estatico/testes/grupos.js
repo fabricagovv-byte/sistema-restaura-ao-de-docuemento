@@ -27,7 +27,7 @@ const { chromium } = require('playwright');
       const dl = await p.$$eval('dialog[open] dt', (xs) => xs.map((x) => x.textContent + ': ' + x.nextElementSibling.textContent.replace(/\s+/g, ' ').slice(0, 80)).filter((t) => /principal|cita/i.test(t)));
       console.log(' ficha:', dl.join(' || ')); await p.keyboard.press('Escape'); }
     const larg = await p.evaluate(() => document.documentElement.scrollWidth); console.log(' largura', larg);
-    if (w === 390) await p.screenshot({ path: process.argv[3] || 'grupos-390.png', clip: { x: 0, y: await p.$eval('#cats', (e) => e.getBoundingClientRect().top + scrollY), width: 390, height: 900 } });
+    if (w === 390) await (await p.$('#cats')).screenshot({ path: process.argv[3] || 'grupos-390.png' });
     await p.close();
   }
   console.log('erros', JSON.stringify(erros)); await b.close();

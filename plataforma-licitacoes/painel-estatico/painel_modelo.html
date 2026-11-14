@@ -72,6 +72,14 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .grow + .grow { padding-top: 2px; }
 .chips button.gchip { font-weight: 800; border-width: 2px; }
 .chips button.sub { font-weight: 500; font-size: .8rem; }
+.funil { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.funil li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 6px 10px;
+  border-radius: 8px; background: var(--accent-soft); }
+.funil li b { font-variant-numeric: tabular-nums; font-size: 1.05rem; }
+.funil li span { overflow-wrap: anywhere; }
+.funil li.fim { background: var(--accent); color: var(--surface); }
+.funil-top { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; }
+.funil-top button { font: inherit; text-align: left; background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; text-decoration: underline; }
 .p-acc { background: var(--accent-soft); color: var(--accent); }
 .acoes { display: flex; flex-wrap: wrap; gap: 6px; }
 .acoes a { font: 700 .8rem var(--f-body); color: var(--accent); border: 1px solid var(--accent); border-radius: 6px; padding: 4px 10px; text-decoration: none; }
@@ -282,6 +290,17 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
     <div class="destaques-grade" id="destaques"></div>
   </section>
 
+  <section class="panel" id="funil-sec" aria-labelledby="h-funil">
+    <h2 id="h-funil">Funil até você</h2>
+    <p class="lede">De todas as licitações coletadas até as que valem a sua proposta: a cada etapa sai o que não é com você.
+      Escolha abaixo o que é o seu núcleo (fica salvo neste navegador).</p>
+    <div class="chips" id="funil-nucleo" role="group" aria-label="Seu núcleo"></div>
+    <label class="marca"><input type="checkbox" id="funil-prox"> Incluir o mês que vem</label>
+    <ol class="funil" id="funil-etapas" aria-live="polite"></ol>
+    <div class="acoes"><button type="button" class="abrir" id="funil-ver">Ver na lista</button></div>
+    <h3 style="margin:.4rem 0 0">As melhores</h3>
+    <ol class="funil-top" id="funil-top"></ol>
+  </section>
   <section class="panel" id="cal-sec" aria-labelledby="h-cal">
     <div class="vista-barra"><h2 id="h-cal" style="margin:0">Calendário de oportunidades premiadas</h2>
       <label class="marca">Nota mínima <input type="number" id="cal-min" min="0" max="100" step="5" value="55" style="width:72px"></label></div>
@@ -301,7 +320,7 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
       <label for="sv">Sem valor divulgado<select id="sv"><option value="1">Mostrar</option><option value="0">Esconder</option></select></label>
       <label for="tipo">Tipo<select id="tipo"><option value="servico">Somente serviços</option><option value="todos">Serviços e materiais</option><option value="material">Só compra de material</option></select></label>
       <label for="plat">Portal da disputa<select id="plat"><option value="">Todos os portais</option></select></label>
-      <label for="ord">Ordenar<select id="ord"><option value="prazo">Prazo mais próximo</option><option value="valor">Maior valor</option><option value="ader">Aderência</option><option value="vol">Grande volume primeiro</option><option value="itens">Maior valor nos itens do tipo</option><option value="dist">Mais perto da sede</option></select></label>
+      <label for="ord">Ordenar<select id="ord"><option value="prazo">Prazo mais próximo</option><option value="nota">Melhor nota (premiadas)</option><option value="valor">Maior valor</option><option value="ader">Aderência</option><option value="vol">Grande volume primeiro</option><option value="itens">Maior valor nos itens do tipo</option><option value="dist">Mais perto da sede</option></select></label>
       <label for="dmax">Até quantos km da sede<input id="dmax" type="number" min="0" step="50" inputmode="numeric" placeholder="sem limite"></label>
     </div>
     <details class="avancada" id="avancada">
@@ -480,7 +499,7 @@ async function carregarTodas() {
     }
   } catch (e) { console.warn("lista completa indisponível", e); }
   todasProntas = true;
-  montarChips(); montarPortais(); render(); doHash(); renderCalendario();
+  montarChips(); montarPortais(); render(); doHash(); renderCalendario(); renderFunil();
 }
 
 const valorTotal = itens.reduce((s, x) => s + (x.v || 0), 0);
@@ -861,6 +880,52 @@ function notaOportunidade(x) {
 }
 let calMes = null, calDia = null;
 const mesChave = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+const NUCLEO_PADRAO = ["software", "documental", "servicos_ti", "infra"];
+let nucleo = NUCLEO_PADRAO;
+try { const s = JSON.parse(localStorage.getItem("funil-nucleo") || "null"); if (Array.isArray(s) && s.length) nucleo = s; } catch (e) { /* sem armazenamento */ }
+const fimJanela = () => { const a = new Date(); return new Date(a.getFullYear(), a.getMonth() + (document.getElementById("funil-prox").checked ? 2 : 1), 1); };
+const noNucleo = (x) => nucleo.includes(grupoDe(x)) || x.c.some((c) => c === "remun_ust" || c === "remun_pf");
+function etapasFunil() {
+  const agora = new Date(), fim = fimJanela();
+  const passos = [];
+  let r = itens.filter((x) => x.det);
+  passos.push(["Coletadas na base (todo o Brasil)", D.total_coletado]);
+  passos.push(["Abertas para proposta", D.abertas]);
+  passos.push(["De tecnologia, documentos e EAD", r.length]);
+  r = r.filter((x) => x.enc && new Date(x.enc) >= agora); passos.push(["Ainda dá tempo (prazo não encerrou)", r.length]);
+  r = r.filter((x) => x.ms !== "material"); passos.push(["Serviço (sem compra de material)", r.length]);
+  r = r.filter(noNucleo); passos.push(["No seu núcleo: " + GRUPOS.filter(([g]) => nucleo.includes(g)).map(([, n]) => n.toLowerCase()).join(", ") + " + UST/PF", r.length]);
+  r = r.filter((x) => new Date(x.enc) < fim); passos.push([document.getElementById("funil-prox").checked ? "Encerram neste mês ou no próximo" : "Encerram neste mês", r.length]);
+  r = r.filter((x) => notaOportunidade(x).nota >= notaMin()); passos.push([`Premiadas (nota ${notaMin()} ou mais)`, r.length]);
+  return { passos, final: r.sort((a, b) => notaOportunidade(b).nota - notaOportunidade(a).nota || (b.v || 0) - (a.v || 0)) };
+}
+const funilOk = (x) => x.det && x.enc && new Date(x.enc) >= new Date() && new Date(x.enc) < fimJanela() && x.ms !== "material" && noNucleo(x) && notaOportunidade(x).nota >= notaMin();
+function renderFunil() {
+  document.getElementById("funil-nucleo").innerHTML = GRUPOS.filter(([g]) => g !== "outros").map(([g, n]) =>
+    `<button type="button" data-g="${g}" aria-pressed="${nucleo.includes(g)}">${esc(n)}</button>`).join("");
+  const { passos, final } = etapasFunil();
+  document.getElementById("funil-etapas").innerHTML = passos.map(([n, k], i) =>
+    `<li${i === passos.length - 1 ? ' class="fim"' : ""}><span>${i + 1}. ${esc(n)}</span><b>${fmt(k)}</b></li>`).join("");
+  document.getElementById("funil-top").innerHTML = final.slice(0, 10).map((x) => { const s = notaOportunidade(x);
+    return `<li><button type="button" data-funil="${x.id}">${esc(x.o)} (${esc(x.uf || "")})</button> — nota ${s.nota} · ${brl(x.v)} · até ${dataHora(x.enc)}<br><span class="conta">${esc(CATS[principal(x)] || "")} · ${esc(s.motivos.slice(0, 4).join(", "))}</span></li>`; }).join("")
+    || `<li class="conta">Nenhuma com esses critérios. Inclua o mês que vem, mais grupos no núcleo ou baixe a nota mínima no calendário.</li>`;
+}
+document.getElementById("funil-nucleo").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-g]"); if (!b) return;
+  const g = b.dataset.g; nucleo = nucleo.includes(g) ? nucleo.filter((x) => x !== g) : [...nucleo, g];
+  if (!nucleo.length) nucleo = [g];
+  try { localStorage.setItem("funil-nucleo", JSON.stringify(nucleo)); } catch (err) { /* sem armazenamento */ }
+  renderFunil(); if (estado.cat === "funil") render();
+});
+document.getElementById("funil-top").addEventListener("click", (e) => { const b = e.target.closest("[data-funil]"); if (!b) return;
+  mostrarPrevia(b.dataset.funil); document.getElementById("previa").scrollIntoView({ behavior: "smooth", block: "nearest" }); });
+document.getElementById("funil-prox").addEventListener("change", () => { renderFunil(); if (estado.cat === "funil") render(); });
+document.getElementById("funil-ver").addEventListener("click", () => {
+  estado.cat = "funil"; estado.ord = "nota"; estado.tipo = "todos"; estado.limite = 40;
+  document.getElementById("ord").value = "nota"; document.getElementById("tipo").value = "todos";
+  render(); document.getElementById("lista").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
 function renderCalendario() {
   const agora = new Date(), limite = new Date(agora.getFullYear() + 1, agora.getMonth() + 1, 1);
   const min = notaMin();
@@ -898,7 +963,7 @@ document.getElementById("cal-lista").addEventListener("click", (e) => {
   const it = e.target.closest("[data-cal]"); if (it) { mostrarPrevia(it.dataset.cal); document.getElementById("previa").scrollIntoView({ behavior: "smooth", block: "nearest" }); }
 });
 document.getElementById("cal-lista").addEventListener("keydown", (e) => { const it = e.target.closest("[data-cal]"); if (it && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); mostrarPrevia(it.dataset.cal); } });
-document.getElementById("cal-min").addEventListener("input", () => { memoNota.clear(); renderCalendario(); montarChips(); if (estado.cat === "premiadas") render(); });
+document.getElementById("cal-min").addEventListener("input", () => { memoNota.clear(); renderCalendario(); renderFunil(); montarChips(); if (estado.cat === "premiadas" || estado.cat === "funil") render(); });
 
 /* ---------- meus marcadores: edição, planilha e gravação na conta */
 let marcEdit = null;
@@ -956,7 +1021,7 @@ function card(x) {
 function render() {
   cEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.c === estado.cat)));
   ufEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.u === estado.uf)));
-  let r = itens.filter((x) => (estado.cat === "todas" || (estado.cat === "seg" ? x.det : estado.cat === "meucrm" ? !!registro(x.id) : estado.cat === "marc" ? marcadoresEdital(x).length > 0 : estado.cat === "premiadas" ? notaOportunidade(x).nota >= notaMin() : estado.cat === "gv" ? (x.gv || []).length > 0 : estado.cat === "foco" ? x.c.some((c) => PRIO.includes(c)) : naCategoria(x, estado.cat)))
+  let r = itens.filter((x) => (estado.cat === "todas" || (estado.cat === "seg" ? x.det : estado.cat === "meucrm" ? !!registro(x.id) : estado.cat === "marc" ? marcadoresEdital(x).length > 0 : estado.cat === "premiadas" ? notaOportunidade(x).nota >= notaMin() : estado.cat === "gv" ? (x.gv || []).length > 0 : estado.cat === "foco" ? x.c.some((c) => PRIO.includes(c)) : estado.cat === "funil" ? funilOk(x) : naCategoria(x, estado.cat)))
     && (!estado.uf || x.uf === estado.uf) && (!estado.plat || (x.plat || "Não identificado") === estado.plat)
     && (!estado.q || casaBusca(x.busca, estado.pb))
     && tipoOk(x) && (!estado.dmax || (distSede(x) ?? Infinity) <= estado.dmax)
@@ -965,7 +1030,8 @@ function render() {
   const tipoIt = tipoItensAtivo();
   let semItens = 0;
   if (tipoIt && estado.imin > 0) r = r.filter((x) => { const s = itensDoTipo(x, tipoIt); if (!s.coletado) semItens++; return s.soma >= estado.imin; });
-  if (estado.ord === "valor") r.sort((a, b) => (b.v || -1) - (a.v || -1));
+  if (estado.ord === "nota") r.sort((a, b) => notaOportunidade(b).nota - notaOportunidade(a).nota || (b.v || 0) - (a.v || 0));
+  else if (estado.ord === "valor") r.sort((a, b) => (b.v || -1) - (a.v || -1));
   else if (estado.ord === "dist") r.sort((a, b) => (distSede(a) ?? 1e9) - (distSede(b) ?? 1e9));
   else if (estado.ord === "itens" && tipoIt) r.sort((a, b) => itensDoTipo(b, tipoIt).soma - itensDoTipo(a, tipoIt).soma || (b.v || 0) - (a.v || 0));
   else if (estado.ord === "vol") r.sort((a, b) => (b.gv || []).length - (a.gv || []).length || (b.v || 0) - (a.v || 0));
@@ -1947,7 +2013,7 @@ function ligarCalc(raiz) {
 }
 function renderCalcSecao() { const r = document.getElementById("calc-corpo"); if (!r) return; r.innerHTML = calcHtml("secao", null); ligarCalc(r); }
 
-montarChips(); render(); renderAv(); doHash(); renderDestaques(); renderCalendario();
+montarChips(); render(); renderAv(); doHash(); renderDestaques(); renderCalendario(); renderFunil();
 setTimeout(carregarTodas, 50);
 renderConfig(); renderModelo(); renderMarcadores(); renderCrm(); renderCalcSecao(); iniciarStore();
 </script>
