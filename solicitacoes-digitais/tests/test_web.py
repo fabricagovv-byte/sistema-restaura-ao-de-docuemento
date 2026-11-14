@@ -76,6 +76,8 @@ def test_frontend_so_chama_rotas_do_contrato():
             # dia 6: tramitação, atribuição, arquivamento, histórico, anexos e auditoria
             ("POST", "/solicitacoes/{}/tramitar"), ("POST", "/solicitacoes/{}/atribuir"), ("POST", "/solicitacoes/{}/arquivamento"),
             ("GET", "/solicitacoes/{}/historico"), ("GET", "/solicitacoes/{}/anexos"), ("POST", "/solicitacoes/{}/anexos"),
-            ("GET", "/solicitacoes/{}/anexos/{}"), ("DELETE", "/solicitacoes/{}/anexos/{}"), ("GET", "/auditoria")} <= chamadas
+            ("GET", "/solicitacoes/{}/anexos/{}"), ("DELETE", "/solicitacoes/{}/anexos/{}"), ("GET", "/auditoria"),
+            # dia 7: painel gerencial e exportação
+            ("GET", "/painel/indicadores"), ("GET", "/painel/exportacao.csv")} <= chamadas
     fora = sorted(chamadas - ops)
     assert not fora, f"o frontend chama rotas que não existem no contrato: {fora}"

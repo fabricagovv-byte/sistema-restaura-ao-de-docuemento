@@ -12,3 +12,4 @@ plataforma-licitacoes/backend/armazenamento/
 plataforma-licitacoes/producao/backups/
 plataforma-licitacoes/producao/atualizar.log
 .pacote-licitacoes/
+solicitacoes-digitais/tests/navegador/node_modules/

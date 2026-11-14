@@ -1,0 +1,6 @@
+{
+  "name": "solicitacoes-testes-navegador",
+  "private": true,
+  "description": "Dependências dos testes no navegador (o Playwright já vem do ambiente).",
+  "devDependencies": { "axe-core": "4.10.2" }
+}

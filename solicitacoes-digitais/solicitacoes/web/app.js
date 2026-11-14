@@ -170,7 +170,7 @@ function telaRedefinir(token) {
 const MENU = {
   solicitante: [["#/solicitacoes", "Minhas solicitações"], ["#/nova", "Nova solicitação"]],
   operador: [["#/solicitacoes", "Minha fila"], ["#/nova", "Nova solicitação"]],
-  gestor: [["#/solicitacoes", "Solicitações"], ["#/nova", "Nova solicitação"], ["#/auditoria", "Auditoria"]],
+  gestor: [["#/solicitacoes", "Solicitações"], ["#/nova", "Nova solicitação"], ["#/painel", "Painel"], ["#/auditoria", "Auditoria"]],
   administrador: [["#/usuarios", "Usuários"], ["#/auditoria", "Auditoria"]],
 };
 const inicial = () => eu && eu.perfil === "administrador" ? "#/usuarios" : "#/solicitacoes";
@@ -219,7 +219,7 @@ async function carregarLista(alvo) {
     const mudar = (d) => { estadoLista.pagina += d; carregarLista(alvo); };
     alvo.replaceChildren(...[
       el("p", { class: "ajuda" }, `${r.total} ${r.total === 1 ? "solicitação" : "solicitações"}`),
-      el("div", { class: "tabela" }, el("table", { class: "responsiva" },
+      el("div", { class: "tabela", tabindex: "0", role: "region", "aria-label": "Tabela (role para os lados se não couber)" }, el("table", { class: "responsiva" },
         el("caption", { class: "pular" }, "Solicitações"),
         el("thead", {}, el("tr", {}, ...["Protocolo", "Título", "Categoria", "Situação", "Prioridade", "Prazo", "Responsável"].map((t) => el("th", { scope: "col" }, t)))),
         el("tbody", {}, linhas))),
@@ -412,7 +412,7 @@ async function carregarAuditoria(sec, filtros, compacto = false) {
   if (!evs.length) { preencherBloco(sec, el("p", { class: "vazio" }, "Nenhum evento com esses filtros.")); return; }
   const json = (o) => o ? JSON.stringify(o, null, 1) : "";
   preencherBloco(sec, el("p", { class: "ajuda" }, `${evs.length} ${evs.length === 1 ? "evento" : "eventos"} (mais recentes primeiro). A auditoria não pode ser alterada.`),
-    el("div", { class: "tabela" }, el("table", { class: "responsiva" },
+    el("div", { class: "tabela", tabindex: "0", role: "region", "aria-label": "Tabela (role para os lados se não couber)" }, el("table", { class: "responsiva" },
       el("thead", {}, el("tr", {}, ...["Quando", "Ação", "Recurso", "Ator", "Resultado", "Antes → depois", "Correlação"].map((t) => el("th", { scope: "col" }, t)))),
       el("tbody", {}, evs.map((e) => el("tr", {},
         el("td", { "data-rotulo": "Quando" }, dataHora(e.em)), el("td", { "data-rotulo": "Ação" }, ACOES_AUD[e.acao] || e.acao),
@@ -437,11 +437,93 @@ async function telaUsuarios() {
   carregando("Carregando usuários…");
   try {
     const us = await api("GET", "/usuarios");
-    tela("Usuários", el("div", { class: "cartao tabela" }, el("table", { class: "responsiva" },
+    tela("Usuários", el("div", { class: "cartao tabela", tabindex: "0", role: "region", "aria-label": "Tabela de usuários" }, el("table", { class: "responsiva" },
       el("thead", {}, el("tr", {}, ...["Nome", "E-mail", "Perfil", "Situação"].map((t) => el("th", { scope: "col" }, t)))),
       el("tbody", {}, us.map((u) => el("tr", {}, el("td", { "data-rotulo": "Nome" }, u.nome), el("td", { "data-rotulo": "E-mail" }, u.email),
         el("td", { "data-rotulo": "Perfil" }, PERFIS[u.perfil] || u.perfil), el("td", { "data-rotulo": "Situação" }, u.ativo ? "Ativo" : "Inativo")))))));
   } catch (e) { if (e.status !== 401) tela("Usuários", el("p", { class: "erro", role: "alert" }, e.message)); }
+}
+
+/* ------------------------------------------------------------------ painel gerencial (gestor) — dia 7 */
+const estadoPainel = { de: "", ate: "", status: "", categoria_id: "", responsavel_id: "", prioridade: "", arquivadas: "excluir" };
+const pct = (v) => v == null ? "—" : `${v.toLocaleString("pt-BR", { maximumFractionDigits: 1 })}%`;
+const horas = (h) => h == null ? "—" : h >= 48 ? `${(h / 24).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} dias` : `${h.toLocaleString("pt-BR", { maximumFractionDigits: 1 })} h`;
+function paramsPainel() {
+  const p = new URLSearchParams();
+  for (const [k, v] of Object.entries(estadoPainel)) if (v && !(k === "arquivadas" && v === "excluir")) p.set(k, v);
+  return p;
+}
+function kpi(rotulo, valor, destaque = "") { return el("div", { class: `kpi ${destaque}` }, el("span", { class: "kpi-valor" }, valor), el("span", { class: "kpi-rotulo" }, rotulo)); }
+/* tabela com barra: o número fica escrito (leitor de tela e impressão) e a barra é só reforço visual */
+function tabelaBarras(titulo, linhas, colunas) {
+  if (!linhas.length) return el("section", { class: "cartao" }, el("h2", {}, titulo), el("p", { class: "vazio" }, "Nada com esses filtros."));
+  const max = Math.max(1, ...linhas.map((l) => l.total));
+  const celula = (l, [rotulo, f], i) => {
+    if (i !== 1) return el("td", { "data-rotulo": rotulo }, f(l));
+    const barra = el("span", { class: "barra", "aria-hidden": "true", dados: { largura: Math.round(100 * l.total / max) } });
+    return el("td", { "data-rotulo": rotulo }, el("span", { class: "barra-celula" }, barra, String(f(l))));
+  };
+  const cabeca = el("thead", {}, el("tr", {}, ...colunas.map(([rotulo]) => el("th", { scope: "col" }, rotulo))));
+  const corpo = el("tbody", {}, linhas.map((l) => el("tr", {}, ...colunas.map((c, i) => celula(l, c, i)))));
+  return el("section", { class: "cartao" }, el("h2", {}, titulo), el("div", { class: "tabela", tabindex: "0", role: "region", "aria-label": titulo }, el("table", { class: "responsiva barras" }, cabeca, corpo)));
+}
+async function telaPainel() {
+  carregando("Carregando o painel…");
+  let cats = [], pessoas = [];
+  try { [cats, pessoas] = await Promise.all([api("GET", "/categorias"), api("GET", "/usuarios?ativo=true")]); }
+  catch (e) { if (e.status !== 401) tela("Painel gerencial", el("p", { class: "erro", role: "alert" }, e.message)); return; }
+  const opt = (v, n, sel) => el("option", { value: v, selected: sel }, n);
+  const de = el("input", { type: "date", value: estadoPainel.de }), ate = el("input", { type: "date", value: estadoPainel.ate });
+  const status = el("select", {}, opt("", "Todas", !estadoPainel.status), ...Object.entries(STATUS).map(([k, n]) => opt(k, n, estadoPainel.status === k)));
+  const categoria = el("select", {}, opt("", "Todas", !estadoPainel.categoria_id), ...cats.map((c) => opt(c.id, c.nome, String(c.id) === estadoPainel.categoria_id)));
+  const resp = el("select", {}, opt("", "Todos", !estadoPainel.responsavel_id), ...pessoas.filter((u) => ["operador", "gestor"].includes(u.perfil)).map((u) => opt(u.id, u.nome, String(u.id) === estadoPainel.responsavel_id)));
+  const prioridade = el("select", {}, opt("", "Todas", !estadoPainel.prioridade), ...Object.entries(PRIORIDADES).map(([k, n]) => opt(k, n, estadoPainel.prioridade === k)));
+  const arq = el("select", {}, opt("excluir", "Sem arquivadas", estadoPainel.arquivadas === "excluir"), opt("incluir", "Com arquivadas", estadoPainel.arquivadas === "incluir"), opt("somente", "Só arquivadas", estadoPainel.arquivadas === "somente"));
+  const resultado = el("div", { id: "painel-resultado", "aria-live": "polite" });
+  const exportar = el("button", { type: "button", class: "secundario" }, "Exportar CSV");
+  const form = el("form", { class: "filtros", role: "search", on: { submit: (ev) => { ev.preventDefault();
+    Object.assign(estadoPainel, { de: de.value, ate: ate.value, status: status.value, categoria_id: categoria.value, responsavel_id: resp.value, prioridade: prioridade.value, arquivadas: arq.value });
+    carregarPainel(resultado); } } },
+  campo("p-de", "Abertas a partir de", de), campo("p-ate", "Abertas até", ate), campo("p-status", "Situação", status), campo("p-cat", "Categoria", categoria),
+  campo("p-resp", "Responsável", resp), campo("p-prio", "Prioridade", prioridade), campo("p-arq", "Arquivadas", arq),
+  el("div", { class: "acoes" }, el("button", { type: "submit" }, "Aplicar filtros"), exportar));
+  exportar.addEventListener("click", async () => { exportar.disabled = true;
+    try { await apiBaixar("GET", `/painel/exportacao.csv?${paramsPainel()}`, `solicitacoes-${new Date().toISOString().slice(0, 10)}.csv`); avisar("Planilha exportada. A exportação fica registrada na auditoria.", "ok"); }
+    catch (e) { if (e.status !== 401) avisar(e.message, "erro"); } finally { exportar.disabled = false; } });
+  tela("Painel gerencial", el("div", { class: "cartao" }, form), resultado);
+  carregarPainel(resultado);
+}
+async function carregarPainel(alvo) {
+  alvo.setAttribute("aria-busy", "true"); alvo.replaceChildren(el("p", { class: "carregando" }, "Calculando os indicadores…"));
+  let d;
+  try { d = await api("GET", `/painel/indicadores?${paramsPainel()}`); }
+  catch (e) { if (e.status === 401) return; alvo.removeAttribute("aria-busy"); mostrarErroPainel(alvo, e); return; }
+  alvo.removeAttribute("aria-busy");
+  const p = d.prazo;
+  const kpis = el("section", { class: "kpis", "aria-label": "Indicadores principais" },
+    kpi("solicitações", fmtN(d.total)), kpi("em aberto", fmtN(d.abertas)),
+    kpi("abertas atrasadas", fmtN(p.abertas_atrasadas), p.abertas_atrasadas ? "alerta" : ""), kpi("vencem em 48 h", fmtN(p.vencem_em_48h), p.vencem_em_48h ? "aviso" : ""),
+    kpi("atendidas no prazo", pct(p.percentual_atendidas_no_prazo)), kpi("tempo médio até concluir", horas(d.tempo_medio_conclusao_horas)));
+  const st = Object.entries(d.por_status).map(([k, n]) => ({ nome: STATUS[k] || k, total: n })).filter((l) => l.total);
+  const pr = Object.entries(d.por_prioridade).map(([k, n]) => ({ nome: PRIORIDADES[k] || k, total: n })).filter((l) => l.total);
+  alvo.replaceChildren(
+    el("p", { class: "ajuda" }, `Atualizado às ${new Date(d.gerado_em).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}. Os números batem com a lista de solicitações e com o CSV exportado com os mesmos filtros.`),
+    kpis,
+    el("div", { class: "grade-painel" },
+      tabelaBarras("Por situação", st, [["Situação", (l) => l.nome], ["Quantidade", (l) => fmtN(l.total)]]),
+      tabelaBarras("Por prioridade", pr, [["Prioridade", (l) => l.nome], ["Quantidade", (l) => fmtN(l.total)]]),
+      tabelaBarras("Por categoria", d.por_categoria, [["Categoria", (l) => l.nome], ["Total", (l) => fmtN(l.total)], ["Em aberto", (l) => fmtN(l.abertas)]]),
+      tabelaBarras("Por responsável", d.por_responsavel, [["Responsável", (l) => l.nome], ["Total", (l) => fmtN(l.total)], ["Em aberto", (l) => fmtN(l.abertas)], ["Atrasadas", (l) => fmtN(l.atrasadas)]])),
+    el("section", { class: "cartao" }, el("h2", {}, "Prazo"), el("dl", { class: "dados" },
+      el("dt", {}, "Abertas no prazo"), el("dd", {}, fmtN(p.abertas_no_prazo)), el("dt", {}, "Abertas atrasadas"), el("dd", {}, fmtN(p.abertas_atrasadas)),
+      el("dt", {}, "Vencem em 48 horas"), el("dd", {}, fmtN(p.vencem_em_48h)), el("dt", {}, "Atendidas no prazo"), el("dd", {}, fmtN(p.atendidas_no_prazo)),
+      el("dt", {}, "Atendidas com atraso"), el("dd", {}, fmtN(p.atendidas_com_atraso)), el("dt", {}, "Canceladas pelo solicitante"), el("dd", {}, fmtN(p.canceladas)))));
+  // largura pela propriedade de estilo (CSSOM): a CSP bloqueia o atributo style no HTML, não esta atribuição
+  alvo.querySelectorAll(".barra[data-largura]").forEach((b) => { b.style.width = `${Number(b.dataset.largura)}%`; });
+}
+const fmtN = (n) => (n ?? 0).toLocaleString("pt-BR");
+function mostrarErroPainel(alvo, e) {
+  alvo.replaceChildren(el("p", { class: "erro", role: "alert" }, e.message, " "), el("button", { type: "button", class: "secundario", on: { click: () => carregarPainel(alvo) } }, "Tentar de novo"));
 }
 
 /* ------------------------------------------------------------------ sessão, menu e rotas */
@@ -459,7 +541,7 @@ function sairDaTela() {
   document.getElementById("conta").hidden = true; document.getElementById("menu").hidden = true;
 }
 function ir(hash) { if (location.hash === hash) rota(); else location.hash = hash; }
-const PROTEGIDAS = /^#\/(solicitacoes|nova|usuarios|auditoria)/;
+const PROTEGIDAS = /^#\/(solicitacoes|nova|usuarios|auditoria|painel)/;
 async function rota() {
   if (location.pathname === "/redefinir-senha") { const t = new URLSearchParams(location.hash.slice(1)).get("token"); sairDaTela(); return telaRedefinir(t || ""); }
   const h = location.hash || "#/";
@@ -471,6 +553,7 @@ async function rota() {
   if (m) return telaDetalhe(m[1]);
   if (h.startsWith("#/nova")) return eu.perfil === "administrador" ? tela("Nova solicitação", el("p", { class: "erro" }, "O administrador não abre solicitações.")) : telaNova();
   if (h.startsWith("#/usuarios")) return telaUsuarios();
+  if (h.startsWith("#/painel")) return eu.perfil === "gestor" ? telaPainel() : tela("Painel gerencial", el("p", { class: "erro" }, "Só o gestor vê o painel gerencial."));
   if (h.startsWith("#/auditoria")) return ["gestor", "administrador"].includes(eu.perfil) ? telaAuditoria() : tela("Auditoria", el("p", { class: "erro" }, "Seu perfil não vê a auditoria."));
   if (eu.perfil === "administrador") return ir("#/usuarios");
   return telaLista();
