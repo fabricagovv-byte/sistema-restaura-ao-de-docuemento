@@ -427,3 +427,41 @@ def test_hora_de_servico_tecnico_nao_e_ust():
     assert not item_ust("HORA SERVIÇO TÉCNICO", "Desenvolvimento, manutenção e sustentação de software", 768_000, 139.8)
     assert tipo_volume("HORA SERVIÇO TÉCNICO", "Desenvolvimento, manutenção e sustentação de software", 768_000, 139.8) == "hora"
     assert item_ust("UST", "Desenvolvimento", 1000, 150)
+
+
+def test_auditoria_de_precisao_13_11():
+    """Casos reais de editais abertos que caíam em categoria errada (auditoria de 13/11)."""
+    from licitacoes.taxonomia import remuneracao
+
+    def cods(t):
+        return {c["codigo"] for c in classificar(t)}
+
+    errados = {
+        "Fornecimento de bomba de deslocamento positivo para recalque de lodo adensado na ETL": "dados",
+        "Contratação de instituição financeira para cobrança bancária registrada via API": "integracao",
+        "Credenciamento de instituições financeiras para integração de sistemas de crédito consignado": "integracao",
+        "Execução de obra de quadra poliesportiva coberta com cabeamento estruturado e wi-fi": "infra_ti",
+        "Aquisição de impressora plotter A1 com conexão wi-fi": "infra_ti",
+        "Contratação de serviços de limpeza com aplicação de saneantes e sistema de gestão de equipes": "sistemas_gestao",
+        "Serviços técnicos de engenharia consultiva com sustentação técnica das obras": "sustentacao",
+        "Agenciamento de viagens: reserva, emissão, marcação de passagens aéreas e hospedagem com inteligência artificial": "ia",
+        "Manutenção predial preventiva e corretiva com aplicação de material": "manutencao_software",
+        "Substituição do sistema de climatização da sala de energia com nobreaks e rede de dados": "infra_ti",
+        "Aquisição de equipamentos de TI destinados ao desenvolvimento de aplicações": "desenvolvimento",
+    }
+    for texto, cod in errados.items():
+        assert cod not in cods(texto), (cod, texto)
+    certos = {
+        "Integração de sistemas via API REST para o sistema informatizado de saúde": "integracao",
+        "Solução de rede wi-fi gerenciada para a rede lógica do campus": "infra_ti",
+        "Serviços de implantação e integração de solução POLAN e Wi-Fi corporativa para a creche": "infra_ti",
+        "Manutenção corretiva e evolutiva do software de gestão": "manutencao_software",
+        "Processo de ETL e data warehouse para o banco de dados corporativo": "dados",
+    }
+    for texto, cod in certos.items():
+        assert cod in cods(texto), (cod, texto)
+    # fixo mensal só para software e serviço de TI: link de internet mensal não entra
+    link = classificar("Prestação de serviços de link de internet por fibra óptica")
+    assert not any(c["codigo"] == "remun_fixo_mensal" for c in remuneracao("link de internet", [("MÊS", "Link dedicado 500 Mbps", 12, 900)], link))
+    soft = classificar("Locação de software de gestão pública")
+    assert any(c["codigo"] == "remun_fixo_mensal" for c in remuneracao("locação de software", [("MÊS", "Licença do sistema", 12, 9000)], soft))

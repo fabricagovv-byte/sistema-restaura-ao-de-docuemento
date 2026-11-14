@@ -19,9 +19,9 @@ NEG_TI = ["manutencao predial", "ar condicionado", "ar-condicionado", "veiculo",
           "material de expediente", "generos alimenticios", "esquadria", "fotovoltaic", "drenagem",
           "iluminacao publica", "videomonitoramento", "video monitoramento", "motobomba", "climatizacao",
           "alarmes", "cameras", "monitoramento eletronico", "seguranca eletronica", "aquisicao de materiais",
-          "materiais de informatica", "equipamentos de informatica", "computadores", "perifericos"]
+          "materiais de informatica", "equipamentos de informatica", "computadores", "perifericos", "aquisicao de equipamentos"]
 CTX_TI = ["software", "sistema informatizado", "sistemas informatizados", "tecnologia da informacao", " ti ", " tic ",
-          "aplicac", "aplicativo", " web ", " erp ", "banco de dados", "codigo fonte", "plataforma digital",
+          "aplicacao web", "aplicacoes web", "aplicacoes de ti", "aplicativo", " web ", " erp ", "banco de dados", "codigo fonte", "plataforma digital",
           "sistema de gestao", "sistemas de gestao", "solucao tecnologica"]
 CTX_DOC = ["documento", "documental", "acervo", "arquivo", "processos fisicos", "prontuario", "papel"]
 NEG_IMPRESSAO = ["outsourcing de impressao", "impressao corporativa", "impressao, copia", "impressao e digitalizacao",
@@ -131,9 +131,9 @@ PADRAO: list[DefCategoria] = [
                   "evolucao funcional"], contexto=CTX_TI),
     DefCategoria("sustentacao", "Sustentação de sistemas", "ti", [
         "sustentacao de sistemas", "sustentacao de software", "sustentacao de aplicacoes", "sustentacao e evolucao",
-        "sustentacao tecnica", "sustentacao de solucoes", "sustentacao do sistema", "application management",
+        "sustentacao de solucoes", "sustentacao do sistema", "application management",
         "suporte n2", "suporte n3", "niveis minimos de servico de sistemas",
-    ], NEG_TI),
+    ], NEG_TI, ambiguos=["sustentacao tecnica"], contexto=CTX_TI),
     DefCategoria("ti_mensal", "Tecnologia com valor fixo mensal (locação, licença, SaaS)", "ti", [
         "locacao de software", "locacao de softwares", "locacao de licenca",
         "locacao de licencas", "locacao de programa", "locacao e licenciamento", "locacao mensal de software",
@@ -177,17 +177,17 @@ PADRAO: list[DefCategoria] = [
     DefCategoria("ia", "Inteligência artificial", "ti", [
         "inteligencia artificial", "aprendizado de maquina", "machine learning", "ia generativa", "modelo de linguagem",
         " llm ", "visao computacional", "chatbot",
-    ]),
+    ], ["agenciamento de viagens", "passagens aereas", "reserva, emissao", "emissao, marcacao", "hospedagem em hoteis"]),
     DefCategoria("dados", "Tratamento e processamento de dados", "ti", [
         "tratamento de dados", "ciencia de dados", "engenharia de dados", "analise de dados",
-        "business intelligence", "data lake", "data warehouse", " etl ", "governanca de dados", "qualidade de dados",
+        "business intelligence", "data lake", "data warehouse", "governanca de dados", "qualidade de dados",
         "saneamento cadastral", "saneamento de dados", "requalificacao cadastral", "requalificacao de dados",
         "recadastramento", "higienizacao de dados", "higienizacao de base", "mineracao de dados",
         "inteligencia de dados", "analytics", "cadastro territorial multifinalitario", "geoprocessamento",
     ], ["equipamentos de processamento de dados", "materiais de processamento de dados", "material de processamento de dados",
         "dados variaveis", "centro de processamento de dados", "nobreak", "computadores", "plano de dados",
         "comunicacao de dados", "link de dados", "dados moveis", "teamviewer"],
-        ambiguos=["migracao de dados", "processamento de dados"],
+        ambiguos=["migracao de dados", "processamento de dados", " etl "],
         contexto=["saneamento", "higienizacao", "qualidade de dados", "tratamento de dados", "base de dados",
                   "carga de dados historicos", "legado", "cadastr", "analise de dados", "digitacao"]),
     DefCategoria("cloud", "Cloud computing", "ti", [
@@ -210,13 +210,13 @@ PADRAO: list[DefCategoria] = [
         "atendimento ao usuario de tic",
     ]),
     DefCategoria("integracao", "Integração de sistemas", "ti", [
-        "integracao de sistemas", "integracao sistemica", "barramento de servicos", "interoperabilidade", " api ",
-        " apis ", "middleware",
-    ]),
+        "integracao de sistemas", "integracao sistemica", "barramento de servicos", "interoperabilidade", "middleware",
+    ], ["instituicao financeira", "instituicoes financeiras", "cobranca bancaria", "consignad", "torniquete"], ambiguos=[" api ", " apis "], contexto=CTX_TI),
     DefCategoria("infra_ti", "Infraestrutura de TI e TIC", "ti", [
-        "infraestrutura de ti", "infraestrutura de tic", "infraestrutura de tecnologia", "rede de dados",
-        "cabeamento estruturado", "rede definida por software", " sdn ", "wi-fi", "switches",
-    ]),
+        "infraestrutura de ti", "infraestrutura de tic", "infraestrutura de tecnologia",
+        "cabeamento estruturado", "rede definida por software", " sdn ", "switches", "wi-fi corporativ", "rede wi-fi", "wi-fi gerenciad",
+        "rede sem fio", " polan ", "rede optica passiva",
+    ], ["execucao da obra", "execucao de obra", "execucao das obras", "obra de", "obras de", "construcao de", "reforma de", "quadra poliesportiva", "plotter", "cortinas", "climatizacao", "ar condicionado", "pulpito"], ambiguos=["wi-fi", "rede de dados"], contexto=CTX_TI + ["internet", "rede logica", "conectividade", "switch", "access point"]),
     # ---- Tecnologia ampliada (12/11): termos tirados de editais abertos que antes não caíam em categoria de TI
     DefCategoria("sistemas_gestao", "Sistemas de gestão e licenças de software", "ti", [
         "sistema de gestao escolar", "sistemas de gestao escolar", "gestao escolar informatizada", "sistema integrado de gestao",
@@ -473,6 +473,11 @@ _MES = {"mes", "meses", "mensal", "mensalidade", "men"}
 _MENSAL_TEXTO = [" mensal ", " mensais ", "mensalidade", " por mes ", " ao mes ", "valor mensal", "pagamento mensal",
                  "locacao mensal", "licenca mensal", "assinatura mensal", "parcelas mensais", "cobranca mensal"]
 _SEG_TEC = {"ti", "gestao_documental"}
+# pagamento fixo mensal que interessa: software e serviço de TI/documentos. Link de internet, telefonia, impressão,
+# equipamento, CFTV e afins também são mensais, mas não são "fixo mensal de software" (auditoria de 13/11)
+_CATS_MENSAL_SOFTWARE = {"desenvolvimento", "fabrica_software", "manutencao_software", "sustentacao", "ti_mensal", "sistemas_gestao",
+                         "dados", "ia", "cloud", "servidores", "seguranca", "suporte", "integracao", "ged", "ocr", "digitalizacao",
+                         "indexacao", "triagem", "guarda", "higienizacao"}
 
 
 def remuneracao(texto: str, itens: list[tuple[str | None, str | None]], categorias: list[dict],
@@ -498,7 +503,7 @@ def remuneracao(texto: str, itens: list[tuple[str | None, str | None]], categori
             ts.append(f"unidade {extra.strip()}")
         if ts:
             achados[cod] = ts
-    if any(c["segmento"] in _SEG_TEC for c in categorias):
+    if any(c["codigo"] in _CATS_MENSAL_SOFTWARE for c in categorias):
         ts = [x for x in _FIXO if x in tudo or any(x in u for u in unids)]
         if any(set(u.split()) & _MES for u in unids):
             ts.append("itens cobrados por mês")
