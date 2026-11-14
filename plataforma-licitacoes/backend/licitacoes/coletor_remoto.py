@@ -120,13 +120,14 @@ def _texto_ja_baixado(lic: Licitacao) -> bool:
 def relevantes(s: Session, limite: int) -> list[Licitacao]:
     """Editais cujo edital/termo de referência vale baixar e ler: categoria prioritária ou indício de UST, ponto de
     função, pagamento mensal, horas técnicas ou digitalização; a partir de R$ 300 mil (ou sem valor divulgado);
-    serviço. Os que já têm texto (pacote anterior) ficam de fora, para cada execução ler editais novos."""
+    serviço. Foco (fábrica, desenvolvimento, manutenção, sustentação, documental) entra em qualquer valor e vem primeiro.
+    Os que já têm texto (pacote anterior) ficam de fora, para cada execução ler editais novos."""
     prio = set(config().prioritarias)
     abertas = s.query(Licitacao).filter(coleta.abertas_filtro(), Licitacao.cnpj_orgao.isnot(None),
                                         Licitacao.sequencial.isnot(None)).all()
     cand = [lic for lic in abertas
             if (any(c["codigo"] in prio for c in lic.categorias or []) or _indicio(lic))
-            and (lic.valor_estimado is None or float(lic.valor_estimado) >= 300_000) and natureza(lic.objeto) != "material"
+            and (_foco(lic) or lic.valor_estimado is None or float(lic.valor_estimado) >= 300_000) and natureza(lic.objeto) != "material"
             and not _texto_ja_baixado(lic)]
     cand.sort(key=lambda x: (-_indicio(x), -(x.aderencia or 0), -float(x.valor_estimado or 0)))
     return cand[:limite]
@@ -143,7 +144,19 @@ _CATS_INDICIO = {"remun_ust", "remun_pf", "remun_fixo_mensal", "digitalizacao", 
                  "triagem", "guarda", "higienizacao", "restauracao", "ocr"}
 
 
+# foco do usuário (14/11): fábrica, desenvolvimento, manutenção, sustentação e gestão documental são lidos primeiro
+# e em qualquer valor (contrato pequeno de digitalização ou manutenção também interessa)
+_CATS_FOCO = {"desenvolvimento", "fabrica_software", "manutencao_software", "sustentacao", "digitalizacao", "indexacao", "ged",
+              "triagem", "guarda", "higienizacao", "restauracao", "ocr", "remun_ust", "remun_pf"}
+
+
+def _foco(lic: Licitacao) -> bool:
+    return any(c["codigo"] in _CATS_FOCO for c in lic.categorias or [])
+
+
 def _indicio(lic: Licitacao) -> int:
+    if _foco(lic):
+        return 3
     if any(c["codigo"] in _CATS_INDICIO for c in lic.categorias or []):
         return 2
     return 1 if _INDICIO.search(normalizar(f"{lic.objeto} {lic.informacao_complementar or ''}")) else 0

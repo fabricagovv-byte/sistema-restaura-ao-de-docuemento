@@ -150,10 +150,14 @@ def test_relevantes_le_editais_novos_com_indicio(banco):
     _, pequeno = coleta.gravar(s, _registro(chave="pncp:12345678000190-1-000010/2026", numero_controle_pncp="12345678000190-1-000010/2026",
                                             sequencial=10, numero_compra="10/2026", objeto="Fábrica de software por pontos de função",
                                             valor_estimado=50_000.0), pncp)
+    _, mensal = coleta.gravar(s, _registro(chave="pncp:12345678000190-1-000011/2026", numero_controle_pncp="12345678000190-1-000011/2026",
+                                           sequencial=11, numero_compra="11/2026", objeto="Locação mensal de software de folha de pagamento",
+                                           valor_estimado=50_000.0), pncp)
     s.add(Documento(licitacao_id=lido.id, sequencial=1, titulo="Edital", tipo="edital", url="https://x/1", status="baixado",
                     caminho="documentos/x/1.paginas.json"))
     s.commit()
     r = [x.id for x in relevantes(s, 10)]
     assert ust.id in r            # indício de UST, acima de R$ 300 mil
     assert lido.id not in r       # texto já veio do pacote anterior
-    assert pequeno.id not in r    # abaixo de R$ 300 mil
+    assert pequeno.id in r        # foco (fábrica de software): entra em qualquer valor (14/11)
+    assert mensal.id not in r     # fora do foco e abaixo de R$ 300 mil
