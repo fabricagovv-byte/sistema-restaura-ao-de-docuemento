@@ -51,7 +51,7 @@ que já verifica o critério hoje; "—" quando ainda não há teste (planejado 
 | 004.3 | Período filtrado em dias do calendário de Brasília | `test_periodo_usa_o_dia_de_brasilia` | — |
 | 004.4 | CSV abre no Excel em português, não executa fórmula vinda de texto do usuário, não leva descrição nem nome do solicitante, e cada exportação fica auditada | `test_csv_formato_minimizacao_e_auditoria`, `test_csv_neutraliza_formula_em_texto_do_usuario`, `test_exportacao_respeita_o_limite` | 6, 10 |
 | 004.5 | Só o gestor vê o painel e exporta | `test_so_o_gestor_ve_e_exporta` | 1 |
-| 004.6 | Painel no navegador | — (dia 7) | 6 |
+| 004.6 | Painel no navegador | `test_acessibilidade_e_responsividade_das_telas` (dia 7) | 6 |
 
 ## REQ-005 — Auditoria
 

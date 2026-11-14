@@ -1,0 +1,28 @@
+# Acessibilidade e responsividade — dia 7 — 2026-11-14T08:52:23-03:00
+commit: 2b214973176c0fc4a72efc550d6adb4e7104ce74
+roteiro: tests/navegador/acessibilidade.js (axe-core, regras WCAG 2.0/2.1 A e AA), chamado por tests/test_e2e_navegador.py; servidor local, SQLite temporário, dados fictícios
+
+ok 1280px entrar: 0 graves/críticas, 0 moderadas/leves
+ok 1280px recuperar acesso: 0 graves/críticas, 0 moderadas/leves
+ok 1280px solicitante: minhas solicitações: 0 graves/críticas, 0 moderadas/leves
+ok 1280px solicitante: nova solicitação: 0 graves/críticas, 0 moderadas/leves
+ok 1280px solicitante: formulário com erros: 0 graves/críticas, 0 moderadas/leves
+ok 1280px solicitante: detalhe: 0 graves/críticas, 0 moderadas/leves
+ok 1280px gestor: solicitações: 0 graves/críticas, 0 moderadas/leves
+ok 1280px gestor: detalhe com tramitar, atribuir, anexos, histórico e auditoria: 0 graves/críticas, 0 moderadas/leves
+ok 1280px gestor: painel gerencial: 0 graves/críticas, 0 moderadas/leves
+ok 1280px gestor: auditoria: 0 graves/críticas, 0 moderadas/leves
+ok 1280px administrador: usuários: 0 graves/críticas, 0 moderadas/leves
+ok 390px entrar: 0 graves/críticas, 0 moderadas/leves
+ok 390px recuperar acesso: 0 graves/críticas, 0 moderadas/leves
+ok 390px solicitante: minhas solicitações: 0 graves/críticas, 0 moderadas/leves
+ok 390px solicitante: nova solicitação: 0 graves/críticas, 0 moderadas/leves
+ok 390px solicitante: formulário com erros: 0 graves/críticas, 0 moderadas/leves
+ok 390px solicitante: detalhe: 0 graves/críticas, 0 moderadas/leves
+ok 390px gestor: solicitações: 0 graves/críticas, 0 moderadas/leves
+ok 390px gestor: detalhe com tramitar, atribuir, anexos, histórico e auditoria: 0 graves/críticas, 0 moderadas/leves
+ok 390px gestor: painel gerencial: 0 graves/críticas, 0 moderadas/leves
+ok 390px gestor: auditoria: 0 graves/críticas, 0 moderadas/leves
+ok 390px administrador: usuários: 0 graves/críticas, 0 moderadas/leves
+acessibilidade aprovada: 22 telas sem violação grave ou crítica e sem rolagem lateral
+1 passed, 1 deselected in 9.38s

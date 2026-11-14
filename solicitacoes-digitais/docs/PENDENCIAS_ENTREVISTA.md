@@ -33,6 +33,7 @@ as premissas abaixo, registradas como tal. Nada aqui foi inventado como fato.
 | Entrega | O que falta | Situação |
 |---|---|---|
 | D5-B — validação dos requisitos com as respostas da entrevista | Respostas das perguntas 1 a 10 e leitura de `docs/CRITERIOS_ACEITE.md` por responsável do contratante | Critérios detalhados entregues; validação pendente; declaradas 6 de 13 UST base |
+| D7-B — indicadores e relatórios gerenciais | Validar os 15 indicadores e os 4 relatórios propostos em `docs/INDICADORES.md` (seção 5) | Especificação entregue; validação pendente |
 
 ## Premissas adotadas até a entrevista
 

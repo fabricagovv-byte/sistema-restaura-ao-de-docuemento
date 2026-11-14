@@ -577,6 +577,85 @@
       },
       "ajustada_verificada": 24,
       "revisor_independente": "PENDENTE — indicar pessoa da contratante"
+    },
+    "D7-A": {
+      "dia": 7,
+      "item": "M-03",
+      "entrega": "Frontend: painel gerencial, acessibilidade e responsividade",
+      "base_planejada": 25,
+      "ajustada_planejada": 75,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-14T08:45:45-03:00",
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-14T08:52:55-03:00",
+      "evidencias": [
+        {
+          "arquivo": "solicitacoes/web/app.js",
+          "sha256": "8443afa51e421e2695c490e36530ac6bcb1301e7e93c9fd61968d589bc21fa8c",
+          "bytes": 43651
+        },
+        {
+          "arquivo": "solicitacoes/web/app.css",
+          "sha256": "a1ed4609a2f82c809fc9b13fdd28f0bdf42e6b8d7a733dc5b5d931472a2e547a",
+          "bytes": 6550
+        },
+        {
+          "arquivo": "tests/navegador/acessibilidade.js",
+          "sha256": "5440dcfff2def1ac91136664cd0138f328f3f15b4f2d013e9cf00ebc56490724",
+          "bytes": 5209
+        },
+        {
+          "arquivo": "tests/test_e2e_navegador.py",
+          "sha256": "a6be2fd9d40913b363a85c65f5111ff7f8b8dbc549401e25cf92be159bc1dffb",
+          "bytes": 1537
+        },
+        {
+          "arquivo": "tests/servidor_local.py",
+          "sha256": "4630117dd6b37fc470a31a74efba29a731d54c90495aa034f1247f0aef688348",
+          "bytes": 2765
+        },
+        {
+          "arquivo": "medicao/evidencias/navegador-dia07.txt",
+          "sha256": "4fb55bc26693f22fa86b61bc3052c0f364c7edea1ac5bd4451de6412f269e133",
+          "bytes": 2107
+        }
+      ],
+      "commit_base": "2b214973176c0fc4a72efc550d6adb4e7104ce74",
+      "base_declarada": 25,
+      "ajustada_declarada": 75,
+      "observacao": "tela Painel do gestor (filtros, 6 indicadores, 4 tabelas com barras, quadro de prazo, exportação CSV); acessibilidade verificada com axe-core em 11 telas x 2 larguras (22), sem violação grave ou crítica e sem rolagem lateral; uma violação real encontrada e corrigida (tabela rolável sem foco por teclado)",
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia07.txt",
+        "sha256": "b1fb85a1a8a6460bced7d83554db446adbf0eb56919537a5a8cf3909951f2b54",
+        "em": "2026-11-14T08:52:55-03:00"
+      },
+      "ajustada_verificada": 75,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
+    },
+    "D7-B": {
+      "dia": 7,
+      "item": "M-01",
+      "entrega": "Especificação dos indicadores e relatórios gerenciais",
+      "base_planejada": 10,
+      "ajustada_planejada": 20,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-14T08:50:32-03:00",
+      "situacao": "DECLARADA",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-14T08:52:55-03:00",
+      "evidencias": [
+        {
+          "arquivo": "docs/INDICADORES.md",
+          "sha256": "57747e3eb8761729ab54da89b60b722a66247f68025e4a4dd722cadae4a4331e",
+          "bytes": 6214
+        }
+      ],
+      "commit_base": "2b214973176c0fc4a72efc550d6adb4e7104ce74",
+      "base_declarada": 10,
+      "ajustada_declarada": 20,
+      "observacao": "15 indicadores especificados (definição, fórmula, campo da API e teste que prova), regras comuns (universo, período em Brasília, atendida x cancelada, finalização pela última entrada no estado final), relatório CSV e 4 relatórios propostos; implementados na API e na tela; validação com o contratante pendente (pergunta 6 da entrevista)"
     }
   }
 }

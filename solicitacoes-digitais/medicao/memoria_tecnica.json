@@ -208,5 +208,37 @@
     "tests/test_e2e_navegador.py"
    ]
   ]
+ },
+ "7": {
+  "camadas": [
+   [
+    "Arquitetura e regras de negócio",
+    "15 indicadores gerenciais especificados com regras comuns (universo sem arquivadas por padrão, período em dias de Brasília, atendida = concluída ou indeferida, finalização pela última entrada no estado final, prazo em dias corridos) em docs/INDICADORES.md; relatório CSV especificado; 4 relatórios propostos para a entrevista."
+   ],
+   [
+    "Banco de dados",
+    "Sem mudança de esquema no dia 7 (versão 4)."
+   ],
+   [
+    "Backend",
+    "Sem rota nova: a tela usa /painel/indicadores e /painel/exportacao.csv. 95 testes em SQLite e PostgreSQL, incluindo ponta a ponta e acessibilidade no navegador."
+   ],
+   [
+    "Frontend",
+    "Tela Painel do gestor: filtros, 6 indicadores em destaque, tabelas por situação, prioridade, categoria e responsável com o número escrito e barra apenas visual, quadro de prazo e exportação CSV com os mesmos filtros. Acessibilidade: tabelas roláveis focáveis pelo teclado e com nome de região, barras ocultas para leitor de tela, respeito a movimento reduzido."
+   ],
+   [
+    "Integração e infraestrutura",
+    "Verificação automática de acessibilidade com axe-core (WCAG 2.0/2.1 A e AA) em 11 telas, 4 perfis, 1280 e 390 px; servidor local dos testes no navegador isolado em tests/servidor_local.py; axe-core instalado por npm em tests/navegador (package.json)."
+   ]
+  ],
+  "mudancas": [
+   [
+    "Teste de acessibilidade injeta o axe-core com bypassCSP só no contexto do teste",
+    "A CSP das telas bloqueia script embutido; as páginas continuam servidas com a CSP, conferida em test_web.py",
+    "Decisão técnica",
+    "tests/navegador/acessibilidade.js"
+   ]
+  ]
  }
 }
