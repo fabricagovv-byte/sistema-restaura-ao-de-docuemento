@@ -72,6 +72,22 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .grow + .grow { padding-top: 2px; }
 .chips button.gchip { font-weight: 800; border-width: 2px; }
 .chips button.sub { font-weight: 500; font-size: .8rem; }
+.panel { position: relative; }
+.panel > .esconder { position: absolute; top: 10px; right: 12px; font: 600 .78rem var(--f-body); color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; cursor: pointer; }
+.panel > h2:first-of-type { padding-right: 96px; }
+.panel-nome { display: none; margin: 0; font-weight: 700; padding-right: 96px; }
+.panel.fechado { gap: 0; }
+.panel.fechado > :not(h2):not(.esconder):not(.panel-nome) { display: none !important; }
+.panel.fechado > h2 ~ h2, .panel.fechado > h3 { display: none !important; }
+.panel.fechado > .panel-nome { display: block; }
+.barra-paineis { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+.foco-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.foco-lista li { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; display: grid; gap: 4px; cursor: pointer; }
+.foco-lista li:hover, .foco-lista li:focus-visible { border-color: var(--accent); }
+.foco-lista .linha { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; font-size: .85rem; color: var(--muted); }
+.foco-lista .linha b { color: var(--ink); font-size: .95rem; }
+.foco-lista p { margin: 0; overflow-wrap: anywhere; }
 .funil { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
 .funil li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 6px 10px;
   border-radius: 8px; background: var(--accent-soft); }
@@ -212,7 +228,6 @@ ul.check label b { font-weight: 600; }
 .previa .docs a, .previa .docs li { overflow-wrap: anywhere; word-break: break-word; }
 .previa { grid-template-columns: minmax(0, 1fr); overflow-x: hidden; } .previa > * { min-width: 0; } .previa .acoes { flex-wrap: wrap; } .previa table { table-layout: fixed; } .previa td:first-child { overflow-wrap: anywhere; } .previa .num { width: 92px; }
 .previa-topo { display: flex; justify-content: space-between; gap: 8px; align-items: start; }
-.previa-fechar { display: none; }
 @media (min-width: 1100px) {
   .wrap { max-width: 1380px; }
   .area-lista.com-previa { grid-template-columns: minmax(0, 1fr) 430px; align-items: start; }
@@ -283,6 +298,7 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
 
   <section class="kpis" id="kpis" aria-label="Números da coleta"></section>
 
+  <div class="barra-paineis"><button type="button" class="mais" id="paineis-fechar">Esconder todos os painéis</button><button type="button" class="mais" id="paineis-abrir">Mostrar todos</button></div>
   <section class="panel destaques" id="destaques-sec" aria-labelledby="h-destaques">
     <div class="vista-barra"><h2 id="h-destaques" style="margin:0">Em destaque: pregões de grande volume</h2>
       <label class="marca"><input type="checkbox" id="dst-so-pregao" checked> Só pregões</label></div>
@@ -300,6 +316,16 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
     <div class="acoes"><button type="button" class="abrir" id="funil-ver">Ver na lista</button></div>
     <h3 style="margin:.4rem 0 0">As melhores</h3>
     <ol class="funil-top" id="funil-top"></ol>
+  </section>
+  <section class="panel" id="foco-sec" aria-labelledby="h-foco">
+    <h2 id="h-foco">Seu foco</h2>
+    <p class="lede">Fábrica de software, desenvolvimento, manutenção, sustentação e digitalização: todas as abertas de cada área, inclusive as que só citam a área no objeto, nos itens ou no edital. Compra de material fica de fora.</p>
+    <div class="chips" id="foco-areas" role="group" aria-label="Área"></div>
+    <div class="acoes"><label for="foco-ord">Ordenar<select id="foco-ord"><option value="prazo">Prazo mais próximo</option><option value="nota">Melhor nota</option><option value="valor">Maior valor</option></select></label>
+      <button type="button" class="abrir" id="foco-ver">Ver na lista principal</button></div>
+    <p class="conta" id="foco-conta" aria-live="polite"></p>
+    <ul class="foco-lista" id="foco-lista"></ul>
+    <button type="button" class="mais" id="foco-mais" hidden>Mostrar mais</button>
   </section>
   <section class="panel" id="cal-sec" aria-labelledby="h-cal">
     <div class="vista-barra"><h2 id="h-cal" style="margin:0">Calendário de oportunidades premiadas</h2>
@@ -926,6 +952,81 @@ document.getElementById("funil-ver").addEventListener("click", () => {
   render(); document.getElementById("lista").scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
+/* ---------- esconder/mostrar painéis (lembra neste navegador) */
+let fechados = [];
+try { fechados = JSON.parse(localStorage.getItem("paineis-fechados") || "[]"); } catch (e) { fechados = []; }
+const chavePainel = (sec, i) => sec.id || (sec.getAttribute("aria-labelledby") || sec.getAttribute("aria-label") || "painel-" + i);
+function marcarPainel(sec, fechar) {
+  sec.classList.toggle("fechado", fechar);
+  const b = sec.querySelector(":scope > .esconder");
+  b.textContent = fechar ? "Mostrar" : "Esconder"; b.setAttribute("aria-expanded", String(!fechar));
+}
+function guardarFechados() { try { localStorage.setItem("paineis-fechados", JSON.stringify(fechados)); } catch (e) { /* sem armazenamento */ } }
+document.querySelectorAll("main section.panel, body > section.panel, section.panel").forEach((sec, i) => {
+  if (sec.querySelector(":scope > .esconder")) return;
+  const k = chavePainel(sec, i), titulo = sec.querySelector(":scope > h2");
+  const nome = titulo ? titulo.textContent : (sec.querySelector("h2") || {}).textContent || sec.getAttribute("aria-label") || "Painel";
+  if (!titulo) { const pn = document.createElement("p"); pn.className = "panel-nome"; pn.textContent = nome; sec.prepend(pn); }
+  const b = document.createElement("button"); b.type = "button"; b.className = "esconder"; b.dataset.painel = k;
+  b.setAttribute("aria-label", "Esconder ou mostrar: " + nome); sec.prepend(b);
+  b.addEventListener("click", () => {
+    const fechar = !sec.classList.contains("fechado"); marcarPainel(sec, fechar);
+    fechados = fechar ? [...new Set([...fechados, k])] : fechados.filter((x) => x !== k); guardarFechados();
+  });
+  marcarPainel(sec, fechados.includes(k));
+});
+document.getElementById("paineis-fechar").addEventListener("click", () => {
+  fechados = []; document.querySelectorAll("section.panel").forEach((sec) => { marcarPainel(sec, true); fechados.push(sec.querySelector(":scope > .esconder").dataset.painel); });
+  guardarFechados();
+});
+document.getElementById("paineis-abrir").addEventListener("click", () => {
+  fechados = []; document.querySelectorAll("section.panel").forEach((sec) => marcarPainel(sec, false)); guardarFechados();
+});
+
+/* ---------- seu foco */
+const AREAS = [
+  ["fabrica", "Fábrica de software (UST/PF)", ["fabrica_software", "remun_ust", "remun_pf"]],
+  ["desenvolvimento", "Desenvolvimento", ["desenvolvimento"]],
+  ["manutencao", "Manutenção de software", ["manutencao_software"]],
+  ["sustentacao", "Sustentação", ["sustentacao"]],
+  ["documental", "Digitalização e gestão documental", ["digitalizacao", "indexacao", "ged", "ocr", "triagem", "guarda", "higienizacao", "restauracao"]],
+];
+let focoArea = "fabrica", focoLim = 30;
+const naArea = (x, a) => x.ms !== "material" && x.c.some((c) => (AREAS.find(([k]) => k === a) || [, , []])[2].includes(c));
+function listaArea(a) {
+  const agora = new Date();
+  const r = itens.filter((x) => x.det && (!x.enc || new Date(x.enc) >= agora) && naArea(x, a));
+  const o = document.getElementById("foco-ord").value;
+  if (o === "nota") r.sort((p, q) => notaOportunidade(q).nota - notaOportunidade(p).nota);
+  else if (o === "valor") r.sort((p, q) => (q.v || 0) - (p.v || 0));
+  else r.sort((p, q) => (p.enc || "9") < (q.enc || "9") ? -1 : 1);
+  return r;
+}
+function renderFoco() {
+  document.getElementById("foco-areas").innerHTML = AREAS.map(([k, n]) =>
+    `<button type="button" data-area="${k}" aria-pressed="${k === focoArea}">${esc(n)} <span style="opacity:.7">${fmt(listaArea(k).length)}</span></button>`).join("");
+  const r = listaArea(focoArea);
+  const soma = r.reduce((s, x) => s + (x.v || 0), 0);
+  document.getElementById("foco-conta").textContent = `${fmt(r.length)} abertas · soma dos valores divulgados ${brl(soma)}`;
+  document.getElementById("foco-lista").innerHTML = r.slice(0, focoLim).map((x) => { const s = notaOportunidade(x), d = dias(x.enc);
+    return `<li tabindex="0" data-foco="${x.id}"><div class="linha"><b>${esc(x.o)}</b><span>${esc(x.m || "")}${x.uf ? " – " + esc(x.uf) : ""}</span>
+      <span>${brl(x.v)}</span><span>até ${x.enc ? dataHora(x.enc) : "—"}</span>${prazoPill(d)}<span class="pill p-acc">nota ${s.nota}</span></div>
+      <p>${esc((x.obj || "").slice(0, 260))}</p>
+      <div class="acoes">${x.vol && Object.keys(x.vol).length ? pillsVol(x) : ""}${pillsCat(x)}</div></li>`; }).join("")
+    || `<li class="conta">Nenhuma aberta nesta área agora.</li>`;
+  document.getElementById("foco-mais").hidden = r.length <= focoLim;
+}
+document.getElementById("foco-areas").addEventListener("click", (e) => { const b = e.target.closest("[data-area]"); if (!b) return; focoArea = b.dataset.area; focoLim = 30; renderFoco(); });
+document.getElementById("foco-ord").addEventListener("change", () => { focoLim = 30; renderFoco(); });
+document.getElementById("foco-mais").addEventListener("click", () => { focoLim += 30; renderFoco(); });
+const abrirFoco = (e) => { const it = e.target.closest("[data-foco]"); if (!it) return; mostrarPrevia(it.dataset.foco); document.getElementById("previa").scrollIntoView({ behavior: "smooth", block: "nearest" }); };
+document.getElementById("foco-lista").addEventListener("click", abrirFoco);
+document.getElementById("foco-lista").addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); abrirFoco(e); } });
+document.getElementById("foco-ver").addEventListener("click", () => {
+  estado.cat = "foco:" + focoArea; estado.tipo = "todos"; estado.limite = 40; document.getElementById("tipo").value = "todos";
+  render(); document.getElementById("lista").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
 function renderCalendario() {
   const agora = new Date(), limite = new Date(agora.getFullYear() + 1, agora.getMonth() + 1, 1);
   const min = notaMin();
@@ -1021,7 +1122,7 @@ function card(x) {
 function render() {
   cEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.c === estado.cat)));
   ufEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.u === estado.uf)));
-  let r = itens.filter((x) => (estado.cat === "todas" || (estado.cat === "seg" ? x.det : estado.cat === "meucrm" ? !!registro(x.id) : estado.cat === "marc" ? marcadoresEdital(x).length > 0 : estado.cat === "premiadas" ? notaOportunidade(x).nota >= notaMin() : estado.cat === "gv" ? (x.gv || []).length > 0 : estado.cat === "foco" ? x.c.some((c) => PRIO.includes(c)) : estado.cat === "funil" ? funilOk(x) : naCategoria(x, estado.cat)))
+  let r = itens.filter((x) => (estado.cat === "todas" || (estado.cat === "seg" ? x.det : estado.cat === "meucrm" ? !!registro(x.id) : estado.cat === "marc" ? marcadoresEdital(x).length > 0 : estado.cat === "premiadas" ? notaOportunidade(x).nota >= notaMin() : estado.cat === "gv" ? (x.gv || []).length > 0 : estado.cat === "foco" ? x.c.some((c) => PRIO.includes(c)) : estado.cat === "funil" ? funilOk(x) : estado.cat.startsWith("foco:") ? naArea(x, estado.cat.slice(5)) : naCategoria(x, estado.cat)))
     && (!estado.uf || x.uf === estado.uf) && (!estado.plat || (x.plat || "Não identificado") === estado.plat)
     && (!estado.q || casaBusca(x.busca, estado.pb))
     && tipoOk(x) && (!estado.dmax || (distSede(x) ?? Infinity) <= estado.dmax)
@@ -2013,7 +2114,7 @@ function ligarCalc(raiz) {
 }
 function renderCalcSecao() { const r = document.getElementById("calc-corpo"); if (!r) return; r.innerHTML = calcHtml("secao", null); ligarCalc(r); }
 
-montarChips(); render(); renderAv(); doHash(); renderDestaques(); renderCalendario(); renderFunil();
+montarChips(); render(); renderAv(); doHash(); renderDestaques(); renderCalendario(); renderFunil(); renderFoco();
 setTimeout(carregarTodas, 50);
 renderConfig(); renderModelo(); renderMarcadores(); renderCrm(); renderCalcSecao(); iniciarStore();
 </script>
