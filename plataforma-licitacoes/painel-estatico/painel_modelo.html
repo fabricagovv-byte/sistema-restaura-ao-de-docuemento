@@ -235,6 +235,27 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
 .faixa-destaque { justify-self: start; font-size: .74rem; font-weight: 700; color: #7a5600; background: #ffe9a8; border-radius: 999px; padding: 2px 10px; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .faixa-destaque { color: #ffe08a; background: #4a3a10; } }
 :root[data-theme="dark"] .faixa-destaque { color: #ffe08a; background: #4a3a10; }
+.cal-grade { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.cal-dow { font-size: .72rem; color: var(--muted); text-align: center; font-weight: 700; }
+.cal-dia { min-height: 54px; border: 1px solid var(--line); border-radius: 6px; padding: 3px 5px; font: inherit; color: inherit; background: var(--surface); text-align: left; display: grid; align-content: start; gap: 1px; }
+.cal-dia[disabled] { opacity: .35; }
+.cal-dia .n { font-size: .78rem; color: var(--muted); }
+.cal-dia .q { font-weight: 800; color: var(--accent); font-size: 1rem; }
+.cal-dia.tem { cursor: pointer; border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+.cal-dia.hoje { outline: 2px solid var(--accent); }
+.cal-dia[aria-pressed="true"] { background: var(--accent-soft); }
+.cal-item { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 10px; align-items: start; padding: 8px 4px; border-top: 1px solid var(--line); cursor: pointer; }
+.cal-item:hover { background: var(--accent-soft); }
+.nota { font-weight: 800; font-size: 1.05rem; text-align: center; border-radius: 8px; padding: 4px 0; background: var(--accent-soft); color: var(--accent); }
+.nota small { display: block; font-size: .65rem; font-weight: 600; color: var(--muted); }
+.cal-item p { margin: 0; overflow-wrap: anywhere; }
+.cal-item .o { font-size: .8rem; color: var(--muted); }
+.cal-item .v { text-align: right; font-size: .85rem; white-space: nowrap; }
+.marca-item { display: inline-block; font-size: .68rem; font-weight: 700; border-radius: 999px; padding: 0 7px; margin: 1px 2px 0 0; background: #e6f0fb; color: #164e7d; white-space: nowrap; }
+.marca-item.minha { background: #fde8c8; color: #7a4300; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .marca-item { background: #1d3550; color: #b9d8f5; } :root:not([data-theme="light"]) .marca-item.minha { background: #4a3210; color: #ffd9a3; } }
+:root[data-theme="dark"] .marca-item { background: #1d3550; color: #b9d8f5; } :root[data-theme="dark"] .marca-item.minha { background: #4a3210; color: #ffd9a3; }
+@media (max-width: 640px) { .cal-dia { min-height: 40px; padding: 2px 3px; } .cal-dia .q { font-size: .85rem; } .cal-item { grid-template-columns: 44px minmax(0, 1fr); } .cal-item .v { grid-column: 2; text-align: left; } }
 </style>
 
 <div class="wrap">
@@ -251,6 +272,15 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
       <label class="marca"><input type="checkbox" id="dst-so-pregao" checked> Só pregões</label></div>
     <p class="dica" style="margin:0">Editais abertos com muita UST, ponto de função, horas técnicas (HST), páginas de digitalização ou pagamento fixo mensal de software. Quantidades somadas dos itens do PNCP ou, quando os itens não trazem, lidas no objeto e no termo de referência ("pelo edital"); clique para a prévia.</p>
     <div class="destaques-grade" id="destaques"></div>
+  </section>
+
+  <section class="panel" id="cal-sec" aria-labelledby="h-cal">
+    <div class="vista-barra"><h2 id="h-cal" style="margin:0">Calendário de oportunidades premiadas</h2>
+      <label class="marca">Nota mínima <input type="number" id="cal-min" min="0" max="100" step="5" value="55" style="width:72px"></label></div>
+    <p class="dica" style="margin:0">Nota de 0 a 100 por licitação aberta: volume de UST, ponto de função, horas técnicas e páginas, fixo mensal de software, seu foco, valor, aderência, pregão, prazo para preparar e seus marcadores. Premiada = nota igual ou acima da mínima. Dias pela data de encerramento das propostas.</p>
+    <div class="chips" id="cal-meses" role="group" aria-label="Mês"></div>
+    <div class="cal-grade" id="cal-grade" role="grid" aria-label="Dias do mês"></div>
+    <div id="cal-lista"></div>
   </section>
 
   <section class="panel" aria-label="Filtros">
@@ -305,6 +335,19 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
     <h2 id="h-calc">Calculadora</h2>
     <p class="dica">Preço de venda com despesas, impostos e lucro (BDI), UST, digitalização por página, fixo mensal e lance. Dentro de cada pregão, a aba <b>Calculadora</b> já vem com os números do edital.</p>
     <div id="calc-corpo"></div>
+  </section>
+
+  <section class="panel" id="marc-sec" aria-labelledby="h-marc">
+    <h2 id="h-marc">Meus marcadores</h2>
+    <p class="dica">Termos seus que marcam itens e editais (ex.: <b>Sustentação SEI</b> com os termos <i>sei; sistema eletronico de informacoes</i>). Os marcados ganham etiqueta, entram no filtro "Com meus marcadores" e sobem na nota das oportunidades premiadas. UST, ponto de função, hora técnica, páginas e mensal já vêm marcados.</p>
+    <p class="conta" id="marc-estado"></p>
+    <div class="tabela pisos"><table><thead><tr><th>Nome do marcador</th><th>Termos (separe com ponto e vírgula)</th><th></th></tr></thead><tbody id="marc-linhas"></tbody></table></div>
+    <div class="acoes">
+      <button type="button" class="abrir" id="marc-add">Adicionar marcador</button>
+      <label class="abrir" style="display:inline-block;text-transform:none;letter-spacing:0;color:var(--surface);font-size:.82rem">Subir planilha (CSV)<input type="file" id="marc-arquivo" accept=".csv,.txt,text/csv,text/plain" hidden></label>
+      <button type="button" class="salvar" id="marc-salvar">Salvar marcadores</button>
+    </div>
+    <p class="dica">Planilha: uma linha por marcador, colunas <b>nome; termos</b> (termos separados por | ou vírgula). Ex.: <code>Sustentação SEI; sei | sistema eletronico de informacoes</code></p>
   </section>
 
   <section class="panel" id="config-sec" aria-labelledby="h-config">
@@ -411,7 +454,7 @@ async function carregarTodas() {
     }
   } catch (e) { console.warn("lista completa indisponível", e); }
   todasProntas = true;
-  montarChips(); montarPortais(); render(); doHash();
+  montarChips(); montarPortais(); render(); doHash(); renderCalendario();
 }
 
 const valorTotal = itens.reduce((s, x) => s + (x.v || 0), 0);
@@ -456,13 +499,12 @@ function montarChips() {
   const nFoco = itens.filter((x) => x.c.some((c) => PRIO.includes(c))).length;
   const nSeg = itens.filter((x) => x.det).length;
   const nGv = itens.filter((x) => (x.gv || []).length).length;
-  const chips = [["foco", "Seu foco", fmt(nFoco)], ["seg", "Tecnologia, documentos, EAD e pesquisa", fmt(nSeg)], ["gv", "Grande volume (UST, PF, páginas, dados, mensal)", fmt(nGv)], ["meucrm", "No meu CRM", fmt(Object.keys(store.data).filter((k) => k[0] === "e").length)],
+  const chips = [["foco", "Seu foco", fmt(nFoco)], ["seg", "Tecnologia, documentos, EAD e pesquisa", fmt(nSeg)], ["gv", "Grande volume (UST, PF, páginas, dados, mensal)", fmt(nGv)], ["meucrm", "No meu CRM", fmt(Object.keys(store.data).filter((k) => k[0] === "e").length)], ["marc", "Com meus marcadores", fmt(itens.filter((x) => marcadoresEdital(x).length).length)], ["premiadas", "Premiadas", fmt(itens.filter((x) => notaOportunidade(x).nota >= notaMin()).length)],
     ["todas", "Todas as licitações do Brasil", todasProntas ? fmt(itens.length) : "carregando…"]]
     .concat([...new Set([...PAGTO, ...PRIO.filter((c) => CATS[c]), ...Object.keys(CATS)])].filter((c) => contagem[c]).map((c) => [c, CATS[c], fmt(contagem[c])]));
   cEl.innerHTML = chips.map(([c, n, k]) => `<button type="button" id="cat-${c}" data-c="${c}">${esc(n)} <span style="opacity:.7">${k}</span></button>`).join("");
   cEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.c === estado.cat)));
 }
-montarChips();
 cEl.addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; estado.cat = b.dataset.c; estado.limite = 40; render(); });
 
 const ufsTodas = Object.keys(D.por_uf).sort();
@@ -584,7 +626,7 @@ function previaHtml(x) {
     <div class="acoes">${x.c.map((c) => `<span class="pill p-off">${esc(CATS[c] || c)}</span>`).join("")}</div>
     ${tipo ? blocoItensTipo(x) : ""}
     ${it.length ? `<div><b>Itens</b>${x.nit > it.length ? ` <span class="conta">(${it.length} de ${fmt(x.nit)})</span>` : ""}<table><tbody>${it.map(([n, d, q, u, vu, vt]) =>
-      `<tr><td>${esc(n)} · ${esc((d || "").slice(0, 80))}</td><td class="num">${q == null ? "" : fmt(q)} ${esc((u || "").trim())}</td><td class="num">${vt ? brl(vt) : vu ? brl(vu) : "sigiloso"}</td></tr>`).join("")}</tbody></table></div>`
+      `<tr><td>${esc(n)} · ${esc((d || "").slice(0, 80))}${marcasHtml(marcasItem(d, u, (x.it.find((i) => i[0] === n) || [])[6]))}</td><td class="num">${q == null ? "" : fmt(q)} ${esc((u || "").trim())}</td><td class="num">${vt ? brl(vt) : vu ? brl(vu) : "sigiloso"}</td></tr>`).join("")}</tbody></table></div>`
       : `<p class="conta" style="margin:0">${x.det ? "Itens ainda não coletados." : "Itens no PNCP (abra a ficha)."}</p>`}
     ${docs.length ? `<div><b>Documentos</b><ul class="docs" style="margin:4px 0 0">${docs.map(([tt, tp, url]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener">⬇ ${esc(tt)}</a></li>`).join("")}</ul></div>` : ""}
     ${resumoPisos(x)}
@@ -730,6 +772,129 @@ document.getElementById("destaques").addEventListener("click", (e) => {
   render(); document.getElementById("lista").scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
+/* ===================== Marcas dos itens, meus marcadores, nota e calendário de oportunidades ===================== */
+const MARCAS_BASE = [
+  ["UST", (d, u, tp) => tp === "ust" || / ust | usts |unidades? de servicos? tecnicos?/.test(d) || /(^| )usts?( |$)/.test(u)],
+  ["Ponto de função", (d, u, tp) => tp === "pf" || /pontos? de funcao/.test(d) || /(^| )pf( |$)/.test(u)],
+  ["Hora técnica", (d, u, tp) => tp === "hora" || /horas? tecnicas?|horas? de servicos? tecnicos?| hst |homem hora|banco de horas/.test(d) || /(^| )(hst|hh)( |$)/.test(u)],
+  ["Páginas", (d, u, tp) => tp === "pagina"],
+  ["Mensal", (d, u, tp) => tp === "mes" || /(^| )(mes|meses|mensal|mensalidade)( |$)/.test(u) || /mensalidade| mensal /.test(d)],
+];
+function meusMarcadores() { return ((store.data.marcadores || {}).lista || []).filter((m) => m && m.nome && (m.termos || []).length); }
+function marcasItem(desc, un, tp) {
+  const d = norm(desc || ""), u = norm(un || "").trim();
+  const base = MARCAS_BASE.filter(([, f]) => f(d, u, tp)).map(([n]) => [n, false]);
+  const minhas = meusMarcadores().filter((m) => m.termos.some((t) => d.includes(norm(t)))).map((m) => [m.nome, true]);
+  return [...base, ...minhas];
+}
+const marcasHtml = (l) => l.length ? `<br>${l.map(([n, minha]) => `<span class="marca-item${minha ? " minha" : ""}">${minha ? "🏷 " : ""}${esc(n)}</span>`).join("")}` : "";
+const memoMarc = new Map();
+function marcadoresEdital(x) {
+  const lista = meusMarcadores(); if (!lista.length) return [];
+  const chave = x.id + "|" + lista.length + "|" + JSON.stringify(lista).length; if (memoMarc.has(chave)) return memoMarc.get(chave);
+  const texto = x.busca + " " + (x.it || []).map((i) => norm(i[1] || "")).join(" ");
+  const r = lista.filter((m) => m.termos.some((t) => { const n = norm(t); return n.trim() && texto.includes(n); })).map((m) => m.nome);
+  memoMarc.set(chave, r); return r;
+}
+const notaMin = () => Math.max(0, Math.min(100, Number(document.getElementById("cal-min")?.value) || 55));
+const memoNota = new Map();
+function notaOportunidade(x) {
+  if (memoNota.has(x.id)) { const m = memoNota.get(x.id); if (m.marc === meusMarcadores().length) return m; }
+  const v = x.vol || {}, mot = [];
+  let n = 0;
+  const vol = (q, lim, pts, nome) => { if (q >= lim) { n += pts; mot.push(nome); } else if (q > 0) { n += 8; mot.push(nome + " (pouco)"); } };
+  vol(v.ust || 0, 1000, 32, "UST"); vol(v.pf || 0, 300, 28, "ponto de função"); vol(v.hora || 0, 1000, 26, "horas técnicas");
+  if (x.c.some((c) => ["digitalizacao", "indexacao"].includes(c))) vol(v.pagina || 0, 100000, 26, "páginas");
+  if (x.c.includes("remun_fixo_mensal") && x.c.some((c) => SOFTWARE.includes(c))) { n += 20; mot.push("fixo mensal de software"); }
+  // sem itens coletados (comum em editais de meses à frente): a forma de pagamento e o tipo de serviço contam pela categoria
+  if (!v.ust && x.c.includes("remun_ust")) { n += 22; mot.push("UST no edital"); }
+  if (!v.pf && x.c.includes("remun_pf")) { n += 20; mot.push("ponto de função no edital"); }
+  const nucleo = ["desenvolvimento", "fabrica_software", "manutencao_software", "sustentacao", "sistemas_gestao", "dados", "ia", "cloud",
+    "digitalizacao", "indexacao", "ged", "ocr", "triagem", "suporte", "seguranca"];
+  const nNucleo = x.c.filter((c) => nucleo.includes(c)).length;
+  if (nNucleo) { n += Math.min(24, 12 * nNucleo); mot.push("serviço de " + x.c.filter((c) => nucleo.includes(c)).slice(0, 2).map((c) => (CATS[c] || c).toLowerCase()).join(" e ")); }
+  if (x.c.some((c) => PRIO.includes(c))) { n += 10; mot.push("seu foco"); }
+  const val = x.v || 0;
+  if (val >= 50e6) { n += 18; mot.push("acima de R$ 50 mi"); } else if (val >= 10e6) { n += 14; mot.push("acima de R$ 10 mi"); } else if (val >= 1e6) { n += 9; mot.push("acima de R$ 1 mi"); }
+  if (x.a != null) n += Math.round(x.a / 10);
+  if (/preg/i.test(x.mod || "")) n += 4;
+  const mk = marcadoresEdital(x); if (mk.length) { n += Math.min(30, 15 * mk.length); mot.push("seus marcadores: " + mk.join(", ")); }
+  if (x.ms === "material") n -= 25;
+  const d = dias(x.enc); if (d !== null && d < 2) { n -= 12; mot.push("pouco prazo para preparar"); }
+  const r = { nota: Math.max(0, Math.min(100, n)), motivos: mot, marc: meusMarcadores().length };
+  memoNota.set(x.id, r); return r;
+}
+let calMes = null, calDia = null;
+const mesChave = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+function renderCalendario() {
+  const agora = new Date(), limite = new Date(agora.getFullYear() + 1, agora.getMonth() + 1, 1);
+  const min = notaMin();
+  const prem = itens.filter((x) => x.enc && new Date(x.enc) >= agora && new Date(x.enc) < limite).map((x) => [x, notaOportunidade(x)]).filter(([, s]) => s.nota >= min);
+  const porMes = new Map(); prem.forEach(([x, s]) => { const k = mesChave(new Date(x.enc)); if (!porMes.has(k)) porMes.set(k, []); porMes.get(k).push([x, s]); });
+  const meses = []; for (let i = 0; i < 12; i++) meses.push(mesChave(new Date(agora.getFullYear(), agora.getMonth() + i, 1)));
+  if (!calMes || !meses.includes(calMes)) calMes = meses[0];
+  const nomeMes = (k) => new Date(k + "-15T12:00:00").toLocaleDateString("pt-BR", { month: "short", year: "numeric" });
+  document.getElementById("cal-meses").innerHTML = meses.map((k, i) => `<button type="button" data-mes="${k}" aria-pressed="${k === calMes}">${i === 0 ? "Este mês" : i === 1 ? "Mês que vem" : esc(nomeMes(k))} <span style="opacity:.7">${fmt((porMes.get(k) || []).length)}</span></button>`).join("");
+  const [ano, mes] = calMes.split("-").map(Number);
+  const prim = new Date(ano, mes - 1, 1), nd = new Date(ano, mes, 0).getDate();
+  const doMes = porMes.get(calMes) || [];
+  const porDia = new Map(); doMes.forEach(([x, s]) => { const d = new Date(x.enc).getDate(); porDia.set(d, (porDia.get(d) || 0) + 1); });
+  const dow = ["dom", "seg", "ter", "qua", "qui", "sex", "sáb"].map((d) => `<div class="cal-dow" role="columnheader">${d}</div>`).join("");
+  let cells = ""; for (let i = 0; i < prim.getDay(); i++) cells += `<div></div>`;
+  for (let d = 1; d <= nd; d++) {
+    const q = porDia.get(d) || 0, hoje = ano === agora.getFullYear() && mes === agora.getMonth() + 1 && d === agora.getDate();
+    cells += `<button type="button" class="cal-dia${q ? " tem" : ""}${hoje ? " hoje" : ""}" data-dia="${d}" aria-pressed="${calDia === d}" ${q ? "" : "disabled"} aria-label="${d} de ${esc(nomeMes(calMes))}: ${q} premiada${q === 1 ? "" : "s"}"><span class="n">${d}</span>${q ? `<span class="q">${q}</span>` : ""}</button>`;
+  }
+  document.getElementById("cal-grade").innerHTML = dow + cells;
+  const lista = doMes.filter(([x]) => !calDia || new Date(x.enc).getDate() === calDia).sort((a, b) => b[1].nota - a[1].nota || (a[0].enc < b[0].enc ? -1 : 1));
+  const medalha = (i) => i === 0 ? "🥇 " : i === 1 ? "🥈 " : i === 2 ? "🥉 " : "";
+  document.getElementById("cal-lista").innerHTML = `<p class="conta">${fmt(lista.length)} oportunidade${lista.length === 1 ? "" : "s"} premiada${lista.length === 1 ? "" : "s"} ${calDia ? `em ${calDia}/${String(mes).padStart(2, "0")}` : `em ${esc(nomeMes(calMes))}`} · soma ${curto(lista.reduce((s, [x]) => s + (x.v || 0), 0))}${calDia ? ` · <button type="button" class="mais" data-dia-limpar>ver o mês todo</button>` : ""}</p>` +
+    (lista.length ? lista.slice(0, 60).map(([x, s], i) => `<div class="cal-item" data-cal="${x.id}" tabindex="0" role="button">
+      <span class="nota" title="${esc(s.motivos.join("; "))}">${s.nota}<small>nota</small></span>
+      <div><p class="o">${medalha(i)}${new Date(x.enc).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" })} ${new Date(x.enc).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })} · ${esc(x.o)} · ${esc(x.uf)} · ${esc(x.mod || "")}</p>
+        <p>${esc((x.obj || "").slice(0, 200))}</p><p class="o">Por quê: ${esc(s.motivos.join(" · ") || "aderência e valor")}</p></div>
+      <span class="v">${brl(x.v)}</span></div>`).join("") + (lista.length > 60 ? `<p class="conta">Mostrando as 60 de maior nota; use o filtro "Premiadas" na lista para ver todas.</p>` : "")
+      : `<p class="conta">Nenhuma oportunidade com nota ${min} ou mais neste período. Baixe a nota mínima para ver mais.</p>`);
+}
+document.getElementById("cal-meses").addEventListener("click", (e) => { const b = e.target.closest("[data-mes]"); if (!b) return; calMes = b.dataset.mes; calDia = null; renderCalendario(); });
+document.getElementById("cal-grade").addEventListener("click", (e) => { const b = e.target.closest("[data-dia]"); if (!b || b.disabled) return; const d = Number(b.dataset.dia); calDia = calDia === d ? null : d; renderCalendario(); });
+document.getElementById("cal-lista").addEventListener("click", (e) => {
+  if (e.target.closest("[data-dia-limpar]")) { calDia = null; renderCalendario(); return; }
+  const it = e.target.closest("[data-cal]"); if (it) { mostrarPrevia(it.dataset.cal); document.getElementById("previa").scrollIntoView({ behavior: "smooth", block: "nearest" }); }
+});
+document.getElementById("cal-lista").addEventListener("keydown", (e) => { const it = e.target.closest("[data-cal]"); if (it && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); mostrarPrevia(it.dataset.cal); } });
+document.getElementById("cal-min").addEventListener("input", () => { memoNota.clear(); renderCalendario(); montarChips(); if (estado.cat === "premiadas") render(); });
+
+/* ---------- meus marcadores: edição, planilha e gravação na conta */
+let marcEdit = null;
+function renderMarcadores() {
+  if (!marcEdit) marcEdit = JSON.parse(JSON.stringify(meusMarcadores()));
+  document.getElementById("marc-estado").textContent = `${meusMarcadores().length} ${meusMarcadores().length === 1 ? "marcador salvo" : "marcadores salvos"} · ${ondeSalva()}.`;
+  document.getElementById("marc-linhas").innerHTML = marcEdit.map((m, i) => `<tr data-i="${i}"><td data-r="Nome"><input data-m="nome" value="${esc(m.nome || "")}" placeholder="ex.: Sustentação SEI"></td>
+    <td data-r="Termos"><input data-m="termos" value="${esc((m.termos || []).join("; "))}" placeholder="ex.: sei; sistema eletronico de informacoes"></td>
+    <td data-r=" "><button type="button" class="mais" data-marc-rem="${i}">Remover</button></td></tr>`).join("") || `<tr><td colspan="3">Nenhum marcador. Adicione ou suba a planilha.</td></tr>`;
+}
+document.getElementById("marc-linhas").addEventListener("input", (e) => { const el = e.target.closest("[data-m]"); if (!el) return; const i = +el.closest("tr").dataset.i;
+  marcEdit[i][el.dataset.m] = el.dataset.m === "termos" ? el.value.split(/[;|]/).map((s) => s.trim()).filter(Boolean) : el.value;
+  document.getElementById("marc-estado").textContent = "Alterações não salvas."; });
+document.getElementById("marc-linhas").addEventListener("click", (e) => { const b = e.target.closest("[data-marc-rem]"); if (!b) return; marcEdit.splice(+b.dataset.marcRem, 1); renderMarcadores();
+  document.getElementById("marc-estado").textContent = "Alterações não salvas."; });
+document.getElementById("marc-add").addEventListener("click", () => { marcEdit.push({ nome: "", termos: [] }); renderMarcadores(); });
+document.getElementById("marc-arquivo").addEventListener("change", async (e) => { const f = e.target.files && e.target.files[0]; e.target.value = ""; if (!f) return;
+  const novos = (await f.text()).split(/\r?\n/).map((l) => l.trim()).filter(Boolean).map((l) => { const [nome, ...resto] = l.split(";"); const termos = resto.join(";").split(/[|,;]/).map((s) => s.trim()).filter(Boolean); return { nome: (nome || "").trim().slice(0, 60), termos: termos.slice(0, 40) }; })
+    .filter((m) => m.nome && m.termos.length && !/^nome$/i.test(m.nome));
+  marcEdit = [...marcEdit.filter((m) => (m.nome || "").trim()), ...novos]; renderMarcadores();
+  document.getElementById("marc-estado").textContent = novos.length ? `${novos.length} marcadores lidos da planilha. Confira e toque em "Salvar marcadores".` : "Não achei marcadores: use as colunas nome; termos."; });
+document.getElementById("marc-salvar").addEventListener("click", async () => { const est = document.getElementById("marc-estado");
+  const lista = marcEdit.map((m) => ({ nome: (m.nome || "").trim().slice(0, 60), termos: (m.termos || []).map((t) => String(t).trim()).filter((t) => t.length >= 2).slice(0, 40) })).filter((m) => m.nome && m.termos.length).slice(0, 50);
+  const novo = { lista, atualizado: new Date().toISOString() };
+  est.textContent = "Salvando…";
+  try { store.data = { ...store.data, marcadores: novo };
+    if (store.modo === "conta") await (filas.marc = (filas.marc || Promise.resolve()).then(() => store.db.collection("data/users/" + store.uid).doc("marcadores").set(novo)));
+    else if (!gravarLocal()) throw { code: "local" };
+    marcEdit = null; memoMarc.clear(); memoNota.clear(); renderMarcadores(); montarChips(); render(); renderCalendario(); est.textContent = "Salvo · " + ondeSalva() + ".";
+  } catch (err) { est.textContent = "Não foi possível salvar (" + (err && err.code || "erro") + ")."; } });
+
 function card(x) {
   const d = dias(x.enc);
   const cls = d !== null && d <= 3 ? "curto" : d !== null && d <= 7 ? "medio" : "";
@@ -739,6 +904,7 @@ function card(x) {
     <div class="topo"><span><b>${esc(x.o)}</b> · ${esc(x.m ? x.m + "/" : "")}${esc(x.uf)}</span>
       <span>${pillDist(x)}${pillCrm(x.id)}${prazoPill(d)} ${x.a != null ? `<span class="pill p-acc" title="Aderência ao perfil (0 a 100)">${x.a}</span>` : ""}</span></div>
     ${gv.length ? `<span class="faixa-destaque">★ Grande volume: ${esc(gv.join(" · "))}</span>` : ""}
+    ${marcadoresEdital(x).length ? `<span>${marcadoresEdital(x).map((m) => `<span class="marca-item minha">🏷 ${esc(m)}</span>`).join("")}</span>` : ""}
     <button type="button" class="obj-link" data-previa="${x.id}"><p class="obj">${esc(x.obj)}</p></button>
     <div class="meta"><span class="valor">${brl(x.v)}</span><span>Propostas até ${dataHora(x.enc)}</span>
       <span>${esc(x.mod)}${x.n ? " nº " + esc(x.n) : ""}</span>${x.plat ? `<span>Disputa: ${esc(x.plat)}</span>` : ""}${extra ? `<span>${extra}</span>` : ""}</div>
@@ -755,7 +921,7 @@ function card(x) {
 function render() {
   cEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.c === estado.cat)));
   ufEl.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.u === estado.uf)));
-  let r = itens.filter((x) => (estado.cat === "todas" || (estado.cat === "seg" ? x.det : estado.cat === "meucrm" ? !!registro(x.id) : estado.cat === "gv" ? (x.gv || []).length > 0 : estado.cat === "foco" ? x.c.some((c) => PRIO.includes(c)) : x.c.includes(estado.cat)))
+  let r = itens.filter((x) => (estado.cat === "todas" || (estado.cat === "seg" ? x.det : estado.cat === "meucrm" ? !!registro(x.id) : estado.cat === "marc" ? marcadoresEdital(x).length > 0 : estado.cat === "premiadas" ? notaOportunidade(x).nota >= notaMin() : estado.cat === "gv" ? (x.gv || []).length > 0 : estado.cat === "foco" ? x.c.some((c) => PRIO.includes(c)) : x.c.includes(estado.cat)))
     && (!estado.uf || x.uf === estado.uf) && (!estado.plat || (x.plat || "Não identificado") === estado.plat)
     && (!estado.q || casaBusca(x.busca, estado.pb))
     && tipoOk(x) && (!estado.dmax || (distSede(x) ?? Infinity) <= estado.dmax)
@@ -801,7 +967,7 @@ function ficha(x) {
   const d = dias(x.enc);
   const linkPortal = x.orig ? `<a href="${esc(x.orig)}" target="_blank" rel="noopener">${esc(x.plat || "abrir")}</a>` : esc(x.plat || "");
   const itensHtml = x.it && x.it.length ? `<div class="tabela" style="max-height:340px"><table><thead><tr><th>Item</th><th>Descrição</th><th class="num">Qtd.</th><th>Un.</th><th class="num">Valor unit.</th><th class="num">Valor total</th></tr></thead><tbody>
-      ${x.it.map(([num, desc, qtd, un, vu, vt]) => `<tr><td>${num}</td><td>${esc(desc)}</td><td class="num">${qtd == null ? "" : fmt(qtd)}</td><td>${esc((un || "").trim())}</td><td class="num">${vu ? brl(vu) : "sigiloso"}</td><td class="num">${vt ? brl(vt) : "sigiloso"}</td></tr>`).join("")}
+      ${x.it.map(([num, desc, qtd, un, vu, vt, tp]) => `<tr><td>${num}</td><td>${esc(desc)}${marcasHtml(marcasItem(desc, un, tp))}</td><td class="num">${qtd == null ? "" : fmt(qtd)}</td><td>${esc((un || "").trim())}</td><td class="num">${vu ? brl(vu) : "sigiloso"}</td><td class="num">${vt ? brl(vt) : "sigiloso"}</td></tr>`).join("")}
     </tbody></table></div>${x.nit > x.it.length ? `<p class="conta">Mostrando ${x.it.length} de ${fmt(x.nit)} itens. A lista completa está no PNCP.</p>` : ""}`
     : `<p class="conta">${x.det ? "Itens ainda não listados nesta coleta." : "Itens e documentos são carregados no painel só para tecnologia, documentos, EAD e pesquisa."} Veja a relação completa no PNCP.</p>`;
   const docsHtml = x.doc && x.doc.length ? `<ul class="docs">${x.doc.map(([t, tipo, url, pg]) =>
@@ -879,7 +1045,7 @@ window.addEventListener("popstate", doHash);
    em qualquer aparelho. Fora dela (arquivo aberto direto): só neste navegador. */
 function lerLocal() { try { return JSON.parse(localStorage.getItem(LOCAL) || "{}") || {}; } catch (e) { return {}; } }
 function gravarLocal() { try { localStorage.setItem(LOCAL, JSON.stringify(store.data)); return true; } catch (e) { return false; } }
-function aoMudarStore() { renderConfig(); renderModelo(); renderCrm(); montarChips(); render(); if (dlg.open && fichaAtual && fichaAtual.aba === "ficha") renderFicha(); }
+function aoMudarStore() { memoMarc.clear(); memoNota.clear(); marcEdit = null; renderMarcadores(); renderCalendario(); renderConfig(); renderModelo(); renderCrm(); montarChips(); render(); if (dlg.open && fichaAtual && fichaAtual.aba === "ficha") renderFicha(); }
 async function iniciarStore() {
   let db = null, user = null;
   try { if (window.claude && window.claude.use) [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]); } catch (e) { db = null; }
@@ -1746,9 +1912,9 @@ function ligarCalc(raiz) {
 }
 function renderCalcSecao() { const r = document.getElementById("calc-corpo"); if (!r) return; r.innerHTML = calcHtml("secao", null); ligarCalc(r); }
 
-render(); renderAv(); doHash(); renderDestaques();
+montarChips(); render(); renderAv(); doHash(); renderDestaques(); renderCalendario();
 setTimeout(carregarTodas, 50);
-renderConfig(); renderModelo(); renderCrm(); renderCalcSecao(); iniciarStore();
+renderConfig(); renderModelo(); renderMarcadores(); renderCrm(); renderCalcSecao(); iniciarStore();
 </script>
 </body>
 </html>
