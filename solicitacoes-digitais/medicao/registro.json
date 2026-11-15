@@ -665,8 +665,63 @@
       "ajustada_planejada": 60,
       "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
       "inicio": "2026-11-15T08:43:17-03:00",
-      "situacao": "EM_EXECUCAO",
-      "horas_humanas_comprovadas": 0
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-15T08:59:41-03:00",
+      "evidencias": [
+        {
+          "arquivo": "Dockerfile",
+          "sha256": "bb987755ad9fbf1eedbf85995793b062d0c22164f54965380ace2c3e28e9af11",
+          "bytes": 1380
+        },
+        {
+          "arquivo": "docker-compose.yml",
+          "sha256": "2086eb48abeb216949e5ba3b6019b95ab175fdc06805d8bf17e64878e04aefd2",
+          "bytes": 2121
+        },
+        {
+          "arquivo": ".env.exemplo",
+          "sha256": "e79fc3562d64c701b763b279a988fc59dd283ce2480660e32ad8a72e70615588",
+          "bytes": 1574
+        },
+        {
+          "arquivo": "docs/IMPLANTACAO.md",
+          "sha256": "69f4d00bff8c5754e053b20bf265a6b9edb1f106c638118bda329eac89a30131",
+          "bytes": 5081
+        },
+        {
+          "arquivo": "tests/test_implantacao.py",
+          "sha256": "b54d71e85f8782d03f10ce1009d3322220ef2b07bb6a0eaff64b951a45d51e5d",
+          "bytes": 4462
+        },
+        {
+          "arquivo": "tests/homologacao_conteineres.py",
+          "sha256": "1f16550831d4392a7072c0701632cbcb2cd477858845a7facc56bc7b1de11c18",
+          "bytes": 3950
+        },
+        {
+          "arquivo": "medicao/evidencias/implantacao-dia08.txt",
+          "sha256": "5a9d11737da6f9df7a45e6ecbd3a7aebda3a72266af65ce71c7e7c9316889370",
+          "bytes": 3289
+        },
+        {
+          "arquivo": "medicao/evidencias/ci-dia08.txt",
+          "sha256": "54750261be4fa5be973d1a0b05fa287517116c5a6b1c3db533ddefaaed29da76",
+          "bytes": 2029
+        }
+      ],
+      "commit_base": "cf12f7ccdb5fdf1ef358d1d95b4f8a75017cf8b5",
+      "base_declarada": 20,
+      "ajustada_declarada": 60,
+      "observacao": null,
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia08.txt",
+        "sha256": "68436d64840e0d76811f738aa39fa1b18b46ea85932d9b8f032862d2e8f0ee0b",
+        "em": "2026-11-15T08:59:41-03:00"
+      },
+      "ajustada_verificada": 60,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
     },
     "D8-B": {
       "dia": 8,
@@ -676,8 +731,53 @@
       "ajustada_planejada": 30,
       "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
       "inicio": "2026-11-15T08:43:17-03:00",
-      "situacao": "EM_EXECUCAO",
-      "horas_humanas_comprovadas": 0
+      "situacao": "VERIFICADA_TECNICAMENTE",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-15T08:59:37-03:00",
+      "evidencias": [
+        {
+          "arquivo": "solicitacoes/notificacoes.py",
+          "sha256": "4a2b7fe40777349c26439a258395c5a47441c7cf003b9e09bc2251f7ef229f3f",
+          "bytes": 8877
+        },
+        {
+          "arquivo": "solicitacoes/rotas_mensagens.py",
+          "sha256": "dd83c957bad7994df65e4f81d5af4a64792799ef1a3db96a250956e81027c148",
+          "bytes": 2377
+        },
+        {
+          "arquivo": "solicitacoes/migracoes.py",
+          "sha256": "05086f6662bc60d5e3e4fe3f4f4397a16d370d1e658453719376bc40380760c4",
+          "bytes": 4962
+        },
+        {
+          "arquivo": "tests/smtp_local.py",
+          "sha256": "d861ecf1cfbadb728021f34686c871912b619b5addb6071ef67306a9f2fc067f",
+          "bytes": 6234
+        },
+        {
+          "arquivo": "tests/test_notificacoes.py",
+          "sha256": "2e318cafffe53f754c3ec8eeffb0812fd08e90086923e485fb1e01d6ecbce3d6",
+          "bytes": 13139
+        },
+        {
+          "arquivo": "medicao/evidencias/implantacao-dia08.txt",
+          "sha256": "5a9d11737da6f9df7a45e6ecbd3a7aebda3a72266af65ce71c7e7c9316889370",
+          "bytes": 3289
+        }
+      ],
+      "commit_base": "cf12f7ccdb5fdf1ef358d1d95b4f8a75017cf8b5",
+      "base_declarada": 10,
+      "ajustada_declarada": 30,
+      "observacao": null,
+      "verificacao": {
+        "tipo": "testes automatizados (verificação técnica interna, não é aceite)",
+        "log": "medicao/evidencias/testes-dia08.txt",
+        "sha256": "68436d64840e0d76811f738aa39fa1b18b46ea85932d9b8f032862d2e8f0ee0b",
+        "em": "2026-11-15T08:59:41-03:00"
+      },
+      "ajustada_verificada": 30,
+      "revisor_independente": "PENDENTE — indicar pessoa da contratante"
     },
     "D8-C": {
       "dia": 8,
@@ -687,8 +787,20 @@
       "ajustada_planejada": 10,
       "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
       "inicio": "2026-11-15T08:43:17-03:00",
-      "situacao": "EM_EXECUCAO",
-      "horas_humanas_comprovadas": 0
+      "situacao": "DECLARADA",
+      "horas_humanas_comprovadas": 0,
+      "fim": "2026-11-15T08:59:37-03:00",
+      "evidencias": [
+        {
+          "arquivo": "docs/OPERACAO.md",
+          "sha256": "b3510a48e18a2d8fa3e61b6549655e51e53d7e870f3b16c16e4f6bcea41c9c21",
+          "bytes": 4235
+        }
+      ],
+      "commit_base": "cf12f7ccdb5fdf1ef358d1d95b4f8a75017cf8b5",
+      "base_declarada": 5,
+      "ajustada_declarada": 10,
+      "observacao": "Proposta de RTO, RPO e rotina para decisão do contratante (pergunta 9); não validada"
     }
   }
 }
