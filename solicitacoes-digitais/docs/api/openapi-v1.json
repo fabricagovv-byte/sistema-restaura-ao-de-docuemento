@@ -107,6 +107,35 @@
         "title": "Body_enviar_api_v1_solicitacoes__sid__anexos_post",
         "type": "object"
       },
+      "Caixa": {
+        "properties": {
+          "mensagens": {
+            "items": {
+              "$ref": "#/components/schemas/MensagemSituacao"
+            },
+            "title": "Mensagens",
+            "type": "array"
+          },
+          "por_status": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "title": "Por Status",
+            "type": "object"
+          },
+          "smtp_configurado": {
+            "title": "Smtp Configurado",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "smtp_configurado",
+          "por_status",
+          "mensagens"
+        ],
+        "title": "Caixa",
+        "type": "object"
+      },
       "CategoriaAlteracao": {
         "properties": {
           "ativa": {
@@ -527,6 +556,100 @@
         "title": "Login",
         "type": "object"
       },
+      "MensagemSituacao": {
+        "properties": {
+          "assunto": {
+            "title": "Assunto",
+            "type": "string"
+          },
+          "criado_em": {
+            "format": "date-time",
+            "title": "Criado Em",
+            "type": "string"
+          },
+          "enviado_em": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Enviado Em"
+          },
+          "id": {
+            "title": "Id",
+            "type": "integer"
+          },
+          "para": {
+            "title": "Para",
+            "type": "string"
+          },
+          "proxima_tentativa_em": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Proxima Tentativa Em"
+          },
+          "solicitacao_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Solicitacao Id"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          },
+          "tentativas": {
+            "title": "Tentativas",
+            "type": "integer"
+          },
+          "tipo": {
+            "title": "Tipo",
+            "type": "string"
+          },
+          "ultimo_erro": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ultimo Erro"
+          }
+        },
+        "required": [
+          "id",
+          "para",
+          "assunto",
+          "tipo",
+          "status",
+          "tentativas",
+          "ultimo_erro",
+          "criado_em",
+          "enviado_em",
+          "proxima_tentativa_em",
+          "solicitacao_id"
+        ],
+        "title": "MensagemSituacao",
+        "type": "object"
+      },
       "Pagina": {
         "properties": {
           "itens": {
@@ -664,6 +787,50 @@
           "nova_senha"
         ],
         "title": "Redefinicao",
+        "type": "object"
+      },
+      "ResultadoEnvio": {
+        "properties": {
+          "configurado": {
+            "title": "Configurado",
+            "type": "boolean"
+          },
+          "enviadas": {
+            "title": "Enviadas",
+            "type": "integer"
+          },
+          "erro_conexao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Erro Conexao"
+          },
+          "falharam": {
+            "title": "Falharam",
+            "type": "integer"
+          },
+          "na_fila": {
+            "title": "Na Fila",
+            "type": "integer"
+          },
+          "reagendadas": {
+            "title": "Reagendadas",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "configurado",
+          "enviadas",
+          "reagendadas",
+          "falharam",
+          "na_fila"
+        ],
+        "title": "ResultadoEnvio",
         "type": "object"
       },
       "SolicitacaoAlteracao": {
@@ -1098,7 +1265,7 @@
   "info": {
     "description": "API do sistema de solicitações digitais (OS-001/2026), versão 1 (prefixo /api/v1). Todas as rotas exigem token Bearer, exceto saúde, login e recuperação de conta. Erros seguem o formato {\"detail\": ...}; toda resposta traz X-Correlation-ID. Contrato salvo em docs/api/openapi-v1.json.",
     "title": "Solicitações Digitais",
-    "version": "0.4.0"
+    "version": "0.5.0"
   },
   "openapi": "3.1.0",
   "paths": {
@@ -1516,6 +1683,127 @@
         "summary": "Alterar Categoria",
         "tags": [
           "categorias"
+        ]
+      }
+    },
+    "/api/v1/mensagens": {
+      "get": {
+        "operationId": "listar_api_v1_mensagens_get",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "situacao",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "pendente",
+                    "enviada",
+                    "falhou"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Situacao"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limite",
+            "required": false,
+            "schema": {
+              "default": 100,
+              "maximum": 500,
+              "minimum": 1,
+              "title": "Limite",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Caixa"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Listar",
+        "tags": [
+          "mensagens"
+        ]
+      }
+    },
+    "/api/v1/mensagens/enviar": {
+      "post": {
+        "operationId": "enviar_api_v1_mensagens_enviar_post",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limite",
+            "required": false,
+            "schema": {
+              "default": 100,
+              "maximum": 500,
+              "minimum": 1,
+              "title": "Limite",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultadoEnvio"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Enviar",
+        "tags": [
+          "mensagens"
         ]
       }
     },

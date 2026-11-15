@@ -10,10 +10,10 @@ from fastapi import APIRouter, HTTPException, Response, status
 from pydantic import BaseModel, EmailStr, Field, field_validator
 from sqlalchemy import func, select
 
-from . import auditoria, seguranca
+from . import auditoria, notificacoes, seguranca
 from .config import config
 from .dependencias import Db
-from .modelos import MensagemSaida, TokenRecuperacao, Usuario
+from .modelos import TokenRecuperacao, Usuario
 
 router = APIRouter(prefix="/api/v1/auth", tags=["autenticação"])
 
@@ -63,9 +63,9 @@ def pedir_recuperacao(dados: Pedido, s: Db) -> dict:
     token = secrets.token_urlsafe(32)
     s.add(TokenRecuperacao(usuario_id=u.id, hash=_hash(token), expira_em=datetime.now(timezone.utc) + VALIDADE))
     link = f"{config().url_publica.rstrip('/')}/redefinir-senha#token={token}"
-    s.add(MensagemSaida(para=u.email, assunto="Criar nova senha — Solicitações Digitais",
-                        corpo=f"Olá, {u.nome}.\n\nPara criar uma nova senha, abra o link abaixo em até 30 minutos:\n{link}\n\n"
-                              "Se você não pediu, ignore esta mensagem; sua senha continua a mesma."))
+    notificacoes.enfileirar(s, para=u.email, assunto="Criar nova senha — Solicitações Digitais", tipo="recuperacao_senha",
+                            corpo=f"Olá, {u.nome}.\n\nPara criar uma nova senha, abra o link abaixo em até 30 minutos:\n{link}\n\n"
+                                  "Se você não pediu, ignore esta mensagem; sua senha continua a mesma.")
     auditoria.registrar(s, acao="pedir_recuperacao", recurso="sessao", recurso_id=u.id)
     return resposta
 

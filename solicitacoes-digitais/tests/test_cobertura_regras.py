@@ -22,6 +22,7 @@ def test_producao_exige_segredo_forte(monkeypatch):
     with pytest.raises(RuntimeError, match="SD_SEGREDO"):
         cfg_mod.config()
     monkeypatch.setenv("SD_SEGREDO", "s" * 40)
+    monkeypatch.setenv("SD_BANCO_URL", "postgresql+psycopg://sd:sd@banco/sd")  # produção não aceita SQLite (dia 8)
     cfg_mod.config.cache_clear()
     c = cfg_mod.config()
     assert c.producao and c.segredo == "s" * 40

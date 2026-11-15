@@ -12,6 +12,8 @@ CASOS = [
     ("GET", "/api/v1/auth/eu", None, {"administrador", "gestor", "operador", "solicitante"}),
     ("GET", "/api/v1/painel/indicadores", None, {"gestor"}),
     ("GET", "/api/v1/painel/exportacao.csv", None, {"gestor"}),
+    ("GET", "/api/v1/mensagens", None, {"administrador"}),
+    ("POST", "/api/v1/mensagens/enviar", None, {"administrador"}),
 ]
 
 

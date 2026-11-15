@@ -656,6 +656,39 @@
       "base_declarada": 10,
       "ajustada_declarada": 20,
       "observacao": "15 indicadores especificados (definição, fórmula, campo da API e teste que prova), regras comuns (universo, período em Brasília, atendida x cancelada, finalização pela última entrada no estado final), relatório CSV e 4 relatórios propostos; implementados na API e na tela; validação com o contratante pendente (pergunta 6 da entrevista)"
+    },
+    "D8-A": {
+      "dia": 8,
+      "item": "M-05",
+      "entrega": "Contêineres, pipeline de CI e configuração por ambiente",
+      "base_planejada": 20,
+      "ajustada_planejada": 60,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-15T08:43:17-03:00",
+      "situacao": "EM_EXECUCAO",
+      "horas_humanas_comprovadas": 0
+    },
+    "D8-B": {
+      "dia": 8,
+      "item": "M-06",
+      "entrega": "Integração de notificações por e-mail (SMTP configurável) com teste em servidor de homologação local",
+      "base_planejada": 10,
+      "ajustada_planejada": 30,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-15T08:43:17-03:00",
+      "situacao": "EM_EXECUCAO",
+      "horas_humanas_comprovadas": 0
+    },
+    "D8-C": {
+      "dia": 8,
+      "item": "M-01",
+      "entrega": "Requisitos de operação: RTO, RPO e rotina de backup propostos",
+      "base_planejada": 5,
+      "ajustada_planejada": 10,
+      "executor": "Claude (agente de IA da Anthropic) — execução automatizada, sem horas humanas",
+      "inicio": "2026-11-15T08:43:17-03:00",
+      "situacao": "EM_EXECUCAO",
+      "horas_humanas_comprovadas": 0
     }
   }
 }

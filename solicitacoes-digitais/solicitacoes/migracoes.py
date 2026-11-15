@@ -45,11 +45,31 @@ def _v4(conn: Connection) -> None:
         conn.execute(text(f"CREATE INDEX IF NOT EXISTS {nome} ON {tabela} ({coluna})"))
 
 
+def _v5(conn: Connection) -> None:
+    """Caixa de saída com situação do envio: tipo, status, tentativas, último erro, próxima tentativa e solicitação.
+    Mensagens antigas já enviadas ficam 'enviada'; as outras, 'pendente'."""
+    if not inspect(conn).has_table("mensagem_saida"):
+        MensagemSaida.__table__.create(conn)
+        return
+    colunas = {c["name"] for c in inspect(conn).get_columns("mensagem_saida")}
+    novas = (("tipo", "VARCHAR(40) NOT NULL DEFAULT 'geral'"), ("status", "VARCHAR(20) NOT NULL DEFAULT 'pendente'"),
+             ("tentativas", "INTEGER NOT NULL DEFAULT 0"), ("ultimo_erro", "TEXT"),
+             ("proxima_tentativa_em", "TIMESTAMP WITH TIME ZONE" if conn.dialect.name == "postgresql" else "DATETIME"),
+             ("solicitacao_id", "INTEGER"))
+    for nome, tipo in novas:
+        if nome not in colunas:
+            conn.execute(text(f"ALTER TABLE mensagem_saida ADD COLUMN {nome} {tipo}"))
+    conn.execute(text("UPDATE mensagem_saida SET status = 'enviada' WHERE enviado_em IS NOT NULL AND status = 'pendente'"))
+    for nome, coluna in (("ix_mensagem_saida_status", "status"), ("ix_mensagem_saida_solicitacao_id", "solicitacao_id")):
+        conn.execute(text(f"CREATE INDEX IF NOT EXISTS {nome} ON mensagem_saida ({coluna})"))
+
+
 MIGRACOES: list[tuple[int, str, Callable[[Connection], None]]] = [
     (1, "esquema inicial: usuários, tokens revogados, solicitações e auditoria", _v1),
     (2, "categorias com prazo e histórico de tramitação", _v2),
     (3, "anexos, recuperação de conta, caixa de saída e versão de sessão", _v3),
     (4, "índices do painel gerencial (prazo e estado de destino)", _v4),
+    (5, "caixa de saída com situação do envio, novas tentativas e vínculo com a solicitação", _v5),
 ]
 
 

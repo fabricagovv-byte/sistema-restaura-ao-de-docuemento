@@ -21,3 +21,4 @@ def test_matriz_de_permissoes():
     assert not seguranca.pode("gestor", "usuarios:gerir")
     assert not seguranca.pode("solicitante", "auditoria:ver")
     assert not seguranca.pode("perfil-inexistente", "usuarios:ver")
+    assert seguranca.pode("administrador", "mensagens:gerir") and not seguranca.pode("gestor", "mensagens:gerir")

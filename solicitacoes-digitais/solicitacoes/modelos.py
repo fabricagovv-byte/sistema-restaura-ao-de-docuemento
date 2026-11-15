@@ -128,7 +128,7 @@ class TokenRecuperacao(Base):
 
 
 class MensagemSaida(Base):
-    """Caixa de saída: mensagens a enviar (e-mail). O envio por SMTP é a integração do dia 8."""
+    """Caixa de saída: mensagens a enviar por e-mail (SMTP configurável, `notificacoes.enviar_pendentes`)."""
 
     __tablename__ = "mensagem_saida"
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -137,3 +137,10 @@ class MensagemSaida(Base):
     corpo: Mapped[str] = mapped_column(Text)
     criado_em: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=agora)
     enviado_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    # v5: tipo, situação do envio, novas tentativas com espera crescente e vínculo com a solicitação
+    tipo: Mapped[str] = mapped_column(String(40), default="geral")
+    status: Mapped[str] = mapped_column(String(20), default="pendente", index=True)  # pendente | enviada | falhou
+    tentativas: Mapped[int] = mapped_column(Integer, default=0)
+    ultimo_erro: Mapped[str | None] = mapped_column(Text, nullable=True)
+    proxima_tentativa_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    solicitacao_id: Mapped[int | None] = mapped_column(Integer, nullable=True, index=True)

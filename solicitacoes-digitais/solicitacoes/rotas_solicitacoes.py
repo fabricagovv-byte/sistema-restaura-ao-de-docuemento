@@ -9,7 +9,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from pydantic import BaseModel, Field, field_validator
 from sqlalchemy import func, or_, select
 
-from . import auditoria, fluxo
+from . import auditoria, fluxo, notificacoes
 from .dependencias import Atual, Db, exige
 from .modelos import Categoria, HistoricoSolicitacao, Solicitacao, Usuario
 
@@ -296,6 +296,7 @@ def tramitar(sid: int, dados: Tramitacao, db: Db, u: Atual) -> SolicitacaoSaida:
     if de in fluxo.FINAIS and dados.para == "em_triagem":  # reabertura volta para a fila
         s.responsavel_id = None
     _historico(db, s, u, "transicao", de=de, para=dados.para, comentario=dados.comentario)
+    notificacoes.notificar_tramitacao(db, s, de, dados.para, u, dados.comentario)
     auditoria.registrar(db, acao="tramitar", recurso="solicitacao", recurso_id=s.id, ator_id=u.id,
                         antes={"status": de}, depois={"status": dados.para, "comentario": dados.comentario})
     db.flush()
@@ -321,6 +322,7 @@ def atribuir(sid: int, dados: Atribuicao, db: Db, u: Atual) -> SolicitacaoSaida:
     antes = s.responsavel_id
     s.responsavel_id = alvo.id
     _historico(db, s, u, "atribuicao", comentario=f"responsável: {alvo.nome}" + (f" — {dados.comentario.strip()}" if dados.comentario else ""))
+    notificacoes.notificar_atribuicao(db, s, alvo, u)
     auditoria.registrar(db, acao="atribuir", recurso="solicitacao", recurso_id=s.id, ator_id=u.id,
                         antes={"responsavel_id": antes}, depois={"responsavel_id": alvo.id})
     db.flush()

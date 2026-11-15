@@ -240,10 +240,12 @@ from .rotas_anexos import router as _rotas_anexos  # noqa: E402
 from .rotas_conta import router as _rotas_conta  # noqa: E402
 
 from .rotas_painel import router as _rotas_painel  # noqa: E402
+from .rotas_mensagens import router as _rotas_mensagens  # noqa: E402
 
 app.include_router(_rotas_anexos)
 app.include_router(_rotas_conta)
 app.include_router(_rotas_painel)
+app.include_router(_rotas_mensagens)
 
 # ------------------------------------------------------------------ frontend (dia 5): arquivos estáticos na raiz
 from fastapi.responses import FileResponse  # noqa: E402

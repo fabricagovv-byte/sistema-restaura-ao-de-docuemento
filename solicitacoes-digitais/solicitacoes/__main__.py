@@ -8,7 +8,7 @@ import sys
 
 from sqlalchemy import func, select
 
-from . import auditoria, seguranca
+from . import auditoria, notificacoes, seguranca
 from .banco import sessao
 from .migracoes import aplicar, versao_atual
 from .modelos import Usuario
@@ -22,6 +22,9 @@ def main(argv=None) -> int:
     ca.add_argument("email"), ca.add_argument("nome")
     ct = sub.add_parser("contrato", help="grava docs/api/openapi-v1.json a partir do código (ou confere com --verificar)")
     ct.add_argument("--verificar", action="store_true")
+    em = sub.add_parser("enviar-mensagens", help="envia por SMTP os e-mails pendentes da caixa de saída")
+    em.add_argument("--continuo", action="store_true", help="repete a cada --intervalo segundos (serviço)")
+    em.add_argument("--intervalo", type=float, default=60.0), em.add_argument("--limite", type=int, default=100)
     sv = sub.add_parser("servidor", help="sobe a API")
     sv.add_argument("--porta", type=int, default=8000), sv.add_argument("--host", default="127.0.0.1")
     a = ap.parse_args(argv)
@@ -47,6 +50,18 @@ def main(argv=None) -> int:
         from . import contrato
 
         return contrato.main(verificar=a.verificar)
+    elif a.cmd == "enviar-mensagens":
+        import json
+        import time
+
+        aplicar()
+        while True:
+            with sessao() as s:
+                r = notificacoes.enviar_pendentes(s, limite=a.limite)
+            print(json.dumps(r, ensure_ascii=False), flush=True)
+            if not a.continuo:
+                return 0 if not r.get("erro_conexao") else 1
+            time.sleep(a.intervalo)
     elif a.cmd == "servidor":
         import uvicorn
 
