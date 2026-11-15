@@ -334,6 +334,8 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
     <div class="chips" id="cal-meses" role="group" aria-label="Mês"></div>
     <div class="cal-grade" id="cal-grade" role="grid" aria-label="Dias do mês"></div>
     <div id="cal-lista"></div>
+    <div class="acoes"><button type="button" class="mais" id="cal-ics" hidden>Baixar para a agenda (.ics: Google, Outlook, celular)</button>
+      <button type="button" class="mais" id="cal-csv" hidden>Baixar planilha com os links (CSV)</button></div>
   </section>
 
   <section class="panel" aria-label="Filtros">
@@ -1027,6 +1029,41 @@ document.getElementById("foco-ver").addEventListener("click", () => {
   render(); document.getElementById("lista").scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
+/* ---------- exportar a agenda: .ics (Google Agenda, Outlook, iPhone/Android) e CSV com os links */
+function premiadasAgenda() {
+  const agora = new Date(), min = notaMin();
+  return itens.filter((x) => x.det && x.enc && new Date(x.enc) >= agora).map((x) => [x, notaOportunidade(x)])
+    .filter(([, s]) => s.nota >= min).sort((a, b) => (a[0].enc < b[0].enc ? -1 : 1));
+}
+const icsTexto = (s) => String(s || "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+const icsDobra = (linha) => { const out = []; let l = linha; while (l.length > 73) { out.push(l.slice(0, 73)); l = " " + l.slice(73); } out.push(l); return out.join("\r\n"); };
+const icsData = (d) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+function gerarIcs(lista) {
+  const agora = icsData(new Date());
+  const linhas = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Painel Nacional de Licitacoes//PT-BR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    "X-WR-CALNAME:Licitações premiadas", "X-WR-TIMEZONE:America/Sao_Paulo"];
+  for (const [x, s] of lista) {
+    const fim = new Date(x.enc), ini = new Date(fim.getTime() - 60 * 60 * 1000);
+    const link = x.pncp || x.orig || "";
+    const desc = [`Nota ${s.nota}: ${s.motivos.join(", ")}`, `Valor estimado: ${brl(x.v)}`, `${x.mod || ""}${x.n ? " nº " + x.n : ""} · ${x.plat || ""}`,
+      `Categoria: ${CATS[principal(x)] || ""}`, `Objeto: ${(x.obj || "").slice(0, 600)}`, link ? `PNCP: ${link}` : "", x.orig && x.orig !== link ? `Portal: ${x.orig}` : ""]
+      .filter(Boolean).join("\n");
+    linhas.push("BEGIN:VEVENT", `UID:licitacao-${x.id}@painel-licitacoes`, `DTSTAMP:${agora}`, `DTSTART:${icsData(ini)}`, `DTEND:${icsData(fim)}`,
+      icsDobra("SUMMARY:" + icsTexto(`Prazo (nota ${s.nota}): ${x.o} – ${x.uf || ""}`)), icsDobra("DESCRIPTION:" + icsTexto(desc)),
+      link ? icsDobra("URL:" + link) : "", icsDobra("LOCATION:" + icsTexto(x.plat || "")),
+      "BEGIN:VALARM", "TRIGGER:-P2D", "ACTION:DISPLAY", "DESCRIPTION:Faltam 2 dias para o prazo de propostas", "END:VALARM", "END:VEVENT");
+  }
+  linhas.push("END:VCALENDAR");
+  return linhas.filter(Boolean).join("\r\n") + "\r\n";
+}
+function csvAgenda(lista) {
+  const cel = (v) => { const t = String(v ?? ""); return /^[=+\-@]/.test(t) ? "'" + t : t; };
+  const linhas = [["prazo", "nota", "orgao", "uf", "municipio", "valor_estimado", "categoria", "objeto", "motivos", "link_pncp", "link_portal"]]
+    .concat(lista.map(([x, s]) => [dataHora(x.enc), s.nota, x.o, x.uf, x.m, x.v ?? "", CATS[principal(x)] || "", (x.obj || "").slice(0, 500),
+      s.motivos.join(", "), x.pncp || "", x.orig || ""]));
+  return "\ufeff" + linhas.map((l) => l.map((v) => `"${cel(v).replace(/"/g, '""')}"`).join(";")).join("\r\n");
+}
+
 function renderCalendario() {
   const agora = new Date(), limite = new Date(agora.getFullYear() + 1, agora.getMonth() + 1, 1);
   const min = notaMin();
@@ -1633,15 +1670,25 @@ function csvCrm() {
       return [r.o, r.uf, r.m, r.obj, r.n, r.enc, brNum(r.v), ETAPA_NOME[c.status] || c.status || "", c.prio || "", c.resp || "", c.passo || "", c.data || "", c.contato || "", c.tel || "", c.email || "", c.tags || "",
         brNum(p.total), brNum(p.custo), p.desconto == null ? "" : brNum(p.desconto * 100), r.pncp || "", g.atualizado || ""]; })]);
 }
-function ligarCsv(idBotao, gerar, nome) {
+// dentro do Claude usa a capacidade de download; fora dele (site próprio), baixa direto pelo navegador
+function baixarArquivo(nome, dados, tipo = "text/csv;charset=utf-8") {
+  if (dl) return dl.save({ filename: nome, data: dados });
+  const url = URL.createObjectURL(new Blob([dados], { type: tipo }));
+  const a = Object.assign(document.createElement("a"), { href: url, download: nome });
+  document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+function ligarCsv(idBotao, gerar, nome, tipo) {
   const b = document.getElementById(idBotao); if (!b) return;
-  b.hidden = !temDownload;
-  b.onclick = async () => { try { await dl.save({ filename: nome, data: gerar() }); } catch (e) { /* o usuário recusou ou não foi possível */ } };
+  b.hidden = false;
+  b.onclick = async () => { try { await baixarArquivo(nome, gerar(), tipo); } catch (e) { /* o usuário recusou ou não foi possível */ } };
 }
 (async () => { try { dl = window.claude && window.claude.use ? await window.claude.use("downloads") : null; } catch (e) { dl = null; }
   temDownload = !!dl; ligarCsv("crm-exportar", csvCrm, "meu-crm-licitacoes.csv"); ligarCsv("exp-tabelas", csvTabelas, "tabelas-de-preco-licitacoes.csv");
   ligarCsv("piso-modelo", MODELO_PISOS, "modelo-pisos.csv");
-  ligarCsv("exp-itens-tipo", csvItensTipo, "itens-do-tipo-licitacoes.csv"); renderCrm(); render(); })();
+  ligarCsv("exp-itens-tipo", csvItensTipo, "itens-do-tipo-licitacoes.csv");
+  ligarCsv("cal-ics", () => gerarIcs(premiadasAgenda()), "calendario-licitacoes-premiadas.ics", "text/calendar;charset=utf-8");
+  ligarCsv("cal-csv", () => csvAgenda(premiadasAgenda()), "calendario-licitacoes-premiadas.csv");
+  renderCrm(); render(); })();
 
 /* Portais */
 document.getElementById("portais-conta").innerHTML = `<b>${fmt(D.n_plataformas)}</b> portais e sistemas de disputa identificados nos editais abertos (todas as áreas). Os ${D.plataformas.length} mais usados:`;
