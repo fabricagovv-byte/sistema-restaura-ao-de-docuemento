@@ -102,7 +102,9 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
     if anterior and Path(anterior, "detalhes.jsonl.gz").exists():
         _passo("pacote_anterior", lambda: importar_detalhes(s, anterior, so_abertas=True), resumo)
     dj = Disjuntor()
-    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.68), disjuntor=dj), resumo)
+    # até 0,85 do orçamento: na execução de 14-15/11 o prazo de 0,68 deixou ~10 min para ler editais (16 lidos) e sobrou
+    # cerca de 1 hora no fim; os diários levam ~20 min e a listagem do segmento é rápida quando o pacote anterior já trouxe
+    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.85), disjuntor=dj), resumo)
     _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(0.93), disjuntor=dj), resumo)
     if not rapido:
         _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=15, ate=prazo(1.0))), resumo)
