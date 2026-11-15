@@ -34,6 +34,9 @@ as premissas abaixo, registradas como tal. Nada aqui foi inventado como fato.
 |---|---|---|
 | D5-B — validação dos requisitos com as respostas da entrevista | Respostas das perguntas 1 a 10 e leitura de `docs/CRITERIOS_ACEITE.md` por responsável do contratante | Critérios detalhados entregues; validação pendente; declaradas 6 de 13 UST base |
 | D7-B — indicadores e relatórios gerenciais | Validar os 15 indicadores e os 4 relatórios propostos em `docs/INDICADORES.md` (seção 5) | Especificação entregue; validação pendente |
+| D8-B — e-mail com o servidor real | Servidor SMTP do órgão, porta, cifra, conta e remetente autorizado (pergunta 7) | Integração pronta e testada com servidor local de homologação; nada enviado para fora |
+| D8-C — RTO, RPO e rotina de backup | Escolha do RPO (24 h ou 15 min), RTO, local e retenção das cópias, responsável pelo exercício (pergunta 9; `docs/OPERACAO.md`, seção 6) | Proposta entregue; validação pendente |
+| D8-A — ambiente de produção | Onde roda, quem opera, domínio e proxy HTTPS (pergunta 8) | Contêineres e CI prontos; ambiente do contratante não informado |
 
 ## Premissas adotadas até a entrevista
 

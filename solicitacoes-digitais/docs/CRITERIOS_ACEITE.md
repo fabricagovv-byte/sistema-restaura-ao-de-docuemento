@@ -17,7 +17,7 @@ que já verifica o critério hoje; "—" quando ainda não há teste (planejado 
 | 001.3 | Dado um token expirado, adulterado, revogado (logout) ou de antes da troca de senha, quando usado, então a API responde 401 e o frontend volta ao login com aviso | `test_token_expirado_adulterado_ou_ausente`, `test_fluxo_completo_troca_senha_e_encerra_sessoes`; navegador dia 5 | — |
 | 001.4 | Para cada rota protegida e cada perfil, só os perfis da matriz de `MATRIZ_REQUISITOS.md` são atendidos; os outros recebem 403; sem token, 401 | `test_cada_perfil_so_acessa_o_que_pode`, `test_matriz_de_permissoes`, `test_todas_as_rotas_sao_versionadas_e_protegidas` | 1, 3 |
 | 001.5 | A senha tem ao menos 10 caracteres com maiúsculas, minúsculas e números; é guardada com PBKDF2-SHA256 e sal | `test_politica_de_senha`, `test_hash_de_senha_tem_sal_e_confere` | 10 |
-| 001.6 | O pedido de recuperação responde igual para e-mail cadastrado ou não; o link vale 30 minutos, é de uso único, no máximo 3 por hora; a troca encerra todas as sessões | `test_resposta_igual_para_email_inexistente_e_sem_mensagem`, `test_token_expirado_e_limite_de_pedidos`, `test_novo_link_invalida_os_anteriores_depois_da_troca` | 7 (envio real do e-mail: dia 8) |
+| 001.6 | O pedido de recuperação responde igual para e-mail cadastrado ou não; o link vale 30 minutos, é de uso único, no máximo 3 por hora; a troca encerra todas as sessões; o e-mail chega pelo SMTP e o link é apagado da caixa depois do envio | `test_resposta_igual_para_email_inexistente_e_sem_mensagem`, `test_token_expirado_e_limite_de_pedidos`, `test_novo_link_invalida_os_anteriores_depois_da_troca`, `test_recuperacao_de_senha_chega_por_email_e_o_link_some_da_caixa_depois` | 7 |
 | 001.7 | Usuário desativado perde a sessão na próxima requisição | `test_usuario_desativado_perde_a_sessao` | — |
 
 ## REQ-002 — Persistência de solicitações e anexos
@@ -67,17 +67,17 @@ que já verifica o critério hoje; "—" quando ainda não há teste (planejado 
 |---|---|---|---|
 | 006.1 | Contrato OpenAPI em `/api/v1/openapi.json`, igual ao salvo em `docs/api/openapi-v1.json`; mudança incompatível é apontada | `test_contrato_salvo_e_o_gerado_pelo_codigo`, `test_detecta_mudancas_incompativeis`, `test_documentacao_publicada_na_versao` | — |
 | 006.2 | O frontend só usa rotas que existem no contrato | `test_frontend_so_chama_rotas_do_contrato` | — |
-| 006.3 | E-mail e webhook testados ponta a ponta com servidor de homologação controlado | — (dia 8) | 7 |
+| 006.3 | E-mail testado ponta a ponta com servidor de homologação controlado: aviso de tramitação ao solicitante e de atribuição ao responsável, recuperação de senha, novas tentativas (1, 5, 15, 60 min; desiste na 5ª), recusa definitiva 5xx, autenticação, caixa do administrador sem o corpo | `tests/test_notificacoes.py` (15 testes contra SMTP local) e `medicao/evidencias/implantacao-dia08.txt` (contêineres + Mailpit). Webhook: não iniciado (dias 9 e 10) | 7 |
 
 ## REQ-007 e REQ-008 — Infraestrutura, backup e restauração
 
 | # | Critério | Prova | Depende da pergunta |
 |---|---|---|---|
 | 007.1 | Migrações numeradas e idempotentes; banco antigo sobe de versão sem perder dados | `test_migracoes_sao_idempotentes`, `test_v3_atualiza_banco_criado_antes_da_coluna_de_sessao` | — |
-| 007.2 | Fora de desenvolvimento, o serviço não sobe sem segredo forte | `test_producao_exige_segredo_forte` | 8 |
+| 007.2 | Fora de desenvolvimento, o serviço não sobe sem segredo forte; em produção exige PostgreSQL e SMTP cifrado fora da máquina local | `test_producao_exige_segredo_forte`, `test_configuracao_de_email_e_de_producao_validada` | 8 |
 | 007.3 | Telas servidas com CSP sem código embutido, sem montagem de HTML a partir de texto | `test_telas_servidas_com_politica_de_seguranca`, `test_html_sem_script_ou_estilo_embutido`, `test_codigo_do_frontend_nao_monta_html_a_partir_de_texto` | 10 |
-| 007.4 | Instalação limpa e pipeline de CI executando os testes | — (dia 8) | 8 |
-| 008.1 | Restauração a partir do backup em ambiente limpo, cronometrada, dentro do RTO e RPO acordados | — (dia 9) | 9 |
+| 007.4 | Instalação limpa em contêineres e pipeline de CI executando os testes nos dois bancos, o contrato e a imagem | `tests/test_implantacao.py`, `.github/workflows/solicitacoes-ci.yml`, `medicao/evidencias/implantacao-dia08.txt` | 8 |
+| 008.1 | Restauração a partir do backup em ambiente limpo, cronometrada, dentro do RTO e RPO acordados (proposta em `docs/OPERACAO.md`: RPO 24 h ou 15 min, RTO 4 h) | — (dia 9) | 9 |
 
 ## O que falta para validar (bloqueio desta entrega)
 

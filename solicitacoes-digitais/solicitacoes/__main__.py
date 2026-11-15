@@ -25,6 +25,7 @@ def main(argv=None) -> int:
     em = sub.add_parser("enviar-mensagens", help="envia por SMTP os e-mails pendentes da caixa de saída")
     em.add_argument("--continuo", action="store_true", help="repete a cada --intervalo segundos (serviço)")
     em.add_argument("--intervalo", type=float, default=60.0), em.add_argument("--limite", type=int, default=100)
+    em.add_argument("--voltas", type=int, default=0, help="com --continuo, para depois de N rodadas (0 = sem fim)")
     sv = sub.add_parser("servidor", help="sobe a API")
     sv.add_argument("--porta", type=int, default=8000), sv.add_argument("--host", default="127.0.0.1")
     a = ap.parse_args(argv)
@@ -54,13 +55,25 @@ def main(argv=None) -> int:
         import json
         import time
 
-        aplicar()
-        while True:
+        if not a.continuo:
+            aplicar()
             with sessao() as s:
                 r = notificacoes.enviar_pendentes(s, limite=a.limite)
             print(json.dumps(r, ensure_ascii=False), flush=True)
-            if not a.continuo:
-                return 0 if not r.get("erro_conexao") else 1
+            return 0 if not r.get("erro_conexao") else 1
+        # serviço: banco ou SMTP fora do ar numa rodada não derruba o processo; tenta de novo na próxima
+        volta = 0
+        while True:
+            volta += 1
+            try:
+                aplicar()
+                with sessao() as s:
+                    r = notificacoes.enviar_pendentes(s, limite=a.limite)
+            except Exception as e:  # noqa: BLE001 - registra e segue
+                r = {"erro": f"{type(e).__name__}: {str(e).splitlines()[0][:200]}"}
+            print(json.dumps(r, ensure_ascii=False, default=str), flush=True)
+            if a.voltas and volta >= a.voltas:
+                return 0
             time.sleep(a.intervalo)
     elif a.cmd == "servidor":
         import uvicorn

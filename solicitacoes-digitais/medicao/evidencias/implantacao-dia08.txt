@@ -1,0 +1,56 @@
+Evidência D8-A/D8-B — implantação em contêineres e e-mail em homologação local
+Data e hora (Brasília): 15/11/2026 08:53:04
+Commit base: 63001b8 (+ arquivos desta entrega ainda não versionados no momento do teste)
+Docker: 29.9.2 | Compose: 5.6.1
+Imagem: sha256:ab627799f6cfc6c8ec3aa77147d32538c77c479d6e1c039d7878de82adbe321b 322049099 bytes, usuário sd
+Dados: fictícios (admin@, gestora@, cidadao@exemplo.gov.br); e-mail só para a caixa local (Mailpit), nada sai da máquina
+
+== docker compose ps
+SERVICE     IMAGE                         STATUS
+api         solicitacoes-digitais:local   Up 34 seconds (healthy)
+banco       postgres:16-alpine            Up 40 seconds (healthy)
+mailpit     axllent/mailpit:v1.21         Up 40 seconds (healthy)
+mensagens   solicitacoes-digitais:local   Up 29 seconds
+
+== roteiro tests/homologacao_conteineres.py
+OK     saúde da API: {'situacao': 'ok', 'versao': '0.5.0', 'esquema': 5}
+OK     rota protegida sem login responde 401
+OK     login de admin@exemplo.gov.br
+OK     categoria criada
+OK     usuário gestor criado
+OK     usuário solicitante criado
+OK     login de cidadao@exemplo.gov.br
+OK     login de gestora@exemplo.gov.br
+OK     solicitação aberta: protocolo 2026000001
+OK     gestor tramitou para em triagem
+OK     aviso entregue na caixa de homologação em 4s: 'Solicitação 2026000001: em triagem'
+OK     corpo com situação e comentário
+OK     caixa de saída pela API do administrador: {'pendente': 0, 'enviada': 1, 'falhou': 0}
+SOLICITACAO_ID=1
+
+== persistência: reinício do banco e da API
+ Container sd-homolog-banco-1 Started 
+ Container sd-homolog-api-1 Started 
+ Container sd-homolog-api-1 Healthy 
+depois do reinício: GET /api/v1/solicitacoes/1 -> 200 2026000001 em_triagem
+histórico: ['criacao', 'transicao']
+
+== serviço de envio (últimas linhas)
+  mensagens-1  | [parameters: {'status_1': 'pendente', 'proxima_tentativa_em_1': datetime.datetime(2026, 11, 15, 11, 53, 6, 828576, tzinfo=datetime.timezone.utc), 'param_1': 100}]
+  mensagens-1  | (Background on this error at: https://sqlalche.me/e/21/e3q8)
+  mensagens-1  | {"configurado": true, "enviadas": 0, "reagendadas": 0, "falharam": 0, "na_fila": 0}
+
+== migrações dentro do contêiner (idempotente)
+aplicadas: nenhuma (já atualizado) | versão: 5
+
+== correção: serviço de envio resiliente a banco fora do ar (imagem reconstruída 08:54:02)
+reinícios do contêiner mensagens antes: 0
+ Container sd-homolog-banco-1 Stopped 
+ Container sd-homolog-banco-1 Started 
+reinícios do contêiner mensagens depois de parar e voltar o banco: 0 | estado: running
+  mensagens-1  | {"erro": "OperationalError: (psycopg.OperationalError) failed to resolve host 'banco': [Errno -2] Name or service not known"}
+  mensagens-1  | {"erro": "OperationalError: (psycopg.OperationalError) failed to resolve host 'banco': [Errno -2] Name or service not known"}
+  mensagens-1  | {"erro": "OperationalError: (psycopg.OperationalError) failed to resolve host 'banco': [Errno -2] Name or service not known"}
+  mensagens-1  | {"configurado": true, "enviadas": 0, "reagendadas": 0, "falharam": 0, "na_fila": 0}
+  mensagens-1  | {"configurado": true, "enviadas": 0, "reagendadas": 0, "falharam": 0, "na_fila": 0}
+== ambiente derrubado com 'docker compose down -v' (08:54:43)

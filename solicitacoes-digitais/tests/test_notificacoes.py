@@ -240,3 +240,23 @@ def test_porta_padrao_conforme_a_seguranca(monkeypatch):
         cfg_mod.config.cache_clear()
         assert cfg_mod.config().smtp_porta == porta
     cfg_mod.config.cache_clear()
+
+
+def test_servico_continuo_sobrevive_a_banco_fora_do_ar(app_cliente, monkeypatch, capsys):
+    """Achado da homologação em contêineres: o banco reiniciou e o serviço de envio caiu com OperationalError."""
+    from sqlalchemy.exc import OperationalError
+
+    from solicitacoes.__main__ import main
+
+    chamadas = []
+
+    def falha_depois_funciona(s, limite):
+        chamadas.append(1)
+        if len(chamadas) == 1:
+            raise OperationalError("SELECT 1", {}, Exception("connection refused\nmais detalhes"))
+        return {"configurado": False, "enviadas": 0, "reagendadas": 0, "falharam": 0, "na_fila": 0}
+
+    monkeypatch.setattr(notificacoes, "enviar_pendentes", falha_depois_funciona)
+    assert main(["enviar-mensagens", "--continuo", "--intervalo", "0", "--voltas", "2"]) == 0
+    linhas = [json.loads(x) for x in capsys.readouterr().out.strip().splitlines()]
+    assert "OperationalError" in linhas[0]["erro"] and "\n" not in linhas[0]["erro"] and linhas[1]["configurado"] is False

@@ -1,0 +1,64 @@
+# Solicitações Digitais — implantação em contêineres (OS-001, D8-A).
+#
+#   cp .env.exemplo .env   # preencha SD_SEGREDO, POSTGRES_PASSWORD e o SMTP
+#   docker compose up -d --build
+#   docker compose exec api python -m solicitacoes criar-admin admin@orgao.gov.br "Nome"
+#
+# Homologação com caixa de e-mail local (nenhuma mensagem sai da máquina; leia em http://127.0.0.1:8025):
+#   docker compose --profile homologacao up -d --build
+#   (com SD_SMTP_HOST=mailpit, SD_SMTP_PORTA=1025 e SD_SMTP_SEGURANCA=nenhuma no .env)
+name: solicitacoes
+
+services:
+  banco:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-solicitacoes}
+      POSTGRES_USER: ${POSTGRES_USER:-sd}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina POSTGRES_PASSWORD no .env}
+    volumes:
+      - banco:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build: .
+    image: solicitacoes-digitais:${SD_VERSAO_IMAGEM:-local}
+    restart: unless-stopped
+    env_file: ${SD_ENV_ARQUIVO:-.env}
+    environment:
+      SD_BANCO_URL: postgresql+psycopg://${POSTGRES_USER:-sd}:${POSTGRES_PASSWORD}@banco:5432/${POSTGRES_DB:-solicitacoes}
+    depends_on:
+      banco:
+        condition: service_healthy
+    ports:
+      - "${SD_PORTA_PUBLICA:-127.0.0.1:8000}:8000"
+    volumes:
+      - anexos:/dados/anexos
+
+  mensagens:
+    image: solicitacoes-digitais:${SD_VERSAO_IMAGEM:-local}
+    restart: unless-stopped
+    env_file: ${SD_ENV_ARQUIVO:-.env}
+    environment:
+      SD_BANCO_URL: postgresql+psycopg://${POSTGRES_USER:-sd}:${POSTGRES_PASSWORD}@banco:5432/${POSTGRES_DB:-solicitacoes}
+    command: ["sh", "-c", "exec python -m solicitacoes enviar-mensagens --continuo --intervalo $${SD_ENVIO_INTERVALO:-60}"]
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      disable: true
+
+  mailpit:
+    image: axllent/mailpit:v1.21
+    profiles: ["homologacao"]
+    ports:
+      - "127.0.0.1:8025:8025"
+
+volumes:
+  banco:
+  anexos:
