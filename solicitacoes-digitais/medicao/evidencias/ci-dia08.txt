@@ -1,0 +1,45 @@
+# CI do GitHub Actions — dia 8 (workflow Solicitações Digitais — CI)
+execução: 43711370653 (https://github.com/fabricagovv-byte/sistema-restaura-ao-de-docuemento/actions/runs/43711370653)
+commit: 251c522a32c7f035a6b1abf9222e72192d758b37 | evento: push | início 2026-11-15T11:57:04Z | fim 2026-11-15T11:58:55Z | resultado: success
+
+## Testes (sqlite): success (2026-11-15T11:57:06Z → 2026-11-15T11:57:57Z)
+  - Set up job: success
+  - Initialize containers: success
+  - Run actions/checkout@v4: success
+  - Run actions/setup-python@v5: success
+  - Run pip install -r requirements.txt: success
+  - Contrato OpenAPI salvo = gerado pelo código: success
+  - Testes: success
+  - Post Run actions/setup-python@v5: success
+  - Post Run actions/checkout@v4: success
+  - Stop containers: success
+  - Complete job: success
+
+## Testes (postgresql): success (2026-11-15T11:57:06Z → 2026-11-15T11:58:04Z)
+  - Set up job: success
+  - Initialize containers: success
+  - Run actions/checkout@v4: success
+  - Run actions/setup-python@v5: success
+  - Run pip install -r requirements.txt: success
+  - Contrato OpenAPI salvo = gerado pelo código: success
+  - Testes: success
+  - Post Run actions/setup-python@v5: success
+  - Post Run actions/checkout@v4: success
+  - Stop containers: success
+  - Complete job: success
+
+## Imagem e teste de fumaça: success (2026-11-15T11:58:06Z → 2026-11-15T11:58:54Z)
+  - Set up job: success
+  - Run actions/checkout@v4: success
+  - Construir a imagem: success
+  - Subir com PostgreSQL e conferir a saúde: success
+  - Registros em caso de falha: skipped
+  - Derrubar: success
+  - Post Run actions/checkout@v4: success
+  - Complete job: success
+
+## Saída do teste de fumaça da imagem (log do job, 11:58:51Z)
+  {"situacao":"ok","versao":"0.5.0","esquema":5}  (curl /api/v1/saude)
+  rota protegida sem login: 401 (passo falharia com outro código)
+  aplicadas: nenhuma (já atualizado) | versão: 5  (migrar reaplicado no contêiner)
+  docker compose down -v: contêineres, volumes e rede removidos

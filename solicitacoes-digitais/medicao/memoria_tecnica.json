@@ -240,5 +240,55 @@
     "tests/navegador/acessibilidade.js"
    ]
   ]
+ },
+ "8": {
+  "camadas": [
+   [
+    "Arquitetura e regras de negócio",
+    "Proposta de RTO (4 h) e RPO (24 h no nível básico ou 15 min com arquivamento de WAL), rotina diária de backup, retenção 7/4/12 e exercício mensal de restauração em docs/OPERACAO.md, para decisão do contratante. Configuração por ambiente documentada em docs/IMPLANTACAO.md."
+   ],
+   [
+    "Banco de dados",
+    "Migração v5 idempotente: caixa de saída com tipo, status, tentativas, último erro, próxima tentativa e solicitação; mensagens antigas preservadas (enviada continua enviada). Testada subindo um banco da versão 4."
+   ],
+   [
+    "Backend",
+    "Módulo notificacoes.py: avisos de mudança de situação ao solicitante e de atribuição ao responsável; envio em lote por SMTP (starttls, ssl ou sem cifra só em máquina local) com autenticação, recusa 5xx definitiva, novas tentativas em 1, 5, 15 e 60 min e desistência na 5ª; corpo da recuperação de senha apagado após o envio. Rotas do administrador GET /api/v1/mensagens e POST /api/v1/mensagens/enviar; linha de comando enviar-mensagens (uma vez ou contínuo, resiliente a banco fora do ar). Produção exige PostgreSQL e SMTP cifrado. Contrato OpenAPI 0.5.0 (31 operações). 118 testes em SQLite e PostgreSQL."
+   ],
+   [
+    "Frontend",
+    "Sem mudança de tela no dia 8 (a caixa de saída é acompanhada pela API do administrador)."
+   ],
+   [
+    "Integração e infraestrutura",
+    "Dockerfile (usuário sem privilégio, verificação de saúde, migrações na subida), docker-compose com PostgreSQL 16, API, serviço de envio e Mailpit no perfil de homologação; .env.exemplo conferido contra o código; pipeline de CI no GitHub Actions (testes nos dois bancos, contrato, imagem com teste de fumaça); servidor SMTP de homologação local para os testes; homologação real em contêineres com 13 verificações."
+   ]
+  ],
+  "mudancas": [
+   [
+    "Serviço de envio passou a registrar o erro e seguir quando o banco está fora do ar",
+    "Na homologação em contêineres, ao reiniciar o banco o serviço caiu com OperationalError e só voltou pelo reinício automático do Docker",
+    "Correção de defeito achado na homologação",
+    "solicitacoes/__main__.py; tests/test_notificacoes.py::test_servico_continuo_sobrevive_a_banco_fora_do_ar"
+   ],
+   [
+    "Erro de conexão ou de senha no SMTP não condena a mensagem",
+    "Uma senha errada recusaria (535) todas as mensagens do lote de forma definitiva",
+    "Decisão técnica",
+    "solicitacoes/notificacoes.py (_falha com conexao=True)"
+   ],
+   [
+    "Certificado de rede só na construção da imagem, por secret do BuildKit",
+    "A rede desta máquina inspeciona HTTPS; órgãos públicos costumam ter o mesmo; o certificado não fica gravado na imagem",
+    "Decisão técnica",
+    "Dockerfile"
+   ],
+   [
+    "Produção recusa SQLite",
+    "Instalação em produção sem PostgreSQL perderia concorrência e a rotina de backup proposta",
+    "Regra nova de configuração",
+    "solicitacoes/config.py; tests/test_cobertura_regras.py"
+   ]
+  ]
  }
 }
