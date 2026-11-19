@@ -104,8 +104,12 @@ def coletar(s: Session, *, dias: int = 2, detalhar_top: int = 40, listar: int = 
     dj = Disjuntor()
     # até 0,85 do orçamento: na execução de 14-15/11 o prazo de 0,68 deixou ~10 min para ler editais (16 lidos) e sobrou
     # cerca de 1 hora no fim; os diários levam ~20 min e a listagem do segmento é rápida quando o pacote anterior já trouxe
-    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.85), disjuntor=dj), resumo)
-    _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(0.93), disjuntor=dj), resumo)
+    _passo("documentos_relevantes", lambda: detalhar_relevantes(s, detalhar_top, ate=prazo(0.8), disjuntor=dj), resumo)
+    _passo("itens_e_documentos_listados", lambda: listar_segmento(s, listar, ate=prazo(0.84), disjuntor=dj), resumo)
+    # itens de TODOS os editais abertos (não só os de TI), aos poucos: cada execução continua de onde a anterior parou
+    # (o pacote anterior traz os itens já lidos) e acha lotes de software ou digitalização dentro de pregões gerais
+    if not rapido:
+        _passo("itens_de_todos_os_editais", lambda: varrer_itens(s, ate=prazo(0.94), disjuntor=dj), resumo)
     if not rapido:
         _passo("querido_diario", lambda: _sync(coleta.sincronizar_querido_diario(s, TERMOS_DIARIOS, dias=15, ate=prazo(1.0))), resumo)
         if config().transparencia_chave:
@@ -222,6 +226,40 @@ def listar_segmento(s: Session, limite: int, ate: float | None = None, disjuntor
         res["detalhados"] += 1
         res["itens"] += d.get("itens", 0)
         res["documentos"] += d.get("documentos", 0)
+    return res
+
+
+def varrer_itens(s: Session, ate: float | None = None, disjuntor: Disjuntor | None = None, conector=None,
+                 limite: int | None = None) -> dict:
+    """Lê os itens dos editais abertos que ainda não têm itens, de qualquer assunto, do maior valor para o menor
+    (sem valor divulgado no fim). Compra de material pelo objeto fica de fora."""
+    sem_itens = (s.query(Licitacao).filter(coleta.abertas_filtro(), Licitacao.tipo_registro == "contratacao",
+                                           Licitacao.cnpj_orgao.isnot(None), Licitacao.sequencial.isnot(None),
+                                           ~Licitacao.itens.any()).all())
+    alvo = [x for x in sem_itens if natureza(x.objeto) != "material"]
+    alvo.sort(key=lambda x: -float(x.valor_estimado or 0))
+    res = {"sem_itens": len(sem_itens), "alvo": len(alvo), "lidos": 0, "itens": 0, "viraram_ti_ou_documental": 0, "falhas": 0}
+    dj = disjuntor or Disjuntor()
+    dj.nova_chance()
+    for lic in alvo[:limite] if limite else alvo:
+        if ate is not None and time.monotonic() > ate:
+            res["interrompido_por_tempo"] = True
+            break
+        antes = any(c["segmento"] in SEGMENTOS_LISTADOS for c in lic.categorias or [])
+        try:
+            res["itens"] += coleta.ler_itens(s, lic, conector)
+        except Exception as e:
+            s.rollback()
+            res["falhas"] += 1
+            if dj.falhou(e):
+                res["interrompido_fonte_indisponivel"] = dj.motivo
+                break
+            continue
+        dj.sucesso()
+        res["lidos"] += 1
+        if not antes and any(c["segmento"] in SEGMENTOS_LISTADOS for c in lic.categorias or []):
+            res["viraram_ti_ou_documental"] += 1
+    res["restam"] = max(0, len(alvo) - res["lidos"] - res["falhas"])
     return res
 
 

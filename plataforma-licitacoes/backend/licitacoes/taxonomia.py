@@ -482,6 +482,33 @@ def documental_pelos_itens(objeto: str, itens: list[tuple[str | None, str | None
     return saida
 
 
+# Serviço de TI ou documental que só aparece num item/lote de um pregão geral (19/11): "Lote 7 — locação de sistema de
+# gestão", "digitalização de prontuários" dentro de um pregão de serviços diversos. Só serviço (item de material não conta)
+# e só categorias de serviço: equipamento num pregão de material escolar não faz o edital virar TI.
+CATS_ITEM_SERVICO = {"desenvolvimento", "fabrica_software", "manutencao_software", "sustentacao", "sistemas_gestao", "ia", "dados",
+                     "cloud", "suporte", "seguranca", "consultoria_ti", "integracao", "ged", "ocr", "indexacao", "triagem", "guarda",
+                     "higienizacao", "restauracao", "ead", "pesquisa"}
+
+
+def assuntos_pelos_itens(itens: list[tuple], ja: set[str]) -> list[dict]:
+    """Categorias de serviço pela descrição dos itens. `itens`: (descrição, material/serviço, valor total)."""
+    achados: dict[str, list[str]] = {}
+    for desc, ms, valor in itens:
+        if not desc or normalizar(ms or "").startswith("m"):
+            continue
+        for c in classificar(desc):
+            cod = c["codigo"]
+            if cod in CATS_ITEM_SERVICO and cod not in ja:
+                achados.setdefault(cod, [])
+                if len(achados[cod]) < 3:
+                    achados[cod].append(f"item: {' '.join(desc.split())[:80]}")
+    saida = []
+    for cod, termos in achados.items():
+        c = por_codigo(cod)
+        saida.append({"codigo": cod, "nome": c.nome, "segmento": c.segmento, "termos": termos, "forca": 0.5})
+    return saida
+
+
 # Forma de pagamento dos contratos de TI. O objeto quase nunca diz; a unidade dos itens costuma dizer
 # ("UND SERVIÇO TÉCNICO", "PONTO DE FUNÇÃO", "VALOR FIXO MENSAL", "MÊS").
 REMUNERACAO = {

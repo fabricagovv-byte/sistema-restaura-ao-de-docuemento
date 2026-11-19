@@ -161,3 +161,54 @@ def test_relevantes_le_editais_novos_com_indicio(banco):
     assert lido.id not in r       # texto já veio do pacote anterior
     assert pequeno.id in r        # foco (fábrica de software): entra em qualquer valor (14/11)
     assert mensal.id not in r     # fora do foco e abaixo de R$ 300 mil
+
+
+def test_varredura_de_itens_acha_lote_de_software_e_digitalizacao_em_pregao_geral(banco):
+    """19/11: itens de todos os editais abertos, não só os de TI. Lote de serviço de TI ou documental dentro de um
+    pregão de outro assunto passa a contar; item de material e edital de compra de material não."""
+    from licitacoes.coletor_remoto import varrer_itens
+
+    from .test_coleta_busca import _registro
+
+    s = banco
+    pncp = catalogo.fonte(s, "pncp")
+    _, geral = coleta.gravar(s, _registro(chave="pncp:12345678000190-1-000021/2026", numero_controle_pncp="12345678000190-1-000021/2026",
+                                          sequencial=21, objeto="Registro de preços para serviços diversos da administração municipal",
+                                          valor_estimado=900_000.0), pncp)
+    _, escolar = coleta.gravar(s, _registro(chave="pncp:12345678000190-1-000022/2026", numero_controle_pncp="12345678000190-1-000022/2026",
+                                            sequencial=22, objeto="Prestação de serviços de manutenção predial e jardinagem",
+                                            valor_estimado=500_000.0), pncp)
+    _, compra = coleta.gravar(s, _registro(chave="pncp:12345678000190-1-000023/2026", numero_controle_pncp="12345678000190-1-000023/2026",
+                                           sequencial=23, objeto="Aquisição de material escolar e notebooks", valor_estimado=2_000_000.0), pncp)
+    assert not any(c["segmento"] == "ti" for c in geral.categorias)
+
+    class Conector:
+        def __init__(self):
+            self.chamados = []
+
+        def itens(self, cnpj, ano, seq):
+            self.chamados.append(seq)
+            if seq == 21:
+                return [{"numeroItem": 1, "descricao": "Lote 3 - Locação de sistema de gestão de protocolo, licença de uso de software",
+                         "materialOuServicoNome": "Serviço", "quantidade": 12, "unidadeMedida": "mês", "valorTotal": 120000},
+                        {"numeroItem": 2, "descricao": "Digitalização de documentos do arquivo, com indexação",
+                         "materialOuServicoNome": "Serviço", "quantidade": 50000, "unidadeMedida": "página", "valorTotal": 25000}]
+            return [{"numeroItem": 1, "descricao": "Notebook para a secretaria", "materialOuServicoNome": "Material",
+                     "quantidade": 2, "unidadeMedida": "unidade", "valorTotal": 8000},
+                    {"numeroItem": 2, "descricao": "Poda de árvores", "materialOuServicoNome": "Serviço",
+                     "quantidade": 1, "unidadeMedida": "serviço", "valorTotal": 30000}]
+
+    c = Conector()
+    r = varrer_itens(s, conector=c)
+    assert compra.sequencial not in c.chamados  # compra de material pelo objeto não é lida
+    assert c.chamados == [21, 22]  # do maior valor para o menor
+    assert r["lidos"] == 2 and r["itens"] == 4 and r["viraram_ti_ou_documental"] == 1 and r["restam"] == 0
+    s.refresh(geral)
+    cods = {x["codigo"] for x in geral.categorias}
+    assert {"sistemas_gestao", "digitalizacao"} <= cods
+    assert all(i.bruto == {} for i in geral.itens)  # sem o JSON bruto na varredura geral
+    s.refresh(escolar)
+    assert not {x["codigo"] for x in escolar.categorias} & {"equipamentos_ti", "sistemas_gestao"}  # notebook é material
+    # segunda execução não relê quem já tem itens
+    c2 = Conector()
+    assert varrer_itens(s, conector=c2)["lidos"] == 0 and c2.chamados == []

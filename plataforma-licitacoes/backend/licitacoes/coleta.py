@@ -217,14 +217,17 @@ class Execucao:
 
 def classificar_licitacao(s: Session, lic: Licitacao, cats=None) -> None:
     """Categorias pelo objeto + forma de pagamento pelo objeto e pelos itens já coletados."""
-    from .taxonomia import documental_pelos_itens, remuneracao
+    from .taxonomia import assuntos_pelos_itens, documental_pelos_itens, remuneracao
 
     texto = f"{lic.objeto} {lic.informacao_complementar or ''}"
     base = classificar(texto, cats or categorias_ativas(s))
     # consulta direta: ler lic.itens aqui deixaria em cache uma lista vazia antes de os itens serem gravados
-    itens = (s.query(Item.unidade, Item.descricao, Item.quantidade, Item.valor_unitario).filter(Item.licitacao_id == lic.id).all()
-             if lic.id is not None else [])
+    linhas = (s.query(Item.unidade, Item.descricao, Item.quantidade, Item.valor_unitario, Item.material_servico, Item.valor_total)
+              .filter(Item.licitacao_id == lic.id).all() if lic.id is not None else [])
+    itens = [tuple(x[:4]) for x in linhas]
     base = base + documental_pelos_itens(texto, [(i[0], i[1]) for i in itens], {c["codigo"] for c in base})
+    # lote de software ou de serviço documental dentro de um pregão de outro assunto (achado pelos itens)
+    base = base + assuntos_pelos_itens([(x[1], x[4], x[5]) for x in linhas], {c["codigo"] for c in base})
     lic.categorias = base + remuneracao(texto, itens, base, _texto_documentos(s, lic))
 
 
@@ -413,6 +416,34 @@ def detalhar(s: Session, lic: Licitacao, conector=None, comprasgov=None) -> dict
     lic.aderencia = calcular_aderencia(lic)
     s.commit()
     return {"itens": len(itens), "documentos": len(arquivos), "documentos_novos": novos_docs}
+
+
+def ler_itens(s: Session, lic: Licitacao, conector=None) -> int:
+    """Só os itens (sem a lista de arquivos e sem o JSON bruto), para varrer os itens de todos os editais abertos.
+    Reclassifica o edital com os itens: um lote de software ou de digitalização num pregão geral passa a aparecer."""
+    from .conectores.pncp import ConectorPncp, normalizar_item
+
+    if not (lic.cnpj_orgao and lic.ano and lic.sequencial):
+        return 0
+    c = conector or ConectorPncp()
+    existentes = {i.numero: i for i in lic.itens}
+    n = 0
+    for raw in c.itens(lic.cnpj_orgao, lic.ano, lic.sequencial):
+        d = normalizar_item(raw)
+        if d["numero"] is None:
+            continue
+        d["bruto"] = {}  # varredura geral: guarda só os campos usados, para o pacote não crescer à toa
+        it = existentes.get(d["numero"]) or Item(licitacao_id=lic.id, numero=d["numero"], descricao="")
+        for k, v in d.items():
+            setattr(it, k, v)
+        if it.id is None:
+            s.add(it)
+        n += 1
+    s.flush()
+    classificar_licitacao(s, lic)
+    lic.aderencia = calcular_aderencia(lic)
+    s.commit()
+    return n
 
 
 def sincronizar_espelhos(s: Session, conector=None, conteudos: dict[str, bytes] | None = None) -> list[Sincronizacao]:
