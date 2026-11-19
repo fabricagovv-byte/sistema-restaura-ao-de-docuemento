@@ -88,6 +88,13 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .foco-lista .linha { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; font-size: .85rem; color: var(--muted); }
 .foco-lista .linha b { color: var(--ink); font-size: .95rem; }
 .foco-lista p { margin: 0; overflow-wrap: anywhere; }
+.atalhos { position: sticky; top: 0; z-index: 15; display: flex; gap: 6px; overflow-x: auto; padding: 8px 0; background: var(--bg);
+  border-bottom: 1px solid var(--line); scrollbar-width: thin; }
+.atalhos a { flex: none; font: 600 .85rem var(--f-body); color: var(--accent); text-decoration: none; padding: 5px 12px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface); white-space: nowrap; }
+.atalhos a:hover, .atalhos a:focus-visible { border-color: var(--accent); }
+.secao-mais { margin: 18px 0 0; font-size: 1rem; color: var(--muted); }
+section.panel, #lista { scroll-margin-top: 56px; }
 .funil { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
 .funil li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 6px 10px;
   border-radius: 8px; background: var(--accent-soft); }
@@ -298,47 +305,13 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
 
   <section class="kpis" id="kpis" aria-label="Números da coleta"></section>
 
+  <nav class="atalhos" aria-label="Ir para">
+    <a href="#busca">Buscar</a><a href="#lista">Resultados</a><a href="#cal-sec">Premiadas</a><a href="#crm-sec">Meu CRM</a>
+    <a href="#marc-sec">Palavras-chave</a><a href="#foco-sec">Seu foco</a><a href="#mais-ferramentas">Mais ferramentas</a>
+  </nav>
   <div class="barra-paineis"><button type="button" class="mais" id="paineis-fechar">Esconder todos os painéis</button><button type="button" class="mais" id="paineis-abrir">Mostrar todos</button></div>
-  <section class="panel destaques" id="destaques-sec" aria-labelledby="h-destaques">
-    <div class="vista-barra"><h2 id="h-destaques" style="margin:0">Em destaque: pregões de grande volume</h2>
-      <label class="marca"><input type="checkbox" id="dst-so-pregao" checked> Só pregões</label></div>
-    <p class="dica" style="margin:0">Editais abertos com muita UST, ponto de função, horas técnicas (HST), páginas de digitalização ou pagamento fixo mensal de software. Quantidades somadas dos itens do PNCP ou, quando os itens não trazem, lidas no objeto e no termo de referência ("pelo edital"); clique para a prévia.</p>
-    <div class="destaques-grade" id="destaques"></div>
-  </section>
 
-  <section class="panel" id="funil-sec" aria-labelledby="h-funil">
-    <h2 id="h-funil">Funil até você</h2>
-    <p class="lede">De todas as licitações coletadas até as que valem a sua proposta: a cada etapa sai o que não é com você.
-      Escolha abaixo o que é o seu núcleo (fica salvo neste navegador).</p>
-    <div class="chips" id="funil-nucleo" role="group" aria-label="Seu núcleo"></div>
-    <label class="marca"><input type="checkbox" id="funil-prox"> Incluir o mês que vem</label>
-    <ol class="funil" id="funil-etapas" aria-live="polite"></ol>
-    <div class="acoes"><button type="button" class="abrir" id="funil-ver">Ver na lista</button></div>
-    <h3 style="margin:.4rem 0 0">As melhores</h3>
-    <ol class="funil-top" id="funil-top"></ol>
-  </section>
-  <section class="panel" id="foco-sec" aria-labelledby="h-foco">
-    <h2 id="h-foco">Seu foco</h2>
-    <p class="lede">Fábrica de software, desenvolvimento, manutenção, sustentação e digitalização: todas as abertas de cada área, inclusive as que só citam a área no objeto, nos itens ou no edital. Compra de material fica de fora.</p>
-    <div class="chips" id="foco-areas" role="group" aria-label="Área"></div>
-    <div class="acoes"><label for="foco-ord">Ordenar<select id="foco-ord"><option value="prazo">Prazo mais próximo</option><option value="nota">Melhor nota</option><option value="valor">Maior valor</option></select></label>
-      <button type="button" class="abrir" id="foco-ver">Ver na lista principal</button></div>
-    <p class="conta" id="foco-conta" aria-live="polite"></p>
-    <ul class="foco-lista" id="foco-lista"></ul>
-    <button type="button" class="mais" id="foco-mais" hidden>Mostrar mais</button>
-  </section>
-  <section class="panel" id="cal-sec" aria-labelledby="h-cal">
-    <div class="vista-barra"><h2 id="h-cal" style="margin:0">Calendário de oportunidades premiadas</h2>
-      <label class="marca">Nota mínima <input type="number" id="cal-min" min="0" max="100" step="5" value="55" style="width:72px"></label></div>
-    <p class="dica" style="margin:0">Nota de 0 a 100 por licitação aberta: volume de UST, ponto de função, horas técnicas e páginas, fixo mensal de software, seu foco, valor, aderência, pregão, prazo para preparar e seus marcadores. Premiada = nota igual ou acima da mínima. Dias pela data de encerramento das propostas.</p>
-    <div class="chips" id="cal-meses" role="group" aria-label="Mês"></div>
-    <div class="cal-grade" id="cal-grade" role="grid" aria-label="Dias do mês"></div>
-    <div id="cal-lista"></div>
-    <div class="acoes"><button type="button" class="mais" id="cal-ics" hidden>Baixar para a agenda (.ics: Google, Outlook, celular)</button>
-      <button type="button" class="mais" id="cal-csv" hidden>Baixar planilha com os links (CSV)</button></div>
-  </section>
-
-  <section class="panel" aria-label="Filtros">
+  <section class="panel" id="busca" aria-label="Busca por palavras-chave e filtros">
     <div class="linha">
       <label for="q">Busca (objeto, itens, órgão, portal)<input id="q" type="search" placeholder='ex.: ust|pf, "gestão documental" -impressora'></label>
       <label for="uf">Estado<select id="uf"><option value="">Todos</option></select></label>
@@ -379,6 +352,7 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
     <div class="chips" role="group" aria-label="Modo de ver" id="vistas"><button type="button" data-vista="lista" aria-pressed="true">Lista com prévia</button><button type="button" data-vista="agenda" aria-pressed="false">Agenda de disputas</button></div>
     <span class="dica" id="vista-dica">Clique numa licitação para ver a prévia; as setas ↑ ↓ passam para a próxima.</span>
   </div>
+
   <div class="area-lista">
     <div class="col-lista">
       <section class="lista" id="lista" aria-label="Licitações"></section>
@@ -387,10 +361,23 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
     <aside class="previa" id="previa" aria-label="Prévia da licitação" hidden></aside>
   </div>
 
-  <section class="panel" id="calc-sec" aria-labelledby="h-calc">
-    <h2 id="h-calc">Calculadora</h2>
-    <p class="dica">Preço de venda com despesas, impostos e lucro (BDI), UST, digitalização por página, fixo mensal e lance. Dentro de cada pregão, a aba <b>Calculadora</b> já vem com os números do edital.</p>
-    <div id="calc-corpo"></div>
+  <section class="panel" id="cal-sec" aria-labelledby="h-cal">
+    <div class="vista-barra"><h2 id="h-cal" style="margin:0">Calendário de oportunidades premiadas</h2>
+      <label class="marca">Nota mínima <input type="number" id="cal-min" min="0" max="100" step="5" value="55" style="width:72px"></label></div>
+    <p class="dica" style="margin:0">Nota de 0 a 100 por licitação aberta: volume de UST, ponto de função, horas técnicas e páginas, fixo mensal de software, seu foco, valor, aderência, pregão, prazo para preparar e seus marcadores. Premiada = nota igual ou acima da mínima. Dias pela data de encerramento das propostas.</p>
+    <div class="chips" id="cal-meses" role="group" aria-label="Mês"></div>
+    <div class="cal-grade" id="cal-grade" role="grid" aria-label="Dias do mês"></div>
+    <div id="cal-lista"></div>
+    <div class="acoes"><button type="button" class="mais" id="cal-ics" hidden>Baixar para a agenda (.ics: Google, Outlook, celular)</button>
+      <button type="button" class="mais" id="cal-csv" hidden>Baixar planilha com os links (CSV)</button></div>
+  </section>
+
+  <section class="panel" id="crm-sec" aria-labelledby="h-crm">
+    <h2 id="h-crm">Meu CRM e propostas</h2>
+    <p class="conta" id="crm-estado">Carregando seus dados…</p>
+    <div class="chips" id="crm-filtro" role="group" aria-label="Situação no CRM"></div>
+    <div class="tabela" style="max-height:420px"><table><thead><tr><th>Licitação</th><th>Situação</th><th>Prazo</th><th class="num">Minha proposta</th><th>Próximo passo</th></tr></thead><tbody id="crm-lista"></tbody></table></div>
+    <div class="acoes"><button type="button" class="mais" id="crm-exportar" hidden>Exportar planilha (CSV)</button></div>
   </section>
 
   <section class="panel" id="marc-sec" aria-labelledby="h-marc">
@@ -404,6 +391,43 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
       <button type="button" class="salvar" id="marc-salvar">Salvar marcadores</button>
     </div>
     <p class="dica">Planilha: uma linha por marcador, colunas <b>nome; termos</b> (termos separados por | ou vírgula). Ex.: <code>Sustentação SEI; sei | sistema eletronico de informacoes</code></p>
+  </section>
+
+  <section class="panel" id="foco-sec" aria-labelledby="h-foco">
+    <h2 id="h-foco">Seu foco</h2>
+    <p class="lede">Fábrica de software, desenvolvimento, manutenção, sustentação e digitalização: todas as abertas de cada área, inclusive as que só citam a área no objeto, nos itens ou no edital. Compra de material fica de fora.</p>
+    <div class="chips" id="foco-areas" role="group" aria-label="Área"></div>
+    <div class="acoes"><label for="foco-ord">Ordenar<select id="foco-ord"><option value="prazo">Prazo mais próximo</option><option value="nota">Melhor nota</option><option value="valor">Maior valor</option></select></label>
+      <button type="button" class="abrir" id="foco-ver">Ver na lista principal</button></div>
+    <p class="conta" id="foco-conta" aria-live="polite"></p>
+    <ul class="foco-lista" id="foco-lista"></ul>
+    <button type="button" class="mais" id="foco-mais" hidden>Mostrar mais</button>
+  </section>
+
+  <h2 id="mais-ferramentas" class="secao-mais">Mais ferramentas <span class="conta">(recolhidas; clique em Mostrar)</span></h2>
+  <section class="panel" id="funil-sec" aria-labelledby="h-funil">
+    <h2 id="h-funil">Funil até você</h2>
+    <p class="lede">De todas as licitações coletadas até as que valem a sua proposta: a cada etapa sai o que não é com você.
+      Escolha abaixo o que é o seu núcleo (fica salvo neste navegador).</p>
+    <div class="chips" id="funil-nucleo" role="group" aria-label="Seu núcleo"></div>
+    <label class="marca"><input type="checkbox" id="funil-prox"> Incluir o mês que vem</label>
+    <ol class="funil" id="funil-etapas" aria-live="polite"></ol>
+    <div class="acoes"><button type="button" class="abrir" id="funil-ver">Ver na lista</button></div>
+    <h3 style="margin:.4rem 0 0">As melhores</h3>
+    <ol class="funil-top" id="funil-top"></ol>
+  </section>
+
+  <section class="panel destaques" id="destaques-sec" aria-labelledby="h-destaques">
+    <div class="vista-barra"><h2 id="h-destaques" style="margin:0">Em destaque: pregões de grande volume</h2>
+      <label class="marca"><input type="checkbox" id="dst-so-pregao" checked> Só pregões</label></div>
+    <p class="dica" style="margin:0">Editais abertos com muita UST, ponto de função, horas técnicas (HST), páginas de digitalização ou pagamento fixo mensal de software. Quantidades somadas dos itens do PNCP ou, quando os itens não trazem, lidas no objeto e no termo de referência ("pelo edital"); clique para a prévia.</p>
+    <div class="destaques-grade" id="destaques"></div>
+  </section>
+
+  <section class="panel" id="calc-sec" aria-labelledby="h-calc">
+    <h2 id="h-calc">Calculadora</h2>
+    <p class="dica">Preço de venda com despesas, impostos e lucro (BDI), UST, digitalização por página, fixo mensal e lance. Dentro de cada pregão, a aba <b>Calculadora</b> já vem com os números do edital.</p>
+    <div id="calc-corpo"></div>
   </section>
 
   <section class="panel" id="config-sec" aria-labelledby="h-config">
@@ -434,14 +458,6 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
     <div class="acoes"><button type="button" class="salvar" id="modelo-salvar">Salvar modelo</button>
       <label class="abrir" style="display:inline-block;text-transform:none;letter-spacing:0;color:var(--surface);font-size:.82rem">Subir modelo (PDF, DOCX, TXT)<input type="file" id="modelo-arquivo" accept=".pdf,.docx,.txt,.md" hidden></label>
       <button type="button" class="mais" id="modelo-padrao">Voltar ao modelo padrão</button></div>
-  </section>
-
-  <section class="panel" id="crm-sec" aria-labelledby="h-crm">
-    <h2 id="h-crm">Meu CRM e propostas</h2>
-    <p class="conta" id="crm-estado">Carregando seus dados…</p>
-    <div class="chips" id="crm-filtro" role="group" aria-label="Situação no CRM"></div>
-    <div class="tabela" style="max-height:420px"><table><thead><tr><th>Licitação</th><th>Situação</th><th>Prazo</th><th class="num">Minha proposta</th><th>Próximo passo</th></tr></thead><tbody id="crm-lista"></tbody></table></div>
-    <div class="acoes"><button type="button" class="mais" id="crm-exportar" hidden>Exportar planilha (CSV)</button></div>
   </section>
 
   <section class="panel" aria-labelledby="h-portais">
@@ -956,7 +972,9 @@ document.getElementById("funil-ver").addEventListener("click", () => {
 
 /* ---------- esconder/mostrar painéis (lembra neste navegador) */
 let fechados = [];
-try { fechados = JSON.parse(localStorage.getItem("paineis-fechados") || "[]"); } catch (e) { fechados = []; }
+// primeira visita: o que não é busca, resultados, premiadas, CRM, palavras-chave e foco começa recolhido
+const FECHADOS_PADRAO = ["funil-sec", "destaques-sec", "calc-sec", "config-sec", "modelo-sec", "h-portais", "h-diarios", "h-uf", "h-fontes"];
+try { const g = localStorage.getItem("paineis-fechados"); fechados = g === null ? FECHADOS_PADRAO.slice() : JSON.parse(g); } catch (e) { fechados = FECHADOS_PADRAO.slice(); }
 const chavePainel = (sec, i) => sec.id || (sec.getAttribute("aria-labelledby") || sec.getAttribute("aria-label") || "painel-" + i);
 function marcarPainel(sec, fechar) {
   sec.classList.toggle("fechado", fechar);

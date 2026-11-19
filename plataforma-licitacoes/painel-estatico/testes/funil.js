@@ -6,7 +6,7 @@ const fs = require('fs');
   for (const w of [1366, 390]) {
     const p = await b.newPage({ viewport: { width: w, height: 900 } });
     p.on('pageerror', (e) => erros.push(String(e))); p.on('console', (m) => m.type() === 'error' && erros.push(m.text()));
-    await p.goto('file://' + process.argv[2]); await p.waitForSelector('#funil-etapas li');
+    await p.addInitScript(() => { try { localStorage.setItem('paineis-fechados', '[]'); } catch (e) {} }); await p.goto('file://' + process.argv[2]); await p.waitForSelector('#funil-etapas li');
     await p.waitForFunction(() => /Todas as licitações do Brasil \d/.test(document.getElementById('cats').innerText), null, { timeout: 60000 }).catch(() => {});
     const etapas = await p.$$eval('#funil-etapas li', (xs) => xs.map((x) => x.innerText.replace(/\s+/g, ' ')));
     if (w === 1366) console.log(etapas.join('\n'));
@@ -15,7 +15,7 @@ const fs = require('fs');
     console.log(w, 'top', top, '| lista:', (await p.textContent('#conta')).replace(/\s+/g, ' ').slice(0, 90));
     const b1 = await p.$('#funil-top [data-funil]'); if (b1) { await b1.click(); await p.waitForTimeout(300);
       console.log(' prévia aberta:', await p.$eval('#previa', (e) => !e.hidden && e.innerText.length > 50)); }
-    await p.click('#funil-nucleo [data-g="telecom"]'); await p.waitForTimeout(200);
+    await p.keyboard.press('Escape'); await p.click('#funil-nucleo [data-g="telecom"]'); await p.waitForTimeout(200);
     console.log(' com telecom:', (await p.$$eval('#funil-etapas li', (xs) => xs.slice(-1)[0].innerText.replace(/\s+/g, ' '))));
     await p.click('#funil-nucleo [data-g="telecom"]');
     await p.check('#funil-prox'); await p.waitForTimeout(200);

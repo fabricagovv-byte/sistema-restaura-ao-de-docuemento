@@ -2,10 +2,10 @@ const { chromium } = require('playwright');
 (async () => { const b = await chromium.launch(); const erros = [];
   for (const [w, h] of [[1366, 900], [390, 844]]) {
   const p = await b.newPage({ viewport: { width: w, height: h } }); p.on('pageerror', (e) => erros.push(e.message));
-  await p.goto('file://' + process.argv[2]);
+  await p.addInitScript(() => { try { localStorage.setItem('paineis-fechados', '[]'); } catch (e) {} }); await p.goto('file://' + process.argv[2]);
   await p.waitForFunction(() => !document.getElementById('cat-todas').textContent.includes('carregando'), null, { timeout: 30000 });
   const conta = async () => (await p.textContent('#conta')).trim().split('·')[0].trim();
-  await p.click('#cat-tecnologia'); console.log(w, 'tecnologia:', await conta());
+  await p.click('#cat-g-software'); console.log(w, 'software e sistemas:', await conta());
   await p.click('#avancada summary');
   await p.selectOption('#adv-mod', 'pregao'); console.log(' só pregão:', await conta(), '| todos pregão?', await p.evaluate(() => [...document.querySelectorAll('.card .meta')].every((m) => /Preg/i.test(m.textContent))));
   await p.fill('#adv-vmax', '5 mi'); console.log(' até 5 mi:', await conta());
