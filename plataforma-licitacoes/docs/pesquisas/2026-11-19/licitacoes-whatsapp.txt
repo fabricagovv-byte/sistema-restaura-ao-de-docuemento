@@ -1,0 +1,1155 @@
+*PAINEL NACIONAL DIGITALGOV — pesquisa ao vivo no PNCP*
+Verificado em 19/11/2026 20:16 (Brasília). Só licitações com prazo de proposta ainda aberto.
+
+*🔥 ACIMA DE R$ 10 MILHÕES* (42)
+
+🏛️ LICITAÇÃO 001 — MUNICIPIO DE ARAUCARIA
+📍 Local: Araucária/PR
+📑 Pregão - Eletrônico: nº 47 · Processo 85.875/2026
+🆔 PNCP: 76105535000199-1-000374/2026
+💰 Valor global estimado: R$ 53.632.711,82
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de plataforma integrada de gestão pública digital, destinada à automação e controle dos processos administrativos, orçamentários, financeiros, de pessoal, tributários e de transparência, com infraestrutura em nuvem, licenciamento de uso, serviços de implantação, suporte técnico, capacitação de usuários e manutenção evolutiva, visando à eficiência administrativa e à conformidade com o D
+📊 Quantidade: 21.172 horas técnicas (HST)
+📅 Abertura das propostas: 11/11/2026 — 09:00
+⏳ Prazo final das propostas: 30/11/2026 — 08:59 (10 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/76105535000199/2026/374
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92553205000472026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/76105535000199/compras/2026/374/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 97/100 — Desenvolvimento/sustentação)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 002 — MUNICIPIO DE ARAUCARIA
+📍 Local: Araucária/PR
+📑 Pregão - Eletrônico: nº PCE 73 · Processo 85875/2026
+🆔 PNCP: 76105535000199-1-000376/2026
+💰 Valor global estimado: R$ 53.632.711,82
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: : Contratação de plataforma integrada de gestão pública digital, destinada à automação e controle dos processos administrativos, orçamentários, financeiros, de pessoal, tributários e de transparência, com infraestrutura em nuvem, licenciamento de uso, serviços de implantação, suporte técnico, capacitação de usuários e manutenção evolutiva, visando à eficiência administrativa e à conformidade com o
+📊 Quantidade: 4.380 horas técnicas (HST)
+📅 Abertura das propostas: 11/11/2026 — 09:00
+⏳ Prazo final das propostas: 30/11/2026 — 08:59 (10 dias)
+🖥️ Disputa: IPM Sistemas · Aberto-Fechado · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/76105535000199/2026/376
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/76105535000199/compras/2026/376/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 97/100 — Desenvolvimento/sustentação)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 003 — MINISTERIO DA JUSTICA E SEGURANCA PUBLICA
+📍 Local: Brasília/DF
+📑 Pregão - Eletrônico: nº 58 · Processo 08006.000703/2025-56
+🆔 PNCP: 00394494000136-1-001068/2026
+💰 Valor global estimado: R$ 107.412.480,00
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de serviços de desenvolvimento, manutenção e sustentação de software para o Ministério da Justiça e Segurança Pública - MJSP, conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.
+📊 Quantidade: 768.000 horas técnicas (HST)
+📅 Abertura das propostas: 09/11/2026 — 08:00
+⏳ Prazo final das propostas: 25/11/2026 — 09:00 (5 dias)
+🖥️ Disputa: Compras.gov.br · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/00394494000136/2026/1068
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=20000505000582026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00394494000136/compras/2026/1068/arquivos/2
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 93/100 — Desenvolvimento/sustentação)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 004 — CONSORCIO INTERMUNICIPAL DE SAUDE DA REGIAO DE ALMENARA
+📍 Local: Almenara/MG
+📑 Pregão - Eletrônico: nº 0011 · Processo 0026/2026
+🆔 PNCP: 28168515000114-1-000012/2026
+💰 Valor global estimado: R$ 13.770.119,98
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Registro de preços para futura e eventual contratação de empresa especializada para disponibilização, implantação, operação, sustentação e evolução do Ecossistema Digital Inteligente para Gestão Escolar – EDIGE, solução integrada de gestão acadêmica, pedagógica, administrativa e gerencial das redes municipais de ensino, incluindo licenças por perfil de usuário, controle de frequência escolar por r
+📊 Quantidade: 3.904 horas técnicas (HST); 3.660 PF
+📅 Abertura das propostas: 16/11/2026 — 08:00
+⏳ Prazo final das propostas: 30/11/2026 — 09:00 (10 dias)
+🖥️ Disputa: Licitar Digital - Plataforma de Licitações Online · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/28168515000114/2026/12
+🔗 Portal da disputa: https://app2.ammlicita.org.br/pesquisa/119471
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/28168515000114/compras/2026/12/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 93/100 — Desenvolvimento/sustentação)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 005 — MUNICIPIO DE SANTAREM
+📍 Local: Santarém/PA
+📑 Pregão - Eletrônico: nº SRP 018/2026 – SEMED/2026 · Processo 042/2026 –SEMED
+🆔 PNCP: 05182233000176-1-000236/2026
+💰 Valor global estimado: R$ 19.618.705,44
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: [Portal de Compras Públicas] - REGISTRO DE PREÇOS PARA CONTRATAÇÃO DE EMPRESA(S) ESPECIALIZADA(S) NA PRESTAÇÃO DE SERVIÇOS GRÁFICOS, INCLUINDO IMPRESSÃO DE MATERIAIS DIVERSOS, TAIS COMO REVISTAS, FOLDERS E SIMILARES, ENCADERNAÇÃO, PLASTIFICAÇÃO E DEMAIS SERVIÇOS CORRELATOS; SERVIÇOS DE REPROGRAFIA, DIGITALIZAÇÃO E GESTÃO DOCUMENTAL, COMPREENDENDO TRATAMENTO ARQUIVÍSTICO, INDEXAÇÃO, ORGANIZAÇÃO DOC
+📊 Quantidade: 2.510.000 páginas
+📅 Abertura das propostas: 16/11/2026 — 08:00
+⏳ Prazo final das propostas: 01/12/2026 — 08:59 (11 dias)
+🖥️ Disputa: ECustomize Consultoria em Software S.A · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/05182233000176/2026/236
+🔗 Portal da disputa: https://www.portaldecompraspublicas.com.br/processos/PA/Prefeitura-Municipal-de-Santarem-2160/PE-SRP-018-2026-SEMED-2026-2026-2026-525319
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/05182233000176/compras/2026/236/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 87/100 — Gestão documental)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 006 — MUNICIPIO DE VILA VELHA
+📍 Local: Vila Velha/ES
+📑 Pregão - Eletrônico: nº 90059 · Processo 20743/2026
+🆔 PNCP: 27165554000103-1-000238/2026
+💰 Valor global estimado: R$ 108.737.750,80
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Registro de preços, visando a eventual e futura contratação de empresa especializada em locação de sistema de gestão, atendimento, despacho e inteligência (software) para central de comando operacional da guarda municipal de vila velha, incluindo pontos de coletas de captura e reconhecimento de placas e pontos de coletas de captura e reconhecimento facial e plataforma integradora.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 19/11/2026 — 08:00
+⏳ Prazo final das propostas: 04/12/2026 — 10:00 (14 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/27165554000103/2026/238
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=98570305900592026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/27165554000103/compras/2026/238/arquivos/3
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 86/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 007 — CONSORCIO INTERMUNICIPAL DE SEGURANCA PUBLICA E CIDADANIA DE LONDRINA E REGIAO
+📍 Local: Londrina/PR
+📑 Pregão - Eletrônico: nº PCE 10 · Processo 12/2026
+🆔 PNCP: 11274930000150-1-000021/2026
+💰 Valor global estimado: R$ 71.339.801,04
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Registro de Preços para contratação de empresa especializada na prestação de serviços, em regime de locação, de sistema integrado para gerenciamento de processos e análises, abrangendo licenças, equipamentos e serviços necessários ao monitoramento de áreas urbanas e próprios públicos municipais, cercamento intermunicipal, conectividade, suporte técnico dos itens locados, suporte a dispositivos do 
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 18/11/2026 — 09:00
+⏳ Prazo final das propostas: 04/12/2026 — 08:59 (14 dias)
+🖥️ Disputa: IPM Sistemas · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/11274930000150/2026/21
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/11274930000150/compras/2026/21/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 86/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 008 — CONSORCIO INTERMUNICIPAL DE SEGURANCA PUBLICA E CIDADANIA DE LONDRINA E REGIAO
+📍 Local: Rolândia/PR
+📑 Pregão - Eletrônico: nº 6 · Processo 12/2026
+🆔 PNCP: 11274930000150-1-000022/2026
+💰 Valor global estimado: R$ 71.339.801,04
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: locação, de sistema integrado para gerenciamento de processos e análises, abrangendo todas as licenças, equipamentos e serviços necessários para a perfeita execução das atividades inerentes às necessidades dos Entes Consorciados municipais do Consórcio Intermunicipal de Segurança Pública, Soluções e Melhorias do Norte Central Paranaense – CISMEL/NCP, relacionadas ao monitoramento de áreas urbanas 
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 18/11/2026 — 11:00
+⏳ Prazo final das propostas: 04/12/2026 — 08:59 (14 dias)
+🖥️ Disputa: Compras.gov.br · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/11274930000150/2026/22
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92610805000062026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/11274930000150/compras/2026/22/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 86/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 009 — INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DO CEARA
+📍 Local: Crateús/CE
+📑 Pregão - Eletrônico: nº 7 · Processo 23293.001417/2024-22
+🆔 PNCP: 10744098000145-1-000277/2026
+💰 Valor global estimado: R$ 15.471.020,58
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Aquisição de bens e materiais de consumo para manutenção corretiva e preventiva de infraestrutura de Tecnologia da Informação o Instituto Federal de Educação, Ciência e Tecnologia do Ceará - IFCE Central de Compras Inhamuns e órgãos participantes de maneira a garantir a continuidade dos serviços de TIC.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 12/11/2026 — 08:00
+⏳ Prazo final das propostas: 25/11/2026 — 08:00 (5 dias)
+🖥️ Disputa: Compras.gov.br · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/10744098000145/2026/277
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15832405000072026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/10744098000145/compras/2026/277/arquivos/5
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/10744098000145/compras/2026/277/arquivos/6
+⭐ Prioridade: Alta (nota 85/100 — Desenvolvimento/sustentação)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 010 — ESTADO DO RIO DE JANEIRO
+📍 Local: Rio de Janeiro/RJ
+📑 Pregão - Eletrônico: nº PE 003/26 · Processo SEI-150016/008933/2026
+🆔 PNCP: 42498600000171-1-004803/2026
+💰 Valor global estimado: R$ 123.758.691,82
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação, via certame licitatório, de SERVIÇOS DE IDENTIFICAÇÃO E CERTIFICAÇÃO AUTOMATIZADA DE IDENTIDADE DE PESSOAS, composto pelas funções de tratamento de dados, manutenção evolutiva, preventiva, corretiva e customizações de ferramentas do portal eletrônico SEI-RJ - Sistema Estadual de Identificação, processamento para identificação e certificação biométrica e geração lógica de carteiras de 
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 09/11/2026 — 11:05
+⏳ Prazo final das propostas: 26/11/2026 — 09:59 (6 dias)
+🖥️ Disputa: Portal de Compras Públicas do Estado do Rio de Janeiro · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/42498600000171/2026/4803
+🔗 Portal da disputa: https://www.compras.rj.gov.br/EditaisLicitacoes/detalhar.action?idLic=37760
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2026/4803/arquivos/1 | https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2026/4803/arquivos/2
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2026/4803/arquivos/2 | https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2026/4803/arquivos/5
+⭐ Prioridade: Alta (nota 83/100 — Desenvolvimento/sustentação)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 011 — CONSORCIO INTERMUNICIPAL MULTIFINALITARIO DO VALE DO PARAIBUNA - CIMPAR
+📍 Local: Juiz de Fora/MG
+📑 Pregão - Eletrônico: nº 24 · Processo 28/2026
+🆔 PNCP: 21565740000145-1-000027/2026
+💰 Valor global estimado: R$ 114.730.168,73
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Registro de Preços para futura e eventual contratação de solução integrada de Tecnologia da Informação e Comunicação em nuvem (SaaS/PaaS), contemplando ecossistema Google Workspace, Inteligência Artificial (Gemini), infraestrutura Google Cloud Platform (GCP), solução de proteção e backup imutável de dados, além de serviços especializados de migração, suporte técnico, consultoria e capacitação.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 11/11/2026 — 09:30
+⏳ Prazo final das propostas: 26/11/2026 — 09:30 (6 dias)
+🖥️ Disputa: BLL Compras · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/21565740000145/2026/27
+🔗 Portal da disputa: https://bllcompras.com/Process/ProcessView?param1=[gkz]_bdyhPSJaAYBe5AV5cASfwQdN6bg9IJMiS9K8p73BqTf5cTo2pvmpnjkpR3MyweW93OmLuuDZ605T8V8BfV7fH7Rpbl5lQrZh750q2_WaPI=
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/21565740000145/compras/2026/27/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 82/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 012 — CONSORCIO INTERMUNICIPAL MULTIFINALITARIO DA MICRORREGIAO DO ALTO SAPUCAI - CIMASP
+📍 Local: Itajubá/MG
+📑 Pregão - Eletrônico: nº 37 · Processo 52/2026
+🆔 PNCP: 21512443000131-1-000049/2026
+💰 Valor global estimado: R$ 78.009.230,80
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: LICITAÇÃO COMPARTILHADA – EDITAL DE REGISTRO DE PREÇOS PARA EVENTUAL E FUTURA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA CESSÃO DE DIREITO DE USO DE SOLUÇÃO TÉCNOLÓGICA INTEGRADA, EM AMBIENTE TOTALMENTE WEB, DESTINADA À GESTÃO, MONITORAMENTO E AUDITORIA DE RECEITAS PÚBLICAS MUNICIPAIS, CONTEMPLANDO MÚLTIPLOS MÓDULOS FUNCIONAIS INTERDEPENDENTES, PARA ATENDER ÀS DEMANDAS DOS MUNICÍPIOS QUE COMPÕEM O CO
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 19/10/2026 — 16:00
+⏳ Prazo final das propostas: 26/11/2026 — 09:00 (6 dias)
+🖥️ Disputa: Licitar Digital - Plataforma de Licitações Online · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/21512443000131/2026/49
+🔗 Portal da disputa: https://app2.ammlicita.org.br/pesquisa/116822
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/21512443000131/compras/2026/49/arquivos/4
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 82/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 013 — SECRETARIA DE ESTADO DA SAUDE
+📍 Local: Boa Vista/RR
+📑 Pregão - Eletrônico: nº 45 · Processo 20101.063721/2026.47
+🆔 PNCP: 84013408000198-1-000065/2026
+💰 Valor global estimado: R$ 31.996.955,64
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS TÉCNICOS EM TECNOLOGIA DA INFORMAÇÃO, COMPREENDENDO O FORNECIMENTO DE PLATAFORMA INTEGRADA DE GESTÃO E SERVIÇOS DE SAÚDE PÚBLICA, NATIVAMENTE UNIFICADA, OPERANDO EM MODELO SAAS (SOFTWARE AS A SERVICE), COM SERVIÇOS DE IMPLANTAÇÃO, HOSPEDAGEM EM NUVEM, PARAMETRIZAÇÃO, CAPACITAÇÃO, MANUTENÇÃO COM EVOLUÇÃO CONTÍNUA E SUPORTE T
+📊 Quantidade: 32.900 horas técnicas (HST)
+📅 Abertura das propostas: 10/11/2026 — 09:29
+⏳ Prazo final das propostas: 25/11/2026 — 09:30 (5 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/84013408000198/2026/65
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=45696105000452026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/84013408000198/compras/2026/65/arquivos/5
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/84013408000198/compras/2026/65/arquivos/4
+⭐ Prioridade: Alta (nota 82/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 014 — TRIBUNAL DE JUSTICA DO ESTADO DO PARA
+📍 Local: Belém/PA
+📑 Dispensa: nº 90042 · Processo 90042/2025
+🆔 PNCP: 04567897000190-1-000162/2025
+💰 Valor global estimado: R$ 18.246.484,16
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa pública especializada em tecnologia da informação e comunicação para o fornecimento de solução de rede privada de dados, incluindo serviços de TIC, gerenciamento proativo, manutenção, suporte técnico e licenças de uso de sistemas governamentais, com abrangência em todas as unidades judiciárias e administrativas do Estado do Pará, pelo período de 48 (quarenta e oito) meses
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 19/11/2025 — 09:00
+⏳ Prazo final das propostas: 19/11/2029 — 15:00 (1095 dias)
+🖥️ Disputa: Tribunal de Justiça do Estado do Pará · Dispensa Com Disputa
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/04567897000190/2025/162
+📥 Edital: NÃO LOCALIZADO como arquivo no PNCP
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 82/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 015 — MUNICIPIO DE COTIA
+📍 Local: Cotia/SP
+📑 Pregão - Eletrônico: nº 051 · Processo 12.370/2026
+🆔 PNCP: 46523049000120-1-000186/2026
+💰 Valor global estimado: R$ 10.962.702,12
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA EXECUÇÃO DE PROJETO ASSISTIDO COM CAPACITAÇÃO CONTINUADA, TRATAMENTO DE DADOS, SERVIÇOS TÉCNICOS DE MANUTENÇÃO, SUPORTE TÉCNICO E DESENVOLVIMENTO DE NOVAS FUNCIONALIDADES DE TECNOLOGIA DA INFORMAÇÃO EM SISTEMAS DE PROPRIEDADE SECRETARIA MUNICIPAL DE SAÚDE.
+📊 Quantidade: 5.040 UST
+📅 Abertura das propostas: 10/11/2026 — 08:00
+⏳ Prazo final das propostas: 27/11/2026 — 08:00 (7 dias)
+🖥️ Disputa: Sisvetor Informática Ltda · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/46523049000120/2026/186
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46523049000120/compras/2026/186/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 82/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 016 — TRIBUNAL DE JUSTICA DO ESTADO DO AMAPA
+📍 Local: Macapá/AP
+📑 Pregão - Eletrônico: nº 217 · Processo 0005241-02.2026.8.03.0901
+🆔 PNCP: 34870576000121-1-000070/2026
+💰 Valor global estimado: R$ 14.562.595,70
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Registro de preços para aquisição de soluções de segurança da informação incluindo firewalls, soluções de gerenciamento, controle de acesso, acessórios necessários e serviços de sustentação e suporte
+📊 Quantidade: 600 UST; 1.000 horas técnicas (HST)
+📅 Abertura das propostas: 18/11/2026 — 08:00
+⏳ Prazo final das propostas: 09/12/2026 — 08:00 (19 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/34870576000121/2026/70
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92530605002172026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/34870576000121/compras/2026/70/arquivos/22
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/34870576000121/compras/2026/70/arquivos/20
+⭐ Prioridade: Alta (nota 81/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 017 — SECRETARIA DE ESTADO DA JUSTICA, DO TRABALHO E DE DEFESA DO CONSUMIDOR - SEJUC
+📍 Local: Aracaju/SE
+📑 Pregão - Eletrônico: nº PE0380 · Processo PE0380/2026
+🆔 PNCP: 34841226000137-1-000008/2026
+💰 Valor global estimado: R$ 32.626.800,00
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: REGISTRO DE PREÇO PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇOS DE MONITORAMENTO ELETRÔNICO DE PESSOAS, MEDIANTE DISPONIBILIZAÇÃO DE SOLUÇÃO TECNOLÓGICA INTEGRADA, EM REGIME DE SERVIÇO CONTINUADO, COMPREENDENDO O FORNECIMENTO, IMPLANTAÇÃO, OPERAÇÃO ASSISTIDA, MANUTENÇÃO E SUPORTE DE TODOS OS RECURSOS NECESSÁRIOS A PLENA EXECUÇÃO DA SOLUÇÃO, INCLUINDO DISPOSITIVOS DE MONITORAME
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 13/11/2026 — 08:00
+⏳ Prazo final das propostas: 27/11/2026 — 08:00 (7 dias)
+🖥️ Disputa: ASJB Consultoria S/C Ltda · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/34841226000137/2026/8
+🔗 Portal da disputa: https://sistema.comprasnet.se.gov.br/publico/WKF.aspx?code=SECLOG-PE0380/2026&validation=54303
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/34841226000137/compras/2026/8/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 78/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 018 — JUSTICA FEDERAL DE PRIMEIRO GRAU NO RIO DE JANEIRO
+📍 Local: Rio de Janeiro/RJ
+📑 Pregão - Eletrônico: nº 409 · Processo 0049986-70.2026.4.02.8001
+🆔 PNCP: 05424540000116-1-000079/2026
+💰 Valor global estimado: R$ 21.934.313,00
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de serviços contínuos de transporte, armazenamento, arquivamento, catalogação, desarquivamento, digitalização sob demanda, controle gerencial e posterior devolução do acervo arquivístico da Justiça Federal de Primeiro Grau no Rio de Janeiro., conforme Anexo I (Termo de Referência)
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 04/11/2026 — 08:00
+⏳ Prazo final das propostas: 23/11/2026 — 13:00 (3 dias)
+🖥️ Disputa: Compras.gov.br · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/05424540000116/2026/79
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=09001605004092026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/05424540000116/compras/2026/79/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 78/100 — Gestão documental)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 019 — DEPARTAMENTO DE TRANSITO DO DISTRITO FEDERAL
+📍 Local: Brasília/DF
+📑 Pregão - Eletrônico: nº 25 · Processo 00055-00094016/2025-14
+🆔 PNCP: 00475855000179-1-000042/2026
+💰 Valor global estimado: R$ 18.093.444,58
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de serviço de plataforma de segurança para defesa cibernética que auxilie na detecção, investigação e resposta às ameaças avançadas com extensa automação do ciclo de resposta a incidentes por meio de tecnologia baseada em inteligência artificial para paralisar imediatamente a ameaça em andamento, em velocidade de máquina, reduzindo com efetividade o risco cibernético. A solução deve ma
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 12/11/2026 — 09:00
+⏳ Prazo final das propostas: 27/11/2026 — 09:00 (7 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/00475855000179/2026/42
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92614205000252026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00475855000179/compras/2026/42/arquivos/2
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/00475855000179/compras/2026/42/arquivos/1
+⭐ Prioridade: Alta (nota 78/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 020 — ESTADO DO MARANHAO - TRIBUNAL DE JUSTICA DO MARANHAO
+📍 Local: São Luís/MA
+📑 Pregão - Eletrônico: nº 0024 · Processo 58561/2025
+🆔 PNCP: 05288790000176-1-000271/2026
+💰 Valor global estimado: R$ 19.954.200,00
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa especializada para dar continuidade a prestação do serviço de fornecimento de solução integrada de colaboração e comunicação corporativa baseada em computação em nuvem (Cloud Computing-plataforma Google Workspace), Licenças Gemini Enterprise Plus com MCP e Licenças Gemini for Goverment, com suporte técnico 24x7.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 19/11/2026 — 08:00
+⏳ Prazo final das propostas: 04/12/2026 — 09:59 (14 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/05288790000176/2026/271
+🔗 Portal da disputa: https://www.tjma.jus.br/financas/index.php?acao_portal=licitacoes&&palavra=0024%2F2026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/05288790000176/compras/2026/271/arquivos/4
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/05288790000176/compras/2026/271/arquivos/5
+⭐ Prioridade: Alta (nota 77/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 021 — GOVERNO DO PARANA SECRETARIA DE ESTADO DA FAZENDA
+📍 Local: Curitiba/PR
+📑 Pregão - Eletrônico: nº 18 · Processo 26.619.622-9
+🆔 PNCP: 76416890000189-1-000033/2026
+💰 Valor global estimado: R$ 16.811.345,00
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa especializada no ramo para o Fornecimento de licenças de software, garantia de atualização de software (software assurance) e subscrições de software, considerando os licenciamentos Microsoft de propriedades da SEFA/REPR, assim como a prestação de serviços técnicos especializados relativos à manutenção, atualização, gestão, resolução de incidentes e evolução dos serviços Mic
+📊 Quantidade: 900 horas técnicas (HST)
+📅 Abertura das propostas: 06/11/2026 — 08:00
+⏳ Prazo final das propostas: 23/11/2026 — 09:00 (3 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/76416890000189/2026/33
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92921505000182026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/76416890000189/compras/2026/33/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 77/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 022 — RECEITA ESTADUAL DO PARANA
+📍 Local: Curitiba/PR
+📑 Pregão - Eletrônico: nº 1457 · Processo 1457/2026
+🆔 PNCP: 78393592000146-1-000047/2026
+💰 Valor global estimado: R$ 16.811.341,94
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa especializada no ramo para o Fornecimento de licenças de software, garantia de atualização de software - software assurance - e subscrições de software, considerando os licenciamentos Microsoft de propriedades da SEFA/REPR
+📊 Quantidade: 900 UST; 900 horas técnicas (HST)
+📅 Abertura das propostas: 06/11/2026 — 08:00
+⏳ Prazo final das propostas: 23/11/2026 — 09:00 (3 dias)
+🖥️ Disputa: Secretaria de Estado da Administração e da Previdência do Estado do Paraná - SEAP-PR · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/78393592000146/2026/47
+🔗 Portal da disputa: www.transparencia.pr.gov.br/pte/compras/licitacoes/pesquisar-param?numprocesso=1457&ano=2026&codmodalidade=68
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/78393592000146/compras/2026/47/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 77/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 023 — MUNICIPIO DE LORENA
+📍 Local: Lorena/SP
+📑 Pregão - Eletrônico: nº 70 · Processo PC 000346/2026
+🆔 PNCP: 47563739000175-1-000358/2026
+💰 Valor global estimado: R$ 12.650.383,47
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de serviços de empresa especializada para instalação e locação de infraestrutura e equipamentos que compõe um Sistema Inteligente de Videomonitoramento Urbano, com analíticos de detecção e reconhecimento facial e monitoramento de trânsito, por meio de sistema automático de leitura de placas veiculares, integrado ao sistema Detecta, Alerta Brasil, Muralha Paulista e Centro Integrado de 
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 16/11/2026 — 09:00
+⏳ Prazo final das propostas: 02/12/2026 — 08:00 (12 dias)
+🖥️ Disputa: EMBRAS - EMPRESA BRASILEIRA DE TECNOLOGIA LTDA · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/47563739000175/2026/358
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/47563739000175/compras/2026/358/arquivos/2
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 77/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 024 — MUNICIPIO DE OSASCO
+📍 Local: Osasco/SP
+📑 Pregão - Eletrônico: nº 135 · Processo 1811/2025
+🆔 PNCP: 46523171000104-1-000373/2026
+💰 Valor global estimado: R$ 172.342.689,92
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA IMPLANTAÇÃO, MODERNIZAÇÃO, OPERAÇÃO E MANUTENÇÃO DE SISTEMA INTEGRADO DE GESTÃO DA MOBILIDADE, COMPREENDENDO O FORNECIMENTO, INSTALAÇÃO E GESTÃO DE INFRAESTRUTURA, EQUIPAMENTOS E SERVIÇOS DE SINALIZAÇÃO VIÁRIA HORIZONTAL, VERTICAL E SEMAFÓRICA, INTEGRADOS A SISTEMAS TECNOLÓGICOS DE CONTROLE E MONITORAMENTO DE TRÁFEGO, BEM COMO A EXECUÇÃO DE INTERVENÇÕES DE
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 10/11/2026 — 00:00
+⏳ Prazo final das propostas: 27/11/2026 — 10:00 (7 dias)
+🖥️ Disputa: SMARAPD INFORMATICA LTDA · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/46523171000104/2026/373
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46523171000104/compras/2026/373/arquivos/2 | https://pncp.gov.br/pncp-api/v1/orgaos/46523171000104/compras/2026/373/arquivos/9
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 76/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 025 — TRIBUNAL DE JUSTICA DO ESTADO DE MINAS GERAIS
+📍 Local: Belo Horizonte/MG
+📑 Pregão - Eletrônico: nº 643 · Processo 1031018 000643/2026
+🆔 PNCP: 21154554000113-1-000525/2026
+💰 Valor global estimado: R$ 145.056.000,00
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: contratação de solução de computação em nuvem pública, em modelo multinuvem, abrangendo, sob demanda e conforme necessidade do Tribunal.
+📊 Quantidade: 21.600 horas técnicas (HST)
+📅 Abertura das propostas: 06/11/2026 — 13:04
+⏳ Prazo final das propostas: 23/11/2026 — 14:00 (3 dias)
+🖥️ Disputa: Portal de Compras do Estado de Minas Gerais · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/21154554000113/2026/525
+🔗 Portal da disputa: https://www1.compras.mg.gov.br/n/procedimentolei14133/consulta/eletronico/visualizar/2026/643/1031018
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/21154554000113/compras/2026/525/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/21154554000113/compras/2026/525/arquivos/2
+⭐ Prioridade: Alta (nota 76/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 026 — MUNICIPIO DE CAUCAIA
+📍 Local: Caucaia/CE
+📑 Pregão - Eletrônico: nº PE2026102301  · Processo PE2026102301
+🆔 PNCP: 07616162000106-1-000197/2026
+💰 Valor global estimado: R$ 50.049.636,00
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA(S) ESPECIALIZADA(S) PARA PRESTAÇÃO CONTINUADA DE SERVIÇOS DE LOCAÇÃO DE EQUIPAMENTOS DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO (TIC), COM SUPORTE TÉCNICO, ASSISTÊNCIA TÉCNICA E MANUTENÇÃO PREVENTIVA E CORRETIVA IN LOCO, BEM COMO SERVIÇOS ASSOCIADOS DE GERENCIAMENTO, COM AFERIÇÃO POR NÍVEIS DE SERVIÇO, PARA ATENDIMENTO ÀS NECESSIDADES
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 09/11/2026 — 17:00
+⏳ Prazo final das propostas: 25/11/2026 — 09:29 (5 dias)
+🖥️ Disputa: Licita + Brasil · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/07616162000106/2026/197
+🔗 Portal da disputa: https://licitamaisbrasil.com.br/detalhes-do-edital/-KOeWDV07ub0lneM
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/07616162000106/compras/2026/197/arquivos/1 | https://pncp.gov.br/pncp-api/v1/orgaos/07616162000106/compras/2026/197/arquivos/2
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/07616162000106/compras/2026/197/arquivos/2
+⭐ Prioridade: Alta (nota 74/100 — Outros de TIC)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 027 — MUNICIPIO DE CHAPECO
+📍 Local: Chapecó/SC
+📑 Pregão - Eletrônico: nº 487 · Processo 487/2026
+🆔 PNCP: 83021808000182-1-000733/2026
+💰 Valor global estimado: R$ 33.967.313,05
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: [Portal de Compras Públicas] - CONTRATAÇÃO DO FORNECIMENTO CONTÍNUO DE CONJUNTOS INTEGRADOS DE RECURSOS DIDÁTICOS, PEDAGÓGICOS E TECNOLÓGICOS PARA O ATENDIMENTO DA REDE MUNICIPAL DE ENSINO DE CHAPECÓ, INCLUINDO MATERIAIS IMPRESSOS PARA ESTUDANTES E PROFESSORES, MATERIAIS COMPLEMENTARES E ACESSÍVEIS, RECURSOS DIGITAIS, AMBIENTE VIRTUAL DE APRENDIZAGEM, SUPORTE TÉCNICO E PEDAGÓGICO, ASSESSORIA PEDAG
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 10/11/2026 — 17:00
+⏳ Prazo final das propostas: 27/11/2026 — 08:55 (7 dias)
+🖥️ Disputa: ECustomize Consultoria em Software S.A · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/83021808000182/2026/733
+🔗 Portal da disputa: https://www.portaldecompraspublicas.com.br/processos/SC/Prefeitura-Municipal-de-Chapeco-3887/PE-487-2026-2026-524255
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/83021808000182/compras/2026/733/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 73/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 028 — MUNICIPIO DE CHAPECO
+📍 Local: Chapecó/SC
+📑 Pregão - Eletrônico: nº 487 · Processo 487/2026
+🆔 PNCP: 83021808000182-1-000734/2026
+💰 Valor global estimado: R$ 33.967.313,05
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: CONTRATAÇÃO DO FORNECIMENTO CONTÍNUO DE CONJUNTOS INTEGRADOS DE RECURSOS DIDÁTICOS, PEDAGÓGICOS E TECNOLÓGICOS PARA O ATENDIMENTO DA REDE MUNICIPAL DE ENSINO DE CHAPECÓ, INCLUINDO MATERIAIS IMPRESSOS PARA ESTUDANTES E PROFESSORES, MATERIAIS COMPLEMENTARES E ACESSÍVEIS, RECURSOS DIGITAIS, AMBIENTE VIRTUAL DE APRENDIZAGEM, SUPORTE TÉCNICO E PEDAGÓGICO, ASSESSORIA PEDAGÓGICA E FORMAÇÃO CONTINUADA, PA
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 10/11/2026 — 17:00
+⏳ Prazo final das propostas: 27/11/2026 — 08:55 (7 dias)
+🖥️ Disputa: Pública Tecnologia Ltda. · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/83021808000182/2026/734
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/83021808000182/compras/2026/734/arquivos/1 | https://pncp.gov.br/pncp-api/v1/orgaos/83021808000182/compras/2026/734/arquivos/2
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/83021808000182/compras/2026/734/arquivos/3
+⭐ Prioridade: Alta (nota 73/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 029 — TRIBUNAL DE JUSTICA DO ESTADO DE MINAS GERAIS
+📍 Local: Belo Horizonte/MG
+📑 Pregão - Eletrônico: nº 662 · Processo 1031018 000662/2026
+🆔 PNCP: 21154554000113-1-000521/2026
+💰 Valor global estimado: R$ 183.067.170,84
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de serviço continuado de fornecimento de créditos para consumo dos serviços de computação em nuvem da Amazon Web Services (AWS)
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 19/11/2026 — 10:15
+⏳ Prazo final das propostas: 24/11/2026 — 14:00 (4 dias)
+🖥️ Disputa: Portal de Compras do Estado de Minas Gerais · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/21154554000113/2026/521
+🔗 Portal da disputa: https://www1.compras.mg.gov.br/n/procedimentolei14133/consulta/eletronico/visualizar/2026/662/1031018
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/21154554000113/compras/2026/521/arquivos/1 | https://pncp.gov.br/pncp-api/v1/orgaos/21154554000113/compras/2026/521/arquivos/4
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/21154554000113/compras/2026/521/arquivos/2
+⭐ Prioridade: Alta (nota 72/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 030 — CONSORCIO INTERMUNICIPAL MULTIFINALITARIO DO VALE DO PARAIBUNA - CIMPAR
+📍 Local: Juiz de Fora/MG
+📑 Pregão - Eletrônico: nº 26 · Processo 30/2026
+🆔 PNCP: 21565740000145-1-000026/2026
+💰 Valor global estimado: R$ 99.654.512,78
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: REGISTRO DE PREÇOS PARA A FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NO FORNECIMENTO DE SOLUÇÕES INTEGRADAS DE SEGURANÇA DA INFORMAÇÃO E CONTINUIDADE DE NEGÓCIOS, COMPREENDENDO SOLUÇÕES DE SEGURANÇA, BACKUP E RECUPERAÇÃO, SERVIÇOS DE INSTALAÇÃO, CAPACITAÇÃO E OPERAÇÃO ASSISTIDA, ATENDENDO ÀS NECESSIDADES DOS MUNICÍPIOS CONSORCIADOS AO CONSÓRCIO INTERMUNICIPAL MULTIFINALITÁRIO DO VALE D
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 05/11/2026 — 09:30
+⏳ Prazo final das propostas: 23/11/2026 — 09:30 (3 dias)
+🖥️ Disputa: BLL Compras · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/21565740000145/2026/26
+🔗 Portal da disputa: https://bllcompras.com/Process/ProcessView?param1=[gkz]rbZJZLdBXHXjbxdVLXMQGvWJaVF8/hDP1YRwxPgB8J0ZcooXkUidWZ2NES8V36xc7_ahBephRo9_pVUaQIp7pDkQVqM8V2KF/GAUizacMQ0=
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/21565740000145/compras/2026/26/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 72/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 031 — MUNICIPIO DE DIADEMA
+📍 Local: Diadema/SP
+📑 Pregão - Eletrônico: nº 063 · Processo 0113/2026
+🆔 PNCP: 46523247000193-1-000151/2026
+💰 Valor global estimado: R$ 25.583.184,00
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: PEC 113/2026 - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA FORNECIMENTO DE SOLUÇÃO INTEGRADA DE SEGURANÇA PÚBLICA, COMPREENDENDO A MODERNIZAÇÃO, AMPLIAÇÃO, SUSTENTAÇÃO, OPERAÇÃO, SUPORTE TÉCNICO, MANUTENÇÃO PREVENTIVA, CORRETIVA E EVOLUTIVA DA INFRAESTRUTURA DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO (TIC), BEM COMO DE TODOS OS EQUIPAMENTOS, SOFTWARES, SISTEMAS ANALÍTICOS, PLATAFORMAS DE MONITORAMENT
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 17/11/2026 — 09:00
+⏳ Prazo final das propostas: 02/12/2026 — 08:59 (12 dias)
+🖥️ Disputa: AZ INFORMATICA LTDA · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/46523247000193/2026/151
+🔗 Portal da disputa: https://comprasbr.com.br/pregao-eletronico-detalhe/?idlicitacao=49617
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46523247000193/compras/2026/151/arquivos/1 | https://pncp.gov.br/pncp-api/v1/orgaos/46523247000193/compras/2026/151/arquivos/2
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 71/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 032 — TRIBUNAL DE JUSTICA DO ESTADO DO RIO DE JANEIRO
+📍 Local: Rio de Janeiro/RJ
+📑 Pregão - Eletrônico: nº 281 · Processo 2025-06242077
+🆔 PNCP: 28538734000148-1-000256/2026
+💰 Valor global estimado: R$ 18.810.557,30
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Compra de solução de armazenamento de dados distribuído NAS (Network Attached Storage) do tipo Storage All Flash, com assistência técnica de hardware e suporte de software 24x7, além dos serviços de implantação, migração dos dados e operação assistida, bem como contratação de serviço de assistência técnica de hardware e suporte de software para unidade de armazenamento (storage) em uso atualmente 
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 19/11/2026 — 11:00
+⏳ Prazo final das propostas: 02/12/2026 — 14:00 (12 dias)
+🖥️ Disputa: Compras.gov.br · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/28538734000148/2026/256
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=03010005002812026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/28538734000148/compras/2026/256/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 71/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 033 — FUNDACAO INSTIT BRAS DE GEOGRAFIA E ESTATISTICA IBGE
+📍 Local: Rio de Janeiro/RJ
+📑 Pregão - Eletrônico: nº 92 · Processo 03603.000127/2026-75
+🆔 PNCP: 33787094000140-1-000627/2026
+💰 Valor global estimado: R$ 15.889.183,77
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa especializada para aquisição de equipamentos de armazenamento de dados (storage) do tipo All Flash, destinados aos sítios (sites) principal e secundário do IBGE, incluindo garantia e suporte técnico on-site pelo prazo de 60 (sessenta) meses.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 18/11/2026 — 08:00
+⏳ Prazo final das propostas: 02/12/2026 — 09:00 (12 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/33787094000140/2026/627
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=11460105000922026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/33787094000140/compras/2026/627/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 71/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 034 — TRIBUNAL DE JUSTICA DO ESTADO DO PARA
+📍 Local: Belém/PA
+📑 Pregão - Eletrônico: nº 25 · Processo 0024137-90.2026.8.14.0900
+🆔 PNCP: 04567897000190-1-000242/2026
+💰 Valor global estimado: R$ 47.823.664,39
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Registro de preços para contratação de solução integrada de segurança cibernética, contemplando proteção de endpoints, gestão de exposição a riscos, detecção e resposta estendida — XDR, inspeção e análise de tráfego de rede, appliance dedicado, créditos de serviços XDR, serviços gerenciados de segurança, suporte, monitoramento, garantia e resposta a incidentes, conforme condições, quantidades e ex
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 09/11/2026 — 08:00
+⏳ Prazo final das propostas: 24/11/2026 — 09:00 (4 dias)
+🖥️ Disputa: Compras.gov.br · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/04567897000190/2026/242
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92594205000252026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/04567897000190/compras/2026/242/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/04567897000190/compras/2026/242/arquivos/2
+⭐ Prioridade: Média (nota 68/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 035 — SECRETARIA DA FAZENDA E PLANEJAMENTO
+📍 Local: São Paulo/SP
+📑 Pregão - Eletrônico: nº 435 · Processo 017.00052642/2026-15
+🆔 PNCP: 46377222000129-1-000409/2026
+💰 Valor global estimado: R$ 16.969.917,40
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de serviços de Suporte Técnico, manutenção, atualização tecnológica e Banco de Horas relativo ao software de Banco de Dados Sybase/Sap IQ (ambiente DW – DataWarehouse).
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 18/11/2026 — 09:00
+⏳ Prazo final das propostas: 07/12/2026 — 09:00 (17 dias)
+🖥️ Disputa: Compras.gov.br · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/46377222000129/2026/409
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=93301105004352026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46377222000129/compras/2026/409/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 68/100 — Outros de TIC)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 036 — TRIBUNAL DE JUSTICA DO ESTADO MATO GROSSO DO SUL
+📍 Local: Campo Grande/MS
+📑 Pregão - Eletrônico: nº 139 · Processo 00080149-56.2026.8.12.9157
+🆔 PNCP: 03979663000198-1-000281/2026
+💰 Valor global estimado: R$ 15.039.471,60
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de serviços continuados especializados em Tecnologia da Informação, compreendendo Service Desk N1, suporte presencial N2, gestão da base de conhecimento (KBA), logística e inventário de TI, coordenação operacional e agente virtual com IA, pelo período de 36 (trinta e seis) meses, conforme detalhamento, condições e demais especificações do Termo de Referência.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 06/11/2026 — 08:00
+⏳ Prazo final das propostas: 24/11/2026 — 09:30 (4 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/03979663000198/2026/281
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92973505001392026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/03979663000198/compras/2026/281/arquivos/9
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/03979663000198/compras/2026/281/arquivos/3
+⭐ Prioridade: Média (nota 68/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 037 — CONSORCIO INTERMUNICIPAL MULTIFINALITARIO DA AMAG
+📍 Local: Caxambu/MG
+📑 Pregão - Eletrônico: nº 019 · Processo 032/2026
+🆔 PNCP: 21406451000101-1-000050/2026
+💰 Valor global estimado: R$ 13.041.989,94
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM FORNECIMENTO DE SOLUÇÃO DE OUTSOURCING DE TECNOLOGIA DA INFORMAÇÃO, INCLUINDO ACESSO AO DIREITO DE USO DE EQUIPAMENTOS, SERVIÇOS DE MANUTENÇÃO PREVENTIVA E CORRETIVA, MONITORAMENTO, FORNECIMENTO DE PEÇAS E SUPRIMENTOS NECESSÁRIOS, ALÉM DE SERVIÇOS DE SUPORTE, PARA ATENDIMENTO DAS NECESSIDADES DOS MUNICÍPIOS CONSORCIA
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 18/11/2026 — 16:05
+⏳ Prazo final das propostas: 03/12/2026 — 09:00 (13 dias)
+🖥️ Disputa: Licitar Digital - Plataforma de Licitações Online · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/21406451000101/2026/50
+🔗 Portal da disputa: https://app2.licitardigital.com.br/pesquisa/119608
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/21406451000101/compras/2026/50/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 68/100 — Outros de TIC)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 038 — MUNICIPIO DE PONTA GROSSA
+📍 Local: Ponta Grossa/PR
+📑 Pregão - Eletrônico: nº 187 · Processo 474/2026
+🆔 PNCP: 76175884000187-1-000521/2026
+💰 Valor global estimado: R$ 10.824.923,76
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: contratação de empresa especializada para implantação, operação, manutenção e gerenciamento do sistema de Estacionamento Rotativo Digital (ESTAR Digital), compreendendo o fornecimento de sistema integrado, softwares, equipamentos, soluções de fiscalização, meios eletrônicos de pagamento, migração de dados, suporte técnico, atualizações e treinamento
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 23/11/2026 — 08:00
+⏳ Prazo final das propostas: 14/12/2026 — 08:59 (24 dias)
+🖥️ Disputa: Elotech Gestão Pública Ltda · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/76175884000187/2026/521
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/76175884000187/compras/2026/521/arquivos/4
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/76175884000187/compras/2026/521/arquivos/3
+⭐ Prioridade: Média (nota 68/100 — Outros de TIC)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 039 — TRIBUNAL DE CONTAS DO CEARA
+📍 Local: Fortaleza/CE
+📑 Pregão - Eletrônico: nº 133 · Processo 08112/2026-8
+🆔 PNCP: 09499757000146-1-000065/2026
+💰 Valor global estimado: R$ 11.927.221,28
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Registro de preços para futura e eventual contratação de empresa especializada no fornecimen-to e na implantação de solução integrada de infraestrutura de rede corporativa, composta por switches de core, distribuição, topo de rack e acesso, cabos DAC, transceivers, soluções de gerenciamento centralizado, controle de acesso e monitoramento, respectivos licenciamentos, garantia, suporte técnico e se
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 11/11/2026 — 08:00
+⏳ Prazo final das propostas: 26/11/2026 — 10:00 (6 dias)
+🖥️ Disputa: Compras.gov.br · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/09499757000146/2026/65
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92546705001332026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/09499757000146/compras/2026/65/arquivos/3
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 67/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 040 — BANCO CENTRAL DO BRASIL
+📍 Local: Brasília/DF
+📑 Pregão - Eletrônico: nº 34 · Processo 310060
+🆔 PNCP: 00038166000105-1-000737/2026
+💰 Valor global estimado: R$ 17.105.230,08
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de serviços técnicos especializados de Operação e Monitoramento de infraestrutura de TIC e Sustentação, Instalação e manutenção de infraestrutura física dos Data Centers do Banco Central.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 09/11/2026 — 09:00
+⏳ Prazo final das propostas: 24/11/2026 — 15:30 (4 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/00038166000105/2026/737
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=17908705000342026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00038166000105/compras/2026/737/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 62/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 041 — CAMARA MUNICIPAL DE LONDRINA
+📍 Local: Londrina/PR
+📑 Pregão - Eletrônico: nº 6 · Processo 24/2026
+🆔 PNCP: 78316064000193-1-000043/2026
+💰 Valor global estimado: R$ 1.248.843.918,00 ⚠️ valor publicado parece erro de digitação — conferir
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de soluções Google Workspace (GWS) e Google Cloud Platform (GCP) que abrangem serviços de correio eletrônico, suíte de produtividade e serviços de IaaS/PaaS (Infraestrutura e Plataforma como Serviço) para atender às necessidades da Câmara Municipal de Londrina.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 04/11/2026 — 15:00
+⏳ Prazo final das propostas: 26/11/2026 — 14:00 (6 dias)
+🖥️ Disputa: Compras.gov.br · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/78316064000193/2026/43
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92670805000062026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/78316064000193/compras/2026/43/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 57/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 042 — AGENCIA NACIONAL DE VIGILANCIA SANITARIA
+📍 Local: Brasília/DF
+📑 Pregão - Eletrônico: nº 103 · Processo 25351826170/2024-43
+🆔 PNCP: 03112386000111-1-000061/2026
+💰 Valor global estimado: R$ 65.234.423.103,96 ⚠️ valor publicado parece erro de digitação — conferir
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa especializada para o fornecimento de subscrições de software Microsoft
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 19/11/2026 — 10:00
+⏳ Prazo final das propostas: 04/12/2026 — 10:00 (14 dias)
+🖥️ Disputa: Compras.gov.br · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/03112386000111/2026/61
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25300205001032026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/03112386000111/compras/2026/61/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 55/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+*💼 DE R$ 5 A 10 MILHÕES* (19)
+
+🏛️ LICITAÇÃO 001 — SERGIPE JUSTICA ESTADUAL DE SEGUNDA INSTANCIA
+📍 Local: Aracaju/SE
+📑 Pregão - Eletrônico: nº 38/2026 · Processo 0009960-08.2026.8.25
+🆔 PNCP: 13166970000103-1-000148/2026
+💰 Valor global estimado: R$ 8.943.864,12
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de subscrições Microsoft com Software Assurance para Windows Server 2025 Datacenter, Windows Server 2025 Standard, System Center 2025 Datacenter, Microsoft (MS) SQL Server Standard Edition e SQL CAL ALng LSA Device CAL; subscrições para Power BI Pro, Power BI Premium EM1 e Office 365 E1 e E3, além de Unidades de Serviço Técnico (UST), conforme condições e exigências estabelecidas no Ed
+📊 Quantidade: 36 UST
+📅 Abertura das propostas: 13/11/2026 — 08:00
+⏳ Prazo final das propostas: 30/11/2026 — 09:00 (10 dias)
+🖥️ Disputa: Licitações-E BB · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/13166970000103/2026/148
+🔗 Portal da disputa: https://licitacoes-e2.bb.com.br/aop-inter-estatico/visualizar-processo-publico/1104068
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/13166970000103/compras/2026/148/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 88/100 — Desenvolvimento/sustentação)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 002 — MUNICIPIO DE ITAQUAQUECETUBA
+📍 Local: Itaquaquecetuba/SP
+📑 Pregão - Eletrônico: nº 36 · Processo 6898/2026
+🆔 PNCP: 46316600000164-1-000221/2026
+💰 Valor global estimado: R$ 9.228.484,77
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de Empresa Especializada para prestação de serviços de licenciamento de uso de softwares integrados de gestão pública – Secretaria Municipal de Planejamento e Finanças
+📊 Quantidade: 1.000 horas técnicas (HST)
+📅 Abertura das propostas: 17/11/2026 — 08:00
+⏳ Prazo final das propostas: 07/12/2026 — 09:00 (17 dias)
+🖥️ Disputa: Compras.gov.br · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/46316600000164/2026/221
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98656305000362026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46316600000164/compras/2026/221/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 81/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 003 — MUNICIPIO DE ITAJAI
+📍 Local: Itajaí/SC
+📑 Pregão - Eletrônico: nº PE 201 · Processo PE 201/2026
+🆔 PNCP: 83102277000152-1-000635/2026
+💰 Valor global estimado: R$ 6.556.954,75
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de solução integrada destinada à gestão da vida funcional dos servidores públicos municipais, contemplando a consolidação do acervo funcional histórico, o tratamento e a estruturação de informações por meio de inteligência artificial, mecanismos tecnológicos de governança em privacidade e proteção de dados, com cessão integral e definitiva dos direitos patrimoniais sobre os desenvolvim
+📊 Quantidade: 7.000 UST; 2.600.000 páginas
+📅 Abertura das propostas: 17/11/2026 — 10:00
+⏳ Prazo final das propostas: 07/12/2026 — 09:00 (17 dias)
+🖥️ Disputa: Pública Tecnologia Ltda. · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/83102277000152/2026/635
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/83102277000152/compras/2026/635/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/83102277000152/compras/2026/635/arquivos/2
+⭐ Prioridade: Alta (nota 81/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 004 — MUNICIPIO DE ALVORADA
+📍 Local: Alvorada/RS
+📑 Pregão - Eletrônico: nº 67 · Processo 11588/2026
+🆔 PNCP: 88000906000157-1-000443/2026
+💰 Valor global estimado: R$ 8.968.183,33
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: [Portal de Compras Públicas] - Contratação de empresa especializada para fornecer e implantar sistema de gestão do Cadastro Técnico Territorial Multifinalitário em Alvorada-RS, incluindo licenciamento de software SaaS, levantamento aerofotogramétrico digital, incluindo modelagem, parametrização, configuração, integração de sistemas, capacitação de servidores e prestação de serviços sob demanda.
+📊 Quantidade: 500 horas técnicas (HST)
+📅 Abertura das propostas: 10/11/2026 — 10:00
+⏳ Prazo final das propostas: 26/11/2026 — 08:59 (6 dias)
+🖥️ Disputa: ECustomize Consultoria em Software S.A · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/88000906000157/2026/443
+🔗 Portal da disputa: https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Alvorada-59/PE-67-2026-2026-505171
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/88000906000157/compras/2026/443/arquivos/1 | https://pncp.gov.br/pncp-api/v1/orgaos/88000906000157/compras/2026/443/arquivos/2
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 77/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 005 — SUPERIOR TRIBUNAL DE JUSTICA
+📍 Local: Brasília/DF
+📑 Pregão - Eletrônico: nº 277 · Processo 032300/2025
+🆔 PNCP: 00488478000102-1-000300/2026
+💰 Valor global estimado: R$ 8.599.110,72
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa especializada em serviço de CDN, WAF, proteção de DNS e API, proteção contra Bots, balanceamento de carga e mitigação de ataques de negação de serviço (DDoS), nas camadas 3 e 4 do modelo OSI, na modalidade SaaS, incluindo suporte técnico, garantia dos serviços e treinamento.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 16/11/2026 — 08:00
+⏳ Prazo final das propostas: 03/12/2026 — 10:00 (13 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/00488478000102/2026/300
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=05000105002772026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00488478000102/compras/2026/300/arquivos/2
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 77/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 006 — FUNDACAO UNIVERSIDADE FEDERAL DE SAO CARLOS
+📍 Local: São Carlos/SP
+📑 Pregão - Eletrônico: nº 23 · Processo 23112034102202612
+🆔 PNCP: 45358058000140-1-000216/2026
+💰 Valor global estimado: R$ 6.916.050,00
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: O objeto da presente licitação é a contratação de solução de tecnologia da informação e comunicação de eventual e futura contratação, sob demanda, de licenças de uso de solução integrada de colaboração e produtividade em nuvem corporativa, conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 16/11/2026 — 08:00
+⏳ Prazo final das propostas: 01/12/2026 — 09:00 (11 dias)
+🖥️ Disputa: Compras.gov.br · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/45358058000140/2026/216
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15640305000232026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/45358058000140/compras/2026/216/arquivos/1 | https://pncp.gov.br/pncp-api/v1/orgaos/45358058000140/compras/2026/216/arquivos/3
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/45358058000140/compras/2026/216/arquivos/2
+⭐ Prioridade: Alta (nota 77/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 007 — MUNICIPIO DE SANTOS
+📍 Local: Santos/SP
+📑 Pregão - Eletrônico: nº 16052 · Processo 36725/2026-94
+🆔 PNCP: 58200015000183-1-000628/2026
+💰 Valor global estimado: R$ 6.733.178,20
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa para renovação das licenças de uso da solução de Proteção Unificada, Detecção e Resposta Avançada a Ameaças Cibernéticas (EPP, EDR e XDR) para endpoints, servidores e workloads, incluindo serviços técnicos correlatos de implantação, configuração e suporte especializado para a Prefeitura Municipal de Santos, pelo período de 05 (cinco) anos, podendo ser prorrogado por igual pe
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 12/11/2026 — 17:00
+⏳ Prazo final das propostas: 01/12/2026 — 10:00 (11 dias)
+🖥️ Disputa: BLL Compras · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/58200015000183/2026/628
+🔗 Portal da disputa: https://bllcompras.com/Process/ProcessView?param1=[gkz]lqNK3Cq053H44jxRBjUhAB5X/K9_24ZLbc3Egc9xDYkAubbK6GEjWfI8HPannAHx7ANHVcLr7fw/Grk1dEIzwZ2Wv03N3F1yjdtZ2Gf4XpQ=
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/58200015000183/compras/2026/628/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 77/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 008 — MUNICIPIO DE CASTRO
+📍 Local: Castro/PR
+📑 Pregão - Eletrônico: nº PCE 164 · Processo 505/2026
+🆔 PNCP: 77001311000108-1-000648/2026
+💰 Valor global estimado: R$ 5.040.566,20
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: CONTRATAÇÃO DE EMPRESA(S) ESPECIALIZADA(S) EM SOLUÇÃO INTEGRADA DE GESTÃO PÚBLICA MUNICIPAL, EM AMBIENTE WEB E HOSPEDADA EM NUVEM, PARA ATENDIMENTO AOS PODERES EXECUTIVO E LEGISLATIVO MUNICIPAIS, ABRANGENDO LICENCIAMENTO DE USO, IMPLANTAÇÃO, CONVERSÃO E MIGRAÇÃO DE DADOS, PARAMETRIZAÇÃO, TREINAMENTO, HOSPEDAGEM, MANUTENÇÃO, SUPORTE TÉCNICO, ALOCAÇÃO DE PROFISSIONAIS TÉCNICOS RESIDENTES E SERVIÇOS 
+📊 Quantidade: 1.250 horas técnicas (HST)
+📅 Abertura das propostas: 05/11/2026 — 18:00
+⏳ Prazo final das propostas: 23/11/2026 — 08:30 (3 dias)
+🖥️ Disputa: IPM Sistemas · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/77001311000108/2026/648
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/77001311000108/compras/2026/648/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Alta (nota 72/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 009 — AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANTT
+📍 Local: Brasília/DF
+📑 Pregão - Eletrônico: nº 180 · Processo 50500.017761/2026-85
+🆔 PNCP: 04898488000177-1-000069/2026
+💰 Valor global estimado: R$ 8.285.395,23
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação, por meio do Sistema de Registro de Preços, de solução de proteção de perímetro, incluindo fornecimento de licenças de software, suporte técnico especializado, atualizações, garantia do fabricante e serviços correlatos, que visa a atender as necessidades da ANTT
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 12/11/2026 — 10:00
+⏳ Prazo final das propostas: 30/11/2026 — 10:00 (10 dias)
+🖥️ Disputa: Compras.gov.br · Aberto · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/04898488000177/2026/69
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=39300105001802026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/04898488000177/compras/2026/69/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/04898488000177/compras/2026/69/arquivos/2 | https://pncp.gov.br/pncp-api/v1/orgaos/04898488000177/compras/2026/69/arquivos/6
+⭐ Prioridade: Alta (nota 71/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 010 — SUPREMO TRIBUNAL FEDERAL
+📍 Local: Brasília/DF
+📑 Pregão - Eletrônico: nº 118 · Processo 006480/2026
+🆔 PNCP: 00531640000128-1-000137/2026
+💰 Valor global estimado: R$ 7.032.697,47
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Aquisição de subscrições e licenças perpétuas de softwares do fabricante Microsoft, destinadas a garantir a continuidade e a segurança do conjunto de soluções de Tecnologia da Informação e Comunicação (TIC) que sustentam os serviços de infraestrutura, produtividade, colaboração e segurança da informação.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 09/11/2026 — 10:00
+⏳ Prazo final das propostas: 24/11/2026 — 10:00 (4 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/00531640000128/2026/137
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=04000105001182026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00531640000128/compras/2026/137/arquivos/2
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 68/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 011 — MUNICIPIO DE OURO BRANCO
+📍 Local: Ouro Branco/MG
+📑 Pregão - Eletrônico: nº 037 · Processo 053/2026
+🆔 PNCP: 18295329000192-1-000117/2026
+💰 Valor global estimado: R$ 5.076.958,08
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA FORNECIMENTO DE LICENÇA DE USO (LOCAÇÃO) DE SISTEMA INTEGRADO DE GESTÃO PÚBLICA MUNICIPAL, EM SOLUÇÃO 100% WEB, BASEADA EM TECNOLOGIA DE COMPUTAÇÃO EM NUVEM, INCLUINDO OS SERVIÇOS DE IMPLANTAÇÃO, PARAMETRIZAÇÃO, MIGRAÇÃO DE DADOS, TREINAMENTO DE USUÁRIOS, SUPORTE TÉCNICO, MANUTENÇÃO, BEM COMO OS SERVIÇOS NECESSÁRIOS À HOSPEDAGEM, SEGURANÇA, DISPONIBILIDADE
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 11/11/2026 — 08:00
+⏳ Prazo final das propostas: 24/11/2026 — 08:00 (4 dias)
+🖥️ Disputa: BLL Compras · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/18295329000192/2026/117
+🔗 Portal da disputa: https://bllcompras.com/Process/ProcessView?param1=[gkz]B8l3ithZEHcQXQOWDIEB_/DK7/PO5nBaCx3VKDkeKKqyx3/O4X9BPHkA7u49Ku21NIyRL4mGhobUJ145Ry5uyyS8jx6psPomPC2EozaPSAs=
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/18295329000192/compras/2026/117/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 68/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 012 — DEPARTAMENTO ESTADUAL DE TRANSITO DO ESPIRITO SANTO
+📍 Local: Vitória/ES
+📑 Pregão - Eletrônico: nº 017 · Processo 2026-9GDFC
+🆔 PNCP: 28162105000166-1-000072/2026
+💰 Valor global estimado: R$ 6.400.000,00
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa para prestação de serviços de suporte técnico de TI (ServiceDesk), nos níveis N1, N2 e nível especializado N3, visando a manutenção e otimização dos sistemas e infraestrutura tecnológica do DETRAN|ES.
+📊 Quantidade: 50.000 UST
+📅 Abertura das propostas: 06/11/2026 — 10:00
+⏳ Prazo final das propostas: 24/11/2026 — 09:00 (4 dias)
+🖥️ Disputa: AZ INFORMATICA LTDA · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/28162105000166/2026/72
+🔗 Portal da disputa: https://siades.es.gov.br/licitacao-pub/#/licitacao-visualizacao/2340/dados-edital
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/28162105000166/compras/2026/72/arquivos/1 | https://pncp.gov.br/pncp-api/v1/orgaos/28162105000166/compras/2026/72/arquivos/2
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 67/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 013 — TRIBUNAL REGIONAL ELEITORAL DE RORAIMA
+📍 Local: Boa Vista/RR
+📑 Pregão - Eletrônico: nº 86 · Processo 0001394-45.2026.6.23.8000
+🆔 PNCP: 05955085000185-1-000095/2026
+💰 Valor global estimado: R$ 5.589.649,06
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: O objeto da presente licitação é o registro de preços para futura e eventual contratação de empresa especializada para aquisição de equipamentos, licenças, materiais e serviços destinados à modernização, ampliação e padronização da infraestrutura de rede local de dados do TRE-RR, contemplando conectividade cabeada e sem fio corporativa no padrão Wi-Fi 7, expansão da capacidade de transmissão de da
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 12/11/2026 — 10:00
+⏳ Prazo final das propostas: 02/12/2026 — 10:00 (12 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado · Registro de preços
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/05955085000185/2026/95
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=07002805000862026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/05955085000185/compras/2026/95/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 66/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 014 — FUNDACAO OSWALDO CRUZ
+📍 Local: Rio de Janeiro/RJ
+📑 Pregão - Eletrônico: nº 505 · Processo 25386.000417/2026-63
+🆔 PNCP: 33781055000135-1-002019/2026
+💰 Valor global estimado: R$ 5.124.285,72
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa especializada para o fornecimento de Serviço de Centro de Operações de Segurança (Security Operations Center - SOC) com funcionamento e suporte 24h por dia e 7 dias por semana, para o atendimento das necessidades da Divisão de Tecnologia da Informação de Bio-Manguinhos, unidade da Fiocruz.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 19/11/2026 — 08:00
+⏳ Prazo final das propostas: 04/12/2026 — 09:00 (14 dias)
+🖥️ Disputa: Compras.gov.br · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/33781055000135/2026/2019
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25444505005052026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/33781055000135/compras/2026/2019/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 66/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 015 — AGENCIA NACIONAL DE AGUAS E SANEAMENTO BASICO (ANA)
+📍 Local: Brasília/DF
+📑 Pregão - Eletrônico: nº 62 · Processo 02501.000942/2026-10
+🆔 PNCP: 04204444000108-1-000038/2025
+💰 Valor global estimado: R$ 9.582.422,52
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Serviços de consultoria técnica especializada para apoio à Gestão e Governança de TI.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 10/11/2026 — 08:00
+⏳ Prazo final das propostas: 25/11/2026 — 09:30 (5 dias)
+🖥️ Disputa: Compras.gov.br · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/04204444000108/2025/38
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=44300105000622025
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/04204444000108/compras/2025/38/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/04204444000108/compras/2025/38/arquivos/2
+⭐ Prioridade: Média (nota 62/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 016 — AGENCIA MUNICIPAL DE TECNOLOGIA DA INFORMACAO E INOVACAO
+📍 Local: Campo Grande/MS
+📑 Pregão - Eletrônico: nº 186 · Processo 000176/2025-20
+🆔 PNCP: 07337989000172-1-000006/2026
+💰 Valor global estimado: R$ 7.009.834,35
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa especializada na Locação de Solução de Alta Disponibilidade de Data Center em container, com escopo abrangendo a entrega da estrutura, operação ininterrupta, manutenção integral (preventiva, preditiva e corretiva), fornecimento de peças, insumos e suporte técnico completo, de forma a garantir a estabilidade, segurança e escalabilidade do ambiente tecnológico municipal.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 09/11/2026 — 09:00
+⏳ Prazo final das propostas: 25/11/2026 — 08:44 (5 dias)
+🖥️ Disputa: AZ INFORMATICA LTDA · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/07337989000172/2026/6
+🔗 Portal da disputa: https://compras.campogrande.ms.gov.br/licitacao-pub/#/licitacao-visualizacao/483/dados-edital
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/07337989000172/compras/2026/6/arquivos/1 | https://pncp.gov.br/pncp-api/v1/orgaos/07337989000172/compras/2026/6/arquivos/4
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 62/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 017 — UNIVERSIDADE DE SAO PAULO
+📍 Local: São Paulo/SP
+📑 Pregão - Eletrônico: nº 52 · Processo 154.00012190/2026-10
+🆔 PNCP: 63025530000104-1-004445/2026
+💰 Valor global estimado: R$ 6.041.814,28
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de empresa especializada em equipamentos do tipo Application Delivery Controller (ADC) - Equipamentos do tipo Application Delivery Controller (ADC), com hardware dedicado, incluindo licenças de software, acessórios, treinamento e serviços de suporte técnico pelo período de 60 meses.
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 06/11/2026 — 09:00
+⏳ Prazo final das propostas: 23/11/2026 — 09:00 (3 dias)
+🖥️ Disputa: Compras.gov.br · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/63025530000104/2026/4445
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=10216705000522026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/63025530000104/compras/2026/4445/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 62/100 — Sistemas, dados e IA)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 018 — UNIVERSIDADE DE SAO PAULO
+📍 Local: São Paulo/SP
+📑 Pregão - Eletrônico: nº 50 · Processo 154.00011856/2026-12
+🆔 PNCP: 63025530000104-1-004502/2026
+💰 Valor global estimado: R$ 5.360.611,12
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Solução de armazenamento de dados all flash NVMe, com capacidade líquida mínima de 40 TiB (quarenta tebibytes), arquitetura escalável, controladoras em modo ativo-ativo e switches Fibre Channel redundantes, dimensionada para suportar workloads transacionais (OLTP) de banco de dados, bem como cargas corporativas de armazenamento em bloco e arquivo (NAS), com suporte técnico por 60 meses, inclusos s
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 10/11/2026 — 09:00
+⏳ Prazo final das propostas: 25/11/2026 — 09:00 (5 dias)
+🖥️ Disputa: Compras.gov.br · Aberto
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/63025530000104/2026/4502
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=10216705000502026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/63025530000104/compras/2026/4502/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 62/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
+
+🏛️ LICITAÇÃO 019 — AGENCIA NACIONAL DE ENERGIA ELETRICA - ANEEL
+📍 Local: Brasília/DF
+📑 Pregão - Eletrônico: nº 21 · Processo 48500.033122/2025-34
+🆔 PNCP: 02270669000129-1-000110/2026
+💰 Valor global estimado: R$ 7.201.400,00
+💵 Valor mensal: NÃO INFORMADO no PNCP
+📦 Objeto: Contratação de serviços técnicos especializados de Tecnologia da Informação voltados à operação, sustentação, monitoração, suporte e evolução do ambiente de infraestrutura de Tecnologia da Informação e Comunicação da ANEEL, incluindo atendimento a usuários e execução de projetos de infraestrutura sob regime de execução por demanda e mensuração baseada em unidades de serviço definidas em modelo pró
+📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
+📅 Abertura das propostas: 06/11/2026 — 08:00
+⏳ Prazo final das propostas: 24/11/2026 — 10:00 (4 dias)
+🖥️ Disputa: Compras.gov.br · Aberto-Fechado
+👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
+🔗 PNCP: https://pncp.gov.br/app/editais/02270669000129/2026/110
+🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=32302805000212026
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/02270669000129/compras/2026/110/arquivos/1
+📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
+⭐ Prioridade: Média (nota 57/100 — Infraestrutura, nuvem, segurança e suporte)
+✅ Situação: confirmada no PNCP em 19/11/2026 20:16 (Brasília): Divulgada no PNCP
