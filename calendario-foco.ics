@@ -6,1015 +6,20 @@ METHOD:PUBLISH
 X-WR-CALNAME:Licitações premiadas
 X-WR-TIMEZONE:America/Sao_Paulo
 BEGIN:VEVENT
-UID:licitacao-119169@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261116T070000Z
-DTEND:20261116T080000Z
-SUMMARY:Prazo (nota 15): INSTITUTO MUNICIPAL DE APOSENTADORIA E PENSAO DO
- S SERVIDORES MUNICIPAIS DE POCO DE JOSE DE MOURA – PB
-DESCRIPTION:Nota 15: serviço de desenvolvimento de software\, seu foco\, 
- pouco prazo para preparar\nValor estimado: R$ 14.014\nDispensa nº 2 · pu
- blicado via Elmar Tecnologia\nCategoria: Desenvolvimento de software\nOb
- jeto: Contratação de empresa especializada na prestação de serviços de l
- ocação de software para gestão do RPPS\, desenvolvimento de site e aplic
- ativo para servidores públicos para acesso de informações de contrachequ
- es\, previsão de aposentadoria\, fale com o gestor\, andamento de proces
- sos\, entre outros\, destinados a atender às necessidades do IMAP - Inst
- ituto Municipal de Aposentadorias e Pensões dos Servidores de Poço de Jo
- sé de Moura/PB\nPNCP: https://pncp.gov.br/app/editais/02212723000180/202
- 6/6
-URL:https://pncp.gov.br/app/editais/02212723000180/2026/6
-LOCATION:publicado via Elmar Tecnologia
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-91812@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261116T070000Z
-DTEND:20261116T080000Z
-SUMMARY:Prazo (nota 16): MUNICIPIO DE CRISTINA – MG
-DESCRIPTION:Nota 16: serviço de triagem e organização de acervo\, seu foc
- o\, pouco prazo para preparar\nValor estimado: R$ 48.000\nDispensa nº 00
- 7 · AMM Licita (MG)\nCategoria: Triagem e organização de acervo\nObjeto:
-  Prestação continuada de serviços integrados de comunicação instituciona
- l digital para atendimento das necessidades do Município\, compreendendo
-  planejamento editorial\, produção de artes gráficas\, textos\, notícias
- \, legendas\, roteiros\, vídeos ou reels\, coberturas presenciais de eve
- ntos\, sessões fotográficas institucionais\, organização de arquivos dig
- itais e apresentação de relatório mensal de execução\, conforme solicita
- ção do Gabinete e Secretaria da Prefeitura.\nPNCP: https://pncp.gov.br/a
- pp/editais/18188250000162/2026/81\nPortal: https://app2.ammlicita.org.br
- /pesquisa/118523
-URL:https://pncp.gov.br/app/editais/18188250000162/2026/81
-LOCATION:AMM Licita (MG)
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-17482@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261116T080000Z
-DTEND:20261116T090000Z
-SUMMARY:Prazo (nota 33): MUNICIPIO DE FRANCISCO BELTRAO – PR
-DESCRIPTION:Nota 33: serviço de manutenção de software e cloud computing\
- , seu foco\, pouco prazo para preparar\nValor estimado: R$ 460.145\nPreg
- ão - Eletrônico nº 58 · Compras.gov.br\nCategoria: Sistemas de gestão e 
- licenças de software\nObjeto: Contratação de serviços relacionados ao di
- reito de uso de software de Gestão Pública para a Secretaria Municipal d
- e Assistência Social\, compreendendo serviços de implantação\, treinamen
- to\, suporte técnico\, manutenção evolutiva e disponibilização de hosped
- agem em nuvem.\nPNCP: https://pncp.gov.br/app/editais/77816510000166/202
- 6/326\nPortal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web
- /public/compras/acompanhamento-compra?compra=98756505000582026
-URL:https://pncp.gov.br/app/editais/77816510000166/2026/326
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-34753@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261116T084500Z
-DTEND:20261116T094500Z
-SUMMARY:Prazo (nota 93): MANAUS PREVIDENCIA - MANAUSPREV – AM
-DESCRIPTION:Nota 93: UST\, ponto de função\, serviço de desenvolvimento d
- e software e sustentação de sistemas\, seu foco\, pouco prazo para prepa
- rar\nValor estimado: Sem valor divulgado\nPregão - Eletrônico nº 106 · c
- ompras.manaus.am.gov.br\nCategoria: Desenvolvimento de software\nObjeto:
-  Contratação de Pessoa Jurídica para Solução de Desenvolvimento\, Manute
- nção e Sustentação\nPNCP: https://pncp.gov.br/app/editais/07637990000112
- /2026/38\nPortal: https://compras.manaus.am.gov.br/publico/item_em_andam
- ento.asp?id=142232
-URL:https://pncp.gov.br/app/editais/07637990000112/2026/38
-LOCATION:compras.manaus.am.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-35891@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261116T090000Z
-DTEND:20261116T100000Z
-SUMMARY:Prazo (nota 30): AGENCIA NACIONAL DE TRANSPORTES TERRESTRES - ANT
- T – DF
-DESCRIPTION:Nota 30: serviço de triagem e organização de acervo\, seu foc
- o\, acima de R$ 1 mi\, pouco prazo para preparar\nValor estimado: R$ 7.1
- 90.419\nPregão - Eletrônico nº 178 · Compras.gov.br\nCategoria: Triagem 
- e organização de acervo\nObjeto: Contratação de serviços contínuos de ap
- oio administrativo nos níveis júnior\, pleno e sênior a serem executados
-  com regime de dedicação exclusiva de mão de obra quanto aos serviços de
-  apoio administrativo relacionados às atividades de processamento e cobr
- ança de auto de infração\, acompanhamento da arrecadação\, gestão docume
- ntal\, bem como à criação\, ao suporte e ao monitoramento da gestão de d
- ados informatizados e à execução de rotinas administrativas técnicas e o
- peracionais\, além das atividades correlatas e acessórias\, para atender
-  às necessidades da Superintendência de Gestão Administrativa – \nPNCP: 
- https://pncp.gov.br/app/editais/04898488000177/2026/65\nPortal: https://
- cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompan
- hamento-compra?compra=39300105001782026
-URL:https://pncp.gov.br/app/editais/04898488000177/2026/65
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-67468@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261116T105900Z
-DTEND:20261116T115900Z
-SUMMARY:Prazo (nota 29): SERVICO AUTONOMO DE AGUA E ESGOTO – BA
-DESCRIPTION:Nota 29: serviço de digitalização e ocr e extração de dados d
- e documentos\, seu foco\, pouco prazo para preparar\nValor estimado: Sem
-  valor divulgado\nDispensa nº PA31 · publicado via IBDM Modernização Ass
- essoria e Consultoria\nCategoria: Infraestrutura de TI e TIC\nObjeto: co
- ntratação de empresa especializada para prestação de serviços técnicos d
- e tecnologia da informação\, destinados à consolidação\, configuração\, 
- integração\, segurança e continuidade da infraestrutura de TI do Serviço
-  Autônomo de Água e Esgoto de Catu – SAAE\, contemplando serviços relaci
- onados a servidores\, virtualização\, Active Directory\, armazenamento\,
-  backup\, rede\, Wi-Fi\, segurança da informação\, documentação\, treina
- mento e implementação de solução de OCR em equipamentos de digitalização
-  existentes.\nPNCP: https://pncp.gov.br/app/editais/13800297000111/2026/
- 22
-URL:https://pncp.gov.br/app/editais/13800297000111/2026/22
-LOCATION:publicado via IBDM Modernização Assessoria e Consultoria
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-108630@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261116T160000Z
-DTEND:20261116T170000Z
-SUMMARY:Prazo (nota 28): MUNICIPIO DE POCO BRANCO – RN
-DESCRIPTION:Nota 28: serviço de triagem e organização de acervo\, seu foc
- o\nValor estimado: R$ 49.137\nDispensa nº 27 · publicado via TOP DOWN CO
- NSULTORIA LTDA\nCategoria: Triagem e organização de acervo\nObjeto: Cont
- ratação dos serviços de apoio técnico-operacional à organização física e
-  ao controle do acervo documental do Município Poço Branco/RN\, compreen
- dendo o levantamento\, a triagem\, a classificação\, a ordenação\, a ide
- ntificação\, o acondicionamento e a elaboração de instrumentos de contro
- le e localização dos documentos.\nPNCP: https://pncp.gov.br/app/editais/
- 08311904000140/2026/66
-URL:https://pncp.gov.br/app/editais/08311904000140/2026/66
-LOCATION:publicado via TOP DOWN CONSULTORIA LTDA
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-37910@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T065900Z
-DTEND:20261117T075900Z
-SUMMARY:Prazo (nota 32): MUNICIPIO DE SANTA ROSA – RS
-DESCRIPTION:Nota 32: serviço de ged / ecm\, seu foco\nValor estimado: R$ 
- 146.453\nPregão - Eletrônico nº PCE 42 · publicado via IPM Sistemas\nCat
- egoria: GED / ECM\nObjeto: Aquisição de peças e lubrificantes\, com pres
- tação de serviço para manutenção da Retroescavadeira Caterpillar\, Patri
- mônio nº 141682\, de uso da Secretaria de Agricultura. Protocolo digital
-  nº 41113/2026.\nPNCP: https://pncp.gov.br/app/editais/88546890000182/20
- 26/183
-URL:https://pncp.gov.br/app/editais/88546890000182/2026/183
-LOCATION:publicado via IPM Sistemas
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-57597@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T070000Z
-DTEND:20261117T080000Z
-SUMMARY:Prazo (nota 45): MUNICIPIO DE VICOSA DO CEARA – CE
-DESCRIPTION:Nota 45: serviço de digitalização e indexação\, seu foco\nVal
- or estimado: R$ 103.200\nPregão - Eletrônico nº PE03/2026-RPPSV · BBMNET
- \nCategoria: Digitalização\nObjeto: CONTRATAÇÃO DE EMPRESA ESPECIALIZADA
-  PARA PRESTAÇÃO DE SERVIÇOS DE GESTÃO DE DOCUMENTAÇÃO DE INFORMAÇÕES E D
- IGITALIZAÇÃO DE DOCUMENTOS\, INCLUINDO\, ESCANEAMENTO\, TRATAMENTO DAS I
- MAGENS\, RECONHECIMENTO ÓTICO DOS CARACTERES\, INDEXAÇÃO ELETRÔNICA\, AR
- MAZENAMENTO EM SOFTWARE DE GERENCIAMENTO ELETRÔNICO (GED) 100% WEB\, COM
-  UTILIZAÇÃO DE CLOUD COMPUTING (ARMAZENAMENTO EM -NUVEM) E DISPONIBILIZA
- ÇÃO DE APLICATIVO (APP) PARA CONSULTAR\, PESQUISAR\, COMPARTILHAR E IMPR
- IMIR OS DOCUMENTOS NAS PLATAFORMAS IOS E ANDROID\, COM ACESSO AOS DADOS 
- DURANTE A VIGÊNCIA DO CONTRATO.\nPNCP: https://pncp.gov.br/app/editais/1
- 0462497000113/2026/111
-URL:https://pncp.gov.br/app/editais/10462497000113/2026/111
-LOCATION:BBMNET
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-119845@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T072900Z
-DTEND:20261117T082900Z
-SUMMARY:Prazo (nota 40): MUNICIPIO DE PARAGUACU PAULISTA – SP
-DESCRIPTION:Nota 40: serviço de manutenção de software e cloud computing\
- , seu foco\nValor estimado: R$ 45.733\nDispensa nº 43 · eparaguacu.sp.go
- v.br\nCategoria: Sistemas de gestão e licenças de software\nObjeto: Cont
- ratação de empresa especializada para disponibilização continuada\, por 
- subscrição\, de solução integrada de portal institucional municipal em m
- odelo Software como Serviço – SaaS\, compreendendo licenciamento de uso\
- , hospedagem em nuvem\, manutenção corretiva\, adaptativa\, evolutiva e 
- de segurança\, atualizações da plataforma\, suporte técnico\, monitorame
- nto\, cópias de segurança (backups)\, recuperação de dados e atendimento
-  aos requisitos de transparência pública\, acessibilidade digital\, segu
- rança da informação e proteção de dados pessoais\, pelo período de 60 me
- ses\,\nPNCP: https://pncp.gov.br/app/editais/44547305000193/2026/165\nPo
- rtal: https://eparaguacu.sp.gov.br/licitacao
-URL:https://pncp.gov.br/app/editais/44547305000193/2026/165
-LOCATION:eparaguacu.sp.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-59697@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T080000Z
-DTEND:20261117T090000Z
-SUMMARY:Prazo (nota 32): FUNDACAO JOAO PINHEIRO – MG
-DESCRIPTION:Nota 32: serviço de manutenção de software\, seu foco\nValor 
- estimado: R$ 209.812\nPregão - Eletrônico nº 32 · Compras MG\nCategoria:
-  Sistemas de gestão e licenças de software\nObjeto: Prestação de serviço
- s de suporte técnico\, manutenção corretiva\, evolutiva e adaptativa do 
- software DSpace (versão 7.6.1 ou superior).\nPNCP: https://pncp.gov.br/a
- pp/editais/17464652000180/2026/30\nPortal: https://www1.compras.mg.gov.b
- r/n/procedimentolei14133/consulta/eletronico/visualizar/2026/32/2061034
-URL:https://pncp.gov.br/app/editais/17464652000180/2026/30
-LOCATION:Compras MG
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-23079@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T080000Z
-DTEND:20261117T090000Z
-SUMMARY:Prazo (nota 65): CONSORCIO PUBLICO INTERFEDERATIVO DE SAUDE DA RE
- GIAO DO METRO RECONCAVO NORTE - MRN – BA
-DESCRIPTION:Nota 65: fixo mensal de software\, serviço de manutenção de s
- oftware e cloud computing\, seu foco\nValor estimado: R$ 134.400\nPregão
-  - Eletrônico nº 17 · Licitanet\nCategoria: Sistemas de gestão e licença
- s de software\nObjeto: [LICITANET] - Contratação de empresa especializad
- a na concessão de licença de uso de software integrado de Gestão de Cont
- abilidade Pública\, Planejamento e Transparência Pública atendendo as di
- sposições da Lei Complementar nº 131/2009\, Sistema de Gestão Pública In
- tegrada contemplando os módulos/sistemas de: Recursos Humanos\, contrach
- eque online e Portal do Servidor\, Sistema de Gestão Pública Integrada c
- ontemplando os módulos/sistemas de: contratos\, Sistema de Gestão Públic
- a Integrada contemplando os módulos/sistemas de: Almoxarifado e Portal I
- ntegrado de informações Sistêmicas\, incluindo implan\nPNCP: https://pnc
- p.gov.br/app/editais/30390856000181/2026/28\nPortal: https://licitanet.c
- om.br/sessao/201718
-URL:https://pncp.gov.br/app/editais/30390856000181/2026/28
-LOCATION:Licitanet
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-56875@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T080000Z
-DTEND:20261117T090000Z
-SUMMARY:Prazo (nota 53): TRIBUNAL REGIONAL ELEITORAL DO RIO GRANDE DO NOR
- TE – RN
-DESCRIPTION:Nota 53: UST no edital\, seu foco\, acima de R$ 1 mi\nValor e
- stimado: R$ 2.186.723\nPregão - Eletrônico nº 152 · Compras.gov.br\nCate
- goria: Suporte técnico de TI\nObjeto: Contratação de serviços de operaçã
- o de infraestrutura e atendimento a usuários de Tecnologia da Informação
-  e Comunicação (TIC)\, sem dedicação exclusiva de mão de obra.\nPNCP: ht
- tps://pncp.gov.br/app/editais/05792645000128/2026/88\nPortal: https://cn
- etmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanha
- mento-compra?compra=07000805001522026
-URL:https://pncp.gov.br/app/editais/05792645000128/2026/88
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-31421@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T090000Z
-DTEND:20261117T100000Z
-SUMMARY:Prazo (nota 77): MINISTERIO DA FAZENDA – PA
-DESCRIPTION:Nota 77: UST\, serviço de sustentação de sistemas e segurança
-  da informação\, seu foco\nValor estimado: Sem valor divulgado\nPregão -
-  Eletrônico nº 15 · Compras.gov.br\nCategoria: Segurança da informação\n
- Objeto: Contratação de empresa prestação de Serviços Gerenciados de Segu
- rança Operacional Cibernética (SOC)\, no modelo de Cyber Fusion Center (
- CFC)\, compreendendo a disponibilização\, implementação\, integração\, o
- peração\, sustentação e evolução contínua de solução integrada que conte
- mple\, de forma indissociável\, as capacidades de Monitoramento e Respos
- ta a Incidentes e Detecção e Resposta Estendidas Baseada em SIEM (XDR ba
- seado em SIEM)\, Gestão de Vulnerabilidades (GVUL) e Resposta a Incident
- es.\nPNCP: https://pncp.gov.br/app/editais/00394460000141/2026/764\nPort
- al: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/com
- pras/acompanhamento-compra?compra=17900705000152026
-URL:https://pncp.gov.br/app/editais/00394460000141/2026/764
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-37851@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T093000Z
-DTEND:20261117T103000Z
-SUMMARY:Prazo (nota 71): MUNICIPIO DE RIBEIRA DO AMPARO – BA
-DESCRIPTION:Nota 71: páginas\, serviço de digitalização e ged / ecm\, seu
-  foco\nValor estimado: R$ 234.000\nPregão - Eletrônico nº 036 · Licitane
- t\nCategoria: GED / ECM\nObjeto: [LICITANET] - REGISTRO DE PREÇOS PARA A
-  CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇOS DE DIGITALIZAÇÃO E GES
- TÃO ELETRÔNICA DE DOCUMENTOS (GED)\, PARA ATENDER AS NECESSIDADES DA PRE
- FEITURA MUNICIPAL DE RIBEIRA DO AMPARO E FUNDOS MUNICIPAIS\, conforme ex
- igências\, quantidades e demais especificações constantes no edital e se
- us anexos.\nPNCP: https://pncp.gov.br/app/editais/13809405000117/2026/88
- \nPortal: https://licitanet.com.br/sessao/205726
-URL:https://pncp.gov.br/app/editais/13809405000117/2026/88
-LOCATION:Licitanet
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-67314@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T115900Z
-DTEND:20261117T125900Z
-SUMMARY:Prazo (nota 29): MUNICIPIO DE CORONEL XAVIER CHAVES – MG
-DESCRIPTION:Nota 29: serviço de triagem e organização de acervo\, seu foc
- o\nValor estimado: R$ 19.500\nDispensa nº 00012526 · coronelxavierchaves
- .licitapp.com.br\nCategoria: Triagem e organização de acervo\nObjeto: Co
- ntratação de empresa especializada para prestação de serviços de consult
- oria e assessoria técnica em patrimônio cultural\, incluindo elaboração\
- , atualização\, revisão e organização de documentos\, inventários\, laud
- os técnicos\, programas de educação patrimonial e demais ações relaciona
- das à política municipal de proteção ao patrimônio cultural\, com suport
- e técnico junto ao IEPHA/MG para atendimento às exigências do Programa I
- CMS Patrimônio Cultural do Município de Coronel Xavier Chaves/MG\, pelo 
- período de 12 meses.\nPNCP: https://pncp.gov.br/app/editais/185575460001
- 03/2026/123\nPortal: https://coronelxavierchaves.licitapp.com.br//
-URL:https://pncp.gov.br/app/editais/18557546000103/2026/123
-LOCATION:coronelxavierchaves.licitapp.com.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-119436@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T121500Z
-DTEND:20261117T131500Z
-SUMMARY:Prazo (nota 57): SECRETARIA DE SAUDE – PE
-DESCRIPTION:Nota 57: serviço de desenvolvimento de software e fábrica de 
- software\, seu foco\, acima de R$ 10 mi\nValor estimado: R$ 15.318.418\n
- Dispensa nº 1632 · publicado via Secretaria de Administração do Estado d
- e Pernambuco\nCategoria: Desenvolvimento de software\nObjeto: Prestação 
- de serviços de desenvolvimento\, manutenção\, sustentação\, testes e con
- trole de qualidade de software\, por alocação de perfil profissional de 
- TI/SES/PE\nPNCP: https://pncp.gov.br/app/editais/10572048000128/2026/156
- 0\nPortal: www.peintegrado.pe.gov.br/Portal/Pages/DispensaLicitacoes.asp
- x?ncdmodulo=19&sdsprocesso=1632.2026. CCD I.CD.0142.SES.FES-PE&nCdProces
- so=170816&nCdSituacao=2
-URL:https://pncp.gov.br/app/editais/10572048000128/2026/1560
-LOCATION:publicado via Secretaria de Administração do Estado de Pernambuc
- o
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-24630@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T122000Z
-DTEND:20261117T132000Z
-SUMMARY:Prazo (nota 54): MUNICIPIO DE GAROPABA – SC
-DESCRIPTION:Nota 54: fixo mensal de software\, serviço de manutenção de s
- oftware\, seu foco\nValor estimado: R$ 151.100\nPregão - Eletrônico nº P
- CE 46 · publicado via IPM Sistemas\nCategoria: Sistemas de gestão e lice
- nças de software\nObjeto: Contratação de pessoa jurídica especializada e
- m prestação de serviço de solução de gestão escolar\, incluindo implanta
- ção dos softwares livres i-Educar e i-Diário\, integração e implantação 
- de ferramentas (relatórios integrados\, gestão de vagas e pré-matrícula 
- on-line\, módulo para pais/alunos e gestão de merenda escolar)\, serviço
- s de migração de dados\, implantação\, parametrizações\, configurações\,
-  treinamento de usuários\, suporte técnico\, manutenção corretiva\, lega
- l e evolutiva\, bem como hospedagem da solução em data center\, a fim de
-  atender às necessidades da Secretaria de Educação e Cultura do \nPNCP: 
- https://pncp.gov.br/app/editais/82836057000190/2026/118
-URL:https://pncp.gov.br/app/editais/82836057000190/2026/118
-LOCATION:publicado via IPM Sistemas
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-107615@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261117T123000Z
-DTEND:20261117T133000Z
-SUMMARY:Prazo (nota 73): SERVICO DE APOIO AS MICRO E PEQUENAS EMPRESAS DO
-  PARANA - SEBRAE/PR – PR
-DESCRIPTION:Nota 73: UST (pouco)\, fixo mensal de software\, serviço de d
- esenvolvimento de software e sustentação de sistemas\, seu foco\nValor e
- stimado: R$ 46.165\nPregão - Eletrônico nº 19 · Portal de Compras Públic
- as\nCategoria: Desenvolvimento de software\nObjeto: [Portal de Compras P
- úblicas] - Contratação de serviços especializados de TI para suporte a u
- suários\, sustentação de ambientes tecnológicos\, manutenção e desenvolv
- imento de sistemas\, integrações e documentação técnica\, com possível u
- so de Inteligência Artificial conforme as necessidades do Sebrae/PR.\nPN
- CP: https://pncp.gov.br/app/editais/75110585000100/2026/19\nPortal: http
- s://www.portaldecompraspublicas.com.br/processos/PR/Servico-de-Apoio-as-
- Micro-e-Pequenas-Empresas-do-Parana-SEBRAE-4504/PEP-19-2026-2026-524290
-URL:https://pncp.gov.br/app/editais/75110585000100/2026/19
-LOCATION:Portal de Compras Públicas
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-58896@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261118T070000Z
-DTEND:20261118T080000Z
-SUMMARY:Prazo (nota 72): MUNICIPIO DE BATALHA- CAMARA MUNICIPAL – PI
-DESCRIPTION:Nota 72: páginas\, serviço de digitalização e indexação\, seu
-  foco\nValor estimado: R$ 260.640\nPregão - Eletrônico nº 001 · ComprasB
- R\nCategoria: Indexação\nObjeto: Contratação de empresa especializada na
-  preparação\, higienização superficial\, digitalização\, OCR quando tecn
- icamente aplicável\, indexação\, controle de qualidade e entrega de docu
- mentos e metadados do acervo da Câmara Municipal de Batalha/PI\, compree
- ndendo 504.000 páginas estimadas para 12 meses\, sem delimitação de exer
- cício ou legislatura e sem fornecimento de software de gestão documental
- \, conforme ANEXO I – TERMO DE REFERÊNCIA.\nPNCP: https://pncp.gov.br/ap
- p/editais/01068707000100/2026/1\nPortal: https://comprasbr.com.br/pregao
- -eletronico-detalhe/?idlicitacao=49459
-URL:https://pncp.gov.br/app/editais/01068707000100/2026/1
-LOCATION:ComprasBR
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-57983@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261118T072900Z
-DTEND:20261118T082900Z
-SUMMARY:Prazo (nota 73): RIO DO SUL CAMARA DE VEREADORES – SC
-DESCRIPTION:Nota 73: horas técnicas (pouco)\, fixo mensal de software\, s
- erviço de manutenção de software e sistemas de gestão e licenças de soft
- ware\, seu foco\nValor estimado: R$ 73.949\nPregão - Eletrônico nº PCE 4
-  · publicado via IPM Sistemas\nCategoria: Sistemas de gestão e licenças 
- de software\nObjeto: Contratação de empresa especializada para fornecime
- nto de licença de uso\, implantação\, parametrização\, migração\, treina
- mento\, hospedagem\, sustentação\, suporte técnico\, manutenção corretiv
- a\, preventiva e evolutiva de sistema integrado de gestão legislativa\, 
- em ambiente web\, modalidade Software as a Service - SaaS\, destinado ao
-  atendimento das necessidades da Câmara Municipal de Rio do Sul\, contem
- plando\, de forma integrada ou plenamente interoperável\, os seguintes m
- ódulos: Portal Web institucional\, Ouvidoria/e-SIC\, Processo Legislativ
- o\, Protocolo\, Integração com o Poder Executivo\, Assinatura Dig\nPNCP:
-  https://pncp.gov.br/app/editais/83622985000114/2026/31
-URL:https://pncp.gov.br/app/editais/83622985000114/2026/31
-LOCATION:publicado via IPM Sistemas
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-9085@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261118T075900Z
-DTEND:20261118T085900Z
-SUMMARY:Prazo (nota 46): MUNICIPIO DE GUAPIACU – SP
-DESCRIPTION:Nota 46: serviço de manutenção de software e tratamento e pro
- cessamento de dados\, seu foco\nValor estimado: R$ 348.377\nPregão - Ele
- trônico nº 41 · publicado via Fiorilli Software\nCategoria: Sistemas de 
- gestão e licenças de software\nObjeto: Contratação de empresa para prest
- ação serviços especializados de fornecimento de licença de uso de Sofwar
- e - Assistência Social Web e Saúde Web\nPNCP: https://pncp.gov.br/app/ed
- itais/45728326000178/2026/113
-URL:https://pncp.gov.br/app/editais/45728326000178/2026/113
-LOCATION:publicado via Fiorilli Software
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-31202@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261118T080000Z
-DTEND:20261118T090000Z
-SUMMARY:Prazo (nota 82): FAPEX FUNDACAO DE APOIO A PESQUISA E EXTENSAO – 
- BA
-DESCRIPTION:Nota 82: páginas\, serviço de digitalização e indexação\, seu
-  foco\, acima de R$ 1 mi\nValor estimado: R$ 1.314.000\nPregão - Eletrôn
- ico nº SPE 053 · BLL Compras\nCategoria: Indexação\nObjeto: Contratação 
- de empresa especializada em gestão documental do acervo do Projeto PRESE
- RVA IFBA: triagem\, higienização\, organização\, acondicionamento\, rest
- auração (R1 a R3)\, descrição arquivística\, digitalização\, indexação\,
-  treinamento\, transporte interno e fornecimento\, implantação e manuten
- ção de sistema GED\, com entrega do código-fonte\, no âmbito do Projeto 
- nº 250015\, conforme o Termo de Referência – Anexo I do Edital.\nPNCP: h
- ttps://pncp.gov.br/app/editais/14645162000191/2026/52\nPortal: https://b
- llcompras.com/Process/ProcessView?param1=[gkz]HgUyhUuU8iqFWdt7GteAPiDwZv
- t6OIC3IshE26v/jsGJmlaUOMM4W8OLUjC1ewKN3Pgqg6Lz1AThry_PF6VCeY12mAJ0YCyYE/
- r20CjTHBs=
-URL:https://pncp.gov.br/app/editais/14645162000191/2026/52
-LOCATION:BLL Compras
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-64591@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261118T080100Z
-DTEND:20261118T090100Z
-SUMMARY:Prazo (nota 87): CONSORCIO INTERMUNICIPAL SAUDE NORTE DE MINAS – 
- MG
-DESCRIPTION:Nota 87: páginas\, serviço de digitalização e indexação\, seu
-  foco\, acima de R$ 10 mi\nValor estimado: R$ 45.121.942\nPregão - Eletr
- ônico nº 003 · Licitar Digital\nCategoria: Digitalização\nObjeto: Regist
- ro de Preços para futura e eventual contratação de empresa(s) especializ
- ada(s) na prestação de serviços relacionados à gestão e ao processamento
-  de informações do Sistema Único de Saúde – SUS\, divididos em 03 (três)
-  lotes\, sendo: Lote 01 – Faturamento SUS\, compreendendo a gestão\, o p
- rocessamento\, a conferência e o acompanhamento do faturamento ambulator
- ial e hospitalar do SUS\, incluindo alimentação dos sistemas oficiais\, 
- tratamento de inconsistências e glosas e emissão de relatórios técnicos 
- e gerenciais\; Lote 02 – Digitalização de prontuários e documentos assis
- tenciais\, compreendendo os\nPNCP: https://pncp.gov.br/app/editais/00905
- 312000144/2026/8\nPortal: https://app2.licitardigital.com.br/pesquisa/11
- 8322
-URL:https://pncp.gov.br/app/editais/00905312000144/2026/8
-LOCATION:Licitar Digital
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-31877@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261118T090000Z
-DTEND:20261118T100000Z
-SUMMARY:Prazo (nota 100): SERVICO FEDERAL DE PROCESSAMENTO DE DADOS (SERP
- RO) – DF
-DESCRIPTION:Nota 100: ponto de função\, horas técnicas\, UST no edital\, 
- serviço de desenvolvimento de software e fábrica de software\, seu foco\
- nValor estimado: Sem valor divulgado\nPregão - Eletrônico nº 14 · Compra
- s.gov.br\nCategoria: Desenvolvimento de software\nObjeto: Contratação de
-  serviços de atividades relacionadas ao desenvolvimento de software por 
- ponto de função (PF) - PLATAFORMA ONAC 2026 - sob demanda\, de acordo co
- m as especificações e detalhamentos consignados nos anexos I e IV deste 
- edital e no Edital de Pré-qualificação 66/2021.\nPNCP: https://pncp.gov.
- br/app/editais/33683111000107/2026/82\nPortal: https://cnetmobile.estale
- iro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?co
- mpra=80603005000142026
-URL:https://pncp.gov.br/app/editais/33683111000107/2026/82
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-59225@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261118T090000Z
-DTEND:20261118T100000Z
-SUMMARY:Prazo (nota 76): AGENCIA NACIONAL DE AVIACAO CIVIL - ANAC – DF
-DESCRIPTION:Nota 76: ponto de função no edital\, serviço de desenvolvimen
- to de software e fábrica de software\, seu foco\, acima de R$ 1 mi\nValo
- r estimado: R$ 8.027.656\nPregão - Eletrônico nº 78 · Compras.gov.br\nCa
- tegoria: Desenvolvimento de software\nObjeto: Contratação de serviços té
- cnicos especializados de desenvolvimento\, manutenção e sustentação de s
- oluções baseadas em dados e inteligência artificial\, bem como de testes
-  avançados\, qualidade e mensuração de software.\nPNCP: https://pncp.gov
- .br/app/editais/07947821000189/2026/154\nPortal: https://cnetmobile.esta
- leiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?
- compra=11321405000782026
-URL:https://pncp.gov.br/app/editais/07947821000189/2026/154
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-100853@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261118T130000Z
-DTEND:20261118T140000Z
-SUMMARY:Prazo (nota 34): SERVICO SOCIAL DO COMERCIO SESC – PE
-DESCRIPTION:Nota 34: serviço de fábrica de software\, seu foco\nValor est
- imado: Sem valor divulgado\nPregão - Eletrônico nº 099/2026 · Licitações
- -e\nCategoria: Fábrica de software\nObjeto: CONTRATAÇÃO DE EMPRESA ESPEC
- IALIZADA NA PRESTAÇÃO DE SERVIÇOS CONTINUADOS DE ALOCAÇÃO DE PROFISSIONA
- IS DE TECNOLOGIA DA INFORMAÇÃO\, NO MODELO BODY SHOP\, PARA ATUAÇÃO NAS 
- ATIVIDADES DE SUPORTE TÉCNICO\, ATENDIMENTO A USUÁRIOS\, OPERAÇÃO E MANU
- TENÇÃO DO AMBIENTE TECNOLÓGICO DO SESC-PE\, CONFORME PERFIS\, QUANTITATI
- VOS\, NÍVEIS DE SERVIÇO E DEMAIS ESPECIFICAÇÕES\, OBSERVADAS AS DEMAIS C
- ONDIÇÕES ESTABELECIDAS NO EDITAL DO PREGÃO ELETRÔNICO SESC/DR-PE E SEUS 
- ANEXOS\, QUE ENCONTRAM-SE DISPONÍVEIS NO SITE DO SESC/DR-PE: WWW.SESCPE.
- ORG.BR\, TODAS AS DECISÕES POSTERIORES À DIVULGAÇÃO TAMBÉM SERÃO DISPONI
- BILIZA\nPNCP: https://pncp.gov.br/app/editais/03482931000161/2026/23\nPo
- rtal: https://licitacoes-e2.bb.com.br/aop-inter-estatico/visualizar-proc
- esso-publico/1103805
-URL:https://pncp.gov.br/app/editais/03482931000161/2026/23
-LOCATION:Licitações-e
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-118103@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T070000Z
-DTEND:20261119T080000Z
-SUMMARY:Prazo (nota 28): CONSELHO REGIONAL DE PSICOLOGIA 20 REGIAO – AM
-DESCRIPTION:Nota 28: serviço de triagem e organização de acervo\, seu foc
- o\nValor estimado: R$ 994\,17\nDispensa nº 24 · Compras.gov.br\nCategori
- a: Triagem e organização de acervo\nObjeto: Contratação de plano de assi
- natura digital online (assinatura eletrônica em nuvem) para atender às d
- emandas operacionais\, administrativas e institucionais do Conselho Regi
- onal de Psicologia da 20ª Região (CRP-20)\, visando otimizar a gestão do
- cumental e garantir a validade jurídica dos atos praticados no âmbito do
-  Conselho.\nPNCP: https://pncp.gov.br/app/editais/05901702000160/2026/24
- \nPortal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/publ
- ic/compras/acompanhamento-compra?compra=92664506000242026
-URL:https://pncp.gov.br/app/editais/05901702000160/2026/24
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-121376@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T070000Z
-DTEND:20261119T080000Z
-SUMMARY:Prazo (nota 40): COMITE PARAOLIMPICO BRASILEIRO – SP
-DESCRIPTION:Nota 40: serviço de digitalização e indexação\, seu foco\nVal
- or estimado: R$ 59.833\nDispensa nº 105 · Compras.gov.br\nCategoria: Dig
- italização\nObjeto: Prestação de serviços de digitalização e descarte de
-  processos e documentos\, conforme especificidades do Termo de Referênci
- a.\nPNCP: https://pncp.gov.br/app/editais/00700114000144/2026/151\nPorta
- l: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/comp
- ras/acompanhamento-compra?compra=92947206001052026
-URL:https://pncp.gov.br/app/editais/00700114000144/2026/151
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-119641@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T072900Z
-DTEND:20261119T082900Z
-SUMMARY:Prazo (nota 29): MUNICIPIO DE VARGINHA – MG
-DESCRIPTION:Nota 29: serviço de triagem e organização de acervo\, seu foc
- o\nValor estimado: R$ 19.866\nDispensa nº DE126 · Portal de Compras Públ
- icas\nCategoria: Triagem e organização de acervo\nObjeto: [Portal de Com
- pras Públicas] - Contratação de empresa especializada para a prestação d
- e serviços técnicos de infraestrutura de redes de telecomunicações e cab
- eamento estruturado\, destinados à execução da reorganização física e fu
- ncional do rack principal de telecomunicações do 24º Batalhão da Polícia
-  Militar de Minas Gerais (PMMG)\, incluindo o fornecimento de mão de obr
- a especializada\, materiais e componentes de infraestrutura necessários 
- à completa execução dos serviços\nPNCP: https://pncp.gov.br/app/editais/
- 18240119000105/2026/384\nPortal: https://www.portaldecompraspublicas.com
- .br/processos/MG/Prefeitura-do-Municipio-de-Varginha-1970/DE-DE126-2026-
- 2026-525042
-URL:https://pncp.gov.br/app/editais/18240119000105/2026/384
-LOCATION:Portal de Compras Públicas
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-62021@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T073000Z
-DTEND:20261119T083000Z
-SUMMARY:Prazo (nota 54): COMISSAO NACIONAL DE ENERGIA NUCLEAR – MG
-DESCRIPTION:Nota 54: UST no edital\, seu foco\, acima de R$ 1 mi\nValor e
- stimado: R$ 2.318.514\nPregão - Eletrônico nº 244 · Compras.gov.br\nCate
- goria: Suporte técnico de TI\nObjeto: Contratação de empresa especializa
- da em prestação de serviços de operação de infraestrutura e atendimento 
- a usuários de tecnologia da informação e comunicação (com suporte de ate
- ndimento remoto e presencial) para usuários\, monitoração de ambiente te
- cnológico (NOC - Network Operations Center)\, operação de infraestrutura
-  e evolução do ambiente tecnológico de TIC da CNEN/CDTN.\nPNCP: https://
- pncp.gov.br/app/editais/00402552000126/2026/592\nPortal: https://cnetmob
- ile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento
- -compra?compra=11320505002442026
-URL:https://pncp.gov.br/app/editais/00402552000126/2026/592
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-60616@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T075000Z
-DTEND:20261119T085000Z
-SUMMARY:Prazo (nota 45): MUNICIPIO DE VITORIA – ES
-DESCRIPTION:Nota 45: UST (pouco)\, seu foco\, acima de R$ 10 mi\nValor es
- timado: R$ 29.220.594\nPregão - Eletrônico nº 151 · publicado via SMARAP
- D INFORMATICA LTDA\nCategoria: CFTV\, videomonitoramento e segurança ele
- trônica\nObjeto: REGISTRO DE PREÇOS VISANDO A CONTRATAÇÃO DE EMPRESA ESP
- ECIALIZADA EM SOLUÇÃO DE INFRAESTRUTURA PARA VIDEOMONITORAMENTO COM AQUI
- SIÇÃO\, GARANTIA E SUPORTE.\nPNCP: https://pncp.gov.br/app/editais/27142
- 058000126/2026/704
-URL:https://pncp.gov.br/app/editais/27142058000126/2026/704
-LOCATION:publicado via SMARAPD INFORMATICA LTDA
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-35482@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T080000Z
-DTEND:20261119T090000Z
-SUMMARY:Prazo (nota 34): MUNICIPIO DE ILHA DAS FLORES – SE
-DESCRIPTION:Nota 34: serviço de digitalização\, seu foco\nValor estimado:
-  R$ 137.119\nPregão - Eletrônico nº 08 · Licitanet\nCategoria: Digitaliz
- ação\nObjeto: [LICITANET] - SERVIÇO DE DIGITALIZAÇÃO\nPNCP: https://pncp
- .gov.br/app/editais/13111224000112/2026/36\nPortal: https://licitanet.co
- m.br/sessao/206414
-URL:https://pncp.gov.br/app/editais/13111224000112/2026/36
-LOCATION:Licitanet
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-34217@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T080000Z
-DTEND:20261119T090000Z
-SUMMARY:Prazo (nota 66): COMPANHIA ESPIRITO SANTENSE DE SANEAMENTO - CESA
- N – ES
-DESCRIPTION:Nota 66: ponto de função no edital\, serviço de desenvolvimen
- to de software e manutenção de software\, seu foco\nValor estimado: Sem 
- valor divulgado\nPregão - Eletrônico nº 076/2026 · Licitações-e\nCategor
- ia: Manutenção de software\nObjeto: CONTRATAÇÃO DE SERVIÇOS DE OUTSOURCI
- NG PARA PRESTAÇÃO\, EM CARÁTER CONTINUADO\, DE SERVIÇO TÉCNICO ESPECIALI
- ZADO DE DESENVOLVIMENTO E MANUTENÇÃO DE SISTEMAS DE TECNOLOGIA DA INFORM
- AÇÃO.\nPNCP: https://pncp.gov.br/app/editais/28151363000147/2026/28\nPor
- tal: https://licitacoes-e2.bb.com.br/aop-inter-estatico/visualizar-proce
- sso-publico/1103222
-URL:https://pncp.gov.br/app/editais/28151363000147/2026/28
-LOCATION:Licitações-e
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-60456@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T080000Z
-DTEND:20261119T090000Z
-SUMMARY:Prazo (nota 52): MUNICIPIO DE RONDONOPOLIS – MT
-DESCRIPTION:Nota 52: páginas (pouco)\, serviço de digitalização\, seu foc
- o\, acima de R$ 1 mi\nValor estimado: R$ 9.671.378\nPregão - Eletrônico 
- nº 56 · transparencia.rondonopolis.mt.gov.br\nCategoria: Digitalização\n
- Objeto: REGISTRO DE PREÇO PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA 
- ESPECIALIZADA EM PRESTAÇÃO DE OUTSOURCING DE PROCESSAMENTO DE DOCUMENTOS
- \, COMPREENDENDO DIGITALIZAÇÃO\, IMPRESSÃO E CÓPIAS PARA ATENDER ÀS NECE
- SSIDADES DA PREFEITURA MUNICIPAL DE RONDONÓPOLIS - MT\nPNCP: https://pnc
- p.gov.br/app/editais/03347101000121/2026/232\nPortal: https://transparen
- cia.rondonopolis.mt.gov.br/rondonopolis/licitacoes/licitacao?id=30240
-URL:https://pncp.gov.br/app/editais/03347101000121/2026/232
-LOCATION:transparencia.rondonopolis.mt.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-58017@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T080000Z
-DTEND:20261119T090000Z
-SUMMARY:Prazo (nota 66): MUNICIPIO DE SANTA LUZIA D'OESTE – RO
-DESCRIPTION:Nota 66: fixo mensal de software\, serviço de manutenção de s
- oftware e sistemas de gestão e licenças de software\, seu foco\nValor es
- timado: R$ 327.526\nPregão - Eletrônico nº PE 36 · publicado via Betha S
- istemas\nCategoria: Sistemas de gestão e licenças de software\nObjeto: C
- ontratação de empresa especializada para disponibilização\, implantação\
- , parametrização\, migração de dados\, treinamento\, hospedagem\, licenc
- iamento de uso\, manutenção evolutiva\, adaptativa e corretiva\, atualiz
- ação legal e suporte técnico de solução integrada de gestão municipal\, 
- em ambiente web e no modelo Software como Serviço (SaaS)\, compreendendo
-  os módulos e soluções especificados neste edital.\nPNCP: https://pncp.g
- ov.br/app/editais/15845365000194/2026/72
-URL:https://pncp.gov.br/app/editais/15845365000194/2026/72
-LOCATION:publicado via Betha Sistemas
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-67380@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T085000Z
-DTEND:20261119T095000Z
-SUMMARY:Prazo (nota 66): ESTADO DO RIO DE JANEIRO – RJ
-DESCRIPTION:Nota 66: fixo mensal de software\, serviço de manutenção de s
- oftware e sistemas de gestão e licenças de software\, seu foco\nValor es
- timado: R$ 116.883\nPregão - Eletrônico nº PE 038/26 · SIGA RJ\nCategori
- a: Sistemas de gestão e licenças de software\nObjeto: Contratação de emp
- resa terceirizada na prestação de serviço de implantação de sistema de p
- rontuário eletrônico\, visando a solução tecnológica e melhoria nos aten
- dimentos no Serviço de Saúde dos servidores e seus dependentes da Policl
- ínica da Polícia Civil\, incluindo configuração\, manutenção corretiva e
-  evolutiva e suporte técnico.\nPNCP: https://pncp.gov.br/app/editais/424
- 98600000171/2026/4799\nPortal: https://www.compras.rj.gov.br/EditaisLici
- tacoes/detalhar.action?idLic=37756
-URL:https://pncp.gov.br/app/editais/42498600000171/2026/4799
-LOCATION:SIGA RJ
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-63506@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T130000Z
-DTEND:20261119T140000Z
-SUMMARY:Prazo (nota 75): TRIBUNAL DE JUSTICA DO ESTADO DE MINAS GERAIS – 
- MG
-DESCRIPTION:Nota 75: UST no edital\, serviço de cloud computing\, seu foc
- o\, acima de R$ 50 mi\nValor estimado: R$ 183.067.171\nPregão - Eletrôni
- co nº 662 · Compras MG\nCategoria: Cloud computing\nObjeto: Contratação 
- de serviço continuado de fornecimento de créditos para consumo dos servi
- ços de computação em nuvem da Amazon Web Services (AWS)\nPNCP: https://p
- ncp.gov.br/app/editais/21154554000113/2026/521\nPortal: https://www1.com
- pras.mg.gov.br/n/procedimentolei14133/consulta/eletronico/visualizar/202
- 6/662/1031018
-URL:https://pncp.gov.br/app/editais/21154554000113/2026/521
-LOCATION:Compras MG
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-59169@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T130000Z
-DTEND:20261119T140000Z
-SUMMARY:Prazo (nota 48): TRIBUNAL SUPERIOR ELEITORAL – RS
-DESCRIPTION:Nota 48: UST (pouco)\, horas técnicas (pouco)\, seu foco\, ac
- ima de R$ 1 mi\nValor estimado: R$ 7.240.000\nPregão - Eletrônico nº 180
-  · Compras.gov.br\nCategoria: Servidores e data center\nObjeto: Prestaçã
- o de serviços de locação de espaço em datacenter (colocation) destinado 
- ao ambiente computacional de produção do TRE-RS\, incluindo os serviços 
- de moving\, fornecimento de links de interligação entre sites\, conexão 
- a operadoras de telecomunicações (cross connect externo)\, custódia de f
- itas de backup e apoio técnico presencial (smart hands).\nPNCP: https://
- pncp.gov.br/app/editais/00509018000113/2026/2478\nPortal: https://cnetmo
- bile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhament
- o-compra?compra=07002105001802026
-URL:https://pncp.gov.br/app/editais/00509018000113/2026/2478
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-58852@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261119T130000Z
-DTEND:20261119T140000Z
-SUMMARY:Prazo (nota 85): GOIAS TRIBUNAL DE JUSTICA DO ESTADO DE GOIAS – G
- O
-DESCRIPTION:Nota 85: UST\, serviço de fábrica de software\, seu foco\, ac
- ima de R$ 50 mi\nValor estimado: R$ 97.912.500\nPregão - Eletrônico nº 1
- 23959 · publicado via SISLOG - Sistema de Logística de Goiás\nCategoria:
-  Fábrica de software\nObjeto: Registro de preços para futura e eventual 
- contratação\, sob demanda\, de serviços especializados de suporte técnic
- o e apoio às atividades das equipes de gestão tecnológica do Tribunal de
-  Justiça do Estado de Goiás – TJGO\, abrangendo atendimento de 1º\, 2º e
-  3º níveis\, com mensuração em Unidade de Serviço Técnico (UST)\, confor
- me as condições\, especificações e exigências estabelecidas neste edital
-  e seus anexos.\nPNCP: https://pncp.gov.br/app/editais/02292266000180/20
- 26/160
-URL:https://pncp.gov.br/app/editais/02292266000180/2026/160
-LOCATION:publicado via SISLOG - Sistema de Logística de Goiás
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:licitacao-32668@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261119T143000Z
 DTEND:20261119T153000Z
-SUMMARY:Prazo (nota 53): BANCO CENTRAL DO BRASIL – DF
-DESCRIPTION:Nota 53: serviço de sustentação de sistemas\, seu foco\, acim
- a de R$ 50 mi\nValor estimado: R$ 71.039.754\nPregão - Eletrônico nº 29 
- · Compras.gov.br\nCategoria: Infraestrutura de TI e TIC\nObjeto: Prestaç
- ão de serviços técnicos especializados de sustentação do Arranjo de Paga
- mentos Instantâneos (PI) e de sua infraestrutura de TIC (NOVA CONTRATAÇÃ
- O)\nPNCP: https://pncp.gov.br/app/editais/00038166000105/2026/717\nPorta
- l: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/comp
- ras/acompanhamento-compra?compra=17908705000292026
+SUMMARY:Prazo (nota 40): BANCO CENTRAL DO BRASIL – DF
+DESCRIPTION:Nota 40: serviço de sustentação de sistemas\, seu foco\, acim
+ a de R$ 50 mi\, pouco prazo para preparar\nValor estimado: R$ 71.039.754
+ \nPregão - Eletrônico nº 29 · Compras.gov.br\nCategoria: Infraestrutura 
+ de TI e TIC\nObjeto: Prestação de serviços técnicos especializados de su
+ stentação do Arranjo de Pagamentos Instantâneos (PI) e de sua infraestru
+ tura de TIC (NOVA CONTRATAÇÃO)\nPNCP: https://pncp.gov.br/app/editais/00
+ 038166000105/2026/717\nPortal: https://cnetmobile.estaleiro.serpro.gov.b
+ r/comprasnet-web/public/compras/acompanhamento-compra?compra=17908705000
+ 292026
 URL:https://pncp.gov.br/app/editais/00038166000105/2026/717
 LOCATION:Compras.gov.br
 BEGIN:VALARM
@@ -1024,27 +29,75 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:licitacao-63263@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261123T073000Z
-DTEND:20261123T083000Z
-SUMMARY:Prazo (nota 67): MUNICIPIO DE POCO REDONDO – SE
-DESCRIPTION:Nota 67: fixo mensal de software\, serviço de manutenção de s
- oftware e segurança da informação\, seu foco\nValor estimado: R$ 178.200
- \nPregão - Eletrônico nº 14 · Licitanet\nCategoria: Sistemas de gestão e
-  licenças de software\nObjeto: [LICITANET] - REGISTRO DE PREÇOS PARA FUT
- URA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA DISPONIBILIZAÇÃ
- O DE SOLUÇÃO INTEGRADA DE GESTÃO PÚBLICA DIGITAL EM NUVEM\, NO MODELO Sa
- aS (SOFTWARE AS A SERVICE)\, COM AMBIENTE WEB E APLICATIVO MÓVEL\, INCLU
- INDO CESSÃO DO DIREITO DE USO\, IMPLANTAÇÃO\, PARAMETRIZAÇÃO\, MIGRAÇÃO 
- DE DADOS\, TREINAMENTO\, HOSPEDAGEM\, MANUTENÇÃO CORRETIVA E EVOLUTIVA\,
-  ATUALIZAÇÕES\, SEGURANÇA DA INFORMAÇÃO E SUPORTE TÉCNICO\, PARA ATENDER
-  À PREFEITURA MUNICIPAL\, AO FUNDO MUNICIPAL DE SAÚDE E AO FUNDO MUNICIP
- AL DE ASSISTÊNCIA SOCIAL DE POÇO REDONDO/SE.\nPNCP: https://pncp.gov.br/
- app/editais/13114004000142/2026/26\nPortal: https://licitanet.com.br/ses
- sao/207060
-URL:https://pncp.gov.br/app/editais/13114004000142/2026/26
-LOCATION:Licitanet
+UID:licitacao-65082@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261123T080000Z
+DTEND:20261123T090000Z
+SUMMARY:Prazo (nota 65): RECEITA ESTADUAL DO PARANA – PR
+DESCRIPTION:Nota 65: UST (pouco)\, horas técnicas (pouco)\, serviço de si
+ stemas de gestão e licenças de software\, seu foco\, acima de R$ 10 mi\n
+ Valor estimado: R$ 16.811.342\nPregão - Eletrônico nº 1457 · Compras Par
+ aná\nCategoria: Sistemas de gestão e licenças de software\nObjeto: Contr
+ atação de empresa especializada no ramo para o Fornecimento de licenças 
+ de software\, garantia de atualização de software - software assurance -
+  e subscrições de software\, considerando os licenciamentos Microsoft de
+  propriedades da SEFA/REPR\nPNCP: https://pncp.gov.br/app/editais/783935
+ 92000146/2026/47\nPortal: www.transparencia.pr.gov.br/pte/compras/licita
+ coes/pesquisar-param?numprocesso=1457&ano=2026&codmodalidade=68
+URL:https://pncp.gov.br/app/editais/78393592000146/2026/47
+LOCATION:Compras Paraná
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-972@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261123T080000Z
+DTEND:20261123T090000Z
+SUMMARY:Prazo (nota 20): MUNICIPIO DE RESERVA DO IGUACU – PR
+DESCRIPTION:Nota 20: seu foco\nValor estimado: R$ 56\,00\nPregão - Eletrô
+ nico nº 42 · Compras.gov.br\nCategoria: Restauração de documentos\nObjet
+ o: REGISTRO DE PREÇO PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPEC
+ IALIZADA EM AUTOPEÇAS\, COM OFICINA PRÓPRIA\, PARA FORNECIMENTO DE PEÇAS
+  E ELEMENTOS FILTRANTES NOVOS\, OBSERVANDO OBRIGATORIAMENTE OS PREÇOS PR
+ ATICADOS NA TABELA TRAZ VALOR\, CONFORME SEUS VALORES\, BEM COMO PARA PR
+ ESTAÇÃO DE SERVIÇOS DE MECÂNICA PESADA\, INCLUINDO MANUTENÇÃO ELÉTRICA E
+  DE AR-CONDICIONADO\, VISANDO À CONSERVAÇÃO PREVENTIVA E CORRETIVA DA FR
+ OTA MUNICIPAL\, NOS TERMOS DA TABELA ABAIXO\, CONFORME CONDIÇÕES E EXIGÊ
+ NCIAS ES\nPNCP: https://pncp.gov.br/app/editais/01612911000132/2026/131\
+ nPortal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/publi
+ c/compras/acompanhamento-compra?compra=98087805000422026
+URL:https://pncp.gov.br/app/editais/01612911000132/2026/131
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-57095@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261123T080000Z
+DTEND:20261123T090000Z
+SUMMARY:Prazo (nota 30): MUNICIPIO DE RESERVA DO IGUACU – PR
+DESCRIPTION:Nota 30: seu foco\, acima de R$ 1 mi\nValor estimado: R$ 4.98
+ 0.805\nPregão - Eletrônico nº 44 · publicado via Equiplano Sistemas LTDA
+  / Equiplano Sistemas\nCategoria: Restauração de documentos\nObjeto: Reg
+ istro de preço para futura e eventual Contratação de empresa especializa
+ da em autopeças\, com oficina própria\, para fornecimento de peças e ele
+ mentos filtrantes novos\, observando obrigatoriamente os preços praticad
+ os na tabela Traz Valor\, conforme seus valores\, bem como para prestaçã
+ o de serviços de mecânica pesada\, incluindo manutenção elétrica e de ar
+ -condicionado\, visando à conservação preventiva e corretiva da frota mu
+ nicipal\, nos termos da tabela abaixo\, conforme condições e exigências 
+ estabelecidas neste instrumento.\nPNCP: https://pncp.gov.br/app/editais/
+ 01612911000132/2026/132
+URL:https://pncp.gov.br/app/editais/01612911000132/2026/132
+LOCATION:publicado via Equiplano Sistemas LTDA / Equiplano Sistemas
 BEGIN:VALARM
 TRIGGER:-P2D
 ACTION:DISPLAY
@@ -1053,12 +106,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-63279@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261123T080000Z
 DTEND:20261123T090000Z
-SUMMARY:Prazo (nota 80): GOVERNO DO PARANA SECRETARIA DE ESTADO DA FAZEND
+SUMMARY:Prazo (nota 79): GOVERNO DO PARANA SECRETARIA DE ESTADO DA FAZEND
  A – PR
-DESCRIPTION:Nota 80: horas técnicas (pouco)\, UST no edital\, serviço de 
+DESCRIPTION:Nota 79: horas técnicas (pouco)\, UST no edital\, serviço de 
  sistemas de gestão e licenças de software\, seu foco\, acima de R$ 10 mi
  \nValor estimado: R$ 16.811.345\nPregão - Eletrônico nº 18 · Compras.gov
  .br\nCategoria: Sistemas de gestão e licenças de software\nObjeto: Contr
@@ -1082,88 +135,12 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:licitacao-972@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261123T080000Z
-DTEND:20261123T090000Z
-SUMMARY:Prazo (nota 21): MUNICIPIO DE RESERVA DO IGUACU – PR
-DESCRIPTION:Nota 21: seu foco\nValor estimado: R$ 56\,00\nPregão - Eletrô
- nico nº 42 · Compras.gov.br\nCategoria: Restauração de documentos\nObjet
- o: REGISTRO DE PREÇO PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPEC
- IALIZADA EM AUTOPEÇAS\, COM OFICINA PRÓPRIA\, PARA FORNECIMENTO DE PEÇAS
-  E ELEMENTOS FILTRANTES NOVOS\, OBSERVANDO OBRIGATORIAMENTE OS PREÇOS PR
- ATICADOS NA TABELA TRAZ VALOR\, CONFORME SEUS VALORES\, BEM COMO PARA PR
- ESTAÇÃO DE SERVIÇOS DE MECÂNICA PESADA\, INCLUINDO MANUTENÇÃO ELÉTRICA E
-  DE AR-CONDICIONADO\, VISANDO À CONSERVAÇÃO PREVENTIVA E CORRETIVA DA FR
- OTA MUNICIPAL\, NOS TERMOS DA TABELA ABAIXO\, CONFORME CONDIÇÕES E EXIGÊ
- NCIAS ES\nPNCP: https://pncp.gov.br/app/editais/01612911000132/2026/131\
- nPortal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/publi
- c/compras/acompanhamento-compra?compra=98087805000422026
-URL:https://pncp.gov.br/app/editais/01612911000132/2026/131
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-57095@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261123T080000Z
-DTEND:20261123T090000Z
-SUMMARY:Prazo (nota 31): MUNICIPIO DE RESERVA DO IGUACU – PR
-DESCRIPTION:Nota 31: seu foco\, acima de R$ 1 mi\nValor estimado: R$ 4.98
- 0.805\nPregão - Eletrônico nº 44 · publicado via Equiplano Sistemas LTDA
-  / Equiplano Sistemas\nCategoria: Restauração de documentos\nObjeto: Reg
- istro de preço para futura e eventual Contratação de empresa especializa
- da em autopeças\, com oficina própria\, para fornecimento de peças e ele
- mentos filtrantes novos\, observando obrigatoriamente os preços praticad
- os na tabela Traz Valor\, conforme seus valores\, bem como para prestaçã
- o de serviços de mecânica pesada\, incluindo manutenção elétrica e de ar
- -condicionado\, visando à conservação preventiva e corretiva da frota mu
- nicipal\, nos termos da tabela abaixo\, conforme condições e exigências 
- estabelecidas neste instrumento.\nPNCP: https://pncp.gov.br/app/editais/
- 01612911000132/2026/132
-URL:https://pncp.gov.br/app/editais/01612911000132/2026/132
-LOCATION:publicado via Equiplano Sistemas LTDA / Equiplano Sistemas
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:licitacao-65082@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261123T080000Z
-DTEND:20261123T090000Z
-SUMMARY:Prazo (nota 66): RECEITA ESTADUAL DO PARANA – PR
-DESCRIPTION:Nota 66: UST (pouco)\, horas técnicas (pouco)\, serviço de si
- stemas de gestão e licenças de software\, seu foco\, acima de R$ 10 mi\n
- Valor estimado: R$ 16.811.342\nPregão - Eletrônico nº 1457 · Compras Par
- aná\nCategoria: Sistemas de gestão e licenças de software\nObjeto: Contr
- atação de empresa especializada no ramo para o Fornecimento de licenças 
- de software\, garantia de atualização de software - software assurance -
-  e subscrições de software\, considerando os licenciamentos Microsoft de
-  propriedades da SEFA/REPR\nPNCP: https://pncp.gov.br/app/editais/783935
- 92000146/2026/47\nPortal: www.transparencia.pr.gov.br/pte/compras/licita
- coes/pesquisar-param?numprocesso=1457&ano=2026&codmodalidade=68
-URL:https://pncp.gov.br/app/editais/78393592000146/2026/47
-LOCATION:Compras Paraná
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:licitacao-60575@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261123T083000Z
 DTEND:20261123T093000Z
-SUMMARY:Prazo (nota 97): FUNDO MUNICIPAL DE SAUDE – SE
-DESCRIPTION:Nota 97: UST\, fixo mensal de software\, serviço de sistemas 
+SUMMARY:Prazo (nota 96): FUNDO MUNICIPAL DE SAUDE – SE
+DESCRIPTION:Nota 96: UST\, fixo mensal de software\, serviço de sistemas 
  de gestão e licenças de software\, seu foco\, acima de R$ 1 mi\nValor es
  timado: R$ 1.539.101\nPregão - Eletrônico nº 10 · publicado via 3Tecnos 
  Tecnologia LTDA\nCategoria: Sistemas de gestão e licenças de software\nO
@@ -1182,39 +159,12 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:licitacao-24059@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261123T083000Z
-DTEND:20261123T093000Z
-SUMMARY:Prazo (nota 72): COMPANHIA DE DESENVOLVIMENTO DE RORAIMA - CODESA
- IMA – RR
-DESCRIPTION:Nota 72: UST no edital\, serviço de fábrica de software\, seu
-  foco\, acima de R$ 10 mi\nValor estimado: R$ 38.460.467\nPregão - Eletr
- ônico nº 13 · Compras.gov.br\nCategoria: Fábrica de software\nObjeto: Re
- gistro de Preços para futura e eventual contratação de empresa especiali
- zada em Engenharia e Arquitetura para prestação\, sob demanda\, de servi
- ços técnicos de consultoria\, elaboração de estudos\, projetos básicos e
-  executivos\, projetos complementares e demais documentos técnicos\, com
-  utilização da metodologia BIM (Building Information Modeling) na elabor
- ação e compatibilização dos projetos\, bem como apoio ao Acompanhamento 
- Técnico de Obras – ATO\nPNCP: https://pncp.gov.br/app/editais/0595029000
- 0158/2026/14\nPortal: https://cnetmobile.estaleiro.serpro.gov.br/compras
- net-web/public/compras/acompanhamento-compra?compra=92741805000132026
-URL:https://pncp.gov.br/app/editais/05950290000158/2026/14
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:licitacao-66500@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261123T085900Z
 DTEND:20261123T095900Z
-SUMMARY:Prazo (nota 77): ESTADO DO RIO DE JANEIRO – RJ
-DESCRIPTION:Nota 77: fixo mensal de software\, serviço de manutenção de s
+SUMMARY:Prazo (nota 76): ESTADO DO RIO DE JANEIRO – RJ
+DESCRIPTION:Nota 76: fixo mensal de software\, serviço de manutenção de s
  oftware e segurança da informação\, seu foco\, acima de R$ 1 mi\nValor e
  stimado: R$ 1.266.043\nPregão - Eletrônico nº PE0330/26 · SIGA RJ\nCateg
  oria: Manutenção de software\nObjeto: Constitui objeto do presente Termo
@@ -1236,12 +186,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-59158@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261123T120000Z
 DTEND:20261123T130000Z
-SUMMARY:Prazo (nota 75): JUSTICA FEDERAL DE PRIMEIRO GRAU NO RIO DE JANEI
+SUMMARY:Prazo (nota 74): JUSTICA FEDERAL DE PRIMEIRO GRAU NO RIO DE JANEI
  RO – RJ
-DESCRIPTION:Nota 75: páginas\, serviço de digitalização\, seu foco\, acim
+DESCRIPTION:Nota 74: páginas\, serviço de digitalização\, seu foco\, acim
  a de R$ 10 mi\nValor estimado: R$ 21.934.313\nPregão - Eletrônico nº 409
   · Compras.gov.br\nCategoria: Digitalização\nObjeto: Contratação de serv
  iços contínuos de transporte\, armazenamento\, arquivamento\, catalogaçã
@@ -1261,7 +211,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-66433@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261123T130000Z
 DTEND:20261123T140000Z
 SUMMARY:Prazo (nota 100): TRIBUNAL DE JUSTICA DO ESTADO DE MINAS GERAIS –
@@ -1283,12 +233,39 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-148864@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261124T065900Z
+DTEND:20261124T075900Z
+SUMMARY:Prazo (nota 29): CAMARA MUNICIPAL DE MADRE DE DEUS DE MINAS – MG
+DESCRIPTION:Nota 29: serviço de triagem e organização de acervo\, seu foc
+ o\nValor estimado: R$ 33.000\nDispensa nº 00003626 · publicado via SH3 I
+ nformática Ltda.\nCategoria: Triagem e organização de acervo\nObjeto: O 
+ objeto da presente dispensa é a contratação de empresa especializada na 
+ prestação de serviços continuados de guarda\, armazenamento físico e cus
+ tódia do acervo documental da Câmara Municipal de Madre de Deus de Minas
+ \, compreendendo as 751 (setecentas e cinquenta e uma) caixas-arquivo at
+ ualmente existentes\, bem como a disponibilização de capacidade operacio
+ nal\, sob demanda\, para coleta\, transporte\, triagem\, acondicionament
+ o e custódia de até 100 (cem) novas caixas-arquivo durante a vigência co
+ ntratual\, conforme condições\, quantidades e exigências estabelecidas n
+ este Aviso de Contratação Direta\nPNCP: https://pncp.gov.br/app/editais/
+ 04837539000150/2026/35
+URL:https://pncp.gov.br/app/editais/04837539000150/2026/35
+LOCATION:publicado via SH3 Informática Ltda.
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-58397@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T070000Z
 DTEND:20261124T080000Z
-SUMMARY:Prazo (nota 35): MUNICIPIO DE CONGONHINHAS – PR
-DESCRIPTION:Nota 35: serviço de triagem e organização de acervo\, seu foc
+SUMMARY:Prazo (nota 34): MUNICIPIO DE CONGONHINHAS – PR
+DESCRIPTION:Nota 34: serviço de triagem e organização de acervo\, seu foc
  o\nValor estimado: R$ 255.689\nPregão - Eletrônico nº 22 · Compras.gov.b
  r\nCategoria: Triagem e organização de acervo\nObjeto: Registro de Preço
  s para futura e eventual contratação de empresa especializada para a pre
@@ -1311,11 +288,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-65315@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T073000Z
 DTEND:20261124T083000Z
-SUMMARY:Prazo (nota 45): MUNICIPIO DE JAGUARIUNA – SP
-DESCRIPTION:Nota 45: serviço de manutenção de software\, seu foco\, acima
+SUMMARY:Prazo (nota 44): MUNICIPIO DE JAGUARIUNA – SP
+DESCRIPTION:Nota 44: serviço de manutenção de software\, seu foco\, acima
   de R$ 1 mi\nValor estimado: R$ 1.622.972\nPregão - Eletrônico nº 154 · 
  Compras.gov.br\nCategoria: Sistemas de gestão e licenças de software\nOb
  jeto: PE 90106/2026 - Contratação de empresa especializada para o licenc
@@ -1336,11 +313,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-65357@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T080000Z
 DTEND:20261124T090000Z
-SUMMARY:Prazo (nota 47): MUNICIPIO DE BARRA DO CHOCA – BA
-DESCRIPTION:Nota 47: serviço de manutenção de software e sistemas de gest
+SUMMARY:Prazo (nota 46): MUNICIPIO DE BARRA DO CHOCA – BA
+DESCRIPTION:Nota 46: serviço de manutenção de software e sistemas de gest
  ão e licenças de software\, seu foco\nValor estimado: R$ 163.639\nPregão
   - Eletrônico nº 037 · Licitanet\nCategoria: Manutenção de software\nObj
  eto: [LICITANET] - Contratação de empresa especializada para o licenciam
@@ -1360,11 +337,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-90783@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T080000Z
 DTEND:20261124T090000Z
-SUMMARY:Prazo (nota 67): MUNICIPIO DE RODELAS – BA
-DESCRIPTION:Nota 67: fixo mensal de software\, serviço de manutenção de s
+SUMMARY:Prazo (nota 66): MUNICIPIO DE RODELAS – BA
+DESCRIPTION:Nota 66: fixo mensal de software\, serviço de manutenção de s
  oftware e sistemas de gestão e licenças de software\, seu foco\nValor es
  timado: R$ 125.800\nPregão - Eletrônico nº 025 · Licitanet\nCategoria: S
  istemas de gestão e licenças de software\nObjeto: [LICITANET] - CONTRATA
@@ -1388,11 +365,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-56558@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T080000Z
 DTEND:20261124T090000Z
-SUMMARY:Prazo (nota 46): MUNICIPIO DE MONTE ALTO – SP
-DESCRIPTION:Nota 46: serviço de manutenção de software e sistemas de gest
+SUMMARY:Prazo (nota 45): MUNICIPIO DE MONTE ALTO – SP
+DESCRIPTION:Nota 45: serviço de manutenção de software e sistemas de gest
  ão e licenças de software\, seu foco\nValor estimado: Sem valor divulgad
  o\nPregão - Eletrônico nº 90059 · Compras.gov.br\nCategoria: Sistemas de
   gestão e licenças de software\nObjeto: Contratação de empresa especiali
@@ -1414,12 +391,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-63495@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T080000Z
 DTEND:20261124T090000Z
-SUMMARY:Prazo (nota 77): DEPARTAMENTO ESTADUAL DE TRANSITO DO ESPIRITO SA
+SUMMARY:Prazo (nota 76): DEPARTAMENTO ESTADUAL DE TRANSITO DO ESPIRITO SA
  NTO – ES
-DESCRIPTION:Nota 77: UST\, serviço de suporte técnico de ti\, seu foco\, 
+DESCRIPTION:Nota 76: UST\, serviço de suporte técnico de ti\, seu foco\, 
  acima de R$ 1 mi\nValor estimado: R$ 6.400.000\nPregão - Eletrônico nº 0
  17 · siades.es.gov.br\nCategoria: Fábrica de software\nObjeto: Contrataç
  ão de empresa para prestação de serviços de suporte técnico de TI (Servi
@@ -1437,38 +414,12 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:licitacao-61631@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261124T083000Z
-DTEND:20261124T093000Z
-SUMMARY:Prazo (nota 72): TRIBUNAL DE JUSTICA DO ESTADO MATO GROSSO DO SUL
-  – MS
-DESCRIPTION:Nota 72: UST no edital\, serviço de suporte técnico de ti\, s
- eu foco\, acima de R$ 10 mi\nValor estimado: R$ 15.039.472\nPregão - Ele
- trônico nº 139 · Compras.gov.br\nCategoria: Suporte técnico de TI\nObjet
- o: Contratação de serviços continuados especializados em Tecnologia da I
- nformação\, compreendendo Service Desk N1\, suporte presencial N2\, gest
- ão da base de conhecimento (KBA)\, logística e inventário de TI\, coorde
- nação operacional e agente virtual com IA\, pelo período de 36 (trinta e
-  seis) meses\, conforme detalhamento\, condições e demais especificações
-  do Termo de Referência.\nPNCP: https://pncp.gov.br/app/editais/03979663
- 000198/2026/281\nPortal: https://cnetmobile.estaleiro.serpro.gov.br/comp
- rasnet-web/public/compras/acompanhamento-compra?compra=92973505001392026
-URL:https://pncp.gov.br/app/editais/03979663000198/2026/281
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:licitacao-65191@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T083000Z
 DTEND:20261124T093000Z
-SUMMARY:Prazo (nota 73): SENADO FEDERAL – DF
-DESCRIPTION:Nota 73: ponto de função\, serviço de manutenção de software\
+SUMMARY:Prazo (nota 72): SENADO FEDERAL – DF
+DESCRIPTION:Nota 72: ponto de função\, serviço de manutenção de software\
  , seu foco\, acima de R$ 1 mi\nValor estimado: R$ 3.381.985\nPregão - El
  etrônico nº 324 · Compras.gov.br\nCategoria: Sistemas de gestão e licenç
  as de software\nObjeto: Contratação de empresa para fornecimento de solu
@@ -1490,12 +441,38 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-61631@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261124T083000Z
+DTEND:20261124T093000Z
+SUMMARY:Prazo (nota 71): TRIBUNAL DE JUSTICA DO ESTADO MATO GROSSO DO SUL
+  – MS
+DESCRIPTION:Nota 71: UST no edital\, serviço de suporte técnico de ti\, s
+ eu foco\, acima de R$ 10 mi\nValor estimado: R$ 15.039.472\nPregão - Ele
+ trônico nº 139 · Compras.gov.br\nCategoria: Suporte técnico de TI\nObjet
+ o: Contratação de serviços continuados especializados em Tecnologia da I
+ nformação\, compreendendo Service Desk N1\, suporte presencial N2\, gest
+ ão da base de conhecimento (KBA)\, logística e inventário de TI\, coorde
+ nação operacional e agente virtual com IA\, pelo período de 36 (trinta e
+  seis) meses\, conforme detalhamento\, condições e demais especificações
+  do Termo de Referência.\nPNCP: https://pncp.gov.br/app/editais/03979663
+ 000198/2026/281\nPortal: https://cnetmobile.estaleiro.serpro.gov.br/comp
+ rasnet-web/public/compras/acompanhamento-compra?compra=92973505001392026
+URL:https://pncp.gov.br/app/editais/03979663000198/2026/281
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-32630@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T090000Z
 DTEND:20261124T100000Z
-SUMMARY:Prazo (nota 47): PRODAM PROCESSAMENTO DE DADOS AMAZONAS S A – AM
-DESCRIPTION:Nota 47: serviço de sustentação de sistemas e sistemas de ges
+SUMMARY:Prazo (nota 46): PRODAM PROCESSAMENTO DE DADOS AMAZONAS S A – AM
+DESCRIPTION:Nota 46: serviço de sustentação de sistemas e sistemas de ges
  tão e licenças de software\, seu foco\nValor estimado: Sem valor divulga
  do\nPregão - Eletrônico nº 6 · Compras.gov.br\nCategoria: Sistemas de ge
  stão e licenças de software\nObjeto: Contratação de empresa especializad
@@ -1516,11 +493,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-14064@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T090000Z
 DTEND:20261124T100000Z
-SUMMARY:Prazo (nota 47): PMSP - SÃO PAULO TURISMO (SPTURIS) – SP
-DESCRIPTION:Nota 47: serviço de sustentação de sistemas e sistemas de ges
+SUMMARY:Prazo (nota 46): PMSP - SÃO PAULO TURISMO (SPTURIS) – SP
+DESCRIPTION:Nota 46: serviço de sustentação de sistemas e sistemas de ges
  tão e licenças de software\, seu foco\nValor estimado: Sem valor divulga
  do\nPregão - Eletrônico nº PE 026/26 · Licitações-e\nCategoria: Sustenta
  ção de sistemas\nObjeto: Contratação de empresa especializada\, sob o re
@@ -1544,11 +521,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-64523@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T100000Z
 DTEND:20261124T110000Z
-SUMMARY:Prazo (nota 22): SAO PAULO TRIBUNAL DE JUSTICA – SP
-DESCRIPTION:Nota 22: seu foco\nValor estimado: R$ 583.951\nPregão - Eletr
+SUMMARY:Prazo (nota 21): SAO PAULO TRIBUNAL DE JUSTICA – SP
+DESCRIPTION:Nota 21: seu foco\nValor estimado: R$ 583.951\nPregão - Eletr
  ônico nº 282 · Compras.gov.br\nCategoria: Guarda e armazenamento físico\
  nObjeto: Contratação de serviços de execução da parede da garagem\, do p
  iso da sala de arquivo morto e do piso do estacionamento interno\, inclu
@@ -1568,13 +545,36 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-147052@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261124T105400Z
+DTEND:20261124T115400Z
+SUMMARY:Prazo (nota 67): CAMARA MUNICIPAL DE BOA ESPERANCA – MG
+DESCRIPTION:Nota 67: páginas\, serviço de digitalização e triagem e organ
+ ização de acervo\, seu foco\nValor estimado: R$ 53.447\nDispensa nº 15 ·
+  Portal de Compras Públicas\nCategoria: Digitalização\nObjeto: [Portal d
+ e Compras Públicas] - Contratação de empresa especializada na prestação 
+ de serviços continuados/por demanda de digitalização de acervo documenta
+ l da Câmara Municipal de Boa Esperança-MG.\nPNCP: https://pncp.gov.br/ap
+ p/editais/00997491000197/2026/44\nPortal: https://www.portaldecompraspub
+ licas.com.br/processos/MG/Camara-Municipal-de-Boa-Esperanca-5188/DE-15-2
+ 026-2026-526130
+URL:https://pncp.gov.br/app/editais/00997491000197/2026/44
+LOCATION:Portal de Compras Públicas
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-59059@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T120000Z
 DTEND:20261124T130000Z
-SUMMARY:Prazo (nota 79): AGENCIA DE FOMENTO DO ESTADO DE SANTA CATARINA S
+SUMMARY:Prazo (nota 78): AGENCIA DE FOMENTO DO ESTADO DE SANTA CATARINA S
  .A. - BADESC – SC
-DESCRIPTION:Nota 79: UST\, serviço de cloud computing e segurança da info
+DESCRIPTION:Nota 78: UST\, serviço de cloud computing e segurança da info
  rmação\, seu foco\nValor estimado: Sem valor divulgado\nPregão - Eletrôn
  ico nº 033/26 · Licitações-e\nCategoria: Suporte técnico de TI\nObjeto: 
  Contratação de serviços de Gerenciamento de Backups\, Central de Serviço
@@ -1594,8 +594,30 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-123636@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261124T130000Z
+DTEND:20261124T140000Z
+SUMMARY:Prazo (nota 54): MUNICIPIO DE TRAMANDAI – RS
+DESCRIPTION:Nota 54: UST no edital\, seu foco\, acima de R$ 1 mi\nValor e
+ stimado: R$ 5.304.312\nPregão - Eletrônico nº 143 · publicado via LIBRE 
+ SOLUÇÕES EM TECNOLOGIA LTDA\nCategoria: Só cita tecnologia (conferir)\nO
+ bjeto: contrataÃ§Ã£o de serviÃ§os tÃ©cnicos especializados\, presenciais
+  e nÃ£o presenciais\, de instalaÃ§Ã£o\, atualizaÃ§Ã£o\, migraÃ§Ã£o\, cus
+ tomizaÃ§Ã£o\, capacitaÃ§Ã£o\, suporte e manutenÃ§Ã£o de software livre e
+ -cidade ou derivado e/ou software de cÃ³digo aberto.\nPNCP: https://pncp
+ .gov.br/app/editais/88771001000180/2026/373
+URL:https://pncp.gov.br/app/editais/88771001000180/2026/373
+LOCATION:publicado via LIBRE SOLUÇÕES EM TECNOLOGIA LTDA
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-90522@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T143000Z
 DTEND:20261124T153000Z
 SUMMARY:Prazo (nota 60): BANCO CENTRAL DO BRASIL – DF
@@ -1618,7 +640,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-63056@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261124T170000Z
 DTEND:20261124T180000Z
 SUMMARY:Prazo (nota 47): INSTITUTO DE PREVIDENCIA E ASSISTENCIA DOS SERVI
@@ -1645,43 +667,22 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:licitacao-61164@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261125T070000Z
-DTEND:20261125T080000Z
-SUMMARY:Prazo (nota 45): MUNICIPIO DE CAMPO LARGO – PR
-DESCRIPTION:Nota 45: serviço de digitalização e indexação\, seu foco\nVal
- or estimado: R$ 28.500\nPregão - Eletrônico nº 96 · Compras.gov.br\nCate
- goria: Digitalização\nObjeto: Serviço de digitalização de jornais e docu
- mentos históricos do Acervo Histórico Municipal\, através da Política Na
- cional Aldir Blanc PNAB\nPNCP: https://pncp.gov.br/app/editais/761056180
- 00188/2026/696\nPortal: https://cnetmobile.estaleiro.serpro.gov.br/compr
- asnet-web/public/compras/acompanhamento-compra?compra=98748105000962026
-URL:https://pncp.gov.br/app/editais/76105618000188/2026/696
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:licitacao-119994@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T070000Z
 DTEND:20261125T080000Z
-SUMMARY:Prazo (nota 30): EMPRESA DE TRENS URBANOS DE PORTO ALEGRE S/A – R
+SUMMARY:Prazo (nota 51): EMPRESA DE TRENS URBANOS DE PORTO ALEGRE S/A – R
  S
-DESCRIPTION:Nota 30: serviço de manutenção de software\, seu foco\nValor 
- estimado: Sem valor divulgado\nDispensa nº 245/2026 · Licitações-e\nCate
- goria: Manutenção de software\nObjeto: Balizamento de preços para CONTRA
- TAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS TÉCNICOS DE TE
- CNOLOGIA DA INFORMAÇÃO NA PLATAFORMA MICROSOFT DYNAMICS AX 2012\, ABRANG
- ENDO SUPORTE PRESENCIAL\, SUPORTE REMOTO\, MANUTENÇÃO EVOLUTIVA E TREINA
- MENTO\, CONFORME ESPECIFICAÇÕES E QUANTIDADES CONSTANTES NO EDITAL E SEU
- S ANEXOS.\nPNCP: https://pncp.gov.br/app/editais/90976853000156/2026/154
- \nPortal: https://licitacoes-e2.bb.com.br/aop-inter-estatico/visualizar-
- processo-publico/1104140
+DESCRIPTION:Nota 51: fixo mensal de software\, serviço de manutenção de s
+ oftware\, seu foco\nValor estimado: Sem valor divulgado\nDispensa nº 245
+ /2026 · Licitações-e\nCategoria: Manutenção de software\nObjeto: Balizam
+ ento de preços para CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO 
+ DE SERVIÇOS TÉCNICOS DE TECNOLOGIA DA INFORMAÇÃO NA PLATAFORMA MICROSOFT
+  DYNAMICS AX 2012\, ABRANGENDO SUPORTE PRESENCIAL\, SUPORTE REMOTO\, MAN
+ UTENÇÃO EVOLUTIVA E TREINAMENTO\, CONFORME ESPECIFICAÇÕES E QUANTIDADES 
+ CONSTANTES NO EDITAL E SEUS ANEXOS.\nPNCP: https://pncp.gov.br/app/edita
+ is/90976853000156/2026/154\nPortal: https://licitacoes-e2.bb.com.br/aop-
+ inter-estatico/visualizar-processo-publico/1104140
 URL:https://pncp.gov.br/app/editais/90976853000156/2026/154
 LOCATION:Licitações-e
 BEGIN:VALARM
@@ -1691,8 +692,30 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-61164@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261125T070000Z
+DTEND:20261125T080000Z
+SUMMARY:Prazo (nota 53): MUNICIPIO DE CAMPO LARGO – PR
+DESCRIPTION:Nota 53: páginas (pouco)\, serviço de digitalização e indexaç
+ ão\, seu foco\nValor estimado: R$ 28.500\nPregão - Eletrônico nº 96 · Co
+ mpras.gov.br\nCategoria: Digitalização\nObjeto: Serviço de digitalização
+  de jornais e documentos históricos do Acervo Histórico Municipal\, atra
+ vés da Política Nacional Aldir Blanc PNAB\nPNCP: https://pncp.gov.br/app
+ /editais/76105618000188/2026/696\nPortal: https://cnetmobile.estaleiro.s
+ erpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=
+ 98748105000962026
+URL:https://pncp.gov.br/app/editais/76105618000188/2026/696
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-59380@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T070000Z
 DTEND:20261125T080000Z
 SUMMARY:Prazo (nota 43): MUNICIPIO DE SILVEIRA MARTINS – RS
@@ -1720,7 +743,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-103530@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T070000Z
 DTEND:20261125T080000Z
 SUMMARY:Prazo (nota 43): MUNICIPIO DE PORTO FERREIRA – SP
@@ -1742,7 +765,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-16059@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T073000Z
 DTEND:20261125T083000Z
 SUMMARY:Prazo (nota 35): MUNICIPIO DE REALEZA – PR
@@ -1770,7 +793,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-36347@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T073000Z
 DTEND:20261125T083000Z
 SUMMARY:Prazo (nota 35): MUNICIPIO DE FORQUETINHA – RS
@@ -1789,7 +812,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-35210@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T073000Z
 DTEND:20261125T083000Z
 SUMMARY:Prazo (nota 35): MUNICIPIO DE FORQUETINHA – RS
@@ -1816,7 +839,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-16056@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T073000Z
 DTEND:20261125T083000Z
 SUMMARY:Prazo (nota 55): MUNICIPIO DE REALEZA – PR
@@ -1844,7 +867,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-90952@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T075000Z
 DTEND:20261125T085000Z
 SUMMARY:Prazo (nota 77): MUNICIPIO DE ITU – SP
@@ -1867,7 +890,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-62823@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T080000Z
 DTEND:20261125T090000Z
 SUMMARY:Prazo (nota 32): MUNICIPIO DE RESERVA DO IGUACU – PR
@@ -1893,7 +916,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-56741@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T080000Z
 DTEND:20261125T090000Z
 SUMMARY:Prazo (nota 35): MUNICIPIO DE AMERICO BRASILIENSE – SP
@@ -1917,7 +940,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-6150@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T080000Z
 DTEND:20261125T090000Z
 SUMMARY:Prazo (nota 35): MUNICIPIO DE MONTES CLAROS – MG
@@ -1943,34 +966,8 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:licitacao-60772@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261125T080000Z
-DTEND:20261125T090000Z
-SUMMARY:Prazo (nota 21): MUNICIPIO DE RESERVA DO IGUACU – PR
-DESCRIPTION:Nota 21: seu foco\nValor estimado: R$ 206\,80\nPregão - Eletr
- ônico nº 43 · Compras.gov.br\nCategoria: Restauração de documentos\nObje
- to: Registro de preço para futura e eventual contratação de empresa espe
- cializada em autopeças\, com oficina própria\, para fornecimento de peça
- s e elementos filtrantes novos\, observando obrigatoriamente os preços p
- raticados na tabela do sistema Traz Valor\, conforme seus valores atuali
- zados\, bem como prestação de serviços de mecânica leve\, incluindo manu
- tenção elétrica e de ar-condicionado\, visando à conservação preventiva 
- e corretiva da frota municipal\, conforme condições\, quantidades e exig
- ências es\nPNCP: https://pncp.gov.br/app/editais/01612911000132/2026/133
- \nPortal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/publ
- ic/compras/acompanhamento-compra?compra=98087805000432026
-URL:https://pncp.gov.br/app/editais/01612911000132/2026/133
-LOCATION:Compras.gov.br
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:licitacao-90432@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T080000Z
 DTEND:20261125T090000Z
 SUMMARY:Prazo (nota 100): MINISTERIO DA JUSTICA E SEGURANCA PUBLICA – DF
@@ -1994,21 +991,25 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:licitacao-108478@painel-licitacoes
-DTSTAMP:20261115T134912Z
+UID:licitacao-67690@painel-licitacoes
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T080000Z
 DTEND:20261125T090000Z
-SUMMARY:Prazo (nota 46): UNIVERSIDADE ESTADUAL DE MONTES CLAROS – MG
-DESCRIPTION:Nota 46: serviço de desenvolvimento de software e inteligênci
- a artificial\, seu foco\nValor estimado: R$ 66.278\nPregão - Eletrônico 
- nº 95 · Compras MG\nCategoria: Inteligência artificial\nObjeto: SOLUÇÕES
-  DE INTELIGÊNCIA ARTIFICIAL (SaaS/PaaS) PARA AUTOMAÇÃO\, APOIO ADMINISTR
- ATIVO E DESENVOLVIMENTO DE SOFTWARE\, E HOSPEDAGEM EM NUVEM (CLOUD DATAC
- ENTER) DEDICADA.\nPNCP: https://pncp.gov.br/app/editais/22675359000100/2
- 026/97\nPortal: https://www1.compras.mg.gov.br/n/procedimentolei14133/co
- nsulta/eletronico/visualizar/2026/95/2311021
-URL:https://pncp.gov.br/app/editais/22675359000100/2026/97
-LOCATION:Compras MG
+SUMMARY:Prazo (nota 55): EMPRESA DE INFORMATICA E INFORMACAO DO MUN.BHTE 
+ S/ – MG
+DESCRIPTION:Nota 55: UST\, seu foco\nValor estimado: Sem valor divulgado\
+ nPregão - Eletrônico nº 28 · Compras.gov.br\nCategoria: Telecomunicações
+  e conectividade\nObjeto: Promover o Registro de Preço\, pelo período de
+  12 meses\, para contratação de serviço especializado de fornecimento\, 
+ análise\, tratamento\, processamento e estruturação de bases de dados de
+  movimentação urbana e aglomerações de pessoas\, originadas de telefonia
+  móvel/sinais móveis\, conforme definições e especificações contidas no 
+ termo de referência e anexos do edital.\nPNCP: https://pncp.gov.br/app/e
+ ditais/18239038000187/2026/79\nPortal: https://cnetmobile.estaleiro.serp
+ ro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=459
+ 77605000282026
+URL:https://pncp.gov.br/app/editais/18239038000187/2026/79
+LOCATION:Compras.gov.br
 BEGIN:VALARM
 TRIGGER:-P2D
 ACTION:DISPLAY
@@ -2017,7 +1018,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-104247@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T080000Z
 DTEND:20261125T090000Z
 SUMMARY:Prazo (nota 51): MUNICIPIO DE TANGARA DA SERRA – MT
@@ -2040,8 +1041,80 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-144777@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261125T080000Z
+DTEND:20261125T090000Z
+SUMMARY:Prazo (nota 43): FUNDACAO DE CIENCIA APLICACOES E TECNOLOGIA ESPA
+ CIAIS – SP
+DESCRIPTION:Nota 43: serviço de manutenção de software\, seu foco\, acima
+  de R$ 1 mi\nValor estimado: R$ 1.800.000\nPregão - Eletrônico nº 0702 ·
+  BNC\nCategoria: Manutenção de software\nObjeto: Serviços especializados
+  de tecnologia da informação visando garantir a continuidade operacional
+ \, o suporte técnico especializado\, a manutenção corretiva de hardware\
+ , a substituição de peças e o apoio técnico à correção ou mitigação de v
+ ulnerabilidades aplicáveis ao ambiente Dell VxRail da INSTITUIÇÃO APOIAD
+ A\, pelo período de 36 (trinta e seis) meses\, sem contemplar fornecimen
+ to\, renovação\, regularização ou subscrição de licenças Broadcom/VMware
+ \, conforme Termo de Referência.\nPNCP: https://pncp.gov.br/app/editais/
+ 51619104000110/2026/152\nPortal: https://bnccompras.com/Process/ProcessV
+ iew?param1=[gkz]mpDTTlXPpR6wKgn4r3RusPhT7hQ5yYdpuBNxQuuzdNj6PgJe_ShkxjFx
+ HeyfqlNeOWZH/pTskYvWMSBIMONSD6trdsWA8ULgN0eJSP7a_yY=
+URL:https://pncp.gov.br/app/editais/51619104000110/2026/152
+LOCATION:BNC
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-34701@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261125T080000Z
+DTEND:20261125T090000Z
+SUMMARY:Prazo (nota 45): ESTADO DO CEARA – CE
+DESCRIPTION:Nota 45: UST no edital\, seu foco\nValor estimado: Sem valor 
+ divulgado\nPregão - Eletrônico nº 202625877 · comprasgovernamentais.gov.
+ br\nCategoria: Segurança da informação\nObjeto: Contratação de Solução d
+ e Banco de Dados\, incluindo hardware e software\, proteção dos dados\, 
+ serviços de instalação e ativação\, Universal Credits por demanda\, cons
+ ultoria técnica especializada por demanda pelo período de 60 (sessenta) 
+ meses e treinamento de equipe.\nPNCP: https://pncp.gov.br/app/editais/07
+ 954480000179/2026/26745\nPortal: http://comprasgovernamentais.gov.br/
+URL:https://pncp.gov.br/app/editais/07954480000179/2026/26745
+LOCATION:comprasgovernamentais.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-103327@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261125T083000Z
+DTEND:20261125T093000Z
+SUMMARY:Prazo (nota 53): AGENCIA NACIONAL DE AGUAS E SANEAMENTO BASICO (A
+ NA) – DF
+DESCRIPTION:Nota 53: ponto de função no edital\, seu foco\, acima de R$ 1
+  mi\nValor estimado: R$ 9.582.423\nPregão - Eletrônico nº 62 · Compras.g
+ ov.br\nCategoria: Consultoria\, governança de TI e LGPD\nObjeto: Serviço
+ s de consultoria técnica especializada para apoio à Gestão e Governança 
+ de TI.\nPNCP: https://pncp.gov.br/app/editais/04204444000108/2025/38\nPo
+ rtal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/c
+ ompras/acompanhamento-compra?compra=44300105000622025
+URL:https://pncp.gov.br/app/editais/04204444000108/2025/38
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-67300@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T083000Z
 DTEND:20261125T093000Z
 SUMMARY:Prazo (nota 55): MUNICIPIO DE JUQUITIBA – SP
@@ -2068,7 +1141,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-67539@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T083000Z
 DTEND:20261125T093000Z
 SUMMARY:Prazo (nota 34): CAMARA LEGISLATIVA DO DISTRITO FEDERAL – DF
@@ -2094,7 +1167,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-103654@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T083000Z
 DTEND:20261125T093000Z
 SUMMARY:Prazo (nota 55): MUNICIPIO DE ARARUNA – PR
@@ -2120,7 +1193,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-91754@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T085900Z
 DTEND:20261125T095900Z
 SUMMARY:Prazo (nota 67): CONSORCIO PUBLICO DE SAUDE INTERFEDERATIVO DO VA
@@ -2150,7 +1223,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-108724@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T100000Z
 DTEND:20261125T110000Z
 SUMMARY:Prazo (nota 34): MUNICIPIO DE FLORIANOPOLIS – SC
@@ -2175,7 +1248,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-108108@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261125T115900Z
 DTEND:20261125T125900Z
 SUMMARY:Prazo (nota 47): CAMARA MUNICIPAL DE BARUERI – SP
@@ -2203,7 +1276,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-109387@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261126T060000Z
 DTEND:20261126T070000Z
 SUMMARY:Prazo (nota 35): MUNICIPIO DE REDENCAO – CE
@@ -2221,8 +1294,29 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-147750@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261126T070000Z
+DTEND:20261126T080000Z
+SUMMARY:Prazo (nota 29): MINISTERIO DA DEFESA – RJ
+DESCRIPTION:Nota 29: serviço de manutenção de software\, seu foco\nValor 
+ estimado: R$ 61.100\nDispensa nº 46 · Compras.gov.br\nCategoria: Manuten
+ ção de software\nObjeto: Contratação de Prestação de Serviço Técnico Esp
+ ecializado para o Repositório Institucional da Escola Superior de Guerra
+  (ESG)\nPNCP: https://pncp.gov.br/app/editais/03277610000125/2026/618\nP
+ ortal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/
+ compras/acompanhamento-compra?compra=11040206000462026
+URL:https://pncp.gov.br/app/editais/03277610000125/2026/618
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-91813@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261126T075900Z
 DTEND:20261126T085900Z
 SUMMARY:Prazo (nota 55): MUNICIPIO DE MARILANDIA DO SUL – PR
@@ -2250,7 +1344,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-102543@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261126T082900Z
 DTEND:20261126T092900Z
 SUMMARY:Prazo (nota 93): MUNICIPIO DE FERNANDO PEDROZA – RN
@@ -2279,7 +1373,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-37323@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261126T084500Z
 DTEND:20261126T094500Z
 SUMMARY:Prazo (nota 30): MUNICIPIO DE ICARA – SC
@@ -2302,7 +1396,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-26315@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261126T084500Z
 DTEND:20261126T094500Z
 SUMMARY:Prazo (nota 41): FUNDO ESTADUAL DE HABITACAO DE INTERESSE SOCIAL 
@@ -2329,7 +1423,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-100337@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261126T085500Z
 DTEND:20261126T095500Z
 SUMMARY:Prazo (nota 29): ESTADO DO RIO DE JANEIRO – RJ
@@ -2356,7 +1450,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-91286@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261126T085900Z
 DTEND:20261126T095900Z
 SUMMARY:Prazo (nota 65): ESTADO DO RIO DE JANEIRO – RJ
@@ -2383,7 +1477,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-107406@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261126T090000Z
 DTEND:20261126T100000Z
 SUMMARY:Prazo (nota 100): AGENCIA AMAZONENSE DE DESENVOLVIMENTO ECONOMICO
@@ -2411,7 +1505,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-103322@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261126T090000Z
 DTEND:20261126T100000Z
 SUMMARY:Prazo (nota 67): TRIBUNAL SUPERIOR DO TRABALHO – CE
@@ -2438,7 +1532,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-103315@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261126T100000Z
 DTEND:20261126T110000Z
 SUMMARY:Prazo (nota 34): FUNDACAO BIBLIOTECA NACIONAL – RJ
@@ -2465,8 +1559,31 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-90702@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261127T070000Z
+DTEND:20261127T080000Z
+SUMMARY:Prazo (nota 82): MUNICIPIO DE COTIA – SP
+DESCRIPTION:Nota 82: UST\, serviço de tratamento e processamento de dados
+ \, seu foco\, acima de R$ 10 mi\nValor estimado: R$ 10.962.702\nPregão -
+  Eletrônico nº 051 · publicado via Sisvetor Informática Ltda\nCategoria:
+  Tratamento e processamento de dados\nObjeto: - CONTRATAÇÃO DE EMPRESA E
+ SPECIALIZADA NA EXECUÇÃO DE PROJETO ASSISTIDO COM CAPACITAÇÃO CONTINUADA
+ \, TRATAMENTO DE DADOS\, SERVIÇOS TÉCNICOS DE MANUTENÇÃO\, SUPORTE TÉCNI
+ CO E DESENVOLVIMENTO DE NOVAS FUNCIONALIDADES DE TECNOLOGIA DA INFORMAÇÃ
+ O EM SISTEMAS DE PROPRIEDADE SECRETARIA MUNICIPAL DE SAÚDE.\nPNCP: https
+ ://pncp.gov.br/app/editais/46523049000120/2026/186
+URL:https://pncp.gov.br/app/editais/46523049000120/2026/186
+LOCATION:publicado via Sisvetor Informática Ltda
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-36287@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261127T071500Z
 DTEND:20261127T081500Z
 SUMMARY:Prazo (nota 77): MUNICIPIO DE CONCORDIA – SC
@@ -2493,7 +1610,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-109642@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261127T073000Z
 DTEND:20261127T083000Z
 SUMMARY:Prazo (nota 47): MUNICIPIO DE NAZARENO – MG
@@ -2514,7 +1631,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-132@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261127T080000Z
 DTEND:20261127T090000Z
 SUMMARY:Prazo (nota 65): COMANDO DO EXERCITO – RJ
@@ -2534,7 +1651,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-107244@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261127T090000Z
 DTEND:20261127T100000Z
 SUMMARY:Prazo (nota 95): MINISTERIO DE MINAS E ENERGIA – DF
@@ -2564,7 +1681,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-116185@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261127T090000Z
 DTEND:20261127T100000Z
 SUMMARY:Prazo (nota 60): ADVOCACIA GERAL DA UNIAO – DF
@@ -2589,7 +1706,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-116458@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261127T130000Z
 DTEND:20261127T140000Z
 SUMMARY:Prazo (nota 47): MUNICIPIO DE MEDICILANDIA – PA
@@ -2616,7 +1733,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-109656@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T065900Z
 DTEND:20261130T075900Z
 SUMMARY:Prazo (nota 43): MUNICIPIO DE SANTA ROSA – RS
@@ -2637,46 +1754,19 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:licitacao-115714@painel-licitacoes
-DTSTAMP:20261115T134912Z
-DTSTART:20261130T070000Z
-DTEND:20261130T080000Z
-SUMMARY:Prazo (nota 67): MUNICIPIO DE CORUPA – SC
-DESCRIPTION:Nota 67: fixo mensal de software\, serviço de manutenção de s
- oftware e cloud computing\, seu foco\nValor estimado: R$ 207.455\nPregão
-  - Eletrônico nº PCE 28 · publicado via IPM Sistemas\nCategoria: Sistema
- s de gestão e licenças de software\nObjeto: O presente pregão tem como o
- bjeto a Contratação de empresa especializada para o fornecimento de lice
- nça de uso de plataforma eletrônica para gestão pública da Secretaria Mu
- nicipal de Educação\, na modalidade Software como Serviço (SaaS)\, dispo
- nibilizada integralmente em ambiente de computação em nuvem (cloud compu
- ting)\, compreendendo os serviços de implantação\, parametrização\, trei
- namento\, suporte técnico\, manutenção corretiva\, adaptativa e evolutiv
- a\, atualizações tecnológicas e integrações necessárias ao pleno funcion
- amento da solução\, conforme as condições\, especificações e exigências 
- estabel\nPNCP: https://pncp.gov.br/app/editais/83102467000170/2026/85
-URL:https://pncp.gov.br/app/editais/83102467000170/2026/85
-LOCATION:publicado via IPM Sistemas
-BEGIN:VALARM
-TRIGGER:-P2D
-ACTION:DISPLAY
-DESCRIPTION:Faltam 2 dias para o prazo de propostas
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:licitacao-121473@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T073000Z
 DTEND:20261130T083000Z
 SUMMARY:Prazo (nota 55): FUNDO MUNICIPAL DE SAUDE GOIANESIA DO PARA – PA
 DESCRIPTION:Nota 55: fixo mensal de software\, serviço de manutenção de s
- oftware\, seu foco\nValor estimado: Sem valor divulgado\nPregão - Eletrô
- nico nº 009 · Licitanet\nCategoria: Manutenção de software\nObjeto: [LIC
- ITANET] - CONTRATAÇÃO DE EMPRESA PARA PRESTAÇÃO DE SERVIÇOS DE ASSISTÊNC
- IA TÉCNICA\, LOCAÇÃO E MANUTENÇÃO MENSAL DOS SOFTWARE ADMINISTRATIVOS PA
- RA GESTÃO DO ALMOXARIFADO\, FARMÁCIA\, HOSPITAL\, UBS E POSTOS DE SAÚDE 
- DO MUNICÍPIO DE GOIANÉSIA DO PARÁ\nPNCP: https://pncp.gov.br/app/editais
- /12884091000154/2026/6\nPortal: https://licitanet.com.br/sessao/208009
+ oftware\, seu foco\nValor estimado: R$ 179.413\nPregão - Eletrônico nº 0
+ 09 · Licitanet\nCategoria: Manutenção de software\nObjeto: [LICITANET] -
+  CONTRATAÇÃO DE EMPRESA PARA PRESTAÇÃO DE SERVIÇOS DE ASSISTÊNCIA TÉCNIC
+ A\, LOCAÇÃO E MANUTENÇÃO MENSAL DOS SOFTWARE ADMINISTRATIVOS PARA GESTÃO
+  DO ALMOXARIFADO\, FARMÁCIA\, HOSPITAL\, UBS E POSTOS DE SAÚDE DO MUNICÍ
+ PIO DE GOIANÉSIA DO PARÁ\nPNCP: https://pncp.gov.br/app/editais/12884091
+ 000154/2026/6\nPortal: https://licitanet.com.br/sessao/208009
 URL:https://pncp.gov.br/app/editais/12884091000154/2026/6
 LOCATION:Licitanet
 BEGIN:VALARM
@@ -2687,7 +1777,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-116900@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T073000Z
 DTEND:20261130T083000Z
 SUMMARY:Prazo (nota 73): MUNICIPIO DE GALINHOS – RN
@@ -2711,7 +1801,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-109206@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T073000Z
 DTEND:20261130T083000Z
 SUMMARY:Prazo (nota 65): MUNICIPIO DE CRICIUMA – SC
@@ -2736,24 +1826,25 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-107832@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T075900Z
 DTEND:20261130T085900Z
-SUMMARY:Prazo (nota 73): MUNICIPIO DE ARAUCARIA – PR
-DESCRIPTION:Nota 73: horas técnicas (pouco)\, serviço de manutenção de so
- ftware e sistemas de gestão e licenças de software\, seu foco\, acima de
-  R$ 50 mi\nValor estimado: R$ 53.632.712\nPregão - Eletrônico nº 47 · Co
- mpras.gov.br\nCategoria: Sistemas de gestão e licenças de software\nObje
- to: Contratação de plataforma integrada de gestão pública digital\, dest
- inada à automação e controle dos processos administrativos\, orçamentári
- os\, financeiros\, de pessoal\, tributários e de transparência\, com inf
- raestrutura em nuvem\, licenciamento de uso\, serviços de implantação\, 
- suporte técnico\, capacitação de usuários e manutenção evolutiva\, visan
- do à eficiência administrativa e à conformidade com o Decreto nº 39.132/
- 2023 e a Lei nº 14.133/2021\, nos termos estabelecidos no Edital e seus 
- Anexos.\nPNCP: https://pncp.gov.br/app/editais/76105535000199/2026/374\n
- Portal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public
- /compras/acompanhamento-compra?compra=92553205000472026
+SUMMARY:Prazo (nota 100): MUNICIPIO DE ARAUCARIA – PR
+DESCRIPTION:Nota 100: horas técnicas\, fixo mensal de software\, serviço 
+ de manutenção de software e sistemas de gestão e licenças de software\, 
+ seu foco\, acima de R$ 50 mi\nValor estimado: R$ 53.632.712\nPregão - El
+ etrônico nº 47 · Compras.gov.br\nCategoria: Sistemas de gestão e licença
+ s de software\nObjeto: Contratação de plataforma integrada de gestão púb
+ lica digital\, destinada à automação e controle dos processos administra
+ tivos\, orçamentários\, financeiros\, de pessoal\, tributários e de tran
+ sparência\, com infraestrutura em nuvem\, licenciamento de uso\, serviço
+ s de implantação\, suporte técnico\, capacitação de usuários e manutençã
+ o evolutiva\, visando à eficiência administrativa e à conformidade com o
+  Decreto nº 39.132/2023 e a Lei nº 14.133/2021\, nos termos estabelecido
+ s no Edital e seus Anexos.\nPNCP: https://pncp.gov.br/app/editais/761055
+ 35000199/2026/374\nPortal: https://cnetmobile.estaleiro.serpro.gov.br/co
+ mprasnet-web/public/compras/acompanhamento-compra?compra=925532050004720
+ 26
 URL:https://pncp.gov.br/app/editais/76105535000199/2026/374
 LOCATION:Compras.gov.br
 BEGIN:VALARM
@@ -2764,7 +1855,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-18292@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T080000Z
 DTEND:20261130T090000Z
 SUMMARY:Prazo (nota 47): MUNICIPIO DE PINHAL DO SAO BENTO – PR
@@ -2791,7 +1882,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-124610@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T080000Z
 DTEND:20261130T090000Z
 SUMMARY:Prazo (nota 75): CAMARA MUNICIPAL DE RIO NOVO DO SUL – ES
@@ -2816,7 +1907,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-57295@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T080000Z
 DTEND:20261130T090000Z
 SUMMARY:Prazo (nota 46): MUNICIPIO DE TAPEJARA – PR
@@ -2843,7 +1934,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-115899@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T080000Z
 DTEND:20261130T090000Z
 SUMMARY:Prazo (nota 34): MUNICIPIO DE AQUIRAZ – CE
@@ -2869,7 +1960,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-116189@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T080000Z
 DTEND:20261130T090000Z
 SUMMARY:Prazo (nota 45): CONTROLADORIA-GERAL DA UNIAO – DF
@@ -2890,7 +1981,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-117730@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T080000Z
 DTEND:20261130T090000Z
 SUMMARY:Prazo (nota 65): SERGIPE JUSTICA ESTADUAL DE SEGUNDA INSTANCIA – 
@@ -2916,8 +2007,38 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-148748@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261130T080000Z
+DTEND:20261130T090000Z
+SUMMARY:Prazo (nota 100): CONSORCIO INTERMUNICIPAL DE SAUDE DA REGIAO DE 
+ ALMENARA – MG
+DESCRIPTION:Nota 100: ponto de função\, horas técnicas\, fixo mensal de s
+ oftware\, serviço de desenvolvimento de software e fábrica de software\,
+  seu foco\, acima de R$ 10 mi\nValor estimado: R$ 13.770.120\nPregão - E
+ letrônico nº 0011 · AMM Licita (MG)\nCategoria: CFTV\, videomonitorament
+ o e segurança eletrônica\nObjeto: Registro de preços para futura e event
+ ual contratação de empresa especializada para disponibilização\, implant
+ ação\, operação\, sustentação e evolução do Ecossistema Digital Intelige
+ nte para Gestão Escolar – EDIGE\, solução integrada de gestão acadêmica\
+ , pedagógica\, administrativa e gerencial das redes municipais de ensino
+ \, incluindo licenças por perfil de usuário\, controle de frequência esc
+ olar por reconhecimento facial\, fornecimento e instalação de controlado
+ res de acesso\, treinamento\, assistência técnica continuada e desenvolv
+ imento de software por Ponto de Função\, conforme condições\, especific\
+ nPNCP: https://pncp.gov.br/app/editais/28168515000114/2026/12\nPortal: h
+ ttps://app2.ammlicita.org.br/pesquisa/119471
+URL:https://pncp.gov.br/app/editais/28168515000114/2026/12
+LOCATION:AMM Licita (MG)
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-61291@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T085900Z
 DTEND:20261130T095900Z
 SUMMARY:Prazo (nota 34): BANCO DO NORDESTE DO BRASIL – CE
@@ -2939,8 +2060,32 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-108814@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261130T090000Z
+DTEND:20261130T100000Z
+SUMMARY:Prazo (nota 53): ESTADO DA BAHIA – BA
+DESCRIPTION:Nota 53: UST (pouco)\, serviço de suporte técnico de ti\, seu
+  foco\, acima de R$ 1 mi\nValor estimado: R$ 1.648.716\nPregão - Eletrôn
+ ico nº PE 07/2026 · Licitações-e\nCategoria: Suporte técnico de TI\nObje
+ to: Contratação de Prestação de Serviços Técnicos de Atendimento e Supor
+ te ao Usuário em 1º Nível e 2º Nível e operação da Central de Serviços d
+ e TIC\, nesta Secretaria de Justiça e Direitos Humanos SJDH\, incluindo 
+ as Unidades do PROCON em Salvador e Região Metropolitana.\nPNCP: https:/
+ /pncp.gov.br/app/editais/13937032000160/2026/3060\nPortal: https://licit
+ acoes-e2.bb.com.br/aop-inter-estatico/visualizar-processo-publico/110396
+ 1
+URL:https://pncp.gov.br/app/editais/13937032000160/2026/3060
+LOCATION:Licitações-e
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-120090@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T090000Z
 DTEND:20261130T100000Z
 SUMMARY:Prazo (nota 22): AGENCIA NACIONAL DO PETROLEO\, GAS NATURAL E BIO
@@ -2969,7 +2114,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-109041@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261130T100000Z
 DTEND:20261130T110000Z
 SUMMARY:Prazo (nota 34): JUSTICA FEDERAL DE PRIMEIRA INSTANCIA – PE
@@ -2992,8 +2137,57 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-146219@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261201T073000Z
+DTEND:20261201T083000Z
+SUMMARY:Prazo (nota 57): MUNICIPIO DE PLANALTO – RS
+DESCRIPTION:Nota 57: serviço de manutenção de software e segurança da inf
+ ormação\, seu foco\, acima de R$ 1 mi\nValor estimado: R$ 1.196.193\nPre
+ gão - Eletrônico nº 44 · publicado via digifred sistemas de informação l
+ tda\nCategoria: Sistemas de gestão e licenças de software\nObjeto: LOCAÇ
+ ÃO DE SISTEMA WEB INTEGRADO DE GESTÃO PÚBLICA MUNICIPAL\, EM NUVEM\, INC
+ LUINDO SERVIÇOS COMPLEMENTARES IMPLANTAÇÃO\, MANUTENÇÃO (CORRETIVA\, ADA
+ PTATIVA E EVOLUTIVA)\, SUPORTE TÉCNICO E TREINAMENTO DE SERVIDORES PÚBLI
+ COS MUNICIPAIS\, ARMAZENAMENTO E SEGURANÇA DA INFORMAÇÃO\, PARA ATENDIME
+ NTO DAS NECESSIDADES DO MUNICÍPIO DE PLANALTO-RS\, CONFORME DESCRITO NO 
+ TERMO DE REFERÊNCIA\nPNCP: https://pncp.gov.br/app/editais/8761289100011
+ 5/2026/95
+URL:https://pncp.gov.br/app/editais/87612891000115/2026/95
+LOCATION:publicado via digifred sistemas de informação ltda
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-143682@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261201T075900Z
+DTEND:20261201T085900Z
+SUMMARY:Prazo (nota 61): MUNICIPIO DE SANTA HELENA – MA
+DESCRIPTION:Nota 61: páginas\, serviço de digitalização\, seu foco\nValor
+  estimado: Sem valor divulgado\nPregão - Eletrônico nº PE-045/2026-SRP ·
+  Licita Mais Brasil\nCategoria: Equipamentos de informática\nObjeto: Con
+ tratação de empresa especializada na prestação de serviços de locação e 
+ instalação de impressoras\, incluso assistência técnica com manutenção p
+ reventiva e corretiva\, reposição de peças e fornecimento de material de
+  consumo (exceto papel)\, em apoio as atividades das Secretarias do Muni
+ cípio de Santa Helena/MA.\nPNCP: https://pncp.gov.br/app/editais/0622658
+ 3000150/2026/84\nPortal: https://licitamaisbrasil.com.br/detalhes-do-edi
+ tal/nzmWSJuUHgMByu7v
+URL:https://pncp.gov.br/app/editais/06226583000150/2026/84
+LOCATION:Licita Mais Brasil
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-121595@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261201T075900Z
 DTEND:20261201T085900Z
 SUMMARY:Prazo (nota 100): MUNICIPIO DE SANTAREM – PA
@@ -3022,8 +2216,52 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-143683@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261201T080000Z
+DTEND:20261201T090000Z
+SUMMARY:Prazo (nota 60): MUNICIPIO DE SANTA HELENA – MA
+DESCRIPTION:Nota 60: páginas\, serviço de digitalização\, seu foco\nValor
+  estimado: Sem valor divulgado\nPregão - Eletrônico nº PE-046/2026-SRP ·
+  Licita Mais Brasil\nCategoria: Digitalização\nObjeto: Contratação de em
+ presa especializada em serviços de preparação e digitalização de documen
+ tos físicos incluindo o fornecimento dos scanners\, compatível com siste
+ ma próprio\, de interesse das secretarias municipais de Santa Helena/MA.
+ \nPNCP: https://pncp.gov.br/app/editais/06226583000150/2026/85\nPortal: 
+ https://licitamaisbrasil.com.br/detalhes-do-edital/4WEJNGcqAX7FGPcc
+URL:https://pncp.gov.br/app/editais/06226583000150/2026/85
+LOCATION:Licita Mais Brasil
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-108478@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261201T080000Z
+DTEND:20261201T090000Z
+SUMMARY:Prazo (nota 46): UNIVERSIDADE ESTADUAL DE MONTES CLAROS – MG
+DESCRIPTION:Nota 46: serviço de desenvolvimento de software e inteligênci
+ a artificial\, seu foco\nValor estimado: R$ 66.278\nPregão - Eletrônico 
+ nº 95 · Compras MG\nCategoria: Inteligência artificial\nObjeto: SOLUÇÕES
+  DE INTELIGÊNCIA ARTIFICIAL (SaaS/PaaS) PARA AUTOMAÇÃO\, APOIO ADMINISTR
+ ATIVO E DESENVOLVIMENTO DE SOFTWARE\, E HOSPEDAGEM EM NUVEM (CLOUD DATAC
+ ENTER) DEDICADA.\nPNCP: https://pncp.gov.br/app/editais/22675359000100/2
+ 026/97\nPortal: https://www1.compras.mg.gov.br/n/procedimentolei14133/co
+ nsulta/eletronico/visualizar/2026/95/2311021
+URL:https://pncp.gov.br/app/editais/22675359000100/2026/97
+LOCATION:Compras MG
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-59672@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261201T080000Z
 DTEND:20261201T090000Z
 SUMMARY:Prazo (nota 23): ESTADO DO CEARA – CE
@@ -3043,7 +2281,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-56566@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261201T080000Z
 DTEND:20261201T090000Z
 SUMMARY:Prazo (nota 75): Empresa de Assistência Técnica e Extensão Rural 
@@ -3070,7 +2308,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-121081@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261201T083000Z
 DTEND:20261201T093000Z
 SUMMARY:Prazo (nota 77): FUNDO MUNICIPAL DE SAUDE - FMS – SP
@@ -3098,7 +2336,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-119040@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261201T090000Z
 DTEND:20261201T100000Z
 SUMMARY:Prazo (nota 22): FUNDACAO DO ABC – SP
@@ -3116,8 +2354,35 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-31546@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261201T090000Z
+DTEND:20261201T100000Z
+SUMMARY:Prazo (nota 100): MINISTERIO DA DEFESA – DF
+DESCRIPTION:Nota 100: ponto de função\, fixo mensal de software\, serviço
+  de desenvolvimento de software e fábrica de software\, seu foco\, acima
+  de R$ 10 mi\nValor estimado: R$ 15.814.949\nPregão - Eletrônico nº 133 
+ · Compras.gov.br\nCategoria: Desenvolvimento de software\nObjeto: Contra
+ tação de serviços contínuos de tecnologia da informação para o desenvolv
+ imento\, manutenção\, sustentação e avaliação da qualidade e testes de s
+ oftware\, com metodologia ágil\, por meio da alocação de profissionais d
+ e TI com dedicação exclusiva de mão de obra\, sob demanda\, vinculado ao
+  atendimento de níveis mínimos de serviços\, limitados ao quantitativo m
+ áximo estimado\, conforme Termo de Referência.\nPNCP: https://pncp.gov.b
+ r/app/editais/03277610000125/2026/570\nPortal: https://cnetmobile.estale
+ iro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?co
+ mpra=11040405001332026
+URL:https://pncp.gov.br/app/editais/03277610000125/2026/570
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-120085@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261201T130000Z
 DTEND:20261201T140000Z
 SUMMARY:Prazo (nota 89): TRIBUNAL REGIONAL ELEITORAL DE MATO GROSSO DO SU
@@ -3140,8 +2405,60 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-143828@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261202T070000Z
+DTEND:20261202T080000Z
+SUMMARY:Prazo (nota 31): MUNICIPIO DE CRUZ ALTA – RS
+DESCRIPTION:Nota 31: UST (pouco)\, seu foco\nValor estimado: R$ 168.480\n
+ Pregão - Eletrônico nº PCE 390 · publicado via IPM Sistemas\nCategoria: 
+ Geoprocessamento\, drones e mapeamento\nObjeto: Contratação de Empresa p
+ ara execução de cursos. Convênio FPE nº 1184/2026 - Convênio que celebra
+ m entre si o Estado do Rio Grande do Sul/ Secretaria de Trabalho e Desen
+ volvimento Profissional\, e o Município de Cruz Alta: ELETRICA E HIDRAUL
+ ICA RESIDENCIAL 60HS\, PINTOR (Eixo construção civil) 60hs\, PEDREIRO 60
+ hs\, AZULEJISTA 60hs\, SERVENTE DE PEDREIRO 60hs\, CARPINTEIRO 60 hs\, O
+ PERADOR DE MÁQUINAS PESADAS 60hs\, OPERADOR DE DRONE AGRÍCOLA 48HS\nPNCP
+ : https://pncp.gov.br/app/editais/88775390000112/2026/421
+URL:https://pncp.gov.br/app/editais/88775390000112/2026/421
+LOCATION:publicado via IPM Sistemas
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-9541@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261202T070000Z
+DTEND:20261202T080000Z
+SUMMARY:Prazo (nota 47): MUNICIPIO DE BIRIGUI – SP
+DESCRIPTION:Nota 47: serviço de ged / ecm e inteligência artificial\, seu
+  foco\nValor estimado: R$ 444.880\nPregão - Eletrônico nº 157 · BLL Comp
+ ras\nCategoria: Inteligência artificial\nObjeto: Contratação para o forn
+ ecimento de solução tecnológica de gerenciamento e acompanhamento de pro
+ cessos judiciais físicos e eletrônicos\, extrajudiciais\, expedientes co
+ nsultivos e procedimentos da cobrança administrativa\, com funcionalidad
+ es para gestão eletrônica de documentos e fluxos automatizados e com int
+ eligência artificial\, contemplando instalação\, migração de dados\, int
+ egração\, treinamento técnico\, suporte operacional\, atualização tecnol
+ ógica e manutenção - Secretaria de Negócios Jurídicos.\nPNCP: https://pn
+ cp.gov.br/app/editais/46151718000180/2026/697\nPortal: https://bllcompra
+ s.com/Process/ProcessView?param1=[gkz]M0ZGO5PpkmGE6RSv7x2JEd7CFT3wYoSI3x
+ 6Upxy_XyFkRJ4zxR1WGWFpTTuaIauxXqcV1qI1cCUg/eUQ7PBxButNii2S/qRKFINHCiU9PU
+ g=
+URL:https://pncp.gov.br/app/editais/46151718000180/2026/697
+LOCATION:BLL Compras
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-115261@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261202T080000Z
 DTEND:20261202T090000Z
 SUMMARY:Prazo (nota 67): MUNICIPIO DE UAUA – BA
@@ -3166,7 +2483,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-99553@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261202T080000Z
 DTEND:20261202T090000Z
 SUMMARY:Prazo (nota 72): EMPRESA BRASILEIRA DE PESQUISA AGROPECUARIA – DF
@@ -3190,8 +2507,123 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-148174@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261202T085900Z
+DTEND:20261202T095900Z
+SUMMARY:Prazo (nota 99): MUNICIPIO DE SAO JOSE DE RIBAMAR – MA
+DESCRIPTION:Nota 99: UST\, ponto de função no edital\, serviço de fábrica
+  de software e sustentação de sistemas\, seu foco\nValor estimado: Sem v
+ alor divulgado\nPregão - Eletrônico nº 009 · licitacaosaojosederibamar.c
+ om.br\nCategoria: Fábrica de software\nObjeto: REGISTRO DE PREÇOS PARA F
+ UTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇOS DE FÁB
+ RICA DE SOFTWARE\, COMPREENDENDO DESENVOLVIMENTO\, MELHORIA (EVOLUÇÃO) E
+  SUSTENTAÇÃO DE SISTEMAS COMPUTACIONAIS EM AMBIENTE WEB E POR MEIO DE AP
+ Is\, INCLUINDO SERVIÇOS DE INTEGRAÇÃO E MIGRAÇÃO DE DADOS (ETL/ELT)\, ME
+ NSURADOS POR UNIDADE DE SERVIÇO TÉCNICO (UST)\, PARA A SECRETARIA MUNICI
+ PAL DE EDUCAÇÃO DE SÃO JOSÉ DE RIBAMAR/MA.\nPNCP: https://pncp.gov.br/ap
+ p/editais/06351514000178/2026/63\nPortal: http://www.licitacaosaojoseder
+ ibamar.com.br
+URL:https://pncp.gov.br/app/editais/06351514000178/2026/63
+LOCATION:licitacaosaojosederibamar.com.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-142596@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261202T090000Z
+DTEND:20261202T100000Z
+SUMMARY:Prazo (nota 77): TRIBUNAL DE CONTAS DO CEARA – CE
+DESCRIPTION:Nota 77: UST\, serviço de cloud computing\, seu foco\, acima 
+ de R$ 1 mi\nValor estimado: R$ 1.161.690\nPregão - Eletrônico nº 145 · C
+ ompras.gov.br\nCategoria: Cloud computing\nObjeto: Contratação de serviç
+ o de fornecimento de créditos\, sob demanda\, em nuvem pública Google Cl
+ oud Platform (GCP) e Serviços Técnicos Especializados\, conforme quantit
+ ativos e especifi-cações constantes no Anexo I deste Edital.\nPNCP: http
+ s://pncp.gov.br/app/editais/09499757000146/2026/77\nPortal: https://cnet
+ mobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhame
+ nto-compra?compra=92546705001452026
+URL:https://pncp.gov.br/app/editais/09499757000146/2026/77
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-142687@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261202T090000Z
+DTEND:20261202T100000Z
+SUMMARY:Prazo (nota 77): MINISTERIO DA SAUDE – RJ
+DESCRIPTION:Nota 77: UST no edital\, ponto de função no edital\, serviço 
+ de sistemas de gestão e licenças de software\, seu foco\nValor estimado:
+  Sem valor divulgado\nPregão - Eletrônico nº 314 · Compras.gov.br\nCateg
+ oria: Sistemas de gestão e licenças de software\nObjeto: CONTRATAÇÃO DE 
+ LICENCIAMENTO DE SOFTWARE PARA GESTÃO DO SETOR DE HEMOTERAPIA\nPNCP: htt
+ ps://pncp.gov.br/app/editais/00394544000185/2026/2495\nPortal: https://c
+ netmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanh
+ amento-compra?compra=25005705003142026
+URL:https://pncp.gov.br/app/editais/00394544000185/2026/2495
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-145390@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261202T120000Z
+DTEND:20261202T130000Z
+SUMMARY:Prazo (nota 46): MINISTERIO PUBLICO DO ESTADO DE SANTA CATARINA P
+ ROCURADORIA GERAL DE JUSTICA – SC
+DESCRIPTION:Nota 46: serviço de manutenção de software e segurança da inf
+ ormação\, seu foco\nValor estimado: R$ 484.200\nPregão - Eletrônico nº 4
+ 3/2026/mp · Licitações-e\nCategoria: Manutenção de software\nObjeto: Con
+ tratação de serviço de sustentação e manutenção do Sistema de Gestão de 
+ Segurança da Informação (SGSI).\nPNCP: https://pncp.gov.br/app/editais/7
+ 6276849000154/2026/428\nPortal: https://licitacoes-e2.bb.com.br/aop-inte
+ r-estatico/visualizar-processo-publico/1104282
+URL:https://pncp.gov.br/app/editais/76276849000154/2026/428
+LOCATION:Licitações-e
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-142445@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261202T123000Z
+DTEND:20261202T133000Z
+SUMMARY:Prazo (nota 43): TRIBUNAL SUPERIOR DO TRABALHO – SC
+DESCRIPTION:Nota 43: UST (pouco)\, serviço de sistemas de gestão e licenç
+ as de software\, seu foco\nValor estimado: R$ 312.894\nPregão - Eletrôni
+ co nº 162 · Compras.gov.br\nCategoria: Manutenção de software\nObjeto: R
+ enovação de suporte técnico especializado e direito de atualização de ve
+ rsões (subscrição de software) do IBM Spectrum Protect Suite (TSM).\nPNC
+ P: https://pncp.gov.br/app/editais/00509968000148/2026/4004\nPortal: htt
+ ps://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/ac
+ ompanhamento-compra?compra=08001305001622026
+URL:https://pncp.gov.br/app/editais/00509968000148/2026/4004
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-18751@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261203T070000Z
 DTEND:20261203T080000Z
 SUMMARY:Prazo (nota 47): MUNICIPIO DE BARROLANDIA – TO
@@ -3217,8 +2649,36 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-143559@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261203T070000Z
+DTEND:20261203T080000Z
+SUMMARY:Prazo (nota 67): CAMARA MUNICIPAL DE SAO JOAO DA BOA VISTA – SP
+DESCRIPTION:Nota 67: fixo mensal de software\, serviço de digitalização e
+  ged / ecm\, seu foco\nValor estimado: R$ 165.244\nPregão - Eletrônico n
+ º 002 · BLL Compras\nCategoria: Sistemas de gestão e licenças de softwar
+ e\nObjeto: Locação de software em plataforma web\, destinado à desmateri
+ alização de documentos e à gestão eletrônica do processo legislativo\, i
+ ncluindo funcionalidades de protocolo\, tramitação\, compilação de leis\
+ , assinatura digital\, GED e integração com portal eletrônico acessível 
+ (recursos de leitura em Libras e áudio). Compreende\, ainda\, os serviço
+ s de implantação\, migração e conversão de dados\, suporte técnico\, man
+ utenção corretiva\, evolutiva e adaptativa\, treinamento de usuários e o
+ peração assistida.\nPNCP: https://pncp.gov.br/app/editais/54682836000142
+ /2026/54\nPortal: https://bllcompras.com/Process/ProcessView?param1=[gkz
+ ]8x5YDtYFU1f1LFAA8Upfqe3uBruwLvQlX6EejU73o0kEngINOpc2cp3hTUXtbKPZ_TDY0Hv
+ 7UCAPWr9Si0xvkm18Ooj1O8HHHHO/ZxjWe0w=
+URL:https://pncp.gov.br/app/editais/54682836000142/2026/54
+LOCATION:BLL Compras
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-116316@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261203T075000Z
 DTEND:20261203T085000Z
 SUMMARY:Prazo (nota 75): MUNICIPIO DE APIUNA – SC
@@ -3243,8 +2703,82 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-145068@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261203T075900Z
+DTEND:20261203T085900Z
+SUMMARY:Prazo (nota 77): MUNICIPIO DE SAO JOSE DAS MISSOES – RS
+DESCRIPTION:Nota 77: fixo mensal de software\, UST no edital\, serviço de
+  sistemas de gestão e licenças de software\, seu foco\nValor estimado: R
+ $ 502.819\nPregão - Eletrônico nº Pregão Lei 14.133 Eletronico 14 · publ
+ icado via Tchê Informática Ltda\nCategoria: Sistemas de gestão e licença
+ s de software\nObjeto: Contratação de empresa especializada para a prest
+ ação de serviços de sistemas informatizados\, compreendendo a implantaçã
+ o\, parametrização inicial\, treinamento prático de servidores públicos\
+ , conversão/migração integral do banco de dados histórico existente e a 
+ locação de licenças de uso de um sistema integrado de gestão pública.\nP
+ NCP: https://pncp.gov.br/app/editais/92410463000140/2026/92
+URL:https://pncp.gov.br/app/editais/92410463000140/2026/92
+LOCATION:publicado via Tchê Informática Ltda
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-7739@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261203T080000Z
+DTEND:20261203T090000Z
+SUMMARY:Prazo (nota 79): CONSELHO REGIONAL DE ENFERMAGEM DE SAO PAULO – S
+ P
+DESCRIPTION:Nota 79: UST\, serviço de tratamento e processamento de dados
+  e sistemas de gestão e licenças de software\, seu foco\nValor estimado:
+  Sem valor divulgado\nPregão - Eletrônico nº 43 · Compras.gov.br\nCatego
+ ria: Sistemas de gestão e licenças de software\nObjeto: Contratação de e
+ mpresa especializada na prestação de serviços de solução tecnológica\, n
+ a modalidade licenciamento de software como serviço (Software as a Servi
+ ce – SaaS)\, voltada à inteligência e gestão da informação para automaçã
+ o de procedimentos e tratamento de dados e informações relacionadas à ex
+ ecução administrativa e judicial das execuções fiscais e demais processo
+ s contenciosos do Coren-SP\, incluindo-se os das Justiças do Trabalho\, 
+ Federal e Estadual.\nPNCP: https://pncp.gov.br/app/editais/4441368000014
+ 0/2026/56\nPortal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet
+ -web/public/compras/acompanhamento-compra?compra=38934305000432026
+URL:https://pncp.gov.br/app/editais/44413680000140/2026/56
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-146434@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261203T085900Z
+DTEND:20261203T095900Z
+SUMMARY:Prazo (nota 34): ESTADO DO RIO DE JANEIRO – RJ
+DESCRIPTION:Nota 34: serviço de triagem e organização de acervo\, seu foc
+ o\nValor estimado: R$ 405.914\nPregão - Eletrônico nº PE0342/26 · SIGA R
+ J\nCategoria: Triagem e organização de acervo\nObjeto: Aquisição\, por l
+ icitação (pregão eletrônico)\, DE SERVIÇOS ARQUIVÍSTICOS PARA RESOLUÇÃO 
+ DA MASSA DOCUMENTAL DOS PROCESSOS ADMINISTRATIVOS DO HOSPITAL UNIVERSITÁ
+ RIO PEDRO ERNESTO.\nPNCP: https://pncp.gov.br/app/editais/42498600000171
+ /2026/4950\nPortal: https://www.compras.rj.gov.br/EditaisLicitacoes/deta
+ lhar.action?idLic=37844
+URL:https://pncp.gov.br/app/editais/42498600000171/2026/4950
+LOCATION:SIGA RJ
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-23923@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261203T090000Z
 DTEND:20261203T100000Z
 SUMMARY:Prazo (nota 51): ESTADO DE GOIAS – GO
@@ -3266,8 +2800,189 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-143292@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261203T090000Z
+DTEND:20261203T100000Z
+SUMMARY:Prazo (nota 72): COMANDO DO EXERCITO – RS
+DESCRIPTION:Nota 72: páginas\, serviço de digitalização e indexação\, seu
+  foco\nValor estimado: R$ 600.962\nPregão - Eletrônico nº 98 · Compras.g
+ ov.br\nCategoria: Digitalização\nObjeto: SERVIÇOS DE ORGANIZAÇÃO\, DIGIT
+ ALIZAÇÃO E INDEXAÇÃO DE ACERVO ARQUIVÍSTICO\nPNCP: https://pncp.gov.br/a
+ pp/editais/00394452000103/2026/24731\nPortal: https://cnetmobile.estalei
+ ro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?com
+ pra=16039205000982026
+URL:https://pncp.gov.br/app/editais/00394452000103/2026/24731
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-142843@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261203T090000Z
+DTEND:20261203T100000Z
+SUMMARY:Prazo (nota 54): CONSELHO REGIONAL DOS CORRETORES DE IMOVEIS 14 R
+ EGIAO – MS
+DESCRIPTION:Nota 54: páginas (pouco)\, serviço de digitalização e indexaç
+ ão\, seu foco\nValor estimado: R$ 551.164\nPregão - Eletrônico nº 31 · C
+ ompras.gov.br\nCategoria: Digitalização\nObjeto: Contratação de empresa 
+ especializada em coleta\, organização\, guarda gerenciada\, digitalizaçã
+ o e armazenamento virtual de documentos/processos físicos\, gestão de ar
+ quivos e processos\, com a guarda\, visando o tratamento do acervo docum
+ ental\, conversão de documentos analógicos para o formato digital\, inde
+ xação\, extração e estruturação (mineração de dados) e disponibilização 
+ através de sistema informatizado\, para atender as necessidades administ
+ rativas do CRECI 14º REGIÃO/MS\nPNCP: https://pncp.gov.br/app/editais/03
+ 979572000152/2026/37\nPortal: https://cnetmobile.estaleiro.serpro.gov.br
+ /comprasnet-web/public/compras/acompanhamento-compra?compra=926836050003
+ 12026
+URL:https://pncp.gov.br/app/editais/03979572000152/2026/37
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-57597@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261204T070000Z
+DTEND:20261204T080000Z
+SUMMARY:Prazo (nota 73): MUNICIPIO DE VICOSA DO CEARA – CE
+DESCRIPTION:Nota 73: páginas\, serviço de digitalização e indexação\, seu
+  foco\nValor estimado: R$ 103.200\nPregão - Eletrônico nº PE03/2026-RPPS
+ V · BBMNET\nCategoria: Digitalização\nObjeto: CONTRATAÇÃO DE EMPRESA ESP
+ ECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE GESTÃO DE DOCUMENTAÇÃO DE INFOR
+ MAÇÕES E DIGITALIZAÇÃO DE DOCUMENTOS\, INCLUINDO\, ESCANEAMENTO\, TRATAM
+ ENTO DAS IMAGENS\, RECONHECIMENTO ÓTICO DOS CARACTERES\, INDEXAÇÃO ELETR
+ ÔNICA\, ARMAZENAMENTO EM SOFTWARE DE GERENCIAMENTO ELETRÔNICO (GED) 100%
+  WEB\, COM UTILIZAÇÃO DE CLOUD COMPUTING (ARMAZENAMENTO EM -NUVEM) E DIS
+ PONIBILIZAÇÃO DE APLICATIVO (APP) PARA CONSULTAR\, PESQUISAR\, COMPARTIL
+ HAR E IMPRIMIR OS DOCUMENTOS NAS PLATAFORMAS IOS E ANDROID\, COM ACESSO 
+ AOS DADOS DURANTE A VIGÊNCIA DO CONTRATO.\nPNCP: https://pncp.gov.br/app
+ /editais/10462497000113/2026/111
+URL:https://pncp.gov.br/app/editais/10462497000113/2026/111
+LOCATION:BBMNET
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-149265@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261204T070000Z
+DTEND:20261204T080000Z
+SUMMARY:Prazo (nota 47): MUNICIPIO DE SAO MANUEL – SP
+DESCRIPTION:Nota 47: serviço de manutenção de software e tratamento e pro
+ cessamento de dados\, seu foco\nValor estimado: R$ 319.840\nPregão - Ele
+ trônico nº 148 · publicado via 4R Tecnologia da Informação Ltda\nCategor
+ ia: Sistemas de gestão e licenças de software\nObjeto: Contratação de em
+ presa especializada para fornecimento de licença de uso\, por prazo dete
+ rminado\, de sistema informatizado para gestão da Assistência Social\, e
+ m ambiente web\, destinado ao atendimento das necessidades da Secretaria
+  Municipal de Assistência e Desenvolvimento Social do Município de São M
+ anuel/SP\, contemplando os serviços de implantação e configuração\, impo
+ rtação\, conversão e tratamento de dados\, hospedagem em nuvem\, treinam
+ ento de usuários\, suporte técnico contínuo e manutenção evolutiva\, cor
+ retiva e legal durante a vigência contratual.\nPNCP: https://pncp.gov.br
+ /app/editais/46634523000190/2026/323
+URL:https://pncp.gov.br/app/editais/46634523000190/2026/323
+LOCATION:publicado via 4R Tecnologia da Informação Ltda
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-142794@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261204T070000Z
+DTEND:20261204T080000Z
+SUMMARY:Prazo (nota 77): CONSELHO REGIONAL DE ENFERMAGEM DE SAO PAULO – S
+ P
+DESCRIPTION:Nota 77: UST\, serviço de sistemas de gestão e licenças de so
+ ftware\, seu foco\, acima de R$ 1 mi\nValor estimado: R$ 3.408.736\nPreg
+ ão - Eletrônico nº 64 · Compras.gov.br\nCategoria: Sistemas de gestão e 
+ licenças de software\nObjeto: Contratação de empresa especializada para 
+ o fornecimento de plataforma integrada de gestão de recursos humanos\, n
+ a modalidade software como serviço (SaaS)\, contemplando os módulos de g
+ estão de pessoal\, folha de pagamento\, ponto eletrônico\, benefícios\, 
+ avaliações\, treinamentos\, recrutamento e demais funcionalidades correl
+ atas\, com implantação\, migração de dados\, suporte técnico e atualizaç
+ ões contínuas.\nPNCP: https://pncp.gov.br/app/editais/44413680000140/202
+ 6/77\nPortal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/
+ public/compras/acompanhamento-compra?compra=38934305000642026
+URL:https://pncp.gov.br/app/editais/44413680000140/2026/77
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-60772@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261204T080000Z
+DTEND:20261204T090000Z
+SUMMARY:Prazo (nota 21): MUNICIPIO DE RESERVA DO IGUACU – PR
+DESCRIPTION:Nota 21: seu foco\nValor estimado: R$ 208\,80\nPregão - Eletr
+ ônico nº 43 · Compras.gov.br\nCategoria: Restauração de documentos\nObje
+ to: Registro de preço para futura e eventual contratação de empresa espe
+ cializada em autopeças\, com oficina própria\, para fornecimento de peça
+ s e elementos filtrantes novos\, observando obrigatoriamente os preços p
+ raticados na tabela do sistema Traz Valor\, conforme seus valores atuali
+ zados\, bem como prestação de serviços de mecânica leve\, incluindo manu
+ tenção elétrica e de ar-condicionado\, visando à conservação preventiva 
+ e corretiva da frota municipal\, conforme condições\, quantidades e exig
+ ências es\nPNCP: https://pncp.gov.br/app/editais/01612911000132/2026/133
+ \nPortal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/publ
+ ic/compras/acompanhamento-compra?compra=98087805000432026
+URL:https://pncp.gov.br/app/editais/01612911000132/2026/133
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-147347@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261204T080000Z
+DTEND:20261204T090000Z
+SUMMARY:Prazo (nota 32): MUNICIPIO DE RESERVA DO IGUACU – PR
+DESCRIPTION:Nota 32: seu foco\, acima de R$ 1 mi\nValor estimado: R$ 6.85
+ 6.346\nPregão - Eletrônico nº 45 · publicado via Equiplano Sistemas LTDA
+  / Equiplano Sistemas\nCategoria: Restauração de documentos\nObjeto: Reg
+ istro de preço para futura e eventual contratação de empresa especializa
+ da em autopeças\, com oficina própria\, para fornecimento de peças e ele
+ mentos filtrantes novos\, observando obrigatoriamente os preços praticad
+ os na tabela do sistema Traz Valor\, conforme seus valores atualizados\,
+  bem como prestação de serviços de mecânica leve\, incluindo manutenção 
+ elétrica e de ar-condicionado\, visando à conservação preventiva e corre
+ tiva da frota municipal\, conforme condições\, quantidades e exigências 
+ estabelecidas neste Edital e seus anexos.\nPNCP: https://pncp.gov.br/app
+ /editais/01612911000132/2026/144
+URL:https://pncp.gov.br/app/editais/01612911000132/2026/144
+LOCATION:publicado via Equiplano Sistemas LTDA / Equiplano Sistemas
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-121176@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261204T090000Z
 DTEND:20261204T100000Z
 SUMMARY:Prazo (nota 65): MUNICIPIO DE RIO BRANCO – AC
@@ -3296,7 +3011,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-123799@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261204T130000Z
 DTEND:20261204T140000Z
 SUMMARY:Prazo (nota 22): ASSEMBLEIA LEGISLATIVA DO ESTADO DE SANTA CATARI
@@ -3320,7 +3035,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-115231@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261207T070000Z
 DTEND:20261207T080000Z
 SUMMARY:Prazo (nota 55): MUNICIPIO DE COROMANDEL – MG
@@ -3347,8 +3062,208 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-117480@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261207T080000Z
+DTEND:20261207T090000Z
+SUMMARY:Prazo (nota 45): ESTADO DO CEARA – CE
+DESCRIPTION:Nota 45: UST no edital\, seu foco\nValor estimado: Sem valor 
+ divulgado\nPregão - Eletrônico nº 1274 · Compras.gov.br\nCategoria: Sist
+ emas de gestão e licenças de software\nObjeto: Prestação dos serviços de
+  Solução de Banco de Dados\, incluindo hardware e software\, proteção do
+ s dados\, serviços de instalação e ativação\, Universal Credits\, consul
+ toria técnica especializada por demanda pelo período de 60 (sessenta) me
+ ses e treinamento de equipe\nPNCP: https://pncp.gov.br/app/editais/07954
+ 480000179/2026/27341\nPortal: https://cnetmobile.estaleiro.serpro.gov.br
+ /comprasnet-web/public/compras/acompanhamento-compra?compra=943001050127
+ 42026
+URL:https://pncp.gov.br/app/editais/07954480000179/2026/27341
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-145724@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261207T080000Z
+DTEND:20261207T090000Z
+SUMMARY:Prazo (nota 89): MUNICIPIO DE ITAJAI – SC
+DESCRIPTION:Nota 89: UST\, serviço de inteligência artificial e sistemas 
+ de gestão e licenças de software\, seu foco\, acima de R$ 1 mi\nValor es
+ timado: R$ 6.556.955\nPregão - Eletrônico nº PE 201 · publicado via Públ
+ ica Tecnologia Ltda.\nCategoria: Inteligência artificial\nObjeto: Contra
+ tação de solução integrada destinada à gestão da vida funcional dos serv
+ idores públicos municipais\, contemplando a consolidação do acervo funci
+ onal histórico\, o tratamento e a estruturação de informações por meio d
+ e inteligência artificial\, mecanismos tecnológicos de governança em pri
+ vacidade e proteção de dados\, com cessão integral e definitiva dos dire
+ itos patrimoniais sobre os desenvolvimentos realizados no âmbito da cont
+ ratação e licença perpétua e irrevogável\, com acesso ao código-fonte\, 
+ para os componentes preexistentes da contratada\, serviços especializado
+ s de governança\, privacid\nPNCP: https://pncp.gov.br/app/editais/831022
+ 77000152/2026/635
+URL:https://pncp.gov.br/app/editais/83102277000152/2026/635
+LOCATION:publicado via Pública Tecnologia Ltda.
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-22401@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261209T070000Z
+DTEND:20261209T080000Z
+SUMMARY:Prazo (nota 84): TRIBUNAL DE JUSTICA DO ESTADO DO AMAPA – AP
+DESCRIPTION:Nota 84: UST (pouco)\, horas técnicas\, serviço de segurança 
+ da informação\, seu foco\, acima de R$ 10 mi\nValor estimado: R$ 14.562.
+ 596\nPregão - Eletrônico nº 217 · Compras.gov.br\nCategoria: Segurança d
+ a informação\nObjeto: Registro de preços para aquisição de soluções de s
+ egurança da informação incluindo firewalls\, soluções de gerenciamento\,
+  controle de acesso\, acessórios necessários e serviços de sustentação e
+  suporte\nPNCP: https://pncp.gov.br/app/editais/34870576000121/2026/70\n
+ Portal: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public
+ /compras/acompanhamento-compra?compra=92530605002172026
+URL:https://pncp.gov.br/app/editais/34870576000121/2026/70
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-148759@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261209T080000Z
+DTEND:20261209T090000Z
+SUMMARY:Prazo (nota 97): MUNICIPIO DE ARIQUEMES – RO
+DESCRIPTION:Nota 97: UST\, ponto de função no edital\, serviço de seguran
+ ça da informação\, seu foco\, acima de R$ 1 mi\nValor estimado: R$ 3.952
+ .158\nPregão - Eletrônico nº 380 · Compras.gov.br\nCategoria: Consultori
+ a\, governança de TI e LGPD\nObjeto: Registro de preços para futura e ev
+ entual contratação de serviço técnico e especializado na área de Tecnolo
+ gia da Informação e Comunicação (TIC)\, compreendendo assessoramento de 
+ atividades de segurança da informação\, ações de governança de TIC que a
+ brangem planejamento\, implantação\, monitoramento\, operação e execução
+  de serviços relacionados ao ambiente computacional\, por 12 (doze) mese
+ s\, prorrogável nos termos da lei.\nPNCP: https://pncp.gov.br/app/editai
+ s/04104816000116/2026/321\nPortal: https://cnetmobile.estaleiro.serpro.g
+ ov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=4505220
+ 5003802026
+URL:https://pncp.gov.br/app/editais/04104816000116/2026/321
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-5489@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261210T080000Z
+DTEND:20261210T090000Z
+SUMMARY:Prazo (nota 45): POLICIA CIVIL DO ESTADO DE MINAS GERAIS – MG
+DESCRIPTION:Nota 45: UST no edital\, seu foco\nValor estimado: Sem valor 
+ divulgado\nPregão - Eletrônico nº 290 · Compras MG\nCategoria: Telecomun
+ icações e conectividade\nObjeto: Contratação de serviços de telefonia pa
+ ra a Polícia Civil de Minas Gerais\nPNCP: https://pncp.gov.br/app/editai
+ s/18715532000170/2026/143\nPortal: https://www1.compras.mg.gov.br/n/proc
+ edimentolei14133/consulta/eletronico/visualizar/2026/290/1511189
+URL:https://pncp.gov.br/app/editais/18715532000170/2026/143
+LOCATION:Compras MG
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-149423@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261210T080000Z
+DTEND:20261210T090000Z
+SUMMARY:Prazo (nota 55): MUNICIPIO DE MARIANA – MG
+DESCRIPTION:Nota 55: fixo mensal de software\, serviço de manutenção de s
+ oftware\, seu foco\nValor estimado: R$ 867.580\nPregão - Eletrônico nº 8
+  · AMM Licita (MG)\nCategoria: Manutenção de software\nObjeto: CONTRATAÇ
+ ÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO CONTÍNUA DE SERVIÇOS TÉCNICOS D
+ E GESTÃO E PROCESSAMENTO ELETRÔNICO DE INFRAÇÕES DE TRÂNSITO\, ABRANGEND
+ O O FORNECIMENTO\, A DISPONIBILIZAÇÃO\, A OPERAÇÃO ASSISTIDA\, O SUPORTE
+  TÉCNICO E A MANUTENÇÃO DE SISTEMA INFORMATIZADO DESTINADO AO TRATAMENTO
+  COMPLETO DOS AUTOS DE INFRAÇÃO NO ÂMBITO DO MUNICÍPIO DE MARIANA/MG.\nP
+ NCP: https://pncp.gov.br/app/editais/18295303000144/2026/336\nPortal: ht
+ tps://app2.ammlicita.org.br/pesquisa/100079
+URL:https://pncp.gov.br/app/editais/18295303000144/2026/336
+LOCATION:AMM Licita (MG)
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-147512@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261210T080100Z
+DTEND:20261210T090100Z
+SUMMARY:Prazo (nota 83): MUNICIPIO DE SAO GONCALO DO RIO ABAIXO – MG
+DESCRIPTION:Nota 83: horas técnicas\, serviço de manutenção de software e
+  sistemas de gestão e licenças de software\, seu foco\, acima de R$ 1 mi
+ \nValor estimado: R$ 2.334.055\nPregão - Eletrônico nº 63 · Licitar Digi
+ tal\nCategoria: Sistemas de gestão e licenças de software\nObjeto: Contr
+ atação de empresa especializada para fornecimento de licença de uso (loc
+ ação) de sistema informatizado de gestão pública municipal\, incluindo s
+ erviços necessários à sua implantação\, migração\, treinamento\, suporte
+  técnico especializado\, disponibilização da solução em datacenter exter
+ no certificado\, acompanhamento técnico permanente e manutenção (correti
+ va\, evolutiva e legal)\, para atendimento as necessidades da Prefeitura
+  Municipal São Gonçalo do Rio Abaixo\, Câmara Municipal\, Serviço Autôno
+ mo de Água e Esgoto - SAAESGRA\nPNCP: https://pncp.gov.br/app/editais/24
+ 380651000112/2026/87\nPortal: https://app2.licitardigital.com.br/pesquis
+ a/119641
+URL:https://pncp.gov.br/app/editais/24380651000112/2026/87
+LOCATION:Licitar Digital
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:licitacao-120822@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261210T090000Z
+DTEND:20261210T100000Z
+SUMMARY:Prazo (nota 77): FURNAS-CENTRAIS ELETRICAS S.A. – RJ
+DESCRIPTION:Nota 77: UST no edital\, ponto de função no edital\, serviço 
+ de sistemas de gestão e licenças de software\, seu foco\nValor estimado:
+  Sem valor divulgado\nPregão - Eletrônico nº 33 · Compras.gov.br\nCatego
+ ria: Sistemas de gestão e licenças de software\nObjeto: Prestação de ser
+ viços de renovação de subscrição do suporte e manutenção das licenças pe
+ rpétuas de uso do software IBM MAXIMO\, bem como a prestação de serviços
+  técnicos especializados para instalação\, migração\, configuração e par
+ ametrização da plataforma\, conforme condições\, quantidades e exigência
+ s estabelecidas neste EDITAL e seus anexos.\nPNCP: https://pncp.gov.br/a
+ pp/editais/23274194000119/2026/126\nPortal: https://cnetmobile.estaleiro
+ .serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compr
+ a=91084705000332026
+URL:https://pncp.gov.br/app/editais/23274194000119/2026/126
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-8064@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261214T064500Z
 DTEND:20261214T074500Z
 SUMMARY:Prazo (nota 54): MUNICIPIO DE MARTINOPOLIS – SP
@@ -3373,8 +3288,34 @@ DESCRIPTION:Faltam 2 dias para o prazo de propostas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:licitacao-149642@painel-licitacoes
+DTSTAMP:20261119T143409Z
+DTSTART:20261214T090000Z
+DTEND:20261214T100000Z
+SUMMARY:Prazo (nota 22): COMPANHIA DE DESENV. DO VALE DO SAO FRANCISCO – 
+ MG
+DESCRIPTION:Nota 22: seu foco\nValor estimado: R$ 718.192\nPregão - Eletr
+ ônico nº 87 · Compras.gov.br\nCategoria: Guarda e armazenamento físico\n
+ Objeto: Contratação dos serviços continuados de gestão\, guarda e conser
+ vação de materiais e equipamentos armazenados nos depósitos da 1ª Superi
+ ntendência Regional da Codevasf\, localizados nas cidades de Montes Clar
+ os\, Nova Porteirinha e Três Marias\, no estado de Minas Gerais\, que co
+ mpreenderá\, além da mão de obra\, o fornecimento dos uniformes necessár
+ ios à execução dos serviços.\nPNCP: https://pncp.gov.br/app/editais/0039
+ 9857000126/2026/523\nPortal: https://cnetmobile.estaleiro.serpro.gov.br/
+ comprasnet-web/public/compras/acompanhamento-compra?compra=1950050500087
+ 2026
+URL:https://pncp.gov.br/app/editais/00399857000126/2026/523
+LOCATION:Compras.gov.br
+BEGIN:VALARM
+TRIGGER:-P2D
+ACTION:DISPLAY
+DESCRIPTION:Faltam 2 dias para o prazo de propostas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:licitacao-22364@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20261231T090000Z
 DTEND:20261231T100000Z
 SUMMARY:Prazo (nota 27): MUNICIPIO DE CASINHAS – PE
@@ -3399,7 +3340,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-20548@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20270202T160000Z
 DTEND:20270202T170000Z
 SUMMARY:Prazo (nota 51): MUNICIPIO DE SAO SEBASTIAO – SP
@@ -3421,7 +3362,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-20663@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20270203T230000Z
 DTEND:20270204T000000Z
 SUMMARY:Prazo (nota 30): MUNICIPIO DE CACADOR – SC
@@ -3440,7 +3381,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-40368@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20270421T170000Z
 DTEND:20270421T180000Z
 SUMMARY:Prazo (nota 75): INSTITUTO FEDERAL DE EDUCACAO\, CIENCIA E TECNOL
@@ -3468,7 +3409,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-48209@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20270426T230000Z
 DTEND:20270427T000000Z
 SUMMARY:Prazo (nota 30): MUNICIPIO DE CACADOR – SC
@@ -3488,7 +3429,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-18779@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20270427T230000Z
 DTEND:20270428T000000Z
 SUMMARY:Prazo (nota 30): MUNICIPIO DE BRUMADO – BA
@@ -3512,7 +3453,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-134881@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20270830T230000Z
 DTEND:20270831T000000Z
 SUMMARY:Prazo (nota 30): MUNICIPIO DE CACADOR – SC
@@ -3532,7 +3473,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:licitacao-95889@painel-licitacoes
-DTSTAMP:20261115T134912Z
+DTSTAMP:20261119T143409Z
 DTSTART:20271102T230000Z
 DTEND:20271103T000000Z
 SUMMARY:Prazo (nota 30): FUNDO MUNICIPAL DE SAUDE DE CACADOR – SC
