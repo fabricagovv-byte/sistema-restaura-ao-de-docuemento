@@ -171,5 +171,6 @@ res = {"examinados": D["examinados"], "triados_objeto": D["triados"], "abertos_c
        "com_tr": sum(1 for e in lista if docs(e)[1]), "suspeitos": [(e["orgao_nome"], e.get("valor")) for e in lista if e["valor_suspeito"]]}
 for e in lista:
     res["por_area"][e["area"]] = res["por_area"].get(e["area"], 0) + 1
-json.dump({"resumo": res, "lista": lista}, open(f"{PASTA}/licitacoes-ti-abertas.json", "w"), ensure_ascii=False, default=str)
+json.dump({"resumo": res, "verificado_em_txt": AGORA.strftime("%d/%m/%Y às %H:%M") + " (Brasília)", "lista": lista},
+          open(f"{PASTA}/licitacoes-ti-abertas.json", "w"), ensure_ascii=False, default=str)
 print(json.dumps(res, ensure_ascii=False, indent=1, default=str))

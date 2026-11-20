@@ -95,6 +95,18 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .atalhos a:hover, .atalhos a:focus-visible { border-color: var(--accent); }
 .secao-mais { margin: 18px 0 0; font-size: 1rem; color: var(--muted); }
 section.panel, #lista { scroll-margin-top: 56px; }
+.pesq-filtros { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+.pesq-filtros label { display: grid; gap: 4px; font-size: .78rem; font-weight: 700; color: var(--muted); }
+.pesq-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.pesq-lista > li { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 6px; min-width: 0; }
+.pesq-lista .topo { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; }
+.pesq-lista .topo b { font-size: .98rem; }
+.pesq-lista .linha { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .85rem; color: var(--muted); }
+.pesq-lista .linha strong { color: var(--ink); }
+.pesq-lista p { margin: 0; overflow-wrap: anywhere; }
+.pesq-lista .links { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: .85rem; }
+.pesq-lista .links a { overflow-wrap: anywhere; }
+.pesq-texto { width: 100%; min-height: 160px; font: .8rem/1.4 ui-monospace, monospace; border: 1px solid var(--line); border-radius: 8px; padding: 8px; background: var(--bg); color: var(--ink); }
 .funil { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
 .funil li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 6px 10px;
   border-radius: 8px; background: var(--accent-soft); }
@@ -306,7 +318,7 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
   <section class="kpis" id="kpis" aria-label="Números da coleta"></section>
 
   <nav class="atalhos" aria-label="Ir para">
-    <a href="#busca">Buscar</a><a href="#lista">Resultados</a><a href="#cal-sec">Premiadas</a><a href="#crm-sec">Meu CRM</a>
+    <a href="#busca">Buscar</a><a href="#lista">Resultados</a><a href="#pesq-sec">Pesquisa PNCP</a><a href="#cal-sec">Premiadas</a><a href="#crm-sec">Meu CRM</a>
     <a href="#marc-sec">Palavras-chave</a><a href="#foco-sec">Seu foco</a><a href="#mais-ferramentas">Mais ferramentas</a>
   </nav>
   <div class="barra-paineis"><button type="button" class="mais" id="paineis-fechar">Esconder todos os painéis</button><button type="button" class="mais" id="paineis-abrir">Mostrar todos</button></div>
@@ -361,6 +373,23 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
     <aside class="previa" id="previa" aria-label="Prévia da licitação" hidden></aside>
   </div>
 
+  <section class="panel" id="pesq-sec" aria-labelledby="h-pesq">
+    <h2 id="h-pesq">Pesquisa nacional ao vivo (PNCP)</h2>
+    <p class="lede" id="pesq-lede"></p>
+    <div class="chips" id="pesq-faixas" role="group" aria-label="Faixa e tipo"></div>
+    <div class="pesq-filtros">
+      <label for="pesq-q">Palavra no objeto ou órgão<input id="pesq-q" type="search" placeholder="ex.: sustentação, digitalização"></label>
+      <label for="pesq-area">Área<select id="pesq-area"><option value="">Todas</option></select></label>
+      <label for="pesq-uf">UF<select id="pesq-uf"><option value="">Todas</option></select></label>
+      <label for="pesq-ord">Ordenar<select id="pesq-ord"><option value="nota">Melhor nota</option><option value="valor">Maior valor</option><option value="prazo">Prazo mais próximo</option></select></label>
+    </div>
+    <div class="acoes"><button type="button" class="abrir" id="pesq-copiar">Copiar a lista filtrada para o WhatsApp</button>
+      <button type="button" class="mais" id="pesq-csv">Baixar planilha (CSV)</button></div>
+    <p class="conta" id="pesq-conta" aria-live="polite"></p>
+    <textarea id="pesq-texto" class="pesq-texto" readonly hidden aria-label="Texto para copiar"></textarea>
+    <ol class="pesq-lista" id="pesq-lista"></ol>
+    <button type="button" class="mais" id="pesq-mais" hidden>Mostrar mais</button>
+  </section>
   <section class="panel" id="cal-sec" aria-labelledby="h-cal">
     <div class="vista-barra"><h2 id="h-cal" style="margin:0">Calendário de oportunidades premiadas</h2>
       <label class="marca">Nota mínima <input type="number" id="cal-min" min="0" max="100" step="5" value="55" style="width:72px"></label></div>
@@ -1081,6 +1110,94 @@ function csvAgenda(lista) {
       s.motivos.join(", "), x.pncp || "", x.orig || ""]));
   return "\ufeff" + linhas.map((l) => l.map((v) => `"${cel(v).replace(/"/g, '""')}"`).join(";")).join("\r\n");
 }
+
+/* ---------- pesquisa nacional ao vivo no PNCP (dados da última rodada, embutidos) */
+const PESQ = __PESQUISA__;
+const pesqEstado = { faixa: "todas", lim: 30 };
+const FAIXAS_P = [["todas", "Todas"], ["10mi", "Acima de R$ 10 mi"], ["5a10", "R$ 5 a 10 mi"], ["ate5", "Abaixo de R$ 5 mi"],
+  ["ust", "Com UST"], ["pf", "Com PF"], ["hora", "Com horas técnicas"], ["pagina", "Com páginas"], ["mensal", "Mensais/contínuos"]];
+const pesqVigentes = () => PESQ.itens.filter((x) => x.enc && new Date(x.enc) > new Date());
+function pesqNaFaixa(x, f) {
+  const v = x.vs ? 0 : x.v || 0;
+  return f === "todas" || (f === "10mi" && v >= 1e7) || (f === "5a10" && v >= 5e6 && v < 1e7) || (f === "ate5" && v < 5e6)
+    || (["ust", "pf", "hora", "pagina"].includes(f) && (x.vol || {})[f]) || (f === "mensal" && x.men);
+}
+function pesqFiltrados() {
+  const q = norm(document.getElementById("pesq-q").value || ""), area = document.getElementById("pesq-area").value, uf = document.getElementById("pesq-uf").value;
+  const r = pesqVigentes().filter((x) => pesqNaFaixa(x, pesqEstado.faixa) && (!area || x.a === area) && (!uf || x.uf === uf)
+    && (q.trim() === "" || q.trim().split(" ").every((p) => norm(`${x.obj} ${x.o} ${x.m}`).includes(" " + p) || norm(`${x.obj} ${x.o} ${x.m}`).includes(p))));
+  const o = document.getElementById("pesq-ord").value;
+  r.sort(o === "valor" ? (a, b) => ((b.vs ? 0 : b.v) || 0) - ((a.vs ? 0 : a.v) || 0) : o === "prazo" ? (a, b) => (a.enc < b.enc ? -1 : 1) : (a, b) => b.n - a.n || ((b.v || 0) - (a.v || 0)));
+  return r;
+}
+const NOMES_VP = { ust: "UST", pf: "PF", hora: "horas técnicas", pagina: "páginas" };
+const volTexto = (x) => Object.entries(x.vol || {}).filter(([k]) => NOMES_VP[k]).map(([k, q]) => `${fmt(q)} ${NOMES_VP[k]}`).join("; ");
+const prioP = (n) => (n >= 70 ? "Alta" : n >= 55 ? "Média" : "Baixa");
+function blocoWhats(i, x) {
+  const dh = (s) => s ? new Date(s).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" }).replace(",", " —") : "NÃO INFORMADO";
+  return [`🏛️ *LICITAÇÃO ${String(i).padStart(3, "0")} — ${x.o}*`, `📍 Local: ${x.m || ""}/${x.uf || ""}`,
+    `📑 ${x.mod || ""}: nº ${x.num || "NÃO INFORMADO"} · Processo ${x.proc || "NÃO INFORMADO"}`,
+    `💰 Valor global estimado: ${x.v ? brl(x.v) : "NÃO INFORMADO"}${x.vs ? " ⚠️ conferir (valor publicado parece erro)" : ""}`,
+    `📦 Objeto: ${x.obj}`, `📊 Quantidade: ${volTexto(x) || "NÃO LOCALIZADO"}`, `📅 Abertura: ${dh(x.ab)}`, `⏳ Prazo de propostas: ${dh(x.enc)}`,
+    `🖥️ Disputa: ${x.pl || "NÃO INFORMADO"}${x.srp ? " · Registro de preços" : ""}`, `🔗 PNCP: ${x.lp}`, x.lo ? `🔗 Portal: ${x.lo}` : "",
+    `📥 Edital: ${(x.ed || []).join(" | ") || "NÃO LOCALIZADO"}`, `📥 TR: ${(x.tr || []).join(" | ") || "NÃO LOCALIZADO como arquivo separado"}`,
+    `⭐ Prioridade: ${prioP(x.n)} (nota ${x.n}/100 — ${x.a})`, `✅ Confirmada no PNCP em ${PESQ.meta ? PESQ.meta.verificado : ""}`].filter(Boolean).join("\n");
+}
+async function pesqCopiar(texto) {
+  const ta = document.getElementById("pesq-texto");
+  ta.value = texto; ta.hidden = false; ta.focus(); ta.select();
+  try { await navigator.clipboard.writeText(texto); document.getElementById("pesq-conta").textContent = "Copiado. Cole no WhatsApp."; }
+  catch (e) { document.getElementById("pesq-conta").textContent = "O texto está selecionado na caixa abaixo: use Ctrl+C (ou toque e segure para copiar)."; }
+}
+function renderPesquisa() {
+  const sec = document.getElementById("pesq-sec");
+  if (!PESQ.itens.length) { document.getElementById("pesq-lede").textContent = "Nenhuma pesquisa nacional embutida nesta versão."; return; }
+  const vig = pesqVigentes(), venc = PESQ.itens.length - vig.length;
+  document.getElementById("pesq-lede").textContent = `Busca nas APIs oficiais do PNCP com ${PESQ.meta.termos} palavras-chave (UST, PF, HST, fábrica, desenvolvimento, sustentação, TIC e digitalização), `
+    + `conferida edital por edital em ${PESQ.meta.verificado}: ${fmt(PESQ.meta.examinados)} editais examinados, ${fmt(PESQ.itens.length)} de TI e gestão documental com prazo aberto`
+    + (venc ? ` (${fmt(venc)} já encerraram desde então e saíram da lista)` : "") + ". Profissionais, atestados e tecnologias exigem ler o edital: não estão aqui.";
+  document.getElementById("pesq-faixas").innerHTML = FAIXAS_P.map(([k, n]) => `<button type="button" data-pf="${k}" aria-pressed="${k === pesqEstado.faixa}">${esc(n)} <span style="opacity:.7">${fmt(vig.filter((x) => pesqNaFaixa(x, k)).length)}</span></button>`).join("");
+  const r = pesqFiltrados();
+  const soma = r.reduce((s, x) => s + (x.vs ? 0 : x.v || 0), 0);
+  document.getElementById("pesq-conta").textContent = `${fmt(r.length)} licitações · soma dos valores estimados ${brl(soma)}`;
+  document.getElementById("pesq-lista").innerHTML = r.slice(0, pesqEstado.lim).map((x, i) => {
+    const d = dias(x.enc);
+    return `<li><div class="topo"><span class="pill ${x.n >= 70 ? "p-ok" : x.n >= 55 ? "p-acc" : "p-off"}">nota ${x.n}</span><b>${esc(x.o)}</b><span class="conta">${esc(x.m || "")}/${esc(x.uf || "")}</span>${prazoPill(d)}</div>
+      <div class="linha"><span><strong>${x.v ? brl(x.v) : "valor não informado"}</strong>${x.vs ? " ⚠️ conferir" : ""}</span>${volTexto(x) ? `<span><strong>${esc(volTexto(x))}</strong></span>` : ""}
+        <span>${esc(x.mod || "")} ${x.num ? "nº " + esc(x.num) : ""}</span><span>propostas até ${x.enc ? dataHora(x.enc) : "—"}</span><span>${esc(x.a)}</span>${x.pl ? `<span>${esc(x.pl)}</span>` : ""}</div>
+      <p>${esc(x.obj)}</p>
+      <div class="links"><a href="${esc(x.lp)}" target="_blank" rel="noopener">PNCP</a>${x.lo ? `<a href="${esc(x.lo)}" target="_blank" rel="noopener">Portal da disputa</a>` : ""}
+        ${(x.ed || []).map((u, k) => `<a href="${esc(u)}" target="_blank" rel="noopener">Edital${k ? " " + (k + 1) : ""}</a>`).join("")}
+        ${(x.tr || []).map((u, k) => `<a href="${esc(u)}" target="_blank" rel="noopener">TR${k ? " " + (k + 1) : ""}</a>`).join("") || '<span class="conta">TR não localizado em separado</span>'}
+        <button type="button" class="mais" data-pw="${i}">Copiar p/ WhatsApp</button></div></li>`;
+  }).join("") || `<li class="conta">Nenhuma com esses filtros.</li>`;
+  document.getElementById("pesq-mais").hidden = r.length <= pesqEstado.lim;
+}
+(function iniciarPesquisa() {
+  const areas = [...new Set(PESQ.itens.map((x) => x.a))].sort(), ufs = [...new Set(PESQ.itens.map((x) => x.uf).filter(Boolean))].sort();
+  document.getElementById("pesq-area").innerHTML += areas.map((a) => `<option>${esc(a)}</option>`).join("");
+  document.getElementById("pesq-uf").innerHTML += ufs.map((u) => `<option>${u}</option>`).join("");
+  document.getElementById("pesq-faixas").addEventListener("click", (e) => { const b = e.target.closest("[data-pf]"); if (!b) return; pesqEstado.faixa = b.dataset.pf; pesqEstado.lim = 30; renderPesquisa(); });
+  for (const id of ["pesq-q", "pesq-area", "pesq-uf", "pesq-ord"]) document.getElementById(id).addEventListener("input", () => { pesqEstado.lim = 30; renderPesquisa(); });
+  document.getElementById("pesq-mais").addEventListener("click", () => { pesqEstado.lim += 30; renderPesquisa(); });
+  document.getElementById("pesq-lista").addEventListener("click", (e) => { const b = e.target.closest("[data-pw]"); if (!b) return;
+    const i = +b.dataset.pw; pesqCopiar(blocoWhats(i + 1, pesqFiltrados()[i])); });
+  document.getElementById("pesq-copiar").addEventListener("click", () => {
+    const r = pesqFiltrados();
+    const cab = `*PAINEL NACIONAL DIGITALGOV — pesquisa ao vivo no PNCP*\nVerificado em ${PESQ.meta ? PESQ.meta.verificado : ""}. ${r.length} licitações com prazo aberto.\n`;
+    pesqCopiar(cab + "\n" + r.map((x, i) => blocoWhats(i + 1, x)).join("\n\n"));
+  });
+  document.getElementById("pesq-csv").addEventListener("click", async () => {
+    const cel = (v) => { const s = String(v ?? ""); return /^[=+\-@]/.test(s) ? "'" + s : s; };
+    const linhas = [["nota", "prioridade", "area", "orgao", "municipio", "uf", "modalidade", "numero", "processo", "controle_pncp", "valor_estimado", "valor_suspeito",
+      "ust", "pf", "horas_tecnicas", "paginas", "abertura", "prazo_final", "registro_de_precos", "plataforma", "objeto", "link_pncp", "portal", "edital", "tr"]]
+      .concat(pesqFiltrados().map((x) => [x.n, prioP(x.n), x.a, x.o, x.m, x.uf, x.mod, x.num, x.proc, x.c, x.v ?? "", x.vs ? "sim" : "", (x.vol || {}).ust ?? "",
+        (x.vol || {}).pf ?? "", (x.vol || {}).hora ?? "", (x.vol || {}).pagina ?? "", x.ab ? dataHora(x.ab) : "", dataHora(x.enc), x.srp ? "sim" : "não", x.pl, x.obj, x.lp, x.lo || "",
+        (x.ed || [])[0] || "", (x.tr || [])[0] || ""]));
+    try { await baixarArquivo("pesquisa-nacional-pncp.csv", "\ufeff" + linhas.map((l) => l.map((v) => `"${cel(v).replace(/"/g, '""')}"`).join(";")).join("\r\n")); } catch (e) { /* recusado */ }
+  });
+  renderPesquisa();
+})();
 
 function renderCalendario() {
   const agora = new Date(), limite = new Date(agora.getFullYear() + 1, agora.getMonth() + 1, 1);
