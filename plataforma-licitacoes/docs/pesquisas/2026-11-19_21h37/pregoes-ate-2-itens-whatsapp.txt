@@ -1,0 +1,2848 @@
+*PREGÕES DE TIC COM ATÉ 2 ITENS — foco UST, PF, HST e fixo mensal*
+Fonte: PNCP, verificado em 19/11/2026 às 21:37 (Brasília). Só prazo de proposta aberto.
+
+🏛️ *001 — MINISTERIO DA JUSTICA E SEGURANCA PUBLICA*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 58
+🏷️ HST · TIC
+💰 R$ 107.412.480,00
+📦 Contratação de serviços de desenvolvimento, manutenção e sustentação de software para o Ministério da Justiça e Segurança Pública - MJSP, conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.
+📊 768.000 horas técnicas
+🧾 1 item(ns):
+   • Item 1: Implementação Ágil de Software Item 1 - Desenvolvimento. manutenção e sustentação de software. Unidade de Medida: Horas  — 768.000 HORA SERVIÇO TECNICO × R$ 139.86
+⏳ Propostas até 25/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/00394494000136/2026/1068
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00394494000136/compras/2026/1068/arquivos/2
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *002 — GOVERNO DO PARANA SECRETARIA DE ESTADO DA FAZENDA*
+📍 Curitiba/PR · 📑 Pregão - Eletrônico nº 18
+🏷️ HST · TIC
+💰 R$ 16.811.345,00
+📦 Contratação de empresa especializada no ramo para o Fornecimento de licenças de software, garantia de atualização de software (software assurance) e subscrições de software, considerando os licenciamentos Microsoft de propriedades da SEFA/REPR, assim como a prestação de serviços técnicos especializa
+📊 900 horas técnicas
+🧾 2 item(ns):
+   • Item 1: Cessão temporária de direitos sobre programas de computador locação de software Contratação de empresa. certificada pela — 16.532.777 UNIDADE × R$ 1.00
+   • Item 2: Serviços de consultoria em tecnologia da informação e comunicação (tic) Contratação de empresa habilitada e certificada  — 900 HORA × R$ 309.52
+⏳ Propostas até 23/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/76416890000189/2026/33
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/76416890000189/compras/2026/33/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *003 — RECEITA ESTADUAL DO PARANA*
+📍 Curitiba/PR · 📑 Pregão - Eletrônico nº 1457
+🏷️ UST · HST · TIC
+💰 R$ 16.811.341,94
+📦 Contratação de empresa especializada no ramo para o Fornecimento de licenças de software, garantia de atualização de software - software assurance - e subscrições de software, considerando os licenciamentos Microsoft de propriedades da SEFA/REPR
+📊 900 UST; 900 horas técnicas
+🧾 2 item(ns):
+   • Item 1: (L1) 208.56056-Prestação de Serviços. Subscrição de licenças de software com suporte técnico. UNID. DE MEDIDA: Unitário — 1 Unitário × R$ 16.532.777.00
+   • Item 2: (L2) 208.18939-Prestação de Serviços. TIPO: Tecnologia da Informação e Comunicação. UNID. DE MEDIDA: Unidade de Serviço  — 900 Unidade de Serviço Técnico × R$ 309.52
+⏳ Propostas até 23/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/78393592000146/2026/47
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/78393592000146/compras/2026/47/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *004 — TRIBUNAL DE JUSTICA DO ESTADO MATO GROSSO DO SUL*
+📍 Campo Grande/MS · 📑 Pregão - Eletrônico nº 139
+🏷️ Fixo mensal · TIC
+💰 R$ 15.039.471,60
+📦 Contratação de serviços continuados especializados em Tecnologia da Informação, compreendendo Service Desk N1, suporte presencial N2, gestão da base de conhecimento (KBA), logística e inventário de TI, coordenação operacional e agente virtual com IA, pelo período de 36 (trinta e seis) meses, conform
+📊 1 meses
+🧾 1 item(ns):
+   • Item 1: CENTRAL DE SERVIÇOS DE TIC Contratação de Serviços continuados especializados em Tecnologia da Informação. compreendendo — 1 VALOR FIXO MENSAL × R$ 15.039.471.60
+⏳ Propostas até 24/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/03979663000198/2026/281
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/03979663000198/compras/2026/281/arquivos/9
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/03979663000198/compras/2026/281/arquivos/3
+
+🏛️ *005 — MUNICIPIO DE ITAQUAQUECETUBA*
+📍 Itaquaquecetuba/SP · 📑 Pregão - Eletrônico nº 36
+🏷️ HST · TIC
+💰 R$ 9.228.484,77
+📦 Contratação de Empresa Especializada para prestação de serviços de licenciamento de uso de softwares integrados de gestão pública – Secretaria Municipal de Planejamento e Finanças
+📊 1.000 horas técnicas
+🧾 1 item(ns):
+   • Item 1: Cessão temporária de direitos sobre programas de computador locação de software Cessão temporária de direitos sobre prog — 1 UNIDADE × R$ 9.228.484.77
+⏳ Propostas até 07/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/46316600000164/2026/221
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46316600000164/compras/2026/221/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *006 — DEPARTAMENTO ESTADUAL DE TRANSITO DO ESPIRITO SANTO*
+📍 Vitória/ES · 📑 Pregão - Eletrônico nº 017
+🏷️ UST · TIC
+💰 R$ 6.400.000,00
+📦 Contratação de empresa para prestação de serviços de suporte técnico de TI (ServiceDesk), nos níveis N1, N2 e nível especializado N3, visando a manutenção e otimização dos sistemas e infraestrutura tecnológica do DETRAN|ES.
+📊 50.000 UST
+🧾 1 item(ns):
+   • Item 1: SERVICO TECNICO ESPECIALIZADO - UNIDADE DE SERVIÇO TÉCNICO — 50.000 1 UST × R$ 128.00
+⏳ Propostas até 24/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/28162105000166/2026/72
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/28162105000166/compras/2026/72/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *007 — MUNICIPIO DE ARIQUEMES*
+📍 Ariquemes/RO · 📑 Pregão - Eletrônico nº 380
+🏷️ UST · TIC
+💰 R$ 3.952.158,21
+📦 Registro de preços para futura e eventual contratação de serviço técnico e especializado na área de Tecnologia da Informação e Comunicação (TIC), compreendendo assessoramento de atividades de segurança da informação, ações de governança de TIC que abrangem planejamento, implantação, monitoramento, o
+📊 68.937 UST
+🧾 1 item(ns):
+   • Item 1: Elaboração / Análise Projeto - Engenharia Elaboração / Análise Projeto - Engenharia. SERVIÇO TÉCNICO E ESPECIALIZADO NA  — 68.937 UNIDADE × R$ 57.33
+⏳ Propostas até 09/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/04104816000116/2026/321
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/04104816000116/compras/2026/321/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *008 — SECRETARIA DE ESTADO DE EDUCACAO DE MATO GROSSO DO SUL*
+📍 Campo Grande/MS · 📑 Pregão - Eletrônico nº 001
+🏷️ Fixo mensal · TIC
+💰 R$ 3.346.771,00
+📦 CONTRATAÇÃO DE SERVIÇOS DE SEGURANÇA DA INFORMAÇÃO ENVOLVENDO SOLUÇÃO DE HARDWARE, SOFTWARE, ASSINATURAS DE ATUALIZAÇÃO, INSTALAÇÃO, TREINAMENTO, CUSTOMIZAÇÃO E SUPORTE TÉCNICO QUALIFICADO EM PROTEÇÃO E INSPEÇÃO DE TRÁFEGO EM REDES CORPORATIVAS, CONFORME ESPECIFICAÇÕES TÉCNICAS, INCLUINDO OS APPLIAN
+📊 12 meses
+🧾 2 item(ns):
+   • Item 1: Solução de Segurança da Informação EndPoint. conforme termo de referência. — 12 serv - 1 - Mês × R$ 271.318.71
+   • Item 2: Serviços de Implantação - Serviços Técnicos Especializados. — 1 1 - Un. × R$ 90.946.48
+⏳ Propostas até 23/11/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/02585924000122/2026/1107
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/02585924000122/compras/2026/1107/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/02585924000122/compras/2026/1107/arquivos/4
+
+🏛️ *009 — ESTADO DA BAHIA*
+📍 Salvador/BA · 📑 Pregão - Eletrônico nº PE 07/2026
+🏷️ UST · TIC
+💰 R$ 1.648.716,00
+📦 Contratação de Prestação de Serviços Técnicos de Atendimento e Suporte ao Usuário em 1º Nível e 2º Nível e operação da Central de Serviços de TIC, nesta Secretaria de Justiça e Direitos Humanos SJDH, incluindo as Unidades do PROCON em Salvador e Região Metropolitana.
+📊 400 UST
+🧾 2 item(ns):
+   • Item 10001: ATENDIMENTO E SUPORTE ao usuário com implantação de Central de Serviços (Service Desk). seguindo o conjunto de melhores  — 1 UNIDADE × R$ 1.559.916.00
+   • Item 10002: SERVIÇO DE SUPORTE A PROJETOS NO AMBIENTE DE TI. para execução de rotinas e aplicações necessárias para manter o funcion — 400 UNIDADE × R$ 222.00
+⏳ Propostas até 30/11/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/13937032000160/2026/3060
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/13937032000160/compras/2026/3060/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *010 — MUNICIPIO DE LUIS EDUARDO MAGALHAES*
+📍 Luís Eduardo Magalhães/BA · 📑 Pregão - Eletrônico nº 029
+🏷️ Fixo mensal · TIC
+💰 R$ 1.541.723,67
+📦 Contratação de pessoa jurídica especializada para a prestação de serviços continuados, por meio da utilização de software de gestão, contemplando a manutenção preventiva e corretiva, calibração, ensaios de segurança elétrica, qualificação e gerenciamento do parque tecnológico dos equipamentos médico
+📊 12 meses
+🧾 2 item(ns):
+   • Item 1: Contratação de pessoa jurídica especializada para a prestação de serviços continuados. por meio da utilização de softwar — 12 Serviço mensal × R$ 97.090.30
+   • Item 2: Peças. sob demanda com aprovação prévia de 3 (três) propostas. observando-se que o valor não poderá ultrapassar o percen — 1 Reserva financeira × R$ 376.640.07
+⏳ Propostas até 02/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/04214419000105/2026/109
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/04214419000105/compras/2026/109/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *011 — MUNICIPIO DE CONCORDIA*
+📍 Concórdia/SC · 📑 Pregão - Eletrônico nº PCE 161
+🏷️ Fixo mensal · TIC
+💰 R$ 1.520.893,60
+📦 contratação de empresa especializada para disponibilização de solução web, com licença de uso na modalidade Software as a Service (SaaS), destinada à gestão da comunicação interna e externa, de documentos e processos digitais, incluindo os serviços de implantação, migração de dados, manutenção, atua
+📊 60 meses
+🧾 2 item(ns):
+   • Item 1: Sistema web. para gestão da comunicação interna. externa. documental das unidades administrativas contemplando os seguin — 60 MÊS (MÊS) × R$ 24.500.00
+   • Item 2: Implantação da solução. compreendendo os serviços de configuração. parametrização. migração dos dados existentes. treina — 1 UNIDADE (UNID) × R$ 50.893.60
+⏳ Propostas até 27/11/2026 — 08:15
+🔗 https://pncp.gov.br/app/editais/83024257000100/2026/505
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/83024257000100/compras/2026/505/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/83024257000100/compras/2026/505/arquivos/4
+
+🏛️ *012 — MUNICIPIO DE RIO BRANCO*
+📍 Rio Branco/AC · 📑 Pregão - Eletrônico nº 47
+🏷️ UST · TIC
+💰 R$ 1.264.011,00
+📦 Contratação de empresa especializada para fornecimento de licença de uso, suporte técnico especializado (remoto e presencial), manutenção corretiva, manutenção evolutiva e evolução tecnológica de solução de automação e gestão de processos judiciais, administrativos e de execução fiscal da Procurador
+📊 800 UST
+🧾 2 item(ns):
+   • Item 1: Licenciamento de Direitos Permanentes de Uso de Software para Servidor Licenciamento de Direitos Permanentes de Uso de S — 12 UNIDADE × R$ 87.236.58
+   • Item 2: Auxiliar de Serviços Técnicos Auxiliar de Serviços Técnicos A Unidade è em Mês 12 x 18.097.67 = 217.172.04 — 12 UNIDADE × R$ 18.097.67
+⏳ Propostas até 04/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/04034583000122/2026/191
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/04034583000122/compras/2026/191/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/04034583000122/compras/2026/191/arquivos/2
+
+🏛️ *013 — MUNICIPIO DE GUAPORE*
+📍 Guaporé/RS · 📑 Pregão - Eletrônico nº 195 | Processo 1280
+🏷️ Fixo mensal · TIC
+💰 R$ 1.230.000,00
+📦 CONTRATACAO DE EMPRESA ESPECIALIZADA EM SOLUCAO INTEGRADA DE SISTEMAS DE GESTAO PUBLICA COM IMPLANTACAO LICENCIAMENTO LOCACAO MIGRACAO INTEGRAL DE DADOS HOSPEDAGEM EM TERRITORIO NACIONAL MANUTENCAO SUPORTE ATUALIZACAO LEGAL E TECNOLOGICA INTEGRACOES SEGURANCA DA INFORMACAO CONTINUIDADE REVERSIBILIDA
+📊 12 meses
+🧾 1 item(ns):
+   • Item 1: SOLUCAO INTEGRADA DE SISTEMAS DE GESTAO PUBLICA — 12 MES × R$ 102.500.00
+⏳ Propostas até 01/12/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/87862397000109/2026/965
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/87862397000109/compras/2026/965/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *014 — TRIBUNAL DE CONTAS DO CEARA*
+📍 Fortaleza/CE · 📑 Pregão - Eletrônico nº 145
+🏷️ UST · TIC
+💰 R$ 1.161.690,00
+📦 Contratação de serviço de fornecimento de créditos, sob demanda, em nuvem pública Google Cloud Platform (GCP) e Serviços Técnicos Especializados, conforme quantitativos e especifi-cações constantes no Anexo I deste Edital.
+📊 27.332 UST
+🧾 2 item(ns):
+   • Item 1: Software como Servico - Saas Créditos de Serviço em Nuvem Pública Google (GCP) para consumo em IaaS. PaaS. SaaS e APIs d — 1.045.000 UNIDADE × R$ 0.89
+   • Item 2: Serviços de Consultoria em Tecnologia da Informação e Comunicação (TIC) Serviços Técnicos Especializados de TI sob deman — 2.000 UND SERVIÇO TÉCNICO × R$ 115.82
+⏳ Propostas até 02/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/09499757000146/2026/77
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/09499757000146/compras/2026/77/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *015 — CONSELHO FEDERAL DE ADMINISTRACAO*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 8
+🏷️ HST · TIC
+💰 R$ 1.074.980,76
+📦 Contratação, em regime de lote único, de solução tecnológica integrada para gestão de pessoas, compreendendo, de forma indissociável, os serviços de suporte técnico, implantação, capacitação presencial de usuários e fornecimento de banco de horas para atendimento de demandas técnicas especializadas.
+📊 1.500 horas técnicas
+🧾 1 item(ns):
+   • Item 1: Software como servico - saas Software como servico - saas - contratação. em regime de lote único. de solução tecnológica — 1 UNIDADE × R$ 1.074.980.76
+⏳ Propostas até 26/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/34061135000189/2026/28
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/34061135000189/compras/2026/28/arquivos/3
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/34061135000189/compras/2026/28/arquivos/1
+
+🏛️ *016 — MUNICIPIO DE ALAGOINHAS*
+📍 Alagoinhas/BA · 📑 Pregão - Eletrônico nº PE 034
+🏷️ Fixo mensal · TIC
+💰 R$ 750.483,36
+📦 [Portal de Compras Públicas] - PRESTAÇÃO DOS SERVIÇOS DE LOCAÇÃO DE RELÓGIOS DE PONTO ELETRÔNICO, COM LEITOR FACIAL E BIOMÉTRICO, INCLUINDO SISTEMA/SOFTWARE PARA A GESTÃO DO PONTO ELETRÔNICO, IMPLANTAÇÃO, CONFIGURAÇÃO, TREINAMENTO, SUPORTE TÉCNICO, MANUTENÇÃO PREVENTIVA E CORRETIVA, CENTRAL DE CHAMA
+📊 12 meses
+🧾 1 item(ns):
+   • Item 1: LOTE 01 - Locação de equipamentos para registro do Ponto Eletrônico dos servidores públicos do município de Alagoinhas-B — 12 Mês × R$ 62.540.28
+⏳ Propostas até 03/12/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/13646005000138/2026/182
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/13646005000138/compras/2026/182/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *017 — MUNICIPIO DE CACHOEIRA DO SUL*
+📍 Cachoeira do Sul/RS · 📑 Pregão - Eletrônico nº 149
+🏷️ Fixo mensal · TIC
+💰 R$ 508.059,80
+📦 [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM IMPLANTAÇÃO DE SISTEMA DE GESTÃO DE SAÚDE, LOCAÇÃO DE SERVIDOR REMOTO, LICENCIAMENTO ANUAL DE USO DE SOFTWARE, GESTÃO E TREINAMENTO.
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Lote 1 - SERVICO MENSAL DE UTILIZACAO DE SOFTWARE. — 12 Mês × R$ 37.326.74
+   • Item 2: Lote 1 - AQUISICAO DE LICENCA DE SOFTWARE CONFORME PROJETO BASICO — 1 Unidade × R$ 60.138.92
+⏳ Propostas até 09/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/87530978000143/2026/476
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *018 — MUNICIPIO DE BIRIGUI*
+📍 Birigui/SP · 📑 Pregão - Eletrônico nº 157
+🏷️ Fixo mensal · TIC
+💰 R$ 444.879,87
+📦 Contratação para o fornecimento de solução tecnológica de gerenciamento e acompanhamento de processos judiciais físicos e eletrônicos, extrajudiciais, expedientes consultivos e procedimentos da cobrança administrativa, com funcionalidades para gestão eletrônica de documentos e fluxos automatizados e
+📊 12 meses
+🧾 2 item(ns):
+   • Item 1: PRESTAÇÃO DE SERVIÇO - CONCESSÃO DE LICENÇA E USO DE SOFTWARE DE CONTROLE DE EXECUÇÕES FISCAIS. POR LOCAÇÃO. BEM COMO CO — 12 MESES × R$ 33.747.17
+   • Item 2: PRESTAÇÃO DE SERVIÇO - TAXA DE IMPLANTAÇÃO (CONVERSÃO. CUSTOMIZAÇÃO) DE PROGRAMA DE COMPUTADOR (SOFTWARE) DE EXECUÇÕES F — 1 UN × R$ 39.913.83
+⏳ Propostas até 02/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/46151718000180/2026/697
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *019 — FUNDO MUNICIPAL DE SAUDE DE BOA ESPERANCA*
+📍 Boa Esperança/ES · 📑 Pregão - Eletrônico nº 000011
+🏷️ Fixo mensal · TIC
+💰 R$ 433.916,88
+📦 Contratação de empresa especializada para a prestação de serviços continuados de assistência técnica em equipamentos de informática e infraestrutura de Tecnologia da Informação – TI, compreendendo manutenção preventiva e corretiva, suporte técnico aos usuários, gerenciamento e manutenção de redes, s
+📊 12 meses
+🧾 2 item(ns):
+   • Item 1: PRESTAÇÃO DE SERVIÇOS CONTINUADOS DE ASSISTÊNCIA TÉCNICA — 12 MES × R$ 18.079.87
+   • Item 2: PRESTAÇÃO DE SERVIÇOS CONTINUADOS DE ASSISTÊNCIA TÉCNICA — 12 MES × R$ 18.079.87
+⏳ Propostas até 24/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/11431661000198/2026/24
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *020 — MUNICIPIO DE BOA ESPERANCA*
+📍 Boa Esperança/ES · 📑 Pregão - Eletrônico nº 000011
+🏷️ Fixo mensal · TIC
+💰 R$ 433.916,88
+📦 [Portal de Compras Públicas] - Contratação de empresa especializada para a prestação de serviços continuados de assistência técnica em equipamentos de informática e infraestrutura de Tecnologia da Informação â TI, compreendendo manutenção preventiva e corretiva, suporte técnico aos usuários, gerenci
+📊 24 meses
+🧾 1 item(ns):
+   • Item 1: PRESTACAO DE SERVICOS CONTINUADOS DE ASSISTENCIA TECNICA Contratacao de empresa especializada para prestacao de servicos — 24 Mês × R$ 18.079.87
+⏳ Propostas até 24/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/27167436000126/2026/103
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *021 — MUNICIPIO DE PERUIBE*
+📍 Peruíbe/SP · 📑 Pregão - Eletrônico nº PE 60
+🏷️ Fixo mensal · TIC
+💰 R$ 420.606,60
+📦 CONTRATAÇÃO DE LICENÇA MENSAL DE USO DE SISTEMA INFORMATIZADO PARA ACOMPANHAMENTO EDUCACIONAL CONTÍNUO DA REDE MUNICIPAL.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 2335145: Licença mensal de uso de sistema informatizado para acompanhamento educacional contínuo da rede municipal. contemplando  — 12 MES × R$ 35.050.55
+⏳ Propostas até 01/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/46578514000120/2026/341
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *022 — SAO PAULO TRIBUNAL DE JUSTICA*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 275
+🏷️ Fixo mensal · TIC
+💰 R$ 355.302,60
+📦 Fornecimento de licença de uso de software especializado, em ambiente de nuvem (SaaS), sob regime de assinatura mensal, contemplando atualização e suporte, destinado ao gerenciamento e monitoramento dos sistemas de alarme de intrusão instalados nos prédios ocupados pelo Tribunal de Justiça.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Licenciamento de Direitos Permanentes de Uso de Outros Softwares / Programas de Computador Licenciamento de Direitos Per — 60 UNIDADE × R$ 5.921.71
+⏳ Propostas até 09/12/2026 — 11:00
+🔗 https://pncp.gov.br/app/editais/51174001000193/2026/375
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *023 — MUNICIPIO DE PIRACAIA*
+📍 Piracaia/SP · 📑 Pregão - Eletrônico nº PE 46
+🏷️ Fixo mensal · TIC
+💰 R$ 340.017,00
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇO DE SUPORTE TÉCNICO AVANÇADO À ESTRUTURA DE TECNOLOGIA DA INFORMAÇÃO DO MUNICÍPIO DE PIRACAIA, ABRANGENDO O GERENCIAMENTO TÉCNICO E OPERACIONAL DOS SERVIDORES, DA INFRAESTRUTURA DE ARMAZENAMENTO (STORAGE), DOS FIREWALLS E DOS SERVIÇOS A
+📊 12 meses
+🧾 1 item(ns):
+   • Item 1: CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇO DE SUPORTE TÉCNICO AVANÇADO À ESTRUTURA DE TECNOLOGIA D — 12 MES × R$ 28.334.75
+⏳ Propostas até 01/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/45279627000161/2026/102
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *024 — TRIBUNAL REGIONAL ELEITORAL DE MATO GROSSO DO SUL*
+📍 Campo Grande/MS · 📑 Pregão - Eletrônico nº 146
+🏷️ Fixo mensal · TIC
+💰 R$ 333.776,04
+📦 Prestação de serviços de suporte técnico profissional, manutenção (corretiva e evolutiva) e sustentação da aplicação "GLPI / Central de Serviços".
+📊 12 meses
+🧾 1 item(ns):
+   • Item 1: Central de Serviços de TIC Serviços de Suporte Técnico Profissional à aplicação GLPI. com fornecimento de assinatura GLP — 12 MÊS / MESES × R$ 27.814.67
+⏳ Propostas até 01/12/2026 — 14:00
+🔗 https://pncp.gov.br/app/editais/03883929000102/2026/85
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *025 — MUNICIPIO DE LIMA DUARTE*
+📍 Lima Duarte/MG · 📑 Pregão - Eletrônico nº 62
+🏷️ Fixo mensal · TIC
+💰 R$ 327.999,96
+📦 [Portal de Compras Públicas] - Prestação de serviços especializados de manutenção e suporte do sistema municipal de videomonitoramento Projeto Olho Vivo, cumulada com locação de solução de expansão tecnológica composta por câmeras LPR, câmeras com reconhecimento facial por inteligência artificial em
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Prestação de serviços especializados de manutenção e suporte do sistema municipal de videomonitoramento Projeto Olho Viv — 12 Mês × R$ 27.333.33
+⏳ Propostas até 27/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/18338186000159/2026/176
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *026 — MUNICIPIO DE LAGUNA*
+📍 Laguna/SC · 📑 Pregão - Eletrônico nº 77-1
+🏷️ Fixo mensal · TIC
+💰 R$ 257.508,00
+📦 Contratação de empresa especializada para fornecimento de licença de uso de software, treinamento de usuários, migração de dados, suporte técnico, manutenções corretivas e/ou evolutivas e desenvolvimento de melhorias para atender à rede municipal de ensino vinculada à Secretaria de Educação e Esport
+📊 ver itens
+🧾 2 item(ns):
+   • Item 2341449: Implantacao. configuracao. treinamento e migracao de dados.Implantacao. configuracao. treinamento e migracao de dados. — 1 UNIDADE × R$ 7.500.00
+   • Item 2341450: Hospedagem. backup. manutencoes. atualizacoes. suporte remoto aos usuariosHospedagem. backup. manutencoes. atualizacoes. — 12 Mes × R$ 20.834.00
+⏳ Propostas até 01/12/2026 — 13:45
+🔗 https://pncp.gov.br/app/editais/82928706000182/2026/87
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *027 — MUNICIPIO DE CONGONHINHAS*
+📍 Congonhinhas/PR · 📑 Pregão - Eletrônico nº 22
+🏷️ Fixo mensal · TIC
+💰 R$ 255.689,04
+📦 Registro de Preços para futura e eventual contratação de empresa especializada para a prestação continuada de serviços técnicos de licenciamento ambiental e topografia, com disponibilização de suporte técnico ao Município e atendimento às demandas que surgirem durante a vigência contratual, compreen
+📊 12 meses
+🧾 2 item(ns):
+   • Item 1: Serviço Engenharia Serviço Engenharia — 12 MÊS / MESES × R$ 13.193.33
+   • Item 2: Estudos e Projetos de Topografia Estudos e Projetos de Topografia.(Unidade de medida: mês). — 12 UNIDADE × R$ 8.114.09
+⏳ Propostas até 24/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/75825828000188/2026/84
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/75825828000188/compras/2026/84/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/75825828000188/compras/2026/84/arquivos/3
+
+🏛️ *028 — MUNICIPIO DE JUQUITIBA*
+📍 Juquitiba/SP · 📑 Pregão - Eletrônico nº 17
+🏷️ Fixo mensal · TIC
+💰 R$ 253.997,13
+📦 Contratação de empresa especializada para o fornecimento de licença de uso de solução tecnológica de gestão de processos judiciais, extrajudiciais e expedientes consultivos, abrangendo instalação, treinamento, suporte técnico, manutenção corretiva e evolutiva, atualização tecnológica, parametrizaçõe
+📊 12 meses
+🧾 2 item(ns):
+   • Item 1: Licença mensal de uso da Solução Tecnológica de Gestão de Processos Judiciais. Extrajudiciais e Expedientes Consultivos. — 12 MÊS × R$ 19.518.33
+   • Item 2: Instalação da Solução Tecnológica de Gestão de Processos Judiciais. Extrajudiciais e Expedientes Consultivos. compreende — 1 UND × R$ 19.777.17
+⏳ Propostas até 25/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/46523155000103/2026/304
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *029 — MUNICIPIO DE JAGUARUANA*
+📍 Jaguaruana/CE · 📑 Pregão - Eletrônico nº 90024-2026-PE-DIV
+🏷️ Fixo mensal · TIC
+💰 R$ 227.040,00
+📦 CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA NO FORNECIMENTO DE SOLUÇÃO TECNOLÓGICA DE GESTÃO ELETRÔNICA DE PESSOAS, NA MODALIDADE SOFTWARE COMO SERVIÇO (SAAS), ACOMPANHADA DE SUPORTE TÉCNICO ESPECIALIZADO E SERVIÇOS INTEGRADOS DE ASSESSORIA, VOLTADOS À MODERNIZAÇÃO DOS PROCESSOS ADMINISTRATIVOS DE 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: GESTÃO DE FREQUÊNCIA ELETRÔNICA WEB PARA SERVIDORES POR MEIO DE 88 TABLETS PARA LEITURA FACIAL. INCLUINDO SUPORTE TÉCNIC — 12 Mês × R$ 18.920.00
+⏳ Propostas até 26/11/2026 — 10:10
+🔗 https://pncp.gov.br/app/editais/07615750000117/2026/117
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *030 — MUNICIPIO DE ILHA DE ITAMARACA*
+📍 Ilha de Itamaracá/PE · 📑 Pregão - Eletrônico nº 00013
+🏷️ Fixo mensal · TIC
+💰 R$ 224.838,72
+📦 Registro de Preço para contratação de empresa especializada na prestação de serviço de acesso à internet via banda larga empresarial para 72 (setenta e dois) pontos de acesso, com velocidade de referência de 500 Mbps, incluindo instalação de rede própria em cada ponto de acesso, fornecimento de equi
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Registro de Preço para contratação de empresa especializada na prestação de serviço de acesso à internet via banda larga — 1 MÊS × R$ 224.838.72
+⏳ Propostas até 30/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/09680315000100/2026/32
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *031 — MUNICIPIO DE SAO SEBASTIAO DO ANTA*
+📍 São Sebastião do Anta/MG · 📑 Pregão - Eletrônico nº RE135
+🏷️ Fixo mensal · TIC
+💰 R$ 190.899,36
+📦 Contratação de empresa especializada para a locação de licença de uso de sistema integrado de gestão pública municipal, compreendendo a implantação, configuração, migração de dados, treinamento, suporte técnico e manutenção, quando aplicáveis, dos módulos de Contabilidade Pública, Gestão de Compras,
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LOCAÇÃO DE LICENÇA DE USO DE SISTEMA INTEGRADO DE GESTÃO PÚBLICA MUNICIPAL. COMPOSTO PELOS MÓDULOS DE CONTABILIDADE PÚBL — 12 Mês × R$ 15.908.28
+⏳ Propostas até 24/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/01613123000160/2026/135
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *032 — FUNDO MUNICIPAL DE SAUDE GOIANESIA DO PARA*
+📍 Goianésia do Pará/PA · 📑 Pregão - Eletrônico nº 009
+🏷️ Fixo mensal · TIC
+💰 R$ 179.413,20
+📦 [LICITANET] - CONTRATAÇÃO DE EMPRESA PARA PRESTAÇÃO DE SERVIÇOS DE ASSISTÊNCIA TÉCNICA, LOCAÇÃO E MANUTENÇÃO MENSAL DOS SOFTWARE ADMINISTRATIVOS PARA GESTÃO DO ALMOXARIFADO, FARMÁCIA, HOSPITAL, UBS E POSTOS DE SAÚDE DO MUNICÍPIO DE GOIANÉSIA DO PARÁ
+📊 12 meses
+🧾 1 item(ns):
+   • Item 8213772: Sistema de Gestão nos módulos Farmácia. Almoxarifado. UBS e Postos de Saúde e Hospital. incluindo assistência técnica. l — 12 MÊS × R$ 14.951.10
+⏳ Propostas até 30/11/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/12884091000154/2026/6
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *033 — MUNICIPIO DE PENEDO*
+📍 Penedo/AL · 📑 Pregão - Eletrônico nº 30
+🏷️ Fixo mensal · TIC
+💰 R$ 175.842,94
+📦 A ESCOLHA DA PROPOSTA MAIS VANTAJOSA PARA CESSÃO DE USO (LOCAÇÃO) DE SISTEMA INFORMATIZADO EM PLATAFORMA WEB PARA GESTÃO DAS CONTRATAÇÕES PÚBLICAS, PLANEJAMENTO DAS CONTRATAÇÕES, GERENCIAMENTO DE PROCESSOS LICITATÓRIOS E GESTÃO DE COMPRAS DO MUNICÍPIO, INCLUINDO IMPLANTAÇÃO, MIGRAÇÃO DE DADOS, TREIN
+📊 1 meses
+🧾 1 item(ns):
+   • Item 1: CESSÃO DE USO (LOCAÇÃO) DE SISTEMA INFORMATIZADO EM PLATAFORMA WEB PARA GESTÃO DAS CONTRATAÇÕES PÚBLICAS. PLANEJAMENTO D — 1 MES × R$ 175.842.94
+⏳ Propostas até 25/11/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/12243697000100/2026/65
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *034 — MUNICIPIO DE ITUVERAVA*
+📍 Ituverava/SP · 📑 Pregão - Eletrônico nº 048/2026-R
+🏷️ Fixo mensal · TIC
+💰 R$ 173.117,52
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS DE SUPORTE, ADMINISTRAÇÃO E MONITORAMENTO DA INFRAESTRUTURA DE TECNOLOGIA DA INFORMAÇÃO – CONFORME ANEXO I DO EDITAL
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: LICENÇA PARA USO DE LICENÇA DE FIREWALL — 12 Mês × R$ 4.497.30
+   • Item 2: SERVIÇO DE SUPORTE ESPECIALIZADO EM FIREWALL. SERVIDORES e BACKUP (EXCLUSIVO P/ MÁQUINAS VIRTUAIS. SIITEMA e CONFIGURAÇÕ — 12 Mês × R$ 9.929.16
+⏳ Propostas até 02/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/46710422000151/2026/1470
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *035 — CAMARA MUNICIPAL DE SAO JOAO DA BOA VISTA*
+📍 São João da Boa Vista/SP · 📑 Pregão - Eletrônico nº 002
+🏷️ Fixo mensal · TIC
+💰 R$ 165.243,90
+📦 Locação de software em plataforma web, destinado à desmaterialização de documentos e à gestão eletrônica do processo legislativo, incluindo funcionalidades de protocolo, tramitação, compilação de leis, assinatura digital, GED e integração com portal eletrônico acessível (recursos de leitura em Libra
+📊 12 meses
+🧾 2 item(ns):
+   • Item 1: Serviços técnicos especializados compreendendo a implantação do sistema. migração e conversão de dados. treinamento dos  — 1 SERVICO × R$ 18.259.50
+   • Item 2: Locação de software em plataforma web para gestão do processo legislativo. incluindo licença de uso. suporte técnico e m — 12 MÊS × R$ 12.248.70
+⏳ Propostas até 03/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/54682836000142/2026/54
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *036 — MUNICIPIO DE CORUMBAIBA*
+📍 Corumbaíba/GO · 📑 Pregão - Presencial nº (2585) | 43-0
+🏷️ Fixo mensal · TIC
+💰 R$ 151.462,32
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA LOCAÇÃO DE SOFTWARE DE SISTEMA DE GESTÃO PARA A ADMINISTRAÇÃO PÚBLICA DIRETA E INDIRETA.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LOCAÇÃO DE SOFTWARE DE SISTEMA DE GESTÃO PARA A ADMINISTRAÇÃO PÚBLICA MUNICIPAL DIRETA E INDIRETA. — 12 MENSAL × R$ 12.621.86
+⏳ Propostas até 26/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/01302603000100/2026/173
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *037 — MUNICIPIO DE BANANAL*
+📍 Bananal/SP · 📑 Pregão - Eletrônico nº 043/2026
+🏷️ Fixo mensal · TIC
+💰 R$ 142.030,56
+📦 Contratação de empresa especializada para prestação continuada de serviços técnicos de assessoria em Tecnologia da Informação e Comunicação – TIC e apoio à adequação, implementação e manutenção de medidas de conformidade à Lei Geral de Proteção de Dados – LGPD.
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Serviços técnicos continuados de assessoria em TIC. compreendendo planejamento de TI. governança de TIC. segurança da in — 12 Mês × R$ 5.632.74
+   • Item 2: Serviços técnicos continuados de apoio à adequação. implementação e manutenção de medidas de conformidade à Lei Geral de — 12 Mês × R$ 6.203.14
+⏳ Propostas até 23/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/45196698000109/2026/51
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *038 — CAMARA MUNICIPAL DE LINHARES*
+📍 Linhares/ES · 📑 Pregão - Eletrônico nº 010
+🏷️ Fixo mensal · TIC
+💰 R$ 115.861,20
+📦 [Portal de Compras Públicas] - Contratação de empresa especializada para locação de solução completa de SistemaEletrônico de Votação e Gerenciamento do Plenário, incluindo fornecimento deequipamentos e softwares, instalação, configuração, treinamento de usuários, suporte técnico, manutenção preventi
+📊 12 meses
+🧾 1 item(ns):
+   • Item 1: Solucao completa de Sistema Eletronico de Votacao e Gerenciamento do Plenario - Contratacao de empresa especializada par — 12 Mês × R$ 9.655.10
+⏳ Propostas até 25/11/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/01975290000151/2026/53
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *039 — MUNICIPIO DE MINACU*
+📍 Minaçu/GO · 📑 Pregão - Eletrônico nº 051
+🏷️ Fixo mensal · TIC
+💰 R$ 115.119,60
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE SOFTWARE COMO SERVIÇO SAAS – (USN – UND SERVIÇO EM NUVEM), PARA ATENDER AS NECESSIDADES DO PODER EXECUTIVO E FUNDO MUNICIPAL DE SAÚDE DO MUNICÍPIO DE MINAÇU – GO”.
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: LOCAÇÃO E OPERAÇÃO DE SERVIDOR DEDICADO ENTERPRISE EM NUVEM PARA HOSPEDAGEM E EXECUÇÃO DE APLICAÇÕES E BANCOS DE DADOS M — 12 MÊS × R$ 5.347.40
+   • Item 2: SOFTWARE COMO SERVIÇO - SAAS - (USN- UND SERVIÇO EM NUVEM) - ATENDER ESUS — 12 MÊS × R$ 4.245.90
+⏳ Propostas até 30/11/2026 — 08:29
+🔗 https://pncp.gov.br/app/editais/02215275000178/2026/1108
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *040 — CAMARA MUNICIPAL DE PORTO ALEGRE*
+📍 Porto Alegre/RS · 📑 Pregão - Eletrônico nº 0042
+🏷️ Fixo mensal · TIC
+💰 R$ 114.000,00
+📦 Contratação de empresa especializada para prestação de serviços continuados de suporte técnico e assistência técnica, em regime 24x7x365, para 2 (dois) servidores Dell PowerEdge R740 de infraestrutura de TI, abrangendo manutenção preventiva, corretiva e evolutiva, com fornecimento das peças e compon
+📊 60 meses
+🧾 2 item(ns):
+   • Item 1: Serviço continuado de suporte técnico e assistência técnica. em regime 24x7x365. com manutenção preventiva. corretiva e  — 60 mes × R$ 950.00
+   • Item 2: Serviço continuado de suporte técnico e assistência técnica. em regime 24x7x365. com manutenção preventiva. corretiva e  — 60 mes × R$ 950.00
+⏳ Propostas até 07/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/89522437000107/2026/113
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *041 — MUNICIPIO DE NOVA ALIANCA DO IVAI*
+📍 Nova Aliança do Ivaí/PR · 📑 Pregão - Eletrônico nº 34
+🏷️ Fixo mensal · TIC
+💰 R$ 107.400,00
+📦 Contratação de empresa especializada para fornecimento, implantação, instalação, configuração, manutenção e suporte técnico de solução integrada de leitura automática de placas veiculares, videomonitoramento urbano com recursos de inteligência artificial e conectividade em atendimento as necessidade
+📊 ver itens
+🧾 1 item(ns):
+   • Item 2325875: Implantação de um sistema de videomonitoramento contratação de empresa especializada para fornecimento. implantação. ins — 12 MÊS × R$ 8.950.00
+⏳ Propostas até 24/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/76413061000142/2026/44
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *042 — MUNICIPIO DE MONTE NEGRO*
+📍 Monte Negro/RO · 📑 Pregão - Eletrônico nº 027
+🏷️ Fixo mensal · TIC
+💰 R$ 104.351,33
+📦 [LICITANET] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA MIGRAÇÃO, FORNECIMENTO, IMPLANTAÇÃO, LICENCIAMENTO DE USO, HOSPEDAGEM, MANUTENÇÃO, SUPORTE TÉCNICO, ATUALIZAÇÃO E TREINAMENTO DE SISTEMA INFORMATIZADO DE GESTÃO ESCOLAR COM DIÁRIO ELETRÔNICO, INTEGRANTE DE SOFTWARE INTEGRADO DE GESTÃO EDUCACION
+📊 12 meses
+🧾 2 item(ns):
+   • Item 8187702: Migração de dados. implantação. configuração. parametrização. testes técnicos e funcionais. capacitação inicial e operaç — 1 SERV. × R$ 2.971.13
+   • Item 8187703: Licença temporária de uso SaaS. hospedagem. manutenção corretiva. preventiva. adaptativa e evolutiva. suporte técnico e  — 12 MÊS × R$ 8.448.35
+⏳ Propostas até 26/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/63761985000198/2026/90
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *043 — MUNICIPIO DE TAQUARITINGA DO NORTE*
+📍 Taquaritinga do Norte/PE · 📑 Pregão - Eletrônico nº 22
+🏷️ Fixo mensal · TIC
+💰 R$ 104.329,32
+📦 [Portal de Compras Públicas] - Contratação de empresa especializada para Cessão de uso de Sistema Integrado de Gestão Tributária, visando a modernização dos procedimentos de atendimento ao contribuinte e cobrança das receitas próprias da Prefeitura Municipal de Taquaritinga do Norte/PE, incluindo os
+📊 12 meses
+🧾 1 item(ns):
+   • Item 1: Sistema de Gestao Tributaria. Sistema de Nota Fiscal Eletronica. Sistema ISSBAN - Fiscalizacao de Instituicoes Financeir — 12 Mês × R$ 8.694.11
+⏳ Propostas até 27/11/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/10091593000100/2026/60
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *044 — MUNICIPIO DE VICOSA DO CEARA*
+📍 Viçosa do Ceará/CE · 📑 Pregão - Eletrônico nº PE03/2026-RPPSV
+🏷️ Fixo mensal · TIC
+💰 R$ 103.200,00
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE GESTÃO DE DOCUMENTAÇÃO DE INFORMAÇÕES E DIGITALIZAÇÃO DE DOCUMENTOS, INCLUINDO, ESCANEAMENTO, TRATAMENTO DAS IMAGENS, RECONHECIMENTO ÓTICO DOS CARACTERES, INDEXAÇÃO ELETRÔNICA, ARMAZENAMENTO EM SOFTWARE DE GERENCIAMENTO ELETRÔNICO (G
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: GESTÃO DE DOCUMENTAÇÃO DE INFORMAÇÕES E DIGITALIZAÇÃO DE DOCUMENTOS - Código: 685327 Esse serviço inclui escaneamento. t — 12 Mês × R$ 8.600.00
+⏳ Propostas até 04/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/10462497000113/2026/111
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *045 — MUNICIPIO DE ITAPEJARA D'OESTE*
+📍 Itapejara d'Oeste/PR · 📑 Pregão - Eletrônico nº 90064 | Processo 117
+🏷️ Fixo mensal · TIC
+💰 R$ 98.200,00
+📦 Contratacao de empresa especializada na prestacao de servicos de locacao de licenca de uso de software destinado a uso do Departamento Municipal de Saude do Municipio de Itapejara D Oeste PR.
+📊 12 meses
+🧾 2 item(ns):
+   • Item 1: Licenca de uso de sistema web integrado para gestao publica em saude incluindo hospedagem em nuvem manutencao atualizaco — 12 Servico mensal × R$ 6.100.00
+   • Item 2: Implantacao de Software integrado para a gestao do Departamento de Saude. A implantacao compreendera Instalacao do Siste — 1 Unidade × R$ 25.000.00
+⏳ Propostas até 25/11/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/76995430000152/2026/200
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *046 — SAO LEOPOLDO CAMARA DE VEREADORES*
+📍 São Leopoldo/RS · 📑 Pregão - Presencial nº 11
+🏷️ UST · TIC
+💰 R$ 94.800,00
+📦 seleção de proposta mais vantajosa para a contratação de empresa especializada em prestação de serviços especializados em licenciamento de uso, implantação presencial, suporte técnico remoto e presencial, manutenção, hospedagem da aplicação, armazenamento de arquivos legislativos em nuvem pública e 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: seleção de proposta mais vantajosa para a contratação de empresa especializada em prestação de serviços especializados e — 1 unidade de serviço técnico × R$ 94.800.00
+⏳ Propostas até 04/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/88369426000168/2026/39
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *047 — MUNICIPIO DE NOVA PRATA*
+📍 Nova Prata/RS · 📑 Pregão - Eletrônico nº 43
+🏷️ Fixo mensal · TIC
+💰 R$ 92.619,96
+📦 [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SOLUÇÃO TECNOLÓGICA INTEGRADA DE APOIO À GESTÃO DA ATENÇÃO PRIMÁRIA À SAÚDE DE MUNICÍPIO, ABRANGENDO A HOSPEDAGEM DO SISTEMA E-SUS APS/PEC EM NUVEM NACIONAL COM ALTA DISPONIBILIDADE, REDUNDÂNCIA, BACKUPS, RECUPERAÇÃO DE DESASTRES
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Lote 001 - SERVIÇO DE HOSPEDAGEM DO SISTEMA E-SUS ATENÇÃO PRIMÁRIA EM ESTRUTURA EM NUVEM. PLATAFORMA DE BUSSINESS INTELL — 12 Mês × R$ 7.718.33
+⏳ Propostas até 01/12/2026 — 13:55
+🔗 https://pncp.gov.br/app/editais/91618439000138/2026/1221
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *048 — MUNICIPIO DE GASPAR*
+📍 Gaspar/SC · 📑 Pregão - Eletrônico nº 54
+🏷️ Fixo mensal · TIC
+💰 R$ 73.825,56
+📦 CONTRATAÇÃO DE SOLUÇÃO/PLATAFORMA WEB PARA GERENCIAMENTO DE INFORMAÇÕES GEOGRÁFICAS RURAIS E APOIO À GESTÃO, FISCALIZAÇÃO, LANÇAMENTO E COBRANÇA DO IMPOSTO SOBRE A PROPRIEDADE TERRITORIAL RURAL – ITR NO MUNICÍPIO DE GASPAR/SC.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 2327342: DISPONIBILIZAÇÃO DE SOLUÇÃO/PLATAFORMA WEB INTEGRADA PARA GERENCIAMENTO DE INFORMAÇÕES GEOGRÁFICAS RURAIS E APOIO ÀS ROT — 12 Mês(es) × R$ 6.152.13
+⏳ Propostas até 25/11/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/83102244000102/2026/130
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *049 — FUNDO DE REEQUIPAMENTO DO CORPO DE BOMBEIROS MILITAR DO ESTADO DO AMAPA - FREBOM*
+📍 Macapá/AP · 📑 Pregão - Eletrônico nº 059-1
+🏷️ UST · TIC
+💰 R$ 66.910,44
+📦 Aquisição de Serviço integrado de notificações e Sistema de gestão (SETAP).
+📊 1 UST
+🧾 1 item(ns):
+   • Item 1: Serviços técnicos especializados em tecnologia da Informação - TI. para suporte técnico de 3° nível de Atendimento ao am — 1 1 Serv. × R$ 66.910.44
+⏳ Propostas até 04/12/2026 — 08:29
+🔗 https://pncp.gov.br/app/editais/25002757000145/2026/7
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/25002757000145/compras/2026/7/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *050 — FUNDO MUNICIPAL DE SAUDE DE INDAIAL*
+📍 Indaial/SC · 📑 Pregão - Eletrônico nº 22
+🏷️ Fixo mensal · TIC
+💰 R$ 64.259,33
+📦 contratação de empresa especializada para implantação e locação mensal de sistema informatizado de automação de mensagens via WhatsApp, integrado à Inteligência Artificial, permitindo a gestão de filas de atendimento entre múltiplos operadores, triagem automatizada por chatbot, além do recebimento e
+📊 ver itens
+🧾 2 item(ns):
+   • Item 2327856: Implantação de software de sistema informatizado de automação de mensagens via WhatsApp. integrado com serviço de Inteli — 1 SERVIÇO × R$ 6.533.33
+   • Item 2327857: Serviço de locação mensal de uso de sistema informatizado de automação de mensagens via WhatsApp. integrado com serviço  — 12 MESES × R$ 4.810.50
+⏳ Propostas até 25/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/11355483000163/2026/103
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *051 — MUNICIPIO DE JECEABA*
+📍 Jeceaba/MG · 📑 Pregão - Eletrônico nº 057
+🏷️ Fixo mensal · TIC
+💰 R$ 43.236,70
+📦 Contratação de empresa especializada para fornecimento, implantação, configuração, treinamento, suporte técnico e manutenção de solução integrada de controle de frequência dos servidores públicos municipais, composta por software de gestão de ponto eletrônico em ambiente web, aplicativo móvel para r
+📊 ver itens
+🧾 2 item(ns):
+   • Item 2341374: Software de Gestão de Ponto O sistema deverá possuir. no mínimo: * Plataforma 100% web. acessível por navegadores modern — 12 Meses × R$ 1.960.00
+   • Item 2341375: Equipamentos de Relógios de Ponto com Reconhecimento Facial Os equipamentos deverão possuir. no mínimo: * Tecnologia de  — 10 Meses × R$ 1.971.67
+⏳ Propostas até 23/11/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/20356739000148/2026/147
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/20356739000148/compras/2026/147/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *052 — MUNICIPIO DE IGUARACU*
+📍 Iguaraçu/PR · 📑 Pregão - Eletrônico nº 056
+🏷️ Fixo mensal · TIC
+💰 R$ 33.302,76
+📦 Contratação de empresas especializadas para a prestação de serviço de telefonia fixa, por meio do Serviço Telefônico Fixo Comutado (STFC) entregue em tronco SIP e de central telefônica virtual em nuvem (PABX virtual), para atendimento das unidades administrativas do Município de Iguaraçu/PR, conform
+📊 24 meses
+🧾 2 item(ns):
+   • Item 1: SERVIÇO TELEFÔNICO FIXO COMUTADO (STFC) POR MEIO DE TRONCO SIP: COM 30 (TRINTA) CANAIS DE VOZ SIMULTÂNEOS. BLOCO DE 100  — 12 MES × R$ 1.530.55
+   • Item 2: CENTRAL TELEFÔNICA VIRTUAL EM NUVEM (PABX VIRTUAL): CENTRAL ÚNICA HOSPEDADA EM DATA CENTER LOCALIZADO NO BRASIL. COM CER — 12 MES × R$ 1.244.68
+⏳ Propostas até 30/11/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/75772525000144/2026/141
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/75772525000144/compras/2026/141/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *053 — MUNICIPIO DE SANTA LUZIA D'OESTE*
+📍 Santa Luzia D'Oeste/RO · 📑 Pregão - Eletrônico nº 35
+🏷️ Fixo mensal · TIC
+💰 R$ 28.826,04
+📦 [LICITANET] - Contratação de empresa do ramo de tecnologia da informação para prestação de serviços de cessão de uso de software para auxílio na formação e elaboração de cestas de preços das compras públicas, para atender as necessidades deste município.
+📊 12 meses
+🧾 1 item(ns):
+   • Item 8159185: Prestacao de servicos de cessao de uso de software. para auxilio na formacao e elaboracao de cestas de precos das compra — 12 MESES × R$ 2.402.17
+⏳ Propostas até 27/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/15845365000194/2026/71
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *054 — MUNICIPIO DE GENERAL CARNEIRO*
+📍 General Carneiro/PR · 📑 Pregão - Eletrônico nº 086
+🏷️ Fixo mensal · TIC
+💰 R$ 28.650,00
+📦 Contratação de empresa do ramo de tecnologia da informação para prestação de serviços de cessão de uso de software para auxílio na formação e elaboração de cestas de preços das compras públicas.
+📊 12 meses
+🧾 2 item(ns):
+   • Item 1: Cessao de uso de software para auxilio na formacao e elaboracao de cestas de precos das compras publicas. em conformidad — 12 Mes × R$ 2.198.00
+   • Item 2: Servicos de implantacao e treinamentos do softwareServicos de implantacao e treinamentos do software — 1 Unidade × R$ 2.274.00
+⏳ Propostas até 01/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/75687681000107/2026/121
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *055 — MUNICIPIO DE IMBE*
+📍 Imbé/RS · 📑 Pregão - Eletrônico nº 0082
+🏷️ Fixo mensal · TIC
+💰 R$ 25.624,44
+📦 Contratação de pessoa jurídica para prestação de serviços técnicos especializados na área de tecnologia da informação, para licença de uso de software para gestão e controle do SUAS (Sistema Único de Assistência Social), bem como serviços de migração, conversão e integração de base de dados do siste
+📊 12 meses
+🧾 1 item(ns):
+   • Item 1: Contratação de pessoa jurídica para prestação de serviços técnicos especializados na área de tecnologia da informação. p — 12 mes × R$ 2.135.37
+⏳ Propostas até 30/11/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/90256652000184/2026/151
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *056 — CONSORCIO INTERMUNICIPAL DE SERVICOS DO VALE DO RIO PARDO - CISVALE*
+📍 Santa Cruz do Sul/RS · 📑 Pregão - Eletrônico nº 09
+🏷️ Fixo mensal · TIC
+💰 R$ 16.650,00
+📦 [Portal de Compras Públicas] - Contratação de empresa especializada na prestação do serviço de suporte e manutenção de infraestrutura de Tecnologia de Informação - TI para atender o Consórcio Intermunicipal de Serviços do Vale do Rio Pardo-CISVALE.
+📊 12 meses
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa especializada na prestação do serviço de suporte e manutenção de infraestrutura de Tecnologia de  — 12 Mês × R$ 1.387.50
+⏳ Propostas até 26/11/2026 — 08:25
+🔗 https://pncp.gov.br/app/editais/07664821000171/2026/67
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *057 — CONSORCIO INTERMUNICIPAL DE SERVICOS DO VALE DO RIO PARDO - CISVALE*
+📍 Santa Cruz do Sul/RS · 📑 Pregão - Eletrônico nº 9 | Processo 53
+🏷️ Fixo mensal · TIC
+💰 R$ 16.650,00
+📦 Contratacao de empresa especializada na prestacao do servico de suporte e manutencao de infraestrutura de Tecnologia de Informacao TI para atender o Consorcio Intermunicipal de Servicos do Vale do Rio Pardo CISVALE.
+📊 12 meses
+🧾 1 item(ns):
+   • Item 1: Contratacao de empresa especializada na prestacao do servico de suporte e manutencao de infraestrutura de Tecnologia de  — 12 MESES × R$ 1.387.50
+⏳ Propostas até 26/11/2026 — 08:25
+🔗 https://pncp.gov.br/app/editais/07664821000171/2026/70
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *058 — Empresa de Assistência Técnica e Extensão Rural do Distrito Federal*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 90003
+🏷️ PF · TIC
+💰 NÃO INFORMADO
+📦 Registro de Preço para contratação de empresa especializada na prestação de serviços Técnicos de Fábrica de Software para o desenvolvimento e manutenção de sistemas de informação, aplicativos e portais, utilizando tecnologia do contratante - pelo período de 60 (sessenta) meses - demandados mediante 
+📊 4.828 PF
+🧾 1 item(ns):
+   • Item 1: Desenvolvimento e/ou evolução de software - Python — 4.828 PONTO DE FUNÇÃO
+⏳ Propostas até 01/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/00509612000104/2026/12
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00509612000104/compras/2026/12/arquivos/2
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *059 — MUNICIPIO DE SAO JOSE DE RIBAMAR*
+📍 São José de Ribamar/MA · 📑 Pregão - Eletrônico nº 009
+🏷️ UST · TIC
+💰 NÃO INFORMADO
+📦 REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇOS DE FÁBRICA DE SOFTWARE, COMPREENDENDO DESENVOLVIMENTO, MELHORIA (EVOLUÇÃO) E SUSTENTAÇÃO DE SISTEMAS COMPUTACIONAIS EM AMBIENTE WEB E POR MEIO DE APIs, INCLUINDO SERVIÇOS DE INTEGRAÇÃO E MIGRAÇÃO DE DADOS (ETL
+📊 14.000 UST
+🧾 1 item(ns):
+   • Item 1: CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇOS DE FÁBRICA DE SOFTWARE. COMPREENDENDO DESENVOLVIMENTO. MELHORIA (EVOLUÇ — 1 LOTE
+⏳ Propostas até 02/12/2026 — 09:59
+🔗 https://pncp.gov.br/app/editais/06351514000178/2026/63
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/06351514000178/compras/2026/63/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *060 — MUNICIPIO DE MEDICILANDIA*
+📍 Medicilândia/PA · 📑 Pregão - Eletrônico nº 033/2026
+🏷️ Fixo mensal · TIC
+💰 NÃO INFORMADO
+📦 [Portal de Compras Públicas] - Contratação de empresa especializada em desenvolvimento de sistemas informatizados de gestão em Saúde aplicado exclusivamente ao setor público, para o fornecimento de licença de uso de software, manutenção evolutivas e corretivas, serviço de capacitação, implantação, s
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Implantação de Software de Gestão de Saúde Pública Municipal. na Média e Alta Co — 1 Serviço
+   • Item 2: Licenciamento mensal de Software de Gestão de Saúde Pública Municipal. na Média — 12 Serviço
+⏳ Propostas até 27/11/2026 — 14:00
+🔗 https://pncp.gov.br/app/editais/34593525000108/2026/46
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/34593525000108/compras/2026/46/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *061 — CAMARA MUNICIPAL DE ANANINDEUA*
+📍 Ananindeua/PA · 📑 Pregão - Eletrônico nº 009
+🏷️ Fixo mensal · TIC
+💰 NÃO INFORMADO
+📦 [LICITANET] - REGISTRO DE PREÇOS PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA LOCAÇÃO DE EQUIPAMENTOS DE INFORMÁTICA E IMPRESSORAS, COM PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO, SUPORTE TÉCNICO E GARANTIA DE SUBSTITUIÇÃO DOS EQUIPAMENTOS, PARA ATENDER ÀS DEMANDAS DA CÂMARA MUNICIPAL DE ANANINDEUA/PA.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 8205329: SERVIÇO DE LOCAÇÃO DE EQUIPAMENTOS DE INFORMÁTICA E IMPRESSORAS. COM PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO. SUPORTE TÉCNIC — 12 Mês
+⏳ Propostas até 26/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/00423755000107/2026/11
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00423755000107/compras/2026/11/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *062 — MUNICIPIO DE AREIA*
+📍 Areia/PB · 📑 Pregão - Eletrônico nº 57
+🏷️ Fixo mensal · TIC
+💰 NÃO INFORMADO
+📦 [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE SERVIÇOS DE TECNOLOGIA DA INFORMAÇÃO, VISANDO À DISPONIBILIZAÇÃO, MEDIANTE CESSÃO DE DIREITO DE USO DO SISTEMA, DE UMA SOLUÇÃO INFORMATIZADA INTEGRADA PARA GESTÃO TRIBUTÁRIA MUNICIPAL
+📊 12 meses
+🧾 1 item(ns):
+   • Item 1: Servicos de Tecnologia da Informacao para disponibilizacao. mediante cessao de direito de uso do sistema. de uma Solucao — 12 Mês
+⏳ Propostas até 02/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/08754111000103/2026/140
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *063 — MUNICIPIO DE ARAIOSES*
+📍 Araioses/MA · 📑 Pregão - Eletrônico nº PE SRP 023
+🏷️ Fixo mensal · TIC
+💰 NÃO INFORMADO
+📦 Registro de preços para futura e eventual contratação de empresa especializada para Contratação de empresa de tecnologia da informação para fornecimento de licença de uso de software de gestão escolar para atender todas as Unidades de Ensino do Município do Município de Araioses/MA
+📊 ver itens
+🧾 2 item(ns):
+   • Item 2340160: Aluguel do sistema e manutenção — 12 MENSAL
+   • Item 2340161: implantação e capacitação — 954 UND
+⏳ Propostas até 25/11/2026 — 13:59
+🔗 https://pncp.gov.br/app/editais/06450191000170/2026/78
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *064 — SERVICO FEDERAL DE PROCESSAMENTO DE DADOS (SERPRO)*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 32
+🏷️ HST · TIC
+💰 NÃO INFORMADO
+📦 Aquisição de Solução de Backup Corporativo com alta disponibilidade para os Centros de Dados do Serpro, contemplando hardware e software, com garantia técnica, bem como a contratação, sob demanda, de Serviço de Consultoria, nos termos do Edital.
+📊 400 horas técnicas
+🧾 2 item(ns):
+   • Item 1: Serviços de Consultoria em Tecnologia da Informação e Comunicação (TIC) Solução de Backup Corporativo com alta disponibi — 4 UND SERVIÇO TÉCNICO
+   • Item 2: Serviços de Consultoria em Tecnologia da Informação e Comunicação (TIC) Serviço de Consultoria. sob demanda Especificaçã — 400 HORA
+⏳ Propostas até 23/11/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/33683111000107/2026/79
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/33683111000107/compras/2026/79/arquivos/3
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *065 — AGENCIA DE FOMENTO DO ESTADO DE SANTA CATARINA S.A. - BADESC*
+📍 Florianópolis/SC · 📑 Pregão - Eletrônico nº 033/26
+🏷️ UST · TIC
+💰 NÃO INFORMADO
+📦 Contratação de serviços de Gerenciamento de Backups, Central de Serviços, Monitoramento de Infraestrutura de TI, Banco de Horas, Backup em Nuvem, Consultoria Especializada em Segurança da Informação e Consultoria Especializada em Red Hat Linux para a Agência de Fomento do Estado de Santa Catarina  
+📊 1.500.000 UST
+🧾 1 item(ns):
+   • Item 10001: Contratação de serviços de Gerenciamento de Backups. Central de Serviços. Monitoramento de Infraestrutura de TI. Banco d — 1 UNIDADE
+⏳ Propostas até 24/11/2026 — 13:00
+🔗 https://pncp.gov.br/app/editais/82937293000100/2026/6
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/82937293000100/compras/2026/6/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *066 — TRIBUNAL DE JUSTICA DO ESTADO DE MINAS GERAIS*
+📍 Belo Horizonte/MG · 📑 Pregão - Eletrônico nº 662
+🏷️ TIC
+💰 R$ 183.067.170,84
+📦 Contratação de serviço continuado de fornecimento de créditos para consumo dos serviços de computação em nuvem da Amazon Web Services (AWS)
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: SERVICOS DE COMPUTACAO EM NUVEM - PLATAFORMA COMO SERVICO (PAAS) - — 674.896 1.00 UNIDADE × R$ 7.85
+   • Item 2: SERVICOS DE COMPUTACAO EM NUVEM - INFRAESTRUTURA COMO SERVICO (IAAS) - — 28.534.388 1.00 UNIDADE × R$ 6.23
+⏳ Propostas até 24/11/2026 — 14:00
+🔗 https://pncp.gov.br/app/editais/21154554000113/2026/521
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/21154554000113/compras/2026/521/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/21154554000113/compras/2026/521/arquivos/2
+
+🏛️ *067 — ESTADO DO RIO DE JANEIRO*
+📍 Rio de Janeiro/RJ · 📑 Pregão - Eletrônico nº PE 003/26
+🏷️ TIC
+💰 R$ 123.758.691,82
+📦 Contratação, via certame licitatório, de SERVIÇOS DE IDENTIFICAÇÃO E CERTIFICAÇÃO AUTOMATIZADA DE IDENTIDADE DE PESSOAS, composto pelas funções de tratamento de dados, manutenção evolutiva, preventiva, corretiva e customizações de ferramentas do portal eletrônico SEI-RJ - Sistema Estadual de Identif
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: DESCRIÇÃO: SERVICOS DE CERTIFICACAO AUTOMATIZADA DE IDENTIFICACAO DE PESSOAS. COMPOSTO PELAS FUNCOES DE TRATAMENTO DE DA — 1 SERVICO × R$ 123.758.691.82
+⏳ Propostas até 26/11/2026 — 09:59
+🔗 https://pncp.gov.br/app/editais/42498600000171/2026/4803
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2026/4803/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *068 — CONSORCIO INTERMUNICIPAL MULTIFINALITARIO DO VALE DO PARAIBUNA - CIMPAR*
+📍 Juiz de Fora/MG · 📑 Pregão - Eletrônico nº 24
+🏷️ TIC
+💰 R$ 114.730.168,73
+📦 Registro de Preços para futura e eventual contratação de solução integrada de Tecnologia da Informação e Comunicação em nuvem (SaaS/PaaS), contemplando ecossistema Google Workspace, Inteligência Artificial (Gemini), infraestrutura Google Cloud Platform (GCP), solução de proteção e backup imutável de
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LOTE UNICO — 1 UN × R$ 114.730.168.73
+⏳ Propostas até 26/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/21565740000145/2026/27
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/21565740000145/compras/2026/27/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *069 — MUNICIPIO DE VILA VELHA*
+📍 Vila Velha/ES · 📑 Pregão - Eletrônico nº 90059
+🏷️ TIC
+💰 R$ 108.737.750,80
+📦 Registro de preços, visando a eventual e futura contratação de empresa especializada em locação de sistema de gestão, atendimento, despacho e inteligência (software) para central de comando operacional da guarda municipal de vila velha, incluindo pontos de coletas de captura e reconhecimento de plac
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de Gerenciamento de Sistemas Computacionais — 1 UND SERVIÇO TÉCNICO × R$ 108.737.750.80
+⏳ Propostas até 04/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/27165554000103/2026/238
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/27165554000103/compras/2026/238/arquivos/3
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *070 — CONSORCIO INTERMUNICIPAL MULTIFINALITARIO DO VALE DO PARAIBUNA - CIMPAR*
+📍 Juiz de Fora/MG · 📑 Pregão - Eletrônico nº 26
+🏷️ TIC
+💰 R$ 99.654.512,78
+📦 REGISTRO DE PREÇOS PARA A FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NO FORNECIMENTO DE SOLUÇÕES INTEGRADAS DE SEGURANÇA DA INFORMAÇÃO E CONTINUIDADE DE NEGÓCIOS, COMPREENDENDO SOLUÇÕES DE SEGURANÇA, BACKUP E RECUPERAÇÃO, SERVIÇOS DE INSTALAÇÃO, CAPACITAÇÃO E OPERAÇÃO ASSISTIDA, ATENDEND
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LOTE UNICO — 1 UN × R$ 99.654.512.78
+⏳ Propostas até 23/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/21565740000145/2026/26
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/21565740000145/compras/2026/26/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *071 — CONSORCIO INTERMUNICIPAL DE SEGURANCA PUBLICA E CIDADANIA DE LONDRINA E REGIAO*
+📍 Rolândia/PR · 📑 Pregão - Eletrônico nº 6
+🏷️ TIC
+💰 R$ 71.339.801,04
+📦 locação, de sistema integrado para gerenciamento de processos e análises, abrangendo todas as licenças, equipamentos e serviços necessários para a perfeita execução das atividades inerentes às necessidades dos Entes Consorciados municipais do Consórcio Intermunicipal de Segurança Pública, Soluções e
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Câmera Vídeo De Segurança cor: colorida. interface: rj45 10/100/1000mbps. luminosidade mínima: 0.001. padrão: ip bullet. — 1 Unidade × R$ 71.339.801.04
+⏳ Propostas até 04/12/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/11274930000150/2026/22
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/11274930000150/compras/2026/22/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *072 — SECRETARIA DE ESTADO DA JUSTICA, DO TRABALHO E DE DEFESA DO CONSUMIDOR - SEJUC*
+📍 Aracaju/SE · 📑 Pregão - Eletrônico nº PE0380
+🏷️ TIC
+💰 R$ 32.626.800,00
+📦 REGISTRO DE PREÇO PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇOS DE MONITORAMENTO ELETRÔNICO DE PESSOAS, MEDIANTE DISPONIBILIZAÇÃO DE SOLUÇÃO TECNOLÓGICA INTEGRADA, EM REGIME DE SERVIÇO CONTINUADO, COMPREENDENDO O FORNECIMENTO, IMPLANTAÇÃO, OPERAÇÃO ASSISTIDA, MANUTENÇÃO E SUPORT
+📊 ver itens
+🧾 1 item(ns):
+   • Item 101: SERVICO DE MONITORAMENTO - CONTRATAÇÃO DE EMPRESA COM FIT EM PRESTAÇÃO DE SERVIÇO CONTINUADOS ATRAVÉS DE DISPOSITIVO ELE — 1 SERVIÇO × R$ 32.626.800.00
+⏳ Propostas até 27/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/34841226000137/2026/8
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/34841226000137/compras/2026/8/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *073 — MUNICIPIO DE DIADEMA*
+📍 Diadema/SP · 📑 Pregão - Eletrônico nº 063
+🏷️ TIC
+💰 R$ 25.583.184,00
+📦 PEC 113/2026 - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA FORNECIMENTO DE SOLUÇÃO INTEGRADA DE SEGURANÇA PÚBLICA, COMPREENDENDO A MODERNIZAÇÃO, AMPLIAÇÃO, SUSTENTAÇÃO, OPERAÇÃO, SUPORTE TÉCNICO, MANUTENÇÃO PREVENTIVA, CORRETIVA E EVOLUTIVA DA INFRAESTRUTURA DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO (
+📊 ver itens
+🧾 1 item(ns):
+   • Item 2330907: SERVIÇOS EM SOL.INTEGR.DE SEGUR.C/A MODERN. DA INFRAESTR. DE TI - — 1 UN × R$ 25.583.184.00
+⏳ Propostas até 02/12/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/46523247000193/2026/151
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46523247000193/compras/2026/151/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *074 — JUSTICA FEDERAL DE PRIMEIRO GRAU NO RIO DE JANEIRO*
+📍 Rio de Janeiro/RJ · 📑 Pregão - Eletrônico nº 409
+🏷️ TIC
+💰 R$ 21.934.313,00
+📦 Contratação de serviços contínuos de transporte, armazenamento, arquivamento, catalogação, desarquivamento, digitalização sob demanda, controle gerencial e posterior devolução do acervo arquivístico da Justiça Federal de Primeiro Grau no Rio de Janeiro., conforme Anexo I (Termo de Referência)
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Prestação de Serviços de Apoio Administrativo. Técnico e Operacional Contratação de serviços contínuos de transporte. ar — 1 UNIDADE × R$ 21.934.313.00
+⏳ Propostas até 23/11/2026 — 13:00
+🔗 https://pncp.gov.br/app/editais/05424540000116/2026/79
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/05424540000116/compras/2026/79/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *075 — BANCO CENTRAL DO BRASIL*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 34
+🏷️ TIC
+💰 R$ 17.105.230,08
+📦 Contratação de serviços técnicos especializados de Operação e Monitoramento de infraestrutura de TIC e Sustentação, Instalação e manutenção de infraestrutura física dos Data Centers do Banco Central.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de Gerenciamento de Infraestrutura de Tecnologia daInformação e Comunicação (TIC) Serviços de Gerenciamento de  — 48 UNIDADE × R$ 356.358.96
+⏳ Propostas até 24/11/2026 — 15:30
+🔗 https://pncp.gov.br/app/editais/00038166000105/2026/737
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00038166000105/compras/2026/737/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *076 — SECRETARIA DA FAZENDA E PLANEJAMENTO*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 435
+🏷️ TIC
+💰 R$ 16.969.917,40
+📦 Contratação de serviços de Suporte Técnico, manutenção, atualização tecnológica e Banco de Horas relativo ao software de Banco de Dados Sybase/Sap IQ (ambiente DW – DataWarehouse).
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de Consultoria em Tecnologia da Informação e Comunicação (TIC) Serviços de Consultoria em Tecnologia da Informa — 1 UND SERVIÇO TÉCNICO × R$ 16.969.917.40
+⏳ Propostas até 07/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/46377222000129/2026/409
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46377222000129/compras/2026/409/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *077 — FUNDACAO INSTIT BRAS DE GEOGRAFIA E ESTATISTICA IBGE*
+📍 Rio de Janeiro/RJ · 📑 Pregão - Eletrônico nº 92
+🏷️ TIC
+💰 R$ 15.889.183,77
+📦 Contratação de empresa especializada para aquisição de equipamentos de armazenamento de dados (storage) do tipo All Flash, destinados aos sítios (sites) principal e secundário do IBGE, incluindo garantia e suporte técnico on-site pelo prazo de 60 (sessenta) meses.
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Servidor tipo: san - storage area network. processadores físicos: 4. núcleos por processador: 8. memória ram: 96. interf — 1 Unidade × R$ 9.987.844.67
+   • Item 2: Serviços de Manutenção e Reparação de Computadores e seus Periféricos Serviços de Manutenção e Reparação de Computadores — 1 UNIDADE × R$ 5.901.339.10
+⏳ Propostas até 02/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/33787094000140/2026/627
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/33787094000140/compras/2026/627/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *078 — AGENCIA NACIONAL DE AGUAS E SANEAMENTO BASICO (ANA)*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 62
+🏷️ TIC
+💰 R$ 9.582.422,52
+📦 Serviços de consultoria técnica especializada para apoio à Gestão e Governança de TI.
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Serviços Auxiliares de Tecnologia Informação e Comunicação Serviços técnicos especializados de apoio à gestão e governan — 12 UNIDADE × R$ 735.371.08
+   • Item 2: Software como Servico - Saas Solução tecnológica de governança corporativa e gestão integrada. incluindo licenciamento.  — 12 UNIDADE × R$ 63.164.13
+⏳ Propostas até 25/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/04204444000108/2025/38
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/04204444000108/compras/2025/38/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/04204444000108/compras/2025/38/arquivos/2
+
+🏛️ *079 — AGENCIA MUNICIPAL DE TECNOLOGIA DA INFORMACAO E INOVACAO*
+📍 Campo Grande/MS · 📑 Pregão - Eletrônico nº 186
+🏷️ TIC
+💰 R$ 7.009.834,35
+📦 Contratação de empresa especializada na Locação de Solução de Alta Disponibilidade de Data Center em container, com escopo abrangendo a entrega da estrutura, operação ininterrupta, manutenção integral (preventiva, preditiva e corretiva), fornecimento de peças, insumos e suporte técnico completo, de 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa para locação de sistema de alta disponibilidade. com equipamentos inclusos e manutenção preventiv — 1 1 Serv. × R$ 7.009.834.35
+⏳ Propostas até 25/11/2026 — 08:44
+🔗 https://pncp.gov.br/app/editais/07337989000172/2026/6
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/07337989000172/compras/2026/6/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *080 — MUNICIPIO DE SANTOS*
+📍 Santos/SP · 📑 Pregão - Eletrônico nº 16052
+🏷️ TIC
+💰 R$ 6.733.178,20
+📦 Contratação de empresa para renovação das licenças de uso da solução de Proteção Unificada, Detecção e Resposta Avançada a Ameaças Cibernéticas (EPP, EDR e XDR) para endpoints, servidores e workloads, incluindo serviços técnicos correlatos de implantação, configuração e suporte especializado para a 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa para renovação de licenciamento Contratação de empresa para renovação de licenciamento de solução — 1 unidade × R$ 6.733.178.20
+⏳ Propostas até 01/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/58200015000183/2026/628
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/58200015000183/compras/2026/628/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *081 — UNIVERSIDADE DE SAO PAULO*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 52
+🏷️ TIC
+💰 R$ 6.041.814,28
+📦 Contratação de empresa especializada em equipamentos do tipo Application Delivery Controller (ADC) - Equipamentos do tipo Application Delivery Controller (ADC), com hardware dedicado, incluindo licenças de software, acessórios, treinamento e serviços de suporte técnico pelo período de 60 meses.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Equipamento Segurança Rede aplicação: firewall. tipo: amppliance — 1 Unidade × R$ 6.041.814.28
+⏳ Propostas até 23/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/63025530000104/2026/4445
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/63025530000104/compras/2026/4445/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *082 — UNIVERSIDADE DE SAO PAULO*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 50
+🏷️ TIC
+💰 R$ 5.360.611,12
+📦 Solução de armazenamento de dados all flash NVMe, com capacidade líquida mínima de 40 TiB (quarenta tebibytes), arquitetura escalável, controladoras em modo ativo-ativo e switches Fibre Channel redundantes, dimensionada para suportar workloads transacionais (OLTP) de banco de dados, bem como cargas 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Equipamentos Diversos Para Serviços Profissionais tipo 2: aplliance de armazenamento de backup. padrão 1: capacidade: 1. — 1 Unidade × R$ 5.360.611.12
+⏳ Propostas até 25/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/63025530000104/2026/4502
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/63025530000104/compras/2026/4502/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *083 — MUNICIPIO DE AVARE*
+📍 Avaré/SP · 📑 Pregão - Eletrônico nº 137/2026
+🏷️ TIC
+💰 R$ 3.933.028,00
+📦 Contratação de empresa especializada em licenciamento de sistema de gestão em saúde.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa especializada em licenciamento de Sistema de Gestão em Saúde. em plataforma Web. para ser utiliza — 1 UN × R$ 3.933.028.00
+⏳ Propostas até 07/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/46634168000150/2026/282
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46634168000150/compras/2026/282/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *084 — SERVICO SOCIAL AUTONOMO PARANACIDADE*
+📍 Curitiba/PR · 📑 Pregão - Eletrônico nº 004
+🏷️ TIC
+💰 R$ 3.846.377,70
+📦 Contratação de empresa especializada para prestação de serviços técnicos de análise, arquitetura, desenvolvimento, modernização tecnológica, migração gradual, implantação assistida, documentação, sustentação, suporte técnico e transferência de conhecimento, visando a migração integral do Sistema SAM
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Conforme item 3 do Edital e Proposta de Preço — 1 UN × R$ 3.846.377.70
+⏳ Propostas até 08/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/01450804000155/2026/27
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/01450804000155/compras/2026/27/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *085 — MUNICIPIO DE AGUAS LINDAS DE GOIAS*
+📍 Águas Lindas de Goiás/GO · 📑 Pregão - Eletrônico nº 35
+🏷️ TIC
+💰 R$ 3.710.932,92
+📦 [Portal de Compras Públicas] - Contratação de empresa especializada para serviços contínuos de locação de Software Integrado de Sistemas para Gestão Pública, com módulos integrados, conforme discriminado no ETP e Termo de Referência, incluso a prestação dos serviços de instalação, implantação, migra
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa especializada para serviços contínuos de locação de Software Integrado de Sistemas para Gestão Pú — 1 Serviço × R$ 3.710.932.92
+⏳ Propostas até 07/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/01616520000196/2026/147
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/01616520000196/compras/2026/147/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *086 — MUNICIPIO DE PRAIA GRANDE*
+📍 Praia Grande/SP · 📑 Pregão - Eletrônico nº 89
+🏷️ TIC
+💰 R$ 3.248.065,07
+📦 CONTRATAÇÃO DE SUBSCRIÇÕES SAAS (SOFTWARE AS A SERVICE) DE SOFTWARE AUTODESK — AUTOCAD (INCL. TOOLSETS) E AEC COLLECTION (ARCHITECTURE, ENGINEERING & CONSTRUCTION COLLECTION), MODALIDADE NAMED USER, VIGÊNCIA DE 36 (TRINTA E SEIS) MESES
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Cessão Temporária de Direitos Sobre Prog — 22 UNIDADE × R$ 32.215.29
+   • Item 2: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Cessão Temporária de Direitos Sobre Prog — 47 UNIDADE × R$ 54.028.27
+⏳ Propostas até 03/12/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/46177531000155/2026/391
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46177531000155/compras/2026/391/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *087 — MUNICIPIO DE QUISSAMA*
+📍 Quissamã/RJ · 📑 Pregão - Eletrônico nº 041
+🏷️ TIC
+💰 R$ 2.879.037,08
+📦 [Portal de Compras Públicas] - Registro de Preços para futura contratação de empresa especializada na prestação de serviços de fornecimento de Sistema Integrado de Gestão Pública através de solução em nuvem no modelo SaaS (Software as a Service), incluindo instalação, migração de dados, implantação,
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviço de fornecimento de Sistema Integrado de Gestão Pública através de solução em nuvem no modelo SaaS (Software as a — 1 Unidade × R$ 2.879.037.08
+⏳ Propostas até 04/12/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/31505027000160/2026/101
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/31505027000160/compras/2026/101/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *088 — MUNICIPIO DE INDAIATUBA*
+📍 Indaiatuba/SP · 📑 Pregão - Eletrônico nº 0170/2026
+🏷️ TIC
+💰 R$ 2.686.138,69
+📦 Contratação de empresa especializada para fornecimento de solução educacional (licença de uso) em Ambiente Virtual de Aprendizagem (AVA) gamificado em 3D, destinada ao reforço escolar dos alunos do Ensino Fundamental I da rede Municipal de Ensino, com prazo do contrato de 12 (doze) meses.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: FORNECIMENTO DE LICENÇA DE USO DE AMBIENTE VIRTUAL DE APRENDIZAGEM (AVA) GAMIFICADO EM 3D. — 1 Serviço × R$ 2.686.138.69
+⏳ Propostas até 23/11/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/44733608000109/2026/991
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/44733608000109/compras/2026/991/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *089 — MUNICIPIO DE TIANGUA*
+📍 Tianguá/CE · 📑 Pregão - Eletrônico nº PE08/2026-SEMED
+🏷️ TIC
+💰 R$ 2.590.525,00
+📦 REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA FORNECIMENTO DE SOLUÇÃO INTEGRADA DE GESTÃO EDUCACIONAL EM NUVEM, COMPREENDENDO LICENCIAMENTO DE USO, IMPLANTAÇÃO, PARAMETRIZAÇÃO, MIGRAÇÃO DE DADOS, TREINAMENTO DE USUÁRIOS, SUPORTE TÉCNICO, MANUTENÇÃO, HOSPEDAGEM E
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: ESPECIFICAÇÃO E QUANTITATIVOS CONFORME TERMO DE REFERÊNCIA ANEXO I DO EDITAL. — 1 Serviço × R$ 2.590.525.00
+⏳ Propostas até 03/12/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/07735178000120/2026/153
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/07735178000120/compras/2026/153/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/07735178000120/compras/2026/153/arquivos/2
+
+🏛️ *090 — MUNICIPIO DE SAO JOSE DOS PINHAIS*
+📍 São José dos Pinhais/PR · 📑 Pregão - Eletrônico nº 237
+🏷️ TIC
+💰 R$ 2.300.000,00
+📦 Registro de Preços para contratação de empresa especializada para o fornecimento de solução tecnológica integrada para a GESTÃO DE RASTREAMENTO E MONITORAMENTO DA FROTA VEICULAR da Administração Municipal, consistentes na disponibilização, operação de rastreamento e monitoramento veicular, incluindo
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviço de Rastreamento Serviço de Rastreamento — 1.000 UNIDADE × R$ 2.300.00
+⏳ Propostas até 26/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/76105543000135/2026/300
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/76105543000135/compras/2026/300/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/76105543000135/compras/2026/300/arquivos/2
+
+🏛️ *091 — CODAMMA CONSORCIO DE DESENVOLVIMENTO DA AREA DOS MUNICIPIOS DA MICRORREGIAO DA MANTIQUEIRA*
+📍 Barbacena/MG · 📑 Pregão - Eletrônico nº 00212026
+🏷️ TIC
+💰 R$ 2.276.807,28
+📦 O objeto do presente procedimento é o registro de preço, visando a Contratação de empresa especializada para prestação de serviços de locação de softwares, mediante cessão do direito de uso de software, contemplando solução integrada de gestão pública municipal, incluindo suporte técnico remoto e in
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: CESSÃO DE USO DE SOFTWAREPRESTAÇÃO DE SERVIÇO DE CESSÃO DO DIREITO DE USO DE SOTWARE. — 1 SERV × R$ 2.276.807.28
+⏳ Propostas até 23/11/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/20885172000105/2026/16
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/20885172000105/compras/2026/16/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/20885172000105/compras/2026/16/arquivos/4
+
+🏛️ *092 — MUNICIPIO DE SAO JOSE DOS PINHAIS*
+📍 São José dos Pinhais/PR · 📑 Pregão - Eletrônico nº 250
+🏷️ TIC
+💰 R$ 2.267.760,00
+📦 Contratação de empresa especializada em fornecimento de software e serviços para a Gestão da Secretaria da Assistência Social, compreendendo: Licenciamento de uso do software, serviços de implantação, treinamento de usuários, suporte técnico, manutenção, customização e disponibilização de técnico re
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Manutenção de Software (Corretiva. Preventiva. Adaptativa) Contratação de empresa especializada em fornecimento de softw — 1 UND SERVIÇO TÉCNICO × R$ 2.267.760.00
+⏳ Propostas até 02/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/76105543000135/2026/307
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/76105543000135/compras/2026/307/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/76105543000135/compras/2026/307/arquivos/3
+
+🏛️ *093 — BANCO DE DESENVOLVIMENTO DE MINAS GERAIS S.A. - BDMG*
+📍 Belo Horizonte/MG · 📑 Pregão - Eletrônico nº 6
+🏷️ TIC
+💰 R$ 2.236.203,60
+📦 Empresa especializada na prestação de serviços gerenciados de Centro de Operações de Segurança (SOC), em regime de operação contínua 24x7x365
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: ELABORACAO DE PLANO DIRETOR DE SEGURANCA DA INFORMACAO — 1 1.00 UNIDADE × R$ 2.236.203.60
+⏳ Propostas até 25/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/38486817000194/2026/19
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/38486817000194/compras/2026/19/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *094 — FUNDACAO DE CIENCIA APLICACOES E TECNOLOGIA ESPACIAIS*
+📍 São José dos Campos/SP · 📑 Pregão - Eletrônico nº 0702
+🏷️ TIC
+💰 R$ 1.800.000,00
+📦 Serviços especializados de tecnologia da informação visando garantir a continuidade operacional, o suporte técnico especializado, a manutenção corretiva de hardware, a substituição de peças e o apoio técnico à correção ou mitigação de vulnerabilidades aplicáveis ao ambiente Dell VxRail da INSTITUIÇÃ
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Vide Instrumento Convocatório — 1 UN × R$ 1.800.000.00
+⏳ Propostas até 25/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/51619104000110/2026/152
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/51619104000110/compras/2026/152/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *095 — MUNICIPIO DE PONTA GROSSA*
+📍 Ponta Grossa/PR · 📑 Pregão - Eletrônico nº 185
+🏷️ TIC
+💰 R$ 1.643.694,00
+📦 Contratação de Solução de Tecnologia da Informação e Comunicação (TIC) sob o modelo de Software como Serviço (SaaS)
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Prestação de Serviços Continuados de TIC (SaaS) para fornecimento de solução unificada de segurança cibernética (WithSec — 1 UNIDADE × R$ 1.643.694.00
+⏳ Propostas até 07/12/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/76175884000187/2026/517
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/76175884000187/compras/2026/517/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *096 — MUNICIPIO DE CACHOEIRA PAULISTA*
+📍 Cachoeira Paulista/SP · 📑 Pregão - Eletrônico nº PE Nº 028/2026 - EDITAL Nº 045/2026
+🏷️ TIC
+💰 R$ 1.527.900,00
+📦 Contratação de solução integrada para aluguel de equipamentos e serviços de impressão, cópia e digitalização de documentos, com atendimento necessário de infra estrutura, assistência técnica especializada e disponibilização de profissionais capacitados para suporte operacional, atendendo às demandas
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LOCAÇÃO DE EQUIPAMENTOS DE INFORMÁTICA — 1 LOTE × R$ 1.527.900.00
+⏳ Propostas até 26/11/2026 — 13:30
+🔗 https://pncp.gov.br/app/editais/45192275000102/2026/36
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/45192275000102/compras/2026/36/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *097 — MUNICIPIO DE DUQUE DE CAXIAS*
+📍 Duque de Caxias/RJ · 📑 Pregão - Eletrônico nº 80
+🏷️ TIC
+💰 R$ 1.470.000,00
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇOS PARA LOCAÇÃO DE SOFTWARES ESPECÍFICOS DE INSTALAÇÃO, MIGRAÇÃO DE DADOS, TREINAMENTO, MANUTENÇÃO, ATUALIZAÇÃO E SUPORTE TÉCNICO DE SISTEMA DE GERENCIAMENTO DE APLICAÇÃO EM FOLHA DE PAGAMENTO, CONCESSÃO E MANUTENÇÃO DE BENEFÍCIOS PREVIDENCI
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Cessão Temporária de Direitos Sobre Prog — 1 UNIDADE × R$ 1.470.000.00
+⏳ Propostas até 30/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/29138328000150/2026/106
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/29138328000150/compras/2026/106/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *098 — ESTADO DA BAHIA*
+📍 Salvador/BA · 📑 Pregão - Eletrônico nº 009/2026
+🏷️ TIC
+💰 R$ 1.325.000,00
+📦 Contratação de serviços especializados nas áreas contábil, financeira e tributária, objetivando a equiparação do plano de contas e equalização dos Demonstrativos Contábeis e o cumprimento da Emenda Constitucional nº 132/2023  Reforma Tributária, através da identificação de todas as contas passíveis
+📊 ver itens
+🧾 1 item(ns):
+   • Item 10001: ASSESSORIA. para acompanhamento dos contratos. convênios. destinacao das conta sorcamentarias. nas despesas e adiantamen — 1 UNIDADE × R$ 1.325.000.00
+⏳ Propostas até 01/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/13937032000160/2026/3098
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/13937032000160/compras/2026/3098/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *099 — TRIBUNAL DE JUSTICA DO ESTADO DO PIAUI*
+📍 Teresina/PI · 📑 Pregão - Eletrônico nº 130
+🏷️ TIC
+💰 R$ 1.242.502,50
+📦 Aquisição de 250 (duzentos e cinquenta) equipamentos Wireless tipo Access Point da marca Ruckus, modelo R350 ou superior, com tecnologia Wi-Fi 6 (IEEE 802.11ax), incluindo o respectivo licenciamento Ruckus Part Number L09-0001-SG00, em quantitativo suficiente para o licenciamento integral dos equipa
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Equipamento Wireless padrão: 802.3af (wi-fi). frequência: 60. tensão alimentação: 110/220. aplicação: alimentação de pon — 250 Unidade × R$ 4.970.01
+⏳ Propostas até 24/11/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/06981344000105/2026/157
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/06981344000105/compras/2026/157/arquivos/4
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/06981344000105/compras/2026/157/arquivos/3
+
+🏛️ *100 — MUNICIPIO DE PLANALTO*
+📍 Planalto/RS · 📑 Pregão - Eletrônico nº 44
+🏷️ TIC
+💰 R$ 1.196.193,06
+📦 LOCAÇÃO DE SISTEMA WEB INTEGRADO DE GESTÃO PÚBLICA MUNICIPAL, EM NUVEM, INCLUINDO SERVIÇOS COMPLEMENTARES IMPLANTAÇÃO, MANUTENÇÃO (CORRETIVA, ADAPTATIVA E EVOLUTIVA), SUPORTE TÉCNICO E TREINAMENTO DE SERVIDORES PÚBLICOS MUNICIPAIS, ARMAZENAMENTO E SEGURANÇA DA INFORMAÇÃO, PARA ATENDIMENTO DAS NECESS
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LOCAÇÃO DE SISTEMA WEB INTEGRADO DE GESTÃO PÚBLICA MUNICIPAL. EM NUVEM. INCLUINDO SERVIÇOS COMPLEMENTARES IMPLANTAÇÃO. M — 1 UN × R$ 1.196.193.06
+⏳ Propostas até 01/12/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/87612891000115/2026/95
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/87612891000115/compras/2026/95/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *101 — MINISTERIO PUBLICO DA UNIAO*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 115
+🏷️ TIC
+💰 R$ 1.173.993,36
+📦 Contratação de pessoa jurídica para fornecimento de licenciamento corporativo Microsoft Windows Server 2025 destinado à atualização e à regularização dos sistemas operacionais dos servidores físicos e virtuais do Ministério Público Militar, compreendendo licenças da edição Datacenter por núcleo e li
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Licenciamento de Direitos Permanentes de Uso de Software para Servidor Microsoft Windows Server 2025 Datacenter. licenci — 1 UNIDADE × R$ 598.001.37
+   • Item 2: Licenciamento de Direitos Permanentes de Uso de Software para Servidor Licenças Windows Server 2025 User CAL - licença p — 1 UNIDADE × R$ 575.991.99
+⏳ Propostas até 02/12/2026 — 14:00
+🔗 https://pncp.gov.br/app/editais/26989715000102/2026/1897
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/26989715000102/compras/2026/1897/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *102 — PRUDENPREV*
+📍 Presidente Prudente/SP · 📑 Pregão - Eletrônico nº 19
+🏷️ TIC
+💰 R$ 889.827,67
+📦 Contratação de empresa especializada para disponibilização, mediante licenciamento de uso, de solução integrada de gestão previdenciária voltada a Regime Próprio de Previdência Social – RPPS, em ambiente web/nuvem, incluindo implantação, parametrização, migração de dados, integrações e interoperabil
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Software como Servico - Saas Contratação de empresa especializada para disponibilização. mediante licenciamento de uso.  — 1 UNIDADE × R$ 889.827.67
+⏳ Propostas até 27/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/04794805000105/2026/21
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *103 — MUNICIPIO DE AMERICO BRASILIENSE*
+📍 Américo Brasiliense/SP · 📑 Pregão - Eletrônico nº PCE 22
+🏷️ TIC
+💰 R$ 840.000,00
+📦 contratação de empresa especializada para disponibilização de software 100% WEB, em modelo Software as a Service - SaaS, destinado à comunicação interna e externa, gestão eletrônica de documentos e processos administrativos, central de atendimento, protocolo eletrônico, gerenciamento de atividades, 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: SERVIÇOS COM SISTEMA INFORMATIZADO PARA GESTÃO DE COMUNICAÇÃO INTERNA. DOCUMENTAÇÃO. ATENDIMENTO E GERENCIAMENTO DE ATIV — 60 SV (SV) × R$ 14.000.00
+⏳ Propostas até 25/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/43976166000150/2026/84
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *104 — MINISTERIO DA EDUCACAO*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 4
+🏷️ TIC
+💰 R$ 839.270,00
+📦 Registro de Preços para a contratação de licenças de uso de software destinadas ao design gráfico e ao desenvolvimento de projetos de arquitetura e engenharia, a fim de atender às necessidades do Ministério da Educação relacionadas à elaboração, edição, modelagem e documentação desses projetos, incl
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Software como servico - saas ADSK 001 - Autodesk AEC Collection..usuário nomeado. 3 anos. SKU: 02HI1-WW6361-L257 — 20 UNIDADE × R$ 41.963.50
+⏳ Propostas até 24/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/00394445000101/2026/281
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *105 — MUNICIPIO DE SAO LOURENCO DA SERRA*
+📍 São Lourenço da Serra/SP · 📑 Pregão - Eletrônico nº 19
+🏷️ TIC
+💰 R$ 808.854,12
+📦 Contratação de empresa especializada para prestação de serviços de ANÁLISES CLÍNICAS, compreendendo a implantação, operacionalização, manutenção e gestão integral de laboratório de análises clínicas intraunidade, com funcionamento ininterrupto 24 (vinte e quatro) horas por dia, 7 (sete) dias por sem
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa especializada para prestação de serviços de ANÁLISES CLÍNICAS. compreendendo a implantação. opera — 1 SERVIÇO × R$ 808.854.12
+⏳ Propostas até 23/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/59058131000172/2026/151
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/59058131000172/compras/2026/151/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *106 — TRIBUNAL SUPERIOR DO TRABALHO*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 217
+🏷️ TIC
+💰 R$ 794.869,56
+📦 Registro de Preços para a aquisição de licenças de subscrição do software Adobe Creative Cloud for Enterprise Edition 4, sob o modelo de licenciamento ETLA (Enterprise Term License Agreement), na modalidade Software as a Service (SaaS), incluindo atualizações e suporte técnico por 36 meses.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Ver descrição detalhada no instrumento c — 38 UNIDADE × R$ 20.917.62
+⏳ Propostas até 25/11/2026 — 14:00
+🔗 https://pncp.gov.br/app/editais/00509968000148/2026/3907
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *107 — MUNICIPIO DE ITAU DE MINAS*
+📍 Itaú de Minas/MG · 📑 Pregão - Presencial nº 18
+🏷️ TIC
+💰 R$ 773.296,28
+📦 Softwares de gestão pública municipal, implantação, instalação, configuração, parametrização, conversão e migração de dados, treinamento e capacitação dos servidores, suporte técnico especializado, manutenção corretiva, legal, preventiva, adaptativa e evolutiva, hospedagem, armazenamento e processam
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: SOFTWARE DE GESTAO PUBLICA — 1 Unidade × R$ 773.296.28
+⏳ Propostas até 07/12/2026 — 09:10
+🔗 https://pncp.gov.br/app/editais/23767031000178/2026/39
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *108 — MUNICIPIO DE SAO JOSE DO BARREIRO*
+📍 São José do Barreiro/SP · 📑 Pregão - Eletrônico nº 005
+🏷️ TIC
+💰 R$ 758.311,30
+📦 Locação de Sistema de Gestão Pública Municipal, no modelo Software as a Service (SaaS), em ambiente de nuvem, estruturado em módulos temáticos integráveis, incluindo, de forma indissociável, os serviços complementares de implantação, manutenção, suporte técnico, treinamento, armazenamento e seguranç
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Locação de Sistema de Gestão Pública Municipal. no modelo Software as a Service (SaaS). em ambiente de nuvem. estruturad — 1 SERVIÇO × R$ 758.311.30
+⏳ Propostas até 26/11/2026 — 09:59
+🔗 https://pncp.gov.br/app/editais/45200623000146/2026/36
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *109 — MUNICIPIO DE PRIMEIRO DE MAIO*
+📍 Primeiro de Maio/PR · 📑 Pregão - Eletrônico nº 97
+🏷️ TIC
+💰 R$ 656.233,86
+📦 Contratação de empresa especializada na prestação de serviço de locação de Sistema Integrado de Gestão Pública (ERP), incluindo SIAFIC (Sistema Único e Integrado de Execução Orçamentária, Administração Financeira e Controle) em estrita conformidade com o Decreto Federal nº 10.540/2020, disponibiliza
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Outros serviços de gerenciamento de infraestrutura de tecnologia da informação e comunicação (tic) Outros serviços de ge — 1 UNIDADE × R$ 656.233.86
+⏳ Propostas até 27/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/76245059000101/2026/205
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *110 — CONSORCIO INTERMUNICIPAL DE SAUDE PARA GERENCIAMENTO DA REDE DE URGENCIA E EMERGENCIA DA MACRO SUDESTE*
+📍 Juiz de Fora/MG · 📑 Pregão - Eletrônico nº PRE 22
+🏷️ TIC
+💰 R$ 620.323,50
+📦 Aquisição de 50 (cinquenta) ELETROCARDIÓGRAFOS DIGITAIS PORTÁTEIS, com aquisição simultânea de 12 DERIVAÇÕES, destinados às Unidades de Suporte Básico do SAMU 192 e COMPATÍVEIS COM O APLICATIVO LC IAM ECG nas ambulâncias e com o respectivo SISTEMA DE TELEDIAGNÓSTICO, acompanhados dos acessórios, cab
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: ELETROCARDIÓGRAFO DIGITAL PORTÁTIL. COM AQUISIÇÃO SIMULTÂNEA DE 12 DERIVAÇÕES E COMPATIBILIDADE COM O APLICATIVO LC IAM  — 50 UNIDADE (UN) × R$ 12.406.47
+⏳ Propostas até 26/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/17813026000151/2026/51
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/17813026000151/compras/2026/51/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *111 — MUNICIPIO DE ANADIA*
+📍 Anadia/AL · 📑 Pregão - Eletrônico nº 34/2026-SRP
+🏷️ TIC
+💰 R$ 600.000,00
+📦 REGISTRO DE PREÇO PARA CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA O FORNECIMENTO DE SISTEMA INFORMATIZADO INTEGRADO DE GESTÃO PÚBLICA, EM AMBIENTE WEB, COMPREENDENDO O LICENCIAMENTO DE USO DOS MÓDULOS CONTRATADOS, SEM LIMITAÇÃO DE USUÁRIOS, IMPLANTAÇÃO, CONFIGURAÇÃO, MIGRAÇÃO DE DADOS, TREINAMENTO DE
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Conforme o Termo de Referência em anexo. — 12 SERV. × R$ 50.000.00
+⏳ Propostas até 01/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/12227351000119/2026/38
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *112 — MUNICIPIO DE FORQUETINHA*
+📍 Forquetinha/RS · 📑 Pregão - Eletrônico nº 083
+🏷️ TIC
+💰 R$ 562.642,87
+📦 [Portal de Compras Públicas] - Contratação de empresa especializada para os serviços de Instalação, implantação, fornecimento com reservas e manutenção de Sistemas de Informática (softwares) “desenvolvidos em ambiente web”, e Administração Municipal, Câmara Municipal de Vereadores e Fundo de Aposent
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Valor global para a execução do objeto. — 1 Unidade × R$ 562.642.87
+⏳ Propostas até 25/11/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/04214401000103/2026/357
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *113 — MUNICIPIO DE RIO LARGO*
+📍 Rio Largo/AL · 📑 Pregão - Eletrônico nº 052
+🏷️ TIC
+💰 R$ 551.000,00
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇO DE CESSÃO E LICENCIAMENTO DE SOFTWARES PARA IMPLANTAÇÃO DE SISTEMAS INTEGRADOS DE GESTÃO PÚBLICA PARA O MUNICÍPIO DE RIO LARGO/AL
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇO DE CESSÃO E LICENCIAMENTO DE SOFTWARES PARA IMPLANTAÇÃO DE SISTEMAS INTE — 1 SERVIÇO × R$ 551.000.00
+⏳ Propostas até 23/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/12200168000120/2026/223
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *114 — MINISTERIO PUBLICO DO ESTADO DE SANTA CATARINA PROCURADORIA GERAL DE JUSTICA*
+📍 Florianópolis/SC · 📑 Pregão - Eletrônico nº 43/2026/mp
+🏷️ TIC
+💰 R$ 484.200,00
+📦 Contratação de serviço de sustentação e manutenção do Sistema de Gestão de Segurança da Informação (SGSI).
+📊 ver itens
+🧾 1 item(ns):
+   • Item 10001: Serviço de sustentação e manutenção do Sistema de Gestão de Segurança da Informação (SGSI). — 12 UNIDADE × R$ 40.350.00
+⏳ Propostas até 02/12/2026 — 13:00
+🔗 https://pncp.gov.br/app/editais/76276849000154/2026/428
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *115 — TRIBUNAL DE CONTAS DO CEARA*
+📍 Fortaleza/CE · 📑 Pregão - Eletrônico nº 144
+🏷️ TIC
+💰 R$ 462.152,30
+📦 Contratação de serviço de licenciamento de software, mediante subscrição anual de licença de uso de Plataforma Corporativa de Gerenciamento de Repositório de Artefatos e Imagens de Software, em modelo autogerenciado (self-hosted / on-premises), com suporte técnico especia-lizado prestado diretamente
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Serviço de licenciamento de software. me — 1 UNIDADE × R$ 462.152.30
+⏳ Propostas até 01/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/09499757000146/2026/76
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *116 — MUNICIPIO DE FLORINEA*
+📍 Florínea/SP · 📑 Pregão - Eletrônico nº 17
+🏷️ TIC
+💰 R$ 453.680,12
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE LICENCIAMENTO DE USO DE SOFTWARES DE GESTÃO PÚBLICA, COM ATUALIZAÇÃO LEGAL, CORRETIVA E EVOLUTIVA, SUPORTE TÉCNICO, CONVERSÃO E MIGRAÇÃO DE DADOS, IMPLANTAÇÃO, PARAMETRIZAÇÃO, TREINAMENTO DE USUÁRIOS E DISPONIBILIZAÇÃO DE AMBIENTE DE
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de licenciamento de uso de softwares de gestão pública — 1 Unidade × R$ 453.680.12
+⏳ Propostas até 30/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/44493575000169/2026/53
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *117 — UNIVERSIDADE ESTADUAL DE LONDRINA*
+📍 Londrina/PR · 📑 Pregão - Eletrônico nº 164
+🏷️ TIC
+💰 R$ 447.800,00
+📦 Prestação de serviços especializados de Implementação de Data Lake (arquitetura on-promises com stack open source) na Universidade Estadual De Londrina - UEL, bem como Integração e Disponibilização de Dados ao DataHub da Secretaria da Ciência, Tecnologia e Ensino Superior do Paraná - SETI.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de Pesquisa. Análise e Desenvolvimento em Tecnologia Informação e Comunicação (TIC) SERVIÇO DE IMPLEMENTAÇÃO DE — 1 UNIDADE × R$ 447.800.00
+⏳ Propostas até 08/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/78640489000153/2026/1159
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *118 — MUNICIPIO DE SAO JOAO*
+📍 São João/PR · 📑 Pregão - Eletrônico nº 31
+🏷️ TIC
+💰 R$ 434.538,49
+📦 Contratação de serviços técnicos de engenharia e tecnologia da informação para gestão do cadastro territorial multifinalitário; fornecimento de sistema de informação geográfica (SIGWEB) integrado ao cadastro imobiliário; fornecimento de imagem aérea ortorretificada, fornecimento de imagens 360 graus
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de gerenciamento de redes de tecnologia da informação e comunicação (tic) Serviços de gerenciamento de redes de — 1 UNIDADE × R$ 434.538.49
+⏳ Propostas até 27/11/2026 — 14:00
+🔗 https://pncp.gov.br/app/editais/76995422000106/2026/151
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/76995422000106/compras/2026/151/arquivos/3
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *119 — MUNICIPIO DE MACATUBA*
+📍 Macatuba/SP · 📑 Pregão - Eletrônico nº 50
+🏷️ TIC
+💰 R$ 427.441,93
+📦 Fornecimento de software de gestão pública integrado, através de licença de uso, pelo período de 12 (doze) meses, incluindo os serviços de conversão da base de dados existente, implantação, treinamento e suporte técnico do SIAFIC (Sistema Único e Integrado de Execução Orçamentária, Administração Fin
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LICENCA DE USO DE SOFTWARE — 1 SERVICO × R$ 427.441.93
+⏳ Propostas até 24/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/46200853000178/2026/78
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *120 — MUNICIPIO DE SENGES*
+📍 Sengés/PR · 📑 Pregão - Eletrônico nº 097
+🏷️ TIC
+💰 R$ 413.394,91
+📦 Contratação de serviços de licenciamento de software de gestão pública, incluindo serviços de hospedagem em data center, solução integrada de controle de frequência, fornecimento de equipamentos de coleta de ponto e suporte técnico especializado, para utilização no Executivo e Legislativo Municipal,
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: SOFTWARE DE GESTAO PUBLICA — 1 UNID × R$ 360.634.15
+   • Item 2: SOFTWARE DE GESTAO PUBLICA — 1 UNID × R$ 52.760.76
+⏳ Propostas até 04/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/76911676000107/2026/235
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *121 — ESTADO DO RIO DE JANEIRO*
+📍 Rio de Janeiro/RJ · 📑 Pregão - Eletrônico nº PE0342/26
+🏷️ TIC
+💰 R$ 405.914,30
+📦 Aquisição, por licitação (pregão eletrônico), DE SERVIÇOS ARQUIVÍSTICOS PARA RESOLUÇÃO DA MASSA DOCUMENTAL DOS PROCESSOS ADMINISTRATIVOS DO HOSPITAL UNIVERSITÁRIO PEDRO ERNESTO.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: DESCRICAO: CONTRATACAO DE SERVICO ESPECIALIZADO EM ORGANIZACAO ARQUIVISTICA COM APLICACAO DE TABELA DE TEMPORALIDADE DOC — 1.000 M × R$ 405.91
+⏳ Propostas até 03/12/2026 — 09:59
+🔗 https://pncp.gov.br/app/editais/42498600000171/2026/4950
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *122 — MUNICIPIO DE FLORIANO PEIXOTO*
+📍 Floriano Peixoto/RS · 📑 Pregão - Presencial nº 5
+🏷️ TIC
+💰 R$ 401.170,08
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A CONCESSÃO DE LICENÇA TEMPORÁRIA DE USO DE SISTEMA INTEGRADO DE GESTÃO MUNICIPAL, ACOMPANHADO DE SERVIÇOS DE SUPORTE TÉCNICO E MANUTENÇÃO CORRETIVA, ADAPTATIVA E EVOLUTIVA
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LICENÇA DE USO DE SISTEMA INTEGRADO DE GESTÃO PÚBLICA — 12 UN × R$ 33.430.84
+⏳ Propostas até 24/11/2026 — 08:29
+🔗 https://pncp.gov.br/app/editais/01612289000162/2026/61
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *123 — MUNICIPIO DE HORTOLANDIA*
+📍 Hortolândia/SP · 📑 Pregão - Eletrônico nº 163/2026
+🏷️ TIC
+💰 R$ 365.800,00
+📦 Concessão de licença de uso de Sistema de Gestão da Assistência Social, na modalidade SaaS (Software as a Service)
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa especializada para concessão de licença de uso de Sistema de Gestão da Assistência Social. na mod — 1 SERV. × R$ 365.800.00
+⏳ Propostas até 01/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/67995027000132/2026/481
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *124 — MUNICIPIO DE HORTOLANDIA*
+📍 Hortolândia/SP · 📑 Pregão - Eletrônico nº 135
+🏷️ TIC
+💰 R$ 365.800,00
+📦 Contratação de empresa especializada para concessão de licença de uso de Sistema de Gestão da Assistência Social, na modalidade SaaS (Software as a Service).
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa especializada para concessão de licença de uso de Sistema de Gestão da Assistência Social. na mod — 1 SERV. × R$ 365.800.00
+⏳ Propostas até 01/12/2026 — 00:00
+🔗 https://pncp.gov.br/app/editais/67995027000132/2026/491
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *125 — MUNICIPIO DE MAIRINQUE*
+📍 Mairinque/SP · 📑 Pregão - Eletrônico nº 040
+🏷️ TIC
+💰 R$ 357.007,00
+📦 PE N 036/2026 - Contratação de empresa especializada para locação de 80 (oitenta) equipamentos de registro eletrônico de ponto com reconhecimento facial, com disponibilização de solução integrada para gestão da frequência dos servidores da Prefeitura Municipal de Mairinque, incluindo licença de uso 
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Locação de equipamentos para registro de ponto eletrônico com reconhecimento facial. manutenção preventiva e corretiva.  — 60 UNIDADE × R$ 5.864.00
+   • Item 2: Instalação. treinamento. Cadastramento de Faces — 1 UNIDADE × R$ 5.167.00
+⏳ Propostas até 26/11/2026 — 08:45
+🔗 https://pncp.gov.br/app/editais/45944428000120/2026/441
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *126 — COMANDO DA AERONAUTICA*
+📍 Curitiba/PR · 📑 Pregão - Eletrônico nº 179
+🏷️ TIC
+💰 R$ 352.501,24
+📦 Contratação de Registro de preços para futuras contratações de licenças de uso de softwares especializados de engenharia e arquitetura, em modelo de subscrição por 36 (trinta e seis) meses, compreendendo licenças do software AutoCAD LT Commercial New Singleuser e da Autodesk Architecture, Engineerin
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Cessão Temporária de Direitos Sobre Prog — 26 UNIDADE × R$ 6.306.00
+   • Item 2: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Cessão Temporária de Direitos Sobre Prog — 4 UNIDADE × R$ 47.136.31
+⏳ Propostas até 01/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/00394429000100/2026/3045
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *127 — MUNICIPIO DE SAO MANUEL*
+📍 São Manuel/SP · 📑 Pregão - Eletrônico nº 148
+🏷️ TIC
+💰 R$ 319.840,00
+📦 Contratação de empresa especializada para fornecimento de licença de uso, por prazo determinado, de sistema informatizado para gestão da Assistência Social, em ambiente web, destinado ao atendimento das necessidades da Secretaria Municipal de Assistência e Desenvolvimento Social do Município de São 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LOTE ÚNICO — 1 Lote × R$ 319.840.00
+⏳ Propostas até 04/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/46634523000190/2026/326
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *128 — MUNICIPIO DE ARTUR NOGUEIRA*
+📍 Artur Nogueira/SP · 📑 Pregão - Eletrônico nº PL-803
+🏷️ TIC
+💰 R$ 309.999,96
+📦 Contratação de empresa especializada para prestação continuada de serviços de Tecnologia da Informação, compreendendo manutenção preventiva, preditiva e corretiva de equipamentos de informática, periféricos e infraestrutura de rede, suporte técnico presencial e remoto, instalação, configuração e atu
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Manutenção e limpeza equipamentos informatica e copiadora Prestação continuada de serviços especializados de Tecnologia  — 12 SV × R$ 25.833.33
+⏳ Propostas até 02/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/45735552000186/2026/289
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/45735552000186/compras/2026/289/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *129 — MUNICIPIO DE AGUA FRIA*
+📍 Água Fria/BA · 📑 Pregão - Eletrônico nº 021-2026
+🏷️ TIC
+💰 R$ 308.966,71
+📦 Contratação de empresa para prestação dos serviços especializados de locação de software nos sistemas integrados de gestão envolvendo Plano Plurianual (PPA), Lei de Diretrizes Orçamentárias (LDO), Lei Orçamentária Anual (LOA), Contabilidade Pública, Folha de Pagamento, Controle de Contratos, Control
+📊 ver itens
+🧾 1 item(ns):
+   • Item 10001: Contratação de empresa para prestação dos serviços especializados de locação de software — 1 UNIDADE × R$ 308.966.71
+⏳ Propostas até 26/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/13606702000165/2026/37
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *130 — MUNICIPIO DE SAO LOURENCO DA SERRA*
+📍 São Lourenço da Serra/SP · 📑 Pregão - Eletrônico nº 22
+🏷️ TIC
+💰 R$ 302.395,44
+📦 Contratação de empresa especializada em engenharia para fornecimento, instalação, configuração, integração, testes e ativação de novos pontos do Sistema Municipal de Videomonitoramento, incluindo câmeras IP, LPR/OCR, solução de reconhecimento facial, infraestrutura, gravação e armazenamento, painéis
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: (MAIOR DESCONTO %) Contratação de empresa especializada em engenharia para fornecimento. instalação. configuração. integ — 1 LOTE × R$ 302.395.44
+⏳ Propostas até 04/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/59058131000172/2026/163
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *131 — CONSELHO REGIONAL DE ENGENHARIA E AGRONOMIA DO PARANA*
+📍 Curitiba/PR · 📑 Pregão - Eletrônico nº 246
+🏷️ TIC
+💰 R$ 299.800,00
+📦 Prestação de serviços de licenciamento de uso de solução de programa de computador, no modelo SaaS (software as a service), destinada ao envio e à gestão da comunicação institucional por e-mail do Crea-PR.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão temporária de direitos sobre programas de computador locação de software Prestação de serviços de licenciamento d — 1 UNIDADE × R$ 299.800.00
+⏳ Propostas até 07/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/76639384000159/2026/271
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *132 — CAMARA LEGISLATIVA DO DISTRITO FEDERAL*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 146
+🏷️ TIC
+💰 R$ 279.294,48
+📦 Contratação de empresa para prestação de serviços continuados e integrados de monitoramento, captura, gravação, seleção, classificação, análise de sentimento, indexação e disponibilização de clipping de notícias veiculadas em Televisão, Rádio, Mídia Impressa (jornais e revistas) e Mídia Web de âmbit
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Resenha de Notícia / Agenciamento de Informação / Sinopse / Recorte Notícia Contratação de empresa para prestação de ser — 1 UNIDADE × R$ 279.294.48
+⏳ Propostas até 25/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/26963645000113/2026/156
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *133 — MUNICIPIO DE ELOI MENDES*
+📍 Elói Mendes/MG · 📑 Pregão - Eletrônico nº 67
+🏷️ TIC
+💰 R$ 267.837,84
+📦 [Portal de Compras Públicas] - REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA DISPONIBILIZAÇÃO, IMPLANTAÇÃO, CONFIGURAÇÃO, PARAMETRIZAÇÃO, MIGRAÇÃO DE DADOS, TREINAMENTO, SUPORTE TÉCNICO, MANUTENÇÃO E ATUALIZAÇÃO DE PLATAFORMA INTEGRADA DE GESTÃO ESCOLAR MUNICIPAL,
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: SISTEMA DE GESTAO ESCOLAR MUNICIPAL — 32.400 Unidade × R$ 8.27
+⏳ Propostas até 07/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/20347225000126/2026/223
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *134 — SECRETARIA DE INFRAESTRUTURA E MEIO AMBIENTE*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 326
+🏷️ TIC
+💰 R$ 249.336,80
+📦 Contratação de assinaturas da plataforma de inteligência artificial generativa Claude Team, nas modalidades Standard e Premium, pelo período de 12 (doze) meses.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Cessão Temporária de Direitos Sobre Prog — 1 UNIDADE × R$ 249.336.80
+⏳ Propostas até 02/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/56089790000188/2026/357
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *135 — CONSELHO REGIONAL DE ENFERMAGEM DE MINAS GERAIS*
+📍 Belo Horizonte/MG · 📑 Pregão - Eletrônico nº 52
+🏷️ TIC
+💰 R$ 234.512,20
+📦 Contratação de serviços para renovação de licenças de segurança para equipamentos firewalls FORTINET FORTIGATE 100F DO COREN-MG.
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Licenciamento de Direitos Permanentes de Uso de Outros Softwares / Programas de Computador Renovação da licença UTP (Uni — 2 UNIDADE × R$ 91.664.52
+   • Item 2: Licenciamento de Direitos Permanentes de Uso de Outros Softwares / Programas de Computador Renovação licenciamento Forti — 1 UNIDADE × R$ 51.183.16
+⏳ Propostas até 30/11/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/21699889000117/2026/61
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *136 — MUNICIPIO DE CASCAVEL*
+📍 Cascavel/PR · 📑 Pregão - Eletrônico nº PCE 167
+🏷️ TIC
+💰 R$ 221.330,34
+📦 CONTRATAÇÃO DE EMPRESA PARA PRESTAÇÃO DE SERVIÇOS TÉCNICOS ESPECIALIZADOS NA ÁREA DE INFORMÁTICA PARA LICENÇA DE USO DE SOFTWARES PARA GESTÃO PÚBLICA EDUCACIONAL DA SECRETARIA MUNICIPAL DE EDUCAÇÃO E SUAS UNIDADE ESCOLARES.
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: IMPLANTAÇÃO. MIGRAÇÃO E CAPACITAÇÃO - CONFORME TERMO DE REFERÊNCIA — 1 UNIDADE (UND) × R$ 100.123.62
+   • Item 2: CESSÃO DO SOFTWARE SUPORTE TÉCNICO E MANUTENÇÃO MENSAL - CONFORME TERMO DE REFERÊNCIA — 12 UNIDADE (UND) × R$ 10.100.56
+⏳ Propostas até 27/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/76208867000107/2026/653
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *137 — MUNICIPIO DE UNAI*
+📍 Unaí/MG · 📑 Pregão - Eletrônico nº PL-157
+🏷️ TIC
+💰 R$ 216.000,00
+📦 REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA PARA O FORNECIMENTO DE LICENÇA DE USO DE PLATAFORMA (SAAS) DE GESTÃO DO PLANEJAMENTO PEDAGÓGICO DA EDUCAÇÃO ESPECIAL, CONTEMPLANDO ESTUDO DE CASO, PLANO EDUCACIONAL INDIVIDUALIZADO (PEI), PLANO DE ATENDIMENTO EDUCACIONAL ESPECIALIZADO 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: FORNECIMENTO DE LICENÇA DE USO DE PLATAFORMA (SaaS) DE GESTÃO DO PLANEJAMENTO PEDAGÓGICO DA EDUCAÇÃO ESPECIAL. CONTEMPLA — 7.200 UN × R$ 30.00
+⏳ Propostas até 04/12/2026 — 09:10
+🔗 https://pncp.gov.br/app/editais/18125161000177/2026/113
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *138 — CAMARA MUNICIPAL DE ICONHA*
+📍 Iconha/ES · 📑 Pregão - Eletrônico nº 000001
+🏷️ TIC
+💰 R$ 196.793,52
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE LICENCIAMENTO DE USO DE SISTEMAS WEB DE GESTÃO PÚBLICA INTEGRADA.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LICENCIAMENTO DE USO DE SISTEMAS WEB DE GESTÃO PÚBLICA INTEGRADA — 12 UNIDADE × R$ 16.399.46
+⏳ Propostas até 30/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/03251599000124/2026/39
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *139 — SAO PAULO TRIBUNAL DE CONTAS DO ESTADO*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 322
+🏷️ TIC
+💰 R$ 195.622,72
+📦 Contratação de cobertura oficial pós-garantia do fabricante e de serviços técnicos especializados de suporte, manutenção e atividades proativas para 4 (quatro) nós Lenovo ThinkAgile VX7520 Appliance, integrantes do ambiente de infraestrutura hiperconvergente (HCI) do Tribunal de Contas do Estado de 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de Gerenciamento de Infraestrutura de Tecnologia daInformação e Comunicação (TIC) Serviços de Gerenciamento de  — 1 UNIDADE × R$ 195.622.72
+⏳ Propostas até 03/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/50290931000140/2026/166
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *140 — MUNICIPIO DE PORTAO*
+📍 Portão/RS · 📑 Pregão - Eletrônico nº 82
+🏷️ TIC
+💰 R$ 189.265,48
+📦 LOCAÇÃO DE SOFTWARES
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Aquisição de Softwares BIM — 8 ADES × R$ 23.317.31
+   • Item 2: SOFTWARE DE PLANILHAS — 1 UN × R$ 2.727.00
+⏳ Propostas até 22/12/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/87344016000108/2026/735
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *141 — GOIAS TRIBUNAL DE CONTAS*
+📍 Goiânia/GO · 📑 Pregão - Eletrônico nº 169
+🏷️ TIC
+💰 R$ 170.424,00
+📦 Constitui objeto do presente edital a contratação de empresa para o fornecimento de solução de backup em nuvem para o ambiente Microsoft 365, abrangendo, no mínimo, os serviços Exchange Online, OneDrive, SharePoint, Teams e Entra ID, conforme condições, quantidades e exigências estabelecidas neste E
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Solução de backup em nuvem para Microsof — 1 UNIDADE × R$ 170.424.00
+⏳ Propostas até 01/12/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/02291730000114/2026/173
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *142 — MUNICIPIO DE FLORIANOPOLIS*
+📍 Florianópolis/SC · 📑 Pregão - Eletrônico nº 451
+🏷️ TIC
+💰 R$ 168.000,00
+📦 Contratação de empresa especializada em produção cultural para prestar serviços de planejamento executivo, coordenação e acompanhamento operacional do Encontro Internacional de Renda de Bilro, PRONAC 2514850, incluindo integração da programação, gestão de fornecedores, organização logística, gestão 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Organização e Produção do Evento — 1 SERVICO × R$ 168.000.00
+⏳ Propostas até 25/11/2026 — 11:00
+🔗 https://pncp.gov.br/app/editais/82892282000143/2026/479
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *143 — MUNICIPIO DE BARRA DO CHOCA*
+📍 Barra do Choça/BA · 📑 Pregão - Eletrônico nº 037
+🏷️ TIC
+💰 R$ 163.639,22
+📦 [LICITANET] - Contratação de empresa especializada para o licenciamento de uso de sistema de gestão educacional integrada, acompanhado dos serviços de instalação, consultoria de implantação, customização, parametrização, migração de dados, capacitação de usuários, suporte técnico e manutenção corret
+📊 ver itens
+🧾 1 item(ns):
+   • Item 8187448: Contratação de empresa especializada para o licenciamento de uso de sistema de gestão educacional integrada. acompanhado — 1 UND × R$ 163.639.22
+⏳ Propostas até 24/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/13906789000196/2026/151
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *144 — MUNICIPIO DE BARRA DO CHOCA*
+📍 Barra do Choça/BA · 📑 Pregão - Eletrônico nº 037/2026
+🏷️ TIC
+💰 R$ 163.639,22
+📦 Contratação de empresa especializada para o licenciamento de uso de sistema de gestão educacional integrada, acompanhado dos serviços de instalação, consultoria de implantação, customização, parametrização, migração de dados, capacitação de usuários, suporte técnico e manutenção corretiva e evolutiv
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: SISTEMA DE GESTÃO EDUCACIONAL — 1 UND × R$ 163.639.22
+⏳ Propostas até 24/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/13906789000196/2026/152
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *145 — MUNICIPIO DE ANICUNS*
+📍 Anicuns/GO · 📑 Pregão - Eletrônico nº (11259) | 69-0
+🏷️ TIC
+💰 R$ 160.066,68
+📦 SOLICITA CONTRATAÇÃO DE SERVIÇOS TÉCNICOS ESPECIALIZADOS PARA FORNECIMENTO DE LICENÇA DE USO TEMPORÁRIO DE SISTEMA INFORMATIZADO INTEGRADO PARA GESTÃO E CONFORNIDADE FISCAL MUNICIPAL NA NUVEM(SaaS), COMTEMPLANDO INTELIGÊNCIA FISCAL, PAINÉS EXECUTIVOS, VALIDADOR DE DEMONSTRATIVOS MONITORAMENTO DE ADI
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Módulo SAAS Módulo 1: Painéis Analíticos Executivos Módulo 2: Validador de consistência fiscal (Siconfi) Módulo 3: Gestã — 12 UN × R$ 13.338.89
+⏳ Propostas até 27/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/02262368000153/2026/165
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *146 — TOCANTINS PROCURADORIA GERAL DA JUSTICA*
+📍 Palmas/TO · 📑 Pregão - Eletrônico nº 10
+🏷️ TIC
+💰 R$ 153.821,00
+📦 A CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA NA EXECUÇÃO DE SERVIÇOS CONTÍNUOS DE ASSISTÊNCIA TÉCNICA, ABRANGENDO AS MODALIDADES DE MANUTENÇÃO PREVENTIVA E CORRETIVA, A SEREM PRESTADOS SOB DEMANDA. O ESCOPO DOS SERVIÇOS COMPREENDE O SUPORTE A EQUIPAMENTOS DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO 
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Acessório / Componente Para Microcomputador componentes: placa base industrial. aplicação: computadores industriais Forn — 1 Unidade × R$ 80.361.00
+   • Item 2: Serviços de Manutenção e Reparação de Computadores e seus Periféricos Serviços de Manutenção e Reparação de Computadores — 1 UNIDADE × R$ 73.460.00
+⏳ Propostas até 30/11/2026 — 09:59
+🔗 https://pncp.gov.br/app/editais/01786078000146/2026/73
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/01786078000146/compras/2026/73/arquivos/2
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *147 — INSTITUTO DE PREVIDENCIA E ASSISTENCIA DOS SERVIDORES DO MUN. DE ARAGUAINA*
+📍 Araguaína/TO · 📑 Pregão - Eletrônico nº 01
+🏷️ TIC
+💰 R$ 153.600,00
+📦 Contratação de empresa especializada para disponibilização de solução integrada de gestão previdenciária em ambiente web, no modelo Software as a Service – SaaS, licenciamento de uso da solução, hospedagem em nuvem, implantação, parametrização, migração dos dados históricos, treinamento e capacitaçã
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa especializada para disponibilização de solução integrada de gestão previdenciária em ambiente web — 12 SERVIÇO × R$ 12.800.00
+⏳ Propostas até 24/11/2026 — 18:00
+🔗 https://pncp.gov.br/app/editais/02664384000172/2026/15
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *148 — JUSTICA FEDERAL DE PRIMEIRA INSTANCIA*
+📍 Recife/PE · 📑 Pregão - Eletrônico nº 110
+🏷️ TIC
+💰 R$ 151.099,43
+📦 Contratação de serviços de suporte técnico e garantia para solução GPON (Gigabit Passive Optical Network), com fornecimento de peças de reposição e aplicação de atualizações de segurança, visando a manutenção e sustentação da infraestrutura de rede de fibra óptica do Tribunal Federal Regional da 5ª 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de Garantia de Equipamentos de TIC SERVIÇO DE 3 (TRÊS) ANOS DE GARANTIA E SUPORTE - LASERWAY POL Modelo Referên — 1 UNIDADE × R$ 151.099.43
+⏳ Propostas até 30/11/2026 — 11:00
+🔗 https://pncp.gov.br/app/editais/00508903000188/2026/2196
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *149 — ESTADO DO CEARA*
+📍 Fortaleza/CE · 📑 Pregão - Eletrônico nº 1137
+🏷️ TIC
+💰 R$ 139.840,00
+📦 Prestação de Serviços de 23 (vinte e três) licenças de uso de software proprietário de desenho assistido por computador, AutoCAD LT, na versão mais recente disponível no momento do fornecimento, com direito a upgrades e atualizações disponibilizadas pelo fabricante pelo período de 36 (trinta e seis)
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Cessão Temporária de Direitos Sobre Prog — 23 UNIDADE × R$ 6.080.00
+⏳ Propostas até 26/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/07954480000179/2026/27201
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *150 — ESTADO DO CEARA*
+📍 Fortaleza/CE · 📑 Pregão - Eletrônico nº 202629240
+🏷️ TIC
+💰 R$ 139.840,00
+📦 Serviço de licenciamento de 23 (vinte e três) licenças de software CAD (Computer Aided Design – Desenho Assistido por Computador) de equipamentos de processamento de dados (microcomputadores) para atender a Coordenadoria de Infraestrutura (COINF), por meio da Célula de Engenharia.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LICENCA DE SOFTWARE. SUBSCRIPTION DO SOFTWARE AUTOCAD LT. EMBALAGEM 1.0 UNIDADE — 23 EMBALAGEM 1.0 UNIDADE  × R$ 6.080.00
+⏳ Propostas até 26/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/07954480000179/2026/27107
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *151 — MUNICIPIO DE TAGUATINGA*
+📍 Taguatinga/TO · 📑 Pregão - Presencial nº (10761) | 20-0
+🏷️ TIC
+💰 R$ 134.424,48
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA LOCAÇÃO DE SISTEMA DE INFORMÁTICA (SOFTWARE) DE GESTÃO PÚBLICA, CONTENDO OS MÓDULOS: CONTABILIDADE, FINANCEIRO, RECURSOS HUMANOS, GESTÃO DE COMPRAS E LICITAÇÃO, BANCO DE DADOS, ALMOXARIFADO, ARRECADAÇÃO, PATRIMÔNIO, PROTOCOLO, FROTAS, TESOURARIA, E-SIC, NOTA
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA LOCAÇÃO DE SISTEMA DE INFORMÁTICA (SOFTWARE) DE GESTÃO PÚBLICA. CONTENDO OS MÓ — 12 SV × R$ 11.202.04
+⏳ Propostas até 26/11/2026 — 14:00
+🔗 https://pncp.gov.br/app/editais/02306900000197/2026/3
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *152 — INSTITUTO DE PREVIDENCIA DOS SERVIDORES PUBLICOS DE JUSSARA*
+📍 Jussara/PR · 📑 Pregão - Eletrônico nº 1
+🏷️ TIC
+💰 R$ 131.466,71
+📦 Prestação de serviços de informática compreendendo os serviços de locação de Software de Gestão Previdenciária para RPPS Regime Próprio de Previdência Social, incluindo implantação, migração de dados, treinamento de usuários e manutenção mensal, bem como serviço especializado de informática para ela
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Licenciamento de Direitos Permanentes de Uso de Outros Softwares / Programas de Computador Licenciamento de Direitos Per — 1 UNIDADE × R$ 131.466.71
+⏳ Propostas até 30/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/01048489000134/2026/1
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *153 — SERVICO AUTONOMO DE AGUA E ESGOTO SAAE*
+📍 Volta Redonda/RJ · 📑 Pregão - Eletrônico nº 231
+🏷️ TIC
+💰 R$ 124.881,00
+📦 O objeto da presente licitação é a CONTRATAÇÃO DA SOLUÇÃO DE SEGURANÇA DE SUBSCRIÇÃO (ASSINATURA) DE LICENÇAS DE SOFTWARE PARA SOLUÇÃO DE ANTIVÍRUS CORPORATIVO EQUIVALENTE OU SUPERIOR AO USADO ATUALMENTE PELO SAAE/VR,
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Manutenção de Software (Corretiva. Preventiva. Adaptativa) MANUTENÇÃO DE SOFTWARE Resumo: RENOVAÇÃO/ATUALIZAÇÃO DE SOLUÇ — 1 UND SERVIÇO TÉCNICO × R$ 124.881.00
+⏳ Propostas até 23/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/32504706000187/2026/121
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *154 — GOIAS TRIBUNAL DE CONTAS*
+📍 Goiânia/GO · 📑 Pregão - Eletrônico nº 168
+🏷️ TIC
+💰 R$ 115.161,59
+📦 Prestação de serviços continuados de subscrição de licenças corporativas da Plataforma de Inteligência Artificial Generativa Claude (Anthropic), na modalidade Software as a Service (SaaS).
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Software como Servico - Saas Software como Servico - Saas Licitantes devem se informar com relação à descrição dos itens — 1 UNIDADE × R$ 115.161.59
+⏳ Propostas até 01/12/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/02291730000114/2026/174
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *155 — MUNICIPIO DE TAPIRA*
+📍 Tapira/MG · 📑 Pregão - Eletrônico nº 23
+🏷️ TIC
+💰 R$ 111.200,04
+📦 [LICITANET] - Contratação de empresa especializada para prestação de serviços técnicos de consultoria em governança de Tecnologia da Informação e Comunicação e gerenciamento de projetos de TIC, com aplicação das boas práticas do PMBOK, abrangendo o planejamento, a priorização, o acompanhamento, a ge
+📊 ver itens
+🧾 1 item(ns):
+   • Item 8185491: CONTRATACAO DE EMPRESA ESPECIALIZADA PARA PRESTACAO DE SERVICOS TECNICOS DE CONSULTORIA EM GOVERNANCA DE TECNOLOGIA DA I — 12 ME × R$ 9.266.67
+⏳ Propostas até 23/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/18140806000140/2026/31
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *156 — MUNICIPIO DE PORTO FERREIRA*
+📍 Porto Ferreira/SP · 📑 Pregão - Eletrônico nº 95
+🏷️ TIC
+💰 R$ 108.867,62
+📦 Aquisição de 02 (duas) aeronaves remotamente pilotadas (drones) idênticas, completas, equipadas com sistema híbrido de câmeras (sensor termal radiométrico e sensor visual RGB de alta definição com zoom), acompanhadas de kits de baterias sobressalentes e estações/hubs de carga, com arquitetura aberta
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Aeronave Remotamente Pilotada (Drone) — 2 UNIDADE × R$ 47.963.80
+   • Item 2: Baterias de voo inteligentes. 100% originais e totalmente compatíveis com as aeronaves do Item 01. — 6 UNIDADE × R$ 2.156.67
+⏳ Propostas até 24/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/45339363000194/2026/358
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *157 — MUNICIPIO DE CORGUINHO*
+📍 Corguinho/MS · 📑 Pregão - Eletrônico nº 035
+🏷️ TIC
+💰 R$ 103.254,48
+📦 contratação de pessoa jurídica especializada para a locação de 18 (dezoito) equipamentos de registro eletrônico de ponto (REP) com reconhecimento facial, observados os requisitos técnicos e legais aplicáveis, incluindo cessão de uso de software de gestão de frequência em nuvem, instalação, configura
+📊 ver itens
+🧾 1 item(ns):
+   • Item 2327415: 39606-Locação de equipamento de Registro Eletrônico de Ponto (REP) com reconhecimento facial. observados os requisitos t — 216 SERVIÇO × R$ 478.03
+⏳ Propostas até 23/11/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/03501525000107/2026/73
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *158 — SAO JOSE DOS PINHAIS CAMARA MUNICIPAL*
+📍 São José dos Pinhais/PR · 📑 Pregão - Eletrônico nº 10
+🏷️ TIC
+💰 R$ 100.001,20
+📦 Contratação de empresa especializada para fornecimento de 260 (duzentas e sessenta) licenças de uso de software Kaspersky para proteção de endpoints, pelo prazo de 36 (trinta e seis) meses, sendo 250 (duzentas e cinquenta) licenças destinadas a estações de trabalho e 10 (dez) licenças destinadas a s
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Licença de software Kaspersky Next EDR Optimum Brazilian Edition para estação de trabalho Windows. gerenciamento central — 250 UN × R$ 384.62
+   • Item 2: Licença de software Kaspersky Next EDR Optimum Brazilian Edition para servidores. gerenciamento centralizado. implementa — 10 UN × R$ 384.62
+⏳ Propostas até 24/11/2026 — 17:00
+🔗 https://pncp.gov.br/app/editais/78173648000157/2026/12
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *159 — CAMARA MUNICIPAL DE SAO JOSE*
+📍 São José/SC · 📑 Pregão - Eletrônico nº 12
+🏷️ TIC
+💰 R$ 97.188,00
+📦 Contratação de solução de backup na modalidade SaaS (Software como Serviço), contemplando armazenamento em nuvem, instalação, treinamento e suporte técnico, conforme detalhamento descrito no termo de referência.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços Especializados de Disponibilização de Cópias de Segurança de Dados (Backup como serviço) Serviços Especializado — 12 UNIDADE × R$ 8.099.00
+⏳ Propostas até 08/12/2026 — 13:59
+🔗 https://pncp.gov.br/app/editais/83708248000139/2026/69
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *160 — UNIVERSIDADE FEDERAL DO OESTE DA BAHIA*
+📍 Barreiras/BA · 📑 Pregão - Eletrônico nº 207
+🏷️ TIC
+💰 R$ 91.962,66
+📦 Contratação de licenças de software de modelagem 3D e documentação para arquitetura, engenharia e construção civil, com utilização da metodologia BIM (Building Information Modeling ou Modelagem da Informação da Construção) para uso administrativo na Universidade Federal do Oeste da Bahia.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Licença de software - Autodesk Architect — 3 UNIDADE × R$ 30.654.22
+⏳ Propostas até 04/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/18641263000145/2026/52
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *161 — FUNDACAO DO ABC*
+📍 Santo André/SP · 📑 Pregão - Presencial nº 4
+🏷️ TIC
+💰 R$ 84.372,32
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE GUARDA EXTERNA DE DOCUMENTOS FÍSICOS PARA O CENTRO UNIVERSITÁRIO FMABC
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Documento - Guarda / Transporte Documento - Guarda / Transporte — 1 UNIDADE × R$ 84.372.32
+⏳ Propostas até 01/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/57571275000798/2026/3
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *162 — CAMARA MUNICIPAL DE IJUI*
+📍 Ijuí/RS · 📑 Pregão - Eletrônico nº 2026.11.16/01PE
+🏷️ TIC
+💰 R$ 78.504,40
+📦 Contratação de empresa especializada para prestação de serviços integrados de tecnologia da informação, compreendendo disponibilização e gerenciamento de servidor em nuvem (cloud), com capacidade mínima de armazenamento de 8 TB, implantação e licenciamento de solução corporativa de proteção de endpo
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Prestação de serviços integrados de tecnologia da informação. compreendendo disponibilização e gerenciamento de servidor — 1 UN × R$ 78.504.40
+⏳ Propostas até 01/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/89648968000132/2026/34
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *163 — CAMARA MUNICIPAL DE REGISTRO*
+📍 Registro/SP · 📑 Pregão - Eletrônico nº 1
+🏷️ TIC
+💰 R$ 77.341,78
+📦 Contratação de subscrição de licenças de software pelo período de 12 (doze) meses, compreendendo 70 (setenta) contas da solução de e-mail corporativo e produtividade em nuvem Google Workspace Business Standard (Item 1) e 01 (uma) licença corporativa da ferramenta de suporte e acesso remoto TeamViewe
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Subscricao licenca Google Workspace Busi — 70 UNIDADE × R$ 1.016.23
+   • Item 2: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Subscricao de 01 licenca TeamViewer Corp — 1 UNIDADE × R$ 6.205.68
+⏳ Propostas até 02/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/01598123000139/2026/15
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *164 — SECRETARIA DE INFRAESTRUTURA E MEIO AMBIENTE*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 270
+🏷️ TIC
+💰 R$ 73.663,33
+📦 Contratação de licenças de uso da plataforma Canva Pro+, pelo período de 12 (doze) meses, para atendimento às necessidades de criação, edição e produção de materiais gráficos e conteúdos digitais destinados às atividades de comunicação institucional, divulgação de ações, educação ambiental e demais 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Software como Servico - Saas Software como Servico - Saas O item ofertado deverá ser conforme especificações do edital d — 100 UNIDADE × R$ 736.63
+⏳ Propostas até 24/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/56089790000188/2026/346
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *165 — MUNICIPIO DE ALEGRETE*
+📍 Alegrete/RS · 📑 Pregão - Eletrônico nº 136 | Processo 424
+🏷️ TIC
+💰 R$ 73.222,92
+📦 Contratacao de empresa especializada para a prestacao de servicos tecnicos especializados de apoio a governanca e conformidade da Administracao Municipal a Lei Geral de Protecao de Dados Pessoais LGPD Lei Federal n 13.709 2018 compreendendo a disponibilizacao de plataforma tecnologica especializada 
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Prestacao de servicos tecnicos especializados de apoio a governanca e conformidade a Lei Geral de Protecao de Dados Pess — 12 UNIDADE × R$ 6.101.91
+⏳ Propostas até 24/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/87896874000157/2026/342
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *166 — SUPERINTENDENCIA AUTONOMA DE AGUA E ESGOTO DE SAO JOSE DO RIO PARDO - SAERP*
+📍 São José do Rio Pardo/SP · 📑 Pregão - Eletrônico nº 10
+🏷️ TIC
+💰 R$ 65.390,04
+📦 Contratação de empresa especializada para locação de licença de uso de software de gestão de serviços de água, esgoto, dívida ativa, baixa integrada e protocolo para a SAERP, incluindo conversão de dados, implantação, treinamento, suporte técnico e atualizações.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa especializada para locação de licença de uso de software de gestão de serviços de água. esgoto. d — 12 SER × R$ 5.449.17
+⏳ Propostas até 30/11/2026 — 07:59
+🔗 https://pncp.gov.br/app/editais/19659196000159/2026/10
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *167 — CONSELHO REGIONAL DE ENFERMAGEM DO RIO GRANDE DO NORTE*
+📍 Natal/RN · 📑 Pregão - Eletrônico nº 9
+🏷️ TIC
+💰 R$ 64.317,84
+📦 Contratação de empresa especializada para fornecimento de solução tecnológica integrada de gestão de folha de pagamento e controle eletrônico de frequência dos empregados públicos e estagiários do Coren-RN, em ambiente de nuvem (SaaS), incluindo cessão de uso, implantação, parametrização, migração d
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Serviços de Hospedagem de Sistemas Serviços de Hospedagem de Sistemas — 24 UNIDADE × R$ 2.523.66
+   • Item 2: Serviços de instalação. transição e configuração / parametrização de software Serviços de instalação. transição e config — 1 UNIDADE × R$ 3.750.00
+⏳ Propostas até 02/12/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/08506339000176/2026/12
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *168 — MUNICIPIO DE BOM JESUS DOS PERDOES*
+📍 Bom Jesus dos Perdões/SP · 📑 Pregão - Eletrônico nº 137
+🏷️ TIC
+💰 R$ 52.506,40
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS CONTÍNUOS DE INTERNET, EXCLUSIVAMENTE POR MEIO DE FIBRA ÓPTICA, PARA 46 (QUARENTA E SEIS) PONTOS DAS UNIDADES DA PREFEITURA MUNICIPAL DE BOM JESUS DOS PERDÕES, SENDO 42 (QUARENTA E DOIS) PONTOS DE 100 MBPS EM REGIME DE BANDA LARGA COM G
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: PRESTAÇÃO DE SERVIÇOS CONTÍNUOS DE INTERNET — 1 Lote × R$ 52.506.40
+⏳ Propostas até 27/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/52359692000162/2026/182
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/52359692000162/compras/2026/182/arquivos/2
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/52359692000162/compras/2026/182/arquivos/3
+
+🏛️ *169 — TRIBUNAL REGIONAL ELEITORAL DO RIO DE JANEIRO*
+📍 Rio de Janeiro/RJ · 📑 Pregão - Eletrônico nº 267
+🏷️ TIC
+💰 R$ 52.290,24
+📦 Contratação de solução de Tecnologia da Informação e Comunicação (TIC) para o fornecimento de licenças de software as a service (SaaS) de assistente de codificação por inteligência artificial generativa (nível corporativo), incluindo suporte técnico, agentes de modernização de código legado, arquite
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Software como Servico - Saas Assistente de codificação por inteligência artificial generativa (nível corporativo). inclu — 12 UNIDADE × R$ 3.232.52
+   • Item 2: Treinamento Informática - Sistema / Software Capacitação e onboarding de usuários em solução de assistente de codificaçã — 1 UNIDADE × R$ 13.500.00
+⏳ Propostas até 02/12/2026 — 11:00
+🔗 https://pncp.gov.br/app/editais/06170517000105/2026/160
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *170 — MUNICIPIO DE CAMPO VERDE*
+📍 Campo Verde/MT · 📑 Pregão - Eletrônico nº 083
+🏷️ TIC
+💰 R$ 48.777,40
+📦 [LICITANET] - REGISTRO DE PREÇO PARA FUTURA E EVENTUAL AQUISIÇÃO DE KITS DE SONORIZAÇÃO ESCOLAR INTELIGENTE, COMPOSTOS POR SIRENE MUSICAL PROGRAMÁVEL COM CONECTIVIDADE WI-FI E CAIXAS DE SONORIZAÇÃO PASSIVAS, INCLUINDO OS SERVIÇOS DE INSTALAÇÃO, CONFIGURAÇÃO, REALIZAÇÃO DE TESTES E TREINAMENTO.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 8221382: KIT DE SINAL SONORO ESCOLAR INTELIGENTE. COMPOSTO POR 01 (UMA) SIRENE MUSICAL PROGRAMÁVEL COM CONECTIVIDADE WI-FI E 02 ( — 20 UN - UNIDADE × R$ 2.438.87
+⏳ Propostas até 02/12/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/24950495000188/2026/168
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *171 — MUNICIPIO DE ITATIBA*
+📍 Itatiba/SP · 📑 Pregão - Eletrônico nº 120/2026-PE.85/2026
+🏷️ TIC
+💰 R$ 46.800,00
+📦 Contratação de empresa especializada em locação de computadores portáteis do tipo notebook corporativo, pelo período de 24 (vinte e quatro) meses, incluindo manutenção e suporte técnico destinados aos CRAS.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Locação de Notebooks Corporativos com Manutenção e Suporte Técnico — 120 Unidade × R$ 390.00
+⏳ Propostas até 11/12/2026 — 08:50
+🔗 https://pncp.gov.br/app/editais/50122571000177/2026/382
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *172 — MUNICIPIO DE TAPEJARA*
+📍 Tapejara/PR · 📑 Pregão - Eletrônico nº 064
+🏷️ TIC
+💰 R$ 42.000,00
+📦 [LICITANET] - PRESTAÇÃO DE SERVIÇO DE SOFTWARE COMO SERVIÇO (SAAS), POR EMPRESA ESPECIALIZADA, PARA INTEGRAÇÃO DO CADASTRO IMOBILIÁRIO MUNICIPAL AO SINTER, CONTEMPLANDO DIAGNÓSTICO E SANEAMENTO DAS INFORMAÇÕES CADASTRAIS, PREPARAÇÃO E ADEQUAÇÃO DOS DADOS, APOIO À INTEGRAÇÃO COM O SISTEMA DE GESTÃO T
+📊 ver itens
+🧾 1 item(ns):
+   • Item 8167917: PRESTAÇÃO DE SERVIÇO DE SOFTWARE COMO SERVIÇO (SAAS). POR EMPRESA ESPECIALIZADA. PARA INTEGRAÇÃO DO CADASTRO IMOBILIÁRIO — 12 SVÇ × R$ 3.500.00
+⏳ Propostas até 30/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/76247345000106/2026/63
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *173 — SAO PAULO SECRETARIA DA SEGURANCA PUBLICA*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 70
+🏷️ TIC
+💰 R$ 39.243,12
+📦 Fornecimento de licença de uso de software de gestão de processos para as Seções de Informações Judiciais (SIJ) e de Processamento Jurídico (SPJ).
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Software como Servico - Saas Software como Servico - Saas — 21 UNIDADE × R$ 1.868.72
+⏳ Propostas até 26/11/2026 — 09:59
+🔗 https://pncp.gov.br/app/editais/46377800000127/2026/4940
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *174 — MUNICIPIO DE CONCORDIA*
+📍 Concórdia/SC · 📑 Pregão - Eletrônico nº PCE 164
+🏷️ TIC
+💰 R$ 36.850,00
+📦 contratação de empresa para fornecimento de assinaturas do assistente de inteligência artificial Claude, modalidade PRO, conforme detalhado no Anexo "A" do Edital.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Licenciamento de direito de uso do assistente de plataforma de Inteligência Artificial Generativa corporativa (SaaS). Cl — 22 UNIDADE (UNID) × R$ 1.675.00
+⏳ Propostas até 27/11/2026 — 08:15
+🔗 https://pncp.gov.br/app/editais/83024257000100/2026/512
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *175 — CONSELHO REGIONAL DE ADMINISTRACAO DE SANTA CATARINA - CRA/SC*
+📍 Florianópolis/SC · 📑 Pregão - Eletrônico nº 11
+🏷️ TIC
+💰 R$ 32.307,60
+📦 Contratação de empresa especializada para o fornecimento de solução tecnológica de assinaturas eletrônicas e digitais, no modelo Software as a Service (SaaS), contemplando, no mínimo, 10 (dez) usuários, destinada à formalização eletrônica de documentos no âmbito do Conselho Regional de Administração
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Software como Servico - Saas Contratação de empresa especializada para o fornecimento de solução de tecnologia da inform — 13.080 UNIDADE × R$ 2.47
+⏳ Propostas até 30/11/2026 — 14:00
+🔗 https://pncp.gov.br/app/editais/76557032000154/2026/22
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *176 — ASSEMBLEIA LEGISLATIVA DO ESTADO DE SANTA CATARINA*
+📍 Florianópolis/SC · 📑 Pregão - Eletrônico nº 20
+🏷️ TIC
+💰 R$ 31.482,48
+📦 Contratação de empresa especializada para prestação de serviços continuados de armazenamento externo, guarda e conservação de 2.791 rolos de microfilmes originais pertencentes ao acervo da Assembleia Legislativa do Estado de Santa Catarina (ALESC).
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Armazenagem em Geral Armazenagem em Geral — 33.492 UNIDADE × R$ 0.94
+⏳ Propostas até 04/12/2026 — 14:00
+🔗 https://pncp.gov.br/app/editais/83599191000187/2026/781
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *177 — MUNICIPIO DE CAMPO LARGO*
+📍 Campo Largo/PR · 📑 Pregão - Eletrônico nº 96
+🏷️ TIC
+💰 R$ 28.500,00
+📦 Serviço de digitalização de jornais e documentos históricos do Acervo Histórico Municipal, através da Política Nacional Aldir Blanc PNAB
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de Digitalização / Indexação de Documentos Serviços de Digitalização / Indexação de Documentos — 9.375 UNIDADE × R$ 3.04
+⏳ Propostas até 25/11/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/76105618000188/2026/696
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *178 — CAMARA MUNICIPAL DE SAO JOAO NEPOMUCENO - ESTADO DE MINAS GERAIS*
+📍 São João Nepomuceno/MG · 📑 Pregão - Eletrônico nº 00007526
+🏷️ TIC
+💰 R$ 27.519,96
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA CESSÃO DE DIREITO DE USO (LOCAÇÃO) DE SISTEMAS INFORMATIZADOS INTEGRADOS DE GESTÃO PÚBLICA
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: CESSÃO DE DIREITO DE USO DE SISTEMACONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM CESSÃO DE DIREITO DE USO (LOCAÇÃO) DE SISTEMA — 12 SERV × R$ 2.293.33
+⏳ Propostas até 04/12/2026 — 08:44
+🔗 https://pncp.gov.br/app/editais/07238867000129/2026/76
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *179 — MINISTERIO PUBLICO DO ESTADO DA PARAIBA - PGJ*
+📍 João Pessoa/PB · 📑 Pregão - Eletrônico nº 029/2026
+🏷️ TIC
+💰 R$ 26.088,00
+📦 REGISTRO DE PREÇOS, objetivando a aquisição eventual e futura do serviço de emissão de certificados digitais padrão ICP-Brasil, tipo A3, com fornecimento de dispositivos do tipo Token USB para armazenamento dos certificados digitais, segundo as normas e especificações do Instituto Nacional de Tecnol
+📊 ver itens
+🧾 1 item(ns):
+   • Item 10001: Emissão de certificado de assinatura digital padrão ICP-Brasil do tipo e-CPF A3. em dispositivo do tipo Token criptográf — 240 UNIDADE × R$ 108.70
+⏳ Propostas até 01/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/09284001000180/2026/86
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *180 — FUNDACAO UBERLANDENSE DO TURISMO ESPORTE E LAZER*
+📍 Uberlândia/MG · 📑 Pregão - Eletrônico nº 39
+🏷️ TIC
+💰 R$ 6.834,14
+📦 Futura e eventual aquisição de equipamentos de informática, incluindo computadores, monitores e periféricos, bem como a locação de equipamentos de informática, visando à manutenção, reposição, ampliação e modernização da infraestrutura tecnológica da FUTEL
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Locação / Manutenção de Equipamentos Permanentes Locação de Notebook Core I7 (13ª Geração ou Superior); Memória Padrão:  — 2 UNIDADE × R$ 373.96
+   • Item 2: Locação / Manutenção de Equipamentos Permanentes Locação de Computador Completo (Desktop avançado compacto. Monitor 27 P — 14 UNIDADE × R$ 434.73
+⏳ Propostas até 02/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/20260121000180/2026/69
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *181 — SUPERIOR TRIBUNAL MILITAR*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 269
+🏷️ TIC
+💰 R$ 6.367,41
+📦 Contratação de serviços de licenciamento de software de diagramação inteligente e modelagem técnica, na modalidade Software as a Service (SaaS), versão Enterprise.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Licenciamento SaaS Lucidchart Enterprise — 3 UNIDADE × R$ 2.122.47
+⏳ Propostas até 01/12/2026 — 14:00
+🔗 https://pncp.gov.br/app/editais/00497560000101/2026/311
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *182 — SAO PAULO SECRETARIA DA ADMINISTRACAO PENITENCIARIA*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 224
+🏷️ TIC
+💰 R$ 5.399,59
+📦 Contratação de Serviços de Fornecimento de Licença de Software vMix 4K - Pregão Eletrônico n.º 90074/2026 - Edital n.º 74/2026 - Contratação n.º 224/2026
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Cessão Temporária de Direitos Sobre Prog — 1 UNIDADE × R$ 5.399.59
+⏳ Propostas até 30/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/96291141000180/2026/7771
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *183 — MUNICIPIO DE BARRA FUNDA*
+📍 Barra Funda/RS · 📑 Pregão - Eletrônico nº Pregão Lei 14.133 Eletronico 14
+🏷️ TIC
+💰 R$ 485,00
+📦 Constitui objeto da presente licitação a contratação de empresa especializada para disponibilização de sistema informatizado destinado ao gerenciamento eletrônico da margem consignável e à operacionalização dos descontos facultativos em folha de pagamento dos servidores da Prefeitura Municipal de Ba
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa especializada para disponibilização de sistema informatizado destinado ao gerenciamento eletrônic — 250 UN × R$ 1.94
+⏳ Propostas até 04/12/2026 — 08:59
+🔗 https://pncp.gov.br/app/editais/94704004000102/2026/109
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *184 — MUNICIPIO DE ASTORGA*
+📍 Astorga/PR · 📑 Pregão - Eletrônico nº 57
+🏷️ TIC
+💰 R$ 161,50
+📦 Contratação de empresa especializada para a oferta, implantação, parametrização e disponibilização de sistema digital web/plataforma eletrônica destinado à realização e ao gerenciamento de procedimentos de contratação pública do Município de Astorga, com integração ao sistema de gestão municipal Elo
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Contratação de empresa especializada para a oferta. implantação. parametrização e disponibilização de sistema digital we — 1 SERVIÇO × R$ 161.50
+⏳ Propostas até 02/12/2026 — 08:29
+🔗 https://pncp.gov.br/app/editais/75743377000130/2026/212
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/75743377000130/compras/2026/212/arquivos/2
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *185 — MUNICIPIO DE PELOTAS*
+📍 Pelotas/RS · 📑 Pregão - Eletrônico nº 014
+🏷️ TIC
+💰 R$ 2,99
+📦 [Portal de Compras Públicas] - CONTRATAÇÃO, SEM ÔNUS PARA O MUNICÍPIO, DE EMPRESA ESPECIALIZADA NA IMPLANTAÇÃO, GESTÃO E OPERACIONALIZAÇÃO DE SOLUÇÃO COMPLETA RESPONSÁVEL PELO CONTROLE ELETRÔNICO DE MARGEM CONSIGNÁVEL E CARTÕES CORPORATIVOS DE CRÉDITO FORNECENDO MÓDULO INFORMATIZADO PARA GESTÃO AUTO
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: CONTRATAÇÃO. SEM ÔNUS PARA O MUNICÍPIO. DE EMPRESA ESPECIALIZADA NA IMPLANTAÇÃO. GESTÃO E OPERACIONALIZAÇÃO DE SOLUÇÃO C — 1 Serviço × R$ 2.99
+⏳ Propostas até 25/11/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/87455531000157/2026/55
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *186 — MUNICIPIO DE BARROLANDIA*
+📍 Barrolândia/TO · 📑 Pregão - Eletrônico nº 16
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 [LICITANET] - Contratação de empresa especializada para disponibilização, no modelo Software as a Service – SaaS, de sistema integrado de gestão pública municipal, 100% web e hospedado em nuvem, incluindo implantação, parametrização, migração e validação de dados, treinamento, suporte técnico, manut
+📊 ver itens
+🧾 1 item(ns):
+   • Item 8078116: contratação de empresa especializada para disponibilização. no modelo Software as a Service SaaS. de sistema integrado d — 1 SERV.
+⏳ Propostas até 03/12/2026 — 08:00
+🔗 https://pncp.gov.br/app/editais/24851453000190/2026/39
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *187 — MUNICIPIO DE BRASILANDIA*
+📍 Brasilândia/MS · 📑 Pregão - Presencial nº 52
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada no fornecimento de licença de uso de solução tecnológica integrada para gestão de demandas urbanas, documentos e processos administrativos, incluindo aplicativo móvel e serviços de implantação, treinamento, suporte e manutenção.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LOTE I — 1 Unidade
+⏳ Propostas até 01/12/2026 — 23:59
+🔗 https://pncp.gov.br/app/editais/03184058000120/2026/128
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/03184058000120/compras/2026/128/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *188 — EMPRESA BRASILEIRA DE PESQUISA AGROPECUARIA*
+📍 Brasília/DF · 📑 Pregão - Eletrônico nº 138
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação, sob demanda, de empresa especializada na prestação de serviços técnicos de digitalização, tratamento de imagens e conversão de texto via OCR de publicações técnico-científicas pertencentes ao Sistema Embrapa de Bibliotecas, conforme especificações, condições, quantidades e exigências es
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de Digitalização / Indexação de Documentos Prestação de serviços de digitalização. tratamento de imagens e conv — 450.000 UNIDADE
+⏳ Propostas até 02/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/00348003000110/2026/1577
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00348003000110/compras/2026/1577/arquivos/3
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/00348003000110/compras/2026/1577/arquivos/2
+
+🏛️ *189 — MUNICIPIO DE NAZARENO*
+📍 Nazareno/MG · 📑 Pregão - Eletrônico nº 00015826
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Pregão Eletrônico para contratação de empresa especializada para prestação de serviços continuados de suporte e sustentação do sistema de Gerenciamento Eletrônico de Documentos (GED) Alfresco Community
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: SUPORTE E SUSTENTAÇÃO GEDMonitoramento remoto diário do GED Afresco com BACKUP DE DADOS no SERVIDOR LINUX. manutenção pr — 12 SERV
+⏳ Propostas até 27/11/2026 — 08:30
+🔗 https://pncp.gov.br/app/editais/18557561000151/2026/143
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *190 — BANCO DO NORDESTE DO BRASIL*
+📍 Fortaleza/CE · 📑 Pregão - Eletrônico nº 37
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de subscrição Redis Enterprise como solução corporativa de banco de dados em memória, com suporte técnico, assistência especializada e capacitação, para sustentação de aplicações críticas do Banco do Nordeste.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Software como Servico - Saas Contratação de subscrição Redis Enterprise como solução corporativa de banco de dados em me — 1 UNIDADE
+⏳ Propostas até 30/11/2026 — 09:59
+🔗 https://pncp.gov.br/app/editais/07237373000120/2026/92
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *191 — GOIANIA CAMARA MUNICIPAL DE GOIANIA*
+📍 Goiânia/GO · 📑 Pregão - Eletrônico nº 18
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada na prestação de serviços de locação de software para automação de serviços públicos, em módulos específicos para Controle de Estoque (Almoxarifado), Compras e Licitações e Contratações, com integração ao sistema COLARE/TCM-GO, incluindo suporte técnico, manutençã
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Contratação de software para automação d — 1 UNIDADE
+⏳ Propostas até 03/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/00001727000193/2026/30
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *192 — PRODAM PROCESSAMENTO DE DADOS AMAZONAS S A*
+📍 Manaus/AM · 📑 Pregão - Eletrônico nº 7
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada para eventual Aquisição de Licenças de uso de Modelos de Linguagem de Grande Porte (LLM) por meio de interface de chat e suas respectivas APIs de integração, sob o formato de Software as a Service (SaaS), incluindo suporte técnico especializado, conforme especifi
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Cessão temporária de direitos sobre programas de computador locação de software Licenças tipo Enterprise de Plataforma d — 300 UNIDADE
+   • Item 2: Cessão temporária de direitos sobre programas de computador locação de software Créditos de Consumo de APIs de IA Genera — 1.440.000 UNIDADE
+⏳ Propostas até 10/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/04407920000180/2026/7
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *193 — MUNICIPIO DE BELO HORIZONTE*
+📍 Belo Horizonte/MG · 📑 Pregão - Eletrônico nº 211
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 RP para a prestação de serviços de fornecimento de licenças de uso dos softwares Autodesk Aec Collection
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Cessão Temporária de Direitos Sobre Programas de Computador Locação de Software Cessão Temporária de Direitos Sobre Prog — 4 UNIDADE
+⏳ Propostas até 03/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/18715383000140/2026/900
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *194 — SECRETARIA MUNICIPAL DE SAUDE*
+📍 Goiânia/GO · 📑 Pregão - Eletrônico nº 116
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Prestação de serviços de consultoria em engenharia clínica com a utilização de software de gestão específico para sistemas odonto-médico hospitalares, bem como serviços de instalação, reforma e assistência técnica, incluindo a reposição de peças, com manutenção preventiva e corretiva continuada para
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviço Engenharia Serviço Engenharia Contratação de empresa especializada na prestação de serviços de consultoria em en — 1 UNIDADE
+⏳ Propostas até 04/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/25141524000123/2026/1019
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *195 — MUNICIPIO DE SANTA HELENA*
+📍 Santa Helena/MA · 📑 Pregão - Eletrônico nº PE-046/2026-SRP
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada em serviços de preparação e digitalização de documentos físicos incluindo o fornecimento dos scanners, compatível com sistema próprio, de interesse das secretarias municipais de Santa Helena/MA.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de preparação e digitalização de documentos físicos incluindo o fornecimento dos scanners. compatível com siste — 1 Serviço
+⏳ Propostas até 01/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/06226583000150/2026/85
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *196 — PRODAM PROCESSAMENTO DE DADOS AMAZONAS S A*
+📍 Manaus/AM · 📑 Pregão - Eletrônico nº 6
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada para fornecimento, implantação, parametrização, disponibilização, suporte, manutenção e sustentação de solução tecnológica integrada, em modelo Software as a Service (SaaS), destinada ao desenvolvimento de competências socioemocionais no âmbito da rede pública de
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Software como Servico - Saas Software como Servico - Saas — 12 UNIDADE
+   • Item 2: Treinamento informática - sistema / software Treinamento informática - sistema / software Formação Continuada: Oficinas. — 8 UNIDADE
+⏳ Propostas até 24/11/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/04407920000180/2026/6
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *197 — MUNICIPIO DE MONTE ALTO*
+📍 Monte Alto/SP · 📑 Pregão - Eletrônico nº 90059
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada para o fornecimento de licença de uso, de solução integrada de sistemas informatizados de gestão pública municipal, contemplando, de forma indissociável, os serviços de implantação, migração/conversão de dados, parametrização, eventual customização, treinamento d
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de Instalação. Transição e Configuração / Parametrização de Software — 1 UNIDADE
+⏳ Propostas até 24/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/51816247000111/2026/420
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *198 — MUNICIPIO DE SAO PAULO*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 228
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada para prestação de serviços de licenciamento de software na modalidade SaaS (Software as a Service), incluindo suporte técnico e garantia da solução de 100 (cem) licenças do Canva Enterprise, conforme condições e exigências estabelecidas neste Termo de Referência.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: "Software" aplicação: informática. tipo: client server suite. características adicionais: antivírus corporativo. atualiz — 100 Unidade
+⏳ Propostas até 26/11/2026 — 10:30
+🔗 https://pncp.gov.br/app/editais/46395000000139/2026/101
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *199 — MINISTERIO DA SAUDE*
+📍 Recife/PE · 📑 Pregão - Eletrônico nº 15
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de serviços de outsourcing de impressão (incluindo equipamentos, softwares de gestão, insumos, manutenção e destinação ambiental de resíduos), conforme condições, quantidades e exigências estabelecidas no Termo de Referência.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Outsourcing de Impressão - Páginas A4 - Policromático - Dentro da Franquia com Papel Outsourcing de Impressão (incluindo — 1 PÁGINAS MÊS
+⏳ Propostas até 11/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/00394544000185/2026/2205
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *200 — AGENCIA DE MODERNIZACAO DA GESTAO DE PROCESSOS*
+📍 Maceió/AL · 📑 Pregão - Eletrônico nº 352
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de licenças perpétuas dos softwares Windows Server Datacenter e SQL Server Standard por núcleo, com suporte técnico especializado
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Licenciamento de Direitos Permanentes de Uso de Software para Servidor Licenciamento de Direitos Permanentes de Uso de S — 104 UNIDADE
+   • Item 2: Licenciamento de Direitos Permanentes de Uso de Software para Servidor Licenciamento de Direitos Permanentes de Uso de S — 8 UNIDADE
+⏳ Propostas até 15/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/07424905000138/2026/437
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *201 — FURNAS-CENTRAIS ELETRICAS S.A.*
+📍 Rio de Janeiro/RJ · 📑 Pregão - Eletrônico nº 33
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Prestação de serviços de renovação de subscrição do suporte e manutenção das licenças perpétuas de uso do software IBM MAXIMO, bem como a prestação de serviços técnicos especializados para instalação, migração, configuração e parametrização da plataforma, conforme condições, quantidades e exigências
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Licenciamento de direitos permanentes de uso de outros softwares / programas de computador Prestação de serviços de reno — 1 UNIDADE
+⏳ Propostas até 10/12/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/23274194000119/2026/126
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *202 — MUNICIPIO DE MOGI-GUACU*
+📍 Mogi Guaçu/SP · 📑 Pregão - Eletrônico nº PE14/2026-3
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada para locação 145 (cento e quarenta e cinco) Coletores de Ponto com reconhecimento facial e biométrico, com fonte de alimentação e nobreak, softwares de gestão de ponto (100% Web em cloud computing), incluindo instalação, configuração, implantação, manutenção, sup
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Locação de 145 Coletores de Ponto com reconhecimento facial e biométrico. com fonte de alimentação e nobreak. softwares  — 1 GLB
+⏳ Propostas até 03/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/45301264000113/2026/354
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *203 — SECRETARIA MUNICIPAL DE EDUCACAO*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 1281
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de solução tecnológica de telas interativas de 86 (oitenta e seis) polegadas, móveis, com câmera, microfones e alto-falantes integrados, destinadas a atividades de colaboração, videoconferência, aulas e teleaulas, compreendendo o fornecimento, a entrega, a instalação e a configuração dos
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Treinamento informática - operação / digitação Contratação de solução tecnológica de telas interativas de 86 (oitenta e  — 1 UNIDADE
+⏳ Propostas até 04/12/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/46392114000125/2026/1137
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *204 — PMSP - SÃO PAULO TURISMO (SPTURIS)*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº PE 026/26
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada, sob o regime de empreitada por preço unitário, para execução de serviços de sustentação, correção, atualização e revitalização do ERP TOTVS Protheus e componentes relacionados, de titularidade da TOTVS S.A., contemplando relatórios Smart View, TOTVS Transmite, T
+📊 ver itens
+🧾 1 item(ns):
+   • Item 10001: Contratação de empresa especializada. sob o regime de empreitada por preço unitário. para execução de serviços de susten — 1 UNIDADE
+⏳ Propostas até 24/11/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/62002886000160/2026/32
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *205 — EMPRESA DE PESQUISA AGROPECUARIA E EXTENSAO RURAL DE SANTA CATARINA*
+📍 Florianópolis/SC · 📑 Pregão - Eletrônico nº 0116/2026
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada para prestação de serviços de outsourcing na gestão integrada de almoxarifado virtual, visando o fornecimento contínuo e sob demanda de Equipamentos de Proteção Individual  EPIs, mediante disponibilização de sistema informatizado de gerenciamento, para atendimen
+📊 ver itens
+🧾 1 item(ns):
+   • Item 10001: Prestação de serviços de outsourcing para gestão integrada de almoxarifado virtual. visando o fornecimento de Equipament — 1 UNIDADE
+⏳ Propostas até 27/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/83052191000162/2026/144
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/83052191000162/compras/2026/144/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *206 — PIAUI PROCURADORIA GERAL DA JUSTICA*
+📍 Teresina/PI · 📑 Pregão - Eletrônico nº 38
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada para o fornecimento de servidor de alto desempenho para Inteligência Artificial (IA), equipado com múltiplas GPUs de alta capacidade, processadores e memória de alto desempenho, armazenamento NVMe, conectividade de rede e Fibre , Channel, acompanhado de plataform
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Servidor tipo: rack. processadores físicos: 2. núcleos por processador: 15 a 20. memória ram: 384. interface rede lan: 2 — 1 Unidade
+⏳ Propostas até 27/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/05805924000189/2026/48
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *207 — MUNICIPIO DE BOA ESPERANCA*
+📍 Boa Esperança/MG · 📑 Pregão - Eletrônico nº PE 63
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE ESTUDOS GEOFÍSICOS E HIDROGEOLÓGICOS, ELABORAÇÃO DE LAUDOS TÉCNICOS, REGULARIZAÇÃO DOS RECURSOS HÍDRICOS COM OBTENÇÃO DAS LICENÇAS E OUTORGAS NECESSÁRIAS, PERFURAÇÃO E IMPLANTAÇÃO DE POÇO TUBULAR PROFUNDO NO ESTÁDIO MUNICIPAL DR. JOA
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Prestação de serviços de estudos geofísicos e hidrogeológicos. elaboração de laudos técnicos. regularização dos recursos — 1 SERVIÇOS
+⏳ Propostas até 03/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/18239590000175/2026/248
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/18239590000175/compras/2026/248/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *208 — TRIBUNAL DE CONTAS DO ESTADO DO AMAZONAS*
+📍 Manaus/AM · 📑 Pregão - Eletrônico nº 50
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Formação de Ata de Registro de Preços para futura e eventual contratação de empresa especializada no fornecimento de até 04 (quatro) equipamentos de Firewall de Próxima Geração Palo Alto Networks modelo PA-1420, para composição de até 02 (dois) pares em alta disponibilidade, contemplando hardware co
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Segurança como serviço - secaas ontratação de empresa especializada no fornecimento de até 04 (quatro) equipamentos de F — 1 UNIDADE
+⏳ Propostas até 30/11/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/05829742000148/2026/50
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *209 — EMPRESA DE INFORMATICA E INFORMACAO DO MUN.BHTE S/*
+📍 Belo Horizonte/MG · 📑 Pregão - Eletrônico nº 25
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada para a prestação de serviços de manutenção corretiva e preventiva, suporte técnico, com substituição de peças defeituosas em 08 (Oito) switches de rede, da marca DELL modelos S5248F-ON, conforme anexo II, incluindo seus módulos e acessórios, pelo período de 12 (D
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Manutenção de Software (Corretiva. Preventiva. Adaptativa) Contratação de empresa especializada para a prestação de serv — 1 UND SERVIÇO TÉCNICO
+⏳ Propostas até 03/12/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/18239038000187/2026/82
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *210 — SECRETARIA MUNICIPAL DE EDUCACAO*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 160
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa especializada na prestação de serviços de LICENCIAMENTO DE PRODUTOS DE SOFTWARES MICROSOFT E SERVIÇOS TÉCNICOS ESPECIALIZADOS ASSOCIADOS, para atendimento às demandas da Secretaria Municipal de Educação da Prefeitura Municipal de São Paulo, conforme condições, quantidades, exi
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: LICENCIAMENTO DE DIREITOS PERMANENTES DE USO DE OUTROS SOFTWARES / PROGRAMAS DE COMPUTADOR LICENCIAMENTO DE DIREITOS PER — 1 UNIDADE
+⏳ Propostas até 26/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/46392114000125/2026/1116
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46392114000125/compras/2026/1116/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *211 — SAO PAULO PREVIDENCIA - SPPREV*
+📍 São Paulo/SP · 📑 Pregão - Eletrônico nº 98
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 CONTRATAÇÃO VIA SISTEMA DE REGISTRO DE PREÇOS PARA A AQUISIÇÃO FUTURA DE EQUIPAMENTOS DE REDE SEM FIO CORPORATIVA (ACCESS POINTS WI-FI) COM SOFTWARE/PLATAFORMA DE GERENCIAMENTO CENTRALIZADO INCLUSOS, CONTEMPLANDO MAPEAMENTO DE COBERTURA WI-FI ( PREDITIVO SITE SURVEY E PÓS-INSTALAÇÃO), INSTALAÇÃO, CO
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Roteador tipo uso: escritório. tipo linha: lp. protocolo lan: multiprotocolo. protocolo wan: ppp. hdlc. ip. smds. frame  — 30 Unidade
+⏳ Propostas até 25/11/2026 — 09:30
+🔗 https://pncp.gov.br/app/editais/09041213000136/2026/56
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *212 — MUNICIPIO DE BARRA*
+📍 Barra/BA · 📑 Pregão - Eletrônico nº 013
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Aquisição de equipamentos de tecnologia educacional, notadamente 19 (dezenove) óculos de realidade virtual e mista, destinados à implantação de Laboratórios de Inteligência Artificial nas Escolas Municipais Jonas Araújo, Antônio Marques de Oliveira e Sylvia Araújo, pertencentes à rede municipal de e
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: ÓCULOS DE REALIDADE VIRTUAL E MISTA. modelo Meta Quest 3 ou equivalente/superior. acompanhado de head strap ergonômico a — 19 UN
+⏳ Propostas até 24/11/2026 — 09:00
+🔗 https://pncp.gov.br/app/editais/13880703000101/2026/122
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *213 — ASSEMBLEIA LEGISLATIVA DO ESTADO DE MINAS GERAIS*
+📍 Belo Horizonte/MG · 📑 Pregão - Eletrônico nº 353
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 LICENÇAS DE SOFTWARES DE INTELIGÊNCIA ARTIFICIAL
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: SUBSCRICAO DE LICENCA. ATUALIZACAO E SUPORTE DE SOFTWARE DE INTELIGENCIA ARTIFICIAL — 500 UNIDADE
+   • Item 2: SUBSCRICAO DE LICENCA. ATUALIZACAO E SUPORTE DE SOFTWARE DE INTELIGENCIA ARTIFICIAL — 500 UNIDADE
+⏳ Propostas até 23/11/2026 — 14:00
+🔗 https://pncp.gov.br/app/editais/17516113000147/2026/215
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *214 — CASA DA MOEDA DO BRASIL*
+📍 Rio de Janeiro/RJ · 📑 Pregão - Eletrônico nº 90035
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Prestação de Serviço Gerenciado de Segurança (Managed Security Services - MSS) com fornecimento de soluções tecnológicas de cibersegurança, conforme especificação e quantidades do Edital e seus anexos.
+📊 ver itens
+🧾 1 item(ns):
+   • Item 1: Serviços de Gerenciamento de Infraestrutura de Tecnologia daInformação e Comunicação (TIC) — 1 UNIDADE
+⏳ Propostas até 26/11/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/34164319000174/2026/98
+📥 Edital: NÃO LOCALIZADO no PNCP
+📥 TR: NÃO LOCALIZADO em separado
+
+🏛️ *215 — COMPANHIA DE PROCESSAMENTO DE DADOS DO ESTADO DA BAHIA*
+📍 Salvador/BA · 📑 Pregão - Eletrônico nº 6
+🏷️ TIC
+💰 NÃO INFORMADO
+📦 Contratação de empresa para a prestação de serviços de suporte e manutenção dos Storages Huawei OceanStor Dorado 5000 e 6000, com reposição de peças originais do fabricante pelo período de 12 (doze) meses, em regime de 24 horas por dia, 07 dias por semana, distribuídos em 02 (dois) itens distintos, 
+📊 ver itens
+🧾 2 item(ns):
+   • Item 1: Serviços de garantia de equipamentos de tic Serviços de suporte e manutenção do Storage Huawei OceanStor Dorado 5000. em — 1 UNIDADE
+   • Item 2: Serviços de garantia de equipamentos de tic Serviços de suporte e manutenção do Storage Huawei OceanStor Dorado 6000. em — 1 UNIDADE
+⏳ Propostas até 24/11/2026 — 10:00
+🔗 https://pncp.gov.br/app/editais/13579586000132/2026/13
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/13579586000132/compras/2026/13/arquivos/1
+📥 TR: NÃO LOCALIZADO em separado
