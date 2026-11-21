@@ -1,0 +1,48 @@
+*LICITAÇÕES QUE AINDA VÃO SAIR — TIC, UST/PF, FÁBRICA, SUSTENTAÇÃO, DIGITALIZAÇÃO, EAD*
+Fonte: Plano de Contratações Anual (PCA) 2027 publicado no PNCP, consultado em 21/11/2026.
+181 órgãos compradores de TIC consultados; 84 têm PCA 2027 publicado; 1.258 contratações futuras de TIC/documental.
+Atenção: o PCA é planejamento. Valor = estimativa do órgão; "data desejada" = quando o órgão quer contratar (não é data de edital). Pode mudar ou não acontecer.
+Arquivo oficial de cada órgão: https://pncp.gov.br/api/pncp/v1/orgaos/<CNPJ>/pca/2027/csv
+
+⭐ UST / PF / HST
+• Polícia Civil do RJ (CNPJ 42498600000171) — fábrica de software em PF R$ 8,5 mi; fábrica de teste/qualidade/métricas em PF R$ 8,5 mi cada — desejada jul/2027
+• Junta Comercial do RJ (42498600000171) — fábrica de software em PF R$ 6,55 mi — 01/09/2027
+• Detran-ES (28162105000166) — UST R$ 4,92 mi — 31/12/2027 (pode ser o mesmo objeto do pregão de 50.000 UST aberto agora, até 24/11)
+• Marinha, Diretoria de Abastecimento (00394502000144) — Sistema SINGRA: PF R$ 3,18 mi (771000-30/2027) + HST R$ 2,30 mi (771000-31/2027) — 01/12/2027
+• Hospital Universitário Pedro Ernesto/RJ (42498600000171) — banco de UST R$ 2,66 mi — 21/11/2027
+• SDH Ceará (07954480000179) — serviços técnicos em UST R$ 1,77 mi — 31/03/2027
+
+🏭 FÁBRICA / DESENVOLVIMENTO / SUSTENTAÇÃO
+• Banco Central (00038166000105) — desenvolvimento, manutenção e sustentação de software — R$ 294,8 mi — 25/11/2027 (179087-80/2027)
+• MJSP/Senasp (00394494000136) — desenvolvimento e sustentação do Sinesp — R$ 132 mi — 31/12/2027 (200331-36/2027)
+• Anvisa (03112386000111) — desenvolvimento, manutenção e sustentação — R$ 81 mi — 15/09/2027 (253002-46/2027)
+• MEC (00394445000101) — desenvolvimento e sustentação de aplicações — R$ 70 mi — 10/03/2027 (150004-1/2027)
+• TJ do Pará (04567897000190) — serviços de TIC com sustentação e desenvolvimento — R$ 68,2 mi — 23/02/2027 (SETIC12A27); gestão, desenvolvimento e sustentação de software R$ 30,3 mi — 19/02/2027 (SETIC24A27)
+• TJ do RJ (28538734000148) — sustentação e projetos de sistemas de pessoal — R$ 36,7 mi — 29/01/2027 (30100-488/2027)
+• Ministério da Saúde (00394544000185) — sustentação e monitoramento de soluções digitais — R$ 35,0 mi — 07/12/2027 (250110-160/2027)
+• SAP-SP, Polícia Penal (96291141000180) — desenvolvimento e sustentação de sistemas — R$ 32,6 mi — 31/12/2027 (933027-116/2027)
+• MJSP, CGL (00394494000136) — fábrica de software — R$ 30 mi — 29/01/2027 (200005-59/2027)
+• ANP (02313673000127) — sistema de gestão de dados + desenvolvimentos — R$ 25 mi — 30/06/2027 (323031-84/2027)
+• Creci-SP (62655246000159) — fábrica de software e sustentação — R$ 20 mi — 17/04/2027 (101-2027)
+• TJ do RS (89522064000166) — desenvolvimento de software e mentoria — R$ 19,7 mi — 01/05/2027 (2027.207.1055)
+
+📂 DIGITALIZAÇÃO / GESTÃO DOCUMENTAL
+• SED Mato Grosso do Sul (02585924000122) — outsourcing de impressão, reprografia e digitalização — R$ 22,7 mi — 31/12/2027
+• Presidência da República (00394411000109) — repositório arquivístico digital — R$ 9,8 mi — 25/03/2027 (é PRORROGAÇÃO, não licitação nova)
+• TJ do RJ (28538734000148) — apoio à gestão arquivística — R$ 8,25 mi — 12/02/2027 (30100-134/2027)
+• Sefaz Ceará (07954480000179) — serviço de digitalização — R$ 6,5 mi — 31/03/2027
+• SES RJ (42498600000171) — conversão digital de documentos — R$ 3,9 mi — 25/03/2027
+• TJ do MS (03979663000198) — digitalização dos processos — R$ 3,6 mi — 30/12/2027 (929735-127/2027)
+
+🎓 EAD
+• ISP RJ (42498600000171) — plataforma EAD em SaaS — R$ 11,1 mi — 01/01/2027
+• Sefaz SP (46377222000129) — licenças de treinamento online em plataforma EAD — R$ 2,75 mi — 17/06/2027 (990108-49/2027)
+• TJ do Pará (04567897000190) — sistema de gestão pedagógica com AVA — R$ 1,9 mi — 19/02/2027 (SETIC117A27)
+• TCE-GO (02291730000114) — operação de plataforma EAD/Moodle — R$ 1,1 mi — 01/07/2027 (42-2027)
+
+📰 NOTÍCIAS (NÃO CONFIRMADO na fonte — sites bloqueados neste ambiente; só o trecho do buscador)
+• Governo do Paraná: pregão de TI com 325 mil UST, valor sigiloso, abertura 11/11, com pedidos de impugnação (Convergência Digital). Resultado NÃO LOCALIZADO.
+• MGI: chamamento do Sistema de Compras Expressas suspenso; edital será republicado com prazo reaberto (Convergência Digital).
+• Caixa: TCU rejeitou compra de R$ 1,47 bi por aprisionamento tecnológico e mandou refazer o edital (Convergência Digital).
+• LNCC: supercomputador de IA de R$ 1 bi depende de nova revisão do edital; escolha deve ficar para 2027 (Convergência Digital).
+• Goiás: TCE-GO manteve suspensão de pregão de TI da Secretaria da Economia por possível sobrecusto de R$ 14,58 mi em 36 meses (Goyaz).
