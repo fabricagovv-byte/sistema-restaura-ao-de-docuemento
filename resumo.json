@@ -1,0 +1,83 @@
+{
+ "inicio": "2026-11-20T20:34:42.082462",
+ "execucao": "44812469281",
+ "passos": {
+  "ibge": 5571,
+  "pncp_propostas_abertas": {
+   "status": "ok",
+   "lidos": 32234,
+   "novos": 32233,
+   "atualizados": 0,
+   "chamadas": 647,
+   "mensagem": null
+  },
+  "pncp_publicados_e_alterados": {
+   "status": "parcial",
+   "lidos": 27370,
+   "novos": 13542,
+   "atualizados": 2,
+   "chamadas": 551,
+   "mensagem": "interrompida pelo limite de tempo da coleta"
+  },
+  "pncp_pregoes_30_dias": {
+   "status": "parcial",
+   "lidos": 22101,
+   "novos": 12595,
+   "atualizados": 0,
+   "chamadas": 443,
+   "mensagem": "interrompida pelo limite de tempo da coleta"
+  },
+  "comprasgov": {
+   "status": "ok",
+   "lidos": 7265,
+   "novos": 2683,
+   "atualizados": 22,
+   "chamadas": 26,
+   "mensagem": null
+  },
+  "pacote_anterior": {
+   "editais": 18818,
+   "documentos": 5557,
+   "textos": 3072
+  },
+  "documentos_relevantes": {
+   "editais": 85,
+   "itens": 844,
+   "documentos": 208,
+   "baixados": 187,
+   "falhas": []
+  },
+  "itens_e_documentos_listados": {
+   "alvo": 1741,
+   "com_indicio": 418,
+   "ja_detalhados": 1675,
+   "detalhados": 66,
+   "itens": 317,
+   "documentos": 170,
+   "falhas": 0
+  },
+  "itens_de_todos_os_editais": {
+   "sem_itens": 11973,
+   "alvo": 2242,
+   "lidos": 2235,
+   "itens": 29736,
+   "viraram_ti_ou_documental": 15,
+   "falhas": 7,
+   "restam": 0
+  },
+  "querido_diario": {
+   "status": "ok",
+   "lidos": 166327,
+   "novos": 5931,
+   "atualizados": 1892,
+   "chamadas": 500,
+   "mensagem": null
+  }
+ },
+ "orcamento_minutos": 280.0,
+ "fim": "2026-11-21T00:18:15.156064",
+ "editais_exportados": 66984,
+ "editais_detalhados": 21168,
+ "municipios": 5571,
+ "exportado_em": "2026-11-21T00:19:20.557868"
+}
