@@ -47,6 +47,11 @@ def volumes(e):
     return v
 
 
+# fixo mensal DE TECNOLOGIA (pedido de 20/11): software, sistema, TI, nuvem, suporte de TI; sem engenharia, obra, topografia
+TEC_MENSAL = re.compile(r"software|sistema|licen[cs]|tecnologia da informa|\bti\b|\btic\b|nuvem|cloud|saas|plataforma|aplicativ|"
+                        r"suporte tecnico|service desk|datacenter|data center|hospedagem|internet|seguranca da informa|backup|firewall|"
+                        r"gestao publica|erp|digitaliza|gestao documental|\bged\b|ead|ensino a distancia")
+NAO_TEC = re.compile(r"engenharia|aerolevantamento|aerofotogram|topograf|\bobras?\b|pavimenta|reforma|relogios? de ponto|telefonia fixa")
 UST_DOCS = {x["link"]: x.get("tipos") for x in json.load(open(sys.argv[3]))} if len(sys.argv) > 3 else {}  # UST citada no texto dos editais baixados
 MES_UN = re.compile(r"^(mes|meses|mensal|mensalidade|men|servico mensal|mes\(es\)|mes / meses|mes \(mes\))\b")
 
@@ -88,6 +93,8 @@ def nota(e):
         vol["ust"] = max(vol.get("ust", 0), uq)
     e["mensal_valor"], e["meses"] = itens_mensais(e)
     texto = SEM((e.get("objeto") or "") + " " + " ".join(f"{i.get('d') or ''} {i.get('u') or ''}" for i in e.get("itens_raw") or []))
+    obj = SEM(e.get("objeto") or "")
+    e["mensal_tec"] = bool((e["mensal_valor"] or 0) >= 20_000 and TEC_MENSAL.search(obj) and not NAO_TEC.search(obj))
     e["ust_citada"] = bool(uq or "ust" in vol or re.search(r"\bust\b|\busts\b|unidades? de servicos? tecnicos?", texto)
                            or "ust" in (UST_DOCS.get(e.get("link_pncp")) or []))
     mensal = e["mensal_valor"] or "ti_mensal" in cats or "mes" in vol or re.search(r"continu|mensal", SEM(e.get("objeto") or ""))
@@ -161,9 +168,9 @@ abaixo = [e for e in lista if faixa(e) < 5e6]
 com_ust = [e for e in lista if "ust" in e["vol"] or "remun_ust" in e.get("termos", [])]
 txt = [f"*PAINEL NACIONAL DIGITALGOV — pesquisa ao vivo no PNCP*", f"Verificado em {AGORA.strftime('%d/%m/%Y %H:%M')} (Brasília). Só licitações com prazo de proposta ainda aberto.", ""]
 dst_ust = sorted([e for e in lista if e.get("ust_citada")], key=lambda x: (-(x["vol"].get("ust") or 0), -(0 if x["valor_suspeito"] else x.get("valor") or 0)))
-dst_mensal = sorted([e for e in lista if (e.get("mensal_valor") or 0) >= 20_000], key=lambda x: -x["mensal_valor"])
+dst_mensal = sorted([e for e in lista if e.get("mensal_tec")], key=lambda x: -x["mensal_valor"])
 for titulo, grupo, chave in (("⭐ DESTAQUE — UST (manutenção, sustentação, suporte, desenvolvimento)", dst_ust, None),
-                             ("⭐ DESTAQUE — FIXO MENSAL (valor por mês × meses)", dst_mensal, None),
+                             ("⭐ DESTAQUE — FIXO MENSAL DE TECNOLOGIA (valor por mês × meses)", dst_mensal, None),
                              ("🔥 ACIMA DE R$ 10 MILHÕES", acima10, "nota"), ("💼 DE R$ 5 A 10 MILHÕES", de5a10, "nota")):
     txt.append(f"*{titulo}* ({len(grupo)})\n")
     for i, e in enumerate(sorted(grupo, key=lambda x: -x["nota"]) if chave else grupo, 1):

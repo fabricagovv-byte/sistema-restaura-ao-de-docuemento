@@ -31,6 +31,11 @@ TERMOS = [
     "manutencao de sistemas", "sustentacao", "manutencao evolutiva e corretiva", "atendimento N1 N2", "operacao de infraestrutura de TI",
     "valor fixo mensal", "valor mensal", "mensalidade", "pagamento mensal", "servico mensal", "locacao de sistema", "licenca mensal",
     "locacao de software", "cessao de uso de software", "software como servico",
+    # 21/11 — TIC, desenvolvimento, manutenção, sustentação e EAD
+    "desenvolvimento de aplicativo", "desenvolvimento de portal", "manutencao de software", "manutencao de sistemas informatizados",
+    "suporte e manutencao de sistemas", "sustentacao de software", "sustentacao de sistemas de informacao", "evolucao de sistemas",
+    "EAD", "ensino a distancia", "cursos online", "capacitacao online", "plataforma de cursos", "moodle", "LMS",
+    "trilhas de aprendizagem", "universidade corporativa", "conteudo educacional digital", "educacao digital", "TIC",
 ]
 
 

@@ -96,6 +96,11 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .secao-mais { margin: 18px 0 0; font-size: 1rem; color: var(--muted); }
 section.panel, #lista { scroll-margin-top: 56px; }
 #pesq-faixas button[data-pf^="dst_"] { border-color: var(--accent); }
+.buscas-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.buscas-lista li { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 6px; align-content: start; }
+.buscas-lista b { font-size: .95rem; }
+.buscas-lista .num { font: 800 1.4rem var(--f-body); color: var(--accent); }
+.buscas-lista p { margin: 0; font-size: .82rem; color: var(--muted); }
 .pesq-filtros { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
 .pesq-filtros label { display: grid; gap: 4px; font-size: .78rem; font-weight: 700; color: var(--muted); }
 .pesq-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
@@ -319,7 +324,7 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
   <section class="kpis" id="kpis" aria-label="Números da coleta"></section>
 
   <nav class="atalhos" aria-label="Ir para">
-    <a href="#busca">Buscar</a><a href="#lista">Resultados</a><a href="#pesq-sec">Pesquisa PNCP</a><a href="#cal-sec">Premiadas</a><a href="#crm-sec">Meu CRM</a>
+    <a href="#busca">Buscar</a><a href="#lista">Resultados</a><a href="#buscas-sec">Minhas buscas</a><a href="#pesq-sec">Pesquisa PNCP</a><a href="#cal-sec">Premiadas</a><a href="#crm-sec">Meu CRM</a>
     <a href="#marc-sec">Palavras-chave</a><a href="#foco-sec">Seu foco</a><a href="#mais-ferramentas">Mais ferramentas</a>
   </nav>
   <div class="barra-paineis"><button type="button" class="mais" id="paineis-fechar">Esconder todos os painéis</button><button type="button" class="mais" id="paineis-abrir">Mostrar todos</button></div>
@@ -374,6 +379,11 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
     <aside class="previa" id="previa" aria-label="Prévia da licitação" hidden></aside>
   </div>
 
+  <section class="panel" id="buscas-sec" aria-labelledby="h-buscas">
+    <h2 id="h-buscas">Minhas buscas</h2>
+    <p class="lede" id="buscas-lede"></p>
+    <ul class="buscas-lista" id="buscas-lista"></ul>
+  </section>
   <section class="panel" id="pesq-sec" aria-labelledby="h-pesq">
     <h2 id="h-pesq">Pesquisa nacional ao vivo (PNCP)</h2>
     <p class="lede" id="pesq-lede"></p>
@@ -386,6 +396,7 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
     </div>
     <div class="acoes"><button type="button" class="abrir" id="pesq-copiar">Copiar a lista filtrada para o WhatsApp</button>
       <button type="button" class="mais" id="pesq-csv">Baixar planilha (CSV)</button></div>
+    <p class="conta" id="pesq-busca" hidden></p>
     <p class="conta" id="pesq-conta" aria-live="polite"></p>
     <textarea id="pesq-texto" class="pesq-texto" readonly hidden aria-label="Texto para copiar"></textarea>
     <ol class="pesq-lista" id="pesq-lista"></ol>
@@ -1115,21 +1126,41 @@ function csvAgenda(lista) {
 /* ---------- pesquisa nacional ao vivo no PNCP (dados da última rodada, embutidos) */
 const PESQ = __PESQUISA__;
 const pesqEstado = { faixa: "dst_ust", lim: 30 };
-const FAIXAS_P = [["dst_ust", "⭐ UST (manutenção, sustentação, suporte…)"], ["dst_mensal", "⭐ Fixo mensal (valor por mês)"], ["todas", "Todas"], ["10mi", "Acima de R$ 10 mi"], ["5a10", "R$ 5 a 10 mi"], ["ate5", "Abaixo de R$ 5 mi"],
+const FAIXAS_P = [["dst_ust", "⭐ UST (manutenção, sustentação, suporte…)"], ["dst_mensal", "⭐ Fixo mensal de tecnologia (valor por mês)"], ["todas", "Todas"], ["10mi", "Acima de R$ 10 mi"], ["5a10", "R$ 5 a 10 mi"], ["ate5", "Abaixo de R$ 5 mi"],
   ["ust", "Com UST"], ["pf", "Com PF"], ["hora", "Com horas técnicas"], ["pagina", "Com páginas"], ["mensal", "Mensais/contínuos"]];
 const pesqVigentes = () => PESQ.itens.filter((x) => x.enc && new Date(x.enc) > new Date());
 function pesqNaFaixa(x, f) {
   const v = x.vs ? 0 : x.v || 0;
   return f === "todas" || (f === "10mi" && v >= 1e7) || (f === "5a10" && v >= 5e6 && v < 1e7) || (f === "ate5" && v < 5e6)
     || (["ust", "pf", "hora", "pagina"].includes(f) && (x.vol || {})[f]) || (f === "mensal" && x.men)
-    || (f === "dst_ust" && (x.uc || (x.vol || {}).ust)) || (f === "dst_mensal" && (x.mv || 0) >= 20000);
+    || (f === "dst_ust" && (x.uc || (x.vol || {}).ust)) || (f === "dst_mensal" && x.mt);
 }
+const DOCS_C = ["digitalizacao", "indexacao", "triagem", "guarda", "higienizacao", "restauracao", "ocr"];
+const temC = (x, cs) => (x.cs || []).some((c) => cs.includes(c));
+// cada busca pedida vira um filtro salvo; os números são sempre os da pesquisa nacional mais recente
+const BUSCAS = [
+  { k: "ust", n: "⭐ UST em manutenção, sustentação e suporte", em: "20/11", d: "Cita UST no objeto, nos itens ou no edital; ordenado pela quantidade.", f: (x) => x.uc || (x.vol || {}).ust, o: (a, b) => ((b.vol || {}).ust || 0) - ((a.vol || {}).ust || 0) },
+  { k: "mensal", n: "⭐ Fixo mensal de tecnologia", em: "20/11", d: "Itens cobrados por mês em software, sistemas, TI e nuvem; valor por mês × meses.", f: (x) => x.mt, o: (a, b) => (b.mv || 0) - (a.mv || 0) },
+  { k: "dev", n: "Desenvolvimento de software e fábrica", em: "21/11", d: "Desenvolvimento, fábrica de software, UST/PF de desenvolvimento.", f: (x) => temC(x, ["desenvolvimento", "fabrica_software"]) },
+  { k: "manut", n: "Manutenção de software", em: "21/11", d: "Manutenção corretiva, evolutiva e adaptativa de sistemas.", f: (x) => temC(x, ["manutencao_software"]) },
+  { k: "sust", n: "Sustentação de sistemas", em: "21/11", d: "Sustentação de sistemas e aplicações.", f: (x) => temC(x, ["sustentacao"]) },
+  { k: "ead", n: "EAD e educação digital", em: "21/11", d: "Educação a distância, plataformas de ensino, tecnologia educacional.", f: (x) => temC(x, ["ead", "edtech"]) },
+  { k: "tic", n: "TIC — todas", em: "21/11", d: "Todas as licitações de TI e gestão documental com prazo aberto.", f: () => true },
+  { k: "tic5", n: "TIC acima de R$ 5 milhões", em: "20/11", d: "Valor estimado de R$ 5 mi ou mais (sem os valores com cara de erro).", f: (x) => !x.vs && (x.v || 0) >= 5e6, o: (a, b) => (b.v || 0) - (a.v || 0) },
+  { k: "10mi", n: "Acima de R$ 10 milhões", em: "19/11", d: "Os maiores contratos.", f: (x) => !x.vs && (x.v || 0) >= 1e7, o: (a, b) => (b.v || 0) - (a.v || 0) },
+  { k: "doc", n: "Digitalização e guarda de documentos", em: "20/11", d: "Digitalização, indexação, organização, guarda e OCR — todos os valores.", f: (x) => temC(x, DOCS_C) },
+  { k: "ged", n: "GED / software de gestão de documentos", em: "20/11", d: "Gerenciamento eletrônico de documentos.", f: (x) => temC(x, ["ged"]) },
+  { k: "preg2", n: "Pregões de TIC com até 2 itens", em: "19/11", d: "Pregão com 1 ou 2 itens e UST, PF, horas técnicas ou fixo mensal.", f: (x) => /preg/i.test(x.mod || "") && x.ni >= 1 && x.ni <= 2 && (x.uc || (x.vol || {}).pf || (x.vol || {}).hora || x.mv) },
+  { k: "ustpf", n: "UST, PF e horas técnicas (HST)", em: "19/11", d: "Com quantidade de UST, pontos de função ou horas técnicas.", f: (x) => (x.vol || {}).ust || (x.vol || {}).pf || (x.vol || {}).hora },
+];
 function pesqFiltrados() {
   const q = norm(document.getElementById("pesq-q").value || ""), area = document.getElementById("pesq-area").value, uf = document.getElementById("pesq-uf").value;
-  const r = pesqVigentes().filter((x) => pesqNaFaixa(x, pesqEstado.faixa) && (!area || x.a === area) && (!uf || x.uf === uf)
+  const busca = BUSCAS.find((b) => b.k === pesqEstado.busca);
+  const r = pesqVigentes().filter((x) => (!busca || busca.f(x)) && pesqNaFaixa(x, busca ? "todas" : pesqEstado.faixa) && (!area || x.a === area) && (!uf || x.uf === uf)
     && (q.trim() === "" || q.trim().split(" ").every((p) => norm(`${x.obj} ${x.o} ${x.m}`).includes(" " + p) || norm(`${x.obj} ${x.o} ${x.m}`).includes(p))));
   const o = document.getElementById("pesq-ord").value;
-  if (o === "nota" && pesqEstado.faixa === "dst_ust") r.sort((a, b) => ((b.vol || {}).ust || 0) - ((a.vol || {}).ust || 0) || ((b.vs ? 0 : b.v) || 0) - ((a.vs ? 0 : a.v) || 0));
+  if (o === "nota" && busca && busca.o) r.sort(busca.o);
+  else if (o === "nota" && pesqEstado.faixa === "dst_ust") r.sort((a, b) => ((b.vol || {}).ust || 0) - ((a.vol || {}).ust || 0) || ((b.vs ? 0 : b.v) || 0) - ((a.vs ? 0 : a.v) || 0));
   else if (o === "nota" && pesqEstado.faixa === "dst_mensal") r.sort((a, b) => (b.mv || 0) - (a.mv || 0));
   else if (o === "mensal") r.sort((a, b) => (b.mv || 0) - (a.mv || 0));
   else r.sort(o === "valor" ? (a, b) => ((b.vs ? 0 : b.v) || 0) - ((a.vs ? 0 : a.v) || 0) : o === "prazo" ? (a, b) => (a.enc < b.enc ? -1 : 1) : (a, b) => b.n - a.n || ((b.v || 0) - (a.v || 0)));
@@ -1164,6 +1195,9 @@ function renderPesquisa() {
     + (venc ? ` (${fmt(venc)} já encerraram desde então e saíram da lista)` : "") + ". Profissionais, atestados e tecnologias exigem ler o edital: não estão aqui.";
   document.getElementById("pesq-faixas").innerHTML = FAIXAS_P.map(([k, n]) => `<button type="button" data-pf="${k}" aria-pressed="${k === pesqEstado.faixa}">${esc(n)} <span style="opacity:.7">${fmt(vig.filter((x) => pesqNaFaixa(x, k)).length)}</span></button>`).join("");
   const r = pesqFiltrados();
+  const busca = BUSCAS.find((b) => b.k === pesqEstado.busca), pb = document.getElementById("pesq-busca");
+  pb.hidden = !busca;
+  pb.innerHTML = busca ? `Mostrando a busca <b>${esc(busca.n)}</b> <button type="button" class="mais" id="pesq-busca-limpar">Ver todas</button>` : "";
   const soma = r.reduce((s, x) => s + (x.vs ? 0 : x.v || 0), 0);
   document.getElementById("pesq-conta").textContent = `${fmt(r.length)} licitações · soma dos valores estimados ${brl(soma)}`;
   document.getElementById("pesq-lista").innerHTML = r.slice(0, pesqEstado.lim).map((x, i) => {
@@ -1183,7 +1217,18 @@ function renderPesquisa() {
   const areas = [...new Set(PESQ.itens.map((x) => x.a))].sort(), ufs = [...new Set(PESQ.itens.map((x) => x.uf).filter(Boolean))].sort();
   document.getElementById("pesq-area").innerHTML += areas.map((a) => `<option>${esc(a)}</option>`).join("");
   document.getElementById("pesq-uf").innerHTML += ufs.map((u) => `<option>${u}</option>`).join("");
-  document.getElementById("pesq-faixas").addEventListener("click", (e) => { const b = e.target.closest("[data-pf]"); if (!b) return; pesqEstado.faixa = b.dataset.pf; pesqEstado.lim = 30; renderPesquisa(); });
+  document.getElementById("pesq-faixas").addEventListener("click", (e) => { const b = e.target.closest("[data-pf]"); if (!b) return; pesqEstado.faixa = b.dataset.pf; pesqEstado.busca = null; pesqEstado.lim = 30; renderPesquisa(); });
+  document.getElementById("pesq-busca").addEventListener("click", (e) => { if (!e.target.closest("#pesq-busca-limpar")) return; pesqEstado.busca = null; pesqEstado.faixa = "todas"; renderPesquisa(); });
+  document.getElementById("buscas-lista").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-busca]"); if (!b) return;
+    pesqEstado.busca = b.dataset.busca; pesqEstado.lim = 30; document.getElementById("pesq-ord").value = "nota";
+    if (b.dataset.acao === "copiar") {
+      const busca = BUSCAS.find((x) => x.k === pesqEstado.busca), r = pesqFiltrados();
+      pesqCopiar(`*${busca.n}*\nPNCP, verificado em ${PESQ.meta ? PESQ.meta.verificado : ""}. ${r.length} licitações com prazo aberto.\n\n` + r.map((x, i) => blocoWhats(i + 1, x)).join("\n\n"));
+      renderPesquisa(); return;
+    }
+    renderPesquisa(); document.getElementById("pesq-sec").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
   for (const id of ["pesq-q", "pesq-area", "pesq-uf", "pesq-ord"]) document.getElementById(id).addEventListener("input", () => { pesqEstado.lim = 30; renderPesquisa(); });
   document.getElementById("pesq-mais").addEventListener("click", () => { pesqEstado.lim += 30; renderPesquisa(); });
   document.getElementById("pesq-lista").addEventListener("click", (e) => { const b = e.target.closest("[data-pw]"); if (!b) return;
@@ -1202,8 +1247,16 @@ function renderPesquisa() {
         (x.ed || [])[0] || "", (x.tr || [])[0] || ""]));
     try { await baixarArquivo("pesquisa-nacional-pncp.csv", "\ufeff" + linhas.map((l) => l.map((v) => `"${cel(v).replace(/"/g, '""')}"`).join(";")).join("\r\n")); } catch (e) { /* recusado */ }
   });
-  renderPesquisa();
+  renderBuscas(); renderPesquisa();
 })();
+function renderBuscas() {
+  if (!PESQ.itens.length) { document.getElementById("buscas-lede").textContent = "Nenhuma pesquisa nacional embutida nesta versão."; return; }
+  const vig = pesqVigentes();
+  document.getElementById("buscas-lede").textContent = `As pesquisas que você pediu, recalculadas sobre a busca nacional mais recente no PNCP (${PESQ.meta.verificado}; ${fmt(vig.length)} licitações com prazo aberto). Clique para ver a lista ou copiar para o WhatsApp.`;
+  document.getElementById("buscas-lista").innerHTML = BUSCAS.map((b) => { const r = vig.filter(b.f), soma = r.reduce((s, x) => s + (x.vs ? 0 : x.v || 0), 0);
+    return `<li><b>${esc(b.n)}</b><span class="num">${fmt(r.length)}</span><p>${esc(b.d)}</p><p>Soma estimada ${brl(soma)} · pedida em ${b.em}</p>
+      <div class="acoes"><button type="button" class="abrir" data-busca="${b.k}">Ver lista</button><button type="button" class="mais" data-busca="${b.k}" data-acao="copiar">Copiar p/ WhatsApp</button></div></li>`; }).join("");
+}
 
 function renderCalendario() {
   const agora = new Date(), limite = new Date(agora.getFullYear() + 1, agora.getMonth() + 1, 1);

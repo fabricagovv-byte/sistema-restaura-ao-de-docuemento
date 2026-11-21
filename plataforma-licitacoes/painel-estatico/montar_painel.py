@@ -22,7 +22,7 @@ if len(sys.argv) > 4 and os.path.exists(sys.argv[4]):
             "itens": [{"c": e["numero_controle_pncp"], "n": e["nota"], "a": e["area"], "o": e["orgao_nome"], "m": e.get("municipio_nome"),
                        "uf": e.get("uf"), "mod": e.get("modalidade"), "num": e.get("numero"), "proc": e.get("processo"), "v": e.get("valor"),
                        "vs": e.get("valor_suspeito"), "vol": {k: q for k, q in (e.get("vol") or {}).items() if k in ("ust", "pf", "hora", "pagina")},
-                       "uc": bool(e.get("ust_citada")), "mv": e.get("mensal_valor"), "mm": e.get("meses"), "ab": e.get("abertura"), "enc": e.get("encerramento"), "srp": bool(e.get("srp")), "pl": e.get("plataforma"),
+                       "uc": bool(e.get("ust_citada")), "mt": bool(e.get("mensal_tec")), "cs": e.get("cats") or [], "ni": e.get("n_itens"), "mv": e.get("mensal_valor"), "mm": e.get("meses"), "ab": e.get("abertura"), "enc": e.get("encerramento"), "srp": bool(e.get("srp")), "pl": e.get("plataforma"),
                        "obj": " ".join((e.get("objeto") or "").split())[:500], "lp": e.get("link_pncp"), "lo": e.get("link_origem"), "men": bool(e.get("mensal")),
                        "ed": docs(e, lambda a: (a.get("tipo") or "").lower().startswith("edital")),
                        "tr": docs(e, lambda a: "refer" in (a.get("tipo") or "").lower())} for e in P["lista"]]}

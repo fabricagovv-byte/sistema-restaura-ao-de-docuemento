@@ -643,7 +643,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Baixa (nota 42/100 — Outros de TIC)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-*⭐ DESTAQUE — FIXO MENSAL (valor por mês × meses)* (32)
+*⭐ DESTAQUE — FIXO MENSAL DE TECNOLOGIA (valor por mês × meses)* (26)
 
 🏛️ LICITAÇÃO 001 — MUNICIPIO DE ARAUCARIA
 📍 Local: Araucária/PR
@@ -681,26 +681,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Alta (nota 72/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 003 — SECRETARIA DE ESTADO DA CASA CIVIL
-📍 Local: Aracaju/SE
-📑 Pregão - Eletrônico: nº PE0425 · Processo PE0425/2026
-🆔 PNCP: 34839420000188-1-000028/2026
-💰 Valor global estimado: R$ 1.853.693,79
-💵 Valor mensal: R$ 136.232,68 × 12 meses (pelos itens cobrados por mês)
-📦 Objeto: PRESTAÇÃO DE SERVIÇOS DE CONTRATAÇÃO DEEMPRESA DE ENGENHARIA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS CONTÍNUOS DE LOCAÇÃO,FORNECIMENTO, INSTALAÇÃO, CONFIGURAÇÃO, MANUTENÇÃO PREVENTIVA E CORRETIVA DE SISTEMA INTEGRADODE SEGURANÇA ELETRÔNICA E CONTROLE DE ACESSO NOS PRÉDIOS VINCULADOS À SECRETARIA DE ESTADO DACASA CIVIL DO ESTADO DE SERGIPE PARA ATENDER AS NECESSIDADES DO ESTADO DE SERGIPE, CONFORM
-📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
-📅 Abertura das propostas: 18/11/2026 — 09:00
-⏳ Prazo final das propostas: 04/12/2026 — 09:00 (13 dias)
-🖥️ Disputa: ASJB Consultoria S/C Ltda · Aberto-Fechado
-👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
-🔗 PNCP: https://pncp.gov.br/app/editais/34839420000188/2026/28
-🔗 Portal da disputa: https://sistema.comprasnet.se.gov.br/publico/WKF.aspx?code=SECLOG-PE0425/2026&validation=54361
-📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/34839420000188/compras/2026/28/arquivos/1
-📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/34839420000188/compras/2026/28/arquivos/2
-⭐ Prioridade: Média (nota 66/100 — Outros de TIC)
-✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
-
-🏛️ LICITAÇÃO 004 — MUNICIPIO DE BOM JARDIM
+🏛️ LICITAÇÃO 003 — MUNICIPIO DE BOM JARDIM
 📍 Local: Bom Jardim/RJ
 📑 Pregão - Eletrônico: nº 31 · Processo 2814/2026
 🆔 PNCP: 28561041000176-1-000046/2026
@@ -719,7 +700,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Alta (nota 74/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 005 — MUNICIPIO DE GUAPORE
+🏛️ LICITAÇÃO 004 — MUNICIPIO DE GUAPORE
 📍 Local: Guaporé/RS
 📑 Pregão - Eletrônico: nº 195 | Processo 1280 · Processo 195
 🆔 PNCP: 87862397000109-1-000965/2026
@@ -738,7 +719,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Alta (nota 74/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 006 — MUNICIPIO DE LUIS EDUARDO MAGALHAES
+🏛️ LICITAÇÃO 005 — MUNICIPIO DE LUIS EDUARDO MAGALHAES
 📍 Local: Luís Eduardo Magalhães/BA
 📑 Pregão - Eletrônico: nº 029 · Processo 171-2026
 🆔 PNCP: 04214419000105-1-000109/2026
@@ -757,7 +738,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Alta (nota 74/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 007 — FUNDO MUNICIPAL DE SAUDE
+🏛️ LICITAÇÃO 006 — FUNDO MUNICIPAL DE SAUDE
 📍 Local: Aquidabã/SE
 📑 Pregão - Eletrônico: nº 10 · Processo 23
 🆔 PNCP: 11546530000156-1-000030/2026
@@ -775,7 +756,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 65/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 008 — MUNICIPIO DE BATAYPORA
+🏛️ LICITAÇÃO 007 — MUNICIPIO DE BATAYPORA
 📍 Local: Batayporã/MS
 📑 Pregão - Eletrônico: nº PE 73 · Processo 171/2026
 🆔 PNCP: 03505013000100-1-000159/2026
@@ -793,7 +774,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Alta (nota 70/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 009 — MUNICIPIO DE IBATIBA
+🏛️ LICITAÇÃO 008 — MUNICIPIO DE IBATIBA
 📍 Local: Ibatiba/ES
 📑 Pregão - Eletrônico: nº 000066 · Processo 000070/2026
 🆔 PNCP: 27744150000166-1-000166/2026
@@ -812,45 +793,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 69/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 010 — MUNICIPIO DE ALAGOINHAS
-📍 Local: Alagoinhas/BA
-📑 Pregão - Eletrônico: nº PE 034 · Processo 9592/2026
-🆔 PNCP: 13646005000138-1-000182/2026
-💰 Valor global estimado: R$ 750.483,36
-💵 Valor mensal: R$ 62.540,28 × 12 meses (pelos itens cobrados por mês)
-📦 Objeto: [Portal de Compras Públicas] - PRESTAÇÃO DOS SERVIÇOS DE LOCAÇÃO DE RELÓGIOS DE PONTO ELETRÔNICO, COM LEITOR FACIAL E BIOMÉTRICO, INCLUINDO SISTEMA/SOFTWARE PARA A GESTÃO DO PONTO ELETRÔNICO, IMPLANTAÇÃO, CONFIGURAÇÃO, TREINAMENTO, SUPORTE TÉCNICO, MANUTENÇÃO PREVENTIVA E CORRETIVA, CENTRAL DE CHAMADOS E ATENDIMENTO VIA CHAT, APLICATIVO PARA REGISTRO DE PONTO VIA CELULAR E TABLET, PORTAL DO SERVID
-📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
-📅 Abertura das propostas: 18/11/2026 — 08:00
-⏳ Prazo final das propostas: 03/12/2026 — 08:59 (12 dias)
-🖥️ Disputa: ECustomize Consultoria em Software S.A · Aberto · Registro de preços
-👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
-🔗 PNCP: https://pncp.gov.br/app/editais/13646005000138/2026/182
-🔗 Portal da disputa: https://www.portaldecompraspublicas.com.br/processos/BA/Prefeitura-Municipal-de-Alagoinhas-4444/RPE-PE-034-2026-2026-525673
-📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/13646005000138/compras/2026/182/arquivos/1
-📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
-⭐ Prioridade: Média (nota 61/100 — Outros de TIC)
-✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
-
-🏛️ LICITAÇÃO 011 — MUNICIPIO DE ALVORADA
-📍 Local: Alvorada/RS
-📑 Pregão - Eletrônico: nº 67 · Processo 11588/2026
-🆔 PNCP: 88000906000157-1-000443/2026
-💰 Valor global estimado: R$ 8.968.183,33
-💵 Valor mensal: R$ 54.941,67 × 12 meses (pelos itens cobrados por mês)
-📦 Objeto: [Portal de Compras Públicas] - Contratação de empresa especializada para fornecer e implantar sistema de gestão do Cadastro Técnico Territorial Multifinalitário em Alvorada-RS, incluindo licenciamento de software SaaS, levantamento aerofotogramétrico digital, incluindo modelagem, parametrização, configuração, integração de sistemas, capacitação de servidores e prestação de serviços sob demanda.
-📊 Quantidade: 500 horas técnicas (HST)
-📅 Abertura das propostas: 10/11/2026 — 10:00
-⏳ Prazo final das propostas: 26/11/2026 — 08:59 (5 dias)
-🖥️ Disputa: ECustomize Consultoria em Software S.A · Aberto-Fechado
-👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
-🔗 PNCP: https://pncp.gov.br/app/editais/88000906000157/2026/443
-🔗 Portal da disputa: https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Alvorada-59/PE-67-2026-2026-505171
-📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/88000906000157/compras/2026/443/arquivos/1 | https://pncp.gov.br/pncp-api/v1/orgaos/88000906000157/compras/2026/443/arquivos/2
-📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
-⭐ Prioridade: Alta (nota 77/100 — Sistemas, dados e IA)
-✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
-
-🏛️ LICITAÇÃO 012 — MUNICIPIO DE SAO JOAO DO TRIUNFO
+🏛️ LICITAÇÃO 009 — MUNICIPIO DE SAO JOAO DO TRIUNFO
 📍 Local: São João do Triunfo/PR
 📑 Pregão - Eletrônico: nº 47 · Processo 115/2026
 🆔 PNCP: 75193516000107-1-000076/2026
@@ -869,7 +812,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 69/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 013 — MUNICIPIO DE UNIFLOR
+🏛️ LICITAÇÃO 010 — MUNICIPIO DE UNIFLOR
 📍 Local: Uniflor/PR
 📑 Pregão - Eletrônico: nº 37 · Processo 88
 🆔 PNCP: 76279975000162-1-000105/2026
@@ -888,7 +831,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 69/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 014 — MUNICIPIO DE UNIFLOR
+🏛️ LICITAÇÃO 011 — MUNICIPIO DE UNIFLOR
 📍 Local: Uniflor/PR
 📑 Pregão - Eletrônico: nº 37 · Processo 88
 🆔 PNCP: 76279975000162-1-000106/2026
@@ -906,7 +849,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 69/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 015 — MUNICIPIO DE CAPIVARI DE BAIXO
+🏛️ LICITAÇÃO 012 — MUNICIPIO DE CAPIVARI DE BAIXO
 📍 Local: Capivari de Baixo/SC
 📑 Pregão - Eletrônico: nº PE 42 · Processo 109/2026
 🆔 PNCP: 95780441000160-1-000096/2026
@@ -924,7 +867,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 60/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 016 — MUNICIPIO DE SANTA CRUZ DO MONTE CASTELO
+🏛️ LICITAÇÃO 013 — MUNICIPIO DE SANTA CRUZ DO MONTE CASTELO
 📍 Local: Santa Cruz de Monte Castelo/PR
 📑 Pregão - Eletrônico: nº 043 · Processo 154/2026
 🆔 PNCP: 75462820000102-1-000088/2026
@@ -943,7 +886,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 60/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 017 — MUNICIPIO DE PLANALTINA DO PARANA
+🏛️ LICITAÇÃO 014 — MUNICIPIO DE PLANALTINA DO PARANA
 📍 Local: Planaltina do Paraná/PR
 📑 Pregão - Eletrônico: nº 54 · Processo 90/2026
 🆔 PNCP: 75461442000134-1-000062/2026
@@ -962,26 +905,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 60/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 018 — TRIBUNAL DE JUSTICA DO ESTADO DO PARA
-📍 Local: Belém/PA
-📑 Pregão - Eletrônico: nº 25 · Processo 0024137-90.2026.8.14.0900
-🆔 PNCP: 04567897000190-1-000242/2026
-💰 Valor global estimado: R$ 47.823.664,39
-💵 Valor mensal: R$ 41.221,67 × 76 meses (pelos itens cobrados por mês)
-📦 Objeto: Registro de preços para contratação de solução integrada de segurança cibernética, contemplando proteção de endpoints, gestão de exposição a riscos, detecção e resposta estendida — XDR, inspeção e análise de tráfego de rede, appliance dedicado, créditos de serviços XDR, serviços gerenciados de segurança, suporte, monitoramento, garantia e resposta a incidentes, conforme condições, quantidades e ex
-📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
-📅 Abertura das propostas: 09/11/2026 — 08:00
-⏳ Prazo final das propostas: 24/11/2026 — 09:00 (3 dias)
-🖥️ Disputa: Compras.gov.br · Aberto · Registro de preços
-👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
-🔗 PNCP: https://pncp.gov.br/app/editais/04567897000190/2026/242
-🔗 Portal da disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92594205000252026
-📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/04567897000190/compras/2026/242/arquivos/1
-📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/04567897000190/compras/2026/242/arquivos/2
-⭐ Prioridade: Média (nota 68/100 — Infraestrutura, nuvem, segurança e suporte)
-✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
-
-🏛️ LICITAÇÃO 019 — MUNICIPIO DE IGACI
+🏛️ LICITAÇÃO 015 — MUNICIPIO DE IGACI
 📍 Local: Igaci/AL
 📑 Pregão - Eletrônico: nº 21/2026.1 · Processo 20260814.001
 🆔 PNCP: 12228375000192-1-000027/2026
@@ -1000,7 +924,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 65/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 020 — SERVICO AUTONOMO DE AGUA E ESGOTO
+🏛️ LICITAÇÃO 016 — SERVICO AUTONOMO DE AGUA E ESGOTO
 📍 Local: Oliveira/MG
 📑 Pregão - Eletrônico: nº 22 · Processo 22 / 2026 - 20870
 🆔 PNCP: 22988000000184-1-000053/2026
@@ -1019,7 +943,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 61/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 021 — SERVICO AUTONOMO DE AGUA E ESGOTO
+🏛️ LICITAÇÃO 017 — SERVICO AUTONOMO DE AGUA E ESGOTO
 📍 Local: Oliveira/MG
 📑 Pregão - Eletrônico: nº PRE 13 · Processo 22/2026
 🆔 PNCP: 22988000000184-1-000039/2026
@@ -1037,7 +961,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 61/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 022 — FUNDO MUNICIPAL DE SAUDE DE BOA ESPERANCA
+🏛️ LICITAÇÃO 018 — FUNDO MUNICIPAL DE SAUDE DE BOA ESPERANCA
 📍 Local: Boa Esperança/ES
 📑 Pregão - Eletrônico: nº 000011 · Processo 008848/2026
 🆔 PNCP: 11431661000198-1-000024/2026
@@ -1055,45 +979,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Baixa (nota 51/100 — Infraestrutura, nuvem, segurança e suporte)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 023 — MUNICIPIO DE BIRIGUI
-📍 Local: Birigui/SP
-📑 Pregão - Eletrônico: nº 157 · Processo 188/2026
-🆔 PNCP: 46151718000180-1-000697/2026
-💰 Valor global estimado: R$ 444.879,87
-💵 Valor mensal: R$ 33.747,17 × 12 meses (pelos itens cobrados por mês)
-📦 Objeto: Contratação para o fornecimento de solução tecnológica de gerenciamento e acompanhamento de processos judiciais físicos e eletrônicos, extrajudiciais, expedientes consultivos e procedimentos da cobrança administrativa, com funcionalidades para gestão eletrônica de documentos e fluxos automatizados e com inteligência artificial, contemplando instalação, migração de dados, integração, treinamento té
-📊 Quantidade: NÃO LOCALIZADO nos itens/objeto
-📅 Abertura das propostas: 16/11/2026 — 12:00
-⏳ Prazo final das propostas: 02/12/2026 — 08:00 (11 dias)
-🖥️ Disputa: BLL Compras · Aberto-Fechado
-👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
-🔗 PNCP: https://pncp.gov.br/app/editais/46151718000180/2026/697
-🔗 Portal da disputa: https://bllcompras.com/Process/ProcessView?param1=[gkz]M0ZGO5PpkmGE6RSv7x2JEd7CFT3wYoSI3x6Upxy_XyFkRJ4zxR1WGWFpTTuaIauxXqcV1qI1cCUg/eUQ7PBxButNii2S/qRKFINHCiU9PUg=
-📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46151718000180/compras/2026/697/arquivos/1
-📥 TR: NÃO LOCALIZADO como arquivo separado (pode estar dentro do edital ou do ZIP)
-⭐ Prioridade: Alta (nota 70/100 — Gestão documental)
-✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
-
-🏛️ LICITAÇÃO 024 — MUNICIPIO DE BARAO DE COCAIS
-📍 Local: Barão de Cocais/MG
-📑 Pregão - Eletrônico: nº 028 · Processo 076/2026
-🆔 PNCP: 18317685000160-1-000122/2026
-💰 Valor global estimado: R$ 1.821.578,17
-💵 Valor mensal: R$ 32.420,10 × 12 meses (pelos itens cobrados por mês)
-📦 Objeto: Contratação de empresa especializada para prestação de serviços de aerolevantamento fotogramétrico e perfilométrico LiDAR, mapeamento móvel 360° LiDAR, atualização do cadastro imobiliário e implantação de plataforma de geoprocessamento na modalidade SaaS, incluindo serviços de suporte técnico, treinamento e hospedagem de dados georreferenciados para o Município de Barão de Cocais - MG
-📊 Quantidade: 50 horas técnicas (HST)
-📅 Abertura das propostas: 17/11/2026 — 08:00
-⏳ Prazo final das propostas: 02/12/2026 — 09:00 (11 dias)
-🖥️ Disputa: Licitar Digital - Plataforma de Licitações Online · Aberto-Fechado
-👨‍💻 Profissionais / 📋 Atestados / ⚙️ Tecnologias: NÃO LOCALIZADO nesta rodada (exige leitura do edital e do TR)
-🔗 PNCP: https://pncp.gov.br/app/editais/18317685000160/2026/122
-🔗 Portal da disputa: https://app2.ammlicita.org.br/pesquisa/117658
-📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/18317685000160/compras/2026/122/arquivos/1
-📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/18317685000160/compras/2026/122/arquivos/2
-⭐ Prioridade: Alta (nota 74/100 — Sistemas, dados e IA)
-✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
-
-🏛️ LICITAÇÃO 025 — EMPRESA MUNICIPAL DE AGUA E SANEAMENTO DE BALNEARIO CAMBORIU
+🏛️ LICITAÇÃO 019 — EMPRESA MUNICIPAL DE AGUA E SANEAMENTO DE BALNEARIO CAMBORIU
 📍 Local: Balneário Camboriú/SC
 📑 Pregão - Eletrônico: nº PE 25 · Processo PE 25/2026
 🆔 PNCP: 07854402000100-1-000076/2026
@@ -1111,7 +997,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 57/100 — Outros de TIC)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 026 — MUNICIPIO DE TUNEIRAS DO OESTE
+🏛️ LICITAÇÃO 020 — MUNICIPIO DE TUNEIRAS DO OESTE
 📍 Local: Tuneiras do Oeste/PR
 📑 Pregão - Eletrônico: nº 000056-/2026 · Processo 94/2026
 🆔 PNCP: 76247329000113-1-000100/2026
@@ -1129,7 +1015,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 69/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 027 — MUNICIPIO DE PIRACAIA
+🏛️ LICITAÇÃO 021 — MUNICIPIO DE PIRACAIA
 📍 Local: Piracaia/SP
 📑 Pregão - Eletrônico: nº PE 46 · Processo 1166/2026
 🆔 PNCP: 45279627000161-1-000102/2026
@@ -1148,7 +1034,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 60/100 — Infraestrutura, nuvem, segurança e suporte)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 028 — MUNICIPIO DE SAO SEBASTIAO DO ALTO
+🏛️ LICITAÇÃO 022 — MUNICIPIO DE SAO SEBASTIAO DO ALTO
 📍 Local: São Sebastião do Alto/RJ
 📑 Pregão - Eletrônico: nº 45 · Processo 1739/2026
 🆔 PNCP: 28645786000113-1-000100/2026
@@ -1167,7 +1053,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 56/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 029 — MUNICIPIO DE CURACA
+🏛️ LICITAÇÃO 023 — MUNICIPIO DE CURACA
 📍 Local: Curaçá/BA
 📑 Pregão - Eletrônico: nº 019 · Processo 124/2026
 🆔 PNCP: 13915640000173-1-000110/2026
@@ -1186,7 +1072,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 65/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 030 — MUNICIPIO DE CONCORDIA
+🏛️ LICITAÇÃO 024 — MUNICIPIO DE CONCORDIA
 📍 Local: Concórdia/SC
 📑 Pregão - Eletrônico: nº PCE 161 · Processo 322/2026
 🆔 PNCP: 83024257000100-1-000505/2026
@@ -1204,7 +1090,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Alta (nota 71/100 — Gestão documental)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 031 — MUNICIPIO DE CONCEICAO DO JACUIPE
+🏛️ LICITAÇÃO 025 — MUNICIPIO DE CONCEICAO DO JACUIPE
 📍 Local: Conceição do Jacuípe/BA
 📑 Pregão - Eletrônico: nº 28 · Processo 231/2026
 🆔 PNCP: 14222574000119-1-000133/2026
@@ -1223,7 +1109,7 @@ Verificado em 20/11/2026 20:30 (Brasília). Só licitações com prazo de propos
 ⭐ Prioridade: Média (nota 61/100 — Sistemas, dados e IA)
 ✅ Situação: confirmada no PNCP em 20/11/2026 20:30 (Brasília): Divulgada no PNCP
 
-🏛️ LICITAÇÃO 032 — MUNICIPIO DE MARIANA
+🏛️ LICITAÇÃO 026 — MUNICIPIO DE MARIANA
 📍 Local: Mariana/MG
 📑 Pregão - Eletrônico: nº 8 · Processo 107/2026
 🆔 PNCP: 18295303000144-1-000336/2026

@@ -7,7 +7,7 @@ ENTRADA, SAIDA, UST_DB = sys.argv[1:4]
 AGORA = datetime.now(timezone(timedelta(hours=-3))).replace(tzinfo=None)  # horário de Brasília (as datas do PNCP vêm sem fuso)
 FOCO = {"desenvolvimento", "fabrica_software", "manutencao_software", "sustentacao", "sistemas_gestao", "dados", "ia", "integracao",
         "cloud", "servidores", "seguranca", "suporte", "infra_ti", "consultoria_ti", "digitalizacao", "indexacao", "ged", "ocr",
-        "triagem", "guarda", "higienizacao", "restauracao", "ead", "ti_mensal"}
+        "triagem", "guarda", "higienizacao", "restauracao", "ead", "edtech", "ti_mensal"}
 MEDIDA = {"UST", "unidade de servico tecnico", "unidade de servico tecnologico", "ponto de funcao", "pontos de funcao",
           "analise de pontos de funcao", "HST", "hora de servico tecnico", "horas tecnicas", "homem-hora", "catalogo de servicos de TI",
           "banco de horas", "servicos tecnicos sob demanda"}
