@@ -1,0 +1,205 @@
+*LICITAÇÕES PREVISTAS — TIC, UST/PF, FÁBRICA, SUSTENTAÇÃO, DIGITALIZAÇÃO, EAD*
+Fonte: PCA 2026 e PCA 2027 publicados no PNCP (181 órgãos compradores de TIC consultados) + busca dos editais do mesmo órgão. Consultado em 21/11/2026.
+Data = data desejada pelo órgão no PCA (não é data do edital). Valor = estimativa do órgão. Edital 'NÃO LOCALIZADO' = nenhuma publicação do mesmo objeto achada no PNCP.
+
+*A) PCA 2026 — querem contratar ainda este ano, para executar em 2027 (28)*
+• 27/11/2026 · AGENCIA NACIONAL DE TRANSPORTES TERRESTRES / Agencia Nacional De Transportes Terrestres - Antt · Serviços técnicos arquivísticos para tratamento de documentos/processos da ANTT em Brasília/DF. · R$ 2,00 mi · PCA 393001-38/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/04898488000177/pca/2026/csv
+• 28/11/2026 · SECRETARIA DE ADMINISTRACAO MIN. PUBLICO FED. / Ministerio Publico Da Uniao · Contratação de serviços de desenvolvimento, manutenção e sustentação de soluções web · R$ 8,45 mi · PCA 39469
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/26989715000102/pca/2026/csv
+• 30/11/2026 · MEC-COORDENACAO GERAL DE INFORMATICA - DF / Ministerio Da Educacao · Contratação de serviços especializados de TI destinados à sustentação, manutenção e governça digital · R$ 80,00 mi · PCA 150004-28/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394445000101/pca/2026/csv
+• 30/11/2026 · ESP-GAB. SEC.  MEIO AMBIENTE, INFRA LOG. / Secretaria De Infraestrutura E Meio Ambiente · ArcGIS - licenças, consultoria, treinamentos, sustentação · R$ 21,00 mi · PCA 260101-97/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/56089790000188/pca/2026/csv
+• 30/11/2026 · COORDENACAO DE ADMINISTRACAO-COAD / Ministerio Da Justica E Seguranca Publica · DFD 416/2026 - INI: Solução de digitalização para conversão de acervo documental físico. · R$ 15,75 mi · PCA 200334-391/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394494000136/pca/2026/csv
+• 30/11/2026 · TRIBUNAL DE CONTAS DO ESTADO DE GOIÁS / Goias Tribunal De Contas · Prestação de Serviços de análise, desenvolvimento,manutenção, documentação, teste de software e sustentação te · R$ 9,07 mi · PCA 109-2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/02291730000114/pca/2026/csv
+• 01/12/2026 · SUBSECRETARIA DE ASSUNTOS ADMINISTRATIVOS / Ministerio Da Saude · Serviço de desenvolvimento e manutenção sistemas informatizados, em regime de Fábrica de Software. · R$ 66,45 mi · PCA 250110-104/2026
+  🔗 https://pncp.gov.br/app/editais/00394544000185/2026/1535 — já licitado: pregão 104/2026, com resultado
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394544000185/pca/2026/csv
+• 02/12/2026 · SUBSECRETARIA DE GESTAO ADMINISTRATIVA / Ministerio Da Educacao · Contratação de empresa especializada em serviços de tratamento documental, incluindo recolhimento, t · R$ 20,00 mi · PCA 150002-43/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394445000101/pca/2026/csv
+• 03/12/2026 · SECRETARIA DE ADMINISTRACAO MIN. PUBLICO FED. / Ministerio Publico Da Uniao · Contratação de empresa para a prestação de serviços continuados de manutenção corretiva, evolutiva e legal, su · R$ 1,31 mi · PCA 39623
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/26989715000102/pca/2026/csv
+• 04/12/2026 · TRE-TRIBUNAL REGIONAL ELEITORAL/MT / Tribunal Regional Eleitoral Do Mato Grosso · Fábrica de Software · R$ 1,00 mi · PCA 70022-60/2026
+  🔗 https://pncp.gov.br/app/editais/05901308000121/2026/3 — já licitado: ata de registro de preços 90003/2026
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/05901308000121/pca/2026/csv
+• 17/12/2026 · COORDENACAO DE ADMINISTRACAO-COAD / Ministerio Da Justica E Seguranca Publica · Serviços terceirzados de gestão arquivística · R$ 1,00 mi · PCA 200334-394/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394494000136/pca/2026/csv
+• 21/12/2026 · INSTITUTO DE TECNOLOGIA EM FARMACOS / Fundacao Oswaldo Cruz · Serviço de Desenvolvimento de Soluções Locais (AMS e Fábrica de software) - TI – VDGI · R$ 2,80 mi · PCA 254446-409/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/33781055000135/pca/2026/csv
+• 30/12/2026 · MEC-COORDENACAO GERAL DE INFORMATICA - DF / Ministerio Da Educacao · Contratação de serviços auxiliares de apoio técnico especializado em desenvolvimento e sustentação · R$ 10,44 mi · PCA 150004-32/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394445000101/pca/2026/csv
+• 30/12/2026 · SUBSECRETARIA DE ASSUNTOS ADMINISTRATIVOS / Ministerio Da Saude · Serviço de expansão da plataforma informática que dá sustentação à solução integrada. · R$ 8,00 mi · PCA 250110-100/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394544000185/pca/2026/csv
+• 30/12/2026 · FUNDO ESPECIAL INST.D.A.ATIV.J.ESP.C.CRIMINAL / Tribunal De Justica Do Estado Mato Grosso Do Sul · Digitalização dos processos do Arquivo Geral, Conselho Sup. dos Juizados e Arq. Fórum CGR · R$ 2,25 mi · PCA 929735-89/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/03979663000198/pca/2026/csv
+• 31/12/2026 · DISTRITO SANIT.ESP.INDÍGENA - LITORAL SUL / Ministerio Da Saude · Implantação e parametrização do sistema de gestão documental · R$ 148,51 mi · PCA 257048-129/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394544000185/pca/2026/csv
+• 31/12/2026 · DEPEN - DIR. DE INTELIGENCIA PENITENCIARIA / Ministerio Da Justica E Seguranca Publica · 63/2025 - Contratação de fábrica de software · R$ 30,00 mi · PCA 200327-31/2026
+  🔗 https://pncp.gov.br/app/editais/00394494000136/2026/1068 — PROVÁVEL: pregão 58/2026 do MJSP, R$ 107,4 mi — ABERTO até 25/11 9h
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394494000136/pca/2026/csv
+• 31/12/2026 · DIRETORIA DE TECN.DA INFORMAÇÃO E INOVAÇÃO / Ministerio Da Justica E Seguranca Publica · DFD 68/2025 - CISE - Serviço de Central de Suporte e Serviços e suporte, sustentação e operação · R$ 25,00 mi · PCA 200342-54/2026
+  🔗 https://pncp.gov.br/app/editais/00394494000136/2026/858 — provável: pregão 86/2026, operação e sustentação, já com resultado
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394494000136/pca/2026/csv
+• 31/12/2026 · Secretaria de Estado de Educação / Secretaria De Estado De Educacao De Mato Grosso Do Sul · Contratação de empresa especializada para outsourcing de solução de impressão, reprografia e digitalização de  · R$ 22,69 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/02585924000122/pca/2026/csv
+• 31/12/2026 · SUBSECRETARIA DE GESTAO ADMINISTRATIVA / Ministerio Da Educacao · Contratação de empresa especializada em serviços de tratamento documental · R$ 20,00 mi · PCA 150002-33/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394445000101/pca/2026/csv
+• 31/12/2026 · PAGADORIA DE PESSOAL DA MARINHA - COM MARINHA / Comando Da Marinha · SERVIÇOS DE DESENVOLVIMENTO E MANUTENÇÃO DE SOFTWARE · R$ 4,93 mi · PCA 773202-3/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394502000144/pca/2026/csv
+• 31/12/2026 · MJ-DPRF-DEPART.DE POL.RODOVIARIA FEDERAL/DF / Ministerio Da Justica E Seguranca Publica · Gestão documental e arquivística · R$ 3,60 mi · PCA 200109-239/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394494010441/pca/2026/csv
+• 31/12/2026 · Secretaria de Estado de Educação / Secretaria De Estado De Educacao De Mato Grosso Do Sul · Unidade de serviço técnico especializado, sob demanda, para consultoria e desenvolvimento no escopo do objeto  · R$ 3,49 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/02585924000122/pca/2026/csv
+• 31/12/2026 · DEPEN - DIRETORIA EXECUTIVA / Ministerio Da Justica E Seguranca Publica · 54/2026 - Contratação de solução integrada de gestão documental, incluindo triagem, inventário, digi · R$ 2,51 mi · PCA 200326-501/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394494000136/pca/2026/csv
+• 31/12/2026 · MSP-PREFEITURA MUNICIPAL DE SANTOS / Municipio De Santos · Servicos de digitalizacao / indexacao de documentos · R$ 2,00 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/58200015000183/pca/2026/csv
+• 31/12/2026 · Agência Municipal de Tecnologia da Informação e Inovação / Agencia Municipal De Tecnologia Da Informacao E Inovacao · Unidade de serviço técnico de informática. · R$ 1,20 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/07337989000172/pca/2026/csv
+• 31/12/2026 · SUPERINTENDENCIA REG. POL. RODV. FEDERAL-PB / Ministerio Da Justica E Seguranca Publica · Projeto de digitalização do acervo físico da SPRF-PB. · R$ 1,00 mi · PCA 200122-11/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394494010441/pca/2026/csv
+• 31/12/2026 · FUNDAÇÃO UNIVERSIDADE FEDERAL DO ABC / Fundacao Universidade Federal Do Abc - Ufabc · Proad - Contratação de serviços de digitalização do acervo documental · R$ 1,00 mi · PCA 154503-28/2026
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/07722779000106/pca/2026/csv
+
+*B) PCA 2027 — contrato desejado até 31/03/2027; o edital tem de sair nas próximas semanas (38)*
+• 01/01/2027 · Instituto de Segurança Pública - ISP / Estado Do Rio De Janeiro · Software como servico (saas) para plataforma de software informatizada de ensino a distancia (ambiente virtua · R$ 11,06 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/42498600000171/pca/2027/csv
+• 01/01/2027 · SECRETARIA DE ESTADO DE MEIO AMBIENTE E DESENVOLVIMENTO SUSTENTÁVEL / Estado De Goias · Serviço de digitalização · R$ 2,50 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/01409580000138/pca/2027/csv
+• 01/01/2027 · PROCURADORIA GERAL DO TRABALHO DF / Ministerio Publico Da Uniao · [CT 29/2024] - Prestação de serviços de Sustentação,Manutenção Evolutiva e Treinamento para o Sistema de Gestã · R$ 1,26 mi · PCA 53029
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/26989715000102/pca/2027/csv
+• 02/01/2027 · Dep Geral de Ações Socioeducativas / Estado Do Rio De Janeiro · Servico de conversao digital de documentos em papel ate a3 com minimo de 300 dpi, em preto e branco, tons de · R$ 2,11 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/42498600000171/pca/2027/csv
+• 03/01/2027 · HOSPITAL UNIVERSITARIO PEDRO ERNESTO / Estado Do Rio De Janeiro · Servicos tecnicos especializados relativos ao sistema ergon sigrh, unidade: ust · R$ 1,39 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/42498600000171/pca/2027/csv
+• 04/01/2027 · FUNDAÇÃO C.C.F. DE AMPARO À PESQUISA DO ERJ / Estado Do Rio De Janeiro · Prestacao de servicos especializados em gestao e tratamento documental e arquivistico, incluindo sistema com · R$ 1,36 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/42498600000171/pca/2027/csv
+• 26/01/2027 · TRIBUNAL DE JUSTIÇA DO ESTADO DO RIO GRANDE DO SUL / Rio Grande Do Sul Poder Judiciario · Análise, consultoria e desenvolvimento de software · R$ 2,39 mi · PCA 2027.207.1008
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/89522064000166/pca/2027/csv
+• 29/01/2027 · TRIBUNAL DE JUSTICA DO ESTADO DO RJ / Tribunal De Justica Do Estado Do Rio De Janeiro · Prestação de serviços de sustentação e projetos de sistemas da área de pessoal · R$ 36,69 mi · PCA 30100-488/2027
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/28538734000148/pca/2027/csv
+• 29/01/2027 · MJ-CGS-COORDENACAO GERAL DE LOGISTICA/DF / Ministerio Da Justica E Seguranca Publica · Contratação para prestação de serviços de desenvolvimento e manutenção de sistemas (Fábrica Software · R$ 30,00 mi · PCA 200005-59/2027
+  🔗 https://pncp.gov.br/app/editais/00394494000136/2026/1068 — PROVÁVEL: pregão 58/2026 do MJSP, R$ 107,4 mi — ABERTO até 25/11 9h
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394494000136/pca/2027/csv
+• 29/01/2027 · IBGE-FUN.INST.BRAS.GEOGRAFIA E ESTATISTICA / Fundacao Instit Bras De Geografia E Estatistica Ibge · Contrato de serviços de apoio ao desenvolvimento de sistemas e ciência de dados · R$ 5,98 mi · PCA 114601-10/2027
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/33787094000140/pca/2027/csv
+• 31/01/2027 · Secretaria de Tecnologia da Informação e Comunicação / Tribunal De Justica Do Estado Do Para · Contratação de serviço de transmissão e armazenamento de áudio e vídeo multiponto com a capacidade de realizaç · R$ 15,63 mi · PCA SETIC67A27
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/04567897000190/pca/2027/csv
+• 01/02/2027 · AGENCIA NACIONAL DO PETROLEO - ANP - RJ / Agencia Nacional Do Petroleo, Gas Natural E Biocombustiveis · Contratação de serviços de desenvolvimento de software (fábrica de software). - STI · R$ 6,50 mi · PCA 323031-83/2027
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/02313673000127/pca/2027/csv
+• 01/02/2027 · SECRETARIA DE ESTADO DE SEGURANCA PUBLICA / Estado Do Rio De Janeiro · Contratacao de empresa para prestar servico de digitalizacao de documentos · R$ 6,01 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/42498600000171/pca/2027/csv
+• 01/02/2027 · FUNDAÇÃO SAÚDE DO EST. DO RIO DE JANEIRO / Estado Do Rio De Janeiro · Servico de integracao e gravacao do repositorio de arquivos digitais ou nato-digitais em microfilme digital c · R$ 1,47 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/42498600000171/pca/2027/csv
+• 01/02/2027 · SECRETARIA DE ADMINISTRACAO MIN. PUBLICO FED. / Ministerio Publico Da Uniao · Tratamento Arquivístico das unidades do MPF · R$ 1,30 mi · PCA 55270
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/26989715000102/pca/2027/csv
+• 10/02/2027 · COLEGIO MILITAR DO RIO DE JANEIRO / Comando Do Exercito · Contratos- digitalização e indexação de documentos · R$ 1,70 mi · PCA 160292-35/2027
+  🔗 https://pncp.gov.br/app/editais/00394452000103/2026/16373 — possível: pregão 65/2026 do Exército, digitalização e indexação, encerrado em 09/09
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394452000103/pca/2027/csv
+• 12/02/2027 · TRIBUNAL DE JUSTICA DO ESTADO DO RJ / Tribunal De Justica Do Estado Do Rio De Janeiro · Serviços de apoio à gestão arquivística do TJRJ com disponibilização de mão de obra · R$ 8,25 mi · PCA 30100-134/2027
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/28538734000148/pca/2027/csv
+• 15/02/2027 · DEPARTAMENTO DE EDUCACAO E CULTURA EXERCITO / Comando Do Exercito · Serviço de digitalização de arquivos históricos · R$ 2,10 mi · PCA 160068-62/2027
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394452000103/pca/2027/csv
+• 18/02/2027 · MJ-CGS-COORDENACAO GERAL DE LOGISTICA/DF / Ministerio Da Justica E Seguranca Publica · Contratação de serviços de apoio administrativo ao protocolo, gestão documental e biblioteca · R$ 2,22 mi · PCA 200005-46/2027
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394494000136/pca/2027/csv
+• 19/02/2027 · Secretaria de Tecnologia da Informação e Comunicação / Tribunal De Justica Do Estado Do Para · Contratação de solução de gerenciamento lógico para sustentação do parque tecnológico virtualizado em tecnolog · R$ 58,58 mi · PCA SETIC5A27
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/04567897000190/pca/2027/csv
+• 19/02/2027 · Secretaria de Tecnologia da Informação e Comunicação / Tribunal De Justica Do Estado Do Para · Contratação de serviços técnicos especializados em gestão, desenvolvimento e sustentação em software · R$ 30,33 mi · PCA SETIC24A27
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/04567897000190/pca/2027/csv
+• 19/02/2027 · Secretaria de Tecnologia da Informação e Comunicação / Tribunal De Justica Do Estado Do Para · Contratação de solução de gerenciamento lógico para sustentação do parque tecnológico virtualizado em tecnolog · R$ 14,29 mi · PCA SETIC59A27
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/04567897000190/pca/2027/csv
+• 19/02/2027 · Secretaria de Tecnologia da Informação e Comunicação / Tribunal De Justica Do Estado Do Para · Contratação de solução de gerenciamento lógico para sustentação do parque tecnológico virtualizado em tecnolog · R$ 2,06 mi · PCA SETIC37A27
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/04567897000190/pca/2027/csv
+• 19/02/2027 · Secretaria de Tecnologia da Informação e Comunicação / Tribunal De Justica Do Estado Do Para · Contratação de Sistema Integrado de Gestão Administrativa e Pedagógica, incluindo um Ambiente Virtual de Apren · R$ 1,91 mi · PCA SETIC117A27
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/04567897000190/pca/2027/csv
+• 22/02/2027 · TRIBUNAL DE JUSTICA DO ESTADO DO RJ / Tribunal De Justica Do Estado Do Rio De Janeiro · Prestação de serviços de sustentação e desenvolvimento de sistemas da área financeira do TJRJ (FSW) · R$ 11,84 mi · PCA 30100-498/2027
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/28538734000148/pca/2027/csv
+• 22/02/2027 · Secretaria de Tecnologia da Informação e Comunicação / Tribunal De Justica Do Estado Do Para · Contratação de novas subscrições de software e de serviços técnicos especializados para sustentação de ambient · R$ 4,47 mi · PCA SETIC102A27
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/04567897000190/pca/2027/csv
+• 22/02/2027 · Secretaria de Tecnologia da Informação e Comunicação / Tribunal De Justica Do Estado Do Para · Contratação de serviços técnicos especializados em gestão, desenvolvimento e sustentação em software, desdobra · R$ 3,34 mi · PCA SETIC107A27
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/04567897000190/pca/2027/csv
+• 23/02/2027 · Secretaria de Tecnologia da Informação e Comunicação / Tribunal De Justica Do Estado Do Para · Prestação do serviços técnicos especializados na área de Tecnologia da Informação e Comunicação, para organiza · R$ 68,20 mi · PCA SETIC12A27
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/04567897000190/pca/2027/csv
+• 23/02/2027 · Secretaria de Tecnologia da Informação e Comunicação / Tribunal De Justica Do Estado Do Para · Prestação do serviços técnicos especializados na área de Tecnologia da Informação e Comunicação, para organiza · R$ 23,79 mi · PCA SETIC28A27
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/04567897000190/pca/2027/csv
+• 27/02/2027 · HOSPITAL UNIVERSITARIO PEDRO ERNESTO / Estado Do Rio De Janeiro · Solucao para impressao, digitalizacao e reprografia · R$ 4,26 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/42498600000171/pca/2027/csv
+• 01/03/2027 · ESP-COORDENADORIA DE COMPRAS ELETRONICAS / Secretaria De Gestao E Governo Digital · Serviços de Sustentação Tecnológica e Manutenção do Sistema Integrado de Informações Físico-Financei · R$ 13,20 mi · PCA 530102-12/2027
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/39467292000102/pca/2027/csv
+• 01/03/2027 · ESP-COORDENADORIA DE COMPRAS ELETRONICAS / Secretaria De Gestao E Governo Digital · Serviços de Sustentação Tecnológica e Manutenção do Sistema de Concessão de Diárias · R$ 13,20 mi · PCA 530102-11/2027
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/39467292000102/pca/2027/csv
+• 10/03/2027 · MEC-COORDENACAO GERAL DE INFORMATICA - DF / Ministerio Da Educacao · Contratação de serviços de desenvolvimento e sustentação de aplicações de softwares · R$ 70,00 mi · PCA 150004-1/2027
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394445000101/pca/2027/csv
+• 22/03/2027 · BANCO CENTRAL DO BRASIL - BRASÍLIA / Banco Central Do Brasil · Operação, monitoramento e sustentação da infraestrutura de TIC e dos Data Centers do BC. · R$ 19,80 mi · PCA 179087-515/2027
+  🔗 https://pncp.gov.br/app/editais/00038166000105/2026/737 — MESMO OBJETO: pregão 34/2026 do BC — ABERTO até 24/11 15h30
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00038166000105/pca/2027/csv
+• 25/03/2027 · SECRETARIA DE ADMINISTRAÇÃO / Presidencia Da Republica · Prorrogação - Contratação de Solução de Repositório Arquivístico Digital Confiável. · R$ 9,79 mi · PCA 110001-194/2027
+  🔗 https://pncp.gov.br/app/editais/00394411000109/2026/15 — contrato atual: dispensa 250/2026; 2027 é prorrogação
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/00394411000109/pca/2027/csv
+• 25/03/2027 · SECRET ESTADO SAÚDE / Estado Do Rio De Janeiro · Servico de conversao digital de documentos em papel ate a3 com minimo de 300 dpi, em preto e branco, tons de · R$ 3,93 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/42498600000171/pca/2027/csv
+• 31/03/2027 · SECRETARIA DA FAZENDA / Estado Do Ceara · Servico de digitalizacao · R$ 6,50 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/07954480000179/pca/2027/csv
+• 31/03/2027 · SECRETARIA DOS DIREITOS HUMANOS / Estado Do Ceara · Servicos tecnicos especializados baseados em ust, catalogo de servicos basea · R$ 1,77 mi
+  🔗 Edital: NÃO LOCALIZADO no PNCP em 21/11
+  📥 PCA: https://pncp.gov.br/api/pncp/v1/orgaos/07954480000179/pca/2027/csv
