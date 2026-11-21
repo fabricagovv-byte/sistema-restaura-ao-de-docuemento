@@ -1126,20 +1126,26 @@ function csvAgenda(lista) {
 /* ---------- pesquisa nacional ao vivo no PNCP (dados da última rodada, embutidos) */
 const PESQ = __PESQUISA__;
 const pesqEstado = { faixa: "dst_ust", lim: 30 };
-const FAIXAS_P = [["dst_ust", "⭐ UST (manutenção, sustentação, suporte…)"], ["dst_mensal", "⭐ Fixo mensal de tecnologia (valor por mês)"], ["todas", "Todas"], ["10mi", "Acima de R$ 10 mi"], ["5a10", "R$ 5 a 10 mi"], ["ate5", "Abaixo de R$ 5 mi"],
+const FAIXAS_P = [["dst_ust", "⭐ UST em sistemas prontos"], ["dst_mensal", "⭐ Fixo mensal de tecnologia (valor por mês)"], ["todas", "Todas"], ["10mi", "Acima de R$ 10 mi"], ["5a10", "R$ 5 a 10 mi"], ["ate5", "Abaixo de R$ 5 mi"],
   ["ust", "Com UST"], ["pf", "Com PF"], ["hora", "Com horas técnicas"], ["pagina", "Com páginas"], ["mensal", "Mensais/contínuos"]];
 const pesqVigentes = () => PESQ.itens.filter((x) => x.enc && new Date(x.enc) > new Date());
 function pesqNaFaixa(x, f) {
   const v = x.vs ? 0 : x.v || 0;
   return f === "todas" || (f === "10mi" && v >= 1e7) || (f === "5a10" && v >= 5e6 && v < 1e7) || (f === "ate5" && v < 5e6)
     || (["ust", "pf", "hora", "pagina"].includes(f) && (x.vol || {})[f]) || (f === "mensal" && x.men)
-    || (f === "dst_ust" && (x.uc || (x.vol || {}).ust)) || (f === "dst_mensal" && x.mt);
+    || (f === "dst_ust" && (x.uc || (x.vol || {}).ust) && pronto(x)) || (f === "dst_mensal" && x.mt);
 }
 const DOCS_C = ["digitalizacao", "indexacao", "triagem", "guarda", "higienizacao", "restauracao", "ocr"];
 const temC = (x, cs) => (x.cs || []).some((c) => cs.includes(c));
+// sistema pronto: licença, locação, cessão, SaaS, subscrição, sistema/plataforma/solução integrada de gestão (a UST e as horas técnicas
+// desses contratos pagam implantação, customização e suporte)
+const PRONTO_RX = /licen[cs]|loca[cç][aã]o|cess[aã]o|saas|software como servi|subscri|sistemas? integrad|plataforma|solu[cç][aã]o (integrada|tecnol)|sistemas? de gest[aã]o|software de gest[aã]o|\berp\b|sistemas? informatizad/i;
+const pronto = (x) => temC(x, ["sistemas_gestao", "ti_mensal"]) || PRONTO_RX.test(x.obj || "");
 // cada busca pedida vira um filtro salvo; os números são sempre os da pesquisa nacional mais recente
 const BUSCAS = [
-  { k: "ust", n: "⭐ UST em manutenção, sustentação e suporte", em: "20/11", d: "Cita UST no objeto, nos itens ou no edital; ordenado pela quantidade.", f: (x) => x.uc || (x.vol || {}).ust, o: (a, b) => ((b.vol || {}).ust || 0) - ((a.vol || {}).ust || 0) },
+  { k: "ust", n: "⭐ UST em sistemas prontos", em: "21/11", d: "Licença, locação, SaaS ou sistema integrado com UST (implantação, customização, suporte); ordenado pela quantidade.", f: (x) => (x.uc || (x.vol || {}).ust) && pronto(x), o: (a, b) => ((b.vol || {}).ust || 0) - ((a.vol || {}).ust || 0) },
+  { k: "horas", n: "⭐ Horas técnicas em sistemas prontos", em: "21/11", d: "Licença, locação ou SaaS com banco de horas técnicas para customização e suporte.", f: (x) => (x.vol || {}).hora && pronto(x), o: (a, b) => ((b.vol || {}).hora || 0) - ((a.vol || {}).hora || 0) },
+  { k: "ustall", n: "UST — todas", em: "20/11", d: "Qualquer licitação que cite UST.", f: (x) => x.uc || (x.vol || {}).ust, o: (a, b) => ((b.vol || {}).ust || 0) - ((a.vol || {}).ust || 0) },
   { k: "mensal", n: "⭐ Fixo mensal de tecnologia", em: "20/11", d: "Itens cobrados por mês em software, sistemas, TI e nuvem; valor por mês × meses.", f: (x) => x.mt, o: (a, b) => (b.mv || 0) - (a.mv || 0) },
   { k: "dev", n: "Desenvolvimento de software e fábrica", em: "21/11", d: "Desenvolvimento, fábrica de software, UST/PF de desenvolvimento.", f: (x) => temC(x, ["desenvolvimento", "fabrica_software"]) },
   { k: "manut", n: "Manutenção de software", em: "21/11", d: "Manutenção corretiva, evolutiva e adaptativa de sistemas.", f: (x) => temC(x, ["manutencao_software"]) },
