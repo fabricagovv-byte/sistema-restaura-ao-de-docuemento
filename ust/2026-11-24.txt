@@ -1,0 +1,482 @@
+*🧮 BUSCA DIÁRIA — UST (UNIDADE DE SERVIÇO TÉCNICO)*
+Fonte: PNCP (pncp.gov.br), verificado em 24/11/2026 16:48 (Brasília).
+117 palavras-chave · 7.434 editais examinados · *35 com proposta aberta* · soma estimada R$ 547.596.828,49
+🆕 Novas desde a busca anterior: primeira busca · ⏳ Encerram em até 3 dias: 7
+Valores = estimativa oficial do órgão no PNCP. Só licitações com prazo de proposta aberto. Confira sempre o edital.
+
+*⏳ ENCERRAM EM ATÉ 3 DIAS (7)*
+• 25/11/2026 09:00 — EMPRESA DE INFORMATICA E INFORMACAO DO MUN.BHTE S/ (MG) — valor SIGILOSO — https://pncp.gov.br/app/editais/18239038000187/2026/79
+• 25/11/2026 09:00 — MUNICIPIO DE TANGARA DA SERRA (MT) — valor R$ 272.523,00 — https://pncp.gov.br/app/editais/03788239000166/2026/275
+• 25/11/2026 09:00 — MINISTERIO DA JUSTICA E SEGURANCA PUBLICA (DF) — valor R$ 107.412.480,00 — https://pncp.gov.br/app/editais/00394494000136/2026/1068
+• 26/11/2026 10:00 — TRIBUNAL SUPERIOR DO TRABALHO (CE) — valor R$ 4.020.748,65 — https://pncp.gov.br/app/editais/00509968000148/2026/3903
+• 27/11/2026 08:00 — MUNICIPIO DE COTIA (SP) — valor R$ 10.962.702,12 — https://pncp.gov.br/app/editais/46523049000120/2026/186
+• 27/11/2026 09:00 — COMANDO DO EXERCITO (RJ) — valor R$ 5.463.543,34 — https://pncp.gov.br/app/editais/00394452000103/2026/19835
+• 27/11/2026 10:00 — ADVOCACIA GERAL DA UNIAO (DF) — valor R$ 19.031.483,52 — https://pncp.gov.br/app/editais/26994558000123/2026/190
+
+*⭐ UST EM SISTEMAS PRONTOS (licença, locação, SaaS, sistema integrado) (14)*
+
+*1. 🏛️ MUNICIPIO DE RIO DAS OSTRAS*
+📍 Rio das Ostras/RJ
+📑 Pregão - Eletrônico nº 735 · Processo 40367/2026 · SRP
+📋 CONTRATAÇÃO DE SOLUÇÃO INTEGRADA DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO (TIC) PARA A MODERNIZAÇÃO TECNOLÓGICA, INFORMATIZAÇÃO.
+💰 R$ 17.611.446,60
+📦 3.000 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 23/11/2026 08:00
+⏳ Propostas até: 15/12/2026 09:00 (faltam 20 dias)
+⭐ Nota 96/100
+🔗 https://pncp.gov.br/app/editais/39223581000166/2026/128
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/39223581000166/compras/2026/128/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*2. 🏛️ MUNICIPIO DE ITAJAI*
+📍 Itajaí/SC
+📑 Pregão - Eletrônico nº PE 201 · Processo PE 201/2026
+📋 Contratação de solução integrada destinada à gestão da vida funcional dos servidores públicos municipais, contemplando a consolidação do acervo funcional histórico, o tratamento e a estruturação de informações por meio de inteligência artificial, mecanismos te
+💰 R$ 6.556.954,75
+📦 2.600.000 páginas/imagens · 7.000 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 17/11/2026 10:00
+⏳ Propostas até: 07/12/2026 09:00 (faltam 12 dias)
+⭐ Nota 92/100
+🔗 https://pncp.gov.br/app/editais/83102277000152/2026/635
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/83102277000152/compras/2026/635/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/83102277000152/compras/2026/635/arquivos/2
+
+*3. 🏛️ CONSELHO REGIONAL DE ENFERMAGEM DE SAO PAULO*
+📍 São Paulo/SP
+📑 Pregão - Eletrônico nº 64 · Processo 9034/2025
+📋 Contratação de empresa especializada para o fornecimento de plataforma integrada de gestão de recursos humanos, na modalidade software como serviço (SaaS), contemplando os módulos de gestão de pessoal, folha de pagamento, ponto eletrônico, benefícios, avaliaçõ
+💰 R$ 3.408.735,60
+📦 26.972 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 19/11/2026 08:00
+⏳ Propostas até: 04/12/2026 08:00 (faltam 9 dias)
+⭐ Nota 92/100
+🔗 https://pncp.gov.br/app/editais/44413680000140/2026/77
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/44413680000140/compras/2026/77/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*4. 🏛️ MUNICIPIO DE RIO BRANCO*
+📍 Rio Branco/AC
+📑 Pregão - Eletrônico nº 47 · Processo 0106.001392/2026-24
+📋 Contratação de empresa especializada para fornecimento de licença de uso, suporte técnico especializado (remoto e presencial), manutenção corretiva, manutenção evolutiva e evolução tecnológica de solução de automação e gestão de processos judiciais, administra
+💰 R$ 1.264.011,00
+📦 800 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 17/11/2026 10:00
+⏳ Propostas até: 04/12/2026 10:00 (faltam 9 dias)
+⭐ Nota 84/100
+🔗 https://pncp.gov.br/app/editais/04034583000122/2026/191
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/04034583000122/compras/2026/191/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/04034583000122/compras/2026/191/arquivos/2
+
+*5. 🏛️ SERGIPE JUSTICA ESTADUAL DE SEGUNDA INSTANCIA*
+📍 Aracaju/SE
+📑 Pregão - Eletrônico nº 38/2026 · Processo 0009960-08.2026.8.25
+📋 Contratação de subscrições Microsoft com Software Assurance para Windows Server 2025 Datacenter, Windows Server 2025 Standard, System Center 2025 Datacenter, Microsoft (MS) SQL Server Standard Edition e SQL CAL ALng LSA Device CAL; subscrições para Power BI Pr
+💰 R$ 8.943.864,12
+📦 36 UST
+📅 Abertura das propostas: 13/11/2026 08:00
+⏳ Propostas até: 30/11/2026 09:00 (faltam 5 dias)
+⭐ Nota 83/100
+🔗 https://pncp.gov.br/app/editais/13166970000103/2026/148
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/13166970000103/compras/2026/148/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*6. 🏛️ CONSELHO REGIONAL DE ENFERMAGEM DE SAO PAULO*
+📍 São Paulo/SP
+📑 Pregão - Eletrônico nº 43 · Processo 3320/2025
+📋 Contratação de empresa especializada na prestação de serviços de solução tecnológica, na modalidade licenciamento de software como serviço (Software as a Service – SaaS), voltada à inteligência e gestão da informação para automação de procedimentos e tratament
+💰 SIGILOSO
+📦 26.972 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 18/11/2026 08:00
+⏳ Propostas até: 03/12/2026 09:00 (faltam 8 dias)
+⭐ Nota 82/100
+🔗 https://pncp.gov.br/app/editais/44413680000140/2026/56
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/44413680000140/compras/2026/56/arquivos/3
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*7. 🏛️ CONSORCIO INTERMUNICIPAL DA REGIAO OESTE METROPOLITANA DE SAO PAULO*
+📍 Barueri/SP
+📑 Pregão - Eletrônico nº 013 · Processo 106/2026 · SRP
+📋 REGISTRO DE PREÇOS PARA CONTRATAÇÃO COMPARTILHADA DE SOLUÇÃO INTEGRADA DE GESTÃO DOCUMENTAL FÍSICA E DIGITAL, EM LOTE ÚNICO, PARA ATENDER AOS MUNICÍPIOS CONSORCIADOS AO CIOESTE E AOS MUNICÍPIOS PARTICIPANTES DA IRP, CONFORME ESPECIFICAÇÕES DO TERMO DE REFERÊNC
+💰 R$ 74.156.578,39
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+📅 Abertura das propostas: 19/11/2026 12:00
+⏳ Propostas até: 07/12/2026 09:45 (faltam 12 dias)
+⭐ Nota 72/100
+🔗 https://pncp.gov.br/app/editais/20301484000116/2026/51
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/20301484000116/compras/2026/51/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*8. 🏛️ TRIBUNAL SUPERIOR DO TRABALHO*
+📍 Florianópolis/SC
+📑 Pregão - Eletrônico nº 162 · Processo Proad 15727/2026
+📋 Renovação de suporte técnico especializado e direito de atualização de versões (subscrição de software) do IBM Spectrum Protect Suite (TSM).
+💰 R$ 312.893,89
+📦 100 UST
+📅 Abertura das propostas: 16/11/2026 08:00
+⏳ Propostas até: 02/12/2026 13:30 (faltam 7 dias)
+⭐ Nota 72/100
+🔗 https://pncp.gov.br/app/editais/00509968000148/2026/4004
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00509968000148/compras/2026/4004/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*9. 🏛️ FUNDO MUNICIPAL DE SAUDE - FMS*
+📍 São Paulo/SP
+📑 Pregão - Eletrônico nº 658 · Processo 6018.2026/0064222-8
+📋 CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA IMPLANTAÇÃO E FORNECIMENTO DE LICENÇA DE USO DE SOLUÇÃO DE SOFTWARE, NA MODALIDADE SOFTWARE COMO SERVIÇO (SAAS – SOFTWARE AS A SERVICE), PARA GESTÃO E MONITORAMENTO DE OBRAS DA SECRETARIA MUNICIPAL DA SAÚDE DO MUNICÍPI
+💰 SIGILOSO
+📦 60 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 16/11/2026 08:00
+⏳ Propostas até: 01/12/2026 09:30 (faltam 6 dias)
+⭐ Nota 69/100
+🔗 https://pncp.gov.br/app/editais/13864377000130/2026/1848
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/13864377000130/compras/2026/1848/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*10. 🏛️ MINISTERIO DA DEFESA*
+📍 Brasília/DF
+📑 Pregão - Eletrônico nº 133 · Processo 60589.000061/2025-00
+📋 Contratação de serviços contínuos de tecnologia da informação para o desenvolvimento, manutenção, sustentação e avaliação da qualidade e testes de software, com metodologia ágil, por meio da alocação de profissionais de TI com dedicação exclusiva de mão de obr
+💰 R$ 15.814.948,80
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+📅 Abertura das propostas: 16/11/2026 10:00
+⏳ Propostas até: 01/12/2026 10:00 (faltam 6 dias)
+⭐ Nota 67/100
+🔗 https://pncp.gov.br/app/editais/03277610000125/2026/570
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/03277610000125/compras/2026/570/arquivos/8
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/03277610000125/compras/2026/570/arquivos/7
+
+*11. 🏛️ MUNICIPIO DE JAGUARIAIVA*
+📍 Jaguariaíva/PR
+📑 Pregão - Eletrônico nº PE 33 · Processo 86/2026
+📋 Contratação de empresa especializada para locação de sistemas informatizados de gestão pública, em ambiente web, sob a forma de software como serviço, compreendendo licença de uso sem limite de usuários, implantação, conversão e migração integral de dados, par
+💰 R$ 1.443.284,60
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+💵 R$ 115.871,22/mês × 12 meses
+📅 Abertura das propostas: 26/11/2026 08:00
+⏳ Propostas até: 11/12/2026 13:30 (faltam 16 dias)
+⭐ Nota 64/100
+🔗 https://pncp.gov.br/app/editais/76910900000138/2026/77
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/76910900000138/compras/2026/77/arquivos/5
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/76910900000138/compras/2026/77/arquivos/6
+
+*12. 🏛️ MUNICIPIO DE TANGARA DA SERRA*
+📍 Tangará da Serra/MT
+📑 Pregão - Eletrônico nº 080 · Processo 0011127
+📋 [LICITANET] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE LICENCIAMENTO DE USO DE SISTEMA DIGITAL DE GESTÃO DA ASSISTÊNCIA SOCIAL E HABITAÇÃO, SISTEMATIZADO EM AMBIENTE 100% WEB, COM HOSPEDAGEM DE DADOS EM DATA CENTER (NUVEM), COMPREENDE
+💰 R$ 272.523,00
+📦 500 UST
+💵 R$ 14.085,25/mês × 12 meses
+📅 Abertura das propostas: 10/11/2026 10:43
+⏳ Propostas até: 25/11/2026 09:00 (faltam 16 horas)
+⭐ Nota 62/100
+🔗 https://pncp.gov.br/app/editais/03788239000166/2026/275
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/03788239000166/compras/2026/275/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*13. 🏛️ TRIBUNAL SUPERIOR DO TRABALHO*
+📍 Fortaleza/CE
+📑 Pregão - Eletrônico nº 75 · Processo 2780/2024
+📋 Contratação de empresa especializada na prestação de serviços técnicos na área de Tecnologia da Informação para atividades de suporte técnico (Central de Serviços / Service Desk), com alocação de 10 (dez) postos de trabalho em regime de Dedicação Exclusiva de 
+💰 R$ 4.020.748,65
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+💵 R$ 67.012,48/mês × 60 meses
+📅 Abertura das propostas: 10/11/2026 08:00
+⏳ Propostas até: 26/11/2026 10:00 (faltam 1 dias)
+⭐ Nota 54/100
+🔗 https://pncp.gov.br/app/editais/00509968000148/2026/3903
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00509968000148/compras/2026/3903/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*14. 🏛️ FURNAS-CENTRAIS ELETRICAS S.A.*
+📍 Rio de Janeiro/RJ
+📑 Pregão - Eletrônico nº 33 · Processo DSE.A-124/2026
+📋 Prestação de serviços de renovação de subscrição do suporte e manutenção das licenças perpétuas de uso do software IBM MAXIMO, bem como a prestação de serviços técnicos especializados para instalação, migração, configuração e parametrização da plataforma, conf
+💰 SIGILOSO
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+📅 Abertura das propostas: 16/11/2026 08:00
+⏳ Propostas até: 10/12/2026 10:00 (faltam 15 dias)
+⭐ Nota 54/100
+🔗 https://pncp.gov.br/app/editais/23274194000119/2026/126
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/23274194000119/compras/2026/126/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+
+*🧮 OUTRAS COM UST (manutenção, sustentação, suporte, desenvolvimento) (20)*
+
+*1. 🏛️ TRIBUNAL DE JUSTICA DO ESTADO DE MINAS GERAIS*
+📍 Belo Horizonte/MG
+📑 Pregão - Eletrônico nº 638 · Processo 1031018 000638/2026
+📋 Contratação de serviços especializados de desenvolvimento e sustentação de sistemas de Inteligência de Negócio (Business Intelligence - BI), Inteligência Artificial (IA) e DevOps.
+💰 R$ 93.136.000,00
+📦 800.000 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 23/11/2026 14:24
+⏳ Propostas até: 09/12/2026 14:00 (faltam 14 dias)
+⭐ Nota 100/100
+🔗 https://pncp.gov.br/app/editais/21154554000113/2026/559
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/21154554000113/compras/2026/559/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/21154554000113/compras/2026/559/arquivos/2
+
+*2. 🏛️ TRIBUNAL REGIONAL ELEITORAL DO AMAPA*
+📍 Macapá/AP
+📑 Pregão - Eletrônico nº 107 · Processo 0002272-59.2025.6.03.8000 · SRP
+📋 Registro de preços para eventual aquisição de solução profissional de software de automação de deploy de aplicações, gerenciamento de microsserviços Red Hat OpenShift, contemplando infraestrutura on-premise, serviços de instalação, suporte, garantia e treiname
+💰 R$ 20.722.913,27
+📦 2.250 UST
+📅 Abertura das propostas: 23/11/2026 08:00
+⏳ Propostas até: 07/12/2026 14:00 (faltam 12 dias)
+⭐ Nota 96/100
+🔗 https://pncp.gov.br/app/editais/34927343000118/2026/74
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/34927343000118/compras/2026/74/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*3. 🏛️ COMANDO DA AERONAUTICA*
+📍 São Paulo/SP
+📑 Pregão - Eletrônico nº 168 · Processo 67101.000630/2026-64
+📋 Contratação de solução de nuvem privada Oracle Exadata Cloud at Customer (ExaCC), na versão X11M ou superior, incluindo Oracle PaaS e IaaS Universal Credits
+💰 R$ 41.816.060,26
+📦 924 UST
+📅 Abertura das propostas: 23/11/2026 10:00
+⏳ Propostas até: 07/12/2026 10:00 (faltam 12 dias)
+⭐ Nota 92/100
+🔗 https://pncp.gov.br/app/editais/00394429000100/2026/3121
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00394429000100/compras/2026/3121/arquivos/2
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/00394429000100/compras/2026/3121/arquivos/1
+
+*4. 🏛️ TRIBUNAL DE JUSTICA DO ESTADO DO AMAPA*
+📍 Macapá/AP
+📑 Pregão - Eletrônico nº 217 · Processo 0005241-02.2026.8.03.0901 · SRP
+📋 Registro de preços para aquisição de soluções de segurança da informação incluindo firewalls, soluções de gerenciamento, controle de acesso, acessórios necessários e serviços de sustentação e suporte
+💰 R$ 14.562.595,70
+📦 600 UST · 1.000 horas técnicas
+📅 Abertura das propostas: 18/11/2026 08:00
+⏳ Propostas até: 09/12/2026 08:00 (faltam 14 dias)
+⭐ Nota 92/100
+🔗 https://pncp.gov.br/app/editais/34870576000121/2026/70
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/34870576000121/compras/2026/70/arquivos/22
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/34870576000121/compras/2026/70/arquivos/20
+
+*5. 🏛️ MUNICIPIO DE ARIQUEMES*
+📍 Ariquemes/RO
+📑 Pregão - Eletrônico nº 380 · Processo 13757 · SRP
+📋 Registro de preços para futura e eventual contratação de serviço técnico e especializado na área de Tecnologia da Informação e Comunicação (TIC), compreendendo assessoramento de atividades de segurança da informação, ações de governança de TIC que abrangem pla
+💰 R$ 3.952.158,21
+📦 68.937 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 25/11/2026 09:00
+⏳ Propostas até: 09/12/2026 09:00 (faltam 14 dias)
+⭐ Nota 92/100
+🔗 https://pncp.gov.br/app/editais/04104816000116/2026/321
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/04104816000116/compras/2026/321/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*6. 🏛️ TRIBUNAL DE CONTAS DO CEARA*
+📍 Fortaleza/CE
+📑 Pregão - Eletrônico nº 145 · Processo 08297/2026-2
+📋 Contratação de serviço de fornecimento de créditos, sob demanda, em nuvem pública Google Cloud Platform (GCP) e Serviços Técnicos Especializados, conforme quantitativos e especifi-cações constantes no Anexo I deste Edital.
+💰 R$ 1.161.690,00
+📦 2.000 UST
+📅 Abertura das propostas: 17/11/2026 08:00
+⏳ Propostas até: 02/12/2026 10:00 (faltam 7 dias)
+⭐ Nota 88/100
+🔗 https://pncp.gov.br/app/editais/09499757000146/2026/77
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/09499757000146/compras/2026/77/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*7. 🏛️ ESTADO DA BAHIA*
+📍 Salvador/BA
+📑 Pregão - Eletrônico nº PE 07/2026 · Processo 08217207202600017828
+📋 Contratação de Prestação de Serviços Técnicos de Atendimento e Suporte ao Usuário em 1º Nível e 2º Nível e operação da Central de Serviços de TIC, nesta Secretaria de Justiça e Direitos Humanos SJDH, incluindo as Unidades do PROCON em Salvador e Região Metropo
+💰 R$ 1.648.716,00
+📦 174.473 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 12/11/2026 08:30
+⏳ Propostas até: 30/11/2026 10:00 (faltam 5 dias)
+⭐ Nota 87/100
+🔗 https://pncp.gov.br/app/editais/13937032000160/2026/3060
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/13937032000160/compras/2026/3060/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*8. 🏛️ MINISTERIO DA JUSTICA E SEGURANCA PUBLICA*
+📍 Brasília/DF
+📑 Pregão - Eletrônico nº 58 · Processo 08006.000703/2025-56
+📋 Contratação de serviços de desenvolvimento, manutenção e sustentação de software para o Ministério da Justiça e Segurança Pública - MJSP, conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.
+💰 R$ 107.412.480,00
+📦 768.000 horas técnicas · 2.268 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 09/11/2026 08:00
+⏳ Propostas até: 25/11/2026 09:00 (faltam 16 horas)
+⭐ Nota 86/100
+🔗 https://pncp.gov.br/app/editais/00394494000136/2026/1068
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00394494000136/compras/2026/1068/arquivos/2
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*9. 🏛️ MUNICIPIO DE COTIA*
+📍 Cotia/SP
+📑 Pregão - Eletrônico nº 051 · Processo 12.370/2026
+📋 - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA EXECUÇÃO DE PROJETO ASSISTIDO COM CAPACITAÇÃO CONTINUADA, TRATAMENTO DE DADOS, SERVIÇOS TÉCNICOS DE MANUTENÇÃO, SUPORTE TÉCNICO E DESENVOLVIMENTO DE NOVAS FUNCIONALIDADES DE TECNOLOGIA DA INFORMAÇÃO EM SISTEMAS DE PROP
+💰 R$ 10.962.702,12
+📦 5.040 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 10/11/2026 08:00
+⏳ Propostas até: 27/11/2026 08:00 (faltam 2 dias)
+⭐ Nota 86/100
+🔗 https://pncp.gov.br/app/editais/46523049000120/2026/186
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/46523049000120/compras/2026/186/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*10. 🏛️ COMANDO DO EXERCITO*
+📍 Resende/RJ
+📑 Pregão - Eletrônico nº 77 · Processo 65362.008513/2026-42 · SRP
+📋 Reestruturação da rede lógica do Hospital Militar de Resende.
+💰 R$ 5.463.543,34
+📦 2.728 UST
+📅 Abertura das propostas: 12/11/2026 09:00
+⏳ Propostas até: 27/11/2026 09:00 (faltam 2 dias)
+⭐ Nota 82/100
+🔗 https://pncp.gov.br/app/editais/00394452000103/2026/19835
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00394452000103/compras/2026/19835/arquivos/23
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*11. 🏛️ MUNICIPIO DE SAO JOSE DE RIBAMAR*
+📍 São José de Ribamar/MA
+📑 Pregão - Eletrônico nº 009 · Processo 41506.2026.0205  · SRP
+📋 REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇOS DE FÁBRICA DE SOFTWARE, COMPREENDENDO DESENVOLVIMENTO, MELHORIA (EVOLUÇÃO) E SUSTENTAÇÃO DE SISTEMAS COMPUTACIONAIS EM AMBIENTE WEB E POR MEIO DE APIs, INCLUINDO SERVIÇO
+💰 SIGILOSO
+📦 14.000 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 18/11/2026 08:00
+⏳ Propostas até: 02/12/2026 09:59 (faltam 7 dias)
+⭐ Nota 82/100
+🔗 https://pncp.gov.br/app/editais/06351514000178/2026/63
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/06351514000178/compras/2026/63/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*12. 🏛️ MINISTERIO DA EDUCACAO*
+📍 Brasília/DF
+📑 Pregão - Eletrônico nº 14 · Processo 23000.010439/2025-11
+📋 "Contratação de serviços de apoio técnico e especializado em atividades de Tecnologia da Informação e Comunicação, para atendimento às necessidades do Ministério da Educação, visando garantir adequado atendimento às necessidades de TIC do Ministério da Educaçã
+💰 R$ 50.118.622,56
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+📅 Abertura das propostas: 19/11/2026 08:00
+⏳ Propostas até: 09/12/2026 09:30 (faltam 14 dias)
+⭐ Nota 72/100
+🔗 https://pncp.gov.br/app/editais/00394445000101/2026/293
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/00394445000101/compras/2026/293/arquivos/5
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/00394445000101/compras/2026/293/arquivos/3
+
+*13. 🏛️ FUNDACAO JORGE DUPRAT FIGUEIREDO, DE SEGURANCA E MEDICINA DO TRABALHO*
+📍 São Paulo/SP
+📑 Pregão - Eletrônico nº 6 · Processo 47648.000738/2025-91
+📋 Contratação de serviços de sustentação de infraestrutura e service desk para a Sede/CTN e EAs
+💰 R$ 16.224.217,92
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+💵 R$ 75.848,28/mês × 48 meses
+📅 Abertura das propostas: 24/11/2026 08:00
+⏳ Propostas até: 08/12/2026 10:00 (faltam 13 dias)
+⭐ Nota 72/100
+🔗 https://pncp.gov.br/app/editais/62428073000136/2026/29
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/62428073000136/compras/2026/29/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/62428073000136/compras/2026/29/arquivos/2
+
+*14. 🏛️ SUBSECRETARIA DA ADMINISTRACAO CENTRAL DE LICITACOES*
+📍 Porto Alegre/RS
+📑 Concorrência - Eletrônica nº 0075 · Processo 26/0804-9000584-5
+📋 Contratação Integrada de empresa especializada para a elaboração de projetos básicos e executivos, execução de obra e fornecimento de bens, inclusive de tecnologias de informação e comunicação (TICs), destinados à implantação do Centro Regional de Gestão Integ
+💰 R$ 25.652.438,54
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+📅 Abertura das propostas: 18/08/2026 08:00
+⏳ Propostas até: 15/12/2026 09:00 (faltam 20 dias)
+⭐ Nota 70/100
+🔗 https://pncp.gov.br/app/editais/87958658000199/2026/899
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/87958658000199/compras/2026/899/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/87958658000199/compras/2026/899/arquivos/34
+
+*15. 🏛️ EMPRESA DE INFORMATICA E INFORMACAO DO MUN.BHTE S/*
+📍 Belo Horizonte/MG
+📑 Pregão - Eletrônico nº 28 · Processo 31.00937442202692 · SRP
+📋 Promover o Registro de Preço, pelo período de 12 meses, para contratação de serviço especializado de fornecimento, análise, tratamento, processamento e estruturação de bases de dados de movimentação urbana e aglomerações de pessoas, originadas de telefonia móv
+💰 SIGILOSO
+📦 4.000 UST (lidas no edital/TR — conferir)
+📅 Abertura das propostas: 10/11/2026 08:00
+⏳ Propostas até: 25/11/2026 09:00 (faltam 16 horas)
+⭐ Nota 68/100
+🔗 https://pncp.gov.br/app/editais/18239038000187/2026/79
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/18239038000187/compras/2026/79/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*16. 🏛️ SERVICO DE APOIO AS MICRO E PEQUENAS EMPRESAS DO PARANA - SEBRAE/PR*
+📍 Curitiba/PR
+📑 Pregão - Eletrônico nº 19 · Processo 19/2026
+📋 [Portal de Compras Públicas] - Contratação de serviços especializados de TI para suporte a usuários, sustentação de ambientes tecnológicos, manutenção e desenvolvimento de sistemas, integrações e documentação técnica, com possível uso de Inteligência Artificia
+💰 R$ 46.165,00
+📦 1 UST
+📅 Abertura das propostas: 23/11/2026 14:00
+⏳ Propostas até: 30/11/2026 09:30 (faltam 5 dias)
+⭐ Nota 63/100
+🔗 https://pncp.gov.br/app/editais/75110585000100/2026/20
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/75110585000100/compras/2026/20/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*17. 🏛️ ADVOCACIA GERAL DA UNIAO*
+📍 Brasília/DF
+📑 Pregão - Eletrônico nº 7 · Processo 00693.000620/2025-54 · SRP
+📋 Contratação de empresa especializada para a prestação de serviços de apoio técnico especializado à governança e gestão estratégica de tecnologia da informação e comunicação (TIC), a serem executados com regime de dedicação exclusiva de mão de obra (DEMO), conf
+💰 R$ 19.031.483,52
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+📅 Abertura das propostas: 12/11/2026 08:00
+⏳ Propostas até: 27/11/2026 10:00 (faltam 2 dias)
+⭐ Nota 62/100
+🔗 https://pncp.gov.br/app/editais/26994558000123/2026/190
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/26994558000123/compras/2026/190/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/26994558000123/compras/2026/190/arquivos/2
+
+*18. 🏛️ POLICIA CIVIL DO ESTADO DE MINAS GERAIS*
+📍 Belo Horizonte/MG
+📑 Pregão - Eletrônico nº 290 · Processo 1511189 000290/2026
+📋 Contratação de serviços de telefonia para a Polícia Civil de Minas Gerais
+💰 SIGILOSO
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+📅 Abertura das propostas: 12/11/2026 12:53
+⏳ Propostas até: 10/12/2026 09:00 (faltam 15 dias)
+⭐ Nota 54/100
+🔗 https://pncp.gov.br/app/editais/18715532000170/2026/143
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/18715532000170/compras/2026/143/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/18715532000170/compras/2026/143/arquivos/2
+
+*19. 🏛️ ESTADO DO CEARA*
+📍 Fortaleza/CE
+📑 Pregão - Eletrônico nº 1274 · Processo 43012.000952/2026-44
+📋 Prestação dos serviços de Solução de Banco de Dados, incluindo hardware e software, proteção dos dados, serviços de instalação e ativação, Universal Credits, consultoria técnica especializada por demanda pelo período de 60 (sessenta) meses e treinamento de equ
+💰 SIGILOSO
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+📅 Abertura das propostas: 13/11/2026 08:00
+⏳ Propostas até: 07/12/2026 09:00 (faltam 12 dias)
+⭐ Nota 54/100
+🔗 https://pncp.gov.br/app/editais/07954480000179/2026/27341
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/07954480000179/compras/2026/27341/arquivos/1
+📥 TR: NÃO LOCALIZADO no PNCP (ver anexos do edital)
+
+*20. 🏛️ CONTROLADORIA-GERAL DA UNIAO*
+📍 Brasília/DF
+📑 Pregão - Eletrônico nº 41 · Processo 00190.104565/2026-12
+📋 Suporte rede LAN - Suporte técnico para os switches responsáveis pela conectividade da rede LAN das regionais e sede da CGU.
+💰 R$ 799.060,84
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+📅 Abertura das propostas: 12/11/2026 08:00
+⏳ Propostas até: 30/11/2026 09:00 (faltam 5 dias)
+⭐ Nota 53/100
+🔗 https://pncp.gov.br/app/editais/26664015000148/2026/42
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/26664015000148/compras/2026/42/arquivos/1
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/26664015000148/compras/2026/42/arquivos/2
+
+*📎 DISPENSAS, CREDENCIAMENTOS E OUTRAS (1)*
+
+*1. 🏛️ INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DE SAO PAULO*
+📍 São Paulo/SP
+📑 Credenciamento nº 41 · Processo 23305.021098.2024-95
+📋 Contratação, por meio de credenciamento, de empresas especializadas na prestação de serviços de intermediação de soluções de computação em nuvem (cloud broker), com agregação de valor, contemplando o fornecimento, gestão, suporte técnico, treinamento e serviço
+💰 R$ 1.079.991,81
+📦 NÃO LOCALIZADO nos itens · UST citada no edital/TR (quantidade NÃO LOCALIZADA)
+📅 Abertura das propostas: 22/04/2026 08:00
+⏳ Propostas até: 21/04/2027 18:00 (faltam 148 dias)
+⭐ Nota 58/100
+🔗 https://pncp.gov.br/app/editais/10882594000165/2026/122
+📥 Edital: https://pncp.gov.br/pncp-api/v1/orgaos/10882594000165/compras/2026/122/arquivos/15
+📥 TR: https://pncp.gov.br/pncp-api/v1/orgaos/10882594000165/compras/2026/122/arquivos/7
+
+Critério da nota (0–100): valor 30 · quantidade de UST 30 · quantidades informadas 15 · prazo 15 · modalidade 10.
