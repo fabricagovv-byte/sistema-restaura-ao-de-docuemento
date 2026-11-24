@@ -1,0 +1,247 @@
+Metadata-Version: 2.4
+Name: pncp-cli
+Version: 2.0.0
+Summary: CLI e biblioteca para as APIs públicas do PNCP, com skill de Claude Code para uso agêntico
+Author: Marcelo Gasull
+License: MIT
+Project-URL: Repository, https://github.com/AnxietyLab/pncp-cli
+Project-URL: Issues, https://github.com/AnxietyLab/pncp-cli/issues
+Keywords: pncp,licitacoes,compras-publicas,governo,brasil
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# pncp-cli
+
+CLI e biblioteca Python para as APIs públicas do [PNCP](https://pncp.gov.br)
+(Portal Nacional de Contratações Públicas). Sem dependências além da stdlib.
+
+Cobre os endpoints GET públicos das duas APIs REST oficiais (specs OpenAPI em
+`/api/consulta/v3/api-docs` e `/api/pncp/v3/api-docs`) e a API de busca do
+portal.
+
+Feita para dois modos de uso: **direto no terminal**, como qualquer CLI, e
+**agêntico via [Claude Code](https://claude.com/claude-code)** — o pacote
+embute uma skill que ensina o assistente a operar a coleta por você: você pede
+em linguagem natural, ele monta os comandos, encadeia as etapas e trata as
+particularidades da API.
+
+## Instalação
+
+```bash
+uv tool install pncp-cli        # ou: pipx install pncp-cli
+pncp --version
+
+# a partir do código-fonte
+git clone https://github.com/AnxietyLab/pncp-cli
+cd pncp-cli
+uv tool install -e .
+```
+
+## Uso agêntico (Claude Code)
+
+Instale a CLI e a skill embutida:
+
+```bash
+uv tool install pncp-cli
+pncp skill instalar
+```
+
+A partir daí o Claude Code sabe operar o PNCP. Exemplos de pedidos:
+
+> colete todos os pregões eletrônicos dos últimos 12 meses que mencionem
+> armazenamento de dados e salve em NDJSON
+
+> quem venceu os itens do edital 46341038000129-1-000485/2026, e por quanto?
+
+> baixe os documentos dessa contratação e me diga o que veio nos anexos
+
+> qual a demanda de material declarada pelo Comando do Exército no PCA de 2026?
+
+A skill carrega o vocabulário (modalidades, códigos, número de controle), as
+receitas de coleta e as armadilhas conhecidas da API — o assistente encadeia
+busca → itens → resultados → arquivos sem que você precise conhecer os
+endpoints. A fonte fica em
+[`src/pncp_cli/skill/SKILL.md`](src/pncp_cli/skill/SKILL.md).
+
+## Comandos
+
+| comando | descrição |
+|---|---|
+| `search` | busca textual/facetada (editais, atas, contratos) |
+| `filtros` | facetas e tabelas de IDs da busca |
+| `consulta contratacoes` | contratações por período de publicação ou atualização |
+| `consulta propostas` | contratações com propostas em aberto |
+| `consulta atas` / `contratos` | atas de registro de preço e contratos por período |
+| `consulta cobranca` | instrumentos de cobrança por período |
+| `consulta pca` | Plano de Contratações Anual (geral, por usuário ou atualização) |
+| `contratacao` / `itens` / `arquivos` / `historico` | detalhe de uma contratação |
+| `resultados` | fornecedor vencedor e valores homologados por item |
+| `ata` | atas de uma contratação (detalhe, arquivos, partes, contratos) |
+| `contrato` | contratos e sub-recursos (termos, empenhos, arquivos) |
+| `orgao` | órgãos por CNPJ, id ou razão social; unidades |
+| `pca` | PCA de um órgão (consolidado, itens, valores, CSV) |
+| `dominio` | tabelas de referência (modalidades, amparos legais etc.) |
+| `controle` | decompõe um número de controle PNCP |
+
+## Exemplos
+
+```bash
+# descoberta
+pncp search "notebook" --tipo edital --status recebendo_proposta --uf SP --table
+
+# coleta por período (NDJSON: um registro por linha, em streaming)
+pncp consulta contratacoes --de 2026-01-01 --ate 2026-06-30 \
+  --modalidade 6 --all --ndjson > pregoes.ndjson
+
+# da busca ao detalhe
+pncp search "ambulância" --tipo edital --all --limit 50 --ndjson \
+  | jq -r .numero_controle_pncp \
+  | while read c; do pncp itens --controle "$c" --ndjson; done
+
+# documentos de uma contratação
+pncp arquivos 07424905000138 2026 212 --baixar ./docs
+
+# quem venceu cada item, por quanto
+pncp resultados 80881915000192 2026 44 --ndjson
+
+# demanda futura declarada de um órgão
+pncp pca valores 00394452000103 2026
+
+# filtro local com --limit contando após o filtro
+pncp consulta contratacoes --de 2026-06-01 --ate 2026-06-30 --all \
+  --incluir "armazenamento de dados" --incluir storage --excluir locacao \
+  --limit 100 --ndjson --link
+```
+
+## Flags globais
+
+| flag | efeito |
+|---|---|
+| `--output json\|ndjson\|table` | formato de saída (`--ndjson`/`--table` são atalhos) |
+| `-q`, `--quiet` | suprime o progresso no stderr; avisos continuam |
+| `--timeout S`, `--retries N` | ajustes por requisição (padrão 60s / 5) |
+| `--pausa SEG` | espera entre requisições consecutivas |
+| `--version` | versão instalada |
+
+Saída no stdout é sempre JSON válido (seguro para `jq`); progresso e avisos
+vão para o stderr.
+
+| exit code | significado |
+|---|---|
+| 0 | sucesso |
+| 1 | erro |
+| 3 | sucesso parcial: stdout válido porém truncado; o stderr indica como retomar |
+
+## Coletas grandes
+
+### Janelas automáticas
+
+A API `/consulta` rejeita períodos maiores que 365 dias (HTTP 422). Os
+comandos de período dividem o intervalo em janelas válidas automaticamente.
+
+### Streaming
+
+Em NDJSON, cada registro é emitido assim que a página chega. Nada é acumulado
+em memória, e uma falha no meio preserva o que já saiu: exit code 3, página de
+retomada indicada no stderr e, no JSON agregado, os campos
+`incompleto`/`proximaPagina`.
+
+### Checkpoint
+
+`consulta contratacoes --checkpoint arquivo.json` grava o
+progresso após cada página, por unidade de trabalho (modalidade × janela), e
+retoma coletas interrompidas do ponto exato — inclusive varreduras
+`--modalidade all` sobre períodos longos. Regras:
+
+- exige saída NDJSON (em `json`/`table` os registros só saem no fim, e uma
+  interrupção perderia dados já registrados como coletados);
+- o arquivo guarda a identidade da consulta (datas, filtros, `--all`,
+  `--link`); reutilizá-lo com parâmetros diferentes é recusado;
+- `--limit` fica fora da identidade: atingido o limite, o checkpoint é mantido
+  e uma execução posterior com limite maior continua de onde parou;
+- a retomada é *at-least-once* com granularidade de página: uma interrupção
+  abrupta pode re-emitir registros da página em andamento. Ao carregar em
+  banco, deduplique por `numeroControlePNCP` (contratações) ou pela chave
+  composta com `numeroItem`/`sequencialDocumento` (itens, resultados,
+  arquivos);
+- incompatível com `--incluir`/`--excluir` (colete sem filtro e filtre depois).
+
+## Filtros locais
+
+`search` e `consulta contratacoes` aceitam uma etapa de filtro aplicada
+localmente sobre os registros:
+
+| flag | semântica |
+|---|---|
+| `--incluir TERMO` | mantém registros que casam (repetível) |
+| `--excluir TERMO` | descarta registros que casam (repetível) |
+| `--match any\|all` | `--incluir` exige qualquer termo (padrão) ou todos |
+| `--link` | acrescenta `_link_pncp` (URL da contratação no portal) |
+
+Um termo de uma palavra casa token inteiro ("rede" não casa "credenciamento");
+um termo com espaços casa como frase. A comparação ignora caixa e acentos.
+Com filtros, `--limit` conta registros após o filtro.
+
+## Comportamentos da API tratados pela CLI
+
+Comportamentos conhecidos dos servidores do PNCP tratados pela CLI:
+
+- O WAF recusa conexões sem `User-Agent` de navegador; a API `/consulta` exige
+  `Accept: application/json`. A CLI envia ambos.
+- Rate limit se manifesta como HTTP 429 ou como página HTML em resposta 200;
+  os dois casos são retentados com espera (respeitando `Retry-After`).
+- Endpoints de coleção do `pncp-api` paginam com `tamanhoPagina=10` por padrão
+  e truncam sem qualquer indicação. A CLI sempre pagina até o fim.
+- Coleção vazia é sinalizada como 404 com mensagem descritiva; a CLI converte
+  em lista vazia. O 404 de um recurso de detalhe continua sendo erro.
+- `tamanhoPagina` máximo varia por endpoint (50 em contratações, 100 em
+  cobrança, 500 em atas/contratos); `--tam` é validado antes da requisição.
+- Períodos maiores que 365 dias retornam 422; ver janelas automáticas acima.
+- Resposta vazia no meio de uma paginação (após a API indicar páginas
+  restantes) é tratada como truncagem, não como fim normal.
+- Instabilidades do lado do servidor (5xx intermitente) são retentadas; se
+  persistirem, a coleta termina como sucesso parcial (exit 3), sem descartar
+  os registros já obtidos.
+
+## Uso como biblioteca
+
+O núcleo não depende de argparse. `iter_consulta`, `iter_cru` e
+`iter_envelope` são generators com parâmetros explícitos; `filtrar` e
+`com_link` compõem sobre qualquer iterável:
+
+```python
+from pncp_cli import iter_consulta, filtrar, CONFIG
+
+CONFIG["pausa"] = 0.5
+registros = iter_consulta(
+    "/api/consulta/v1/contratacoes/publicacao",
+    {"dataInicial": "20260101", "dataFinal": "20260630",
+     "codigoModalidadeContratacao": 6},
+    seguir=True)
+for r in filtrar(registros, incluir=["storage", "armazenamento de dados"]):
+    ...
+```
+
+## Skill de Claude Code
+
+Detalhes da instalação da skill (ver [Uso agêntico](#uso-agêntico-claude-code)):
+`pncp skill instalar` copia a skill embutida para `~/.claude/skills/pncp`;
+respeita `CLAUDE_CONFIG_DIR` e aceita `--dir` para outro destino.
+`pncp skill caminho` mostra origem e destino sem escrever nada.
+
+## Desenvolvimento
+
+```bash
+uv run --with pytest --no-project pytest tests/ -q
+```
+
+Os testes simulam o transporte HTTP; nenhum toca a rede. A estrutura do
+pacote separa transporte (`client.py`), paginação (`pagination.py`), domínio
+(`filtros.py`, `controle.py`), apresentação (`output.py`) e comandos
+(`commands/`).
+
+## Licença
+
+[MIT](LICENSE)

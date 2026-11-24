@@ -1,0 +1,50 @@
+# Busca diária de digitalização, indexação e gestão documental no PNCP, em formato WhatsApp.
+# Roda no GitHub (não usa crédito do Claude) e publica no branch `busca-diaria`:
+#   documental/ultima.txt         -> texto pronto para colar no WhatsApp
+#   documental/AAAA-MM-DD.txt     -> histórico de cada dia (e .json com os dados)
+name: Busca diária — gestão documental
+
+on:
+  schedule:
+    - cron: "17 10 * * *"   # 07:17 em Brasília, todos os dias
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: busca-diaria-documental
+  cancel-in-progress: false
+
+jobs:
+  busca:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar pncp-cli (cópia MIT em vendor/)
+        run: pip install ./plataforma-licitacoes/vendor/pncp-cli
+      - name: Trazer a busca anterior (para marcar as novas)
+        run: |
+          if git fetch --depth 1 origin busca-diaria; then
+            git worktree add /tmp/publicar origin/busca-diaria
+          else
+            git worktree add --detach /tmp/publicar && git -C /tmp/publicar switch --orphan busca-diaria
+          fi
+      - name: Buscar no PNCP
+        env:
+          PYTHONPATH: plataforma-licitacoes/backend
+        run: python plataforma-licitacoes/busca-diaria/busca_documental.py /tmp/publicar/documental
+      - name: Publicar no branch busca-diaria
+        working-directory: /tmp/publicar
+        run: |
+          git config user.name "busca-diaria[bot]"
+          git config user.email "busca-diaria@users.noreply.github.com"
+          git add documental
+          git commit -m "Busca diária documental $(date -u +%Y-%m-%d)" || exit 0
+          for i in 1 2 3 4; do git push origin HEAD:busca-diaria && break; sleep $((i * 10)); git pull --rebase origin busca-diaria || true; done
+      - name: Resumo
+        run: head -6 /tmp/publicar/documental/ultima.txt >> "$GITHUB_STEP_SUMMARY"

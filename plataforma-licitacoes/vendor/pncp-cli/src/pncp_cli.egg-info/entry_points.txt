@@ -1,0 +1,2 @@
+[console_scripts]
+pncp = pncp_cli.cli:main

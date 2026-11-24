@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pncp-cli"
+version = "2.0.0"
+description = "CLI e biblioteca para as APIs públicas do PNCP, com skill de Claude Code para uso agêntico"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Marcelo Gasull" }]
+keywords = ["pncp", "licitacoes", "compras-publicas", "governo", "brasil"]
+
+[project.urls]
+Repository = "https://github.com/AnxietyLab/pncp-cli"
+Issues = "https://github.com/AnxietyLab/pncp-cli/issues"
+
+[project.scripts]
+pncp = "pncp_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pncp_cli = ["skill/SKILL.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
