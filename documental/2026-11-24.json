@@ -1,5 +1,5 @@
 {
- "verificado_em": "2026-11-24T15:40",
+ "verificado_em": "2026-11-24T15:45",
  "termos": {
   "digitalizacao de documentos": 166,
   "digitalizacao": 301,
@@ -13,7 +13,7 @@
   "gestao de documentos": 189,
   "tratamento documental": 15,
   "tratamento arquivistico": 5,
-  "organizacao de arquivos": 283,
+  "organizacao de arquivos": 284,
   "organizacao de acervo": 21,
   "organizacao de documentos": 358,
   "higienizacao documental": 11,
@@ -39,10 +39,10 @@
   "arquivistica": 11,
   "arquivo": 600
  },
- "examinados": 1649,
+ "examinados": 1644,
  "triados": 39,
  "abertas": 33,
- "soma_estimada": 101554666.47000001,
+ "soma_estimada": 101554666.47,
  "novas": 0,
  "urgentes": 8,
  "licitacoes": [
@@ -106,7 +106,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/05182233000176/compras/2026/236/arquivos/1"
     }
    ],
-   "dias": 6.721371986030092,
+   "dias": 6.7178466201273155,
    "nota": 95,
    "nova": false
   },
@@ -183,7 +183,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/00394452000103/compras/2026/24731/arquivos/5"
     }
    ],
-   "dias": 8.763733097141204,
+   "dias": 8.760207731238426,
    "nota": 86,
    "nova": false
   },
@@ -270,7 +270,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/03979572000152/compras/2026/37/arquivos/6"
     }
    ],
-   "dias": 8.763733097141204,
+   "dias": 8.760207731238426,
    "nota": 86,
    "nova": false
   },
@@ -312,7 +312,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/20301484000116/compras/2026/51/arquivos/1"
     }
    ],
-   "dias": 12.753316430474536,
+   "dias": 12.749791064571758,
    "nota": 84,
    "nova": false
   },
@@ -384,7 +384,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/15233026000157/compras/2026/121/arquivos/5"
     }
    ],
-   "dias": 16.722066430474538,
+   "dias": 16.71854106457176,
    "nota": 82,
    "nova": false
   },
@@ -444,7 +444,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/00348003000110/compras/2026/1577/arquivos/3"
     }
    ],
-   "dias": 7.722066430474537,
+   "dias": 7.71854106457176,
    "nota": 82,
    "nova": false
   },
@@ -495,7 +495,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/76416932000181/compras/2026/438/arquivos/2"
     }
    ],
-   "dias": 15.74289976380787,
+   "dias": 15.739374397905092,
    "nota": 80,
    "nova": false
   },
@@ -577,7 +577,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/07954480000179/compras/2026/26886/arquivos/6"
     }
    ],
-   "dias": 6.722066430474537,
+   "dias": 6.71854106457176,
    "nota": 77,
    "nova": false
   },
@@ -630,7 +630,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/08110991000177/compras/2026/63/arquivos/1"
     }
    ],
-   "dias": 5.701233097141204,
+   "dias": 5.697707731238426,
    "nota": 75,
    "nova": false
   },
@@ -679,7 +679,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/42498600000171/compras/2026/4950/arquivos/1"
     }
    ],
-   "dias": 8.763038652696759,
+   "dias": 8.759513286793982,
    "nota": 74,
    "nova": false
   },
@@ -742,7 +742,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/60547841000145/compras/2026/63/arquivos/3"
     }
    ],
-   "dias": 7.05539976380787,
+   "dias": 7.0518743979050935,
    "nota": 74,
    "nova": false
   },
@@ -786,7 +786,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/06109789000108/compras/2026/12/arquivos/1"
     }
    ],
-   "dias": 15.929705319363425,
+   "dias": 15.926179953460647,
    "nota": 72,
    "nova": false
   },
@@ -841,7 +841,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/01612369000118/compras/2026/50/arquivos/1"
     }
    ],
-   "dias": 1.742205319363426,
+   "dias": 1.738679953460648,
    "nota": 72,
    "nova": false
   },
@@ -889,7 +889,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/47018676000176/compras/2026/485/arquivos/1"
     }
    ],
-   "dias": 14.722066430474536,
+   "dias": 14.718541064571758,
    "nota": 72,
    "nova": false
   },
@@ -930,7 +930,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/60265576000102/compras/2026/61/arquivos/1"
     }
    ],
-   "dias": 15.86789976380787,
+   "dias": 15.864374397905092,
    "nota": 70,
    "nova": false
   },
@@ -1016,7 +1016,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/10462497000113/compras/2026/111/arquivos/8"
     }
    ],
-   "dias": 9.68039976380787,
+   "dias": 9.676874397905094,
    "nota": 70,
    "nova": false
   },
@@ -1060,7 +1060,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/06226583000150/compras/2026/85/arquivos/1"
     }
    ],
-   "dias": 6.722066430474537,
+   "dias": 6.71854106457176,
    "nota": 67,
    "nova": false
   },
@@ -1115,7 +1115,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/12768835000175/compras/2026/15/arquivos/5"
     }
    ],
-   "dias": 0.7630386526967592,
+   "dias": 0.7595132867939816,
    "nota": 66,
    "nova": false
   },
@@ -1166,7 +1166,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/15126437000305/compras/2026/4804/arquivos/1"
     }
    ],
-   "dias": 19.74289976380787,
+   "dias": 19.73937439790509,
    "nota": 66,
    "nova": false
   },
@@ -1233,7 +1233,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/54682836000142/compras/2026/54/arquivos/5"
     }
    ],
-   "dias": 8.68039976380787,
+   "dias": 8.676874397905094,
    "nota": 64,
    "nova": false
   },
@@ -1284,7 +1284,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/28084705000153/compras/2026/56/arquivos/2"
     }
    ],
-   "dias": 19.76026087491898,
+   "dias": 19.756735509016202,
    "nota": 60,
    "nova": false
   },
@@ -1326,7 +1326,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/02313673000127/compras/2027/3/arquivos/1"
     }
    ],
-   "dias": 5.763733097141204,
+   "dias": 5.760207731238426,
    "nota": 57,
    "nova": false
   },
@@ -1381,7 +1381,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/46151718000180/compras/2026/697/arquivos/3"
     }
    ],
-   "dias": 16.68039976380787,
+   "dias": 16.67687439790509,
    "nota": 56,
    "nova": false
   },
@@ -1458,7 +1458,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/07982036000167/compras/2026/169/arquivos/7"
     }
    ],
-   "dias": 12.700538652696759,
+   "dias": 12.69701328679398,
    "nota": 56,
    "nova": false
   },
@@ -1509,7 +1509,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/76105618000188/compras/2026/696/arquivos/2"
     }
    ],
-   "dias": 0.6803997638078704,
+   "dias": 0.6768743979050925,
    "nota": 56,
    "nova": false
   },
@@ -1553,7 +1553,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/18557561000151/compras/2026/143/arquivos/1"
     }
    ],
-   "dias": 2.7012330971412037,
+   "dias": 2.6977077312384257,
    "nota": 56,
    "nova": false
   },
@@ -1621,7 +1621,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/43976166000150/compras/2026/84/arquivos/9"
     }
    ],
-   "dias": 0.722066430474537,
+   "dias": 0.7185410645717593,
    "nota": 52,
    "nova": false
   },
@@ -1663,7 +1663,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/83599191000187/compras/2026/781/arquivos/1"
     }
    ],
-   "dias": 9.93039976380787,
+   "dias": 9.926874397905094,
    "nota": 52,
    "nova": false
   },
@@ -1706,7 +1706,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/57571275000798/compras/2026/3/arquivos/1"
     }
    ],
-   "dias": 6.763733097141203,
+   "dias": 6.7602077312384266,
    "nota": 47,
    "nova": false
   },
@@ -1789,7 +1789,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/07756646000142/compras/2026/83/arquivos/9"
     }
    ],
-   "dias": 1.6387330971412037,
+   "dias": 1.6352077312384259,
    "nota": 46,
    "nova": false
   },
@@ -1841,7 +1841,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/31787922000114/compras/2026/26/arquivos/3"
     }
    ],
-   "dias": 5.679705319363427,
+   "dias": 5.676179953460648,
    "nota": 49,
    "nova": false
   },
@@ -1901,7 +1901,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/09079344000102/compras/2026/15/arquivos/3"
     }
    ],
-   "dias": 1.0553997638078703,
+   "dias": 1.0518743979050926,
    "nota": 60,
    "nova": false
   },
@@ -1961,7 +1961,7 @@
      "url": "https://pncp.gov.br/pncp-api/v1/orgaos/14846532000159/compras/2026/9/arquivos/4"
     }
    ],
-   "dias": 2.6803997638078703,
+   "dias": 2.6768743979050926,
    "nota": 50,
    "nova": false
   }
