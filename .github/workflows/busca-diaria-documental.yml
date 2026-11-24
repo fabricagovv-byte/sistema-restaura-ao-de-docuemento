@@ -1,8 +1,8 @@
-# Busca diária de digitalização, indexação e gestão documental no PNCP, em formato WhatsApp.
+# Busca diária no PNCP em formato WhatsApp: gestão documental e UST.
 # Roda no GitHub (não usa crédito do Claude) e publica no branch `busca-diaria`:
-#   documental/ultima.txt         -> texto pronto para colar no WhatsApp
-#   documental/AAAA-MM-DD.txt     -> histórico de cada dia (e .json com os dados)
-name: Busca diária — gestão documental
+#   documental/ultima.txt e ust/ultima.txt -> texto pronto para colar no WhatsApp
+#   <tema>/AAAA-MM-DD.txt (e .json)       -> histórico de cada dia
+name: Busca diária — documental e UST
 
 on:
   schedule:
@@ -19,7 +19,7 @@ concurrency:
 jobs:
   busca:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,17 +34,25 @@ jobs:
           else
             git worktree add --detach /tmp/publicar && git -C /tmp/publicar switch --orphan busca-diaria
           fi
-      - name: Buscar no PNCP
+      - name: Buscar no PNCP — gestão documental
         env:
           PYTHONPATH: plataforma-licitacoes/backend
-        run: python plataforma-licitacoes/busca-diaria/busca_documental.py /tmp/publicar/documental
+        run: python plataforma-licitacoes/busca-diaria/busca_diaria.py /tmp/publicar/documental documental
+      - name: Buscar no PNCP — UST
+        if: always()
+        env:
+          PYTHONPATH: plataforma-licitacoes/backend
+        run: python plataforma-licitacoes/busca-diaria/busca_diaria.py /tmp/publicar/ust ust
       - name: Publicar no branch busca-diaria
+        if: always()
         working-directory: /tmp/publicar
         run: |
           git config user.name "busca-diaria[bot]"
           git config user.email "busca-diaria@users.noreply.github.com"
-          git add documental
-          git commit -m "Busca diária documental $(date -u +%Y-%m-%d)" || exit 0
+          git add -A documental ust 2>/dev/null || git add -A
+          git commit -m "Busca diária $(date -u +%Y-%m-%d)" || exit 0
           for i in 1 2 3 4; do git push origin HEAD:busca-diaria && break; sleep $((i * 10)); git pull --rebase origin busca-diaria || true; done
       - name: Resumo
-        run: head -6 /tmp/publicar/documental/ultima.txt >> "$GITHUB_STEP_SUMMARY"
+        if: always()
+        run: |
+          for t in documental ust; do [ -f /tmp/publicar/$t/ultima.txt ] && head -5 /tmp/publicar/$t/ultima.txt >> "$GITHUB_STEP_SUMMARY"; echo >> "$GITHUB_STEP_SUMMARY"; done

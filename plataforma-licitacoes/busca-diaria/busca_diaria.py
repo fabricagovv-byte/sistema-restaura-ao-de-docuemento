@@ -1,7 +1,9 @@
-"""Busca diária no PNCP: digitalização, indexação e gestão documental com proposta aberta, em formato WhatsApp.
+"""Busca diária no PNCP com proposta aberta, em formato WhatsApp. Dois temas:
+  documental — digitalização, indexação e gestão documental (padrão)
+  ust        — contratações de TI com UST (unidade de serviço técnico), com destaque para UST em sistemas prontos
 
 Uso (com o pacote pncp-cli instalado e o backend no PYTHONPATH):
-    PYTHONPATH=plataforma-licitacoes/backend python plataforma-licitacoes/busca-diaria/busca_documental.py SAIDA_DIR
+    PYTHONPATH=plataforma-licitacoes/backend python plataforma-licitacoes/busca-diaria/busca_diaria.py SAIDA_DIR [documental|ust]
 
 Gera em SAIDA_DIR: AAAA-MM-DD.txt (texto para WhatsApp), AAAA-MM-DD.json (dados), ultima.txt e ultima.json.
 Se SAIDA_DIR já tiver um ultima.json, marca como 🆕 as licitações que não estavam na busca anterior.
@@ -15,6 +17,8 @@ from datetime import datetime, timedelta, timezone
 from licitacoes.taxonomia import classificar, natureza, tipo_volume, volumes_no_texto
 
 SAIDA = sys.argv[1] if len(sys.argv) > 1 else "."
+TEMA = sys.argv[2] if len(sys.argv) > 2 else "documental"
+assert TEMA in ("documental", "ust"), TEMA
 LIMITE = int(os.environ.get("BUSCA_LIMITE", "600"))  # registros por termo
 AGORA = datetime.now(timezone(timedelta(hours=-3))).replace(tzinfo=None)  # Brasília (datas do PNCP vêm sem fuso)
 
@@ -27,6 +31,20 @@ TERMOS = [
     "microfilmagem", "conversao digital", "captura de documentos", "escaneamento", "avaliacao documental", "tabela de temporalidade",
     "eliminacao de documentos", "arquivistica", "arquivo",
 ]
+TERMOS_UST = [
+    "UST", "unidade de servico tecnico", "unidade de servico tecnologico", "unidades de servico tecnico", "UST manutencao", "UST sustentacao",
+    "UST suporte", "UST desenvolvimento", "UST implantacao", "UST customizacao", "banco de UST", "catalogo de servicos", "servicos tecnicos sob demanda",
+    "unidade de servico tecnico manutencao", "ponto de funcao", "fabrica de software", "sustentacao de sistemas", "manutencao evolutiva",
+    "licenca de uso de software", "locacao de sistema", "sistema integrado de gestao", "software como servico", "cessao de uso de software",
+]
+UST_RX = re.compile(r"\bust\b|\bust'?s\b|unidades? de servicos? (tecnic|tecnolog)|banco de ust")
+# UST em sistema pronto: licença/locação/SaaS/sistema integrado (a UST paga implantação, customização e suporte)
+PRONTO_RX = re.compile(r"licen[cs]|locacao|cessao|saas|software como servi|subscri|sistemas? integrad|plataforma|solucao (integrada|tecnol)|"
+                       r"sistemas? de gestao|software de gestao|\berp\b|sistemas? informatizad")
+FORA_UST_RX = re.compile(r"obra de|pavimenta|construcao de|reforma de|alimentacao|merenda|combustivel|veiculos?\b|medicament|"
+                         r"material hospitalar|uniforme|limpeza urbana|coleta de lixo")
+if TEMA == "ust":
+    TERMOS = TERMOS_UST
 DOC_CATS = {"digitalizacao", "indexacao", "ged", "ocr", "triagem", "guarda", "higienizacao", "restauracao"}
 DOC_RX = re.compile(r"digitaliz|escanea|indexa|gestao documental|gestao arquivist|gestao de documentos|tratamento (documental|arquivist)|"
                     r"arquivist|\bged\b|gerenciamento eletronico de doc|microfilm|custodia de (documentos|acervo)|guarda (de|externa).{0,40}(document|acervo|caixa|processo)|"
@@ -69,6 +87,18 @@ def eh_documental(texto):
     return bool(DOC_RX.search(n[:180])) and not FORA2_RX.search(n)
 
 
+def eh_tema(texto, e=None):
+    """Triagem: documental pelo objeto; UST = TI e (UST nos itens ou citada no objeto/informação complementar)."""
+    if TEMA == "documental":
+        return eh_documental(texto)
+    n = norm(texto)
+    if FORA_UST_RX.search(n):
+        return False
+    if e is None:  # antes dos itens: qualquer objeto de TI ou que cite UST
+        return bool(UST_RX.search(n) or classificar(texto))
+    return bool((e.get("vol") or {}).get("ust") or UST_RX.search(norm(f"{texto} {e.get('info') or ''}")))
+
+
 def norm(s):
     return unicodedata.normalize("NFKD", (s or "").lower()).encode("ascii", "ignore").decode()
 
@@ -107,7 +137,7 @@ for e in editais.values():
     obj = e.get("description") or ""
     n = norm(obj)
     cats = {c["codigo"] for c in classificar(obj)} & DOC_CATS
-    if not eh_documental(obj) or natureza(obj) == "material":
+    if not eh_tema(obj) or natureza(obj) == "material":
         continue
     e["cats"] = sorted(cats)
     cand.append(e)
@@ -142,7 +172,9 @@ def detalhar(e):
         if str(it.get("materialOuServicoNome") or "").lower().startswith("m"):
             continue
         k = tipo_volume(it.get("unidadeMedida"), it.get("descricao"), it.get("quantidade"), it.get("valorUnitarioEstimado"))
-        if k in ("pagina", "registro", "hora"):
+        if k in ("ust", "pf") and TEMA == "ust":
+            vol[k] = vol.get(k, 0) + q
+        elif k in ("pagina", "registro", "hora"):
             vol[k] = vol.get(k, 0) + q
         elif "metro linear" in u or (u.strip() in {"ml", "m", "metro", "metros"} and re.search(r"arquiv|document|acervo|metro linear", desc)):
             vol["metro_linear"] = vol.get("metro_linear", 0) + q
@@ -153,9 +185,11 @@ def detalhar(e):
             meses.append(q)
     e["n_itens"] = len(itens)
     e["vol"] = {k: round(v) for k, v in vol.items() if v}
-    for k, v in volumes_no_texto(f"{e.get('objeto') or ''} {e.get('info') or ''}", documental=True).items():
+    for k, v in volumes_no_texto(f"{e.get('objeto') or ''} {e.get('info') or ''}", documental=(TEMA == "documental")).items():
         if k == "pagina" and not e["vol"].get("pagina"):
             e["vol"]["pagina_texto"] = round(v)
+        elif k == "ust" and TEMA == "ust" and not e["vol"].get("ust"):
+            e["vol"]["ust_texto"] = round(v)
     if mensal and meses:
         m = max(set(meses), key=meses.count)
         if e.get("valor") and mensal * m > 1.2 * e["valor"]:
@@ -173,7 +207,7 @@ def detalhar(e):
 with cf.ThreadPoolExecutor(5) as ex:
     cand = list(ex.map(detalhar, cand))
 abertos = [e for e in cand if e.get("encerramento") and datetime.fromisoformat(e["encerramento"]) > AGORA
-           and (e.get("situacao") or "").startswith("Divulgada") and eh_documental(e.get("objeto") or e.get("description"))]
+           and (e.get("situacao") or "").startswith("Divulgada") and eh_tema(e.get("objeto") or e.get("description"), e)]
 print(f"{len(abertos)} com proposta aberta", file=sys.stderr)
 
 # republicações iguais aparecem uma vez (fica a mais recente pelo sequencial)
@@ -188,7 +222,11 @@ def nota(e):
     v = e.get("valor") or 0
     pv = 30 if v >= 1e7 else 26 if v >= 5e6 else 22 if v >= 1e6 else 16 if v >= 5e5 else 10 if v >= 1e5 else 6 if v > 0 else 12
     n = norm(e.get("objeto"))
-    pc = 30 if re.search(r"digitaliz|indexa", n) else 24 if re.search(r"gestao documental|arquivist|\bged\b|tratamento documental", n) else 16
+    if TEMA == "ust":
+        u = (e.get("vol") or {}).get("ust") or (e.get("vol") or {}).get("ust_texto") or 0
+        pc = 30 if u >= 10000 else 26 if u >= 1000 else 22 if u > 0 else 12
+    else:
+        pc = 30 if re.search(r"digitaliz|indexa", n) else 24 if re.search(r"gestao documental|arquivist|\bged\b|tratamento documental", n) else 16
     pq = 15 if e.get("vol") else 5
     dias = (datetime.fromisoformat(e["encerramento"]) - AGORA).total_seconds() / 86400
     pp = 15 if dias >= 7 else 10 if dias >= 3 else 5
@@ -226,7 +264,7 @@ def dt(s):
 
 
 ROT = {"pagina": "páginas/imagens", "pagina_texto": "páginas (citadas no objeto)", "metro_linear": "metros lineares", "caixa": "caixas",
-       "registro": "registros", "hora": "horas técnicas"}
+       "registro": "registros", "hora": "horas técnicas", "ust": "UST", "ust_texto": "UST (citadas no objeto)", "pf": "pontos de função"}
 
 
 def arq(e, rx):
@@ -274,7 +312,9 @@ novas = [e for e in competitivas + outras if e.get("nova")]
 urgentes = sorted([e for e in abertos if e["dias"] < 3], key=lambda e: e["encerramento"])
 soma = sum(e.get("valor") or 0 for e in abertos if (e.get("valor") or 0) < 1e9)
 
-txt = [f"*📂 BUSCA DIÁRIA — DIGITALIZAÇÃO, INDEXAÇÃO E GESTÃO DOCUMENTAL*",
+TITULO = {"documental": "📂 BUSCA DIÁRIA — DIGITALIZAÇÃO, INDEXAÇÃO E GESTÃO DOCUMENTAL",
+          "ust": "🧮 BUSCA DIÁRIA — UST (UNIDADE DE SERVIÇO TÉCNICO)"}[TEMA]
+txt = [f"*{TITULO}*",
        f"Fonte: PNCP (pncp.gov.br), verificado em {AGORA.strftime('%d/%m/%Y %H:%M')} (Brasília).",
        f"{len(TERMOS)} palavras-chave · {num(len(editais))} editais examinados · *{len(abertos)} com proposta aberta* · soma estimada {brl(soma)}",
        f"🆕 Novas desde a busca anterior: {len(novas) if anterior else 'primeira busca'} · ⏳ Encerram em até 3 dias: {len(urgentes)}",
@@ -287,12 +327,21 @@ if urgentes:
     txt += ["", f"*⏳ ENCERRAM EM ATÉ 3 DIAS ({len(urgentes)})*"] + [f"• {dt(e['encerramento'])} — {(e.get('orgao_nome') or '').strip()} ({e.get('uf')}) — "
                                                                    f"valor {valor_txt(e)} — {e['link_pncp']}"
                                                                    for e in urgentes]
-txt += ["", f"*⭐ PREGÕES E CONCORRÊNCIAS, POR NOTA ({len(competitivas)})*", ""]
-txt += [bloco(i, e) + "\n" for i, e in enumerate(competitivas, 1)]
+if TEMA == "ust":
+    prontos = [e for e in competitivas if PRONTO_RX.search(norm(e.get("objeto")))]
+    grupos = [("⭐ UST EM SISTEMAS PRONTOS (licença, locação, SaaS, sistema integrado)", prontos),
+              ("🧮 OUTRAS COM UST (manutenção, sustentação, suporte, desenvolvimento)", [e for e in competitivas if e not in prontos])]
+else:
+    grupos = [("⭐ PREGÕES E CONCORRÊNCIAS, POR NOTA", competitivas)]
+for titulo, lista in grupos:
+    if lista:
+        txt += ["", f"*{titulo} ({len(lista)})*", ""]
+        txt += [bloco(i, e) + "\n" for i, e in enumerate(lista, 1)]
 if outras:
     txt += [f"*📎 DISPENSAS, CREDENCIAMENTOS E OUTRAS ({len(outras)})*", ""]
     txt += [bloco(i, e) + "\n" for i, e in enumerate(outras, 1)]
-txt.append("Critério da nota (0–100): valor 30 · aderência ao tema 30 · quantidades informadas 15 · prazo 15 · modalidade 10.")
+txt.append("Critério da nota (0–100): valor 30 · " + ("quantidade de UST 30" if TEMA == "ust" else "aderência ao tema 30")
+           + " · quantidades informadas 15 · prazo 15 · modalidade 10.")
 
 os.makedirs(SAIDA, exist_ok=True)
 dia = AGORA.strftime("%Y-%m-%d")
