@@ -179,7 +179,7 @@ print(f"{len(abertos)} com proposta aberta", file=sys.stderr)
 # republicações iguais aparecem uma vez (fica a mais recente pelo sequencial)
 uniq = {}
 for e in sorted(abertos, key=lambda x: int(x["numero_sequencial"])):
-    uniq[(e["orgao_cnpj"], e.get("valor"), norm(e.get("objeto"))[:70])] = e
+    uniq[(e["orgao_cnpj"], e.get("valor"), re.sub(r"[^a-z0-9]", "", norm(e.get("objeto")))[:60])] = e
 abertos = list(uniq.values())
 
 
@@ -236,9 +236,13 @@ def arq(e, rx):
     return None
 
 
-def bloco(i, e):
+def valor_txt(e):
     v = e.get("valor")
-    valor = brl(v) if v else ("SIGILOSO" if "sigil" in norm(e.get("sigiloso")) and "sem sigilo" not in norm(e.get("sigiloso")) else "NÃO LOCALIZADO")
+    return brl(v) if v else ("SIGILOSO" if "sigil" in norm(e.get("sigiloso")) and "sem sigilo" not in norm(e.get("sigiloso")) else "NÃO LOCALIZADO")
+
+
+def bloco(i, e):
+    valor = valor_txt(e)
     vol = " · ".join(f"{num(q)} {ROT.get(k, k)}" for k, q in (e.get("vol") or {}).items()) or "NÃO LOCALIZADO nos itens"
     ed = arq(e, r"edital")
     tr = arq(e, r"termo de referencia|\btr\b|projeto basico|estudo tecnico")
@@ -277,11 +281,11 @@ txt = [f"*📂 BUSCA DIÁRIA — DIGITALIZAÇÃO, INDEXAÇÃO E GESTÃO DOCUMENT
        "Valores = estimativa oficial do órgão no PNCP. Só licitações com prazo de proposta aberto. Confira sempre o edital."]
 if anterior and novas:
     txt += ["", f"*🆕 NOVAS ({len(novas)})*"] + [f"• {(e.get('orgao_nome') or '').strip()} ({e.get('uf')}) — "
-                                                 f"{brl(e['valor']) if e.get('valor') else 'valor NÃO LOCALIZADO'} — até {dt(e['encerramento'])[:10]} — {e['link_pncp']}"
+                                                 f"valor {valor_txt(e)} — até {dt(e['encerramento'])[:10]} — {e['link_pncp']}"
                                                  for e in novas]
 if urgentes:
     txt += ["", f"*⏳ ENCERRAM EM ATÉ 3 DIAS ({len(urgentes)})*"] + [f"• {dt(e['encerramento'])} — {(e.get('orgao_nome') or '').strip()} ({e.get('uf')}) — "
-                                                                   f"{brl(e['valor']) if e.get('valor') else 'valor NÃO LOCALIZADO'} — {e['link_pncp']}"
+                                                                   f"valor {valor_txt(e)} — {e['link_pncp']}"
                                                                    for e in urgentes]
 txt += ["", f"*⭐ PREGÕES E CONCORRÊNCIAS, POR NOTA ({len(competitivas)})*", ""]
 txt += [bloco(i, e) + "\n" for i, e in enumerate(competitivas, 1)]
