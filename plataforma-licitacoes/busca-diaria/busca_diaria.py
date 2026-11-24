@@ -257,6 +257,10 @@ def detalhar(e):
             vol[k] = vol.get(k, 0) + q
         elif k in ("pagina", "registro", "hora"):
             vol[k] = vol.get(k, 0) + q
+        elif TEMA == "ust":
+            if k == "mes" and q >= 2 and it.get("valorUnitarioEstimado"):
+                mensal += float(it["valorUnitarioEstimado"])
+                meses.append(q)
         elif "metro linear" in u or (u.strip() in {"ml", "m", "metro", "metros"} and re.search(r"arquiv|document|acervo|metro linear", desc)):
             vol["metro_linear"] = vol.get("metro_linear", 0) + q
         elif re.search(r"\bcaixa", u) and re.search(r"arquiv|document|acervo|guarda|custodia|processo", desc):
