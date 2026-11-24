@@ -19,14 +19,16 @@ concurrency:
 jobs:
   busca:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Instalar pncp-cli (cópia MIT em vendor/)
-        run: pip install ./plataforma-licitacoes/vendor/pncp-cli
+        run: |
+          pip install ./plataforma-licitacoes/vendor/pncp-cli pypdf
+          sudo apt-get install -y -q poppler-utils >/dev/null || true
       - name: Trazer a busca anterior (para marcar as novas)
         run: |
           if git fetch --depth 1 origin busca-diaria; then

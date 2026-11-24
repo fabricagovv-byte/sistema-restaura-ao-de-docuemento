@@ -31,11 +31,42 @@ TERMOS = [
     "microfilmagem", "conversao digital", "captura de documentos", "escaneamento", "avaliacao documental", "tabela de temporalidade",
     "eliminacao de documentos", "arquivistica", "arquivo",
 ]
+# UST: universo de TIC inteiro (a UST costuma estar só nos itens ou no edital, não no objeto)
 TERMOS_UST = [
-    "UST", "unidade de servico tecnico", "unidade de servico tecnologico", "unidades de servico tecnico", "UST manutencao", "UST sustentacao",
-    "UST suporte", "UST desenvolvimento", "UST implantacao", "UST customizacao", "banco de UST", "catalogo de servicos", "servicos tecnicos sob demanda",
-    "unidade de servico tecnico manutencao", "ponto de funcao", "fabrica de software", "sustentacao de sistemas", "manutencao evolutiva",
-    "licenca de uso de software", "locacao de sistema", "sistema integrado de gestao", "software como servico", "cessao de uso de software",
+    # A — desenvolvimento
+    "fabrica de software", "desenvolvimento de sistemas", "desenvolvimento de software", "desenvolvimento sob demanda",
+    "desenvolvimento e manutencao de sistemas", "metodos ageis", "engenharia de software", "sistemas corporativos", "java",
+    ".net", "desenvolvimento web", "aplicativos moveis", "servicos de programacao", "modernizacao de sistemas", "transformacao digital",
+    # B — medição
+    "UST", "unidade de servico tecnico", "unidade de servico tecnologico", "ponto de funcao", "pontos de funcao",
+    "analise de pontos de funcao", "HST", "hora de servico tecnico", "horas tecnicas", "homem-hora", "catalogo de servicos de TI",
+    "banco de horas", "servicos tecnicos sob demanda",
+    # C — sustentação
+    "sustentacao de sistemas", "manutencao evolutiva", "manutencao corretiva de sistemas", "manutencao adaptativa",
+    "suporte tecnico especializado", "servicos continuados de TIC", "operacao assistida", "sustentacao de aplicacoes",
+    "outsourcing de desenvolvimento", "servicos gerenciados de TI", "devops", "service desk",
+    # D — documental
+    "digitalizacao de documentos", "gestao documental", "tratamento documental", "indexacao", "organizacao de arquivos",
+    "higienizacao documental", "restauracao de documentos", "gerenciamento eletronico de documentos", "GED", "OCR",
+    "classificacao documental", "acervo", "preservacao digital", "guarda de documentos", "microfilmagem",
+    # E — tecnologia avançada
+    "inteligencia artificial", "automacao de processos", "RPA", "integracao de sistemas", "seguranca da informacao",
+    "governanca de TI", "ciencia de dados", "engenharia de dados", "banco de dados", "computacao em nuvem",
+    "infraestrutura de TIC", "business intelligence", "big data",
+    # F — educação e sistemas
+    "educacao a distancia", "plataforma educacional", "ambiente virtual de aprendizagem", "sistema de gestao publica",
+    "sistema de gestao em saude", "tecnologia da informacao",
+    # 20/11 — UST dentro de manutenção/sustentação/suporte e contratos de valor fixo mensal
+    "UST manutencao", "UST sustentacao", "UST suporte", "UST desenvolvimento", "unidade de servico tecnico manutencao",
+    "servicos tecnicos especializados de tecnologia da informacao", "manutencao e suporte de sistemas", "suporte e manutencao de software",
+    "manutencao de sistemas", "sustentacao", "manutencao evolutiva e corretiva", "atendimento N1 N2", "operacao de infraestrutura de TI",
+    "valor fixo mensal", "valor mensal", "mensalidade", "pagamento mensal", "servico mensal", "locacao de sistema", "licenca mensal",
+    "locacao de software", "cessao de uso de software", "software como servico",
+    # 21/11 — TIC, desenvolvimento, manutenção, sustentação e EAD
+    "desenvolvimento de aplicativo", "desenvolvimento de portal", "manutencao de software", "manutencao de sistemas informatizados",
+    "suporte e manutencao de sistemas", "sustentacao de software", "sustentacao de sistemas de informacao", "evolucao de sistemas",
+    "EAD", "ensino a distancia", "cursos online", "capacitacao online", "plataforma de cursos", "moodle", "LMS",
+    "trilhas de aprendizagem", "universidade corporativa", "conteudo educacional digital", "educacao digital", "TIC",
 ]
 UST_RX = re.compile(r"\bust\b|\bust'?s\b|unidades? de servicos? (tecnic|tecnolog)|banco de ust")
 # UST em sistema pronto: licença/locação/SaaS/sistema integrado (a UST paga implantação, customização e suporte)
@@ -96,7 +127,57 @@ def eh_tema(texto, e=None):
         return False
     if e is None:  # antes dos itens: qualquer objeto de TI ou que cite UST
         return bool(UST_RX.search(n) or classificar(texto))
-    return bool((e.get("vol") or {}).get("ust") or UST_RX.search(norm(f"{texto} {e.get('info') or ''}")))
+    v = e.get("vol") or {}
+    return bool(v.get("ust") or v.get("ust_texto") or e.get("ust_doc") or UST_RX.search(norm(f"{texto} {e.get('info') or ''}")))
+
+
+UST_QTD_RX = re.compile(r"(\d{1,3}(?:\.\d{3})+|\d{2,7})\s*(?:\([^)]{0,60}\)\s*)?(?:ust'?s?\b|unidades? de servicos? tecnic)")
+
+
+def pdfs_do_arquivo(bruto):
+    """PDFs de um arquivo baixado: o próprio PDF ou os PDFs de dentro de um .zip (lidos em memória, com limite de tamanho)."""
+    if bruto.startswith(b"%PDF"):
+        return [bruto]
+    if bruto.startswith(b"PK"):
+        import io, zipfile
+        with zipfile.ZipFile(io.BytesIO(bruto)) as z:
+            nomes = [i for i in z.infolist() if i.filename.lower().endswith(".pdf") and i.file_size < 40_000_000]
+            nomes.sort(key=lambda i: 0 if re.search(r"edital|termo|\btr\b|referencia|anexo i\b", norm(i.filename)) else 1)
+            return [z.read(i) for i in nomes[:5]]
+    return []
+
+
+def texto_pdf(pdf):
+    try:
+        return subprocess.run(["pdftotext", "-q", "-", "-"], input=pdf, capture_output=True, timeout=120).stdout.decode("utf-8", "ignore")
+    except FileNotFoundError:
+        import io
+        from pypdf import PdfReader
+        return "\n".join((pg.extract_text() or "") for pg in PdfReader(io.BytesIO(pdf)).pages[:150])
+
+
+def ust_no_documento(e):
+    """Lê o edital e o TR (PDF) e procura UST: marca a citação e a maior quantidade plausível."""
+    alvo = [a for a in e.get("arquivos") or [] if re.search(r"edital|termo de referencia|\btr\b|projeto basico|anexo",
+                                                          norm(f"{a.get('tipo')} {a.get('titulo')}"))][:3]
+    for a in alvo:
+        try:
+            bruto = subprocess.run(["curl", "-sL", "--max-time", "120", "--max-filesize", "60000000", a["url"]], capture_output=True, timeout=150).stdout
+            txt = "\n".join(texto_pdf(p) for p in pdfs_do_arquivo(bruto))
+        except Exception:  # noqa: BLE001
+            continue
+        n = norm(txt)
+        if UST_RX.search(n):
+            qs = []
+            for m in UST_QTD_RX.finditer(n):
+                ctx = n[max(0, m.start() - 80):m.start()]
+                if re.search(r"atestad|comprova|minimo de|capacidade tecnica|habilitac|\bano\b|\bart\.|\blei\b|r\$", ctx):
+                    continue
+                q = float(m.group(1).replace(".", ""))
+                if 10 <= q <= 2_000_000:
+                    qs.append(q)
+            e["ust_doc"] = {"arquivo": a["url"], "quantidade": max(qs) if qs else None}
+            return
 
 
 def norm(s):
@@ -201,6 +282,10 @@ def detalhar(e):
         arqs = []
     e["arquivos"] = [{"titulo": a.get("titulo"), "tipo": a.get("tipoDocumentoNome"), "url": a.get("url") or a.get("uri")}
                      for a in arqs if a.get("statusAtivo", True) is not False]
+    if TEMA == "ust" and not (e["vol"].get("ust") or e["vol"].get("ust_texto")) and ((e.get("valor") or 0) >= 300_000 or not e.get("valor")):
+        ust_no_documento(e)
+        if e.get("ust_doc") and e["ust_doc"].get("quantidade"):
+            e["vol"]["ust_doc"] = round(e["ust_doc"]["quantidade"])
     return e
 
 
@@ -223,7 +308,7 @@ def nota(e):
     pv = 30 if v >= 1e7 else 26 if v >= 5e6 else 22 if v >= 1e6 else 16 if v >= 5e5 else 10 if v >= 1e5 else 6 if v > 0 else 12
     n = norm(e.get("objeto"))
     if TEMA == "ust":
-        u = (e.get("vol") or {}).get("ust") or (e.get("vol") or {}).get("ust_texto") or 0
+        u = (e.get("vol") or {}).get("ust") or (e.get("vol") or {}).get("ust_texto") or (e.get("vol") or {}).get("ust_doc") or 0
         pc = 30 if u >= 10000 else 26 if u >= 1000 else 22 if u > 0 else 12
     else:
         pc = 30 if re.search(r"digitaliz|indexa", n) else 24 if re.search(r"gestao documental|arquivist|\bged\b|tratamento documental", n) else 16
@@ -264,7 +349,7 @@ def dt(s):
 
 
 ROT = {"pagina": "páginas/imagens", "pagina_texto": "páginas (citadas no objeto)", "metro_linear": "metros lineares", "caixa": "caixas",
-       "registro": "registros", "hora": "horas técnicas", "ust": "UST", "ust_texto": "UST (citadas no objeto)", "pf": "pontos de função"}
+       "registro": "registros", "hora": "horas técnicas", "ust": "UST", "ust_texto": "UST (citadas no objeto)", "ust_doc": "UST (lidas no edital/TR — conferir)", "pf": "pontos de função"}
 
 
 def arq(e, rx):
@@ -282,6 +367,8 @@ def valor_txt(e):
 def bloco(i, e):
     valor = valor_txt(e)
     vol = " · ".join(f"{num(q)} {ROT.get(k, k)}" for k, q in (e.get("vol") or {}).items()) or "NÃO LOCALIZADO nos itens"
+    if e.get("ust_doc") and not e["ust_doc"].get("quantidade"):
+        vol += " · UST citada no edital/TR (quantidade NÃO LOCALIZADA)"
     ed = arq(e, r"edital")
     tr = arq(e, r"termo de referencia|\btr\b|projeto basico|estudo tecnico")
     d = e["dias"]
