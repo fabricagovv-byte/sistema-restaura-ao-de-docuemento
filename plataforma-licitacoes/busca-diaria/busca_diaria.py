@@ -146,7 +146,8 @@ def eh_tema(texto, e=None):
     if e is None:  # antes dos itens: qualquer objeto de TI ou que cite UST
         return bool(UST_RX.search(n) or classificar(texto))
     v = e.get("vol") or {}
-    return bool(v.get("ust") or v.get("ust_texto") or e.get("ust_doc") or UST_RX.search(norm(f"{texto} {e.get('info') or ''}")))
+    pf = v.get("pf") or re.search(r"pontos? de funcao", norm(f"{texto} {e.get('info') or ''}"))
+    return bool(v.get("ust") or v.get("ust_texto") or e.get("ust_doc") or pf or UST_RX.search(norm(f"{texto} {e.get('info') or ''}")))
 
 
 UST_QTD_RX = re.compile(r"(\d{1,3}(?:\.\d{3})+|\d{2,7})\s*(?:\([^)]{0,60}\)\s*)?(?:ust'?s?\b|unidades? de servicos? tecnic)")
@@ -339,7 +340,7 @@ def nota(e):
     pv = 30 if v >= 1e7 else 26 if v >= 5e6 else 22 if v >= 1e6 else 16 if v >= 5e5 else 10 if v >= 1e5 else 6 if v > 0 else 12
     n = norm(e.get("objeto"))
     if TEMA == "ust":
-        u = (e.get("vol") or {}).get("ust") or (e.get("vol") or {}).get("ust_texto") or (e.get("vol") or {}).get("ust_doc") or 0
+        u = (e.get("vol") or {}).get("ust") or (e.get("vol") or {}).get("ust_texto") or (e.get("vol") or {}).get("ust_doc") or (e.get("vol") or {}).get("pf") or 0
         pc = 30 if u >= 10000 else 26 if u >= 1000 else 22 if u > 0 else 12
     else:
         pc = 30 if re.search(r"digitaliz|indexa", n) else 24 if re.search(r"gestao documental|arquivist|\bged\b|tratamento documental", n) else 16
@@ -482,7 +483,7 @@ def radar(lista):
 
 
 TITULO = {"documental": "📂 BUSCA DIÁRIA — DIGITALIZAÇÃO, INDEXAÇÃO E GESTÃO DOCUMENTAL",
-          "ust": "🧮 BUSCA DIÁRIA — UST (UNIDADE DE SERVIÇO TÉCNICO)", "mensal": "📢 RADAR — FIXO MENSAL DE TI"}[TEMA]
+          "ust": "🧮 BUSCA DIÁRIA — UST E PONTO DE FUNÇÃO (PF)", "mensal": "📢 RADAR — FIXO MENSAL DE TI"}[TEMA]
 txt = [f"*{TITULO}*",
        f"Fonte: PNCP (pncp.gov.br), verificado em {AGORA.strftime('%d/%m/%Y %H:%M')} (Brasília).",
        f"{len(TERMOS)} palavras-chave · {num(len(editais))} editais examinados · *{len(abertos)} com proposta aberta* · soma estimada {brl(soma)}",
