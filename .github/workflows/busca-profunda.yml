@@ -1,13 +1,13 @@
 # Busca profunda (sob demanda): TODAS as licitações abertas do Brasil, UF por UF, triagem de TI,
 # itens de cada uma e leitura do edital/TR (PDF e .zip) atrás de UST e ponto de função.
 # Publica em `busca-diaria/<tema>-profunda/ultima.txt`. Não usa crédito do Claude.
-name: Busca profunda — UST e PF (Brasil inteiro)
+name: Busca profunda (Brasil inteiro)
 
 on:
   workflow_dispatch:
     inputs:
       tema:
-        description: "Tema (ust, mensal ou documental)"
+        description: "Tema (ust, servicos, mensal, consultoria ou documental)"
         default: "ust"
 
 permissions:

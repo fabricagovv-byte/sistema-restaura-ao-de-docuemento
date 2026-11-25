@@ -19,7 +19,7 @@ concurrency:
 jobs:
   busca:
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -55,6 +55,11 @@ jobs:
         env:
           PYTHONPATH: plataforma-licitacoes/backend
         run: python plataforma-licitacoes/busca-diaria/busca_diaria.py /tmp/publicar/consultoria consultoria
+      - name: Buscar no PNCP — serviços de TIC sem produto pronto
+        if: always()
+        env:
+          PYTHONPATH: plataforma-licitacoes/backend
+        run: python plataforma-licitacoes/busca-diaria/busca_diaria.py /tmp/publicar/servicos servicos
       - name: Publicar no branch busca-diaria
         if: always()
         working-directory: /tmp/publicar
@@ -67,4 +72,4 @@ jobs:
       - name: Resumo
         if: always()
         run: |
-          for t in documental ust mensal consultoria; do [ -f /tmp/publicar/$t/ultima.txt ] && head -5 /tmp/publicar/$t/ultima.txt >> "$GITHUB_STEP_SUMMARY"; echo >> "$GITHUB_STEP_SUMMARY"; done
+          for t in documental ust mensal consultoria servicos; do [ -f /tmp/publicar/$t/ultima.txt ] && head -5 /tmp/publicar/$t/ultima.txt >> "$GITHUB_STEP_SUMMARY"; echo >> "$GITHUB_STEP_SUMMARY"; done

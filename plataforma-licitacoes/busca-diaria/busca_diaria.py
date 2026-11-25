@@ -2,10 +2,12 @@
   documental — digitalização, indexação e gestão documental (padrão)
   ust        — contratações de TI com UST (unidade de serviço técnico), com destaque para UST em sistemas prontos
   consultoria — consultoria e assessoria em tecnologia (TI, TIC, transformação digital, governança, LGPD, segurança da informação)
+  servicos   — TODOS os serviços de TIC sem produto pronto (fábrica, sustentação, alocação, service desk, dados, documental,
+               consultoria, infraestrutura, testes, EAD, geo), com UST/PF/horas/páginas, agrupados por tipo
   mensal     — radar compacto de TI com valor FIXO MENSAL (itens cobrados por mês), ordenado pelo valor por mês
 
 Uso (com o pacote pncp-cli instalado e o backend no PYTHONPATH):
-    PYTHONPATH=plataforma-licitacoes/backend python plataforma-licitacoes/busca-diaria/busca_diaria.py SAIDA_DIR [documental|ust|mensal|consultoria]
+    PYTHONPATH=plataforma-licitacoes/backend python plataforma-licitacoes/busca-diaria/busca_diaria.py SAIDA_DIR [documental|ust|mensal|consultoria|servicos]
 
 Gera em SAIDA_DIR: AAAA-MM-DD.txt (texto para WhatsApp), AAAA-MM-DD.json (dados), ultima.txt e ultima.json.
 Se SAIDA_DIR já tiver um ultima.json, marca como 🆕 as licitações que não estavam na busca anterior.
@@ -20,7 +22,7 @@ from licitacoes.taxonomia import classificar, natureza, tipo_volume, volumes_no_
 
 SAIDA = sys.argv[1] if len(sys.argv) > 1 else "."
 TEMA = sys.argv[2] if len(sys.argv) > 2 else "documental"
-assert TEMA in ("documental", "ust", "mensal", "consultoria"), TEMA
+assert TEMA in ("documental", "ust", "mensal", "consultoria", "servicos"), TEMA
 LIMITE = int(os.environ.get("BUSCA_LIMITE", "600"))  # registros por termo
 AGORA = datetime.now(timezone(timedelta(hours=-3))).replace(tzinfo=None)  # Brasília (datas do PNCP vêm sem fuso)
 
@@ -34,6 +36,7 @@ TERMOS = [
     "eliminacao de documentos", "arquivistica", "arquivo",
 ]
 # UST: universo de TIC inteiro (a UST costuma estar só nos itens ou no edital, não no objeto)
+TERMOS_DOC = list(TERMOS)
 TERMOS_UST = [
     # A — desenvolvimento
     "fabrica de software", "desenvolvimento de sistemas", "desenvolvimento de software", "desenvolvimento sob demanda",
@@ -99,8 +102,44 @@ CONS_FORA = re.compile(r"contab|juridic|advocac|obra|engenharia civil|pavimenta|
                        r"medic|saude ocupacional|seguranca do trabalho|arquitetonic|tributaria|recuperacao de credito|leilo|captacao de recursos|"
                        r"engenharia|projetos? tecnicos?|elaboracao (do|de) projeto|equipamentos|auditoria economic|avaliacao imobiliaria|"
                        r"profissionais da area da saude|marketing|comunicacao|pavimento|manutencao preventiva|certificacao|gestao da qualidade")
+TERMOS_SERV = [
+    "alocacao de profissionais", "perfil profissional", "profissionais de tecnologia", "postos de trabalho de TI", "outsourcing de TI",
+    "terceirizacao de TI", "mao de obra especializada em tecnologia", "service desk", "help desk", "central de servicos", "suporte N1",
+    "suporte N2", "suporte N3", "atendimento ao usuario", "suporte a usuarios", "operacao de datacenter", "NOC", "monitoramento de infraestrutura",
+    "administracao de servidores", "administracao de banco de dados", "DBA", "operacao de rede", "cabeamento estruturado", "rede logica",
+    "saneamento de dados", "migracao de dados", "tratamento de dados", "higienizacao de dados", "recadastramento", "digitacao",
+    "business intelligence", "ciencia de dados", "analise de dados", "paineis gerenciais", "testes de software", "qualidade de software",
+    "fabrica de testes", "contagem de pontos de funcao", "fabrica de metricas", "aferição de pontos de funcao", "desenvolvimento de sistemas sob demanda",
+    "desenvolvimento de aplicativos", "desenvolvimento de portais", "desenvolvimento de sites", "manutencao de portal", "producao de conteudo EAD",
+    "conteudo educacional", "tutoria", "desenho instrucional", "georreferenciamento", "geoprocessamento", "cadastro tecnico multifinalitario",
+    "recadastramento imobiliario", "levantamento cadastral", "gestao de projetos de TI", "escritorio de projetos", "governanca de TI",
+    "seguranca da informacao", "teste de intrusao", "pentest", "gestao de vulnerabilidades", "LGPD", "transcricao", "legendagem",
+    "suporte tecnico especializado", "servicos tecnicos especializados", "servicos continuados de tecnologia", "tecnologia da informacao",
+]
+PRONTO_SERV = re.compile(r"(fornecimento|aquisicao|locacao|cessao|licenciamento|disponibilizacao|subscricao|renovacao) (de |do |da |dos |das )?"
+                         r"(\w+ ){0,4}(licen|software|sistema|plataforma|solucao|aplicativo|creditos|equipament|computador|notebook|servidor|"
+                         r"impressora|nobreak|switch|firewall|estac|relogio|tablet|monitor|camera|kit)|software como servi|\bsaas\b|licenca de uso|subscric|creditos (de|em) nuvem|"
+                         r"aquisicao de (equipament|material|bens)|outsourcing de impress|locacao de (impressora|equipament|computador)")
+SERV_FORA = re.compile(r"obra|pavimenta|reforma|construcao|engenharia civil|limpeza|vigilancia|alimentacao|merenda|combustivel|veiculo|"
+                       r"transporte|medic|hospitalar|odontolog|laborator|uniforme|telefonia|evento|publicidade|grafica|leilo")
+GRUPOS_SERV = [
+    ("🏭 FÁBRICA E DESENVOLVIMENTO", r"fabrica de software|desenvolvimento|programacao|aplicativ|portal|\bsites?\b"),
+    ("👥 ALOCAÇÃO DE PROFISSIONAIS (por perfil)", r"alocacao|perfi(l|s) profissiona|postos? de trabalho|mao de obra|terceiriza|outsourcing de (ti|profission)"),
+    ("🔧 SUSTENTAÇÃO E MANUTENÇÃO DE SISTEMAS", r"sustentacao|manutencao (evolutiva|corretiva|adaptativa|de sistemas|de software)"),
+    ("🎧 SERVICE DESK E SUPORTE", r"service desk|help ?desk|central de servicos|suporte|atendimento"),
+    ("🖥️ INFRAESTRUTURA, REDE E OPERAÇÃO", r"datacenter|data center|\bnoc\b|infraestrutura|rede logica|cabeamento|servidores|banco de dados|operacao|monitoramento"),
+    ("🗂️ DIGITALIZAÇÃO E GESTÃO DOCUMENTAL", r"digitaliza|indexa|documental|arquiv|acervo|microfilm|\bged\b"),
+    ("📊 DADOS, BI E SANEAMENTO", r"dados|business intelligence|\bbi\b|paine|recadastr|digitacao|migracao"),
+    ("🧠 CONSULTORIA, GOVERNANÇA E SEGURANÇA", r"consultoria|assessoria|governanca|pdti|lgpd|escritorio de projetos|seguranca da informacao|pentest|intrusao|vulnerab"),
+    ("🧪 TESTES E MÉTRICAS", r"teste|qualidade de software|metrica|contagem|afericao"),
+    ("🎓 EAD E CONTEÚDO", r"\bead\b|ensino a distancia|conteudo|tutoria|instrucional|capacitacao"),
+    ("🗺️ GEOPROCESSAMENTO E CADASTRO", r"geo|cadastr|levantamento"),
+    ("💡 OUTROS SERVIÇOS DE TIC", r"."),
+]
 if TEMA == "consultoria":
     TERMOS = TERMOS_CONS
+if TEMA == "servicos":
+    TERMOS = list(dict.fromkeys(TERMOS_UST + TERMOS_CONS + TERMOS_DOC + TERMOS_SERV))
 if TEMA in ("ust", "mensal"):
     TERMOS = TERMOS_UST
 if TEMA == "mensal":
@@ -155,6 +194,11 @@ def eh_tema(texto, e=None):
     if TEMA == "documental":
         return eh_documental(texto)
     n = norm(texto)
+    if TEMA == "servicos":
+        cab = re.sub(r"^\[[^\]]*\]\s*-?\s*", "", n)[:240]  # o objeto principal
+        if PRONTO_SERV.search(cab) or SERV_FORA.search(cab) or (IMPRESSAO_RX.search(cab) and not GESTAO_RX.search(cab)):
+            return False
+        return bool(classificar(texto) or eh_documental(texto) or CONS_RX.search(cab) or UST_RX.search(n))
     if TEMA == "consultoria":
         cab = re.sub(r"^\[[^\]]*\]\s*-?\s*", "", n)[:260]  # o assunto principal está no começo do objeto
         return bool(CONS_RX.search(cab) and not CONS_FORA.search(cab))
@@ -325,7 +369,12 @@ def detalhar(e):
         if str(it.get("materialOuServicoNome") or "").lower().startswith("m") and TEMA != "mensal":
             continue  # no radar mensal, licença de software cadastrada como "material" também conta
         k = tipo_volume(it.get("unidadeMedida"), it.get("descricao"), it.get("quantidade"), it.get("valorUnitarioEstimado"))
-        if k in ("ust", "pf", "hora") and TEMA == "consultoria":
+        if TEMA == "servicos" and k in ("ust", "pf", "hora", "pagina", "registro"):
+            vol[k] = vol.get(k, 0) + q
+        elif TEMA == "servicos" and k == "mes" and q >= 2 and it.get("valorUnitarioEstimado"):
+            mensal += float(it["valorUnitarioEstimado"])
+            meses.append(q)
+        elif k in ("ust", "pf", "hora") and TEMA == "consultoria":
             vol[k] = vol.get(k, 0) + q
         elif k in ("ust", "pf") and TEMA == "ust":
             vol[k] = vol.get(k, 0) + q
@@ -364,7 +413,8 @@ def detalhar(e):
         arqs = []
     e["arquivos"] = [{"titulo": a.get("titulo"), "tipo": a.get("tipoDocumentoNome"), "url": a.get("url") or a.get("uri")}
                      for a in arqs if a.get("statusAtivo", True) is not False]
-    if TEMA == "ust" and not (e["vol"].get("ust") or e["vol"].get("ust_texto")) and ((e.get("valor") or 0) >= (150_000 if TOTAL else 300_000) or not e.get("valor")):
+    limiar_doc = 1_000_000 if TEMA == "servicos" else (150_000 if TOTAL else 300_000)
+    if TEMA in ("ust", "servicos") and not (e["vol"].get("ust") or e["vol"].get("ust_texto") or e["vol"].get("pf")) and ((e.get("valor") or 0) >= limiar_doc or not e.get("valor")):
         ust_no_documento(e)
         if e.get("ust_doc") and e["ust_doc"].get("quantidade"):
             e["vol"]["ust_doc"] = round(e["ust_doc"]["quantidade"])
@@ -396,7 +446,10 @@ def nota(e):
     v = e.get("valor") or 0
     pv = 30 if v >= 1e7 else 26 if v >= 5e6 else 22 if v >= 1e6 else 16 if v >= 5e5 else 10 if v >= 1e5 else 6 if v > 0 else 12
     n = norm(e.get("objeto"))
-    if TEMA == "consultoria":
+    if TEMA == "servicos":
+        v_ = e.get("vol") or {}
+        pc = 30 if (v_.get("ust") or v_.get("ust_doc") or v_.get("pf") or v_.get("pf_doc")) else 24 if (v_.get("hora") or e.get("mensal")) else 18
+    elif TEMA == "consultoria":
         pc = 30 if re.search(r"consultoria|assessoria", n[:200]) else 20
     elif TEMA == "ust":
         u = (e.get("vol") or {}).get("ust") or (e.get("vol") or {}).get("ust_texto") or (e.get("vol") or {}).get("ust_doc") or (e.get("vol") or {}).get("pf") or 0
@@ -500,7 +553,7 @@ def nome_curto(e):
               (r"^FUNDO MUNICIPAL", f"Fundo Municipal de {mun}"), (r"^EMPRESA MUNICIPAL|^AUTARQUIA|^DEPARTAMENTO MUNICIPAL", f"{o.title()[:22].strip()}… de {mun}"),
               (r"^FUNDO MUNICIPAL DE SAUDE", f"FMS de {mun}"), (r"^SERVICO AUTONOMO|^SAAE", f"SAAE de {mun}"),
               (r"^CAMARA MUNICIPAL|CAMARA DE VEREADORES", f"Câmara de {mun}"),
-              (r"^TRIBUNAL DE JUSTICA", "TJ " + re.sub(r"^TRIBUNAL DE JUSTICA (DO ESTADO )?", "", norm(o)).replace("do estado ", "").title()),
+              (r"^TRIBUNAL DE JUSTICA", "TJ " + re.sub(r"^tribunal de justica (do estado )?(de |do |da )?", "", norm(o)).title()),
               (r"^TRIBUNAL REGIONAL ELEITORAL", f"TRE ({e.get('uf')})"), (r"^TRIBUNAL REGIONAL DO TRABALHO", f"TRT ({e.get('uf')})"),
               (r"^CONSORCIO", "Consórcio " + mun), (r"^INSTITUTO (DE PREVIDENCIA|MUNICIPAL DE PREVIDENCIA)", f"Previdência de {mun}")]
     for rx, nome in regras:
@@ -545,7 +598,8 @@ def radar(lista):
 
 TITULO = {"documental": "📂 BUSCA DIÁRIA — DIGITALIZAÇÃO, INDEXAÇÃO E GESTÃO DOCUMENTAL",
           "ust": "🧮 BUSCA DIÁRIA — UST E PONTO DE FUNÇÃO (PF)", "mensal": "📢 RADAR — FIXO MENSAL DE TI",
-          "consultoria": "🧠 BUSCA DIÁRIA — CONSULTORIA EM TECNOLOGIA"}[TEMA]
+          "consultoria": "🧠 BUSCA DIÁRIA — CONSULTORIA EM TECNOLOGIA",
+          "servicos": "🛠️ SERVIÇOS DE TIC SEM PRODUTO PRONTO"}[TEMA]
 txt = [f"*{TITULO}*",
        f"Fonte: PNCP (pncp.gov.br), verificado em {AGORA.strftime('%d/%m/%Y %H:%M')} (Brasília).",
        f"{len(TERMOS)} palavras-chave · {num(len(editais))} editais examinados · *{len(abertos)} com proposta aberta* · soma estimada {brl(soma)}",
@@ -572,7 +626,32 @@ for titulo, lista in grupos:
 if outras:
     txt += [f"*📎 DISPENSAS, CREDENCIAMENTOS E OUTRAS ({len(outras)})*", ""]
     txt += [bloco(i, e) + "\n" for i, e in enumerate(outras, 1)]
-if TEMA == "mensal":
+def linha_serv(i, e):
+    vol = " · ".join(f"{num(q)} {ROT.get(k, k)}" for k, q in (e.get("vol") or {}).items())
+    if e.get("mensal"):
+        vol = (vol + " · " if vol else "") + f"{brl(e['mensal'])[:-3]}/mês" + (f" × {e['meses']}" if e.get("meses") else "")
+    if e.get("ust_doc") and not (e.get("vol") or {}).get("ust_doc"):
+        vol = (vol + " · " if vol else "") + "UST citada no edital"
+    if e.get("pf_doc") and not (e.get("vol") or {}).get("pf_doc"):
+        vol = (vol + " · " if vol else "") + "PF citado no edital"
+    enc = datetime.fromisoformat(e["encerramento"])
+    obj = re.sub(r"^\[[^\]]*\]\s*-?\s*", "", " ".join((e.get("objeto") or "").split()))
+    return "\n".join([f"*{i}. {nome_curto(e)}* ({e.get('uf')}){' 🆕' if e.get('nova') else ''} · {obj[:110]}",
+                      f"💰 *{mi(e['valor']) if e.get('valor') else valor_txt(e).lower()}*" + (f" · 📦 *{vol}*" if vol else "")
+                      + f" · 📅 {enc.strftime('%d/%m %H:%M' if enc.year == AGORA.year else '%d/%m/%Y %H:%M')} · ⭐ {e['nota']}",
+                      f"🔗 {e['link_pncp']}", ""])
+
+
+if TEMA == "servicos":
+    usados, txt = set(), txt[:5]
+    for titulo, rx in GRUPOS_SERV:
+        lista = [e for e in competitivas + outras if e["numero_controle_pncp"] not in usados and re.search(rx, norm(e.get("objeto"))[:300])]
+        lista.sort(key=lambda e: (-e["nota"], -(e.get("valor") or 0)))
+        usados |= {e["numero_controle_pncp"] for e in lista}
+        if lista:
+            txt += ["", f"*{titulo} ({len(lista)})*", ""] + [linha_serv(i, e) for i, e in enumerate(lista, 1)]
+    txt.append("Nota 0–100: valor 30 · UST/PF/horas 30 · quantidades 15 · prazo 15 · modalidade 10. Sem licença, locação, SaaS, equipamento.")
+elif TEMA == "mensal":
     txt = radar(sorted(abertos, key=lambda e: -(e.get("mensal") or 0)))
 else:
     txt.append("Critério da nota (0–100): valor 30 · " + ("quantidade de UST/PF 30" if TEMA == "ust" else "aderência ao tema 30")
