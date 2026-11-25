@@ -1,10 +1,11 @@
 """Busca diária no PNCP com proposta aberta, em formato WhatsApp. Dois temas:
   documental — digitalização, indexação e gestão documental (padrão)
   ust        — contratações de TI com UST (unidade de serviço técnico), com destaque para UST em sistemas prontos
+  consultoria — consultoria e assessoria em tecnologia (TI, TIC, transformação digital, governança, LGPD, segurança da informação)
   mensal     — radar compacto de TI com valor FIXO MENSAL (itens cobrados por mês), ordenado pelo valor por mês
 
 Uso (com o pacote pncp-cli instalado e o backend no PYTHONPATH):
-    PYTHONPATH=plataforma-licitacoes/backend python plataforma-licitacoes/busca-diaria/busca_diaria.py SAIDA_DIR [documental|ust|mensal]
+    PYTHONPATH=plataforma-licitacoes/backend python plataforma-licitacoes/busca-diaria/busca_diaria.py SAIDA_DIR [documental|ust|mensal|consultoria]
 
 Gera em SAIDA_DIR: AAAA-MM-DD.txt (texto para WhatsApp), AAAA-MM-DD.json (dados), ultima.txt e ultima.json.
 Se SAIDA_DIR já tiver um ultima.json, marca como 🆕 as licitações que não estavam na busca anterior.
@@ -19,7 +20,7 @@ from licitacoes.taxonomia import classificar, natureza, tipo_volume, volumes_no_
 
 SAIDA = sys.argv[1] if len(sys.argv) > 1 else "."
 TEMA = sys.argv[2] if len(sys.argv) > 2 else "documental"
-assert TEMA in ("documental", "ust", "mensal"), TEMA
+assert TEMA in ("documental", "ust", "mensal", "consultoria"), TEMA
 LIMITE = int(os.environ.get("BUSCA_LIMITE", "600"))  # registros por termo
 AGORA = datetime.now(timezone(timedelta(hours=-3))).replace(tzinfo=None)  # Brasília (datas do PNCP vêm sem fuso)
 
@@ -81,6 +82,23 @@ TEC_MENSAL = re.compile(r"software|sistema|licen[cs]|tecnologia da informa|\bti\
 NAO_TEC = re.compile(r"engenharia|aerolevantamento|aerofotogram|topograf|\bobras?\b|pavimenta|reforma|relogios? de ponto|telefonia fixa|"
                      r"veiculo|ambulancia|transporte|locacao de (imovel|maquina)|limpeza|vigilancia|alimentacao")
 MES_UN = re.compile(r"^(mes|meses|mensal|mensalidade|men|servico mensal|mes\(es\)|mes / meses|mes \(mes\))\b")
+TERMOS_CONS = [
+    "consultoria em tecnologia", "consultoria em tecnologia da informacao", "consultoria de TI", "consultoria em TIC", "consultoria em informatica",
+    "assessoria em tecnologia", "assessoria em tecnologia da informacao", "assessoria em informatica", "consultoria especializada em sistemas",
+    "consultoria tecnica especializada", "consultoria em transformacao digital", "transformacao digital", "governanca de TI", "governanca de dados",
+    "plano diretor de tecnologia da informacao", "PDTI", "PDTIC", "consultoria em seguranca da informacao", "LGPD", "protecao de dados pessoais",
+    "encarregado de dados", "DPO", "consultoria em gestao de processos", "mapeamento de processos", "escritorio de projetos", "gestao de projetos de TI",
+    "consultoria em dados", "consultoria em inteligencia artificial", "consultoria em nuvem", "consultoria em infraestrutura de TI",
+    "auditoria de sistemas", "auditoria de TI", "assessoria tecnica em sistemas", "governo digital", "cidade inteligente",
+]
+CONS_RX = re.compile(r"(consultoria|assessoria|auditoria|apoio tecnico|servicos tecnicos especializados|escritorio de projetos|mapeamento de processos|"
+                     r"implementacao|adequacao|diagnostico|elaboracao)\b.{0,160}(tecnologia|\bti\b|\btic\b|informatica|sistemas?|digital|dados|lgpd|"
+                     r"seguranca da informacao|governanca|ciberseguranca|inteligencia artificial|nuvem|pdti|processos)|transformacao digital|"
+                     r"governanca de (ti|dados|tic)|\bpdtic?\b|plano diretor de tecnologia|\blgpd\b|protecao de dados pessoais|encarregado (pelo tratamento|de dados)|\bdpo\b")
+CONS_FORA = re.compile(r"contab|juridic|advocac|obra|engenharia civil|pavimenta|ambiental|licenciamento ambiental|previdenci|atuari|"
+                       r"medic|saude ocupacional|seguranca do trabalho|arquitetonic|tributaria|recuperacao de credito|leilo|captacao de recursos")
+if TEMA == "consultoria":
+    TERMOS = TERMOS_CONS
 if TEMA in ("ust", "mensal"):
     TERMOS = TERMOS_UST
 if TEMA == "mensal":
@@ -135,6 +153,9 @@ def eh_tema(texto, e=None):
     if TEMA == "documental":
         return eh_documental(texto)
     n = norm(texto)
+    if TEMA == "consultoria":
+        cab = re.sub(r"^\[[^\]]*\]\s*-?\s*", "", n)[:260]  # o assunto principal está no começo do objeto
+        return bool(CONS_RX.search(cab) and not CONS_FORA.search(cab))
     if TEMA == "mensal":
         if NAO_TEC.search(n[:200]):  # só o objeto principal (o resto do texto cita de tudo)
             return False
@@ -302,7 +323,9 @@ def detalhar(e):
         if str(it.get("materialOuServicoNome") or "").lower().startswith("m") and TEMA != "mensal":
             continue  # no radar mensal, licença de software cadastrada como "material" também conta
         k = tipo_volume(it.get("unidadeMedida"), it.get("descricao"), it.get("quantidade"), it.get("valorUnitarioEstimado"))
-        if k in ("ust", "pf") and TEMA == "ust":
+        if k in ("ust", "pf", "hora") and TEMA == "consultoria":
+            vol[k] = vol.get(k, 0) + q
+        elif k in ("ust", "pf") and TEMA == "ust":
             vol[k] = vol.get(k, 0) + q
         elif k in ("pagina", "registro", "hora"):
             vol[k] = vol.get(k, 0) + q
@@ -371,10 +394,12 @@ def nota(e):
     v = e.get("valor") or 0
     pv = 30 if v >= 1e7 else 26 if v >= 5e6 else 22 if v >= 1e6 else 16 if v >= 5e5 else 10 if v >= 1e5 else 6 if v > 0 else 12
     n = norm(e.get("objeto"))
-    if TEMA == "ust":
+    if TEMA == "consultoria":
+        pc = 30 if re.search(r"consultoria|assessoria", n[:200]) else 20
+    elif TEMA == "ust":
         u = (e.get("vol") or {}).get("ust") or (e.get("vol") or {}).get("ust_texto") or (e.get("vol") or {}).get("ust_doc") or (e.get("vol") or {}).get("pf") or 0
         pc = 30 if u >= 10000 else 26 if u >= 1000 else 22 if u > 0 else 12
-    else:
+    elif TEMA == "documental":
         pc = 30 if re.search(r"digitaliz|indexa", n) else 24 if re.search(r"gestao documental|arquivist|\bged\b|tratamento documental", n) else 16
     pq = 15 if e.get("vol") else 5
     dias = (datetime.fromisoformat(e["encerramento"]) - AGORA).total_seconds() / 86400
@@ -517,7 +542,8 @@ def radar(lista):
 
 
 TITULO = {"documental": "📂 BUSCA DIÁRIA — DIGITALIZAÇÃO, INDEXAÇÃO E GESTÃO DOCUMENTAL",
-          "ust": "🧮 BUSCA DIÁRIA — UST E PONTO DE FUNÇÃO (PF)", "mensal": "📢 RADAR — FIXO MENSAL DE TI"}[TEMA]
+          "ust": "🧮 BUSCA DIÁRIA — UST E PONTO DE FUNÇÃO (PF)", "mensal": "📢 RADAR — FIXO MENSAL DE TI",
+          "consultoria": "🧠 BUSCA DIÁRIA — CONSULTORIA EM TECNOLOGIA"}[TEMA]
 txt = [f"*{TITULO}*",
        f"Fonte: PNCP (pncp.gov.br), verificado em {AGORA.strftime('%d/%m/%Y %H:%M')} (Brasília).",
        f"{len(TERMOS)} palavras-chave · {num(len(editais))} editais examinados · *{len(abertos)} com proposta aberta* · soma estimada {brl(soma)}",
@@ -547,7 +573,7 @@ if outras:
 if TEMA == "mensal":
     txt = radar(sorted(abertos, key=lambda e: -(e.get("mensal") or 0)))
 else:
-    txt.append("Critério da nota (0–100): valor 30 · " + ("quantidade de UST 30" if TEMA == "ust" else "aderência ao tema 30")
+    txt.append("Critério da nota (0–100): valor 30 · " + ("quantidade de UST/PF 30" if TEMA == "ust" else "aderência ao tema 30")
                + " · quantidades informadas 15 · prazo 15 · modalidade 10.")
 
 os.makedirs(SAIDA, exist_ok=True)

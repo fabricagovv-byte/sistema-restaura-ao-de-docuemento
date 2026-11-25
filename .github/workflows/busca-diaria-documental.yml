@@ -2,7 +2,7 @@
 # Roda no GitHub (não usa crédito do Claude) e publica no branch `busca-diaria`:
 #   documental/ultima.txt e ust/ultima.txt -> texto pronto para colar no WhatsApp
 #   <tema>/AAAA-MM-DD.txt (e .json)       -> histórico de cada dia
-name: Busca diária — documental, UST e fixo mensal
+name: Busca diária — documental, UST/PF, fixo mensal e consultoria
 
 on:
   schedule:
@@ -50,6 +50,11 @@ jobs:
         env:
           PYTHONPATH: plataforma-licitacoes/backend
         run: python plataforma-licitacoes/busca-diaria/busca_diaria.py /tmp/publicar/mensal mensal
+      - name: Buscar no PNCP — consultoria em tecnologia
+        if: always()
+        env:
+          PYTHONPATH: plataforma-licitacoes/backend
+        run: python plataforma-licitacoes/busca-diaria/busca_diaria.py /tmp/publicar/consultoria consultoria
       - name: Publicar no branch busca-diaria
         if: always()
         working-directory: /tmp/publicar
@@ -62,4 +67,4 @@ jobs:
       - name: Resumo
         if: always()
         run: |
-          for t in documental ust mensal; do [ -f /tmp/publicar/$t/ultima.txt ] && head -5 /tmp/publicar/$t/ultima.txt >> "$GITHUB_STEP_SUMMARY"; echo >> "$GITHUB_STEP_SUMMARY"; done
+          for t in documental ust mensal consultoria; do [ -f /tmp/publicar/$t/ultima.txt ] && head -5 /tmp/publicar/$t/ultima.txt >> "$GITHUB_STEP_SUMMARY"; echo >> "$GITHUB_STEP_SUMMARY"; done
