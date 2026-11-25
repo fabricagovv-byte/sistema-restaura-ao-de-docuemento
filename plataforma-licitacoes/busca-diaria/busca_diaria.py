@@ -101,7 +101,8 @@ CONS_RX = re.compile(r"(consultoria|assessoria|auditoria|apoio tecnico|servicos 
 CONS_FORA = re.compile(r"contab|juridic|advocac|obra|engenharia civil|pavimenta|ambiental|licenciamento ambiental|previdenci|atuari|"
                        r"medic|saude ocupacional|seguranca do trabalho|arquitetonic|tributaria|recuperacao de credito|leilo|captacao de recursos|"
                        r"engenharia|projetos? tecnicos?|elaboracao (do|de) projeto|equipamentos|auditoria economic|avaliacao imobiliaria|"
-                       r"profissionais da area da saude|marketing|comunicacao|pavimento|manutencao preventiva|certificacao|gestao da qualidade")
+                       r"profissionais da area da saude|marketing|comunicacao|pavimento|manutencao preventiva|certificacao|gestao da qualidade|"
+                       r"licenca|licenciamento|fornecimento de (licen|software|sistema|equipament)")
 TERMOS_SERV = [
     "alocacao de profissionais", "perfil profissional", "profissionais de tecnologia", "postos de trabalho de TI", "outsourcing de TI",
     "terceirizacao de TI", "mao de obra especializada em tecnologia", "service desk", "help desk", "central de servicos", "suporte N1",
@@ -119,7 +120,8 @@ TERMOS_SERV = [
 PRONTO_SERV = re.compile(r"(fornecimento|aquisicao|locacao|cessao|licenciamento|disponibilizacao|subscricao|renovacao) (de |do |da |dos |das )?"
                          r"(\w+ ){0,4}(licen|software|sistema|plataforma|solucao|aplicativo|creditos|equipament|computador|notebook|servidor|"
                          r"impressora|nobreak|switch|firewall|estac|relogio|tablet|monitor|camera|kit)|software como servi|\bsaas\b|licenca de uso|subscric|creditos (de|em) nuvem|"
-                         r"aquisicao de (equipament|material|bens)|outsourcing de impress|locacao de (impressora|equipament|computador)")
+                         r"aquisicao de (equipament|material|bens)|outsourcing de impress|locacao de (impressora|equipament|computador)|"
+                         r"solucao de (computacao em )?nuvem|nuvem (publica|privada)|multinuvem|exadata")
 SERV_FORA = re.compile(r"obra|pavimenta|reforma|construcao|engenharia civil|limpeza|vigilancia|alimentacao|merenda|combustivel|veiculo|"
                        r"transporte|medic|hospitalar|odontolog|laborator|uniforme|telefonia|evento|publicidade|grafica|leilo|"
                        r"engenharia|supervisao|socioambient|tubos|concreto|cameras?|videomonitoramento|aerolevantamento|fotogramet|"
@@ -567,7 +569,8 @@ def nome_curto(e):
     for rx, nome in regras:
         if re.search(rx, norm(o).upper()):
             return nome
-    return o.title()[:45]
+    nome = re.sub(r"\b(Da|De|Do|Das|Dos|E)\b", lambda m: m.group(1).lower(), o.title())
+    return nome[:45]
 
 
 ASSUNTOS = [(r"gestao (em |da )?saude|saude publica|prontuario", "gestão em saúde"), (r"gestao escolar|educacional|i-educar", "gestão escolar"),
@@ -587,6 +590,8 @@ def assunto(e):
 
 
 def mi(v):
+    if v >= 1e9:
+        return f"R$ {v / 1e9:.2f} bi".replace(".", ",")
     return f"R$ {v / 1e6:.1f} mi".replace(".", ",") if v >= 1e6 else f"R$ {v / 1e3:.0f} mil"
 
 
