@@ -59,6 +59,8 @@ with cf.ThreadPoolExecutor(4) as ex:
             c = d.get("numero_controle_pncp")
             if c and (d.get("data_fim_vigencia") or "") > AGORA.isoformat() and not d.get("cancelado"):
                 todos[c] = d
+if len(todos) < 1000:
+    sys.exit(f"ERRO: só {len(todos)} abertas vieram do PNCP; nada foi gravado")
 reg = []
 for c, d in todos.items():
     obj = " ".join((d.get("description") or "").split())

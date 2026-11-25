@@ -348,6 +348,8 @@ with cf.ThreadPoolExecutor(4) as ex:
                                                                  "municipio_nome", "uf", "numero_sequencial", "ano", "esfera_nome")} | {"termos": []})
                 e["termos"].append(termo)
 print(f"{len(editais)} editais únicos em {len(por_termo)} {'UFs' if TOTAL else 'termos'}", file=sys.stderr)
+if len(editais) < 50:  # PNCP fora do ar ou bloqueando: não grava lista vazia por cima da anterior
+    sys.exit(f"ERRO: só {len(editais)} editais vieram do PNCP; nada foi gravado (a busca anterior continua valendo)")
 
 # ------------------------------------------------------------------ 2. triagem pelo objeto
 cand = []

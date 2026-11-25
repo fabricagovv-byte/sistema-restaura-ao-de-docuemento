@@ -1,0 +1,96 @@
+# Varredura completa sob demanda: TODAS as licitações abertas do Brasil (UF por UF) e os 5 temas sobre esse universo,
+# cada tema numa máquina separada (em paralelo). Publica no branch `busca-diaria`:
+#   brasil/brasil.json          -> lista do app (aba Brasil), só o que ainda está aberto
+#   <tema>-completa/ultima.txt  -> documental, ust, mensal, consultoria, servicos
+name: Varredura completa (Brasil inteiro, todos os temas)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: varredura-completa
+  cancel-in-progress: false
+
+jobs:
+  baixar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ./plataforma-licitacoes/vendor/pncp-cli
+      - name: Todas as abertas do Brasil
+        env:
+          PYTHONPATH: plataforma-licitacoes/backend
+        run: |
+          mkdir -p dados
+          python plataforma-licitacoes/busca-diaria/todas_abertas.py dados/todas.json
+          python plataforma-licitacoes/busca-diaria/montar_brasil.py dados/todas.json plataforma-licitacoes/docs/pesquisas/2026-11-21_previstas/previstas_links.json dados/brasil.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: abertas
+          path: dados/
+          retention-days: 3
+
+  temas:
+    needs: baixar
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        tema: [documental, ust, mensal, consultoria, servicos]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          pip install ./plataforma-licitacoes/vendor/pncp-cli pypdf
+          sudo apt-get install -y -q poppler-utils >/dev/null || true
+      - uses: actions/download-artifact@v4
+        with:
+          name: abertas
+          path: dados
+      - name: Busca anterior (para marcar as novas)
+        run: |
+          mkdir -p saida
+          if git fetch --depth 1 origin busca-diaria; then
+            git show "origin/busca-diaria:${{ matrix.tema }}-completa/ultima.json" > saida/ultima.json 2>/dev/null || rm -f saida/ultima.json
+          fi
+      - name: Tema ${{ matrix.tema }} sobre todas as abertas
+        env:
+          PYTHONPATH: plataforma-licitacoes/backend
+          BUSCA_ARQUIVOS: dados/todas.json.*.ndjson
+          BUSCA_TOTAL: "1"
+        run: python plataforma-licitacoes/busca-diaria/busca_diaria.py saida "${{ matrix.tema }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tema-${{ matrix.tema }}
+          path: saida/
+          retention-days: 3
+
+  publicar:
+    needs: [baixar, temas]
+    if: always() && needs.baixar.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: art
+      - name: Publicar no branch busca-diaria
+        run: |
+          if git fetch --depth 1 origin busca-diaria; then git worktree add /tmp/pub origin/busca-diaria; else git worktree add --detach /tmp/pub && git -C /tmp/pub switch --orphan busca-diaria; fi
+          mkdir -p /tmp/pub/brasil && cp art/abertas/brasil.json /tmp/pub/brasil/
+          for d in art/tema-*; do t=${d#art/tema-}; [ -f "$d/ultima.txt" ] || continue; mkdir -p "/tmp/pub/$t-completa"; cp "$d"/* "/tmp/pub/$t-completa/"; done
+          cd /tmp/pub
+          git config user.name "busca-diaria[bot]"; git config user.email "busca-diaria@users.noreply.github.com"
+          git add -A && git commit -m "Varredura completa $(date -u +%Y-%m-%d)" || exit 0
+          for i in 1 2 3 4; do git push origin HEAD:busca-diaria && break; sleep $((i * 10)); git pull --rebase origin busca-diaria || true; done
