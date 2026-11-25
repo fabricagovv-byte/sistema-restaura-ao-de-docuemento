@@ -1,7 +1,8 @@
 """Todas as licitações com proposta aberta no Brasil (PNCP, UF por UF), em formato compacto para o app.
 
 Uso: PYTHONPATH=plataforma-licitacoes/backend python todas_abertas.py SAIDA.json
-Cada registro: [controle, órgão, município, UF, modalidade, valor, sigiloso, fim_propostas, objeto, portal, assunto, esfera]
+Cada registro: [controle, órgão, município, UF, modalidade, valor, sigiloso, fim_propostas, objeto, portal, assunto, esfera, inicio_propostas]
+"A vir" = já publicada, mas o recebimento de propostas ainda não começou (inicio_propostas no futuro).
 Assunto por palavras do objeto (TI pela taxonomia da plataforma). Valor = estimativa oficial (0 quando sigiloso ou não informado).
 """
 import json, re, subprocess, sys, unicodedata, concurrent.futures as cf
@@ -22,6 +23,7 @@ def buscar_uf(uf):
     r = subprocess.run(["pncp", "search", "--tipo", "edital", "--status", "recebendo_proposta", "--uf", uf, "--all", "--limit", "10000",
                         "--ndjson", "-q", "--pausa", "0.2"], capture_output=True, text=True, timeout=3600)
     linhas = [json.loads(x) for x in r.stdout.splitlines() if x.strip()]
+    open(f"{SAIDA}.{uf}.ndjson", "w").write(r.stdout)  # bruto, para reprocessar sem baixar de novo
     print(uf, len(linhas), file=sys.stderr, flush=True)
     return linhas
 
@@ -64,9 +66,10 @@ for c, d in todos.items():
     reg.append([c, " ".join((d.get("orgao_nome") or "").split()), d.get("municipio_nome") or "", d.get("uf") or "",
                 d.get("modalidade_licitacao_nome") or "", round(float(d.get("valor_total_estimado") or 0), 2),
                 1 if d.get("indicador_orcamento_sigiloso") else 0, (d.get("data_fim_vigencia") or "")[:16], obj[:220],
-                d.get("usuario_nome") or "", assunto(obj), (d.get("esfera_id") or "")])
+                d.get("usuario_nome") or "", assunto(obj), (d.get("esfera_id") or ""), (d.get("data_inicio_vigencia") or "")[:16]])
 reg.sort(key=lambda r: r[7])
 json.dump({"verificado_em": AGORA.isoformat(timespec="minutes"), "total": len(reg),
-           "campos": ["controle", "orgao", "municipio", "uf", "modalidade", "valor", "sigiloso", "fim", "objeto", "portal", "assunto", "esfera"],
+           "campos": ["controle", "orgao", "municipio", "uf", "modalidade", "valor", "sigiloso", "fim", "objeto", "portal", "assunto", "esfera", "inicio"],
+           "a_vir": sum(1 for r in reg if r[12] > AGORA.isoformat()[:16]),
            "registros": reg}, open(SAIDA, "w"), ensure_ascii=False, separators=(",", ":"))
 print(len(reg), "abertas", file=sys.stderr)
