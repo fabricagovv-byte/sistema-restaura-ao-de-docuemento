@@ -2,7 +2,7 @@
 # Roda no GitHub (não usa crédito do Claude) e publica no branch `busca-diaria`:
 #   documental/ultima.txt e ust/ultima.txt -> texto pronto para colar no WhatsApp
 #   <tema>/AAAA-MM-DD.txt (e .json)       -> histórico de cada dia
-name: Busca diária — documental e UST
+name: Busca diária — documental, UST e fixo mensal
 
 on:
   schedule:
@@ -19,7 +19,7 @@ concurrency:
 jobs:
   busca:
     runs-on: ubuntu-latest
-    timeout-minutes: 240
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -45,16 +45,21 @@ jobs:
         env:
           PYTHONPATH: plataforma-licitacoes/backend
         run: python plataforma-licitacoes/busca-diaria/busca_diaria.py /tmp/publicar/ust ust
+      - name: Buscar no PNCP — fixo mensal de TI (radar)
+        if: always()
+        env:
+          PYTHONPATH: plataforma-licitacoes/backend
+        run: python plataforma-licitacoes/busca-diaria/busca_diaria.py /tmp/publicar/mensal mensal
       - name: Publicar no branch busca-diaria
         if: always()
         working-directory: /tmp/publicar
         run: |
           git config user.name "busca-diaria[bot]"
           git config user.email "busca-diaria@users.noreply.github.com"
-          git add -A documental ust 2>/dev/null || git add -A
+          git add -A
           git commit -m "Busca diária $(date -u +%Y-%m-%d)" || exit 0
           for i in 1 2 3 4; do git push origin HEAD:busca-diaria && break; sleep $((i * 10)); git pull --rebase origin busca-diaria || true; done
       - name: Resumo
         if: always()
         run: |
-          for t in documental ust; do [ -f /tmp/publicar/$t/ultima.txt ] && head -5 /tmp/publicar/$t/ultima.txt >> "$GITHUB_STEP_SUMMARY"; echo >> "$GITHUB_STEP_SUMMARY"; done
+          for t in documental ust mensal; do [ -f /tmp/publicar/$t/ultima.txt ] && head -5 /tmp/publicar/$t/ultima.txt >> "$GITHUB_STEP_SUMMARY"; echo >> "$GITHUB_STEP_SUMMARY"; done

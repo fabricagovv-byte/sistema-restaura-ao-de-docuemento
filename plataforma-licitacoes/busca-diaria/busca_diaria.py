@@ -1,9 +1,10 @@
 """Busca diária no PNCP com proposta aberta, em formato WhatsApp. Dois temas:
   documental — digitalização, indexação e gestão documental (padrão)
   ust        — contratações de TI com UST (unidade de serviço técnico), com destaque para UST em sistemas prontos
+  mensal     — radar compacto de TI com valor FIXO MENSAL (itens cobrados por mês), ordenado pelo valor por mês
 
 Uso (com o pacote pncp-cli instalado e o backend no PYTHONPATH):
-    PYTHONPATH=plataforma-licitacoes/backend python plataforma-licitacoes/busca-diaria/busca_diaria.py SAIDA_DIR [documental|ust]
+    PYTHONPATH=plataforma-licitacoes/backend python plataforma-licitacoes/busca-diaria/busca_diaria.py SAIDA_DIR [documental|ust|mensal]
 
 Gera em SAIDA_DIR: AAAA-MM-DD.txt (texto para WhatsApp), AAAA-MM-DD.json (dados), ultima.txt e ultima.json.
 Se SAIDA_DIR já tiver um ultima.json, marca como 🆕 as licitações que não estavam na busca anterior.
@@ -18,7 +19,7 @@ from licitacoes.taxonomia import classificar, natureza, tipo_volume, volumes_no_
 
 SAIDA = sys.argv[1] if len(sys.argv) > 1 else "."
 TEMA = sys.argv[2] if len(sys.argv) > 2 else "documental"
-assert TEMA in ("documental", "ust"), TEMA
+assert TEMA in ("documental", "ust", "mensal"), TEMA
 LIMITE = int(os.environ.get("BUSCA_LIMITE", "600"))  # registros por termo
 AGORA = datetime.now(timezone(timedelta(hours=-3))).replace(tzinfo=None)  # Brasília (datas do PNCP vêm sem fuso)
 
@@ -74,7 +75,13 @@ PRONTO_RX = re.compile(r"licen[cs]|locacao|cessao|saas|software como servi|subsc
                        r"sistemas? de gestao|software de gestao|\berp\b|sistemas? informatizad")
 FORA_UST_RX = re.compile(r"obra de|pavimenta|construcao de|reforma de|alimentacao|merenda|combustivel|veiculos?\b|medicament|"
                          r"material hospitalar|uniforme|limpeza urbana|coleta de lixo")
-if TEMA == "ust":
+TEC_MENSAL = re.compile(r"software|sistema|licen[cs]|tecnologia da informa|\bti\b|\btic\b|nuvem|cloud|saas|plataforma|aplicativ|"
+                        r"suporte tecnico|service desk|datacenter|data center|hospedagem|internet|seguranca (da informa|cibernet)|backup|firewall|"
+                        r"gestao publica|\berp\b|digitaliza|gestao documental|\bged\b|\bead\b|ensino a distancia")
+NAO_TEC = re.compile(r"engenharia|aerolevantamento|aerofotogram|topograf|\bobras?\b|pavimenta|reforma|relogios? de ponto|telefonia fixa|"
+                     r"veiculo|ambulancia|transporte|locacao de (imovel|maquina)|limpeza|vigilancia|alimentacao")
+MES_UN = re.compile(r"^(mes|meses|mensal|mensalidade|men|servico mensal|mes\(es\)|mes / meses|mes \(mes\))\b")
+if TEMA in ("ust", "mensal"):
     TERMOS = TERMOS_UST
 DOC_CATS = {"digitalizacao", "indexacao", "ged", "ocr", "triagem", "guarda", "higienizacao", "restauracao"}
 DOC_RX = re.compile(r"digitaliz|escanea|indexa|gestao documental|gestao arquivist|gestao de documentos|tratamento (documental|arquivist)|"
@@ -123,6 +130,12 @@ def eh_tema(texto, e=None):
     if TEMA == "documental":
         return eh_documental(texto)
     n = norm(texto)
+    if TEMA == "mensal":
+        if NAO_TEC.search(n):
+            return False
+        if e is None:
+            return bool(TEC_MENSAL.search(n) or classificar(texto))
+        return bool((e.get("mensal") or 0) >= 20_000 and TEC_MENSAL.search(n))
     if FORA_UST_RX.search(n):
         return False
     if e is None:  # antes dos itens: qualquer objeto de TI ou que cite UST
@@ -257,6 +270,10 @@ def detalhar(e):
             vol[k] = vol.get(k, 0) + q
         elif k in ("pagina", "registro", "hora"):
             vol[k] = vol.get(k, 0) + q
+        elif TEMA == "mensal":
+            if MES_UN.match(u.strip()) and q >= 2 and it.get("valorUnitarioEstimado"):
+                mensal += float(it["valorUnitarioEstimado"])
+                meses.append(q)
         elif TEMA == "ust":
             if k == "mes" and q >= 2 and it.get("valorUnitarioEstimado"):
                 mensal += float(it["valorUnitarioEstimado"])
@@ -403,8 +420,57 @@ novas = [e for e in competitivas + outras if e.get("nova")]
 urgentes = sorted([e for e in abertos if e["dias"] < 3], key=lambda e: e["encerramento"])
 soma = sum(e.get("valor") or 0 for e in abertos if (e.get("valor") or 0) < 1e9)
 
+def nome_curto(e):
+    o = " ".join((e.get("orgao_nome") or "").split()).upper()
+    mun = (e.get("municipio_nome") or "").strip()
+    regras = [(r"^MUNICIPIO DE ", mun or o[13:].title()), (r"^PREFEITURA", mun),
+              (r"^FUNDO MUNICIPAL DE SAUDE", f"FMS de {mun}"), (r"^SERVICO AUTONOMO|^SAAE", f"SAAE de {mun}"),
+              (r"^CAMARA MUNICIPAL|CAMARA DE VEREADORES", f"Câmara de {mun}"),
+              (r"^TRIBUNAL DE JUSTICA", "TJ " + re.sub(r"^TRIBUNAL DE JUSTICA (DO ESTADO )?", "", norm(o)).replace("do estado ", "").title()),
+              (r"^TRIBUNAL REGIONAL ELEITORAL", f"TRE ({e.get('uf')})"), (r"^TRIBUNAL REGIONAL DO TRABALHO", f"TRT ({e.get('uf')})"),
+              (r"^CONSORCIO", "Consórcio " + mun), (r"^INSTITUTO (DE PREVIDENCIA|MUNICIPAL DE PREVIDENCIA)", f"Previdência de {mun}")]
+    for rx, nome in regras:
+        if re.search(rx, norm(o).upper()):
+            return nome
+    return o.title()[:45]
+
+
+ASSUNTOS = [(r"gestao (em |da )?saude|saude publica|prontuario", "gestão em saúde"), (r"gestao escolar|educacional|i-educar", "gestão escolar"),
+            (r"tribut|arrecada|iss|nota fiscal", "gestão tributária"), (r"\berp\b", "ERP"), (r"cibernet|firewall|antiv|\bsoc\b|seguranca da informa", "segurança da informação"),
+            (r"service desk|suporte tecnico|help ?desk", "suporte técnico de TI"), (r"nuvem|cloud|data ?center|hospedagem", "nuvem e data center"),
+            (r"gestao documental|\bged\b|digitaliza|processo eletronico", "gestão documental"), (r"\bead\b|ensino a distancia|aprendizagem", "EAD"),
+            (r"internet|link (de dados|dedicado)|conectividade|fibra", "internet e links"), (r"folha de pagamento|recursos humanos|\brh\b", "RH e folha"),
+            (r"contab|orcament|financeir", "gestão contábil e financeira"), (r"sistemas? integrad|gestao publica|administracao publica", "gestão pública integrada"),
+            (r"plataforma", "plataforma digital"), (r"licen|software|sistema", "software de gestão")]
+
+
+def assunto(e):
+    n = norm(e.get("objeto"))
+    rotulo = next((r for rx, r in ASSUNTOS if re.search(rx, n)), "TI")
+    extras = [x for x, rx in (("SaaS", r"saas|software como servi"), ("locação", r"locacao"), ("emergencial", r"emergencia")) if re.search(rx, n)]
+    return rotulo + (" " + " ".join(extras) if extras else "")
+
+
+def mi(v):
+    return f"R$ {v / 1e6:.1f} mi".replace(".", ",") if v >= 1e6 else f"R$ {v / 1e3:.0f} mil"
+
+
+def radar(lista):
+    linhas = [f"*📢 Radar de Editais · {AGORA.strftime('%d/%m')} · FIXO MENSAL de TI*",
+              f"PNCP (todos os portais que publicam no PNCP) · {num(len(editais))} editais de TI examinados · {len(lista)} com valor mensal ≥ R$ 20 mil", ""]
+    for i, e in enumerate(lista, 1):
+        meses = f" ({e['meses']} meses)" if e.get("meses") and e["meses"] != 12 else ""
+        novo = " 🆕" if e.get("nova") else ""
+        linhas += [f"*{i}. {nome_curto(e)}* ({e.get('uf')}) · {assunto(e)}{novo}",
+                   f"💰 *{mi(e['valor']) if e.get('valor') else valor_txt(e).lower()}* · 📦 *{brl(e['mensal'])[:-3]}/mês*{meses} · "
+                   f"📅 {datetime.fromisoformat(e['encerramento']).strftime('%d/%m %H:%M')}",
+                   f"🔗 {e['link_pncp']}", ""]
+    linhas.append("Valor mensal = soma dos itens cobrados por mês no PNCP (estimativa do órgão). Confira no edital.")
+    return linhas
+
+
 TITULO = {"documental": "📂 BUSCA DIÁRIA — DIGITALIZAÇÃO, INDEXAÇÃO E GESTÃO DOCUMENTAL",
-          "ust": "🧮 BUSCA DIÁRIA — UST (UNIDADE DE SERVIÇO TÉCNICO)"}[TEMA]
+          "ust": "🧮 BUSCA DIÁRIA — UST (UNIDADE DE SERVIÇO TÉCNICO)", "mensal": "📢 RADAR — FIXO MENSAL DE TI"}[TEMA]
 txt = [f"*{TITULO}*",
        f"Fonte: PNCP (pncp.gov.br), verificado em {AGORA.strftime('%d/%m/%Y %H:%M')} (Brasília).",
        f"{len(TERMOS)} palavras-chave · {num(len(editais))} editais examinados · *{len(abertos)} com proposta aberta* · soma estimada {brl(soma)}",
@@ -431,8 +497,11 @@ for titulo, lista in grupos:
 if outras:
     txt += [f"*📎 DISPENSAS, CREDENCIAMENTOS E OUTRAS ({len(outras)})*", ""]
     txt += [bloco(i, e) + "\n" for i, e in enumerate(outras, 1)]
-txt.append("Critério da nota (0–100): valor 30 · " + ("quantidade de UST 30" if TEMA == "ust" else "aderência ao tema 30")
-           + " · quantidades informadas 15 · prazo 15 · modalidade 10.")
+if TEMA == "mensal":
+    txt = radar(sorted(abertos, key=lambda e: -(e.get("mensal") or 0)))
+else:
+    txt.append("Critério da nota (0–100): valor 30 · " + ("quantidade de UST 30" if TEMA == "ust" else "aderência ao tema 30")
+               + " · quantidades informadas 15 · prazo 15 · modalidade 10.")
 
 os.makedirs(SAIDA, exist_ok=True)
 dia = AGORA.strftime("%Y-%m-%d")
