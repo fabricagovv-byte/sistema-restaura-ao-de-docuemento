@@ -83,6 +83,11 @@ NAO_TEC = re.compile(r"engenharia|aerolevantamento|aerofotogram|topograf|\bobras
 MES_UN = re.compile(r"^(mes|meses|mensal|mensalidade|men|servico mensal|mes\(es\)|mes / meses|mes \(mes\))\b")
 if TEMA in ("ust", "mensal"):
     TERMOS = TERMOS_UST
+if TEMA == "mensal":
+    TERMOS = TERMOS + ["firewall", "licenca de uso", "sistema de gestao", "software de gestao", "sistema integrado", "sistemas integrados",
+                       "gestao publica", "SaaS", "suporte tecnico", "link de internet", "hospedagem", "backup", "gestao tributaria",
+                       "gestao em saude", "gestao escolar", "folha de pagamento", "nota fiscal eletronica", "portal da transparencia"]
+    LIMITE = max(LIMITE, 1200)
 DOC_CATS = {"digitalizacao", "indexacao", "ged", "ocr", "triagem", "guarda", "higienizacao", "restauracao"}
 DOC_RX = re.compile(r"digitaliz|escanea|indexa|gestao documental|gestao arquivist|gestao de documentos|tratamento (documental|arquivist)|"
                     r"arquivist|\bged\b|gerenciamento eletronico de doc|microfilm|custodia de (documentos|acervo)|guarda (de|externa).{0,40}(document|acervo|caixa|processo)|"
@@ -131,7 +136,7 @@ def eh_tema(texto, e=None):
         return eh_documental(texto)
     n = norm(texto)
     if TEMA == "mensal":
-        if NAO_TEC.search(n):
+        if NAO_TEC.search(n[:200]):  # só o objeto principal (o resto do texto cita de tudo)
             return False
         if e is None:
             return bool(TEC_MENSAL.search(n) or classificar(texto))
@@ -263,8 +268,8 @@ def detalhar(e):
     vol, mensal, meses = {}, 0.0, []
     for it in itens:
         q, u, desc = float(it.get("quantidade") or 0), norm(it.get("unidadeMedida")), norm(it.get("descricao"))
-        if str(it.get("materialOuServicoNome") or "").lower().startswith("m"):
-            continue
+        if str(it.get("materialOuServicoNome") or "").lower().startswith("m") and TEMA != "mensal":
+            continue  # no radar mensal, licença de software cadastrada como "material" também conta
         k = tipo_volume(it.get("unidadeMedida"), it.get("descricao"), it.get("quantidade"), it.get("valorUnitarioEstimado"))
         if k in ("ust", "pf") and TEMA == "ust":
             vol[k] = vol.get(k, 0) + q
@@ -321,6 +326,11 @@ uniq = {}
 for e in sorted(abertos, key=lambda x: int(x["numero_sequencial"])):
     uniq[(e["orgao_cnpj"], e.get("valor"), re.sub(r"[^a-z0-9]", "", norm(e.get("objeto")))[:60])] = e
 abertos = list(uniq.values())
+if TEMA == "mensal":  # republicação com valor total levemente diferente: mesmo órgão e mesmo valor por mês
+    uniq = {}
+    for e in sorted(abertos, key=lambda x: int(x["numero_sequencial"])):
+        uniq[(e["orgao_cnpj"], round(e.get("mensal") or 0))] = e
+    abertos = list(uniq.values())
 
 
 # ------------------------------------------------------------------ 4. nota 0–100
@@ -423,7 +433,9 @@ soma = sum(e.get("valor") or 0 for e in abertos if (e.get("valor") or 0) < 1e9)
 def nome_curto(e):
     o = " ".join((e.get("orgao_nome") or "").split()).upper()
     mun = (e.get("municipio_nome") or "").strip()
-    regras = [(r"^MUNICIPIO DE ", mun or o[13:].title()), (r"^PREFEITURA", mun),
+    regras = [(r"^MUNICIPIO DE ", mun or o[13:].title()), (r"^PREFEITURA", mun), (r"^ESTADO D[OAE] ", f"Governo ({e.get('uf')})"),
+              (r"^FUNDO MUNICIPAL DE EDUCACAO", f"FME de {mun}"), (r"^FUNDO MUNICIPAL DE ASSISTENCIA", f"FMAS de {mun}"),
+              (r"^FUNDO MUNICIPAL", f"Fundo Municipal de {mun}"), (r"^EMPRESA MUNICIPAL|^AUTARQUIA|^DEPARTAMENTO MUNICIPAL", f"{o.title()[:22].strip()}… de {mun}"),
               (r"^FUNDO MUNICIPAL DE SAUDE", f"FMS de {mun}"), (r"^SERVICO AUTONOMO|^SAAE", f"SAAE de {mun}"),
               (r"^CAMARA MUNICIPAL|CAMARA DE VEREADORES", f"Câmara de {mun}"),
               (r"^TRIBUNAL DE JUSTICA", "TJ " + re.sub(r"^TRIBUNAL DE JUSTICA (DO ESTADO )?", "", norm(o)).replace("do estado ", "").title()),
@@ -445,7 +457,7 @@ ASSUNTOS = [(r"gestao (em |da )?saude|saude publica|prontuario", "gestão em sa�
 
 
 def assunto(e):
-    n = norm(e.get("objeto"))
+    n = re.sub(r"^\[[^\]]*\]\s*-?\s*", "", norm(e.get("objeto")))[:170]  # o assunto vem do começo do objeto
     rotulo = next((r for rx, r in ASSUNTOS if re.search(rx, n)), "TI")
     extras = [x for x, rx in (("SaaS", r"saas|software como servi"), ("locação", r"locacao"), ("emergencial", r"emergencia")) if re.search(rx, n)]
     return rotulo + (" " + " ".join(extras) if extras else "")
@@ -463,7 +475,7 @@ def radar(lista):
         novo = " 🆕" if e.get("nova") else ""
         linhas += [f"*{i}. {nome_curto(e)}* ({e.get('uf')}) · {assunto(e)}{novo}",
                    f"💰 *{mi(e['valor']) if e.get('valor') else valor_txt(e).lower()}* · 📦 *{brl(e['mensal'])[:-3]}/mês*{meses} · "
-                   f"📅 {datetime.fromisoformat(e['encerramento']).strftime('%d/%m %H:%M')}",
+                   f"📅 {datetime.fromisoformat(e['encerramento']).strftime('%d/%m %H:%M' if e['encerramento'][:4] == str(AGORA.year) else '%d/%m/%Y %H:%M')}",
                    f"🔗 {e['link_pncp']}", ""]
     linhas.append("Valor mensal = soma dos itens cobrados por mês no PNCP (estimativa do órgão). Confira no edital.")
     return linhas
