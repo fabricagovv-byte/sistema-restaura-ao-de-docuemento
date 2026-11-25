@@ -121,7 +121,11 @@ PRONTO_SERV = re.compile(r"(fornecimento|aquisicao|locacao|cessao|licenciamento|
                          r"impressora|nobreak|switch|firewall|estac|relogio|tablet|monitor|camera|kit)|software como servi|\bsaas\b|licenca de uso|subscric|creditos (de|em) nuvem|"
                          r"aquisicao de (equipament|material|bens)|outsourcing de impress|locacao de (impressora|equipament|computador)")
 SERV_FORA = re.compile(r"obra|pavimenta|reforma|construcao|engenharia civil|limpeza|vigilancia|alimentacao|merenda|combustivel|veiculo|"
-                       r"transporte|medic|hospitalar|odontolog|laborator|uniforme|telefonia|evento|publicidade|grafica|leilo")
+                       r"transporte|medic|hospitalar|odontolog|laborator|uniforme|telefonia|evento|publicidade|grafica|leilo|"
+                       r"engenharia|supervisao|socioambient|tubos|concreto|cameras?|videomonitoramento|aerolevantamento|fotogramet|"
+                       r"pesquisa (de|origem)|acesso a internet|link (de|dedicado)|comunicacao de dados|telecomunica|radio|cartorial|"
+                       r"topograf|ambiental|saneamento basico|iluminacao|energia|seguranca patrimonial|portaria|recepcao|"
+                       r"curso (de|superior|tecnico)|instituicao de ensino|educacao profissional|fornecimento e instalacao|aquisicao")
 GRUPOS_SERV = [
     ("🏭 FÁBRICA E DESENVOLVIMENTO", r"fabrica de software|desenvolvimento|programacao|aplicativ|portal|\bsites?\b"),
     ("👥 ALOCAÇÃO DE PROFISSIONAIS (por perfil)", r"alocacao|perfi(l|s) profissiona|postos? de trabalho|mao de obra|terceiriza|outsourcing de (ti|profission)"),
@@ -198,7 +202,11 @@ def eh_tema(texto, e=None):
         cab = re.sub(r"^\[[^\]]*\]\s*-?\s*", "", n)[:240]  # o objeto principal
         if PRONTO_SERV.search(cab) or SERV_FORA.search(cab) or (IMPRESSAO_RX.search(cab) and not GESTAO_RX.search(cab)):
             return False
-        return bool(classificar(texto) or eh_documental(texto) or CONS_RX.search(cab) or UST_RX.search(n))
+        if re.search(r"materia(l|is)|autopec|climatiza|locacao,|equipamentos|mobiliario|telessaude|profissionais da area da saude|"
+                     r"seguranca eletronica|retrofit|intermediacao|frota|abastecimento|notebook|microcomputador|quisicao|compra de|"
+                     r"sinalizacao|storage|armazenamento de dados distribuido|fornecimento, entrega", cab):
+            return False
+        return bool(classificar(cab) or eh_documental(texto) or CONS_RX.search(cab) or UST_RX.search(n))
     if TEMA == "consultoria":
         cab = re.sub(r"^\[[^\]]*\]\s*-?\s*", "", n)[:260]  # o assunto principal está no começo do objeto
         return bool(CONS_RX.search(cab) and not CONS_FORA.search(cab))
