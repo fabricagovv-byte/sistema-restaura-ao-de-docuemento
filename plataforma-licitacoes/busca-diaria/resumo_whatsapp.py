@@ -23,6 +23,8 @@ TITULOS = {"ust": "🧮 UST e PF · serviços de TI (sem software pronto)", "men
            "servicos": "🛠️ SERVIÇOS DE TIC sem produto pronto", "consultoria": "🧠 CONSULTORIA em tecnologia",
            "documental": "📂 DIGITALIZAÇÃO, INDEXAÇÃO e GESTÃO DOCUMENTAL"}
 LIMITE = {"ust": 30, "mensal": 25, "servicos": 6, "consultoria": 15, "documental": 25}
+if os.environ.get("PREVIA"):  # prévia curta: só os melhores de cada tema
+    LIMITE = {k: (3 if k == "servicos" else 10) for k in LIMITE}
 ROT = {"ust": "UST", "ust_doc": "UST", "ust_texto": "UST", "pf": "PF", "pf_doc": "PF", "hora": "horas", "pagina": "páginas",
        "pagina_texto": "páginas", "registro": "registros", "metro_linear": "m lineares", "caixa": "caixas"}
 
