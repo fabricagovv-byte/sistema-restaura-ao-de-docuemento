@@ -96,7 +96,9 @@ CONS_RX = re.compile(r"(consultoria|assessoria|auditoria|apoio tecnico|servicos 
                      r"seguranca da informacao|governanca|ciberseguranca|inteligencia artificial|nuvem|pdti|processos)|transformacao digital|"
                      r"governanca de (ti|dados|tic)|\bpdtic?\b|plano diretor de tecnologia|\blgpd\b|protecao de dados pessoais|encarregado (pelo tratamento|de dados)|\bdpo\b")
 CONS_FORA = re.compile(r"contab|juridic|advocac|obra|engenharia civil|pavimenta|ambiental|licenciamento ambiental|previdenci|atuari|"
-                       r"medic|saude ocupacional|seguranca do trabalho|arquitetonic|tributaria|recuperacao de credito|leilo|captacao de recursos")
+                       r"medic|saude ocupacional|seguranca do trabalho|arquitetonic|tributaria|recuperacao de credito|leilo|captacao de recursos|"
+                       r"engenharia|projetos? tecnicos?|elaboracao (do|de) projeto|equipamentos|auditoria economic|avaliacao imobiliaria|"
+                       r"profissionais da area da saude|marketing|comunicacao|pavimento|manutencao preventiva|certificacao|gestao da qualidade")
 if TEMA == "consultoria":
     TERMOS = TERMOS_CONS
 if TEMA in ("ust", "mensal"):
