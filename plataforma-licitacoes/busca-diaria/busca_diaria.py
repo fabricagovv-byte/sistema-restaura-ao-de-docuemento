@@ -326,9 +326,20 @@ def buscar_uf(uf):
         return f"UF {uf}", []
 
 
+ARQUIVOS = os.environ.get("BUSCA_ARQUIVOS")  # glob de .ndjson já baixados (todas_abertas.py): varre tudo sem baixar de novo
+
+
+def ler_arquivos():
+    import glob
+    for arq in sorted(glob.glob(ARQUIVOS)):
+        linhas = [json.loads(x) for x in open(arq) if x.strip()]
+        yield os.path.basename(arq), [d for d in linhas if (d.get("data_fim_vigencia") or "") > AGORA.isoformat()]
+
+
 editais, por_termo = {}, {}
 with cf.ThreadPoolExecutor(4) as ex:
-    for termo, linhas in ex.map(buscar_uf, UFS) if TOTAL else ex.map(buscar, TERMOS):
+    fonte = ler_arquivos() if ARQUIVOS else (ex.map(buscar_uf, UFS) if TOTAL else ex.map(buscar, TERMOS))
+    for termo, linhas in fonte:
         por_termo[termo] = len(linhas)
         for d in linhas:
             c = d.get("numero_controle_pncp")
