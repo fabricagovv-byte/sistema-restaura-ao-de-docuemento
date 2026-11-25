@@ -20,12 +20,14 @@ rep('''  <section class="panel" id="cal-sec" aria-labelledby="h-cal">''', '''  <
     <div class="pesq-filtros">
       <label for="br-sit">Situação<select id="br-sit"><option value="">Todas com edital</option><option value="abertas">Propostas já abertas</option><option value="avir">A vir (propostas ainda não começaram)</option><option value="previstas">Previstas no plano de compras (sem edital, TI)</option></select></label>
       <label for="br-q">Palavra no objeto, órgão ou cidade<input id="br-q" type="search" placeholder="ex.: digitalização, UST, merenda"></label>
+      <label for="br-perto">Perto de (cidade)<input id="br-perto" list="br-cidades" placeholder="ex.: Alvorada de Minas - MG" autocomplete="off"><datalist id="br-cidades"></datalist></label>
+      <label for="br-raio">Raio<select id="br-raio"><option value="0">Sem limite</option><option value="50">até 50 km</option><option value="100">até 100 km</option><option value="150">até 150 km</option><option value="200">até 200 km</option><option value="300">até 300 km</option></select></label>
       <label for="br-uf">UF<select id="br-uf"><option value="">Todas</option></select></label>
       <label for="br-mod">Modalidade<select id="br-mod"><option value="">Todas</option></select></label>
       <label for="br-portal">Portal<select id="br-portal"><option value="">Todos</option></select></label>
       <label for="br-vmin">Valor mínimo<select id="br-vmin"><option value="0">Qualquer</option><option value="100000">R$ 100 mil</option><option value="1000000">R$ 1 milhão</option><option value="5000000">R$ 5 milhões</option><option value="10000000">R$ 10 milhões</option><option value="50000000">R$ 50 milhões</option></select></label>
       <label for="br-dias">Encerra em<select id="br-dias"><option value="0">Qualquer prazo</option><option value="3">até 3 dias</option><option value="7">até 7 dias</option><option value="15">até 15 dias</option><option value="30">até 30 dias</option></select></label>
-      <label for="br-ord">Ordenar<select id="br-ord"><option value="prazo">Prazo mais próximo</option><option value="valor">Maior valor</option><option value="recente">Prazo mais distante</option></select></label>
+      <label for="br-ord">Ordenar<select id="br-ord"><option value="prazo">Prazo mais próximo</option><option value="valor">Maior valor</option><option value="recente">Prazo mais distante</option><option value="perto">Mais perto da cidade</option></select></label>
     </div>
     <div class="acoes"><button type="button" class="mais" id="br-pregoes" aria-pressed="false">Só pregões</button><button type="button" class="abrir" id="br-copiar">Copiar os 40 primeiros para o WhatsApp</button>
       <button type="button" class="mais" id="br-csv">Baixar planilha com todas as filtradas (CSV)</button></div>
@@ -47,6 +49,11 @@ JS = r'''
   const vv = (r) => r[5] > 0 && r[5] < SUS ? r[5] : 0;
   const val = (r) => r[5] >= SUS ? `${mi(r[5])} ⚠️ conferir` : r[5] > 0 ? mi(r[5]) : (r[6] ? "sigiloso" : "valor não informado");
   function conta(t) { $("br-conta").textContent = t; }
+  // distância em linha reta até a cidade escolhida (coordenadas IBGE já embutidas no app)
+  const geoCidade = (txt) => { const m = /^(.*?)\s*[-–/]\s*([A-Za-z]{2})$/.exec((txt || "").trim()); if (!m) return null; return GEO_NOME.get(norm(m[1] + " " + m[2].toUpperCase()).trim()) || null; };
+  const distCache = new Map();
+  const distR = (r, alvo) => { if (!alvo) return null; const k = alvo[0] + "|" + r[2] + "|" + r[3];
+    if (!distCache.has(k)) { const g = GEO_NOME.get(norm(r[2] + " " + r[3]).trim()); distCache.set(k, g ? km(alvo, g) : null); } return distCache.get(k); };
   async function carregar() {
     if (BR) return;
     try {
@@ -63,6 +70,7 @@ JS = r'''
   function preparar() {
     const R = BR.registros, cont = (i) => { const m = new Map(); R.forEach((r) => m.set(r[i], (m.get(r[i]) || 0) + 1)); return [...m].sort((a, b) => b[1] - a[1]); };
     const opc = (sel, lista, max) => { $(sel).insertAdjacentHTML("beforeend", lista.slice(0, max).map(([k, n]) => `<option value="${esc(k)}">${esc(k || "—")} (${fmt(n)})</option>`).join("")); };
+    $("br-cidades").innerHTML = GEO.map((g) => `<option value="${esc(g[1])} - ${esc(g[2])}">`).join("");
     opc("br-uf", cont(3).sort((a, b) => a[0].localeCompare(b[0])), 30);
     opc("br-mod", cont(4), 20);
     opc("br-portal", cont(9), 40);
@@ -76,6 +84,7 @@ JS = r'''
   function filtrados() {
     const q = semAc($("br-q").value).split(/\s+/).filter(Boolean), uf = $("br-uf").value, mod = $("br-mod").value, portal = $("br-portal").value;
     const vmin = +$("br-vmin").value, dias = +$("br-dias").value, agora = Date.now(), sit = $("br-sit").value;
+    const alvo = geoCidade($("br-perto").value), raio = +$("br-raio").value;
     const agoraTxt = new Date(agora - 3 * 3600e3).toISOString().slice(0, 16);
     const out = [];
     BR.registros.forEach((r, i) => {
@@ -85,14 +94,17 @@ JS = r'''
       if (assunto && r[10] !== assunto) return; if (vmin && !(vv(r) >= vmin)) return;
       if (dias && (new Date(r[7]).getTime() - agora) > dias * 864e5) return;
       if (q.length && !q.every((w) => BR.busca[i].includes(w))) return;
+      if (alvo && raio) { const d = distR(r, alvo); if (d == null || d > raio) return; }
       out.push(r);
     });
     const o = $("br-ord").value;
-    if (o === "valor") out.sort((a, b) => vv(b) - vv(a)); else if (o === "recente") out.sort((a, b) => b[7].localeCompare(a[7])); else out.sort((a, b) => a[7].localeCompare(b[7]));
+    if (o === "perto" && alvo) out.sort((a, b) => (distR(a, alvo) ?? 1e9) - (distR(b, alvo) ?? 1e9));
+    else if (o === "valor") out.sort((a, b) => vv(b) - vv(a)); else if (o === "recente") out.sort((a, b) => b[7].localeCompare(a[7])); else out.sort((a, b) => a[7].localeCompare(b[7]));
     return out;
   }
   function item(r) {
-    return `<li><div class="topo"><b>${esc(r[1])}</b><span>${esc(r[2])}/${esc(r[3])}</span></div>
+    const alvo = geoCidade($("br-perto").value), d = distR(r, alvo);
+    return `<li><div class="topo"><b>${esc(r[1])}</b><span>${esc(r[2])}/${esc(r[3])}</span>${d != null ? `<span class="dist">📍 ${Math.round(d)} km</span>` : ""}</div>
       <p>${esc(r[8])}</p>
       <div class="linha"><span><strong>${esc(val(r))}</strong></span>${r[12] && r[12] > new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 16) ? `<span>🔜 Abre <strong>${esc(data(r[12]))}</strong></span>` : ""}<span>Até <strong>${esc(data(r[7]))}</strong></span><span>${esc(r[4])}</span><span>${esc(r[10])}</span>${r[9] ? `<span>${esc(r[9])}</span>` : ""}</div>
       <div class="links"><a href="${link(r[0])}" target="_blank" rel="noopener">Abrir no PNCP</a></div></li>`;
@@ -121,6 +133,8 @@ JS = r'''
   }
   ["br-q"].forEach((id) => $(id).addEventListener("input", () => { lim = 50; render(); }));
   $("br-pregoes").addEventListener("click", (e) => { soPregao = !soPregao; e.currentTarget.setAttribute("aria-pressed", String(soPregao)); lim = 50; render(); });
+  $("br-perto").addEventListener("change", () => { lim = 50; try { localStorage.setItem("br-perto", $("br-perto").value); } catch (e) {} render(); });
+  try { const v = localStorage.getItem("br-perto"); if (v) $("br-perto").value = v; } catch (e) {}
   ["br-sit", "br-uf", "br-mod", "br-portal", "br-vmin", "br-dias", "br-ord"].forEach((id) => $(id).addEventListener("change", () => { lim = 50; render(); }));
   $("br-assuntos").addEventListener("click", (e) => { const b = e.target.closest("[data-as]"); if (!b) return; assunto = b.dataset.as; lim = 50;
     $("br-assuntos").querySelectorAll("[data-as]").forEach((c) => c.setAttribute("aria-pressed", String(c === b))); render(); });
