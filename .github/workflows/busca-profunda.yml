@@ -1,0 +1,57 @@
+# Busca profunda (sob demanda): TODAS as licitações abertas do Brasil, UF por UF, triagem de TI,
+# itens de cada uma e leitura do edital/TR (PDF e .zip) atrás de UST e ponto de função.
+# Publica em `busca-diaria/<tema>-profunda/ultima.txt`. Não usa crédito do Claude.
+name: Busca profunda — UST e PF (Brasil inteiro)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tema:
+        description: "Tema (ust, mensal ou documental)"
+        default: "ust"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: busca-profunda
+  cancel-in-progress: false
+
+jobs:
+  busca:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar pncp-cli (cópia MIT em vendor/) e leitor de PDF
+        run: |
+          pip install ./plataforma-licitacoes/vendor/pncp-cli pypdf
+          sudo apt-get install -y -q poppler-utils >/dev/null || true
+      - name: Trazer o branch de publicação
+        run: |
+          if git fetch --depth 1 origin busca-diaria; then
+            git worktree add /tmp/publicar origin/busca-diaria
+          else
+            git worktree add --detach /tmp/publicar && git -C /tmp/publicar switch --orphan busca-diaria
+          fi
+      - name: Buscar no PNCP (todas as abertas)
+        env:
+          PYTHONPATH: plataforma-licitacoes/backend
+          BUSCA_TOTAL: "1"
+          TEMA: ${{ inputs.tema }}
+        run: python plataforma-licitacoes/busca-diaria/busca_diaria.py "/tmp/publicar/${TEMA}-profunda" "$TEMA"
+      - name: Publicar
+        if: always()
+        working-directory: /tmp/publicar
+        run: |
+          git config user.name "busca-diaria[bot]"
+          git config user.email "busca-diaria@users.noreply.github.com"
+          git add -A
+          git commit -m "Busca profunda $(date -u +%Y-%m-%d)" || exit 0
+          for i in 1 2 3 4; do git push origin HEAD:busca-diaria && break; sleep $((i * 10)); git pull --rebase origin busca-diaria || true; done
+      - name: Resumo
+        if: always()
+        run: head -8 "/tmp/publicar/${{ inputs.tema }}-profunda/ultima.txt" >> "$GITHUB_STEP_SUMMARY" || true

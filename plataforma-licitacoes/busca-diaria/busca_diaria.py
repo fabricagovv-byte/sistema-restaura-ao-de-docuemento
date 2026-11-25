@@ -147,9 +147,11 @@ def eh_tema(texto, e=None):
         return bool(UST_RX.search(n) or classificar(texto))
     v = e.get("vol") or {}
     pf = v.get("pf") or re.search(r"pontos? de funcao", norm(f"{texto} {e.get('info') or ''}"))
-    return bool(v.get("ust") or v.get("ust_texto") or e.get("ust_doc") or pf or UST_RX.search(norm(f"{texto} {e.get('info') or ''}")))
+    return bool(v.get("ust") or v.get("ust_texto") or e.get("ust_doc") or pf or e.get("pf_doc") or UST_RX.search(norm(f"{texto} {e.get('info') or ''}")))
 
 
+PF_RX = re.compile(r"pontos? de funcao|\bapf\b")
+PF_QTD_RX = re.compile(r"(\d{1,3}(?:\.\d{3})+|\d{2,7})\s*(?:\([^)]{0,60}\)\s*)?(?:pontos? de funcao|pfs?\b)")
 UST_QTD_RX = re.compile(r"(\d{1,3}(?:\.\d{3})+|\d{2,7})\s*(?:\([^)]{0,60}\)\s*)?(?:ust'?s?\b|unidades? de servicos? tecnic)")
 
 
@@ -175,6 +177,18 @@ def texto_pdf(pdf):
         return "\n".join((pg.extract_text() or "") for pg in PdfReader(io.BytesIO(pdf)).pages[:150])
 
 
+def qtd_no_texto(n, rx):
+    qs = []
+    for m in rx.finditer(n):
+        ctx = n[max(0, m.start() - 80):m.start()]
+        if re.search(r"atestad|comprova|minimo de|capacidade tecnica|habilitac|\bano\b|\bart\.|\blei\b|r\$", ctx):
+            continue
+        q = float(m.group(1).replace(".", ""))
+        if 10 <= q <= 2_000_000:
+            qs.append(q)
+    return max(qs) if qs else None
+
+
 def ust_no_documento(e):
     """Lê o edital e o TR (PDF) e procura UST: marca a citação e a maior quantidade plausível."""
     alvo = [a for a in e.get("arquivos") or [] if re.search(r"edital|termo de referencia|\btr\b|projeto basico|anexo",
@@ -186,6 +200,8 @@ def ust_no_documento(e):
         except Exception:  # noqa: BLE001
             continue
         n = norm(txt)
+        if PF_RX.search(n) and not e.get("pf_doc"):
+            e["pf_doc"] = {"arquivo": a["url"], "quantidade": qtd_no_texto(n, PF_QTD_RX)}
         if UST_RX.search(n):
             qs = []
             for m in UST_QTD_RX.finditer(n):
@@ -218,10 +234,24 @@ def buscar(termo):
         return termo, []
 
 
-# ------------------------------------------------------------------ 1. busca por palavra-chave
+# ------------------------------------------------------------------ 1. busca por palavra-chave (ou, no modo total, todas as abertas por UF)
+TOTAL = os.environ.get("BUSCA_TOTAL") == "1"
+UFS = "AC AL AM AP BA CE DF ES GO MA MG MS MT PA PB PE PI PR RJ RN RO RR RS SC SE SP TO".split()
+
+
+def buscar_uf(uf):
+    try:
+        r = subprocess.run(["pncp", "search", "--tipo", "edital", "--status", "recebendo_proposta", "--uf", uf, "--all", "--limit", "10000",
+                            "--ndjson", "-q", "--pausa", "0.2"], capture_output=True, text=True, timeout=3000)
+        return f"UF {uf}", [json.loads(x) for x in r.stdout.splitlines() if x.strip()]
+    except Exception as e:  # noqa: BLE001
+        print(f"erro na UF {uf}: {e}", file=sys.stderr)
+        return f"UF {uf}", []
+
+
 editais, por_termo = {}, {}
 with cf.ThreadPoolExecutor(4) as ex:
-    for termo, linhas in ex.map(buscar, TERMOS):
+    for termo, linhas in ex.map(buscar_uf, UFS) if TOTAL else ex.map(buscar, TERMOS):
         por_termo[termo] = len(linhas)
         for d in linhas:
             c = d.get("numero_controle_pncp")
@@ -229,7 +259,7 @@ with cf.ThreadPoolExecutor(4) as ex:
                 e = editais.setdefault(c, {k: d.get(k) for k in ("numero_controle_pncp", "description", "orgao_cnpj", "orgao_nome", "unidade_nome",
                                                                  "municipio_nome", "uf", "numero_sequencial", "ano", "esfera_nome")} | {"termos": []})
                 e["termos"].append(termo)
-print(f"{len(editais)} editais únicos em {len(TERMOS)} termos", file=sys.stderr)
+print(f"{len(editais)} editais únicos em {len(por_termo)} {'UFs' if TOTAL else 'termos'}", file=sys.stderr)
 
 # ------------------------------------------------------------------ 2. triagem pelo objeto
 cand = []
@@ -309,10 +339,12 @@ def detalhar(e):
         arqs = []
     e["arquivos"] = [{"titulo": a.get("titulo"), "tipo": a.get("tipoDocumentoNome"), "url": a.get("url") or a.get("uri")}
                      for a in arqs if a.get("statusAtivo", True) is not False]
-    if TEMA == "ust" and not (e["vol"].get("ust") or e["vol"].get("ust_texto")) and ((e.get("valor") or 0) >= 300_000 or not e.get("valor")):
+    if TEMA == "ust" and not (e["vol"].get("ust") or e["vol"].get("ust_texto")) and ((e.get("valor") or 0) >= (150_000 if TOTAL else 300_000) or not e.get("valor")):
         ust_no_documento(e)
         if e.get("ust_doc") and e["ust_doc"].get("quantidade"):
             e["vol"]["ust_doc"] = round(e["ust_doc"]["quantidade"])
+        if e.get("pf_doc") and e["pf_doc"].get("quantidade") and not e["vol"].get("pf"):
+            e["vol"]["pf_doc"] = round(e["pf_doc"]["quantidade"])
     return e
 
 
@@ -381,7 +413,7 @@ def dt(s):
 
 
 ROT = {"pagina": "páginas/imagens", "pagina_texto": "páginas (citadas no objeto)", "metro_linear": "metros lineares", "caixa": "caixas",
-       "registro": "registros", "hora": "horas técnicas", "ust": "UST", "ust_texto": "UST (citadas no objeto)", "ust_doc": "UST (lidas no edital/TR — conferir)", "pf": "pontos de função"}
+       "registro": "registros", "hora": "horas técnicas", "ust": "UST", "ust_texto": "UST (citadas no objeto)", "ust_doc": "UST (lidas no edital/TR — conferir)", "pf_doc": "PF (lidos no edital/TR — conferir)", "pf": "pontos de função"}
 
 
 def arq(e, rx):
@@ -401,6 +433,8 @@ def bloco(i, e):
     vol = " · ".join(f"{num(q)} {ROT.get(k, k)}" for k, q in (e.get("vol") or {}).items()) or "NÃO LOCALIZADO nos itens"
     if e.get("ust_doc") and not e["ust_doc"].get("quantidade"):
         vol += " · UST citada no edital/TR (quantidade NÃO LOCALIZADA)"
+    if e.get("pf_doc") and not e["pf_doc"].get("quantidade") and not (e.get("vol") or {}).get("pf"):
+        vol += " · PF citado no edital/TR (quantidade NÃO LOCALIZADA)"
     ed = arq(e, r"edital")
     tr = arq(e, r"termo de referencia|\btr\b|projeto basico|estudo tecnico")
     d = e["dias"]
