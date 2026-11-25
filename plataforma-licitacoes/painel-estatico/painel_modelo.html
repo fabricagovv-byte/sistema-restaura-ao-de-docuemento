@@ -1282,7 +1282,9 @@ function renderPesquisa() {
   const link = (c) => { const m = /^(\d{14})-\d-(\d+)\/(\d{4})$/.exec(c); return m ? `https://pncp.gov.br/app/editais/${m[1]}/${m[3]}/${+m[2]}` : "https://pncp.gov.br/app/editais"; };
   const mi = (v) => v >= 1e9 ? `R$ ${(v / 1e9).toFixed(2).replace(".", ",")} bi` : v >= 1e6 ? `R$ ${(v / 1e6).toFixed(1).replace(".", ",")} mi` : v > 0 ? `R$ ${Math.round(v / 1e3)} mil` : "";
   const data = (s) => s ? `${s.slice(8, 10)}/${s.slice(5, 7)}${s.slice(0, 4) !== String(new Date().getFullYear()) ? "/" + s.slice(0, 4) : ""} ${s.slice(11, 16)}` : "";
-  const val = (r) => r[5] > 0 ? mi(r[5]) : (r[6] ? "sigiloso" : "valor não informado");
+  const SUS = 2e9;  // acima disso o valor costuma ser erro de digitação do órgão
+  const vv = (r) => r[5] > 0 && r[5] < SUS ? r[5] : 0;
+  const val = (r) => r[5] >= SUS ? `${mi(r[5])} ⚠️ conferir` : r[5] > 0 ? mi(r[5]) : (r[6] ? "sigiloso" : "valor não informado");
   function conta(t) { $("br-conta").textContent = t; }
   async function carregar() {
     if (BR) return;
@@ -1290,6 +1292,7 @@ function renderPesquisa() {
       const resp = await fetch("brasil.json", { cache: "no-store" });
       if (!resp.ok) throw new Error(resp.status);
       BR = await resp.json();
+      if (BR.tab) { const T = BR.tab; BR.registros = BR.registros.map((r) => [r[0], T.o[r[1]], T.m[r[2]], r[3], T.mod[r[4]], r[5], r[6], r[7], r[8], T.p[r[9]], T.a[r[10]], r[11], r[12]]); }
       BR.busca = BR.registros.map((r) => semAc(`${r[8]} ${r[1]} ${r[2]} ${r[0]}`));
       preparar(); render();
     } catch (e) {
@@ -1318,13 +1321,13 @@ function renderPesquisa() {
       if (sit === "abertas" && r[12] > agoraTxt) return; if (sit === "avir" && !(r[12] > agoraTxt)) return;
       if (soPregao && !/preg/i.test(r[4])) return;
       if (uf && r[3] !== uf) return; if (mod && r[4] !== mod) return; if (portal && r[9] !== portal) return;
-      if (assunto && r[10] !== assunto) return; if (vmin && !(r[5] >= vmin)) return;
+      if (assunto && r[10] !== assunto) return; if (vmin && !(vv(r) >= vmin)) return;
       if (dias && (new Date(r[7]).getTime() - agora) > dias * 864e5) return;
       if (q.length && !q.every((w) => BR.busca[i].includes(w))) return;
       out.push(r);
     });
     const o = $("br-ord").value;
-    if (o === "valor") out.sort((a, b) => b[5] - a[5]); else if (o === "recente") out.sort((a, b) => b[7].localeCompare(a[7])); else out.sort((a, b) => a[7].localeCompare(b[7]));
+    if (o === "valor") out.sort((a, b) => vv(b) - vv(a)); else if (o === "recente") out.sort((a, b) => b[7].localeCompare(a[7])); else out.sort((a, b) => a[7].localeCompare(b[7]));
     return out;
   }
   function item(r) {
@@ -1345,7 +1348,7 @@ function renderPesquisa() {
   function render() {
     if (!BR) return;
     if ($("br-sit").value === "previstas") return renderPrevistas();
-    const r = filtrados(), soma = r.reduce((s, x) => s + (x[5] > 0 && x[5] < 1e9 ? x[5] : 0), 0);
+    const r = filtrados(), soma = r.reduce((s, x) => s + vv(x), 0);
     conta(`${fmt(r.length)} licitações · soma estimada ${mi(soma) || "R$ 0"}${r.length > lim ? ` · mostrando ${fmt(lim)}` : ""}`);
     $("br-lista").innerHTML = r.slice(0, lim).map(item).join("");
     $("br-mais").hidden = r.length <= lim;

@@ -28,5 +28,20 @@ for c in json.load(open(prev)):
               "publicado": (c.get("publicado") or {}).get("link")})
 P.sort(key=lambda x: (dt(x["data"]), -x["valor"]))
 B["previstas"] = P
+# compacta: textos repetidos (órgão, município, modalidade, portal, assunto) viram índices de tabela; objeto até 170 caracteres
+tab = {k: [] for k in ("o", "m", "mod", "p", "a")}
+idx = {k: {} for k in tab}
+
+
+def ix(k, v):
+    if v not in idx[k]:
+        idx[k][v] = len(tab[k])
+        tab[k].append(v)
+    return idx[k][v]
+
+
+B["registros"] = [[r[0], ix("o", r[1]), ix("m", r[2]), r[3], ix("mod", r[4]), r[5], r[6], r[7], r[8][:170], ix("p", r[9]), ix("a", r[10]), r[11], r[12]]
+                  for r in B["registros"]]
+B["tab"] = tab
 json.dump(B, open(saida, "w"), ensure_ascii=False, separators=(",", ":"))
 print(B["total"], "abertas,", B.get("a_vir"), "a vir,", len(P), "previstas ->", saida)
