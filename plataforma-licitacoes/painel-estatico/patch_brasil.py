@@ -35,7 +35,7 @@ rep('''  <section class="panel" id="cal-sec" aria-labelledby="h-cal">''', '''  <
       <label for="br-vmin">Valor mínimo<select id="br-vmin"><option value="0">Qualquer</option><option value="100000">R$ 100 mil</option><option value="1000000">R$ 1 milhão</option><option value="5000000">R$ 5 milhões</option><option value="10000000">R$ 10 milhões</option><option value="50000000">R$ 50 milhões</option></select></label>
       <label for="br-rec">Mais recentes<select id="br-rec"><option value="90">Abriu nos últimos 90 dias</option><option value="30">Abriu nos últimos 30 dias</option><option value="7">Abriu nos últimos 7 dias</option><option value="2">Novas (últimos 2 dias)</option><option value="0">Qualquer data (inclui antigas)</option></select></label>
       <label for="br-dias">Encerra em<select id="br-dias"><option value="0">Qualquer prazo</option><option value="3">até 3 dias</option><option value="7">até 7 dias</option><option value="15">até 15 dias</option><option value="30">até 30 dias</option></select></label>
-      <label for="br-ord">Ordenar<select id="br-ord"><option value="prazo">Prazo mais próximo</option><option value="nota">Melhores do tema (nota)</option><option value="valor">Maior valor</option><option value="recente">Prazo mais distante</option><option value="perto">Mais perto da cidade</option></select></label>
+      <label for="br-ord">Ordenar<select id="br-ord"><option value="novas">Mais novas primeiro</option><option value="prazo">Encerra primeiro</option><option value="nota">Melhores do tema (nota)</option><option value="valor">Maior valor</option><option value="recente">Prazo mais distante</option><option value="perto">Mais perto da cidade</option></select></label>
     </div>
     <div class="acoes"><button type="button" class="mais" id="br-pregoes" aria-pressed="false">Só pregões</button><button type="button" class="abrir" id="br-copiar">Copiar os 40 primeiros para o WhatsApp</button>
       <button type="button" class="mais" id="br-csv">Baixar planilha com todas as filtradas (CSV)</button></div>
@@ -94,6 +94,9 @@ JS = r'''
       BR = await resp.json();
       if (BR.tab) { const T = BR.tab; BR.registros = BR.registros.map((r) => [r[0], T.o[r[1]], T.m[r[2]], r[3], T.mod[r[4]], r[5], r[6], r[7], r[8], T.p[r[9]], T.a[r[10]], r[11], r[12]]); }
       if (BR.extras && BR.extras.length) BR.registros = BR.registros.concat(BR.extras);
+      // datas digitadas erradas pelo órgão (ex.: ano 9202, abertura depois do fim): abertura vira desconhecida; fim absurdo marca a licitação como suspeita
+      const anoMax = String(new Date().getFullYear() + 2);
+      BR.registros.forEach((r) => { if (r[12] && (r[12] > r[7] || r[12].slice(0, 4) > anoMax || r[12].slice(0, 4) < "2015")) r[12] = ""; r.dataRuim = r[7].slice(0, 4) > anoMax; });
       BR.busca = BR.registros.map((r) => semAc(`${r[8]} ${r[1]} ${r[2]} ${r[0]}`));
       preparar(); render();
     } catch (e) {
@@ -128,7 +131,7 @@ JS = r'''
     const out = []; antigas = 0;
     BR.registros.forEach((r, i) => {
       if (r[7] <= agoraTxt) return;  // venceu depois da coleta: some sozinho
-      if (desde && r[12] && r[12] < desde) { antigas++; return; }
+      if (desde && ((r[12] && r[12] < desde) || r.dataRuim)) { antigas++; return; }
       if (sit === "abertas" && r[12] > agoraTxt) return; if (sit === "avir" && !(r[12] > agoraTxt)) return;
       if (soPregao && !/preg/i.test(r[4])) return;
       if (uf && r[3] !== uf) return; if (mod && r[4] !== mod) return; if (portal && r[9] !== portal) return;
@@ -144,23 +147,31 @@ JS = r'''
     const o = $("br-ord").value;
     if (o === "nota") out.sort((a, b) => ((temaDe(b[0]) || [0])[0] - (temaDe(a[0]) || [0])[0]) || vv(b) - vv(a));
     else if (o === "perto" && alvo) out.sort((a, b) => (distR(a, alvo) ?? 1e9) - (distR(b, alvo) ?? 1e9));
-    else if (o === "valor") out.sort((a, b) => vv(b) - vv(a)); else if (o === "recente") out.sort((a, b) => b[7].localeCompare(a[7])); else out.sort((a, b) => a[7].localeCompare(b[7]));
+    else if (o === "valor") out.sort((a, b) => vv(b) - vv(a)); else if (o === "recente") out.sort((a, b) => b[7].localeCompare(a[7])); else if (o === "prazo") out.sort((a, b) => a[7].localeCompare(b[7]));
+    else { const k = (x) => x[12] && x[12] <= agoraTxt ? x[12] : ""; out.sort((a, b) => k(b).localeCompare(k(a)) || a[7].localeCompare(b[7])); }
     return out;
   }
   const agoraTxt = () => new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 16);
   let LISTA = [];
+  const MES = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
   function prazo(r) {
-    const fim = new Date(r[7]), dias = (fim - Date.now()) / 864e5;
-    if (r[12] && r[12] > agoraTxt()) return ["avir", `🔜 abre ${data(r[12]).slice(0, 5)}`];
-    if (dias < 1) return ["hoje", `⏳ ${Math.max(0, Math.round(dias * 24))} h · ${data(r[7]).slice(6)}`];
-    if (dias < 3) return ["perto", `⏳ ${Math.ceil(dias)} dias · ${data(r[7]).slice(0, 5)}`];
-    return ["", `${Math.ceil(dias)} dias · ${data(r[7]).slice(0, 5)}`];
+    const hoje = agoraTxt().slice(0, 10), fimD = r[7].slice(0, 10), h = r[7].slice(11, 16);
+    if (r[12] && r[12] > agoraTxt()) return ["avir", `🔜 Abre ${data(r[12]).slice(0, 5)} às ${r[12].slice(11, 16)}`];
+    const dias = Math.round((new Date(fimD + "T12:00") - new Date(hoje + "T12:00")) / 864e5);
+    if (dias <= 0) { const min = Math.round((new Date(r[7]) - (Date.now() - 3 * 3600e3 + new Date().getTimezoneOffset() * 6e4)) / 6e4);
+      return ["hoje", min < 120 && min > 0 ? `⏳ Encerra HOJE às ${h} (faltam ${min} min)` : `⏳ Encerra HOJE às ${h}`]; }
+    if (dias === 1) return ["perto", `⏳ Encerra AMANHÃ às ${h}`];
+    if (dias <= 3) return ["perto", `Faltam ${dias} dias`];
+    return ["", `Faltam ${dias} dias`];
   }
   function item(r, i) {
     const alvo = geoCidade($("br-perto").value), d = distR(r, alvo), [cl, pz] = prazo(r), tm = temaDe(r[0]);
-    return `<li class="br-ficha" tabindex="0" data-i="${i}"><div class="br-cab"><span class="br-prazo ${cl}">${esc(pz)}</span><span class="br-tag assunto">${esc(r[10])}</span><span class="br-tag">${esc(r[4])}</span>${tm ? `<span class="br-nota" title="Nota da busca do dia (0 a 100)">★ ${tm[0]}</span>` : ""}</div>
+    const avir = cl === "avir", ref = avir ? r[12] : r[7];
+    return `<li class="br-ficha ${cl}" tabindex="0" data-i="${i}"><div class="br-data" aria-label="${avir ? "Abre" : "Encerra"} ${esc(data(ref))}"><small>${avir ? "ABRE" : "ENCERRA"}</small><b>${ref.slice(8, 10)}</b><span>${MES[+ref.slice(5, 7) - 1]}${ref.slice(0, 4) !== agoraTxt().slice(0, 4) ? " " + ref.slice(0, 4) : ""}</span><em>${ref.slice(11, 16)}</em></div>
+      <div class="br-meio"><div class="br-cab"><span class="br-prazo ${cl}">${esc(pz)}</span><span class="br-tag assunto">${esc(r[10])}</span><span class="br-tag">${esc(r[4])}</span>${tm ? `<span class="br-nota" title="Nota da busca do dia (0 a 100)">★ ${tm[0]}</span>` : ""}</div>
       <h4>${esc(r[1])}</h4><p class="br-obj">${esc(r[8])}</p>${tm && tm[1] ? `<p class="br-vol">📦 ${esc(tm[1])}</p>` : ""}
-      <div class="br-pe"><span class="br-valor">${esc(val(r))}</span><span>${esc(r[2])}/${esc(r[3])}${d != null ? ` · 📍 ${Math.round(d)} km` : ""}</span><a href="${link(r[0])}" target="_blank" rel="noopener">PNCP ↗</a></div></li>`;
+      <div class="br-pe"><span>📍 ${esc(r[2])}/${esc(r[3])}${d != null ? ` · ${Math.round(d)} km` : ""}</span>${r[12] && !avir ? `<span>Aberta desde ${esc(data(r[12]).slice(0, 5))}</span>` : ""}<a href="${link(r[0])}" target="_blank" rel="noopener">Ver no PNCP ↗</a></div></div>
+      <div class="br-dir"><span class="br-valor">${esc(val(r))}</span></div></li>`;
   }
   function previa(r) {
     const alvo = geoCidade($("br-perto").value), d = distR(r, alvo), ini = r[12] ? new Date(r[12]) : null, fim = new Date(r[7]);
@@ -228,7 +239,7 @@ JS = r'''
     $("br-assuntos").querySelectorAll("[data-as]").forEach((c) => c.setAttribute("aria-pressed", String(c === b))); render(); });
   $("br-temas").addEventListener("click", (e) => { const b = e.target.closest("[data-tema]"); if (!b) return; tema = b.dataset.tema; TEM = tema ? BR.temas[tema].itens : null; lim = 50;
     $("br-temas").querySelectorAll("[data-tema]").forEach((c) => c.setAttribute("aria-pressed", String(c === b)));
-    $("br-ord").value = tema ? "nota" : "prazo";
+    $("br-ord").value = tema ? "nota" : "novas";
     $("br-temas-info").textContent = tema ? `— ${BR.temas[tema].nome}: busca verificada em ${data(BR.temas[tema].verificado)}, ordenada pela nota` : "— as melhores de cada tema, com nota e volume (UST, PF, páginas) lidos no edital";
     render(); });
   $("br-mais").addEventListener("click", () => { lim += 100; render(); });
