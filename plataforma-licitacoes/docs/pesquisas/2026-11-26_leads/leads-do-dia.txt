@@ -1,0 +1,270 @@
+*🎯 LEADS DO DIA · 26/11/2026*
+Fonte: PNCP (inclui portais parceiros que publicam lá) · lista completa de hoje (38.304 licitações abertas, verificada 26/11 14:40).
+Só prazo de proposta aberto com pelo menos 1 dia e edital aberto nos últimos 4 meses. Ordem: nota da busca + valor + volume lido no edital. ⚠️ = encerra em até 2 dias.
+
+⚙️ 22 · 💻 4 · 📆 299 · 🛠️ 150 · 📄 34
+
+————————————
+
+*⚙️ UST E PONTO DE FUNÇÃO*
+22 abertas · soma estimada R$ 240,8 mi · as 12 melhores:
+
+*1. Tribunal de Justica do Estado de Minas Gerais* (Belo Horizonte/MG)
+Contratação de serviços especializados de desenvolvimento e sustentação de sistemas de Inteligência de Negócio (Business Intelligence - BI),…
+💰 *R$ 93,1 mi* · 📦 *800.000 UST*
+📅 Encerra 09/12 14:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/21154554000113/2026/559
+
+*2. Comando da Aeronautica* (São Paulo/SP)
+Contratação de solução de nuvem privada Oracle Exadata Cloud at Customer (ExaCC), na versão X11M ou superior, incluindo Oracle PaaS e IaaS Universal…
+💰 *R$ 41,8 mi* · 📦 *924 UST*
+📅 Encerra 07/12 10:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/00394429000100/2026/3121
+
+*3. Tribunal Regional Eleitoral do Amapa* (Macapá/AP)
+Registro de preços para eventual aquisição de solução profissional de software de automação de deploy de aplicações, gerenciamento de microsserviços…
+💰 *R$ 20,7 mi* · 📦 *2.250 UST*
+📅 Encerra 07/12 14:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/34927343000118/2026/74
+
+*4. Municipio de Rio das Ostras* (Rio das Ostras/RJ)
+CONTRATAÇÃO DE SOLUÇÃO INTEGRADA DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO (TIC) PARA A MODERNIZAÇÃO TECNOLÓGICA, INFORMATIZAÇÃO.
+💰 *R$ 17,6 mi* · 📦 *3.000 UST*
+📅 Encerra 15/12 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/39223581000166/2026/128
+
+*5. Ministerio da Defesa* (Brasília/DF)
+Contratação de serviços contínuos de tecnologia da informação para o desenvolvimento, manutenção, sustentação e avaliação da qualidade e testes de…
+💰 *R$ 15,8 mi* · 📦 *58 PF*
+📅 Encerra 01/12 10:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/03277610000125/2026/570
+
+*6. Tribunal de Justica do Estado do Amapa* (Macapá/AP)
+Registro de preços para aquisição de soluções de segurança da informação incluindo firewalls, soluções de gerenciamento, controle de acesso,…
+💰 *R$ 14,6 mi* · 📦 *600 UST · 1.000 horas*
+📅 Encerra 09/12 08:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/34870576000121/2026/70
+
+*7. Consorcio Intermunicipal de Saude da Regiao de Almenara* (Almenara/MG)
+Registro de preços para futura e eventual contratação de empresa especializada para disponibilização, implantação, operação, sustentação e evolução…
+💰 *R$ 13,8 mi* · 📦 *3.904 horas · 3.660 PF*
+📅 Encerra 30/11 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/28168515000114/2026/12
+
+*8. Municipio de Itajai* (Itajaí/SC)
+Contratação de solução integrada destinada à gestão da vida funcional dos servidores públicos municipais, contemplando a consolidação do acervo…
+💰 *R$ 6,6 mi* · 📦 *2.600.000 páginas · 7.000 UST*
+📅 Encerra 07/12 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/83102277000152/2026/635
+
+*9. Municipio de Ariquemes* (Ariquemes/RO)
+Registro de preços para futura e eventual contratação de serviço técnico e especializado na área de Tecnologia da Informação e Comunicação (TIC),…
+💰 *R$ 4,0 mi* · 📦 *68.937 UST*
+📅 Encerra 09/12 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/04104816000116/2026/321
+
+*10. Conselho Regional de Enfermagem de Sao Paulo* (São Paulo/SP)
+Contratação de empresa especializada para o fornecimento de plataforma integrada de gestão de recursos humanos, na modalidade software como serviço…
+💰 *R$ 3,4 mi* · 📦 *26.972 UST*
+📅 Encerra 04/12 08:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/44413680000140/2026/77
+
+*11. Tribunal de Justica do Estado de Mato Grosso* (Cuiabá/MT)
+Contratação de empresa especializada para o fornecimento de solução tecnológica para Gestão, Replicação e Governança de Dados, composta por…
+💰 *R$ 4,8 mi* · 📦 *1.000 UST*
+📅 Encerra 14/12 10:30 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/03535606000110/2026/161
+
+*12. Estado da Bahia* (Salvador/BA)
+Contratação de Prestação de Serviços Técnicos de Atendimento e Suporte ao Usuário em 1º Nível e 2º Nível e operação da Central de Serviços de TIC,…
+💰 *R$ 1,6 mi* · 📦 *174.473 UST*
+📅 Encerra 30/11 10:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/13937032000160/2026/3060
+
+————————————
+
+*💻 DESENVOLVIMENTO E SUSTENTAÇÃO DE SOFTWARE*
+4 abertas · soma estimada R$ 112 mil · as 4 melhores:
+
+*1. Servico de Apoio As Micro e Pequenas Empresas do Parana - Sebrae/Pr* (Curitiba/PR)
+Contratação de serviços especializados de TI para suporte a usuários, sustentação de ambientes tecnológicos, manutenção e desenvolvimento de…
+💰 *R$ 46 mil*
+📅 Encerra 30/11 09:30 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/75110585000100/2026/20
+
+*2. Banco do Nordeste do Brasil* (Fortaleza/CE)
+Contratação de subscrição Redis Enterprise como solução corporativa de banco de dados em memória, com suporte técnico, assistência especializada e…
+💰 *sigiloso*
+📅 Encerra 30/11 09:59 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/07237373000120/2026/92
+
+*3. Universidade Estadual de Montes Claros* (Montes Claros/MG)
+SOLUÇÕES DE INTELIGÊNCIA ARTIFICIAL (SaaS/PaaS) PARA AUTOMAÇÃO, APOIO ADMINISTRATIVO E DESENVOLVIMENTO DE SOFTWARE, E HOSPEDAGEM EM NUVEM (CLOUD…
+💰 *R$ 66 mil*
+📅 Encerra 01/12 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/22675359000100/2026/97
+
+*4. Municipio de Medicilandia* (Medicilândia/PA)
+Contratação de empresa especializada em desenvolvimento de sistemas informatizados de gestão em Saúde aplicado exclusivamente ao setor público, para…
+💰 *sigiloso*
+📅 Encerra 27/11 14:00 ⚠️ · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/34593525000108/2026/46
+
+————————————
+
+*📆 FIXO MENSAL DE TI (locação/licença/SaaS)*
+299 abertas · soma estimada R$ 773,6 mi · as 8 melhores:
+
+*1. Tribunal de Justica do Estado de Minas Gerais* (Belo Horizonte/MG)
+Contratação de solução de computação em nuvem pública, em modelo multinuvem, abrangendo, sob demanda e conforme necessidade do Tribunal.
+💰 *R$ 145,1 mi* · 📦 *21.600 horas*
+📅 Encerra 11/12 14:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/21154554000113/2026/566
+
+*2. Municipio de Vila Velha* (Vila Velha/ES)
+Registro de preços, visando a eventual e futura contratação de empresa especializada em locação de sistema de gestão, atendimento, despacho e…
+💰 *R$ 108,7 mi*
+📅 Encerra 04/12 10:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/27165554000103/2026/238
+
+*3. Consorcio Intermunicipal de Seguranca Publica e Cidadania de Londrina e Regiao* (Rolândia/PR)
+locação, de sistema integrado para gerenciamento de processos e análises, abrangendo todas as licenças, equipamentos e serviços necessários para a…
+💰 *R$ 71,3 mi*
+📅 Encerra 04/12 08:59 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/11274930000150/2026/22
+
+*4. Municipio de Jacarei* (Jacareí/SP)
+CONTRATAÇÃO DE LICENÇA DE USO DE SOFTWARES E DE SERVIÇOS TÉCNICOS ESPECIALIZADOS PARA FORNECIMENTO DE SISTEMAS INTEGRADOS DE INFORMÁTICA DESTINADOS À…
+💰 *R$ 18,4 mi* · 📦 *3.600 horas* · 🗓️ R$ 393 mil/mês × 36 meses
+📅 Encerra 30/11 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/46694139000183/2026/1048
+
+*5. Tribunal de Justica do Estado de Mato Grosso* (Cuiabá/MT)
+Registro de Preços para contratação de subscrições de licenças de software para virtualização da infraestrutura de Tecnologia de Informação e…
+💰 *R$ 37,9 mi*
+📅 Encerra 15/12 10:30 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/03535606000110/2026/162
+
+*6. Municipio de Fortaleza* (Fortaleza/CE)
+CONSTITUI OBJETO DA PRESENTE LICITAÇÃO O REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇO DE…
+💰 *R$ 28,4 mi*
+📅 Encerra 04/12 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/07954605000160/2026/1113
+
+*7. Fundacao Municipal Para Educacao Comunitaria-Fumec-* (Campinas/SP)
+Contratação de licenças de software, na modalidade de assinatura, de Claude Team (Anthropic), Google AI Pro for Education, Office 365 A5 for faculty…
+💰 *R$ 12,2 mi*
+📅 Encerra 15/12 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/57500902000104/2026/100
+
+*8. Municipio de Mimoso do Sul* (Mimoso do Sul/ES)
+contratacao de empresa especializada para prestacao de servicos de cessao de uso de softwares para Gestao Publica, bem como servicos de migracao,…
+💰 *R$ 3,5 mi* · 📦 *2.386 horas* · 🗓️ R$ 194 mil/mês × 12 meses
+📅 Encerra 14/12 08:30 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/27174119000137/2026/140
+
+————————————
+
+*🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+150 abertas · soma estimada R$ 377,7 mi · as 8 melhores:
+
+*1. Ministerio da Educacao* (Brasília/DF)
+"Contratação de serviços de apoio técnico e especializado em atividades de Tecnologia da Informação e Comunicação, para atendimento às necessidades…
+💰 *R$ 50,1 mi*
+📅 Encerra 09/12 09:30 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/00394445000101/2026/293
+
+*2. Comando do Exercito* (Brasília/DF)
+Registro de preços para eventual contratação de solução de Tecnologia da Informação e Comunicação (TIC) para a expansão de capacidade de hospedagem…
+💰 *R$ 59,6 mi*
+📅 Encerra 02/12 10:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/00394452000103/2026/24386
+
+*3. Fundacao Jorge Duprat Figueiredo, de Seguranca e Medicina do Trabalho* (São Paulo/SP)
+Contratação de serviços de sustentação de infraestrutura e service desk para a Sede/CTN e EAs
+💰 *R$ 16,2 mi* · 🗓️ R$ 76 mil/mês × 48 meses
+📅 Encerra 08/12 10:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/62428073000136/2026/29
+
+*4. Secretaria da Fazenda e Planejamento* (São Paulo/SP)
+Contratação de serviços de Suporte Técnico, manutenção, atualização tecnológica e Banco de Horas relativo ao software de Banco de Dados Sybase/Sap IQ…
+💰 *R$ 17,0 mi*
+📅 Encerra 07/12 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/46377222000129/2026/409
+
+*5. Municipio de Sumare* (Sumaré/SP)
+CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA IMPLANTAÇÃO, OPERAÇÃO E GESTÃO DE SOLUÇÃO INTEGRADA DE CONECTIVIDADE E COMUNICAÇÕES, INCLUINDO INTERNET,…
+💰 *R$ 15,3 mi*
+📅 Encerra 09/12 08:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/45787660000100/2026/354
+
+*6. Comissao Nacional de Energia Nuclear* (São Paulo/SP)
+Registro de Preços para futura e eventual contratação de solução integrada de infraestrutura de Tecnologia da Informação e Comunicação no modelo…
+💰 *R$ 13,2 mi*
+📅 Encerra 10/12 08:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/00402552000126/2026/692
+
+*7. Municipio de Vitoria* (Vitória/ES)
+REGISTRO DE PREÇOS VISANDO A CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇOS CONTINUADOS DE IMPRESSÃO CORPORATIVA — OUTSOURCING DE…
+💰 *R$ 27,4 mi*
+📅 Encerra 04/12 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/27142058000126/2026/736
+
+*8. Municipio de Tiete* (Tietê/SP)
+Serviço de implantação, operação e gestão de solução integrada de conectividade e comunicação
+💰 *R$ 9,9 mi*
+📅 Encerra 04/12 08:45 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/46634598000171/2026/529
+
+————————————
+
+*📄 DIGITALIZAÇÃO E GESTÃO DOCUMENTAL*
+34 abertas · soma estimada R$ 82,3 mi · as 8 melhores:
+
+*1. Consorcio Intermunicipal da Regiao Oeste Metropolitana de Sao Paulo* (Barueri/SP)
+REGISTRO DE PREÇOS PARA CONTRATAÇÃO COMPARTILHADA DE SOLUÇÃO INTEGRADA DE GESTÃO DOCUMENTAL FÍSICA E DIGITAL, EM LOTE ÚNICO, PARA ATENDER AOS…
+💰 *R$ 74,2 mi*
+📅 Encerra 07/12 09:45 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/20301484000116/2026/51
+
+*2. Comando do Exercito* (Porto Alegre/RS)
+SERVIÇOS DE ORGANIZAÇÃO, DIGITALIZAÇÃO E INDEXAÇÃO DE ACERVO ARQUIVÍSTICO
+💰 *R$ 601 mil* · 📦 *4.868.224 páginas*
+📅 Encerra 03/12 10:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/00394452000103/2026/24731
+
+*3. Conselho Regional dos Corretores de Imoveis 14 Regiao* (Campo Grande/MS)
+Contratação de empresa especializada em coleta, organização, guarda gerenciada, digitalização e armazenamento virtual de documentos/processos…
+💰 *R$ 551 mil* · 📦 *17.481 páginas*
+📅 Encerra 03/12 10:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/03979572000152/2026/37
+
+*4. Estado do Ceara* (Fortaleza/CE)
+O objeto da licitação é a prestação dos serviços especializados em armazenamento, digitalização e fornecimento de solução tecnológica necessária à…
+💰 *sigiloso* · 📦 *45.282.600 páginas*
+📅 Encerra 18/12 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/07954480000179/2026/27654
+
+*5. Secretaria de Estado da Seguranca Publica* (Curitiba/PR)
+Prestacao de servico de gravacao e revelacao de microfilmes com microfilme incluso para 924.213 imagens de documentos digitalizadas em formato TIFF…
+💰 *R$ 129 mil* · 📦 *924.213 páginas*
+📅 Encerra 10/12 09:30 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/76416932000181/2026/438
+
+*6. Estado do Ceara* (Fortaleza/CE)
+CONTRATAÇÃO SERVIÇOS DE GUARDA E DE CONSULTA A DOCUMENTOS FÍSICOS OU DIGITALIZADOS
+💰 *sigiloso* · 📦 *12.066.000 páginas*
+📅 Encerra 01/12 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/07954480000179/2026/26886
+
+*7. Empresa Brasileira de Pesquisa Agropecuaria* (Brasília/DF)
+Contratação, sob demanda, de empresa especializada na prestação de serviços técnicos de digitalização, tratamento de imagens e conversão de texto via…
+💰 *sigiloso* · 📦 *450.000 páginas*
+📅 Encerra 02/12 09:00 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/00348003000110/2026/1577
+
+*8. Camara Municipal de Chavantes* (Chavantes/SP)
+Registro de preços para eventual e futura contratação de empresa especializada na prestação de serviços de digitalização do acervo documental físico…
+💰 *R$ 70 mil* · 📦 *251.700 páginas*
+📅 Encerra 08/12 09:30 · Pregão - Eletrônico
+🔗 https://pncp.gov.br/app/editais/01638918000123/2026/164
