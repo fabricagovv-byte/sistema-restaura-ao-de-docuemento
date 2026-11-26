@@ -118,6 +118,7 @@ section.panel, #lista { scroll-margin-top: 56px; }
 .br-temas-tit { margin: 0 0 8px; color: var(--muted, inherit); font-size: .92rem; }
 .br-temas-tit b { color: var(--accent); }
 .br-temas button b { margin-left: 4px; }
+.br-temas button small { margin-left: 4px; font-size: .78em; opacity: .8; } .br-temas button small.velha { color: var(--warn); opacity: 1; font-weight: 700; }
 .br-nota { padding: 1px 8px; border-radius: 999px; font-weight: 800; white-space: nowrap; background: var(--warn-bg); color: var(--warn); font-variant-numeric: tabular-nums; }
 .br-vol { margin: 4px 0 0; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
 .br-temas-dela { display: flex; flex-wrap: wrap; gap: 4px; }
@@ -472,6 +473,7 @@ label.marca { display: inline-flex; gap: 6px; align-items: center; text-transfor
       <label for="br-mod">Modalidade<select id="br-mod"><option value="">Todas</option></select></label>
       <label for="br-portal">Portal<select id="br-portal"><option value="">Todos</option></select></label>
       <label for="br-vmin">Valor mínimo<select id="br-vmin"><option value="0">Qualquer</option><option value="100000">R$ 100 mil</option><option value="1000000">R$ 1 milhão</option><option value="5000000">R$ 5 milhões</option><option value="10000000">R$ 10 milhões</option><option value="50000000">R$ 50 milhões</option></select></label>
+      <label for="br-rec">Mais recentes<select id="br-rec"><option value="90">Abriu nos últimos 90 dias</option><option value="30">Abriu nos últimos 30 dias</option><option value="7">Abriu nos últimos 7 dias</option><option value="2">Novas (últimos 2 dias)</option><option value="0">Qualquer data (inclui antigas)</option></select></label>
       <label for="br-dias">Encerra em<select id="br-dias"><option value="0">Qualquer prazo</option><option value="3">até 3 dias</option><option value="7">até 7 dias</option><option value="15">até 15 dias</option><option value="30">até 30 dias</option></select></label>
       <label for="br-ord">Ordenar<select id="br-ord"><option value="prazo">Prazo mais próximo</option><option value="nota">Melhores do tema (nota)</option><option value="valor">Maior valor</option><option value="recente">Prazo mais distante</option><option value="perto">Mais perto da cidade</option></select></label>
     </div>
@@ -1338,6 +1340,7 @@ function renderPesquisa() {
   renderBuscas(); renderPesquisa();
 })();
 (function brasil() {
+  let antigas = 0;
   let BR = null, lim = 50, assunto = "", soPregao = false, tema = "", TEM = null;
   const temaDe = (c) => { if (!BR || !BR.temas) return null; if (tema) return BR.temas[tema]?.itens[c] || null; for (const k in BR.temas) { const x = BR.temas[k].itens[c]; if (x) return x; } return null; };
   const PALAVRAS = {
@@ -1394,13 +1397,14 @@ function renderPesquisa() {
     opc("br-uf", cont(3).sort((a, b) => a[0].localeCompare(b[0])), 30);
     opc("br-mod", cont(4), 20);
     opc("br-portal", cont(9), 40);
+    const hj = new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
     const TM = BR.temas || {}, ag = new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 16), noPrazo = (k) => { const fim = new Map(R.map((r) => [r[0], r[7]])); return Object.keys(TM[k].itens).filter((c) => (fim.get(c) || "") > ag).length; };
-    $("br-temas").innerHTML = Object.keys(TM).length ? `<button type="button" aria-pressed="true" data-tema="">Todas</button>` + Object.entries(TM).map(([k, x]) => `<button type="button" aria-pressed="false" data-tema="${esc(k)}" title="Busca verificada em ${esc(data(x.verificado))}">${esc(x.nome)} <b>${fmt(noPrazo(k))}</b></button>`).join("") : '<span class="br-temas-tit">Busca do dia ainda não disponível nesta cópia.</span>';
+    $("br-temas").innerHTML = Object.keys(TM).length ? `<button type="button" aria-pressed="true" data-tema="">Todas</button>` + Object.entries(TM).map(([k, x]) => `<button type="button" aria-pressed="false" data-tema="${esc(k)}" title="Busca verificada em ${esc(data(x.verificado))}">${esc(x.nome)} <b>${fmt(noPrazo(k))}</b> <small class="${x.verificado.slice(0, 10) < hj ? "velha" : ""}">${x.verificado.slice(0, 10) < hj ? "de " + esc(data(x.verificado).slice(0, 5)) : "hoje " + esc(x.verificado.slice(11, 16))}</small></button>`).join("") : '<span class="br-temas-tit">Busca do dia ainda não disponível nesta cópia.</span>';
     const as = cont(10);
     $("br-assuntos").innerHTML = `<button type="button" aria-pressed="true" data-as="">Todos (${fmt(R.length)})</button>` + as.map(([k, n]) => `<button type="button" aria-pressed="false" data-as="${esc(k)}">${esc(k)} (${fmt(n)})</button>`).join("");
     const nAvir = R.filter((r) => r[12] > new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 16)).length;
     $("br-sit").options[2].textContent = `A vir — propostas ainda não começaram (${fmt(nAvir)})`;
-    $("br-sit").options[3].textContent = `Previstas no plano de compras, sem edital — TI (${fmt((BR.previstas || []).length)})`;
+    $("br-sit").options[3].textContent = `Previstas no plano de compras, sem edital — TI (${fmt((BR.previstas || []).filter((x) => !x.data || `${x.data.slice(6, 10)}-${x.data.slice(3, 5)}-${x.data.slice(0, 2)}` >= hj).length)})`;
     $("br-lede").textContent = `${fmt(R.length)} licitações com prazo aberto no Brasil (${fmt(nAvir)} ainda vão abrir as propostas), de todos os assuntos (PNCP, verificado em ${BR.verificado_em.slice(8, 10)}/${BR.verificado_em.slice(5, 7)} às ${BR.verificado_em.slice(11, 16)}). Inclui o que os portais parceiros publicam no PNCP.`;
   }
   function filtrados() {
@@ -1410,9 +1414,11 @@ function renderPesquisa() {
     const reg = $("br-regiao").value, ufsReg = reg ? new Set(REGIAO[reg].split(" ")) : null;
     const pals = [...marcadas].map((w) => { const s = semAc(w).trim(); return s.length <= 4 ? new RegExp("(^|[^a-z0-9])" + s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "([^a-z0-9]|$)") : s; });
     const agoraTxt = new Date(agora - 3 * 3600e3).toISOString().slice(0, 16);
-    const out = [];
+    const rec = +$("br-rec").value, desde = rec ? new Date(agora - 3 * 3600e3 - rec * 864e5).toISOString().slice(0, 10) : "";
+    const out = []; antigas = 0;
     BR.registros.forEach((r, i) => {
       if (r[7] <= agoraTxt) return;  // venceu depois da coleta: some sozinho
+      if (desde && r[12] && r[12] < desde) { antigas++; return; }
       if (sit === "abertas" && r[12] > agoraTxt) return; if (sit === "avir" && !(r[12] > agoraTxt)) return;
       if (soPregao && !/preg/i.test(r[4])) return;
       if (uf && r[3] !== uf) return; if (mod && r[4] !== mod) return; if (portal && r[9] !== portal) return;
@@ -1470,7 +1476,8 @@ function renderPesquisa() {
     $("br-lista").querySelectorAll(".br-ficha").forEach((li) => li.classList.toggle("ativa", +li.dataset.i === +i));
   }
   function renderPrevistas() {
-    const P = (BR.previstas || []), q = semAc($("br-q").value), uf = $("br-uf").value;
+    const hj = new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10), iso = (d) => d ? `${d.slice(6, 10)}-${d.slice(3, 5)}-${d.slice(0, 2)}` : "9999";
+    const P = (BR.previstas || []).filter((x) => iso(x.data) >= hj), q = semAc($("br-q").value), uf = $("br-uf").value;
     const r = P.filter((x) => (!uf || x.uf === uf) && (!q || semAc(`${x.orgao} ${x.unidade} ${x.nome}`).includes(q)));
     conta(`${fmt(r.length)} contratações previstas no plano anual (PCA) de órgãos que compram TI — ainda sem edital publicado. Data = quando o órgão quer contratar.`);
     $("br-previa").innerHTML = '<p class="br-previa-vazia">Previstas no plano de compras ainda não têm edital; use o link do plano oficial.</p>';
@@ -1483,7 +1490,7 @@ function renderPesquisa() {
     if (!BR) return;
     if ($("br-sit").value === "previstas") return renderPrevistas();
     const r = filtrados(), soma = r.reduce((s, x) => s + vv(x), 0);
-    conta(`${fmt(r.length)} licitações · soma estimada ${mi(soma) || "R$ 0"}${r.length > lim ? ` · mostrando ${fmt(lim)}` : ""}`);
+    conta(`${fmt(r.length)} licitações · soma estimada ${mi(soma) || "R$ 0"}${r.length > lim ? ` · mostrando ${fmt(lim)}` : ""}${antigas ? ` · ${fmt(antigas)} antigas escondidas (abertas há mais tempo; mude em “Mais recentes”)` : ""}`);
     LISTA = r; fixada = null;
     $("br-lista").innerHTML = r.slice(0, lim).map((x, i) => item(x, i)).join("");
     if (r.length) mostrarPrevia(0); else $("br-previa").innerHTML = '<p class="br-previa-vazia">Nenhuma licitação com esses filtros.</p>';
@@ -1506,7 +1513,7 @@ function renderPesquisa() {
   $("br-pregoes").addEventListener("click", (e) => { soPregao = !soPregao; e.currentTarget.setAttribute("aria-pressed", String(soPregao)); lim = 50; render(); });
   $("br-perto").addEventListener("change", () => { lim = 50; try { localStorage.setItem("br-perto", $("br-perto").value); } catch (e) {} render(); });
   try { const v = localStorage.getItem("br-perto"); if (v) $("br-perto").value = v; } catch (e) {}
-  ["br-sit", "br-uf", "br-mod", "br-portal", "br-vmin", "br-dias", "br-ord"].forEach((id) => $(id).addEventListener("change", () => { lim = 50; render(); }));
+  ["br-rec", "br-sit", "br-uf", "br-mod", "br-portal", "br-vmin", "br-dias", "br-ord"].forEach((id) => $(id).addEventListener("change", () => { lim = 50; render(); }));
   $("br-assuntos").addEventListener("click", (e) => { const b = e.target.closest("[data-as]"); if (!b) return; assunto = b.dataset.as; lim = 50;
     $("br-assuntos").querySelectorAll("[data-as]").forEach((c) => c.setAttribute("aria-pressed", String(c === b))); render(); });
   $("br-temas").addEventListener("click", (e) => { const b = e.target.closest("[data-tema]"); if (!b) return; tema = b.dataset.tema; TEM = tema ? BR.temas[tema].itens : null; lim = 50;
@@ -1544,6 +1551,7 @@ function renderPesquisa() {
   if (io) io.observe($("br-sec")); else carregar();
   document.querySelector('a[href="#br-sec"]')?.addEventListener("click", carregar);
 })();
+
 
 
 function renderBuscas() {
