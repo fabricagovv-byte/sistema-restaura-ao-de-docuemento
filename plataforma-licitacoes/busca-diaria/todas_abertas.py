@@ -19,7 +19,32 @@ def norm(s):
     return unicodedata.normalize("NFKD", (s or "").lower()).encode("ascii", "ignore").decode()
 
 
+FONTE = __import__("os").environ.get("FONTE", "search")  # "consulta" = API oficial /consulta (quando a busca do PNCP cai)
+ATE = __import__("os").environ.get("CONSULTA_ATE", "2027-12-31")
+
+
+def de_consulta(x):
+    """Registro da API de consulta no mesmo formato da busca (para o resto do sistema não mudar)."""
+    o, u = x.get("orgaoEntidade") or {}, x.get("unidadeOrgao") or {}
+    return {"numero_controle_pncp": x.get("numeroControlePNCP"), "description": x.get("objetoCompra"), "orgao_cnpj": o.get("cnpj"),
+            "orgao_nome": o.get("razaoSocial"), "unidade_nome": u.get("nomeUnidade"), "municipio_nome": u.get("municipioNome"),
+            "uf": u.get("ufSigla"), "codigo_ibge": u.get("codigoIbge"), "numero_sequencial": str(x.get("sequencialCompra")),
+            "ano": str(x.get("anoCompra")), "modalidade_licitacao_nome": x.get("modalidadeNome"), "esfera_id": o.get("esferaId"),
+            "data_publicacao_pncp": x.get("dataPublicacaoPncp"), "data_inicio_vigencia": x.get("dataAberturaProposta"),
+            "data_fim_vigencia": x.get("dataEncerramentoProposta"), "valor_total_estimado": x.get("valorTotalEstimado"),
+            "indicador_orcamento_sigiloso": False, "usuario_nome": x.get("usuarioNome"), "cancelado": False,
+            "situacao_nome": x.get("situacaoCompraNome"), "link_sistema_origem": x.get("linkSistemaOrigem")}
+
+
 def buscar_uf(uf):
+    if FONTE == "consulta":
+        r = subprocess.run(["pncp", "consulta", "propostas", "--ate", ATE, "--uf", uf, "--all", "--tam", "50", "--ndjson", "-q",
+                            "--pausa", "0.3", "--retries", "8", "--timeout", "120"], capture_output=True, text=True, timeout=5400)
+        linhas = [de_consulta(json.loads(x)) for x in r.stdout.splitlines() if x.strip()]
+        linhas = [d for d in linhas if (d.get("situacao_nome") or "Divulgada").startswith("Divulgada")]
+        open(f"{SAIDA}.{uf}.ndjson", "w").write("".join(json.dumps(d, ensure_ascii=False) + "\n" for d in linhas))
+        print(uf, len(linhas), "(consulta)", file=sys.stderr, flush=True)
+        return linhas
     r = subprocess.run(["pncp", "search", "--tipo", "edital", "--status", "recebendo_proposta", "--uf", uf, "--all", "--limit", "10000",
                         "--ndjson", "-q", "--pausa", "0.2"], capture_output=True, text=True, timeout=3600)
     linhas = [json.loads(x) for x in r.stdout.splitlines() if x.strip()]
