@@ -37,8 +37,11 @@ rep('''  <section class="panel" id="cal-sec" aria-labelledby="h-cal">''', '''  <
     <div class="acoes"><button type="button" class="mais" id="br-pregoes" aria-pressed="false">Só pregões</button><button type="button" class="abrir" id="br-copiar">Copiar os 40 primeiros para o WhatsApp</button>
       <button type="button" class="mais" id="br-csv">Baixar planilha com todas as filtradas (CSV)</button></div>
     <p class="conta" id="br-conta" aria-live="polite">Carregando a lista do Brasil…</p>
-    <ol class="pesq-lista" id="br-lista"></ol>
-    <button type="button" class="mais" id="br-mais" hidden>Mostrar mais</button>
+    <div class="br-corpo">
+      <div class="br-coluna"><ol class="br-lista" id="br-lista"></ol>
+        <button type="button" class="mais" id="br-mais" hidden>Mostrar mais</button></div>
+      <aside class="br-previa" id="br-previa" aria-live="polite" aria-label="Prévia da licitação"><p class="br-previa-vazia">Passe o mouse (ou toque) numa licitação para ver a prévia aqui.</p></aside>
+    </div>
   </section>
   <section class="panel" id="cal-sec" aria-labelledby="h-cal">''')
 
@@ -114,6 +117,7 @@ JS = r'''
     const agoraTxt = new Date(agora - 3 * 3600e3).toISOString().slice(0, 16);
     const out = [];
     BR.registros.forEach((r, i) => {
+      if (r[7] <= agoraTxt) return;  // venceu depois da coleta: some sozinho
       if (sit === "abertas" && r[12] > agoraTxt) return; if (sit === "avir" && !(r[12] > agoraTxt)) return;
       if (soPregao && !/preg/i.test(r[4])) return;
       if (uf && r[3] !== uf) return; if (mod && r[4] !== mod) return; if (portal && r[9] !== portal) return;
@@ -130,18 +134,47 @@ JS = r'''
     else if (o === "valor") out.sort((a, b) => vv(b) - vv(a)); else if (o === "recente") out.sort((a, b) => b[7].localeCompare(a[7])); else out.sort((a, b) => a[7].localeCompare(b[7]));
     return out;
   }
-  function item(r) {
-    const alvo = geoCidade($("br-perto").value), d = distR(r, alvo);
-    return `<li><div class="topo"><b>${esc(r[1])}</b><span>${esc(r[2])}/${esc(r[3])}</span>${d != null ? `<span class="dist">📍 ${Math.round(d)} km</span>` : ""}</div>
-      <p>${esc(r[8])}</p>
-      <div class="linha"><span><strong>${esc(val(r))}</strong></span>${r[12] && r[12] > new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 16) ? `<span>🔜 Abre <strong>${esc(data(r[12]))}</strong></span>` : ""}<span>Até <strong>${esc(data(r[7]))}</strong></span><span>${esc(r[4])}</span><span>${esc(r[10])}</span>${r[9] ? `<span>${esc(r[9])}</span>` : ""}</div>
-      <div class="links"><a href="${link(r[0])}" target="_blank" rel="noopener">Abrir no PNCP</a></div></li>`;
+  const agoraTxt = () => new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 16);
+  let LISTA = [];
+  function prazo(r) {
+    const fim = new Date(r[7]), dias = (fim - Date.now()) / 864e5;
+    if (r[12] && r[12] > agoraTxt()) return ["avir", `🔜 abre ${data(r[12]).slice(0, 5)}`];
+    if (dias < 1) return ["hoje", `⏳ ${Math.max(0, Math.round(dias * 24))} h · ${data(r[7]).slice(6)}`];
+    if (dias < 3) return ["perto", `⏳ ${Math.ceil(dias)} dias · ${data(r[7]).slice(0, 5)}`];
+    return ["", `${Math.ceil(dias)} dias · ${data(r[7]).slice(0, 5)}`];
+  }
+  function item(r, i) {
+    const alvo = geoCidade($("br-perto").value), d = distR(r, alvo), [cl, pz] = prazo(r);
+    return `<li class="br-ficha" tabindex="0" data-i="${i}"><div class="br-cab"><span class="br-prazo ${cl}">${esc(pz)}</span><span class="br-tag assunto">${esc(r[10])}</span><span class="br-tag">${esc(r[4])}</span></div>
+      <h4>${esc(r[1])}</h4><p class="br-obj">${esc(r[8])}</p>
+      <div class="br-pe"><span class="br-valor">${esc(val(r))}</span><span>${esc(r[2])}/${esc(r[3])}${d != null ? ` · 📍 ${Math.round(d)} km` : ""}</span><a href="${link(r[0])}" target="_blank" rel="noopener">PNCP ↗</a></div></li>`;
+  }
+  function previa(r) {
+    const alvo = geoCidade($("br-perto").value), d = distR(r, alvo), ini = r[12] ? new Date(r[12]) : null, fim = new Date(r[7]);
+    const pct = ini ? Math.max(0, Math.min(100, (Date.now() - ini) / Math.max(1, fim - ini) * 100)) : 0, [, pz] = prazo(r);
+    return `<div class="br-prev"><p class="eyebrow">${esc(r[10])} · ${esc(r[4])}</p><h3>${esc(r[1])}</h3>
+      <div class="grande">${esc(val(r))}</div>
+      <div class="br-linha-tempo"><span>Abre ${esc(ini ? data(r[12]) : "—")}</span><span class="barra"><i style="width:${pct.toFixed(0)}%"></i></span><span style="text-align:right">Fecha ${esc(data(r[7]))}</span></div>
+      <p><strong>${esc(pz)}</strong></p>
+      <p>${esc(r[8])}${r[8].length >= 168 ? "…" : ""}</p>
+      <dl class="br-campos"><dt>Local</dt><dd>${esc(r[2])}/${esc(r[3])}${d != null ? ` · ${Math.round(d)} km de ${esc($("br-perto").value)}` : ""}</dd>
+        <dt>Portal</dt><dd>${esc(r[9] || "não informado")}</dd><dt>Esfera</dt><dd>${esc({ M: "Municipal", E: "Estadual", F: "Federal", D: "Distrital" }[r[11]] || "—")}</dd>
+        <dt>Nº PNCP</dt><dd>${esc(r[0])}</dd></dl>
+      <div class="br-acoes"><a class="prim" href="${link(r[0])}" target="_blank" rel="noopener">Abrir edital no PNCP ↗</a><button type="button" data-copiar="1">Copiar p/ WhatsApp</button></div></div>`;
+  }
+  let fixada = null;
+  function mostrarPrevia(i, fixar) {
+    const r = LISTA[+i]; if (!r) return;
+    if (fixar) fixada = +i;
+    $("br-previa").innerHTML = previa(r);
+    $("br-lista").querySelectorAll(".br-ficha").forEach((li) => li.classList.toggle("ativa", +li.dataset.i === +i));
   }
   function renderPrevistas() {
     const P = (BR.previstas || []), q = semAc($("br-q").value), uf = $("br-uf").value;
     const r = P.filter((x) => (!uf || x.uf === uf) && (!q || semAc(`${x.orgao} ${x.unidade} ${x.nome}`).includes(q)));
     conta(`${fmt(r.length)} contratações previstas no plano anual (PCA) de órgãos que compram TI — ainda sem edital publicado. Data = quando o órgão quer contratar.`);
-    $("br-lista").innerHTML = r.slice(0, lim).map((x) => `<li><div class="topo"><b>${esc(x.unidade || x.orgao)}</b><span>${esc(x.orgao)}</span></div>
+    $("br-previa").innerHTML = '<p class="br-previa-vazia">Previstas no plano de compras ainda não têm edital; use o link do plano oficial.</p>';
+    $("br-lista").innerHTML = r.slice(0, lim).map((x) => `<li class="br-ficha"><div class="topo"><b>${esc(x.unidade || x.orgao)}</b><span>${esc(x.orgao)}</span></div>
       <p>${esc(x.nome)}</p><div class="linha"><span><strong>${esc(mi(x.valor) || "valor não informado")}</strong></span><span>Previsto para <strong>${esc(x.data)}</strong></span><span>PCA ${esc(x.ano)}</span></div>
       <div class="links">${x.publicado ? `<a href="${esc(x.publicado)}" target="_blank" rel="noopener">Publicação relacionada</a>` : ""}<a href="${esc(x.pca)}" target="_blank" rel="noopener">Plano oficial (PNCP)</a></div></li>`).join("");
     $("br-mais").hidden = r.length <= lim;
@@ -151,7 +184,9 @@ JS = r'''
     if ($("br-sit").value === "previstas") return renderPrevistas();
     const r = filtrados(), soma = r.reduce((s, x) => s + vv(x), 0);
     conta(`${fmt(r.length)} licitações · soma estimada ${mi(soma) || "R$ 0"}${r.length > lim ? ` · mostrando ${fmt(lim)}` : ""}`);
-    $("br-lista").innerHTML = r.slice(0, lim).map(item).join("");
+    LISTA = r; fixada = null;
+    $("br-lista").innerHTML = r.slice(0, lim).map((x, i) => item(x, i)).join("");
+    if (r.length) mostrarPrevia(0); else $("br-previa").innerHTML = '<p class="br-previa-vazia">Nenhuma licitação com esses filtros.</p>';
     $("br-mais").hidden = r.length <= lim;
   }
   function whats() {
@@ -175,6 +210,24 @@ JS = r'''
   $("br-assuntos").addEventListener("click", (e) => { const b = e.target.closest("[data-as]"); if (!b) return; assunto = b.dataset.as; lim = 50;
     $("br-assuntos").querySelectorAll("[data-as]").forEach((c) => c.setAttribute("aria-pressed", String(c === b))); render(); });
   $("br-mais").addEventListener("click", () => { lim += 100; render(); });
+  // prévia: passar o mouse/focar mostra ao lado; tocar (celular) abre dentro da ficha; clicar fixa
+  $("br-lista").addEventListener("mouseover", (e) => { const li = e.target.closest(".br-ficha"); if (li && fixada == null) mostrarPrevia(li.dataset.i); });
+  $("br-lista").addEventListener("focusin", (e) => { const li = e.target.closest(".br-ficha"); if (li) mostrarPrevia(li.dataset.i); });
+  $("br-lista").addEventListener("click", (e) => {
+    if (e.target.closest("a")) return; const li = e.target.closest(".br-ficha"); if (!li) return;
+    if (e.target.closest("[data-copiar]")) return;
+    if (!LISTA[+li.dataset.i] || li.dataset.i === undefined) return;
+    mostrarPrevia(li.dataset.i, true);
+    const dentro = li.querySelector(".br-prev");
+    if (dentro) dentro.remove(); else li.insertAdjacentHTML("beforeend", previa(LISTA[+li.dataset.i]));
+  });
+  $("br-lista").addEventListener("keydown", (e) => { if (e.key === "Enter" && e.target.classList.contains("br-ficha")) e.target.click(); });
+  document.getElementById("br-sec").addEventListener("click", async (e) => {
+    const b = e.target.closest("[data-copiar]"); if (!b) return; e.stopPropagation();
+    const li = b.closest(".br-ficha"), r = li ? LISTA[+li.dataset.i] : LISTA[fixada ?? 0]; if (!r) return;
+    const t = `*${r[1]}* (${r[3]}) · ${r[8].slice(0, 120)}\n💰 *${val(r)}* · 📅 ${data(r[7])}\n🔗 ${link(r[0])}`;
+    try { await navigator.clipboard.writeText(t); b.textContent = "Copiado ✓"; } catch (err) { b.textContent = "Não deu para copiar aqui"; }
+  });
   $("br-copiar").addEventListener("click", async () => { if (!BR) return; const t = whats();
     try { await navigator.clipboard.writeText(t); conta("Copiado. Cole no WhatsApp."); } catch (e) { conta("Não deu para copiar automaticamente neste navegador."); } });
   $("br-csv").addEventListener("click", () => { if (!BR) return;
