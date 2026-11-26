@@ -17,9 +17,14 @@ rep('''  <section class="panel" id="cal-sec" aria-labelledby="h-cal">''', '''  <
     <h2 id="h-br">Brasil — todas as licitações abertas</h2>
     <p class="lede" id="br-lede">Todas as licitações com proposta aberta no país, de todos os assuntos, direto do PNCP (inclui o que os portais parceiros publicam lá).</p>
     <div class="chips" id="br-assuntos" role="group" aria-label="Assunto"></div>
+    <details class="br-palavras" id="br-palavras-box" open><summary><b>Palavras-chave</b> <span id="br-pal-resumo">(toque para escolher; vale qualquer uma das marcadas)</span></summary>
+      <div id="br-palavras"></div>
+      <div class="br-pal-nova"><input id="br-pal-input" type="text" placeholder="Criar palavra-chave (ex.: fábrica de software)" aria-label="Nova palavra-chave"><button type="button" class="mais" id="br-pal-add">Adicionar</button><button type="button" class="mais" id="br-pal-limpar">Limpar marcadas</button></div>
+    </details>
     <div class="pesq-filtros">
       <label for="br-sit">Situação<select id="br-sit"><option value="">Todas com edital</option><option value="abertas">Propostas já abertas</option><option value="avir">A vir (propostas ainda não começaram)</option><option value="previstas">Previstas no plano de compras (sem edital, TI)</option></select></label>
       <label for="br-q">Palavra no objeto, órgão ou cidade<input id="br-q" type="search" placeholder="ex.: digitalização, UST, merenda"></label>
+      <label for="br-regiao">Região<select id="br-regiao"><option value="">Brasil todo</option><option value="N">Norte</option><option value="NE">Nordeste</option><option value="CO">Centro-Oeste</option><option value="SE">Sudeste</option><option value="S">Sul</option></select></label>
       <label for="br-perto">Perto de (cidade)<input id="br-perto" list="br-cidades" placeholder="ex.: Alvorada de Minas - MG" autocomplete="off"><datalist id="br-cidades"></datalist></label>
       <label for="br-raio">Raio<select id="br-raio"><option value="0">Sem limite</option><option value="50">até 50 km</option><option value="100">até 100 km</option><option value="150">até 150 km</option><option value="200">até 200 km</option><option value="300">até 300 km</option></select></label>
       <label for="br-uf">UF<select id="br-uf"><option value="">Todas</option></select></label>
@@ -40,6 +45,25 @@ rep('''  <section class="panel" id="cal-sec" aria-labelledby="h-cal">''', '''  <
 JS = r'''
 (function brasil() {
   let BR = null, lim = 50, assunto = "", soPregao = false;
+  const PALAVRAS = {
+    "UST, PF e serviços de TI": ["UST", "unidade de serviço técnico", "ponto de função", "fábrica de software", "desenvolvimento de sistemas", "desenvolvimento de software", "sustentação", "manutenção de sistemas", "manutenção evolutiva", "horas técnicas", "alocação de profissionais", "outsourcing", "service desk", "suporte técnico", "help desk", "central de serviços", "testes de software", "business intelligence", "ciência de dados", "inteligência artificial", "banco de dados", "integração de sistemas", "transformação digital"],
+    "Sistemas, nuvem e fixo mensal": ["sistema de gestão", "gestão pública", "ERP", "software", "licença de uso", "locação de sistema", "SaaS", "software como serviço", "plataforma", "nuvem", "data center", "hospedagem", "backup", "segurança da informação", "firewall", "LGPD", "internet", "link dedicado", "rede lógica", "cabeamento", "portal", "aplicativo", "site", "mensal"],
+    "Gestão documental": ["digitalização", "indexação", "GED", "gestão documental", "gestão arquivística", "arquivo", "acervo", "microfilmagem", "guarda de documentos", "tratamento documental", "OCR", "escaneamento"],
+    "Consultoria e educação": ["consultoria", "assessoria", "governança", "PDTI", "capacitação", "treinamento", "EAD", "ensino a distância", "curso"],
+    "Obras e material de construção": ["obra", "pavimentação", "recapeamento", "calçamento", "reforma", "construção", "engenharia", "drenagem", "material de construção", "cimento", "areia", "brita", "tijolo", "bloquete", "material hidráulico", "material elétrico", "tinta", "telha", "madeira", "ferragens", "concreto", "asfalto"],
+    "Gráfica e comunicação": ["material gráfico", "serviços gráficos", "gráfica", "impressos", "impressão", "banner", "placa", "adesivo", "comunicação visual", "plotagem", "agenda", "carimbo", "panfleto", "cartilha"],
+    "Outros": ["veículo", "combustível", "pneu", "merenda", "gêneros alimentícios", "medicamento", "material hospitalar", "limpeza", "vigilância", "uniforme", "mobiliário", "equipamentos de informática", "computador", "notebook"],
+  };
+  const REGIAO = { N: "AC AM AP PA RO RR TO", NE: "AL BA CE MA PB PE PI RN SE", CO: "DF GO MS MT", SE: "ES MG RJ SP", S: "PR RS SC" };
+  let marcadas = new Set(), extras = [];
+  try { marcadas = new Set(JSON.parse(localStorage.getItem("br-pal") || "[]")); extras = JSON.parse(localStorage.getItem("br-pal-extra") || "[]"); } catch (e) {}
+  function salvarPal() { try { localStorage.setItem("br-pal", JSON.stringify([...marcadas])); localStorage.setItem("br-pal-extra", JSON.stringify(extras)); } catch (e) {} }
+  function desenharPal() {
+    const grupos = { ...PALAVRAS, ...(extras.length ? { "Minhas palavras": extras } : {}) };
+    $("br-palavras").innerHTML = Object.entries(grupos).map(([g, ws]) => `<h4>${esc(g)}</h4><div class="chips">` +
+      ws.map((w) => `<button type="button" data-pal="${esc(w)}" aria-pressed="${marcadas.has(w)}">${esc(w)}</button>`).join("") + `</div>`).join("");
+    $("br-pal-resumo").textContent = marcadas.size ? `${marcadas.size} marcada(s): ${[...marcadas].slice(0, 6).join(", ")}${marcadas.size > 6 ? "…" : ""}` : "(toque para escolher; vale qualquer uma das marcadas)";
+  }
   const $ = (id) => document.getElementById(id);
   const semAc = (s) => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   const link = (c) => { const m = /^(\d{14})-\d-(\d+)\/(\d{4})$/.exec(c); return m ? `https://pncp.gov.br/app/editais/${m[1]}/${m[3]}/${+m[2]}` : "https://pncp.gov.br/app/editais"; };
@@ -85,6 +109,8 @@ JS = r'''
     const q = semAc($("br-q").value).split(/\s+/).filter(Boolean), uf = $("br-uf").value, mod = $("br-mod").value, portal = $("br-portal").value;
     const vmin = +$("br-vmin").value, dias = +$("br-dias").value, agora = Date.now(), sit = $("br-sit").value;
     const alvo = geoCidade($("br-perto").value), raio = +$("br-raio").value;
+    const reg = $("br-regiao").value, ufsReg = reg ? new Set(REGIAO[reg].split(" ")) : null;
+    const pals = [...marcadas].map((w) => { const s = semAc(w).trim(); return s.length <= 4 ? new RegExp("(^|[^a-z0-9])" + s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "([^a-z0-9]|$)") : s; });
     const agoraTxt = new Date(agora - 3 * 3600e3).toISOString().slice(0, 16);
     const out = [];
     BR.registros.forEach((r, i) => {
@@ -94,6 +120,8 @@ JS = r'''
       if (assunto && r[10] !== assunto) return; if (vmin && !(vv(r) >= vmin)) return;
       if (dias && (new Date(r[7]).getTime() - agora) > dias * 864e5) return;
       if (q.length && !q.every((w) => BR.busca[i].includes(w))) return;
+      if (ufsReg && !ufsReg.has(r[3])) return;
+      if (pals.length && !pals.some((w) => typeof w === "string" ? BR.busca[i].includes(w) : w.test(BR.busca[i]))) return;
       if (alvo && raio) { const d = distR(r, alvo); if (d == null || d > raio) return; }
       out.push(r);
     });
@@ -132,6 +160,14 @@ JS = r'''
       r.map((x, i) => `*${i + 1}. ${x[1]}* (${x[3]}) · ${x[8].slice(0, 90)}\n💰 *${val(x)}* · 📅 ${data(x[7])}\n🔗 ${link(x[0])}`).join("\n\n");
   }
   ["br-q"].forEach((id) => $(id).addEventListener("input", () => { lim = 50; render(); }));
+  desenharPal();
+  $("br-palavras").addEventListener("click", (e) => { const b = e.target.closest("[data-pal]"); if (!b) return; const w = b.dataset.pal;
+    if (marcadas.has(w)) marcadas.delete(w); else marcadas.add(w); salvarPal(); desenharPal(); lim = 50; render(); });
+  const addPal = () => { const w = $("br-pal-input").value.trim(); if (!w) return; if (!extras.includes(w)) extras.push(w); marcadas.add(w); $("br-pal-input").value = ""; salvarPal(); desenharPal(); lim = 50; render(); };
+  $("br-pal-add").addEventListener("click", addPal);
+  $("br-pal-input").addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); addPal(); } });
+  $("br-pal-limpar").addEventListener("click", () => { marcadas.clear(); salvarPal(); desenharPal(); lim = 50; render(); });
+  $("br-regiao").addEventListener("change", () => { lim = 50; render(); });
   $("br-pregoes").addEventListener("click", (e) => { soPregao = !soPregao; e.currentTarget.setAttribute("aria-pressed", String(soPregao)); lim = 50; render(); });
   $("br-perto").addEventListener("change", () => { lim = 50; try { localStorage.setItem("br-perto", $("br-perto").value); } catch (e) {} render(); });
   try { const v = localStorage.getItem("br-perto"); if (v) $("br-perto").value = v; } catch (e) {}

@@ -211,7 +211,7 @@ def eh_tema(texto, e=None):
         return bool(classificar(cab) or eh_documental(texto) or CONS_RX.search(cab) or UST_RX.search(n))
     if TEMA == "consultoria":
         cab = re.sub(r"^\[[^\]]*\]\s*-?\s*", "", n)[:260]  # o assunto principal está no começo do objeto
-        return bool(CONS_RX.search(cab) and not CONS_FORA.search(cab))
+        return bool(CONS_RX.search(cab) and not CONS_FORA.search(cab) and (classificar(cab) or re.search(r"\bti\b|\btic\b|tecnologia|informatica|lgpd|dados|digital", cab)))
     if TEMA == "mensal":
         if NAO_TEC.search(n[:200]):  # só o objeto principal (o resto do texto cita de tudo)
             return False
