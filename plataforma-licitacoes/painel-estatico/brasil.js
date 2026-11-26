@@ -34,6 +34,11 @@ const { chromium } = require('playwright');
     await p.click('#br-pal-limpar'); await p.selectOption('#br-regiao', ''); await p.waitForTimeout(300);
     if (w === 1366) { await p.hover('#br-lista .br-ficha:nth-child(3)'); await p.waitForTimeout(200); console.log(' prévia (hover 3ª):', (await p.textContent('#br-previa')).replace(/\s+/g, ' ').slice(0, 140)); }
     else { await p.click('#br-lista .br-ficha:nth-child(2) h4'); await p.waitForTimeout(200); console.log(' prévia (toque):', (await p.textContent('#br-lista .br-ficha:nth-child(2) .br-prev')).replace(/\s+/g, ' ').slice(0, 120)); }
+    console.log(' temas:', (await p.textContent('#br-temas')).replace(/\s+/g, ' '));
+    for (const tm of ['documental', 'ust', 'mensal', 'consultoria', 'servicos']) { await p.click(`#br-temas [data-tema="${tm}"]`); await p.waitForTimeout(300);
+      console.log('  tema', tm, await p.textContent('#br-conta'), '|', (await p.textContent('#br-lista li .br-cab')).replace(/\s+/g, ' ').slice(0, 70), '|', ((await p.$('#br-lista li .br-vol')) ? await p.textContent('#br-lista li .br-vol') : '-')); }
+    if (w === 1366) { await p.hover('#br-lista .br-ficha:nth-child(1)'); console.log('  prévia tema:', (await p.textContent('#br-previa')).replace(/\s+/g, ' ').slice(0, 260)); await (await p.$('#br-sec')).screenshot({ path: 'telas/temas-1366.png' }); }
+    await p.click('#br-temas [data-tema=""]'); await p.waitForTimeout(300);
     await p.click('#br-pregoes'); await p.waitForTimeout(300); console.log(' só pregões:', await p.textContent('#br-conta'));
     await p.selectOption('#br-sit', 'avir'); await p.waitForTimeout(300);
     console.log(' a vir:', await p.textContent('#br-conta'), '|', (await p.textContent('#br-lista li .br-pe')).replace(/\s+/g, ' ').slice(0, 110));

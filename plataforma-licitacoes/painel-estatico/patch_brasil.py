@@ -16,6 +16,8 @@ rep('''<a href="#buscas-sec">Minhas buscas</a>''', '''<a href="#br-sec">Brasil (
 rep('''  <section class="panel" id="cal-sec" aria-labelledby="h-cal">''', '''  <section class="panel" id="br-sec" aria-labelledby="h-br">
     <h2 id="h-br">Brasil — todas as licitações abertas</h2>
     <p class="lede" id="br-lede">Todas as licitações com proposta aberta no país, de todos os assuntos, direto do PNCP (inclui o que os portais parceiros publicam lá).</p>
+    <div class="br-temas-box"><p class="br-temas-tit"><b>Busca do dia por tema</b> <span id="br-temas-info">— as melhores de cada tema, com nota e volume (UST, PF, páginas) lidos no edital</span></p>
+      <div class="chips br-temas" id="br-temas" role="group" aria-label="Busca do dia por tema"></div></div>
     <div class="chips" id="br-assuntos" role="group" aria-label="Assunto"></div>
     <details class="br-palavras" id="br-palavras-box" open><summary><b>Palavras-chave</b> <span id="br-pal-resumo">(toque para escolher; vale qualquer uma das marcadas)</span></summary>
       <div id="br-palavras"></div>
@@ -32,7 +34,7 @@ rep('''  <section class="panel" id="cal-sec" aria-labelledby="h-cal">''', '''  <
       <label for="br-portal">Portal<select id="br-portal"><option value="">Todos</option></select></label>
       <label for="br-vmin">Valor mínimo<select id="br-vmin"><option value="0">Qualquer</option><option value="100000">R$ 100 mil</option><option value="1000000">R$ 1 milhão</option><option value="5000000">R$ 5 milhões</option><option value="10000000">R$ 10 milhões</option><option value="50000000">R$ 50 milhões</option></select></label>
       <label for="br-dias">Encerra em<select id="br-dias"><option value="0">Qualquer prazo</option><option value="3">até 3 dias</option><option value="7">até 7 dias</option><option value="15">até 15 dias</option><option value="30">até 30 dias</option></select></label>
-      <label for="br-ord">Ordenar<select id="br-ord"><option value="prazo">Prazo mais próximo</option><option value="valor">Maior valor</option><option value="recente">Prazo mais distante</option><option value="perto">Mais perto da cidade</option></select></label>
+      <label for="br-ord">Ordenar<select id="br-ord"><option value="prazo">Prazo mais próximo</option><option value="nota">Melhores do tema (nota)</option><option value="valor">Maior valor</option><option value="recente">Prazo mais distante</option><option value="perto">Mais perto da cidade</option></select></label>
     </div>
     <div class="acoes"><button type="button" class="mais" id="br-pregoes" aria-pressed="false">Só pregões</button><button type="button" class="abrir" id="br-copiar">Copiar os 40 primeiros para o WhatsApp</button>
       <button type="button" class="mais" id="br-csv">Baixar planilha com todas as filtradas (CSV)</button></div>
@@ -47,7 +49,8 @@ rep('''  <section class="panel" id="cal-sec" aria-labelledby="h-cal">''', '''  <
 
 JS = r'''
 (function brasil() {
-  let BR = null, lim = 50, assunto = "", soPregao = false;
+  let BR = null, lim = 50, assunto = "", soPregao = false, tema = "", TEM = null;
+  const temaDe = (c) => { if (!BR || !BR.temas) return null; if (tema) return BR.temas[tema]?.itens[c] || null; for (const k in BR.temas) { const x = BR.temas[k].itens[c]; if (x) return x; } return null; };
   const PALAVRAS = {
     "UST, PF e serviços de TI": ["UST", "unidade de serviço técnico", "ponto de função", "fábrica de software", "desenvolvimento de sistemas", "desenvolvimento de software", "sustentação", "manutenção de sistemas", "manutenção evolutiva", "horas técnicas", "alocação de profissionais", "outsourcing", "service desk", "suporte técnico", "help desk", "central de serviços", "testes de software", "business intelligence", "ciência de dados", "inteligência artificial", "banco de dados", "integração de sistemas", "transformação digital"],
     "Sistemas, nuvem e fixo mensal": ["sistema de gestão", "gestão pública", "ERP", "software", "licença de uso", "locação de sistema", "SaaS", "software como serviço", "plataforma", "nuvem", "data center", "hospedagem", "backup", "segurança da informação", "firewall", "LGPD", "internet", "link dedicado", "rede lógica", "cabeamento", "portal", "aplicativo", "site", "mensal"],
@@ -88,6 +91,7 @@ JS = r'''
       if (!resp.ok) throw new Error(resp.status);
       BR = await resp.json();
       if (BR.tab) { const T = BR.tab; BR.registros = BR.registros.map((r) => [r[0], T.o[r[1]], T.m[r[2]], r[3], T.mod[r[4]], r[5], r[6], r[7], r[8], T.p[r[9]], T.a[r[10]], r[11], r[12]]); }
+      if (BR.extras && BR.extras.length) BR.registros = BR.registros.concat(BR.extras);
       BR.busca = BR.registros.map((r) => semAc(`${r[8]} ${r[1]} ${r[2]} ${r[0]}`));
       preparar(); render();
     } catch (e) {
@@ -101,6 +105,8 @@ JS = r'''
     opc("br-uf", cont(3).sort((a, b) => a[0].localeCompare(b[0])), 30);
     opc("br-mod", cont(4), 20);
     opc("br-portal", cont(9), 40);
+    const TM = BR.temas || {}, ag = new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 16), noPrazo = (k) => { const fim = new Map(R.map((r) => [r[0], r[7]])); return Object.keys(TM[k].itens).filter((c) => (fim.get(c) || "") > ag).length; };
+    $("br-temas").innerHTML = Object.keys(TM).length ? `<button type="button" aria-pressed="true" data-tema="">Todas</button>` + Object.entries(TM).map(([k, x]) => `<button type="button" aria-pressed="false" data-tema="${esc(k)}" title="Busca verificada em ${esc(data(x.verificado))}">${esc(x.nome)} <b>${fmt(noPrazo(k))}</b></button>`).join("") : '<span class="br-temas-tit">Busca do dia ainda não disponível nesta cópia.</span>';
     const as = cont(10);
     $("br-assuntos").innerHTML = `<button type="button" aria-pressed="true" data-as="">Todos (${fmt(R.length)})</button>` + as.map(([k, n]) => `<button type="button" aria-pressed="false" data-as="${esc(k)}">${esc(k)} (${fmt(n)})</button>`).join("");
     const nAvir = R.filter((r) => r[12] > new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 16)).length;
@@ -121,6 +127,7 @@ JS = r'''
       if (sit === "abertas" && r[12] > agoraTxt) return; if (sit === "avir" && !(r[12] > agoraTxt)) return;
       if (soPregao && !/preg/i.test(r[4])) return;
       if (uf && r[3] !== uf) return; if (mod && r[4] !== mod) return; if (portal && r[9] !== portal) return;
+      if (tema && !TEM[r[0]]) return;
       if (assunto && r[10] !== assunto) return; if (vmin && !(vv(r) >= vmin)) return;
       if (dias && (new Date(r[7]).getTime() - agora) > dias * 864e5) return;
       if (q.length && !q.every((w) => BR.busca[i].includes(w))) return;
@@ -130,7 +137,8 @@ JS = r'''
       out.push(r);
     });
     const o = $("br-ord").value;
-    if (o === "perto" && alvo) out.sort((a, b) => (distR(a, alvo) ?? 1e9) - (distR(b, alvo) ?? 1e9));
+    if (o === "nota") out.sort((a, b) => ((temaDe(b[0]) || [0])[0] - (temaDe(a[0]) || [0])[0]) || vv(b) - vv(a));
+    else if (o === "perto" && alvo) out.sort((a, b) => (distR(a, alvo) ?? 1e9) - (distR(b, alvo) ?? 1e9));
     else if (o === "valor") out.sort((a, b) => vv(b) - vv(a)); else if (o === "recente") out.sort((a, b) => b[7].localeCompare(a[7])); else out.sort((a, b) => a[7].localeCompare(b[7]));
     return out;
   }
@@ -144,23 +152,26 @@ JS = r'''
     return ["", `${Math.ceil(dias)} dias · ${data(r[7]).slice(0, 5)}`];
   }
   function item(r, i) {
-    const alvo = geoCidade($("br-perto").value), d = distR(r, alvo), [cl, pz] = prazo(r);
-    return `<li class="br-ficha" tabindex="0" data-i="${i}"><div class="br-cab"><span class="br-prazo ${cl}">${esc(pz)}</span><span class="br-tag assunto">${esc(r[10])}</span><span class="br-tag">${esc(r[4])}</span></div>
-      <h4>${esc(r[1])}</h4><p class="br-obj">${esc(r[8])}</p>
+    const alvo = geoCidade($("br-perto").value), d = distR(r, alvo), [cl, pz] = prazo(r), tm = temaDe(r[0]);
+    return `<li class="br-ficha" tabindex="0" data-i="${i}"><div class="br-cab"><span class="br-prazo ${cl}">${esc(pz)}</span><span class="br-tag assunto">${esc(r[10])}</span><span class="br-tag">${esc(r[4])}</span>${tm ? `<span class="br-nota" title="Nota da busca do dia (0 a 100)">★ ${tm[0]}</span>` : ""}</div>
+      <h4>${esc(r[1])}</h4><p class="br-obj">${esc(r[8])}</p>${tm && tm[1] ? `<p class="br-vol">📦 ${esc(tm[1])}</p>` : ""}
       <div class="br-pe"><span class="br-valor">${esc(val(r))}</span><span>${esc(r[2])}/${esc(r[3])}${d != null ? ` · 📍 ${Math.round(d)} km` : ""}</span><a href="${link(r[0])}" target="_blank" rel="noopener">PNCP ↗</a></div></li>`;
   }
   function previa(r) {
     const alvo = geoCidade($("br-perto").value), d = distR(r, alvo), ini = r[12] ? new Date(r[12]) : null, fim = new Date(r[7]);
+    const tm = temaDe(r[0]), temasDela = BR.temas ? Object.values(BR.temas).filter((x) => x.itens[r[0]]).map((x) => x.nome) : [];
     const pct = ini ? Math.max(0, Math.min(100, (Date.now() - ini) / Math.max(1, fim - ini) * 100)) : 0, [, pz] = prazo(r);
     return `<div class="br-prev"><p class="eyebrow">${esc(r[10])} · ${esc(r[4])}</p><h3>${esc(r[1])}</h3>
       <div class="grande">${esc(val(r))}</div>
       <div class="br-linha-tempo"><span>Abre ${esc(ini ? data(r[12]) : "—")}</span><span class="barra"><i style="width:${pct.toFixed(0)}%"></i></span><span style="text-align:right">Fecha ${esc(data(r[7]))}</span></div>
-      <p><strong>${esc(pz)}</strong></p>
+      <p><strong>${esc(pz)}</strong>${tm ? ` · <span class="br-nota">★ nota ${tm[0]}</span>` : ""}</p>
+      ${tm && tm[1] ? `<p class="br-vol grande-vol">📦 Volume: <strong>${esc(tm[1])}</strong></p>` : ""}
+      ${temasDela.length ? `<p class="br-temas-dela">${temasDela.map((n) => `<span class="br-tag assunto">${esc(n)}</span>`).join(" ")}</p>` : ""}
       <p>${esc(r[8])}${r[8].length >= 168 ? "…" : ""}</p>
       <dl class="br-campos"><dt>Local</dt><dd>${esc(r[2])}/${esc(r[3])}${d != null ? ` · ${Math.round(d)} km de ${esc($("br-perto").value)}` : ""}</dd>
         <dt>Portal</dt><dd>${esc(r[9] || "não informado")}</dd><dt>Esfera</dt><dd>${esc({ M: "Municipal", E: "Estadual", F: "Federal", D: "Distrital" }[r[11]] || "—")}</dd>
         <dt>Nº PNCP</dt><dd>${esc(r[0])}</dd></dl>
-      <div class="br-acoes"><a class="prim" href="${link(r[0])}" target="_blank" rel="noopener">Abrir edital no PNCP ↗</a><button type="button" data-copiar="1">Copiar p/ WhatsApp</button></div></div>`;
+      <div class="br-acoes"><a class="prim" href="${link(r[0])}" target="_blank" rel="noopener">Abrir edital no PNCP ↗</a>${tm && tm[2] ? `<a href="${esc(tm[2])}" target="_blank" rel="noopener">Portal da disputa ↗</a>` : ""}<button type="button" data-copiar="1">Copiar p/ WhatsApp</button></div></div>`;
   }
   let fixada = null;
   function mostrarPrevia(i, fixar) {
@@ -192,7 +203,7 @@ JS = r'''
   function whats() {
     const r = filtrados().slice(0, 40);
     return `*📋 Licitações abertas — Brasil · ${new Date().toLocaleDateString("pt-BR").slice(0, 5)}*\nPNCP (inclui portais parceiros). ${fmt(filtrados().length)} no filtro; os ${r.length} primeiros:\n\n` +
-      r.map((x, i) => `*${i + 1}. ${x[1]}* (${x[3]}) · ${x[8].slice(0, 90)}\n💰 *${val(x)}* · 📅 ${data(x[7])}\n🔗 ${link(x[0])}`).join("\n\n");
+      r.map((x, i) => { const tm = temaDe(x[0]); return `*${i + 1}. ${x[1]}* (${x[3]}) · ${x[8].slice(0, 90)}\n💰 *${val(x)}* · 📅 ${data(x[7])}${tm && tm[1] ? `\n📦 ${tm[1]}` : ""}\n🔗 ${link(x[0])}`; }).join("\n\n");
   }
   ["br-q"].forEach((id) => $(id).addEventListener("input", () => { lim = 50; render(); }));
   desenharPal();
@@ -209,6 +220,11 @@ JS = r'''
   ["br-sit", "br-uf", "br-mod", "br-portal", "br-vmin", "br-dias", "br-ord"].forEach((id) => $(id).addEventListener("change", () => { lim = 50; render(); }));
   $("br-assuntos").addEventListener("click", (e) => { const b = e.target.closest("[data-as]"); if (!b) return; assunto = b.dataset.as; lim = 50;
     $("br-assuntos").querySelectorAll("[data-as]").forEach((c) => c.setAttribute("aria-pressed", String(c === b))); render(); });
+  $("br-temas").addEventListener("click", (e) => { const b = e.target.closest("[data-tema]"); if (!b) return; tema = b.dataset.tema; TEM = tema ? BR.temas[tema].itens : null; lim = 50;
+    $("br-temas").querySelectorAll("[data-tema]").forEach((c) => c.setAttribute("aria-pressed", String(c === b)));
+    $("br-ord").value = tema ? "nota" : "prazo";
+    $("br-temas-info").textContent = tema ? `— ${BR.temas[tema].nome}: busca verificada em ${data(BR.temas[tema].verificado)}, ordenada pela nota` : "— as melhores de cada tema, com nota e volume (UST, PF, páginas) lidos no edital";
+    render(); });
   $("br-mais").addEventListener("click", () => { lim += 100; render(); });
   // prévia: passar o mouse/focar mostra ao lado; tocar (celular) abre dentro da ficha; clicar fixa
   $("br-lista").addEventListener("mouseover", (e) => { const li = e.target.closest(".br-ficha"); if (li && fixada == null) mostrarPrevia(li.dataset.i); });
