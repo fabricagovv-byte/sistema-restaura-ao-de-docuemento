@@ -1,0 +1,95 @@
+*🏃 SPRINTS · BRITA, AREIA E AGREGADOS · 27/11/2026*
+294 licitações de fornecimento abertas no Brasil. Prioridade *A* = até 150 km de Serro/Diamantina (5); *B* = até 500 km (63); C = resto do Brasil, frete alto (226).
+
+*Sprint 0 · Preparação* · 27/11–29/11
+🎯 Documentos de habilitação, cadastro nos portais, tabela de preço com as pedreiras/areais. Propostas que vencem até domingo.
+☐ Documentos de habilitação (lista na planilha)
+☐ Cadastro nos portais: Compras.gov.br, ECustomize Consultoria em Software S.A, IPM Sistemas, Licitar Digital - Plataforma de Licitações Online
+☐ Tabela de preço com pedreira/areal (brita 0 e 1, pó de pedra, areia fina/média/grossa)
+• Nenhuma A/B encerrando nesta sprint.
+
+*Sprint 1* · 30/11–06/12
+🎯 Propostas da semana. Começar pelas A, depois as B maiores.
+• A · Funilândia/MG (112 km) · R$ 396 mil · seg 30/11 08:30 · Licitar Digital - Plataforma de Licitações Online
+  🔗 https://pncp.gov.br/app/editais/18062414000100/2026/50
+• B · Padre Paraíso/MG (259 km) · R$ 2,05 mi · qua 02/12 08:00 · Licitar Digital - Plataforma de Licitações Online
+  🔗 https://pncp.gov.br/app/editais/18404764000108/2026/81
+• B · Elói Mendes/MG (406 km) · R$ 1,45 mi · ter 01/12 08:00 · ECustomize Consultoria em Software S.A
+  🔗 https://pncp.gov.br/app/editais/20347225000126/2026/221
+• B · Senador Firmino/MG (259 km) · R$ 645 mil · ter 01/12 07:00 · Planejar Consultores Associados Ltda
+  🔗 https://pncp.gov.br/app/editais/18128231000140/2026/165
+• B · Senador Firmino/MG (259 km) · R$ 645 mil · ter 01/12 07:00 · BLL Compras
+  🔗 https://pncp.gov.br/app/editais/18128231000140/2026/163
+• B · Cássia dos Coqueiros/SP (496 km) · R$ 635 mil · qui 03/12 07:30 · BLL Compras
+  🔗 https://pncp.gov.br/app/editais/44229805000187/2026/77
+• B · Pequeri/MG (361 km) · R$ 582 mil · qua 02/12 08:59 · ECustomize Consultoria em Software S.A
+  🔗 https://pncp.gov.br/app/editais/17724360000139/2026/11
+• B · Itabirito/MG (189 km) · R$ 398 mil · seg 30/11 13:00 · Compras.gov.br
+  🔗 https://pncp.gov.br/app/editais/18307835000154/2026/202
+• … mais 21 A/B nesta sprint (ver planilha)
+
+*Sprint 2* · 07/12–13/12
+🎯 Propostas da semana + acompanhar resultados da Sprint 1.
+• A · Felício dos Santos/MG (42 km) · R$ 630 mil · ter 08/12 09:00 · Licitar Digital - Plataforma de Licitações Online
+  🔗 https://pncp.gov.br/app/editais/17754201000187/2026/84
+• B · Lambari/MG (427 km) · R$ 10,28 mi · sex 11/12 12:59 · ECustomize Consultoria em Software S.A
+  🔗 https://pncp.gov.br/app/editais/17877200000120/2026/62
+• B · Santa Cruz de Salinas/MG (310 km) · R$ 574 mil · seg 07/12 08:00 · Licitar Digital - Plataforma de Licitações Online
+  🔗 https://pncp.gov.br/app/editais/01612497000161/2026/13
+• B · Guaçuí/ES (300 km) · R$ 375 mil · qua 09/12 09:00 · Licitar Digital - Plataforma de Licitações Online
+  🔗 https://pncp.gov.br/app/editais/27174135000120/2026/178
+• B · São Gabriel da Palha/ES (302 km) · R$ 288 mil · sex 11/12 07:59 · ECustomize Consultoria em Software S.A
+  🔗 https://pncp.gov.br/app/editais/27174143000176/2026/158
+• B · São Gabriel da Palha/ES (302 km) · R$ 288 mil · sex 11/12 07:59 · E & L PRODUCOES DE SOFTWARE LTDA
+  🔗 https://pncp.gov.br/app/editais/14774687000127/2026/13
+• B · Juiz de Fora/MG (351 km) · R$ 261 mil · qua 09/12 08:30 · Compras.gov.br
+  🔗 https://pncp.gov.br/app/editais/00394452000103/2026/25241
+• B · Piedade do Rio Grande/MG (330 km) · R$ 96 mil · qui 10/12 09:00 · SH3 Informática Ltda.
+  🔗 https://pncp.gov.br/app/editais/18685438000116/2026/98
+• … mais 5 A/B nesta sprint (ver planilha)
+
+*Sprint 3* · 14/12–20/12
+🎯 Propostas da semana + recursos/homologação.
+• B · Uberaba/MG (486 km) · R$ 1,50 mi · ter 15/12 09:00 · Licitanet Licitações Eletrônicas LTDA
+  🔗 https://pncp.gov.br/app/editais/19864323000151/2026/13
+• B · Três Rios/RJ (391 km) · R$ 1,42 mi · qua 16/12 09:30 · Compras.gov.br
+  🔗 https://pncp.gov.br/app/editais/39754247000139/2026/51
+• B · Ibiaí/MG (207 km) · R$ 297 mil · seg 14/12 08:00 · Licitar Digital - Plataforma de Licitações Online
+  🔗 https://pncp.gov.br/app/editais/16899700000108/2026/96
+• B · Conceição das Pedras/MG (451 km) · R$ 168 mil · seg 14/12 08:10 · ADPM - Administração Pública para Municípios Ltda
+  🔗 https://pncp.gov.br/app/editais/18025908000115/2026/106
+• B · Irupi/ES (266 km) · não divulgado · ter 15/12 08:15 · E & L PRODUCOES DE SOFTWARE LTDA
+  🔗 https://pncp.gov.br/app/editais/36403954000192/2026/47
+• B · Ubaporanga/MG (176 km) · não divulgado · qua 16/12 08:20 · Novo BBMNET Licitações
+  🔗 https://pncp.gov.br/app/editais/66229717000118/2026/78
+
+*Sprint 4* · 21/12–31/12
+🎯 Fim do ano: credenciamentos de Diamantina (31/12) e o que encerra até 31/12.
+• A · Diamantina/MG (0 km) · R$ 2,47 mi · qui 31/12 23:59 · Licitar Digital - Plataforma de Licitações Online
+  🔗 https://pncp.gov.br/app/editais/22835076000170/2026/4
+• A · Diamantina/MG (0 km) · R$ 2,06 mi · qui 31/12 23:59 · Licitar Digital - Plataforma de Licitações Online
+  🔗 https://pncp.gov.br/app/editais/22835076000170/2026/39
+• B · Rio Acima/MG (171 km) · R$ 11 mil · qui 31/12 23:55 · E & L PRODUCOES DE SOFTWARE LTDA
+  🔗 https://pncp.gov.br/app/editais/18312108000185/2026/98
+• B · Martinho Campos/MG (211 km) · não divulgado · qui 31/12 23:59 · Licitar Digital - Plataforma de Licitações Online
+  🔗 https://pncp.gov.br/app/editais/18315234000193/2026/122
+
+*Contínuo · 2027*
+🎯 Credenciamentos longos (entram a qualquer momento) e editais de 2027.
+• A · Bocaiúva/MG (127 km) · R$ 1,07 mi · qua 06/01/2027 09:29 · ECustomize Consultoria em Software S.A
+  🔗 https://pncp.gov.br/app/editais/18803072000132/2026/196
+• B · Serranópolis de Minas/MG (280 km) · R$ 1,03 mi · ter 26/10/2027 16:59 · CONTASS SISTEMAS PUBLICOS LTDA
+  🔗 https://pncp.gov.br/app/editais/01612501000191/2026/83
+• B · Serranópolis de Minas/MG (280 km) · R$ 1,03 mi · ter 26/10/2027 17:00 · ECustomize Consultoria em Software S.A
+  🔗 https://pncp.gov.br/app/editais/01612501000191/2026/81
+• B · Candiba/BA (433 km) · R$ 983 mil · qua 12/05/2027 16:59 · Procede Bahia Processamento e Certificação de Documentos Eletrônicos
+  🔗 https://pncp.gov.br/app/editais/13982608000100/2026/19
+• B · Caetité/BA (479 km) · R$ 920 mil · sáb 07/08/2027 08:00 · Procede Bahia Processamento e Certificação de Documentos Eletrônicos
+  🔗 https://pncp.gov.br/app/editais/18635734000102/2026/65
+• B · Ibertioga/MG (321 km) · R$ 474 mil · sex 16/07/2027 09:00 · Planejar Consultores Associados Ltda
+  🔗 https://pncp.gov.br/app/editais/18094839000100/2024/40
+• B · Jordânia/MG (447 km) · R$ 321 mil · qui 11/03/2027 17:00 · Memory Projetos e Desenvolvimento de Sistemas LTDA
+  🔗 https://pncp.gov.br/app/editais/18349928000141/2026/61
+• B · Belo Horizonte/MG (157 km) · R$ 226 mil · qua 02/06/2027 23:59 · Licitar Digital - Plataforma de Licitações Online
+  🔗 https://pncp.gov.br/app/editais/18720938000141/2024/3
+• … mais 8 A/B nesta sprint (ver planilha)
