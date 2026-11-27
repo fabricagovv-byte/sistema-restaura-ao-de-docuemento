@@ -37,7 +37,7 @@ Também abertas no raio: Curvelo, CBUQ R$ 6,17 mi (104 km); Rio Piracicaba, CBUQ
 
 🎯 Brita 0, brita 1, pedrisco e pó de brita para os municípios do consórcio.
 
-📝 *Objeto:* Credenciamento de empresas para integrar o cadastro de fornecedores para fornecimento de agregados para pavimentação asfáltica conforme demanda dos Municípios Consorciados ao CONSÓRCIO INTEGRADO MULTIFINALITARIO DO VALE DO JEQUITINHONHA CIM JEQUITINHONHA, enquanto em execução de obras nos municípios
+📝 *Objeto:* Credenciamento de empresas para integrar o cadastro de fornecedores para fornecimento de agregados para pavimentação asfáltica conforme demanda dos Municípios Consorciados ao CONSÓRCIO INTEGRADO MULTIFINALITARIO DO VALE
 
 💰 *Valor estimado:* R$ 2,12 mi
 📦 *Itens:*
@@ -50,7 +50,6 @@ Também abertas no raio: Curvelo, CBUQ R$ 6,17 mi (104 km); Rio Piracicaba, CBUQ
 📅 *Propostas até quinta, 31/12/2026 às 23:59* (faltam 34 dias)
 
 🔗 Edital no PNCP: https://pncp.gov.br/app/editais/22835076000170/2026/39
-🌐 Disputa: https://app2.licitardigital.com.br/pesquisa/106630
 
 ════════════════
 
@@ -135,10 +134,10 @@ Também abertas no raio: Curvelo, CBUQ R$ 6,17 mi (104 km); Rio Piracicaba, CBUQ
 • Fornecimento de material granular na origem: 604,58 m3 × R$ 91,44
 • Execução de base granular de solo sem mistura, sem fornecimento do solo, carga o: 431,84 m3 × R$ 35,65
 • Carga, manobra e descarga de material granular: 604,58 m3 × R$ 8,65
-• Pavimento intertravado em bloco sextavado de concreto 25 × 25 × 8 cm: 1.943,3 m2 × R$ 127,23
-• Execução de imprimação com asfalto diluído: 7.911,24 m2 × R$ 0,68
-• Fornecimento de ligante de imprimação CM-30: 9,49 ton × R$ 6.800,3
-• … mais 18 itens do mesmo tipo
+• Execução de TSD com RR-2C e brita comercial: 7.911,24 m2 × R$ 8,72
+• Frete externo das britas, trecho pavimentado: 6.625,68 ton-km × R$ 1,12
+• Frete externo das britas, leito natural: 2.650,27 ton-km × R$ 1,69
+• … mais 11 itens do mesmo tipo
 ⚖️ Concorrência - Eletrônica
 🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
 📅 *Propostas até sexta, 11/12/2026 às 07:59* (faltam 14 dias)
@@ -159,13 +158,13 @@ Também abertas no raio: Curvelo, CBUQ R$ 6,17 mi (104 km); Rio Piracicaba, CBUQ
 
 💰 *Valor estimado:* R$ 6,24 mi
 📦 *Itens:*
-• FORNECIMENTO E COLOCACAO DE PLACA DE OBRA EM CHAPA GALVANIZADA #26, ESP. 0,45MM,: 2 unidade × R$ 1.571,36
 • BASE DE SOLO SEM MISTURA, COMPACTADA NA ENERGIA DO PROCTOR INTERMEDIARIO (EXECUC: 1.894,2 metro cubico × R$ 25,27
-• IMPRIMACAO (EXECUCAO E FORNECIMENTO DO MATERIAL BETUMINOSO, EXCLUSIVE TRANSPORTE: 12.628 metro quadrado × R$ 10,01
-• PINTURA DE LIGACAO (EXECUCAO E FORNECIMENTO DO MATERIAL BETUMINOSO, EXCLUSIVE TR: 10.824 metro quadrado × R$ 3,49
 • EXECUCAO DE PAVIMENTO COM APLICACAO DE CONCRETO ASFALTICO, CAMADA DE ROLAMENTO -: 324,72 metro cubico × R$ 2.875,17
 • ASSENTAMENTO DE GUIA (MEIO-FIO) EM TRECHO RETO, CONFECCIONADA EM CONCRETO PRE-FA: 3.409,3 metro × R$ 90,28
-• … mais 14 itens do mesmo tipo
+• SARJETA DE CONCRETO URBANO (SCU), TIPO 2, COM FCK 15 MPA, LARGURA DE 50CM COM IN: 3.433,3 metro × R$ 60,01
+• TRANSPORTE COM CAMINHAO TANQUE DE TRANSPORTE DE MATERIAL ASFALTICO DE 20000 L, E: 617,1 tonelada.quilometro × R$ 2,76
+• TRANSPORTE COM CAMINHAO TANQUE DE TRANSPORTE DE MATERIAL ASFALTICO DE 20000 L, E: 4.318,25 tonelada.quilometro × R$ 1,05
+• … mais 9 itens do mesmo tipo
 ⚖️ Concorrência - Eletrônica
 🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
 📅 *Propostas até quinta, 03/12/2026 às 09:30* (faltam 6 dias)
@@ -186,13 +185,13 @@ Também abertas no raio: Curvelo, CBUQ R$ 6,17 mi (104 km); Rio Piracicaba, CBUQ
 
 💰 *Valor estimado:* R$ 691.384,62
 📦 *Itens:*
-• FORNECIMENTO E COLOCAÇÃO DE PLACA DE OBRA EM CHAPA GALVANIZADA.: 1 UNIDADE × R$ 1.454,44
-• TAPUME FIXO DE PROTEÇÃO PARA FECHAMENTO DE OBRA EM TELHA METÁLICA GALVANIZADA, T: 116,27 METRO QUADRADO × R$ 82,87
-• FITA ZEBRADA PARA DISPOSITIVOS DE CANALIZAÇÃO DE TRÂNSITO - FORNECIMENTO, IMPLAN: 300 METRO × R$ 0,17
-• REMOÇÃO DE ESTRUTURA METÁLICA CHUMBADA EM CONCRETO (ALAMBRADO, GUARDA-CORPO) - B: 52,23 METRO CÚBICO × R$ 92,04
-• DEMOLIÇÃO MECANIZADA DE CONCRETO ARMADO, COM EQUIPAMENTO PNEUMÁTICO, INCLUSIVE A: 1,42 METRO CÚBICO × R$ 435,65
-• DEMOLIÇÃO DE PISO DE PEDRA (MÁRMORE, GRANITO, ARDÓSIA, SÃO TOMÉ, ETC): 359,49 METRO QUADRADO × R$ 35,22
-• … mais 70 itens do mesmo tipo
+• CONCRETO FCK = 25MPA, TRAÇO 1:2,3:2,7 (EM MASSA SECA DE CIMENTO/ AREIA MÉDIA/ BR: 1,27 METRO CÚBICO × R$ 711,45
+• CONCRETO MAGRO PARA LASTRO, TRAÇO 1:4,5:4,5 (EM MASSA SECA DE CIMENTO/ AREIA MÉD: 0,47 METRO CÚBICO × R$ 594,69
+• CONCRETO FCK = 25MPA, TRAÇO 1:2,3:2,7 (EM MASSA SECA DE CIMENTO/ AREIA MÉDIA/ BR: 2,81 METRO CÚBICO × R$ 711,45
+• CONCRETO MAGRO PARA LASTRO, TRAÇO 1:4,5:4,5 (EM MASSA SECA DE CIMENTO/ AREIA MÉD: 0,43 METRO CÚBICO × R$ 594,69
+• CONCRETO FCK = 25MPA, TRAÇO 1:2,3:2,7 (EM MASSA SECA DE CIMENTO/ AREIA MÉDIA/ BR: 4,12 METRO CÚBICO × R$ 711,45
+• BASE COM BRITA TRATADA COM 6% DE CIMENTO: 4,96 METRO CÚBICO × R$ 260,05
+• … mais 60 itens do mesmo tipo
 ⚖️ Concorrência - Eletrônica
 🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
 📅 *Propostas até quinta, 10/12/2026 às 09:00* (faltam 13 dias)
@@ -209,12 +208,10 @@ Também abertas no raio: Curvelo, CBUQ R$ 6,17 mi (104 km); Rio Piracicaba, CBUQ
 
 🎯 Obra de recapeamento em CBUQ (145 m³), sarjeta de concreto usinado.
 
-📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRAS DE RECAPEAMENTO ASFÁLTICO TIPO CBUQ NA RUA DO ROSÁRIO, NO MUNICÍPIO DE JEQUITIBÁ/MG, VINCULADA AO CONTRATO DE REPASSE Nº 989844/2025/MCIDADES/CAIXA, CONFORME ESPECIFICAÇÕES DOS PROJETOS E DEMAIS DOCUMENTOS
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA EXECUÇÃO DE OBRAS DE RECAPEAMENTO ASFÁLTICO TIPO CBUQ NA RUA DO ROSÁRIO, NO MUNICÍPIO DE JEQUITIBÁ/MG, VINCULADA AO CONTRATO DE REPASSE Nº 989844/2025/MCIDADES/CAIXA, CONFORME ES
 
 💰 *Valor estimado:* R$ 406.107,30
 📦 *Itens:*
-• FORNECIMENTO E INSTALACAO DE PLACA DE OBRA COM CHAPA GALVANIZADA E ESTRUTURA DE : 4,5 M² × R$ 619,68
-• EXECUÇÃO DE PINTURA DE LIGACAO COM EMULSAO ASFALTICA: 4.827,13 M² × R$ 1,36
 • EXECUCAO E APLICACAO DE CONCRETO BETUMINOSO USINADO A QUENTE CBUQ MASSA COMERCIA: 144,82 M³ × R$ 2.215,83
 • ASSENTAMENTO DE GUIA MEIO FIO EM TRECHO RETO CONFECCIONADA EM CONCRETO PRE FABRI: 80,4 METRO × R$ 82,25
 • EXECUCAO DE SARJETA DE CONCRETO USINADO MOLDADA IN LOCO EM TRECHO RETO 30 CM BAS: 654,97 METRO × R$ 56,91
@@ -223,7 +220,6 @@ Também abertas no raio: Curvelo, CBUQ R$ 6,17 mi (104 km); Rio Piracicaba, CBUQ
 📅 *Propostas até quinta, 10/12/2026 às 09:00* (faltam 13 dias)
 
 🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18062208000109/2026/41
-🌐 Disputa: https://app2.licitardigital.com.br/pesquisa/120219
 
 ════════════════
 
