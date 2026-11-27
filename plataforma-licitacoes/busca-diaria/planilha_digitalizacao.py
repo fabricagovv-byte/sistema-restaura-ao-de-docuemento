@@ -64,8 +64,31 @@ def detalhar(c):
     return c, d, itens
 
 
+import os
+from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
+CACHE = saida + ".cache.json"
+det = {}
+if os.path.exists(CACHE):
+    det = {c: tuple(v) for c, v in json.load(open(CACHE)).items()}
+falta = [c for c in cands if c not in det]
 with cf.ThreadPoolExecutor(8) as ex:
-    det = {c: (d, it) for c, d, it in ex.map(detalhar, list(cands))}
+    det.update({c: (d, it) for c, d, it in ex.map(detalhar, falta)})
+json.dump(det, open(CACHE, "w"), ensure_ascii=False)
+
+
+def limpo(o):
+    if isinstance(o, str):
+        return ILLEGAL_CHARACTERS_RE.sub(" ", o)
+    if isinstance(o, list):
+        return [limpo(i) for i in o]
+    if isinstance(o, tuple):
+        return tuple(limpo(i) for i in o)
+    if isinstance(o, dict):
+        return {k: limpo(v) for k, v in o.items()}
+    return o
+
+
+det = limpo(det)
 
 # ---------------------------------------------------------------- 2. linhas
 UNID = {"pagina": "páginas", "caixa": "caixas", "metro_linear": "metros lineares", "registro": "registros", "hora": "horas"}
@@ -313,7 +336,7 @@ for i, (p, xs) in enumerate(sorted(grp.items(), key=lambda kv: -len(kv[1])), 5):
 # ---------------------------------------------------------------- aba Resumo (primeira)
 wr = wb.create_sheet("Resumo", 0)
 titulo(wr, "📊 Digitalização · painel da semana", fonte, 6)
-for j, w in enumerate([30, 18, 4, 30, 14, 18], 1):
+for j, w in enumerate([44, 24, 4, 30, 14, 20], 1):
     wr.column_dimensions[get_column_letter(j)].width = w
 cont = Counter(status(x)[1] for x in L)
 kpis = [("Licitações abertas", len(L), None), ("Soma estimada (divulgada)", soma, BRL), ("Itens publicados", sum(len(x["itens"]) for x in L), None),
