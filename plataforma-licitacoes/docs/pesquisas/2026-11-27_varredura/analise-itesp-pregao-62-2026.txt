@@ -1,0 +1,64 @@
+*📄 ANÁLISE · FUNDAÇÃO ITESP (SP) · PREGÃO ELETRÔNICO 62/2026*
+Gestão documental e digitalização · Processo 163.00000690/2026-08 · UASG 131101
+Fonte: edital, termo de referência, minuta de contrato e Portaria ITESP 13/2024 (arquivos enviados).
+🔗 PNCP: https://pncp.gov.br/app/editais/46384400000149/2026/590
+
+*🗓️ DATAS*
+• Sessão pública: *ter 15/12/2026 às 10h* (Compras.gov.br)
+• Impugnação/esclarecimento: até *qui 10/12* (3 dias úteis antes) → scoutinho@itesp.sp.gov.br, pokado@itesp.sp.gov.br, wilsonlima@sp.gov.br
+• SICAF regular: até *10/12* (3º dia útil antes)
+• Vistoria (facultativa): agendar com 24h de antecedência em alopes@itesp.sp.gov.br (nome e RG do representante). Sem vistoria → declaração do Anexo VI.2/VI.3.
+
+*💰 VALOR E ITENS (grupo único, menor preço por grupo, disputa aberto e fechado)*
+Total estimado: *R$ 4.161.533,50* · lance por valor unitário · intervalo mínimo 1%
+1. Implementação: 1 × R$ 55.000,00
+2. Digitalização A4/A5: 4.900 milheiros (4,9 milhões de págs) × R$ 726,67 = R$ 3.560.666,83 → *R$ 0,73/página*
+3. Digitalização A3: 100 milheiros (100 mil págs) × R$ 906,67 = R$ 90.666,67 → *R$ 0,91/página*
+4. Manutenção e suporte (GED): 24 meses × R$ 18.966,67 = R$ 455.200,00
+⚠️ Abaixo de *50% do estimado (R$ 2,08 mi)* = indício de inexequibilidade (vai para diligência).
+✅ Preferência ME/EPP vale (valor abaixo de R$ 4,8 mi): empate ficto até 5%.
+
+*🛠️ O QUE O PREÇO POR PÁGINA PRECISA COBRIR*
+Tudo é feito *dentro do ITESP, em São Paulo* (Av. Brigadeiro Luiz Antônio, 554):
+• avaliação, classificação, organização e descrição em instrumento de busca
+• conservação preventiva, higienização, triagem por destinação (eliminação × recolhimento ao Arquivo do Estado)
+• digitalização + indexação + suporte ao GED
+• *caixas box brancas de polipropileno novas* (por conta da contratada), etiquetas, paletes com filme stretch
+• relatório historiográfico mensal com fotos e parecer + relatório final
+• preposto fixo no local
+Ritmo: ~5 milhões de págs em 24 meses ≈ *210 mil págs/mês ≈ 9.500 págs por dia útil*.
+Medição mensal só do que foi aprovado; documento parcial vai para a medição seguinte; pagamento 30 dias após a NF, *conta no Banco do Brasil*.
+
+*📋 HABILITAÇÃO*
+• SICAF + jurídica + fiscal/trabalhista (federal, FGTS, CNDT, estadual/municipal)
+• Balanço dos 2 últimos exercícios com *LG, LC e SG > 1*, com declaração assinada por contador
+• Certidão de falência
+• *Atestados (o ponto mais difícil)*: serviço similar com no mínimo
+  – digitalização A4/A5: *2.450 milheiros (2,45 milhões de págs)*
+  – digitalização A3: *50 milheiros (50 mil págs)*
+  – manutenção/suporte por *12 meses*
+  Vale somar atestados de contratos executados ao mesmo tempo. Pode ser pedida cópia do contrato.
+• Declaração de vistoria ou de conhecimento das condições
+• Declarações de saúde e segurança do trabalho (Constituição Estadual SP) e Lei 6.019 (arts. 5º-C e 5º-D)
+• *Consórcio permitido* (soma os atestados dos consorciados). *Subcontratação proibida.*
+
+*⚖️ CONTRATO E RISCOS*
+• Vigência 24 meses a partir da ordem de serviço; início em 10 dias
+• *Garantia de 5% ≈ R$ 208 mil* (caução, fiança, seguro-garantia ou título de capitalização), antes de assinar. Não entregar = recusa (multa de 20%)
+• Reajuste anual pelo IPC-FIPE (data-base do orçamento: 11/05/2026)
+• Multas da Portaria 13/2024: recusa 20% · inexecução parcial 25% · total 30% · atraso 0,2%/dia (até 30 dias) e 0,3%/dia depois · outras falhas 2% do faturamento do mês
+• LGPD e sigilo sobre o acervo; assinatura em 5 dias após a convocação
+
+*🚦 LEITURA RÁPIDA*
+✅ Bom valor, prazo longo, ME/EPP com empate ficto, consórcio aceito.
+⚠️ Atestado de 2,45 milhões de págs é a barreira principal. Sem ele, só entra em consórcio com quem tenha.
+⚠️ Operação presencial em SP por 24 meses, com equipe arquivística e materiais embutidos em R$ 0,73/pág.
+⚠️ Faltou o *Estudo Técnico Preliminar (Anexo I.1)*. Lá devem estar a resolução (dpi), OCR, formato (PDF/A), requisitos do software GED e equipe. Baixe no PNCP antes de precificar.
+
+*✅ PRÓXIMOS PASSOS*
+☐ Baixar o ETP e o Anexo IV (planilha de proposta) no PNCP
+☐ Conferir se os atestados somam 2,45 mi págs A4/A5 + 50 mil A3 + 12 meses de suporte; se não, buscar parceiro para consórcio
+☐ Agendar vistoria (alopes@itesp.sp.gov.br) até ~09/12
+☐ Montar custo: equipe no local, scanners A4/A3, caixas de polipropileno, GED, garantia de 5%
+☐ Enviar pedido de esclarecimento até 10/12, se precisar (ex.: dpi/OCR, volume de caixas, horário de trabalho)
+☐ SICAF em dia até 10/12 · proposta no Compras.gov.br até 15/12 às 10h
