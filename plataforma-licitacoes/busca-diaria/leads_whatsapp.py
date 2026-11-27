@@ -55,7 +55,7 @@ CATS = [
     ("doc", "📄 DIGITALIZAÇÃO E GESTÃO DOCUMENTAL",
      r"digitaliza|indexa|gestao documental|gestao arquivistica|\bged\b|\becm\b|microfilm|guarda (externa )?de (documentos|acervo|arquivos?)|tratamento (documental|arquivistico|de acervo)|organizacao de (acervo|arquivo|documentos)|escaneamento|higienizacao de documentos|custodia de documentos"),
 ]
-FORA_SERV = r"alarme|cftv|camera|camara|gravador|motobomba|bombas?\b|automacao predial|climatiza|ar condicionado|elevador|gerador|incendio|estruturas? para|tendas?|palco|sonoriza|eventos|banheiro|revendedora|large solution|microsoft|oracle corporation"
+FORA_SERV = r"seguranca eletronica|videomonitoramento|outsourcing de impressao|impressao corporativa|servicos? de impressao|alarme|cftv|camera|camara|gravador|motobomba|bombas?\b|automacao predial|climatiza|ar condicionado|elevador|gerador|incendio|estruturas? para|tendas?|palco|sonoriza|eventos|banheiro|revendedora|large solution|microsoft|oracle corporation"
 FORA_DOC = r"radiolog|raio[ -]?x|mamogra|imagens? (medica|radiolog)|placa de video|digitalizacao de imagens? (radio|medic)|tv digital|certificado digital|assinatura digital"
 RX = {k: re.compile(r) for k, _, r in CATS}
 grupos = {k: [] for k, _, _ in CATS}
