@@ -1,0 +1,721 @@
+*🏥 SOFTWARE DE SAÚDE* · 38 mensagens (ordem de prioridade) · lista de 27/11/2026
+
+════════════════
+
+*📨 MENSAGEM 1/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Agencia Nacional de Saude Suplementar*
+📍 Rio de Janeiro/RJ · Federal
+
+📝 *Objeto:* Contratação de empresa especializada no serviço de desenvolvimento de software e atendimento de demandas pontuais relativas às plataformas digitais, a arquitetura de sistemas e inteligência artificial, conforme condições, quantidades e exigências estabelecidas no Edital e seus anexos.
+
+💰 *Valor estimado:* R$ 19,73 mi
+🗓️ *Mensal:* R$ 300.890,91/mês × 12 meses
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 14/12/2026 às 10:00* (faltam 17 dias)
+🟢 Aberta desde 30/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/03589068000146/2026/92
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25300305001162026
+Nº PNCP 03589068000146-1-000092/2026
+
+════════════════
+
+*📨 MENSAGEM 2/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Consorcio Intermunicipal de Saude e de Politicas de Desenvolvimento da Regiao do Calcario - Cisrec*
+📍 Matozinhos/MG
+
+📝 *Objeto:* REGISTRO DE PREÇOS PARA CONTRATAÇÃO DE SOLUÇÃO DE SOFTWARE EM MODELO DE SERVIÇO – SOFTWARE AS A SERVICE (SAAS) PARA GESTÃO ELETRÔNICA DE DOCUMENTOS E DE PROCESSOS ADMINISTRATIVOS DIGITAIS, COM COMUNICAÇÃO INSTITUCIONAL E ATENDIMENTO AO CIDADÃO INTEGRADOS, INCLUINDO IMPLANTAÇÃO, MIGRAÇÃO DE DADOS, QUANDO NECESSÁRIA, TREINAMENTO E SUPORTE TÉCNICO PARA ATENDER AO CISREC E AOS MUNICÍPIOS CONSORCIADOS
+
+💰 *Valor estimado:* R$ 5,33 mi
+📦 *Volume no edital:* 10.145 registros
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
+📅 *Propostas até quinta, 10/12/2026 às 09:30* (faltam 13 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/01272081000141/2026/62
+🌐 Disputa: https://app2.licitardigital.com.br/pesquisa/120237
+Nº PNCP 01272081000141-1-000062/2026
+
+════════════════
+
+*📨 MENSAGEM 3/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Avare*
+📍 Avaré/SP · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada em licenciamento de sistema de gestão em saúde.
+
+💰 *Valor estimado:* R$ 3,93 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: BR Conectado
+📅 *Propostas até segunda, 07/12/2026 às 08:00* (faltam 10 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/46634168000150/2026/282
+🌐 Disputa: http://www.licitacaoavare.com.br
+Nº PNCP 46634168000150-1-000282/2026
+
+════════════════
+
+*📨 MENSAGEM 4/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Corumba*
+📍 Corumbá/MS · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada em tecnologia da informação, para locação de licença de direito de uso não-permanente de sistema integrado de gestão pública e de sistema especializado na gestão finalística da saúde, educação e assistência social, bem como, prestação de serviços técnicos de natureza continuada, tais como: implantação, manutenção, treinamento, suporte técnico, visando atender às necessidades de serviços e de modernização da Prefeitura Municipal de Corumbá, Câmara Municipal e
+
+💰 *Valor estimado:* R$ 3,70 mi
+🗓️ *Mensal:* R$ 284.790,00/mês × 12 meses
+📦 *Volume no edital:* 65 PF
+⚖️ Pregão - Eletrônico
+🖥️ Portal: BLL Compras
+📅 *Propostas até segunda, 14/12/2026 às 09:29* (faltam 17 dias)
+🟢 Aberta desde 01/12/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/03330461000110/2026/165
+🌐 Disputa: https://bllcompras.com/Process/ProcessView?param1=[gkz]GKI_QizwqVAnemOI7Mpm1HaG8w908A5EgfQUXnYB5HIbc97Cu_lOwhmjVJvZhmrxM5bmReO0DkjN70n_rnfLABizcyOI33Z2EzDiIAbO914=
+Nº PNCP 03330461000110-1-000165/2026
+
+════════════════
+
+*📨 MENSAGEM 5/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Fundo Municipal de Saude de Fraiburgo*
+📍 Fraiburgo/SC · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada para fornecimento, em modelo SaaS (Software as a Service), de solução tecnológica integrada de gestão da saúde pública municipal,
+
+💰 *Valor estimado:* R$ 2,07 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: IPM Sistemas
+📅 *Propostas até sexta, 11/12/2026 às 09:00* (faltam 14 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/10496741000169/2026/57
+Nº PNCP 10496741000169-1-000057/2026
+
+════════════════
+
+*📨 MENSAGEM 6/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Araxa*
+📍 Araxá/MG · Municipal
+
+📝 *Objeto:* [Publicenter] - CONTRATAÇÃO DE SOLUÇÕES TECNOLÓGICAS INTEGRADAS, EM AMBIENTE WEB (SAAS), DESTINADAS À MODERNIZAÇÃO DOS SISTEMAS CORPORATIVOS DA ADMINISTRAÇÃO MUNICIPAL E À GESTÃO DA SAÚDE PÚBLICA MUNICIPAL DE ARAXÁ/MG.
+
+💰 *Valor estimado:* R$ 1,39 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: PUBLICENTER INFORMATICA COMERCIO E LOCACAO LTDA
+📅 *Propostas até quarta, 02/12/2026 às 13:05* (faltam 5 dias)
+🟢 Aberta desde 02/12/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18140756000100/2026/304
+🌐 Disputa:                                                                                                     
+Nº PNCP 18140756000100-1-000304/2026
+
+════════════════
+
+*📨 MENSAGEM 7/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Consorcio Publico de Saude Interfederativo do Vale do Curu - Cisvale*
+📍 Caucaia/CE
+
+📝 *Objeto:* Contratação de empresa especializada em Tecnologia da Informação e Gestão Arquivística para a prestação de serviços continuados de Licenciamento do Direito de Uso de Plataforma de Gestão em Saúde Consorciada (SaaS), Aplicativo Móvel do Cidadão e Software de Gestão Documental (GED), englobando o gerenciamento do Transporte Sanitário de Passageiros e TFD, serviços de Implantação, Customização, Hospedagem em Nuvem, Suporte Técnico, bem como Coleta, Transporte, Higienização, Organização Arquivística, Custódia Física e Digitalização sob Demanda de Prontuários de Saúde do Consórcio Público de Saúde (CISVALE), sob o regime da Lei Federal nº 14.133/2021 e da Lei Federal nº 11.107/2005.
+
+💰 *Valor estimado:* R$ 578.040,04
+⚖️ Pregão - Eletrônico
+🖥️ Portal: M2A tecnologia
+📅 *Propostas até quarta, 09/12/2026 às 10:59* (faltam 12 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/12768835000175/2026/15
+🌐 Disputa: http://precodereferencia.m2atecnologia.com.br/c/qEzs3i2yQfqyyY7IR-PbGg.U00HmOJnWsft/
+Nº PNCP 12768835000175-1-000015/2026
+
+════════════════
+
+*📨 MENSAGEM 8/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Cachoeira do Sul*
+📍 Cachoeira do Sul/RS · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM IMPLANTAÇÃO DE SISTEMA DE GESTÃO DE SAÚDE, LOCAÇÃO DE SERVIDOR REMOTO, LICENCIAMENTO ANUAL DE USO DE SOFTWARE, GESTÃO E TREINAMENTO.
+
+💰 *Valor estimado:* R$ 508.059,80
+🗓️ *Mensal:* R$ 37.326,74/mês × 12 meses
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até quarta, 09/12/2026 às 09:00* (faltam 12 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/87530978000143/2026/476
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Cachoeira-do-Sul-27/PE-149-2026-2026-521645
+Nº PNCP 87530978000143-1-000476/2026
+
+════════════════
+
+*📨 MENSAGEM 9/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Fundo Municipal de Saude de Nova Veneza*
+📍 Nova Veneza/SC · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada em tecnologia da informação para prestação de serviços de licença de uso de Sistema Informatizado de Gestão de Saúde, serviços de consultoria em gestão de saúde pública municipal, com serviços correlatos de locação de software para informatização dos setores e estabelecimentos de saúde da Secretaria Municipal de Saúde de Nova Veneza - SC, compreendendo a migração de dados, implantação do sistema, treinamento inicial e treinamento durante execução do contrato,
+
+💰 *Valor estimado:* R$ 273.065,46
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Bolsa Nacional De Compras - BNC
+📅 *Propostas até quarta, 02/12/2026 às 08:15* (faltam 5 dias)
+🟢 Aberta desde 06/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/10485444000118/2026/21
+🌐 Disputa: https://bnccompras.com/Process/ProcessView?param1=[gkz]zMahI24bHVQx03BaItfsHNVlSjFdythdWPjqJ7w/rlDwGTfB4xXVBn6ClOP5AkR_aNQVhykxxjevhUJdlDLSmT1/Egn7P7EzOlDIb5Z836Q=
+Nº PNCP 10485444000118-1-000021/2026
+
+════════════════
+
+*📨 MENSAGEM 10/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Cisalp-consorcio Publico Intermunicipal de Saude A Micro-regiao do Alto Paranaiba*
+📍 Lagoa Formosa/MG
+
+📝 *Objeto:* [LICITANET] - Contratação de empresa especializada para disponibilização de sistema informatizado de agendamento de consultas, exames e procedimentos de saúde (Sistema de Agendamentos), mediante licenciamento de uso, incluindo hospedagem, implantação, treinamento, suporte técnico, manutenção e envio de notificações automáticas aos pacientes, para atendimento às demandas dos estabelecimentos de saúde dos entes consorciados ao CISALP, dos entes consorciados solicitantes e das clínicas de especialidades médicas e instituições geridas pelo CISALP, mediante Pregão Eletrônico.
+
+💰 *Valor estimado:* R$ 259.410,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitanet Licitações Eletrônicas LTDA
+📅 *Propostas até quinta, 10/12/2026 às 08:30* (faltam 13 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/02319394000170/2026/89
+🌐 Disputa: https://licitanet.com.br/sessao/207419
+Nº PNCP 02319394000170-1-000089/2026
+
+════════════════
+
+*📨 MENSAGEM 11/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Conceicao de Macabu*
+📍 Conceição de Macabu/RJ · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - Contratação de empresa especializada para fornecimento de solução tecnológica integrada para gestão da saúde pública municipal, compreendendo licenciamento de uso de software em ambiente cloud (SaaS), implantação, migração de dados, treinamento de usuários, suporte técnico e manutenção corretiva e evolutiva, para atender as necessidades da Secretaria Municipal de Saúde de Conceição de Macabu.
+
+💰 *Valor estimado:* R$ 226.666,70
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até quinta, 10/12/2026 às 10:00* (faltam 13 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/29115466000114/2026/173
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/RJ/Prefeitura-Municipal-de-Conceicao-de-Macabu-2900/PE-056-REPUBLICACAO-2026-2026-513924
+Nº PNCP 29115466000114-1-000173/2026
+
+════════════════
+
+*📨 MENSAGEM 12/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Barauna*
+📍 Baraúna/RN · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA DISPONIBILIZAÇÃO DE SOLUÇÃO INTEGRADA DE GESTÃO EM SAÚDE, INCLUINDO LICENCIAMENTO TEMPORÁRIO DE USO, IMPLANTAÇÃO, CONFIGURAÇÃO, INTEGRAÇÃO, HOSPEDAGEM EM NUVEM, CAPACITAÇÃO DOS USUÁRIOS, SUPORTE TÉCNICO, MANUTENÇÃO E ATUALIZAÇÃO, DESTINADA A ATENDER ÀS NECESSIDADES DA REDE MUNICIPAL DE SAÚDE DE BARAÚNA/RN.
+
+💰 *Valor estimado:* R$ 202.504,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até quarta, 16/12/2026 às 08:00* (faltam 19 dias)
+🟢 Aberta desde 02/12/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/08546103000163/2026/88
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/RN/Prefeitura-Municipal-de-Barauna-1473/PE-023-2026-2026-527329
+Nº PNCP 08546103000163-1-000088/2026
+
+════════════════
+
+*📨 MENSAGEM 13/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Coromandel*
+📍 Coromandel/MG · Municipal
+
+📝 *Objeto:* [Publicenter] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇOS DE LICENCIAMENTO DE DIREITO DE USO DE SOFTWARE INTEGRADO PARA GESTÃO DE SAÚDE PÚBLICA, PARA ATENDER AS DEMANDAS E NECESSIDADE DA SECRETÁRIA MUNICIPAL DE SAÚDE DO MUNICÍPIO DE COROMANDEL, INCLUINDO SERVIÇOS DE IMPLANTAÇÃO, CONVERSÃO, MIGRAÇÃO DE DADOS, SUPORTE TÉCNICO (HELP DESK) IN LOCO E REMOTO, TREINAMENTO DE USUÁRIOS, MANUTENÇÃO EVOLUTIVA, LEGAL, CORRETIVA E SOB DEMANDA E A DISPONIBILIZAÇÃO DE DATACENTER.
+
+💰 *Valor estimado:* R$ 194.100,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: PUBLICENTER INFORMATICA COMERCIO E LOCACAO LTDA
+📅 *Propostas até segunda, 07/12/2026 às 08:00* (faltam 10 dias)
+🟢 Aberta desde 07/12/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18591149000158/2026/73
+🌐 Disputa:                                                                                                     
+Nº PNCP 18591149000158-1-000073/2026
+
+════════════════
+
+*📨 MENSAGEM 14/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Fundo Municipal de Saude Goianesia do Para*
+📍 Goianésia do Pará/PA · Municipal
+
+📝 *Objeto:* [LICITANET] - CONTRATAÇÃO DE EMPRESA PARA PRESTAÇÃO DE SERVIÇOS DE ASSISTÊNCIA TÉCNICA, LOCAÇÃO E MANUTENÇÃO MENSAL DOS SOFTWARE ADMINISTRATIVOS PARA GESTÃO DO ALMOXARIFADO, FARMÁCIA, HOSPITAL, UBS E POSTOS DE SAÚDE DO MUNICÍPIO DE GOIANÉSIA DO PARÁ
+
+💰 *Valor estimado:* R$ 179.413,20
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitanet Licitações Eletrônicas LTDA
+📅 *Propostas até segunda, 30/11/2026 às 08:30* (faltam 3 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/12884091000154/2026/6
+🌐 Disputa: https://licitanet.com.br/sessao/208009
+Nº PNCP 12884091000154-1-000006/2026
+
+════════════════
+
+*📨 MENSAGEM 15/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Apiacas*
+📍 Apiacás/MT · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA PARA FORNECIMENTO DE SISTEMA DE INFORMÁTICA SOFTWARE - SOLUÇÃO INTEGRADA PARA GESTÃO DE SAÚDE, INCLUINDO SERVIÇOS DE IMPLANTAÇÃO, TREINAMENTO, SUPORTE TÉCNICO E MANUTENÇÃO, PARA ATENDER AS ATIVIDADES OPERACIONAIS DA REDE MUNICIPAL DE SAÚDE DE APIACÁS/MT.
+
+💰 *Valor estimado:* R$ 179.104,78
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Betha Sistemas
+📅 *Propostas até segunda, 07/12/2026 às 08:00* (faltam 10 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/01321850000154/2026/77
+Nº PNCP 01321850000154-1-000077/2026
+
+════════════════
+
+*📨 MENSAGEM 16/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Consorcio Int de Saude da Com dos M da Reg de C Mourao*
+📍 Campo Mourão/PR
+
+📝 *Objeto:* Contratação de empresa especializada para prestação de serviços de locação de sistema integrado de gestão pública do tipo ERP – Enterprise Resource Planning, disponibilizado estritamente em plataforma web, destinado a atender às necessidades administrativas e operacionais do Consórcio Intermunicipal de Saúde da Comunidade dos Municípios da Região de Campo Mourão – CISCOMCAM, contemplando os módulos de Contabilidade, Planejamento e Orçamento, Tesouraria, Geração de Arquivos para o SIM-AM (Sistema de Informações Municipais – Acompanhamento Mensal do TCE-PR), Tributário, Controle de Compras e Licitações, Controle de Frotas, Almoxarifado, Controle do Patrimônio, Controle Interno, Recursos…
+
+💰 *Valor estimado:* R$ 176.710,44
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Elotech Gestão Pública Ltda
+📅 *Propostas até segunda, 07/12/2026 às 09:00* (faltam 10 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/95640322000101/2026/96
+Nº PNCP 95640322000101-1-000096/2026
+
+════════════════
+
+*📨 MENSAGEM 17/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Acailandia - Fundo Municipal de Saude*
+📍 Açailândia/MA · Municipal
+
+📝 *Objeto:* [LICITANET] - Contratação de empresa especializada para fornecimento de solução em Sistema Informatizado Integrado de Gestão Hospitalar, de acordo com as exigências, especificações e quantitativos previstos neste edital e seus anexos
+
+💰 *Valor estimado:* R$ 163.732,80
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitanet Licitações Eletrônicas LTDA
+📅 *Propostas até sexta, 11/12/2026 às 09:00* (faltam 14 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/11816419000132/2026/8
+🌐 Disputa: https://licitanet.com.br/sessao/208860
+Nº PNCP 11816419000132-1-000008/2026
+
+════════════════
+
+*📨 MENSAGEM 18/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Nova Tebas*
+📍 Nova Tebas/PR · Municipal
+
+📝 *Objeto:* PREGÃO 67: Contratação de empresa especializada para prestação de serviços de licenciamento de software, incluindo suporte técnico, para atendimento às necessidades da Secretaria Municipal de Saúde.
+
+💰 *Valor estimado:* R$ 144.477,47
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 08/12/2026 às 08:30* (faltam 11 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/80620172000105/2026/238
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98991305000752026
+Nº PNCP 80620172000105-1-000238/2026
+
+════════════════
+
+*📨 MENSAGEM 19/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Sergipe Ministerio Publico*
+📍 Aracaju/SE · Estadual
+
+📝 *Objeto:* [LICITANET] - Contratação de empresa especializada para o fornecimento de Solução Inteligente de Prontuário Eletrônico de Paciente (PEP) na modalidade Software como Serviço (SaaS), compreendendo os serviços de implantação, parametrização, customização, integração, hospedagem, suporte técnico com Garantia de Nível de Serviço (SLA) e treinamento, conforme condições e especificações constantes no Edital e seus anexos.
+
+💰 *Valor estimado:* R$ 126.750,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitanet Licitações Eletrônicas LTDA
+📅 *Propostas até quinta, 10/12/2026 às 09:00* (faltam 13 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/13168687000110/2026/154
+🌐 Disputa: https://licitanet.com.br/sessao/208622
+Nº PNCP 13168687000110-1-000154/2026
+
+════════════════
+
+*📨 MENSAGEM 20/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Minacu*
+📍 Minaçu/GO · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE SOFTWARE COMO SERVIÇO SAAS – (USN – UND SERVIÇO EM NUVEM), PARA ATENDER AS NECESSIDADES DO PODER EXECUTIVO E FUNDO MUNICIPAL DE SAÚDE DO MUNICÍPIO DE MINAÇU – GO”.
+
+💰 *Valor estimado:* R$ 115.119,60
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Bolsa Nacional De Compras - BNC
+📅 *Propostas até segunda, 30/11/2026 às 08:29* (faltam 3 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/02215275000178/2026/1108
+🌐 Disputa: https://bnccompras.com/Process/ProcessView?param1=[gkz]sqqw2qDU5Z8iSvTPqfXC3WPSu2zQWNBlE1dSiPVJVpdZaCHOHGK68lvJPr0_gbwlgyv57HPhm5pUfCtHAb6DTCWYQH14P63iKf5bSAs0wK4=
+Nº PNCP 02215275000178-1-001108/2026
+
+════════════════
+
+*📨 MENSAGEM 21/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Nova Prata*
+📍 Nova Prata/RS · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SOLUÇÃO TECNOLÓGICA INTEGRADA DE APOIO À GESTÃO DA ATENÇÃO PRIMÁRIA À SAÚDE DE MUNICÍPIO, ABRANGENDO A HOSPEDAGEM DO SISTEMA E-SUS APS/PEC EM NUVEM NACIONAL COM ALTA DISPONIBILIDADE, REDUNDÂNCIA, BACKUPS, RECUPERAÇÃO DE DESASTRES E SEGURANÇA CIBERNÉTICA, ALÉM DE PLATAFORMA DE BUSINESS INTELLIGENCE EM MODO LEITURA PARA ACOMPANHAMENTO DE INDICADORES, METAS, FINANCIAMENTO FEDERAL E GERAÇÃO DE LISTAS NOMINAIS E PAINÉIS GERENCIAIS, FERRAMENTA PARA GERAÇÃO AUTOMATIZADA DOS ARQUIVOS DE FATURAMENTO BPA CONFORME PADRÕES DO MINISTÉRIO DA SAÚDE, E CONSULTORIA TÉCNICA ESPECIALIZADA PARA SUPORTE OPERACIONAL, QUALIFICAÇÃO DE REGISTROS…
+
+💰 *Valor estimado:* R$ 92.619,96
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até terça, 01/12/2026 às 13:55* (faltam 4 dias)
+🟢 Aberta desde 11/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/91618439000138/2026/1221
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Nova-Prata-50/PE-43-2026-2026-518561
+Nº PNCP 91618439000138-1-001221/2026
+
+════════════════
+
+*📨 MENSAGEM 22/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Tanque Novo*
+📍 Tanque Novo/BA · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada para informatização dos sistemas do Fundo Municipal de Saúde.
+
+💰 *Valor estimado:* R$ 89.049,96
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Bolsa Nacional De Compras - BNC
+📅 *Propostas até quinta, 03/12/2026 às 08:00* (faltam 6 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/13225131000119/2026/74
+🌐 Disputa: https://bnccompras.com/Process/ProcessView?param1=[gkz]m4IuvX4y5E_SyqIanC2CbqjPJFLIBKewY0becw6wYI3yfflrBApBOmzQ_zl6tWrgzERfGAnJklAxVWvo4c1WMHo1NnI0CPvW1MXmiUxaa00=
+Nº PNCP 13225131000119-1-000074/2026
+
+════════════════
+
+*📨 MENSAGEM 23/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Fundo Municipal de Saude*
+📍 Rio Verde/GO · Municipal
+
+📝 *Objeto:* [LICITANET] - PRESTAÇÃO DE SERVIÇO PARA SOLUÇÃO TECNOLÓGICA EM GESTÃO DO SERVIÇO DE ATENDIMENTO MÓVEL DE URGÊNCIA – SAMU 192, PERTENCENTE AO FUNDO MUNICIPAL DE SAÚDE DE RIO VERDE - GO
+
+💰 *Valor estimado:* R$ 65.484,00
+⚖️ Dispensa
+🖥️ Portal: Licitanet Licitações Eletrônicas LTDA
+📅 *Propostas até segunda, 30/11/2026 às 08:00* (faltam 3 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/06190522000180/2026/162
+🌐 Disputa: https://licitanet.com.br/sessao/209256
+Nº PNCP 06190522000180-1-000162/2026
+
+════════════════
+
+*📨 MENSAGEM 24/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Fundo Municipal de Saude de Indaial*
+📍 Indaial/SC · Municipal
+
+📝 *Objeto:* contratação de empresa especializada para implantação e locação mensal de sistema informatizado de automação de mensagens via WhatsApp, integrado à Inteligência Artificial, permitindo a gestão de filas de atendimento entre múltiplos operadores, triagem automatizada por chatbot, além do recebimento e envio de mensagens e avisos de interesse público da Secretaria Municipal de Saúde de Indaial
+
+💰 *Valor estimado:* R$ 64.259,33
+⚖️ Pregão - Eletrônico
+🖥️ Portal: AZ INFORMATICA LTDA
+📅 *Propostas até quarta, 16/12/2026 às 08:00* (faltam 19 dias)
+🟢 Aberta desde 06/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/11355483000163/2026/103
+Nº PNCP 11355483000163-1-000103/2026
+
+════════════════
+
+*📨 MENSAGEM 25/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Fundo Municipal de Saude de Uniao do Oeste*
+📍 União do Oeste/SC · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA FORNECIMENTO DE SOLUÇÃO INFORMATIZADA INTEGRADA DE GESTÃO EM SAÚDE, EM AMBIENTE WEB E HOSPEDADA EM NUVEM, CONTEMPLANDO SERVIÇOS DE IMPLANTAÇÃO, CONFIGURAÇÃO, PARAMETRIZAÇÃO, MANUTENÇÃO, ATUALIZAÇÃO, SUPORTE TÉCNICO, CAPACITAÇÃO DE USUÁRIOS E INTEGRAÇÃO/INTEROPERABILIDADE COM OS SISTEMAS OFICIAIS DO MINISTÉRIO DA SAÚDE, PARA ATENDER ÀS NECESSIDADES OPERACIONAIS DO FUNDO MUNICIPAL DE SAÚDE DE UNIÃO DO OESTE/SC.
+
+💰 *Valor estimado:* R$ 57.972,08
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
+📅 *Propostas até quarta, 06/01/2027 às 08:30* (faltam 40 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/11692396000100/2026/42
+🌐 Disputa: https://app2.licitardigital.com.br/pesquisa/119096
+Nº PNCP 11692396000100-1-000042/2026
+
+════════════════
+
+*📨 MENSAGEM 26/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Dom Joaquim*
+📍 Dom Joaquim/MG · Municipal
+
+📝 *Objeto:* Contratação de solução de software em modelo Software como Serviço (SaaS), 100% web, para gestão da Secretaria Municipal de Saúde de Dom Joaquim.
+
+💰 *Valor estimado:* R$ 49.650,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Memory Projetos e Desenvolvimento de Sistemas LTDA
+📅 *Propostas até quarta, 09/12/2026 às 08:00* (faltam 12 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18303198000148/2026/57
+🌐 Disputa: https://pncp.gov.br/app/editais?q=&status=recebendo_proposta&pagina=1
+Nº PNCP 18303198000148-1-000057/2026
+
+════════════════
+
+*📨 MENSAGEM 27/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Fundo Municipal de Saude - Goias*
+📍 Goiás/GO · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA PARA A PRESTAÇÃO DE SERVIÇOS EM TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO EM SAÚDE (TICS) PARA CONTRATAÇÃO POR ASSINATURA DE SOFTWARE DE GESTÃO NO MONITORAMENTO E AVALIAÇÃO DAS AÇÕES E SERVIÇOS DE SAÚDE OFERTADOS NAS UNIDADES DE SAÚDE DA ATENÇÃO PRIMÁRIA À SAÚDE (APS), VISANDO O ATENDIMENTO DAS NECESSIDADES DA REDE DE ATENDIMENTO BÁSICO DE SAÚDE DO MUNICÍPIO DE GOIÁS, CONFORME TERMO DE REFERÊNCIA (ANEXO 1), NA FORMA E CONDIÇÕES DA LEI FEDERAL Nº 14.133/21.
+
+💰 *Valor estimado:* R$ 31.890,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Megasoft Informática
+📅 *Propostas até terça, 08/12/2026 às 08:00* (faltam 11 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/11152150000137/2026/184
+Nº PNCP 11152150000137-1-000184/2026
+
+════════════════
+
+*📨 MENSAGEM 28/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Fundacao Municipal de Saude de Teixeiras*
+📍 Teixeiras/MG · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - Contratação de empresa especializada na prestação de serviços integrados de tecnologia da informação e comunicação corporativa, em lote único, contemplando o licenciamento, a implantação e a hospedagem de Portal Institucional (site) e Diário Oficial Eletrônico, o fornecimento e a administração de cinco contas de e-mail corporativo profissional, bem como a prestação continuada de serviços de assessoria digital, criação gráfica e gestão de conteúdo, para atender às demandas de transparência, comunicação e rotinas administrativas da Fundação Municipal de Saúde de Teixeiras/MG — FUMSAT
+
+💰 *Valor estimado:* R$ 22.550,88
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até terça, 08/12/2026 às 08:30* (faltam 11 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18134122000136/2026/17
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/MG/Fundacao-Municipal-de-Saude-de-Teixeiras-3698/PE-12-2026-2026-527040
+Nº PNCP 18134122000136-1-000017/2026
+
+════════════════
+
+*📨 MENSAGEM 29/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Consorcio Intermunicipal de Saude da Micro Regiao de Manga-mg*
+📍 Manga/MG
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE FORNECIMENTO DE SOFTWARE DE GESTÃO EM SAÚDE EM ATENDIMENTO AS DEMANDAS DO CONSORCIO INTERMUNICIPAL DE SAÚDE DA MICRORREGIÃO DE MANGA-CISMMA.
+
+💰 *Valor estimado:* R$ 19.783,80
+⚖️ Dispensa
+🖥️ Portal: AZ INFORMATICA LTDA
+📅 *Propostas até segunda, 07/12/2026 às 14:00* (faltam 10 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/03869109000158/2026/21
+Nº PNCP 03869109000158-1-000021/2026
+
+════════════════
+
+*📨 MENSAGEM 30/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Comando do Exercito*
+📍 Crateús/CE · Federal
+
+📝 *Objeto:* Aquisição de material do Planejamento Anual das Atividades do Sistema de Saúde do Exército PAASSEx
+
+💰 *Valor estimado:* R$ 3.327,67
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 09/12/2026 às 08:00* (faltam 12 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00394452000103/2026/25347
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=16004105000452026
+Nº PNCP 00394452000103-1-025347/2026
+
+════════════════
+
+*📨 MENSAGEM 31/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Ministerio da Saude*
+📍 Rio de Janeiro/RJ · Federal
+
+📝 *Objeto:* CONTRATAÇÃO DE LICENCIAMENTO DE SOFTWARE PARA GESTÃO DO SETOR DE HEMOTERAPIA
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 02/12/2026 às 10:00* (faltam 5 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00394544000185/2026/2495
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25005705003142026
+Nº PNCP 00394544000185-1-002495/2026
+
+════════════════
+
+*📨 MENSAGEM 32/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Hospital Metropolitano Odilon Behrens - Hob*
+📍 Belo Horizonte/MG · Municipal
+
+📝 *Objeto:* Contratação de Assessoria Estatística destinados ao Serviço de Controle de Infecção e Epidemiologia Hospitalar (SCHIE) incluindo licença para uso de solução informatizada com a finalidade de apoiar, qualificar e automatizar as ações de vigilância epidemiológica hospitalar.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 04/12/2026 às 08:00* (faltam 7 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/16692121000181/2026/72
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92665805000252026
+Nº PNCP 16692121000181-1-000072/2026
+
+════════════════
+
+*📨 MENSAGEM 33/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Gloria D'oeste*
+📍 Glória D'Oeste/MT · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE SERVIÇOS INTEGRADOS DE SUPORTE TÉCNICO-OPERACIONAL À GESTÃO MUNICIPAL DE SAÚDE, SOB DEMANDA E POR HORA TÉCNICA, COM EQUIPE MULTIDISCIPLINAR, ATENDIMENTO REMOTO E PRESENCIAL E SOLUÇÃO TECNOLÓGICA, PARA A SECRETARIA MUNICIPAL DE SAÚDE DE GLÓRIA D’OESTE/MT, EM LOTE ÚNICO.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: SELCORP LICITAÇÕES S/A
+📅 *Propostas até sexta, 11/12/2026 às 08:59* (faltam 14 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/37464955000100/2026/29
+🌐 Disputa: http://www.selcorp.com.br/ofertascompra/1050
+Nº PNCP 37464955000100-1-000029/2026
+
+════════════════
+
+*📨 MENSAGEM 34/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Empresa Brasileira de Servicos Hospitalares - Ebserh*
+📍 Brasília/DF
+
+📝 *Objeto:* Contratação de empresa especializada para a locação de sistema integrado de ecoendoscopia, a fim de atender às necessidades assistenciais e terapêuticas dos pacientes do Hospital Universitário de Brasília (HUB).
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 11/12/2026 às 10:00* (faltam 14 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/15126437000305/2026/4663
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15500905000592026
+Nº PNCP 15126437000305-1-004663/2026
+
+════════════════
+
+*📨 MENSAGEM 35/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Montes Claros*
+📍 Montes Claros/MG · Municipal
+
+📝 *Objeto:* CONTRATACAO DE SOCIEDADE EMPRESARIA OU UNIPESSOAL ESPECIALIZADA EM LICENCIAMENTO DE USO DE SISTEMA DE INFORMATICA INTEGRADA PARA GESTAO PUBLICA MODULO GESTAO EM SAUDE PARA ATENDER A DEMANDA DA SECRETARIA DE SAUDE DO MUNICIPIO DE MONTES CLAROS MG.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Governançabrasil Tecnologia e Gestão em Serviços
+📅 *Propostas até segunda, 14/12/2026 às 08:59* (faltam 17 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/22678874000135/2026/498
+🌐 Disputa:  
+Nº PNCP 22678874000135-1-000498/2026
+
+════════════════
+
+*📨 MENSAGEM 36/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Municipio de Montes Claros*
+📍 Montes Claros/MG · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE SOCIEDADE EMPRESÁRIA OU UNIPESSOAL ESPECIALIZADA EM LICENCIAMENTO DE USO DE SISTEMA DE INFORMÁTICA INTEGRADA PARA GESTÃO PÚBLICA, MÓDULO GESTÃO EM SAÚDE, PARA ATENDER A DEMANDA DA SECRETARIA DE SAÚDE DO MUNICÍPIO DE MONTES CLAROS – MG.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 14/12/2026 às 09:00* (faltam 17 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/22678874000135/2026/336
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98486505000652026
+Nº PNCP 22678874000135-1-000336/2026
+
+════════════════
+
+*📨 MENSAGEM 37/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Tecpar*
+📍 Curitiba/PR
+
+📝 *Objeto:* Contratação de empresa especializada para o desenvolvimento de Plataforma Digital de Apoio à Decisão Clínica para Acompanhamento de Pacientes em Uso de Cannabis Medicinal, com acesso diferenciado para pacientes e profissionais de saúde, registro estruturado de sintomas, de uso do medicamento e de exames, biblioteca científica, módulo de farmacovigilância e base de dados anonimizada para pesquisa.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 16/12/2026 às 09:30* (faltam 19 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/77964393000188/2027/2
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=93297005000082027
+Nº PNCP 77964393000188-1-000002/2027
+
+════════════════
+
+*📨 MENSAGEM 38/38 · 🏥 SOFTWARE DE SAÚDE*
+
+🏛️ *Secretaria de Estado de Saude Publica*
+📍 Belém/PA · Estadual
+
+📝 *Objeto:* Contratação de empresa especializada na prestação de serviço de telemedicina que possibilite a realização de consultas médicas on-line eletivas e de pronto atendimento, com o objetivo de ampliar o acesso aos serviços de saúde e mitigar as graves desigualdades assistenciais existentes no Estado.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras Pará
+📅 *Propostas até segunda, 14/12/2026 às 09:59* (faltam 17 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/05054929000117/2026/467
+Nº PNCP 05054929000117-1-000467/2026

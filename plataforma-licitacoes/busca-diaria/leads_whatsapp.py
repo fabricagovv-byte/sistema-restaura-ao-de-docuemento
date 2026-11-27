@@ -143,5 +143,7 @@ for k, nome, _ in CATS:
 msgs[0] += "\n\n" + " · ".join(resumo)
 for i, m in enumerate(msgs):
     open(f"{saida}/lead-{i}.txt", "w").write(m)
+json.dump({nome: [link(r[0]) for _, r in sorted(grupos[k], key=lambda x: -x[0])] for k, nome, _ in CATS},
+          open(f"{saida}/todos.json", "w"), ensure_ascii=False)
 open(f"{saida}/leads-do-dia.txt", "w").write("\n\n————————————\n\n".join(msgs))
 print("\n".join(f"{k}: {len(v)}" for k, v in grupos.items()))

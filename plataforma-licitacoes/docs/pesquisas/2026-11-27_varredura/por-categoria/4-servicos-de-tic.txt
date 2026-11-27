@@ -1,0 +1,2680 @@
+*🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)* · 142 mensagens (ordem de prioridade) · lista de 27/11/2026
+
+════════════════
+
+*📨 MENSAGEM 1/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Ministerio da Educacao*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* "Contratação de serviços de apoio técnico e especializado em atividades de Tecnologia da Informação e Comunicação, para atendimento às necessidades do Ministério da Educação, visando garantir adequado atendimento às necessidades de TIC do Ministério da Educação”.
+
+💰 *Valor estimado:* R$ 50,12 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 09/12/2026 às 09:30* (faltam 12 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00394445000101/2026/293
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15000405000142026
+Nº PNCP 00394445000101-1-000293/2026
+
+════════════════
+
+*📨 MENSAGEM 2/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Comando do Exercito*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Registro de preços para eventual contratação de solução de Tecnologia da Informação e Comunicação (TIC) para a expansão de capacidade de hospedagem do Data Center Corporativo do Exército Brasileiro em Brasília (Retrofit do Data Center Ricardo Franco), com a instalação de nova sala segura, a ampliação da oferta energética e da climatização, a recertificação pela Uptime Institute e a garantia com suporte técnico de 12 (doze) meses, visando hospedagem de infraestrutura de Tecnologia da Informação (TI) para suportar Inteligência Artificial (IA).
+
+💰 *Valor estimado:* R$ 59,59 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 02/12/2026 às 10:00* (faltam 5 dias)
+🟢 Aberta desde 16/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00394452000103/2026/24386
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=16074905000602026
+Nº PNCP 00394452000103-1-024386/2026
+
+════════════════
+
+*📨 MENSAGEM 3/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Fundacao Jorge Duprat Figueiredo, de Seguranca e Medicina do Trabalho*
+📍 São Paulo/SP · Federal
+
+📝 *Objeto:* Contratação de serviços de sustentação de infraestrutura e service desk para a Sede/CTN e EAs
+
+💰 *Valor estimado:* R$ 16,22 mi
+🗓️ *Mensal:* R$ 75.848,28/mês × 48 meses
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 08/12/2026 às 10:00* (faltam 11 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/62428073000136/2026/29
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=26400105000062026
+Nº PNCP 62428073000136-1-000029/2026
+
+════════════════
+
+*📨 MENSAGEM 4/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Secretaria da Fazenda e Planejamento*
+📍 São Paulo/SP · Estadual
+
+📝 *Objeto:* Contratação de serviços de Suporte Técnico, manutenção, atualização tecnológica e Banco de Horas relativo ao software de Banco de Dados Sybase/Sap IQ (ambiente DW – DataWarehouse).
+
+💰 *Valor estimado:* R$ 16,97 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 07/12/2026 às 09:00* (faltam 10 dias)
+🟢 Aberta desde 18/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/46377222000129/2026/409
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=93301105004352026
+Nº PNCP 46377222000129-1-000409/2026
+
+════════════════
+
+*📨 MENSAGEM 5/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Sumare*
+📍 Sumaré/SP · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA IMPLANTAÇÃO, OPERAÇÃO E GESTÃO DE SOLUÇÃO INTEGRADA DE CONECTIVIDADE E COMUNICAÇÕES, INCLUINDO INTERNET, REDE DE DADOS E VOZ, WI-FI, ARMAZENAMENTO, SEGURANÇA E SUPORTE TÉCNICO
+
+💰 *Valor estimado:* R$ 15,28 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Novo BBMNET Licitações
+📅 *Propostas até quarta, 09/12/2026 às 08:00* (faltam 12 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/45787660000100/2026/354
+Nº PNCP 45787660000100-1-000354/2026
+
+════════════════
+
+*📨 MENSAGEM 6/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Comissao Nacional de Energia Nuclear*
+📍 São Paulo/SP · Federal
+
+📝 *Objeto:* Registro de Preços para futura e eventual contratação de solução integrada de infraestrutura de Tecnologia da Informação e Comunicação no modelo Hardware as a Service – HaaS, compreendendo a disponibilização de comutadores de rede, solução de roteamento avançado, recursos de armazenamento e plataforma para retenção de dados, acompanhados dos serviços de instalação, configuração, integração, migração, monitoramento, sustentação, manutenção, suporte técnico, substituição, atualização tecnológica, transferência de conhecimento e transição contratual
+
+💰 *Valor estimado:* R$ 13,17 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quinta, 10/12/2026 às 08:00* (faltam 13 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00402552000126/2026/692
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=11320205004392026
+Nº PNCP 00402552000126-1-000692/2026
+
+════════════════
+
+*📨 MENSAGEM 7/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Fundacao Instit Bras de Geografia e Estatistica Ibge*
+📍 Rio de Janeiro/RJ · Federal
+
+📝 *Objeto:* Contratação de solução de tecnologia da informação e comunicação de Serviços de Apoio Técnico Especializado à Governança e Gestão de Tecnologia da Informação para atender as necessidades do IBGE por 24 (vinte e quatro) meses.
+
+💰 *Valor estimado:* R$ 11,69 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 11/12/2026 às 09:00* (faltam 14 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/33787094000140/2026/513
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=11460105002382026
+Nº PNCP 33787094000140-1-000513/2026
+
+════════════════
+
+*📨 MENSAGEM 8/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Tiete*
+📍 Tietê/SP · Municipal
+
+📝 *Objeto:* Serviço de implantação, operação e gestão de solução integrada de conectividade e comunicação
+
+💰 *Valor estimado:* R$ 9,90 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: CONAM Consultoria em Administração Municipal
+📅 *Propostas até sexta, 04/12/2026 às 08:45* (faltam 7 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/46634598000171/2026/529
+Nº PNCP 46634598000171-1-000529/2026
+
+════════════════
+
+*📨 MENSAGEM 9/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Tribunal de Justica Militar do Estado de Minas Gerais*
+📍 Belo Horizonte/MG · Estadual
+
+📝 *Objeto:* Solução de datacenter baseada em hiperconvergência, bem como serviços completos e prestação de garantia por parte do fabricante por 36 meses, conforme especificações do Edital e seus anexos
+
+💰 *Valor estimado:* R$ 3,33 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Portal de Compras do Estado de Minas Gerais
+📅 *Propostas até sexta, 11/12/2026 às 10:00* (faltam 14 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/16866394000103/2026/121
+🌐 Disputa: https://www1.compras.mg.gov.br/n/procedimentolei14133/consulta/eletronico/visualizar/2026/113/1051005
+Nº PNCP 16866394000103-1-000121/2026
+
+════════════════
+
+*📨 MENSAGEM 10/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Tribunal Regional Eleitoral do Rio de Janeiro*
+📍 Rio de Janeiro/RJ · Federal
+
+📝 *Objeto:* Contratação de pessoa jurídica para prestação continuada de serviços especializados na área de tecnologia da informação em atividades de suporte técnico à infraestrutura de TIC e aos usuários de soluções de TIC do TRE-RJ, mediante alocação de postos de trabalho, com dedicação exclusiva de mão de obra.
+
+💰 *Valor estimado:* R$ 5,69 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 16/12/2026 às 11:00* (faltam 19 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/06170517000105/2026/169
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=07001705002762026
+Nº PNCP 06170517000105-1-000169/2026
+
+════════════════
+
+*📨 MENSAGEM 11/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Fundacao Oswaldo Cruz*
+📍 Rio de Janeiro/RJ · Federal
+
+📝 *Objeto:* Contratação de empresa especializada para o fornecimento de Serviço de Centro de Operações de Segurança (Security Operations Center - SOC) com funcionamento e suporte 24h por dia e 7 dias por semana, para o atendimento das necessidades da Divisão de Tecnologia da Informação de Bio-Manguinhos, unidade da Fiocruz.
+
+💰 *Valor estimado:* R$ 5,12 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 04/12/2026 às 09:00* (faltam 7 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/33781055000135/2026/2019
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25444505005052026
+Nº PNCP 33781055000135-1-002019/2026
+
+════════════════
+
+*📨 MENSAGEM 12/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Tribunal de Contas da Uniao*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Ffornecimento de Unidades de Serviços de Conectividade para Nuvens Públicas (USCN’s), para prestação de serviços técnicos especializados de natureza contínua na área de Tecnologia da Informação (TI), com vistas a estabelecer conectividade privada entre os datacenters do Tribunal de Contas da União (TCU), para até 5 (cinco) datacenters de provedores de serviços de computação em nuvem pública, com circuitos virtuais estabelecidos sobre enlaces físicos, pelo período de 30 (trinta) meses.
+
+💰 *Valor estimado:* R$ 3,40 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 15/12/2026 às 10:30* (faltam 18 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00414607000118/2027/14
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=03000105000012027
+Nº PNCP 00414607000118-1-000014/2027
+
+════════════════
+
+*📨 MENSAGEM 13/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Rio Claro*
+📍 Rio Claro/SP · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE PRESTAÇÃO CONTINUADA DE SERVIÇOS ESPECIALIZADOS DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO, COMPREENDENDO, CONFORME CONDIÇÕES, QUANTITATIVOS, REQUISITOS TÉCNICOS E NÍVEIS DE SERVIÇO ESTABELECIDOS NO TERMO DE REFERÊNCIA
+
+💰 *Valor estimado:* R$ 3,64 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: AZ INFORMATICA LTDA
+📅 *Propostas até sexta, 04/12/2026 às 08:30* (faltam 7 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/45774064000188/2026/335
+🌐 Disputa: https://comprasbr.com.br/pregao-eletronico-detalhe/?idlicitacao=49854
+Nº PNCP 45774064000188-1-000335/2026
+
+════════════════
+
+*📨 MENSAGEM 14/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Tribunal de Justica do Estado do Ceara*
+📍 Fortaleza/CE · Estadual
+
+📝 *Objeto:* Contratação de serviços especializados de conectividade, de natureza contínua, compreendendo o acesso dedicado à Internet por meio de links simétricos de 4 Gbps (quatro gigabits por segundo) e a interligação entre os datacenters da Sede Judiciária (SJ) e do Fórum Clóvis Beviláqua (FCB) por enlace de fibra óptica apagada, pelo período de 60 (sessenta) meses, prorrogável até o limite de 120 (cento e vinte) meses de prestação dos serviços, em regime de empreitada por preço unitário, estruturados em 2 (dois) lotes tecnicamente independentes, destinados ao atendimento das necessidades do Tribunal de Justiça do Estado do Ceará (TJCE), conforme especificações, quantitativos e exigências…
+
+💰 *Valor estimado:* R$ 1,68 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Tribunal de Justiça do Estado do Ceará
+📅 *Propostas até quarta, 16/12/2026 às 10:00* (faltam 19 dias)
+🟢 Aberta desde 01/12/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/09444530000101/2026/143
+Nº PNCP 09444530000101-1-000143/2026
+
+════════════════
+
+*📨 MENSAGEM 15/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Agencia Nacional de Aviacao Civil - Anac*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Contratação de solução de tecnologia da informação e comunicação para fornecimento de serviços contínuos, sem a participação do fabricante e com pagamento mensal, por 36 meses, de manutenção (preventiva e corretiva) e suporte técnico para 2 (dois) equipamentos HUAWEI OceanStore Dorado5000 V3 e 2 (dois) equipamentos Veritas NetBackup Appliance Modelo 5240, versão 5.1.1 MR 1 SP 3, que compõem a infraestrutura de Tecnologia da Informação da Agência Nacional de Aviação Civil.
+
+💰 *Valor estimado:* R$ 1,56 mi
+🗓️ *Mensal:* R$ 43.324,86/mês × 36 meses
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 11/12/2026 às 10:00* (faltam 14 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/07947821000189/2026/158
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=11321405001412026
+Nº PNCP 07947821000189-1-000158/2026
+
+════════════════
+
+*📨 MENSAGEM 16/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Lajeado*
+📍 Lajeado/RS · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE SERVIÇOS ESPECIALIZADOS DE SEGURANÇA DE BORDA NA FORMA DE FIREWALL, SEGURANÇA DE ENDPOINTS (ANTIVÍRUS) E MONITORAMENTO (SOC) EM MODALIDADE SECAAS (SECURITY AS A SERVICE), INCLUINDO HARDWARE EM MODALIDADE DE ALUGUEL, LICENCIAMENTOS, ATUALIZAÇÕES, SUPORTE 24X7, TREINAMENTO, HARDENING E PENTEST SEMESTRAL
+
+💰 *Valor estimado:* R$ 2,32 mi
+🗓️ *Mensal:* R$ 38.640,00/mês × 60 meses
+⚖️ Pregão - Eletrônico
+🖥️ Portal: PROCERGS - CENTRO DE TECNOLOGIA DA INFORMACAO E COMUNICACAO DO ESTADO DO RIO GRANDE DO SUL S.A.
+📅 *Propostas até quinta, 03/12/2026 às 09:00* (faltam 6 dias)
+🟢 Aberta desde 18/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/87297982000103/2026/244
+🌐 Disputa: https://pregaobanrisul.com.br/editais/0037_2026/354914
+Nº PNCP 87297982000103-1-000244/2026
+
+════════════════
+
+*📨 MENSAGEM 17/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Instituto Federal de Educacao, Ciencia e Tecnologia de Mato Grosso do Sul*
+📍 Campo Grande/MS · Federal
+
+📝 *Objeto:* Contratação de serviço continuado de infraestrutura de TI na modalidade de Colocation.
+
+💰 *Valor estimado:* R$ 1,57 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 08/12/2026 às 14:30* (faltam 11 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/10673078000120/2026/117
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15813205001242026
+Nº PNCP 10673078000120-1-000117/2026
+
+════════════════
+
+*📨 MENSAGEM 18/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Embu-guacu*
+📍 Embu-Guaçu/SP · Municipal
+
+📝 *Objeto:* Contratação de Empresa especializada na Prestação de Outsourcing de Impressão, Digitalização e Reprografia, por meio de disponibilidade de equipamentos em regime de locação, mão de obra especializada em manutenções preventiva e corretiva on-site, instalação e suporte de software de gerenciamento, inventário, contabilização e fornecimento de suprimentos, inclusive papel
+
+💰 *Valor estimado:* R$ 1,74 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Novo BBMNET Licitações
+📅 *Propostas até quarta, 09/12/2026 às 10:00* (faltam 12 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/46523148000101/2026/78
+Nº PNCP 46523148000101-1-000078/2026
+
+════════════════
+
+*📨 MENSAGEM 19/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Universidade Federal do Sul e Sudeste do Para - Unifesspa*
+📍 Marabá/PA · Federal
+
+📝 *Objeto:* Contratação de empresa especializada para prestação continuada de serviços de infraestrutura de Tecnologia da Informação como Serviço — Infrastructure as a Service (IaaS), em ambiente de missão crítica, compreendendo servidores dedicados Bare Metal, conectividade IP dedicada, switches de rede, segurança perimetral por NGFW, licenças e suporte de firewall, gerenciamento técnico 24x7, backup corporativo, monitoramento, operação de NOC e serviço de SOC & SIEM, para atendimento das necessidades da Universidade Federal do Sul e Sudeste do Pará (Unifesspa), conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos
+
+💰 *Valor estimado:* R$ 943.025,37
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 14/12/2026 às 09:00* (faltam 17 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18657063000180/2026/31
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15871805000852026
+Nº PNCP 18657063000180-1-000031/2026
+
+════════════════
+
+*📨 MENSAGEM 20/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Tribunal de Justica do Estado do Para*
+📍 Belém/PA · Estadual
+
+📝 *Objeto:* Registro de Preços para eventual aquisição e implantação de uma solução integrada de segurança e conectividade de rede, composta por arquitetura de Gerenciamento Unificado de Ameaças (UTM) e Rede WAN Definida por Software (SD-WAN), incluindo o fornecimento de equipamentos, software de gerenciamento centralizado, licenciamento, serviços de instalação e configuração, treinamento técnico.
+
+💰 *Valor estimado:* R$ 13,57 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 01/12/2026 às 09:00* (faltam 4 dias)
+🟢 Aberta desde 16/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/04567897000190/2026/252
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92594205000492026
+Nº PNCP 04567897000190-1-000252/2026
+
+════════════════
+
+*📨 MENSAGEM 21/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Poder Judiciario*
+📍 Rio Branco/AC · Estadual
+
+📝 *Objeto:* Aquisições de equipamentos, acessórios e insumos de Tecnologia da Informação e Comunicação (TIC) destinados a atender às necessidades operacionais e estratégicas do Poder Judiciário do Estado do Acre.
+
+💰 *Valor estimado:* R$ 13,29 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 11/12/2026 às 08:00* (faltam 14 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/04034872000121/2026/165
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92550905000392026
+Nº PNCP 04034872000121-1-000165/2026
+
+════════════════
+
+*📨 MENSAGEM 22/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Consorcio Intermunicipal Multifinalitario da Amag*
+📍 Caxambu/MG
+
+📝 *Objeto:* REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM FORNECIMENTO DE SOLUÇÃO DE OUTSOURCING DE TECNOLOGIA DA INFORMAÇÃO, INCLUINDO ACESSO AO DIREITO DE USO DE EQUIPAMENTOS, SERVIÇOS DE MANUTENÇÃO PREVENTIVA E CORRETIVA, MONITORAMENTO, FORNECIMENTO DE PEÇAS E SUPRIMENTOS NECESSÁRIOS, ALÉM DE SERVIÇOS DE SUPORTE, PARA ATENDIMENTO DAS NECESSIDADES DOS MUNICÍPIOS CONSORCIADOS DO CIMAG.
+
+💰 *Valor estimado:* R$ 13,04 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
+📅 *Propostas até quinta, 03/12/2026 às 09:00* (faltam 6 dias)
+🟢 Aberta desde 18/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/21406451000101/2026/50
+🌐 Disputa: https://app2.licitardigital.com.br/pesquisa/119608
+Nº PNCP 21406451000101-1-000050/2026
+
+════════════════
+
+*📨 MENSAGEM 23/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Criciuma*
+📍 Criciúma/SC · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada para a prestação de serviços integrados de Telefonia IP (VoIP), compreendendo Central PABX IP hospedada em nuvem, plataforma web de gerenciamento, portabilidade numérica, provimento de Tronco SIP, tráfego de ligações locais, de longa distância nacional (LDN) e internacional (LDI) para telefones fixos e móveis, relatórios gerenciais, indicadores, recursos de atendimento e a disponibilização de todos os equipamentos, softwares, licenças, acessórios e demais com
+
+💰 *Valor estimado:* R$ 540.000,00
+🗓️ *Mensal:* R$ 40.000,00/mês × 12 meses
+⚖️ Pregão - Eletrônico
+🖥️ Portal: BLL Compras
+📅 *Propostas até quarta, 09/12/2026 às 08:30* (faltam 12 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/82916818000113/2026/224
+🌐 Disputa: https://bllcompras.com/Process/ProcessView?param1=[gkz]S8X16TthUDC3iNzod7QXWkZoFR5fXfFu5gx8zgyhjZ32Egl0iWE_HAmXwzcHL4PtbnVg5HWs1VWu9Xcz4y0GJKjkCFEKmCKV5UynvjEYnHU=
+Nº PNCP 82916818000113-1-000224/2026
+
+════════════════
+
+*📨 MENSAGEM 24/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Camara Municipal de Porto Alegre*
+📍 Porto Alegre/RS · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada para prestação de serviços continuados de suporte técnico e assistência técnica, em regime 24x7x365, para 2 (dois) servidores Dell PowerEdge R740 de infraestrutura de TI, abrangendo manutenção preventiva, corretiva e evolutiva, com fornecimento das peças e componentes necessários à execução dos serviços.
+
+💰 *Valor estimado:* R$ 114.000,00
+🗓️ *Mensal:* R$ 1.900,00/mês × 60 meses
+⚖️ Pregão - Eletrônico
+🖥️ Portal: PROCERGS - CENTRO DE TECNOLOGIA DA INFORMACAO E COMUNICACAO DO ESTADO DO RIO GRANDE DO SUL S.A.
+📅 *Propostas até segunda, 07/12/2026 às 09:00* (faltam 10 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/89522437000107/2026/113
+🌐 Disputa: https://pregaobanrisul.com.br/editais/0042_2026/359735
+Nº PNCP 89522437000107-1-000113/2026
+
+════════════════
+
+*📨 MENSAGEM 25/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Comando do Exercito*
+📍 São Paulo/SP · Federal
+
+📝 *Objeto:* Aquisição de solução de Tecnologia da Informação e Comunicações (TIC) composta por equipamentos de processamento de dados para compor a infraestrutura computacional do SisTEx, contemplando servidores destinados a operação em Data Centers e servidores destinados a operação em ambientes com restrições de espaço, energia e refrigeração, ambos integrados a um mesmo ecossistema de processamento distribuído.
+
+💰 *Valor estimado:* R$ 12,85 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 09/12/2026 às 10:00* (faltam 12 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00394452000103/2026/23817
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=16048605000772026
+Nº PNCP 00394452000103-1-023817/2026
+
+════════════════
+
+*📨 MENSAGEM 26/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Porto Franco*
+📍 Porto Franco/MA · Municipal
+
+📝 *Objeto:* [LICITANET] - Contratação de Fornecimento de Link de Internet, dedicado agregado (Distribuição Ponto-Multiponto) e compartilhado individuais (Ponto-a-Ponto), para atendimento das demandas da Prefeitura Municipal de Porto Franco-MA.
+
+💰 *Valor estimado:* R$ 401.636,16
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitanet Licitações Eletrônicas LTDA
+📅 *Propostas até segunda, 07/12/2026 às 09:00* (faltam 10 dias)
+🟢 Aberta desde 18/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/06208946000124/2026/46
+🌐 Disputa: https://licitanet.com.br/sessao/208487
+Nº PNCP 06208946000124-1-000046/2026
+
+════════════════
+
+*📨 MENSAGEM 27/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Consorcio Intermunicipal de Saude do Oeste do Parana*
+📍 Cascavel/PR
+
+📝 *Objeto:* Contratação de prestador de serviços especializados em fornecimento de link de internet dedicado e serviços de telefonia fixa comutada (STFC), com central telefônica virtual (PABX), ramais, franquias de minutos e gravação de chamadas, destinado à garantia da conectividade da unidade e da comunicação telefônica institucional, com monitoramento da disponibilidade do enlace e atendimento às demandas relacionadas ao acesso à internet e à telefonia da instituição, conforme condições, quantidades e exigências estabelecidas no edital e seus anexos.
+
+💰 *Valor estimado:* R$ 353.710,92
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Elotech Gestão Pública Ltda
+📅 *Propostas até segunda, 30/11/2026 às 08:00* (faltam 3 dias)
+🟢 Aberta desde 14/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00944673000108/2026/70
+Nº PNCP 00944673000108-1-000070/2026
+
+════════════════
+
+*📨 MENSAGEM 28/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Controladoria-geral da Uniao*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Suporte rede LAN - Suporte técnico para os switches responsáveis pela conectividade da rede LAN das regionais e sede da CGU.
+
+💰 *Valor estimado:* R$ 799.060,84
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 30/11/2026 às 09:00* (faltam 3 dias)
+🟢 Aberta desde 12/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/26664015000148/2026/42
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=37000305000412026
+Nº PNCP 26664015000148-1-000042/2026
+
+════════════════
+
+*📨 MENSAGEM 29/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *(uo) Esp-cia.desenv.habitac.urb Est.s.p.-cdhu*
+📍 São Paulo/SP · Estadual
+
+📝 *Objeto:* Contratação de empresa especializada para prestação de serviços de segurança da informação, em modelo SaaS, voltada à auditoria, governança, monitoramento de acessos e proteção de dados não estruturados e proteção de credenciais, compatível com ambientes locais e em nuvem, para atender às necessidades da Companhia de Desenvolvimento Habitacional e Urbano do Estado de São Paulo - CDHU.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 09/12/2026 às 08:59* (faltam 12 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/47865597000109/2026/18
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25310105000062026
+Nº PNCP 47865597000109-1-000018/2026
+
+════════════════
+
+*📨 MENSAGEM 30/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Lagoa da Prata*
+📍 Lagoa da Prata/MG · Municipal
+
+📝 *Objeto:* Contratação de empresa para prestação de serviços de REDE LÓGICA, MANUTENÇÃO DE COMPUTADORES E PROFISSIONAIS CAPACITADOS PARA AUXILIAR NO ACESSO AOS COMPUTADORES (40 HORAS SEMANAIS). Detalhamento do funcionamento: REDE LÓGICA: Instalações de computadores, cabeamento interno de internet e colocar programas básicos de funcionamento. MANUTENÇÃO DOS COMPUTADORES: formatar, instalar novos programas e realizar reparos e correções necessárias. PROFISSIONAL CAPACITADO: Disponibilização de profissional para cada uma das 04 unidades escolares do ensino fundamental (E.M. Dr Jacinto Campos I e II, E.M. Monteiro Lobato e E.M. Professor Afonso Goulart) com 40 horas semanais disponíveis para auxílio aos…
+
+💰 *Valor estimado:* R$ 451.889,28
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
+📅 *Propostas até segunda, 14/12/2026 às 08:30* (faltam 17 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18318618000160/2026/396
+🌐 Disputa: https://app2.licitardigital.com.br/pesquisa/120229
+Nº PNCP 18318618000160-1-000396/2026
+
+════════════════
+
+*📨 MENSAGEM 31/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Gandu*
+📍 Gandu/BA · Municipal
+
+📝 *Objeto:* [LICITANET] - seleção de propostas para Registro de Preços visando a eventual contratação de empresa especializada para prestação de serviços continuados de conectividade à internet em banda larga, por meio de instalação, fornecimento, ativação, operação e manutenção de links dedicados de acesso à internet, com alta disponibilidade, velocidade mínima garantida e suporte técnico, a fim de atender às necessidades das secretarias pertencentes ao município de Gandu/BA; conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Licitanet Licitações Eletrônicas LTDA
+📅 *Propostas até sexta, 04/12/2026 às 09:00* (faltam 7 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/14195358000121/2026/106
+🌐 Disputa: https://licitanet.com.br/sessao/208581
+Nº PNCP 14195358000121-1-000106/2026
+
+════════════════
+
+*📨 MENSAGEM 32/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Estado do Ceara*
+📍 Fortaleza/CE · Estadual
+
+📝 *Objeto:* Prestação dos serviços de Solução de Banco de Dados, incluindo hardware e software, proteção dos dados, serviços de instalação e ativação, Universal Credits, consultoria técnica especializada por demanda pelo período de 60 (sessenta) meses e treinamento de equipe
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 07/12/2026 às 09:00* (faltam 10 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/07954480000179/2026/27341
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=94300105012742026
+Nº PNCP 07954480000179-1-027341/2026
+
+════════════════
+
+*📨 MENSAGEM 33/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Secretaria de Estado de Fazenda de Minas Gerais*
+📍 Belo Horizonte/MG · Estadual
+
+📝 *Objeto:* Serviços de programados e continuados de manutenção preventiva e corretiva, quando necessária, dos painéis e dos quadros elétricos, que fazem parte da infraestrutura do Data Center.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Portal de Compras do Estado de Minas Gerais
+📅 *Propostas até quarta, 09/12/2026 às 09:00* (faltam 12 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/16907746000113/2026/110
+🌐 Disputa: https://www1.compras.mg.gov.br/n/procedimentolei14133/consulta/eletronico/visualizar/2026/72/1191001
+Nº PNCP 16907746000113-1-000110/2026
+
+════════════════
+
+*📨 MENSAGEM 34/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Sao Joao Evangelista*
+📍 São João Evangelista/MG · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE SERVIÇOS CONTINUADOS DE CONECTIVIDADE À INTERNET, POR MEIO DE FIBRA ÓPTICA, PARA ATENDIMENTO DAS UNIDADES DA ADMINISTRAÇÃO MUNICIPAL DE SÃO JOÃO EVANGELISTA/MG.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Presencial
+🖥️ Portal: E & L PRODUCOES DE SOFTWARE LTDA
+📅 *Propostas até sexta, 11/12/2026 às 09:00* (faltam 14 dias)
+🟢 Aberta desde 11/12/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18307488000160/2026/89
+Nº PNCP 18307488000160-1-000089/2026
+
+════════════════
+
+*📨 MENSAGEM 35/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Fundacao Casa de Rui Barbosa*
+📍 Rio de Janeiro/RJ · Federal
+
+📝 *Objeto:* Contratação de empresa especializada para a prestação de serviços de tecnologia da informação relacionados à infraestrutura de datacenter (colocation), incluindo hospedagem de infraestrutura de TIC, a ser executado de forma contínua
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 11/12/2026 às 09:00* (faltam 14 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/42519488000108/2026/49
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=34400105001542026
+Nº PNCP 42519488000108-1-000049/2026
+
+════════════════
+
+*📨 MENSAGEM 36/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Empresa de Tecnologia e Informacoes da Previdencia S.a. - Dataprev*
+📍 Rio de Janeiro/RJ
+
+📝 *Objeto:* Contratação de empresa credenciada pelo fabricante para prestação de serviços pelo prazo de 60 meses, em regime de atendimento 24 x 7 x 365, de manutenção integrada das Salas-cofre dos Data Center Rio do Janeiro (DCRJ), do Data Center São Paulo (DCSP) e do Data Center Distrito Federal (DCDF), mantendo sua funcionalidade e conformidade com suas características originais, garantindo a renovação da declaração de conformidade do ambiente ao P.E. 047 da entidade certificadora.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 11/12/2026 às 10:00* (faltam 14 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/42422253000101/2026/76
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=23801405000592026
+Nº PNCP 42422253000101-1-000076/2026
+
+════════════════
+
+*📨 MENSAGEM 37/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Companhia Docas do Estado de Sao Paulo*
+📍 Santos/SP · Federal
+
+📝 *Objeto:* Contratação de pessoa jurídica especializada para implantação de solução de Data Center Modular Pré-Fabricado Outdoor para a Autoridade Portuária de Santos com os serviços de moving e suporte técnico, pelo prazo de 36 (trinta e seis) meses, nos termos e condições estabelecidas no "Termo de Referência ou Projeto Básico" e seus Anexos, partes integrantes deste Edital.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitações-E BB
+📅 *Propostas até terça, 15/12/2026 às 10:00* (faltam 18 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/44837524000107/2026/70
+🌐 Disputa: https://licitacoes-e2.bb.com.br/aop-inter-estatico/visualizar-processo-publico/1104350
+Nº PNCP 44837524000107-1-000070/2026
+
+════════════════
+
+*📨 MENSAGEM 38/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Companhia de Saneamento do Parana Sanepar*
+📍 Curitiba/PR
+
+📝 *Objeto:* Serviços de informática na área de infraestrutura de tecnologia da informação Mainframe da Sanepar, compreendendo a execução de atividades para administração, monitoramento e manutenção de ambiente Mainframe IBM System Z.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitações-E BB
+📅 *Propostas até terça, 15/12/2026 às 14:00* (faltam 18 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/76484013000145/2026/240
+🌐 Disputa: https://licitacoes-e2.bb.com.br/aop-inter-estatico/visualizar-processo-publico/1104296
+Nº PNCP 76484013000145-1-000240/2026
+
+════════════════
+
+*📨 MENSAGEM 39/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Goianinha*
+📍 Goianinha/RN · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - Contratação de empresa especializada para prestação de serviços de conectividade à internet, destinados ao atendimento das unidades administrativas, educacionais e de saúde do Município de Goianinha/RN, incluindo instalação, fornecimento e disponibilização dos equipamentos necessários, manutenção e suporte técnico, de modo a assegurar conectividade estável, contínua e adequada ao funcionamento dos serviços públicos municipais.
+
+💰 *Valor estimado:* R$ 281.125,32
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até quinta, 10/12/2026 às 10:00* (faltam 13 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/08162687000173/2026/234
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/RN/Prefeitura-Municipal-de-Goianinha-1300/RPE-28-2026-2026-518250
+Nº PNCP 08162687000173-1-000234/2026
+
+════════════════
+
+*📨 MENSAGEM 40/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio do Rio Grande*
+📍 Rio Grande/RS · Municipal
+
+📝 *Objeto:* Contratação empresa especializada na prestação de serviços técnicos de suporte, manutenção, monitoramento e sustentação operacional de infraestrutura de TIC, manutenção preventiva e corretiva de natureza lógica, monitoramento, operação assistida e sustentação operacional do ambiente de datacenter e dos ativos de rede da Contratante, incluindo apoio técnico-operacional rotineiro limitado à infraestrutura existente, sem aquisição autônoma, pela Contratante, de peças, componentes de hardware, equipamentos ou licenças de software, ressalvada a utilização, pela Contratada, de Ferramentas, plataformas ou subscrições necessárias à execução dos serviços, quando expressamente previstas no escopo…
+
+💰 *Valor estimado:* R$ 266.640,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Prefeitura Municipal do Rio Grande
+📅 *Propostas até quinta, 10/12/2026 às 08:30* (faltam 13 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/88566872000162/2026/686
+Nº PNCP 88566872000162-1-000686/2026
+
+════════════════
+
+*📨 MENSAGEM 41/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Limoeiro*
+📍 Limoeiro/PE · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE FORNECIMENTO DE LINK DE INTERNET VIA FIBRA ÓPTICA, COM LINK DEDICADO, DISPONIBILIDADE INTEGRAL (24 HORAS POR DIA, 7 DIAS POR SEMANA), INCLUINDO INSTALAÇÃO, ATIVAÇÃO, MANUTENÇÃO PREVENTIVA E CORRETIVA, BEM COMO SUPORTE TÉCNICO CONTÍNUO, PARA ATENDER ÀS NECESSIDADES DA SECRETARIA MUNICIPAL DE SAÚDE DE LIMOEIRO–PE E SUAS UNIDADES VINCULADAS, PELO PRAZO DE DOZE MESES.
+
+💰 *Valor estimado:* R$ 206.580,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: BR Conectado
+📅 *Propostas até sexta, 04/12/2026 às 10:50* (faltam 7 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/11097292000149/2026/108
+🌐 Disputa: http://www.compraslimoeiro.com.br
+Nº PNCP 11097292000149-1-000108/2026
+
+════════════════
+
+*📨 MENSAGEM 42/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Diamante D'oeste*
+📍 Diamante D'Oeste/PR · Municipal
+
+📝 *Objeto:* Contratação de pessoa jurídica especializada para fornecimento contínuo de serviço de distribuição e manutenção de link de internet banda larga, e contratação de pessoa jurídica especializada na prestação de serviços de telefonia fixa e móvel, nas modalidades de serviço de ligação local, de longa distância e longa distância internacional para atender a demanda da Prefeitura Municipal de Diamante D´Oeste
+
+💰 *Valor estimado:* R$ 101.727,36
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 14/12/2026 às 09:00* (faltam 17 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/77817476000144/2026/58
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98991505000372026
+Nº PNCP 77817476000144-1-000058/2026
+
+════════════════
+
+*📨 MENSAGEM 43/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Chacara*
+📍 Chácara/MG · Municipal
+
+📝 *Objeto:* Contratação de empresa para serviços de distribuição e manutenção de fornecimento de link de internet com link dedicado IP fixo/publicado/real e link semi dedicado.
+
+💰 *Valor estimado:* R$ 99.859,80
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
+📅 *Propostas até segunda, 07/12/2026 às 08:30* (faltam 10 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18338137000116/2026/119
+🌐 Disputa: https://app2.ammlicita.org.br/pesquisa/119407
+Nº PNCP 18338137000116-1-000119/2026
+
+════════════════
+
+*📨 MENSAGEM 44/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Ministerio Publico do Estado de Santa Catarina Procuradoria Geral de Justica*
+📍 Florianópolis/SC · Estadual
+
+📝 *Objeto:* Contratação de serviço de sustentação e manutenção do Sistema de Gestão de Segurança da Informação (SGSI).
+
+💰 *Valor estimado:* R$ 484.200,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitações-E BB
+📅 *Propostas até quarta, 02/12/2026 às 13:00* (faltam 5 dias)
+🟢 Aberta desde 18/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/76276849000154/2026/428
+🌐 Disputa: https://licitacoes-e2.bb.com.br/aop-inter-estatico/visualizar-processo-publico/1104282
+Nº PNCP 76276849000154-1-000428/2026
+
+════════════════
+
+*📨 MENSAGEM 45/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Fundacao Municipal de Tecnologia da Informacao e Comunicacao de Canoas*
+📍 Canoas/RS · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada para a prestação contínua de serviços contábeis, fiscais e de departamento pessoal à Fundação Municipal de Tecnologia da Informação e Comunicação de Canoas - Canoastec, abrangendo escrituração e demonstrações contábeis, processamento da folha de pagamento, obrigações legais e acessórias, apoio à prestação de contas aos órgãos de controle, fornecimento dos sistemas necessários e gestão da transição e do acervo de dados.
+
+💰 *Valor estimado:* R$ 48.720,00
+🗓️ *Mensal:* R$ 4.060,00/mês × 12 meses
+⚖️ Pregão - Eletrônico
+🖥️ Portal: PROCERGS - CENTRO DE TECNOLOGIA DA INFORMACAO E COMUNICACAO DO ESTADO DO RIO GRANDE DO SUL S.A.
+📅 *Propostas até segunda, 30/11/2026 às 09:01* (faltam 3 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/15077871000180/2026/5
+🌐 Disputa: https://pregaobanrisul.com.br/editais/0003_2026/359403
+Nº PNCP 15077871000180-1-000005/2026
+
+════════════════
+
+*📨 MENSAGEM 46/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Serra Negra*
+📍 Serra Negra/SP · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE TELECOMUNICAÇÕES DE LINK DE INTERNET DEDICADO DE 300MBPS COM FORNECIMENTO DOS EQUIPAMENTOS NECESSÁRIOS A EXECUÇÃO DO SERVIÇO E SUPORTE TÉCNICO.EGÓCIOS, ALTA DISPONIBILIDADE E A RECUPERAÇÃO DE DESASTRES DESTA PREFEITURA
+
+💰 *Valor estimado:* R$ 36.895,73
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Novo BBMNET Licitações
+📅 *Propostas até quinta, 03/12/2026 às 08:59* (faltam 6 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/44847663000111/2026/990
+Nº PNCP 44847663000111-1-000990/2026
+
+════════════════
+
+*📨 MENSAGEM 47/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Empresa Brasileira de Pesquisa Agropecuaria*
+📍 Manaus/AM · Federal
+
+📝 *Objeto:* Contratação de empresa especializada na prestação de serviço de Comunicação Multimídia (SCM), via fibra óptica, para fornecimento de Link de Internet Dedicado de 300 Mbps (Full Duplex), destinado à redundância e contingência da infraestrutura de rede da Embrapa Amazônia Ocidental.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 30/11/2026 às 09:00* (faltam 3 dias)
+🟢 Aberta desde 06/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00348003000110/2026/1523
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=13504905000082026
+Nº PNCP 00348003000110-1-001523/2026
+
+════════════════
+
+*📨 MENSAGEM 48/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Estado do Rio de Janeiro*
+📍 Rio de Janeiro/RJ · Estadual
+
+📝 *Objeto:* 1-CONTRATACAO DE SERVICO DE ACESSO A INTERNET PRINCIPAL, TIPO SERVICO: LINK DEDICADO COM VELOCIDADE 500MBPS, ORIGEM: PESSOA JURIDICA 2-CONTRATAÇÃO DE LINK DE DADOS DE ACESSO À INTERNET - PRÉDIO DA ADMINISTRAÇÃO CEASA-RJ 500 mb 2 - SERVICOS DE ACESSO A INTERNET,DESCRIÇÃO: CONTRATACAO DE LINK DE DADOS REDE IP GOVERNO - CRITICO, TIPO SERVICO: DEDICADO COM VELOCIDADE DE 10 MBPS, ORIGEM: PESSOA JURIDICA 3-CONTRATACAO DE LINK DE DADOS DE ACESSO À INTERNET - GERÊNCIA DE MERCADO UNIDADE I - IRAJÁ 10mb 3 - SERVICOS DE ACESSO A INTERNET,DESCRIÇÃO: CONTRATACAO DE LINK DE DADOS REDE IP GOVERNO - BASICO, TIPO SERVICO: DEDICADO COM VELOCIDADE DE 10 MBPS, ORIGEM: PESSOA JURIDICA
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Portal de Compras Públicas do Estado do Rio de Janeiro
+📅 *Propostas até segunda, 30/11/2026 às 09:59* (faltam 3 dias)
+🟢 Aberta desde 06/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/42498600000171/2026/4729
+🌐 Disputa: https://www.compras.rj.gov.br/EditaisLicitacoes/detalhar.action?idLic=37724
+Nº PNCP 42498600000171-1-004729/2026
+
+════════════════
+
+*📨 MENSAGEM 49/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Sao Goncalo do Sapucai*
+📍 São Gonçalo do Sapucaí/MG · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada, sob o regime de empreitada por preço global, para implantação de infraestrutura de rede lógica na nova sede da Secretaria Municipal de Desenvolvimento Social, CRAS - Centro de Referência de Assistência Social e CREAS - Centro de Referência Especializado de Assistência Social, localizada na Rua Santa Efigênia, 72, Centro, São Gonçalo do Sapucaí - MG, compreendendo o fornecimento de materiais, equipamentos e mão de obra necessários à instalação, configuração e pleno funcionamento da rede interna
+
+💰 *Valor estimado:* R$ 96.635,99
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
+📅 *Propostas até quinta, 10/12/2026 às 09:31* (faltam 13 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18712158000150/2026/60
+🌐 Disputa: https://app2.licitardigital.com.br/pesquisa/120251
+Nº PNCP 18712158000150-1-000060/2026
+
+════════════════
+
+*📨 MENSAGEM 50/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Tribunal Regional Eleitoral de Alagoas*
+📍 Maceió/AL · Federal
+
+📝 *Objeto:* Contratação de extensão de garantia e suporte técnico para a plataforma de gerenciamento HPE Intelligent Management Center (IMC), atualmente integrada à infraestrutura de TIC do TRE/AL.
+
+💰 *Valor estimado:* R$ 76.718,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 15/12/2026 às 14:00* (faltam 18 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/06015041000138/2026/80
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=07001105001362026
+Nº PNCP 06015041000138-1-000080/2026
+
+════════════════
+
+*📨 MENSAGEM 51/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Ministerio Publico da Uniao*
+📍 São Luís/MA · Federal
+
+📝 *Objeto:* Contratação de empresa especializada para prestação de serviços de locação (outsourcing) de 1 (um) nobreak trifásico, online, dupla conversão, com potência mínima de 60 kVA, tensão de entrada e saída de 380/220 V, banco de baterias com autonomia mínima de 5 (cinco) minutos a plena carga, monitoramento remoto 24x7, manutenção preventiva, preditiva e corretiva, fornecimento e substituição de peças e baterias, suporte técnico e demais serviços.
+
+💰 *Valor estimado:* R$ 260.326,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 02/12/2026 às 09:29* (faltam 5 dias)
+🟢 Aberta desde 16/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/26989715000102/2026/1891
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=20007805000472026
+Nº PNCP 26989715000102-1-001891/2026
+
+════════════════
+
+*📨 MENSAGEM 52/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Fundacao Municipal de Saude de Teixeiras*
+📍 Teixeiras/MG · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - Contratação de empresa especializada na prestação de serviços integrados de tecnologia da informação e comunicação corporativa, em lote único, contemplando o licenciamento, a implantação e a hospedagem de Portal Institucional (site) e Diário Oficial Eletrônico, o fornecimento e a administração de cinco contas de e-mail corporativo profissional, bem como a prestação continuada de serviços de assessoria digital, criação gráfica e gestão de conteúdo, para atender às demandas de transparência, comunicação e rotinas administrativas da Fundação Municipal de Saúde de Teixeiras/MG — FUMSAT
+
+💰 *Valor estimado:* R$ 22.550,88
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até terça, 08/12/2026 às 08:30* (faltam 11 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18134122000136/2026/17
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/MG/Fundacao-Municipal-de-Saude-de-Teixeiras-3698/PE-12-2026-2026-527040
+Nº PNCP 18134122000136-1-000017/2026
+
+════════════════
+
+*📨 MENSAGEM 53/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Empresa Brasileira de Pesquisa Agropecuaria*
+📍 Santo Antônio de Goiás/GO · Federal
+
+📝 *Objeto:* contratação de empresa especializada na prestação de serviços de outsourcing de impressão, digitalização, cópia e bilhetagem, na modalidade de FRANQUIA MENSAL DE PÁGINAS MAIS EXCEDENTE, que serão executados nas dependências da embrapa arroz e feijão, em Santo Antônio de Goiás , GO, de acordo com as especificações técnicas, condições, quantidades e padrões de desempenho e qualidade estabelecidas no Termo de Referência.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quinta, 10/12/2026 às 09:00* (faltam 13 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00348003000110/2026/1889
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=13503605000342026
+Nº PNCP 00348003000110-1-001889/2026
+
+════════════════
+
+*📨 MENSAGEM 54/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Ituverava*
+📍 Ituverava/SP · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS DE SUPORTE, ADMINISTRAÇÃO E MONITORAMENTO DA INFRAESTRUTURA DE TECNOLOGIA DA INFORMAÇÃO – CONFORME ANEXO I DO EDITAL
+
+💰 *Valor estimado:* R$ 173.117,52
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Novo BBMNET Licitações
+📅 *Propostas até quarta, 02/12/2026 às 08:00* (faltam 5 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/46710422000151/2026/1470
+Nº PNCP 46710422000151-1-001470/2026
+
+════════════════
+
+*📨 MENSAGEM 55/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Bom Jesus dos Perdoes*
+📍 Bom Jesus dos Perdões/SP · Municipal
+
+📝 *Objeto:* SERVIÇOS CONTÍNUOS DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO, ESSENCIAIS À COMUNICAÇÃO INSTITUCIONAL, INTEGRANDO TODAS AS SECRETARIAS
+
+💰 *Valor estimado:* R$ 153.258,97
+⚖️ Pregão - Eletrônico
+🖥️ Portal: JL Alves Gestão
+📅 *Propostas até segunda, 30/11/2026 às 08:00* (faltam 3 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/52359692000162/2026/183
+Nº PNCP 52359692000162-1-000183/2026
+
+════════════════
+
+*📨 MENSAGEM 56/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Comando do Exercito*
+📍 Campo Grande/MS · Federal
+
+📝 *Objeto:* Pregão Eletrônico SRP para eventual aquisição de material de expediente, limpeza, copa cozinha, químico e não tic
+
+💰 *Valor estimado:* R$ 10,68 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 01/12/2026 às 09:00* (faltam 4 dias)
+🟢 Aberta desde 18/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00394452000103/2026/24721
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=16007805000582026
+Nº PNCP 00394452000103-1-024721/2026
+
+════════════════
+
+*📨 MENSAGEM 57/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Sao Jose do Cedro*
+📍 São José do Cedro/SC · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS DE FORNECIMENTO DE ACESSO À INTERNET, POR MEIO DE PONTOS DE CONEXÃO, COM DISPONIBILIZAÇÃO DE LINK DE INTERNET E DEMAIS RECURSOS NECESSÁRIOS AO SEU FUNCIONAMENTO, DESTINADOS AO ATENDIMENTO DAS SECRETARIAS MUNICIPAIS, DO FUNDO MUNICIPAL DE SAÚDE, DO SERVIÇO MUNICIPAL DE ÁGUA E ESGOTO (SEMAE), DO CORPO DE BOMBEIROS, DA POLÍCIA MILITAR E DA POLÍCIA CIVIL, PARA ATENDER ÀS NECESSIDADES DO MUNICÍPIO DE SÃO JOSÉ DO CEDRO/SC.
+
+💰 *Valor estimado:* R$ 285.704,40
+🗓️ *Mensal:* R$ 23.808,70/mês × 12 meses
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até terça, 01/12/2026 às 08:00* (faltam 4 dias)
+🟢 Aberta desde 16/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/83026781000110/2026/317
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/SC/Prefeitura-Municipal-de-Sao-Jose-do-Cedro-1439/PE-196-2026-2026-525417
+Nº PNCP 83026781000110-1-000317/2026
+
+════════════════
+
+*📨 MENSAGEM 58/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Braganca Paulista*
+📍 Bragança Paulista/SP · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇOS DE TECNOLOGIA DA INFORMAÇÃO PARA FORNECIMENTO DE SISTEMA QUE PROMOVA A GESTÃO DA RECUPERAÇÃO DE ATIVOS INCLUINDO ADMINISTRAÇÃO DAS DÍVIDAS (CADASTRO DE DEVEDORES, FICHA INTEGRADA DO CONTRIBUINTE, CENTRAL DE ATENDIMENTO, CONTROLE INTEGRADO DA COBRANÇA, EMISSÃO DE CERTIDÕES, RECEBIMENTO DOS CRÉDITOS, PORTAL DO CONTRIBUINTE, DENTRE OUTROS), PREPARAÇÃO E ACOMPANHAMENTO (GERAÇÃO DE CERTIDÕES DA DÍVIDA ATIVA E CONTROLE DOS HISTÓRICOS DOS PROCESSOS), ANÁLISE E PROCESSAMENTO DAS INFORMAÇÕES E PAINÉIS GERENCIAIS (B.I.), SENDO INTERFACEADO COM O ACOMPANHAMENTO DE PROCESSOS JUDICIAIS DE EXECUÇÃO DE DÍVIDA ATIVA OU AINDA PROCESSOS JUDICIAIS…
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Novo BBMNET Licitações
+📅 *Propostas até segunda, 30/11/2026 às 09:30* (faltam 3 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/46352746000165/2026/551
+Nº PNCP 46352746000165-1-000551/2026
+
+════════════════
+
+*📨 MENSAGEM 59/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Lajeado*
+📍 Lajeado/RS · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO, VISANDO À IMPLANTAÇÃO E GESTÃO DE UMA SOLUÇÃO DIGITAL DE MONITORAMENTO E SEGURANÇA PATRIMONIAL COM EMPREGO DE INFRAESTRUTURA COMPUTACIONAL HIPERCONVERGENTE, CONSIDERANDO ARMAZENAMENTO CENTRALIZADO DE IMAGENS EM HARDWARE ESPECIALIZADO E GERENCIADO POR SOFTWARE ESPECÍFICO QUE CONTEMPLA ALERTA DE INTRUSÃO, INFRAESTRUTURA DE COMUNICAÇÃO E REDE, ARMAZENAMENTO EM NUVEM, SERVIÇOS DE IMPLANTAÇÃO, TREINAMENTO E MANUTENÇÃO DA SOLUÇÃO PARA AS UNIDADES DE GOVERNO DO MUNICÍPIO DE LAJEADO.
+
+💰 *Valor estimado:* R$ 9,18 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: PROCERGS - CENTRO DE TECNOLOGIA DA INFORMACAO E COMUNICACAO DO ESTADO DO RIO GRANDE DO SUL S.A.
+📅 *Propostas até quinta, 10/12/2026 às 09:00* (faltam 13 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/87297982000103/2026/361
+🌐 Disputa: https://pregaobanrisul.com.br/editais/0068_2026/359223
+Nº PNCP 87297982000103-1-000361/2026
+
+════════════════
+
+*📨 MENSAGEM 60/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Universidade Federal do Parana*
+📍 Curitiba/PR · Federal
+
+📝 *Objeto:* Aquisição de ativos de rede (switches) com garantia local (on-site) para expansão de rede, conectividade e substituição de equipamentos.
+
+💰 *Valor estimado:* R$ 8,97 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 09/12/2026 às 08:30* (faltam 12 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/75095679000149/2026/679
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15307905001582026
+Nº PNCP 75095679000149-1-000679/2026
+
+════════════════
+
+*📨 MENSAGEM 61/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Jaguare Camara Municipal*
+📍 Jaguaré/ES · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada para prestação de serviços continuados de tecnologia da informação, mediante solução integrada para gestão institucional e legislativa eletrônica, compreendendo portais, sistemas de tramitação de processos, sessões e votação eletrônica, gestão documental, ouvidoria, e-SIC, correio eletrônico, hospedagem, infraestrutura tecnológica, cessão de terminais de votação, implantação, migração de dados, treinamento, suporte técnico e manutenção.
+
+💰 *Valor estimado:* R$ 64.860,00
+⚖️ Dispensa
+🖥️ Portal: E & L PRODUCOES DE SOFTWARE LTDA
+📅 *Propostas até segunda, 30/11/2026 às 07:59* (faltam 3 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/31787922000114/2026/26
+Nº PNCP 31787922000114-1-000026/2026
+
+════════════════
+
+*📨 MENSAGEM 62/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Comando do Exercito*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Contratação de serviço de garantia estendida para servidores do Datacenter do CIE.
+
+💰 *Valor estimado:* R$ 58.608,00
+🗓️ *Mensal:* R$ 4.884,00/mês × 12 meses
+⚖️ Dispensa
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quinta, 03/12/2026 às 08:59* (faltam 6 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00394452000103/2026/25310
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=16006206001932026
+Nº PNCP 00394452000103-1-025310/2026
+
+════════════════
+
+*📨 MENSAGEM 63/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Sao Luis de Montes Belos*
+📍 São Luís de Montes Belos/GO · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE SOLUÇÃO TECNOLÓGICA BASEADA EM INTELIGÊNCIA ARTIFICIAL PARA APOIO A ELABORAÇÃO DE RASCUNHOS DE DOCUMENTOS JURÍDICOS DA PROCURADORIA GERAL DO MUNICÍPIO DE SLMBELOS-GO.
+
+💰 *Valor estimado:* R$ 20.160,00
+⚖️ Dispensa
+🖥️ Portal: CENTI
+📅 *Propostas até quarta, 20/10/2027 às 14:35* (faltam 327 dias)
+🟢 Aberta desde 20/10/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/02320406000187/2026/30
+Nº PNCP 02320406000187-1-000030/2026
+
+════════════════
+
+*📨 MENSAGEM 64/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Tiete*
+📍 Tietê/SP · Municipal
+
+📝 *Objeto:* Serviço de Link de Internet
+
+💰 *Valor estimado:* R$ 2.220,00
+⚖️ Dispensa
+🖥️ Portal: CONAM Consultoria em Administração Municipal
+📅 *Propostas até terça, 01/12/2026 às 23:59* (faltam 4 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/46634598000171/2026/546
+Nº PNCP 46634598000171-1-000546/2026
+
+════════════════
+
+*📨 MENSAGEM 65/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Ministerio da Justica e Seguranca Publica*
+📍 João Pessoa/PB · Federal
+
+📝 *Objeto:* Serviço de conectividade Internet dedicado e redundante de 100Mbps
+
+💰 *Valor estimado:* R$ 44.699,99
+⚖️ Dispensa
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 02/12/2026 às 08:00* (faltam 5 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00394494011766/2026/3
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=20012206000012026
+Nº PNCP 00394494011766-1-000003/2026
+
+════════════════
+
+*📨 MENSAGEM 66/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Piracicaba*
+📍 Piracicaba/SP · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada para o licenciamento de 10 (dez) acessos à ferramenta de inteligência artificial denominada ChatGPT Business pelo período de 12 (doze) meses.
+
+💰 *Valor estimado:* R$ 19.452,67
+⚖️ Dispensa
+🖥️ Portal: Bolsa Nacional De Compras - BNC
+📅 *Propostas até segunda, 30/11/2026 às 08:00* (faltam 3 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/46341038000129/2026/780
+🌐 Disputa: https://bnccompras.com/Process/ProcessView?param1=[gkz]JqCr9LtX2m2kj5ACmEAyD0mERPc7VixguhdG3aGP0VKjqoArbmvOJQCmu0xBtSvVjw3zYcTnEl_hw9G2A255hVCyE_x6nAGh7wEBmsiBbD0=
+Nº PNCP 46341038000129-1-000780/2026
+
+════════════════
+
+*📨 MENSAGEM 67/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Instituto Federal de Educacao, Ciencia e Tecnologia do Sul de Minas Gerais*
+📍 Pouso Alegre/MG · Federal
+
+📝 *Objeto:* CONTRATAÇÃO DE SERVIÇO DE MANUTENÇÃO DO NOBREAK DO DATA CENTER
+
+💰 *Valor estimado:* R$ 11.850,00
+⚖️ Dispensa
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 01/12/2026 às 08:00* (faltam 4 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/10648539000105/2026/286
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15813706006922026
+Nº PNCP 10648539000105-1-000286/2026
+
+════════════════
+
+*📨 MENSAGEM 68/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Mogi das Cruzes*
+📍 Mogi das Cruzes/SP · Municipal
+
+📝 *Objeto:* TOTEM DE ATENDIMENTO, Leitor QR Code, Impressora Térmica 80 colunas com mecanismo de corte automático, computador integrado com 8GB de RAM, SSD 256 GB, conectividade Wi-fi e Ethernet e estrutura de gabinete em aço carbono antitombamento
+
+💰 *Valor estimado:* R$ 8.862,88
+⚖️ Dispensa
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 02/12/2026 às 08:00* (faltam 5 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/46523270000188/2026/586
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98671306001912026
+Nº PNCP 46523270000188-1-000586/2026
+
+════════════════
+
+*📨 MENSAGEM 69/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Superior Tribunal Militar*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Contratação de empresas especializadas na prestação de serviços de comunicação de dados, compreendendo o fornecimento de links dedicados e de banda larga, equipamentos, conectividade, gerenciamento proativo e serviços de integração com solução baseada em SD-WAN (Software Defined Wide Area Network), pelo Sistema de Registro de Preços (SRP).
+
+💰 *Valor estimado:* R$ 4,21 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 11/12/2026 às 14:30* (faltam 14 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00497560000101/2026/326
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=06000105003122026
+Nº PNCP 00497560000101-1-000326/2026
+
+════════════════
+
+*📨 MENSAGEM 70/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Fundacao Universidade Federal do Pampa - Unipampa*
+📍 Bagé/RS · Federal
+
+📝 *Objeto:* Pregão eletrônico para quisição de Microcomputadores e Notebooks, destinados à UNIPAMPA, Diretoria de Tecnologia da Informação e Comunicação - DTIC
+
+💰 *Valor estimado:* R$ 3,89 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 08/12/2026 às 09:00* (faltam 11 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/09341233000122/2026/174
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15435905003722026
+Nº PNCP 09341233000122-1-000174/2026
+
+════════════════
+
+*📨 MENSAGEM 71/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Duque de Caxias*
+📍 Duque de Caxias/RJ · Municipal
+
+📝 *Objeto:* REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇOS DE TECNOLOGIA DA INFORMAÇÃO, COM O OBJETIVO DE AUTOMATIZAR O PREENCHIMENTO E O GERENCIAMENTO DE FORMULÁRIOS POR MEIO DE SOLUÇÃO INTEGRADA DE SOFTWARE, INCLUINDO CONTROLE, OPERAÇÃO E INFRAESTRUTURA, MANUTENÇÃO, SUPORTE TÉCNICO (PRESENCIAL E REMOTO) E TREINAMENTO PARA ATENDER ÀS NECESSIDADES DA SECRETARIA MUNICIPAL DE SEGURANÇA PÚBLICA DO MUNICÍPIO DE DUQUE DE CAXIAS/RJ.
+
+💰 *Valor estimado:* R$ 3,39 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 30/11/2026 às 09:00* (faltam 3 dias)
+🟢 Aberta desde 11/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/29138328000150/2026/107
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98583305000792026
+Nº PNCP 29138328000150-1-000107/2026
+
+════════════════
+
+*📨 MENSAGEM 72/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Tribunal Superior do Trabalho*
+📍 Porto Alegre/RS · Federal
+
+📝 *Objeto:* Contratação de sistemas redundantes de geração de energia elétrica de emergência em baixa tensão para os datacenters do Tribunal, sob regime de empreitada por preço unitário, conforme condições e exigências estabelecidas no Anexo I - Termo de Referência, e seus anexos.
+
+💰 *Valor estimado:* R$ 3,38 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 30/11/2026 às 11:00* (faltam 3 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00509968000148/2026/3967
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=08001405004032026
+Nº PNCP 00509968000148-1-003967/2026
+
+════════════════
+
+*📨 MENSAGEM 73/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Comissao de Valores Mobiliarios*
+📍 Rio de Janeiro/RJ · Federal
+
+📝 *Objeto:* Aquisição de 60 notebooks com GPU para utilização em atividades relacionadas à Inteligência Artificial e Análise de Dados.
+
+💰 *Valor estimado:* R$ 3,21 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 08/12/2026 às 10:00* (faltam 11 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/29507878000108/2026/34
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=17303005001332026
+Nº PNCP 29507878000108-1-000034/2026
+
+════════════════
+
+*📨 MENSAGEM 74/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Superintendencia de Agua e Esgoto de Catanduva*
+📍 Catanduva/SP · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE IMPRESSÃO CORPORATIVA POR MEIO DE OUTSOURCING, SOB A MODALIDADE DE LOCAÇÃO DE EQUIPAMENTOS VOLTADOS PARA IMPRESSÃO E DIGITALIZAÇÃO DE DOCUMENTOS, SEM FORNECIMENTO DE PAPEL
+
+💰 *Valor estimado:* R$ 3,17 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: BLL Compras
+📅 *Propostas até quinta, 10/12/2026 às 09:00* (faltam 13 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/10559279000100/2026/83
+🌐 Disputa: https://bllcompras.com/Process/ProcessView?param1=[gkz]/VmJCDn/xlekksDodTChzmGcBxlODhIrd0Gqixxd3IUo_Lz_qtXHt_JcBGI5jKSLNQiZfkWrabbgvWH7ZLWAF3ogzBzT_rO9_sR6AAPyGXg=
+Nº PNCP 10559279000100-1-000083/2026
+
+════════════════
+
+*📨 MENSAGEM 75/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Tribunal de Justica do Estado de Rondonia*
+📍 Porto Velho/RO · Estadual
+
+📝 *Objeto:* Fornecimento de Solução corporativa integrada de gestão do trabalho, incluindo os serviços de implantação, capacitação e disponibilização de créditos de inteligência artificial (IA), para atender o Tribunal de Justiça do Estado de Rondônia
+
+💰 *Valor estimado:* R$ 3,14 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 11/12/2026 às 09:00* (faltam 14 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/04293700000172/2026/284
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92500605002472026
+Nº PNCP 04293700000172-1-000284/2026
+
+════════════════
+
+*📨 MENSAGEM 76/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Banco Central do Brasil*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Registro de preços para aquisição de headsets e webcams para os usuários de TIC do Banco Central do Brasil.
+
+💰 *Valor estimado:* R$ 2,15 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 02/12/2026 às 15:30* (faltam 5 dias)
+🟢 Aberta desde 16/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00038166000105/2026/761
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=17908705003042026
+Nº PNCP 00038166000105-1-000761/2026
+
+════════════════
+
+*📨 MENSAGEM 77/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Conselho Regional de Administracao de Sao Paulo*
+📍 São Paulo/SP · Federal
+
+📝 *Objeto:* Aquisição de bens e a contratação de serviços comuns de Tecnologia da Informação e Comunicação, em 2 (dois) grupos, compreendendo: (Grupo 1) o fornecimento de 02 (dois) servidores físicos em formato rack 1U, de arquitetura x86-64 dual-socket (referência: classe Intel Xeon 6 ou AMD EPYC de desempenho equivalente), de 01 (um) subsistema de armazenamento de dados, ambos com garantia e suporte técnico on-site pelo período de 60 (sessenta) meses, com atendimento on-site no próximo dia útil (NBD) e central de suporte em regime 24x7, e do licenciamento do sistema operacional Windows Server 2025 Datacenter para 32 (trinta e dois) núcleos por servidor, de 150 (cento e cinquenta) licenças de acesso…
+
+💰 *Valor estimado:* R$ 1,96 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 07/12/2026 às 10:00* (faltam 10 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/43060078000104/2026/89
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92653505000832026
+Nº PNCP 43060078000104-1-000089/2026
+
+════════════════
+
+*📨 MENSAGEM 78/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Ponta Grossa*
+📍 Ponta Grossa/PR · Municipal
+
+📝 *Objeto:* Contratação de Solução de Tecnologia da Informação e Comunicação (TIC) sob o modelo de Software como Serviço (SaaS)
+
+💰 *Valor estimado:* R$ 1,64 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Elotech Gestão Pública Ltda
+📅 *Propostas até segunda, 07/12/2026 às 08:59* (faltam 10 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/76175884000187/2026/517
+Nº PNCP 76175884000187-1-000517/2026
+
+════════════════
+
+*📨 MENSAGEM 79/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Arapiraca*
+📍 Arapiraca/AL · Municipal
+
+📝 *Objeto:* Registro de preços para futura e eventual contratação de empresa para a prestação de serviços de conectividade IP (Protocolo Internet), para provimento de acesso corporativo à internet com link dedicado, por meio de fibra ótica, full duplex, simétrico, incluindo equipamentos e serviços de instalação, manutenção e suporte técnico, conforme condições, especificações e quantitativos do Termo de Referência consolidado e de seu anexo de locais.
+
+💰 *Valor estimado:* R$ 1,63 mi
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 09/12/2026 às 08:50* (faltam 12 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/12198693000158/2026/225
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98270505001832026
+Nº PNCP 12198693000158-1-000225/2026
+
+════════════════
+
+*📨 MENSAGEM 80/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Tribunal Regional Eleitoral do Amazonas*
+📍 Manaus/AM · Federal
+
+📝 *Objeto:* Contratação de solução de TIC de Endpoint Privilege Management – EPM, compreendendo o fornecimento de licenças/subscrições, implantação, configuração, suporte técnico, atualização de versões e demais serviços necessários ao pleno funcionamento da solução, com o objetivo de gerenciar, controlar e reduzir privilégios administrativos em estações de trabalho e servidores do Tribunal Regional Eleitoral do Amazonas - TRE/AM, conforme condições, quantidades e exigências estabelecidas no Edital e seus anexos.
+
+💰 *Valor estimado:* R$ 1,44 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quinta, 03/12/2026 às 11:00* (faltam 6 dias)
+🟢 Aberta desde 18/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/05959999000114/2026/136
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=07000305000102026
+Nº PNCP 05959999000114-1-000136/2026
+
+════════════════
+
+*📨 MENSAGEM 81/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Campo Largo*
+📍 Campo Largo/PR · Municipal
+
+📝 *Objeto:* serviços outsourcing de impressão, incluindo a locação de equipamentos multifuncionais e impressoras (monocromáticas e coloridas), scanners de digitalização, contemplando solução completa para gerenciamento e bilhetagem… (resumo; texto completo no edital)
+
+💰 *Valor estimado:* R$ 1,43 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 04/12/2026 às 08:00* (faltam 7 dias)
+🟢 Aberta desde 18/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/76105618000188/2026/637
+Nº PNCP 76105618000188-1-000637/2026
+
+════════════════
+
+*📨 MENSAGEM 82/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Sao Leopoldo*
+📍 São Leopoldo/RS · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - AQUISIÇÃO DE 3 (TRÊS) SERVIDORES DESTINADOS À IMPLANTAÇÃO DE NOVA INFRAESTRUTURA DE VIRTUALIZAÇÃO NO DATACENTER DA PREFEITURA
+
+💰 *Valor estimado:* R$ 1,06 mi
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até quinta, 03/12/2026 às 09:00* (faltam 6 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/89814693000160/2026/325
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/RS/Prefeitura-Municipal-de-Sao-Leopoldo-4967/PE-40-2026-2026-526088
+Nº PNCP 89814693000160-1-000325/2026
+
+════════════════
+
+*📨 MENSAGEM 83/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Superintendencia Nacional de Previdencia Complementar*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Aquisição, por meio de Sistema de Registro de Preços (SRP), de equipamentos de Tecnologia da Informação e Comunicação (TIC) e serviços correlatos de instalação e treinamento, visando à ampliação de recursos computacionais e à substituição de equipamentos antigos da Superintendência Nacional de Previdência Complementar (PREVIC), conforme condições, quantidades e exigências estabelecidas no Termo de Referência nº 45/2025 (Processo Administrativo nº 44011.001005/2025-62). O objeto é composto por: - GRUPO I (itens individuais): Item 1 - Notebook Padrão I (70 un.); Item 2 - Notebook Padrão II (1 un.); Item 3 - Microcomputador Padrão II (1 un.); Item 4 - Nobreak/Estabilizador de Tensão (5 un.);…
+
+💰 *Valor estimado:* R$ 847.051,19
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 15/12/2026 às 09:00* (faltam 18 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/07290290000102/2026/27
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=33300505000632026
+Nº PNCP 07290290000102-1-000027/2026
+
+════════════════
+
+*📨 MENSAGEM 84/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Pacatuba*
+📍 Pacatuba/SE · Municipal
+
+📝 *Objeto:* AQUISIÇÃO DE 05 (CINCO) LABORATÓRIOS EDUCACIONAIS MÓVEIS, COMPOSTOS POR 175 (CENTO E SETENTA E CINCO) CHROMEBOOKS, CARRINHOS PARA ARMAZENAMENTO E RECARGA, SOLUÇÃO INTEGRADA DE CONECTIVIDADE E DEMAIS COMPONENTES E ACESSÓRIOS NECESSÁRIOS AO PLENO FUNCIONAMENTO DOS EQUIPAMENTOS, DESTINADOS AO ATENDIMENTO DAS UNIDADES ESCOLARES DA REDE MUNICIPAL DE ENSINO DE PACATUBA/SE, CONFORME ESPECIFICAÇÕES TÉCNICAS, QUANTITATIVOS E CONDIÇÕES ESTABELECIDOS NESTE TERMO DE REFERÊNCIA.
+
+💰 *Valor estimado:* R$ 840.000,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: 3Tecnos Tecnologia LTDA
+📅 *Propostas até quinta, 10/12/2026 às 09:00* (faltam 13 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/13112222000148/2026/21
+Nº PNCP 13112222000148-1-000021/2026
+
+════════════════
+
+*📨 MENSAGEM 85/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Secretaria de Estado da Administracao*
+📍 Florianópolis/SC · Estadual
+
+📝 *Objeto:* Contratação de serviços de Tecnologia da Informação e Comunicação para estruturação, instalação, desenvolvimento, manutenção, atualização tecnológica, sustentação, suporte, gestão de soluções digitais, aplicação de identidade visual, criação de relatórios e dashboards dos indicadores no âmbito da gestão cultural, assessoria à gestão e treinamento, a partir da plataforma digital denominada Mapa Cultural SC, abrangendo integração com sistemas oficiais, indicadores e BI[Business Intelligence] para a Fundação Catarinense de Cultura.
+
+💰 *Valor estimado:* R$ 795.500,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Secretaria de Estado da Administração de Santa Catarina
+📅 *Propostas até quinta, 10/12/2026 às 13:15* (faltam 13 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/82951351000142/2026/759
+Nº PNCP 82951351000142-1-000759/2026
+
+════════════════
+
+*📨 MENSAGEM 86/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Empresa Brasil de Comunicação*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Contratação consiste em uma solução integrada de segurança da informação, composta por plataforma corporativa de proteção de endpoints (Next Generation Antivirus – NGAV), com funcionalidades de Endpoint Detection and Response (EDR) e Extended Detection and Response (XDR), bem como solução de proteção de correio eletrônico com funcionalidades de antispam, antiphishing e antimalware, incluindo gerenciamento em nuvem, suporte técnico especializado 24x7.
+
+💰 *Valor estimado:* R$ 771.200,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 01/12/2026 às 09:30* (faltam 4 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/09168704000142/2026/64
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=11540605000582026
+Nº PNCP 09168704000142-1-000064/2026
+
+════════════════
+
+*📨 MENSAGEM 87/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Conselho Regional de Enfermagem do Amazonas*
+📍 Manaus/AM · Federal
+
+📝 *Objeto:* Contratação de empresa especializada na prestação de serviços, sob demanda, em reprodução de documentos (outsourcing de impressão), contemplando a disponibilização de equipamentos de impressão, digitalização e cópia, manutenção dos equipamentos, fornecimento de peças e partes, consumíveis e insumos (exceto papel), sistema informatizado de gestão e contabilização de impressões e cópias, para atender as necessidades de impressão do Conselho Regional de Enfermagem do Amazonas - Coren-AM.
+
+💰 *Valor estimado:* R$ 697.035,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 01/12/2026 às 09:30* (faltam 4 dias)
+🟢 Aberta desde 16/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/04667846000130/2026/16
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92623505000562026
+Nº PNCP 04667846000130-1-000016/2026
+
+════════════════
+
+*📨 MENSAGEM 88/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Universidade Federal de Juiz de Fora Ufjf*
+📍 Juiz de Fora/MG · Federal
+
+📝 *Objeto:* Equipamentos de TIC para funcionametno das edificações contempladas no programa PAC do Governo Federal.
+
+💰 *Valor estimado:* R$ 662.073,89
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 07/12/2026 às 14:00* (faltam 10 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/21195755000169/2026/120
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15306105004772026
+Nº PNCP 21195755000169-1-000120/2026
+
+════════════════
+
+*📨 MENSAGEM 89/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Joaquim Tavora*
+📍 Joaquim Távora/PR · Municipal
+
+📝 *Objeto:* O objeto da presente licitação é a Contratação de empresa para a prestação continuada de serviços de telecomunicações, conectividade, transmissão de dados, manutenção, gerenciamento e monitoramento da infraestrutura de redes do Município de Joaquim Távora - PR, compreendendo o transporte de VLANs fixas em camada 2 por fibra óptica, com fornecimento dos equipamentos e materiais necessários em regime de comodato; acesso à Internet dedicada por fibra óptica, com banda simétrica e endereçamento IPv4 público; manutenção preventiva e corretiva, reestruturação, gerenciamento e monitoramento da rede municipal, incluindo infraestrutura de conectividade, equipamentos de rede e integração com o…
+
+💰 *Valor estimado:* R$ 650.238,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: IPM Sistemas
+📅 *Propostas até sexta, 11/12/2026 às 09:30* (faltam 14 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/76966845000106/2026/244
+Nº PNCP 76966845000106-1-000244/2026
+
+════════════════
+
+*📨 MENSAGEM 90/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Camara Municipal de Brodowski*
+📍 Brodowski/SP · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada na execução de serviços de engenharia elétrica para a adequação, modernização e ampliação das instalações elétricas e da infraestrutura de rede lógica, telefonia e sistemas correlatos da Câmara Municipal de Brodowski.
+
+💰 *Valor estimado:* R$ 591.111,63
+⚖️ Concorrência - Eletrônica
+🖥️ Portal: BLL Compras
+📅 *Propostas até quinta, 03/12/2026 às 17:00* (faltam 6 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/56889587000196/2026/13
+🌐 Disputa: https://bllcompras.com/Process/ProcessView?param1=[gkz]m6u4jwg61bH5aN0zuewvSlOe3zatsgfEUQFTb8YOA6NnTIV42ai5I7ShFEIocnSbrEQQcoosf6K1iK/4C6IKRTN2RaGwIxdTk7UcGeqn8p0=
+Nº PNCP 56889587000196-1-000013/2026
+
+════════════════
+
+*📨 MENSAGEM 91/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Tribunal Superior Eleitoral*
+📍 Vitória/ES · Federal
+
+📝 *Objeto:* Contratação de empresa especializada no fornecimento de acesso à plataforma Google Cloud Platform (GCP), Solução de Tecnologia da Informação e Comunicação (STIC) que incorpora capacidades de Inteligência Artificial (IA) Generativa, especificamente por meio de Application Programming Interface (API) de Modelos de Linguagem (LLMs), destinada a otimizar os processos de trabalho do Tribunal Regional Eleitoral do Espírito Santo (TRE-ES), abrangendo os sistemas Bel, MIA, APOIA e CHATSGP
+
+💰 *Valor estimado:* R$ 587.100,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 21/12/2026 às 14:00* (faltam 24 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00509018000113/2026/2628
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=07001505000832026
+Nº PNCP 00509018000113-1-002628/2026
+
+════════════════
+
+*📨 MENSAGEM 92/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Barao de Cocais*
+📍 Barão de Cocais/MG · Municipal
+
+📝 *Objeto:* Contratação continuada de empresa especializada na prestação de serviços de conectividade IP (SCM), Wi-Fi público e corporativo, e segurança de rede, com fornecimento de equipamentos em regime de comodato, para atendimento das unidades do Município de Barão de Cocais/MG
+
+💰 *Valor estimado:* R$ 573.519,12
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
+📅 *Propostas até segunda, 30/11/2026 às 09:00* (faltam 3 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18317685000160/2026/121
+🌐 Disputa: https://app2.ammlicita.org.br/pesquisa/116990
+Nº PNCP 18317685000160-1-000121/2026
+
+════════════════
+
+*📨 MENSAGEM 93/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Carpina*
+📍 Carpina/PE · Municipal
+
+📝 *Objeto:* REGISTRO DE PREÇOS PARA AQUISIÇÃO CORPORATIVA, FUTURA, EVENTUAL E PARCELADA DE EQUIPAMENTOS, COMPONENTES, PERIFÉRICOS, PEÇAS, ACESSÓRIOS, MATERIAIS E INSUMOS DE INFORMÁTICA, REDE E INFRAESTRUTURA DE TECNOLOGIA DA INFORMAÇÃO, DESTINADOS À IMPLANTAÇÃO, AMPLIAÇÃO, MANUTENÇÃO E AO ADEQUADO FUNCIONAMENTO DOS RECURSOS TECNOLÓGICOS, VISANDO ATENDER ÀS NECESSIDADES DO FUNDO MUNICIPAL DE SAÚDE, DO FUNDO MUNICIPAL DE EDUCAÇÃO, DO FUNDO MUNICIPAL DE ASSISTÊNCIA SOCIAL E DA PREFEITURA MUNICIPAL DE CARPINA/PE.
+
+💰 *Valor estimado:* R$ 567.962,10
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: BR Conectado
+📅 *Propostas até quinta, 03/12/2026 às 08:59* (faltam 6 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/11097342000198/2026/265
+🌐 Disputa: http://www.comprascarpina.com.br
+Nº PNCP 11097342000198-1-000265/2026
+
+════════════════
+
+*📨 MENSAGEM 94/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Pirai*
+📍 Piraí/RJ · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada para locação de equipamentos de impressão e digitalização (outsourcing), para atender as Unidades de Saúde da Secretaria Municipal de Saúde de Piraí.
+
+💰 *Valor estimado:* R$ 555.230,64
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Novo BBMNET Licitações
+📅 *Propostas até sexta, 11/12/2026 às 08:00* (faltam 14 dias)
+🟢 Aberta desde 20/10/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/29141322000132/2026/260
+Nº PNCP 29141322000132-1-000260/2026
+
+════════════════
+
+*📨 MENSAGEM 95/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Itatiaia*
+📍 Itatiaia/RJ · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA ESPECIALIZADA ATRAVÉS DE ATA DE REGISTRO DE PREÇO PARA O FORNECIMENTO DE SOLUÇÃO CONTINUADA DE SERVIÇOS OUTSOURCING (IMPRESSÃO E CÓPIA), INTEGRADA A SISTEMAS CORPORATIVOS E À REDE MUNICIPAL DE ITATIAIA, COMPREENDENDO A CESSÃO DE DIREITO DE USO DE EQUIPAMENTOS NOVOS E DE PRIMEIRO USO (FRANQUIA MENSAL DE PÁGINAS MAIS EXCEDENTE), INCLUINDO A PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO PREVENTIVA E CORRETIVA, FORNECIMENTO DE PEÇAS E CONSUMÍVEIS NECESSÁRIOS (EXC. PAPEL), POR 12 MESES.
+
+💰 *Valor estimado:* R$ 545.638,08
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Bolsa Nacional De Compras - BNC
+📅 *Propostas até terça, 08/12/2026 às 10:00* (faltam 11 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/31846892000170/2026/101
+🌐 Disputa: https://bnccompras.com/Process/ProcessView?param1=[gkz]dFRV9AbVcTnQBzgcJc5j9jjvdYfK75ZEX7I/BfuXGchalo/tDZPNOCqmgeXGu4nLFiPOOQyftmBWRl_gn/HONJbTlTFF9kR2sGQFoIsVQKY=
+Nº PNCP 31846892000170-1-000101/2026
+
+════════════════
+
+*📨 MENSAGEM 96/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Ministerio do Meio Ambiente*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Serviço de suporte técnico e garantia para o sistema de telefonia IP, visando manter em funcionamento todos os equipamentos e softwares que fazem parte da solução de telefonia IP do MMA.
+
+💰 *Valor estimado:* R$ 510.679,08
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 04/12/2026 às 09:30* (faltam 7 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/37115375000107/2026/42
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=44000105000182026
+Nº PNCP 37115375000107-1-000042/2026
+
+════════════════
+
+*📨 MENSAGEM 97/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Indaiatuba*
+📍 Indaiatuba/SP · Municipal
+
+📝 *Objeto:* Aquisição de aparelhos de telefone móvel, destinados à expansão da infraestrutura de tecnologia da informação e de comunicações da Prefeitura, através do Sistema de Registro de Preços, com entregas parceladas pelo prazo de 12 (doze) meses, com prazo de cada entrega em até 15 (quinze) dias.
+
+💰 *Valor estimado:* R$ 508.237,70
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Novo BBMNET Licitações
+📅 *Propostas até terça, 08/12/2026 às 08:30* (faltam 11 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/44733608000109/2026/1052
+Nº PNCP 44733608000109-1-001052/2026
+
+════════════════
+
+*📨 MENSAGEM 98/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Superintendencia de Seguros Privados*
+📍 Rio de Janeiro/RJ · Federal
+
+📝 *Objeto:* Contratação de serviços contínuos de outsourcing de almoxarifado virtual in company
+
+💰 *Valor estimado:* R$ 477.654,36
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 04/12/2026 às 09:00* (faltam 7 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/42354068000119/2026/67
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=17303905000822026
+Nº PNCP 42354068000119-1-000067/2026
+
+════════════════
+
+*📨 MENSAGEM 99/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Instituto de Previdencia e Assist dos Serv Municipais*
+📍 Novo Hamburgo/RS · Municipal
+
+📝 *Objeto:* FORNECIMENTO DE SERVIÇO DE SERVIDOR HOSPEDADO EM NUVEM, ABRANGENDO, INFRAESTRUTURA, SUPORTE TÉCNICO, COMUNICAÇÃO EM REDE, ARMAZENAMENTO E FUNCIONALIDADES DE SEGURANÇA DA INFORMAÇÃO ESSENCIAIS, conforme especificações constantes no Termo de Referência.
+
+💰 *Valor estimado:* R$ 458.017,20
+⚖️ Pregão - Eletrônico
+🖥️ Portal: IPM Sistemas
+📅 *Propostas até quarta, 16/12/2026 às 08:00* (faltam 19 dias)
+🟢 Aberta desde 30/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/94707684000100/2026/84
+Nº PNCP 94707684000100-1-000084/2026
+
+════════════════
+
+*📨 MENSAGEM 100/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Consorcio Publico Intermunicipal de Saude da Rede de Urgencia e Emergencia da Macrorregiao do Triangulo do Norte*
+📍 Uberlândia/MG
+
+📝 *Objeto:* [Publicenter] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO INTEGRADA E CONTINUADA DE SERVIÇOS DE GERENCIAMENTO, SUPORTE TÉCNICO REMOTO 24X7 E PRESENCIAL E MONITORAMENTO DA INFRAESTRUTURA DE TI E TELECOMUNICAÇÕES DO CISTRI, INCLUINDO TELEFONIA IP, REDE, SERVIDORES, VIRTUALIZAÇÃO, SEGURANÇA, CONECTIVIDADE, INTERNET, PLATAFORMAS, SOFTWARES E SERVIÇOS COMPLEMENTARES, PELO PERÍODO INICIAL DE 12 (DOZE) MESES.
+
+💰 *Valor estimado:* R$ 403.224,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: PUBLICENTER INFORMATICA COMERCIO E LOCACAO LTDA
+📅 *Propostas até terça, 01/12/2026 às 09:00* (faltam 4 dias)
+🟢 Aberta desde 01/12/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/19455924000100/2026/42
+🌐 Disputa:                                                                                                     
+Nº PNCP 19455924000100-1-000042/2026
+
+════════════════
+
+*📨 MENSAGEM 101/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Tribunal Regional Eleitoral de Mato Grosso do Sul*
+📍 Campo Grande/MS · Federal
+
+📝 *Objeto:* Prestação de serviços de suporte técnico profissional, manutenção (corretiva e evolutiva) e sustentação da aplicação "GLPI / Central de Serviços".
+
+💰 *Valor estimado:* R$ 333.776,04
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 01/12/2026 às 14:00* (faltam 4 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/03883929000102/2026/85
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=07001605001462026
+Nº PNCP 03883929000102-1-000085/2026
+
+════════════════
+
+*📨 MENSAGEM 102/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Camara Municipal de Aruja*
+📍 Arujá/SP · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE SOLUÇÃO DE OUTSOURCING DE DESKTOPS CORPORATIVOS (50 CONJUNTOS DE COMPUTADORES COM NOBREAKS), COMPREENDENDO FORNECIMENTO, IMPLANTAÇÃO, CONFIGURAÇÃO, SUPORTE TÉCNICO, MANUTENÇÃO E SUBSTITUIÇÃO DOS EQUIPAMENTOS, PARA MODERNIZAÇÃO TECNOLÓGICA E CONTINUIDADE OPERACIONAL DA CÂMARA MUNICIPAL DE ARUJÁ
+
+💰 *Valor estimado:* R$ 329.900,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Novo BBMNET Licitações
+📅 *Propostas até quarta, 02/12/2026 às 09:00* (faltam 5 dias)
+🟢 Aberta desde 16/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/58478652000116/2026/24
+Nº PNCP 58478652000116-1-000024/2026
+
+════════════════
+
+*📨 MENSAGEM 103/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Comando do Exercito*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Aquisição de bens permanentes de Tecnologia da Informação e Comunicação (TIC), destinados à atualização, modernização e recomposição do parque computacional do Centro de Pagamento do Exército – CPEx.
+
+💰 *Valor estimado:* R$ 318.597,69
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 30/11/2026 às 09:15* (faltam 3 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00394452000103/2026/24569
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=16008905000212026
+Nº PNCP 00394452000103-1-024569/2026
+
+════════════════
+
+*📨 MENSAGEM 104/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Artur Nogueira*
+📍 Artur Nogueira/SP · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada para prestação continuada de serviços de Tecnologia da Informação, compreendendo manutenção preventiva, preditiva e corretiva de equipamentos de informática, periféricos e infraestrutura de rede, suporte técnico presencial e remoto, instalação, configuração e atualização de sistemas e aplicativos, para atendimento à Secretaria Municipal de Educação e às unidades da rede municipal de ensino do Município de Artur Nogueira/SP, pelo período de 12 (doze) meses, conforme especificações e condições estabelecidas no Termo de Referência (Anexo I).
+
+💰 *Valor estimado:* R$ 309.999,96
+⚖️ Pregão - Eletrônico
+🖥️ Portal: GOVTEC SISTEMAS DE INFORMATICA LTDA
+📅 *Propostas até quarta, 02/12/2026 às 09:00* (faltam 5 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/45735552000186/2026/289
+Nº PNCP 45735552000186-1-000289/2026
+
+════════════════
+
+*📨 MENSAGEM 105/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Fundacao Instituto Polo Avancado da Saude de Ribeirao Preto*
+📍 Ribeirão Preto/SP · Municipal
+
+📝 *Objeto:* Registro de preços para eventual aquisição de leitores de biometria facial com conectividade Wi-Fi e de componentes de controle de acesso, incluindo o serviço de retirada dos leitores existentes e de instalação, configuração e testes dos novos pontos de acesso, para as dependências do Supera Parque de Inovação e Tecnologia de Ribeirão Preto.
+
+💰 *Valor estimado:* R$ 260.925,00
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 04/12/2026 às 10:00* (faltam 7 dias)
+🟢 Aberta desde 06/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/04755519000130/2026/119
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92971605001222026
+Nº PNCP 04755519000130-1-000119/2026
+
+════════════════
+
+*📨 MENSAGEM 106/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Januaria*
+📍 Januária/MG · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇOS DE DESENVOLVIMENTO E IMPLANTAÇÃO DE PLATAFORMA DE GEOPROCESSAMENTO NA MODALIDADE SAAS, INCLUINDO A HOSPEDAGEM DE DADOS EM DATACENTER PROFISSIONALIZADO, SUPORTE TÉCNICO E MANUTENÇÕES CONTINUADAS, VOLTADAS À GESTÃO DO CADASTRO TÉCNICO MULTIFINALITÁRIO DO MUNICÍPIO DE JANUÁRIA/MG.
+
+💰 *Valor estimado:* R$ 252.883,50
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até terça, 08/12/2026 às 08:50* (faltam 11 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/21461546000110/2026/145
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/MG/Prefeitura-Municipal-de-Januaria-1405/PE-053-2026-2026-527125
+Nº PNCP 21461546000110-1-000145/2026
+
+════════════════
+
+*📨 MENSAGEM 107/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Conselho Regional de Medicina Veterinaria do Estado do Rio Grande do Sul*
+📍 Porto Alegre/RS · Federal
+
+📝 *Objeto:* Trata-se de aquisições de bens e serviços comuns de TIC, abrangendo a renovação e modernização de ativos de rede local (wireless, switches e firewall), licenciamento de proteção avançada de estações de trabalho/servidores (EDR/Antivírus) e prestação de serviço continuado de e-mail corporativo Zimbra em nuvem, conforme condições e exigências estabelecidas no Termo de Referência.
+
+💰 *Valor estimado:* R$ 246.065,52
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 02/12/2026 às 10:00* (faltam 5 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/93009116000172/2026/15
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92516305000062026
+Nº PNCP 93009116000172-1-000015/2026
+
+════════════════
+
+*📨 MENSAGEM 108/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Conselho Regional dos Corretores de Imoveis de Sc*
+📍 Florianópolis/SC · Federal
+
+📝 *Objeto:* Contratação de subscrições corporativas de plataformas de Inteligência Artificial Generativa.
+
+💰 *Valor estimado:* R$ 239.571,45
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 09/12/2026 às 08:58* (faltam 12 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/82894098000132/2026/90
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92680405000892026
+Nº PNCP 82894098000132-1-000090/2026
+
+════════════════
+
+*📨 MENSAGEM 109/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Guaranta*
+📍 Guarantã/SP · Municipal
+
+📝 *Objeto:* Registro de Preços para Aquisição de materiais, equipamentos e insumos de conectividade e cabeamento estruturado (composto por switches gerenciáveis L2+/L3, transceivers GBIC/SFP+, Racks corporativos, patch panels, organizadores de cabos, cabos UTP Cat6, cordões ópticos, PTOs e conectores), destinados à modernização, expansão e manutenção da rede de dados municipal
+
+💰 *Valor estimado:* R$ 214.863,21
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Fiorilli Software
+📅 *Propostas até terça, 01/12/2026 às 08:29* (faltam 4 dias)
+🟢 Aberta desde 29/10/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/46187506000152/2026/61
+Nº PNCP 46187506000152-1-000061/2026
+
+════════════════
+
+*📨 MENSAGEM 110/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Instituto de Previdencia dos Servidores Publicos da Cidade de Sao Joao de Meriti*
+📍 São João de Meriti/RJ · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - O objeto da presente licitação é a contratação de empresa especializada na prestação de serviços de locação de equipamentos de impressão e digitalização, em regime de outsourcing, compreendendo o fornecimento de equipamentos multifuncionais, instalação, configuração, manutenção preventiva e corretiva, fornecimento e reposição de suprimentos (toner, cartuchos, peças e demais insumos, exceto papel), suporte técnico presencial e remoto, bem como disponibilização de sistema informatizado de gerenciamento e bilhetagem de impressões, para atendimento das necessidades do Instituto de Previdência dos Servidores Públicos do Município de São João de Meriti – MERITI…
+
+💰 *Valor estimado:* R$ 166.190,40
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até sexta, 11/12/2026 às 09:00* (faltam 14 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/06083793000136/2026/7
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/RJ/Instituto-de-Previdencia-dos-Servidores-Publicos-de-Sao-Joao-de-Meriti-4418/PE-546-2026-2026-528097
+Nº PNCP 06083793000136-1-000007/2026
+
+════════════════
+
+*📨 MENSAGEM 111/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Conselho Regional de Engenharia e Agronomia de Goias*
+📍 Goiás/GO · Federal
+
+📝 *Objeto:* Contratação de empresa especializada para o fornecimento e implantação de 01 (um) Sistema de Armazenamento de Energia por Baterias – BESS (Battery Energy Storage System), destinado à infraestrutura crítica do Data Center do Conselho Regional de Engenharia e Agronomia de Goiás – Crea-GO, compreendendo o fornecimento dos equipamentos e componentes necessários, transporte, instalação, montagem, interligações elétricas e de comunicação, configuração, parametrização, testes, comissionamento, treinamento, manutenção, garantia, adequações civis e serviços acessórios de engenharia necessários à implantação, projeto elétrico e documentos de responsabilidade técnica, de forma a assegurar a plena…
+
+💰 *Valor estimado:* R$ 155.000,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 14/12/2026 às 09:00* (faltam 17 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/01619022000105/2026/67
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=38942205001112026
+Nº PNCP 01619022000105-1-000067/2026
+
+════════════════
+
+*📨 MENSAGEM 112/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Canhotinho*
+📍 Canhotinho/PE · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada para fornecimento, implantação, configuração, manutenção e suporte técnico de solução de comunicação baseada em telefonia IP (VoIP), mediante PABX em Nuvem com SIP Trunk, incluindo os serviços de armazenamento em nuvem, destinada à Prefeitura Municipal de Canhotinho e seus órgãos vinculados.
+
+💰 *Valor estimado:* R$ 145.000,92
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Bolsa Nacional De Compras - BNC
+📅 *Propostas até quinta, 10/12/2026 às 08:00* (faltam 13 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/10132777000163/2026/36
+🌐 Disputa: https://bnccompras.com/Process/ProcessView?param1=[gkz]3khghGOrplKyt2MSXIFT6rzoxXuHTuGgCgbVLlB_gAjAsFFcNVX0sbJAHgLmJCWAnoi5tgOlVe7uGSBUSmxl9_HnFxhTcwX4KLgYYr7VSR0=
+Nº PNCP 10132777000163-1-000036/2026
+
+════════════════
+
+*📨 MENSAGEM 113/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Servico Autonomo de Agua e Esgoto do Municipio de Rio das Ostras (saae-ro)*
+📍 Rio das Ostras/RJ · Municipal
+
+📝 *Objeto:* Aquisição de 12 (doze) computadores desktop corporativos completos, integrados de fábrica, compreendendo gabinete, monitor, teclado, mouse, acessório de conectividade, sistema operacional e licença perpétua de suíte de aplicativos de escritório, com garantia técnica on-site pelo prazo mínimo de 36 (trinta e seis) meses, nos termos da tabela e condições estabelecidas no Termo de Referência e seus anexos.
+
+💰 *Valor estimado:* R$ 135.843,84
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 14/12/2026 às 08:00* (faltam 17 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/29134183000110/2026/6
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92947305000112026
+Nº PNCP 29134183000110-1-000006/2026
+
+════════════════
+
+*📨 MENSAGEM 114/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Secretaria de Estado da Administracao*
+📍 Florianópolis/SC · Estadual
+
+📝 *Objeto:* Registro de preços para futura e eventual aquisição de baterias para substituição da UPS (Uninterrutible Power Supply) para sala de cofre do datacenter para Secretaria de Estado da Proteção e Defesa Civil
+
+💰 *Valor estimado:* R$ 129.799,68
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Secretaria de Estado da Administração de Santa Catarina
+📅 *Propostas até sexta, 04/12/2026 às 13:15* (faltam 7 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/82951351000142/2026/754
+Nº PNCP 82951351000142-1-000754/2026
+
+════════════════
+
+*📨 MENSAGEM 115/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Nova Santa Helena*
+📍 Nova Santa Helena/MT · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - Contratação de empresa especializada na prestação de serviços de acesso à internet corporativa, por meio de conexão em fibra óptica visando atender às necessidades de conectividade e comunicação dos setores da Administração Pública Municipal de Nova Santa Helena/MT.
+
+💰 *Valor estimado:* R$ 122.880,00
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até segunda, 30/11/2026 às 13:59* (faltam 3 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/04214704000118/2026/23
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/MT/Prefeitura-Municipal-de-Nova-Santa-Helena-2144/RPE-37-2026-2026-525419
+Nº PNCP 04214704000118-1-000023/2026
+
+════════════════
+
+*📨 MENSAGEM 116/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Florania*
+📍 Florânia/RN · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - REGISTRO DE PREÇOS PARA FUTURA E EVENTUAL PRESTAÇÃO DE SERVIÇO DE ACESSO À INTERNET BANDA LARGA, DESTINADA AO ATENDIMENTO DAS NECESSIDADES DE CONECTIVIDADE DOS DEPARTAMENTOS E UNIDADES DA ADMINISTRAÇÃO MUNICIPAL DE FLORÂNIA/RN.
+
+💰 *Valor estimado:* R$ 107.500,80
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até segunda, 30/11/2026 às 08:29* (faltam 3 dias)
+🟢 Aberta desde 11/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/08181562000190/2026/101
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/RN/Prefeitura-Municipal-de-Florania-2256/RPE-29-2026-2026-524223
+Nº PNCP 08181562000190-1-000101/2026
+
+════════════════
+
+*📨 MENSAGEM 117/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renovaveis-ibama*
+📍 Goiânia/GO · Federal
+
+📝 *Objeto:* Contratação de serviços contínuos de outsourcing de impressão, cópias e digitalização, incluindo impressão remota, manutenção preventiva e corretiva, bem como todos os insumos e mão de obra necessários, exceto papel, visando atender à superintendência do IBAMA no Estado de Goiás, sua Unidade Técnica e o CETAS, conforme condições e exigências estabelecidas no Edital e seus anexos.
+
+💰 *Valor estimado:* R$ 79.552,80
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 01/12/2026 às 09:00* (faltam 4 dias)
+🟢 Aberta desde 16/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/03659166002156/2026/29
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=19310805000182026
+Nº PNCP 03659166002156-1-000029/2026
+
+════════════════
+
+*📨 MENSAGEM 118/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Estado do Para*
+📍 Belém/PA · Estadual
+
+📝 *Objeto:* Contratação de solução corporativa de Assistente de Inteligência Artificial Generativa, no modelo Software as a Service – SaaS, para uso direto e individual pelos profissionais autorizados da equipe técnica da Polícia Militar do Estado do Pará, composta por 10 (dez) licenças e duas plataformas tecnologicamente independentes e complementares.
+
+💰 *Valor estimado:* R$ 74.196,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 07/12/2026 às 09:00* (faltam 10 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/05054861000176/2026/116
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92580905000222026
+Nº PNCP 05054861000176-1-000116/2026
+
+════════════════
+
+*📨 MENSAGEM 119/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Chopinzinho*
+📍 Chopinzinho/PR · Municipal
+
+📝 *Objeto:* Contratação de Empresa Especializada em Solução de Conectividade (Link Dedicado na PMPR e Transporte Privado em VLAN/VPN) para o Sistema de Monitoramento Viário/Urbano (CHOPIM360).
+
+💰 *Valor estimado:* R$ 67.434,24
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 07/12/2026 às 09:00* (faltam 10 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/76995414000160/2026/240
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=98750305000372026
+Nº PNCP 76995414000160-1-000240/2026
+
+════════════════
+
+*📨 MENSAGEM 120/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Araxa*
+📍 Araxá/MG · Municipal
+
+📝 *Objeto:* [LICITANET] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇOS TÉCNICOS, COM FORNECIMENTO DE MATERIAIS E EQUIPAMENTOS NECESSÁRIOS À IMPLANTAÇÃO DE REDE LÓGICA CABEADA COM CABEAMENTO ESTRUTURADO CATEGORIA 6 (CAT 6), DESTINADOS À IMPLANTAÇÃO DA INFRAESTRUTURA DA NOVA SEDE DA UAI COMPARTILHA ARAXÁ.
+
+💰 *Valor estimado:* R$ 64.263,57
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Licitanet Licitações Eletrônicas LTDA
+📅 *Propostas até sexta, 11/12/2026 às 13:05* (faltam 14 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18140756000100/2026/308
+🌐 Disputa: https://licitanet.com.br/sessao/209390
+Nº PNCP 18140756000100-1-000308/2026
+
+════════════════
+
+*📨 MENSAGEM 121/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Santo Antonio do Paraiso*
+📍 Santo Antônio do Paraíso/PR · Municipal
+
+📝 *Objeto:* CONTRATAÇÃO DE EMPRESA PARA A PRESTAÇÃO DE SERVIÇOS CONTINUADOS DE COMUNICAÇÃO CORPORATIVA, COMPREENDENDO SOLUÇÃO INTEGRADA DE TELEFONIA IP/VOIP EM NUVEM, TELEFONIA MÓVEL INSTITUCIONAL, FORNECIMENTO DE APARELHOS EM COMODATO E CANAL INSTITUCIONAL DE MENSAGENS, INCLUINDO IMPLANTAÇÃO, CONFIGURAÇÃO, MANUTENÇÃO, SUPORTE TÉCNICO E TREINAMENTO, EM ATENDIMENTO À SOLICITAÇÃO DO DEPARTAMENTO REQUISITANTE, CONFORME ESPECIFICAÇÕES E DESCRIÇÃO DETALHADA NO EDITAL.
+
+💰 *Valor estimado:* R$ 41.980,92
+⚖️ Pregão - Eletrônico
+🖥️ Portal: BLL Compras
+📅 *Propostas até sexta, 04/12/2026 às 08:30* (faltam 7 dias)
+🟢 Aberta desde 18/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/75832170000131/2026/88
+🌐 Disputa: https://bllcompras.com/Process/ProcessView?param1=[gkz]SGAtbnNu_rgG2Pa8w2UkFuQ9kLsAECTh_aO69EzKqhNGn_VNezg7VkDsj55TFDM07RpBrMw9IVM96BQwPlr7JeiNr/hPfjRatE/gtJ7DQ_A=
+Nº PNCP 75832170000131-1-000088/2026
+
+════════════════
+
+*📨 MENSAGEM 122/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Nova Londrina*
+📍 Nova Londrina/PR · Municipal
+
+📝 *Objeto:* Fornecimento de serviços de Tecnologia da Informação para fornecimento de Licença de uso mensal, Implantação, modernização, Locação de APP e Afins conforme Edital.
+
+💰 *Valor estimado:* R$ 35.280,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: BLL Compras
+📅 *Propostas até segunda, 30/11/2026 às 08:00* (faltam 3 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/81044984000104/2026/125
+🌐 Disputa: https://bllcompras.com/Process/ProcessView?param1=[gkz]r3SqqQLbu7J9reLtewKesXvUARAEkaPOy3Ku1gdxZaLXd3X_zSz7ntXzJQ7wZgRfjqdTOhsjmgW/u7hXtxEkVoqfNiNBGlU5BrKYAB4puho=
+Nº PNCP 81044984000104-1-000125/2026
+
+════════════════
+
+*📨 MENSAGEM 123/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Camara Muncipal de Araruama*
+📍 Araruama/RJ · Municipal
+
+📝 *Objeto:* Contratação de empresa especializada para a prestação de serviços continuados de conectividade à internet, compreendendo 01 (um) link dedicado de acesso à internet e 02 (dois) links convencionais de acesso à internet
+
+💰 *Valor estimado:* R$ 24.889,44
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quinta, 10/12/2026 às 10:00* (faltam 13 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/30173207000129/2026/23
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92988705000222026
+Nº PNCP 30173207000129-1-000023/2026
+
+════════════════
+
+*📨 MENSAGEM 124/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Fundacao Oswaldo Cruz*
+📍 Rio de Janeiro/RJ · Federal
+
+📝 *Objeto:* AQUISIÇÃO DE MATERIAL PERMANENTE DE TIC
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 01/12/2026 às 10:00* (faltam 4 dias)
+🟢 Aberta desde 19/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/33781055000135/2026/2016
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25449205001142026
+Nº PNCP 33781055000135-1-002016/2026
+
+════════════════
+
+*📨 MENSAGEM 125/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Empresa Brasileira de Pesquisa Agropecuaria*
+📍 Santo Antônio de Goiás/GO · Federal
+
+📝 *Objeto:* Contratação de empresa especializada na prestação de serviços de outsourcing de impressão, digitalização, cópia e bilhetagem, na modalidade de FRANQUIA MENSAL DE PÁGINAS MAIS EXCEDENTE, que serão executados nas dependências da Embrapa Arroz e Feijão ,em Santo Antônio de Goiás/GO.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quinta, 03/12/2026 às 08:00* (faltam 6 dias)
+🟢 Aberta desde 18/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00348003000110/2026/1716
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=13503605000302026
+Nº PNCP 00348003000110-1-001716/2026
+
+════════════════
+
+*📨 MENSAGEM 126/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Procuradoria Geral de Justica do Estado de Mato Grosso*
+📍 Cuiabá/MT · Estadual
+
+📝 *Objeto:* PREGÃO ELETRÔNICO 90046/2026 - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA O FORNECIMENTO, INSTALAÇÃO, GARANTIA E MANUTENÇÃO DE SOLUÇÃO INTEGRADA DE MICRO DATA CENTER (MDC), INCLUINDO TODOS OS EQUIPAMENTOS, SOFTWARES, ACESSÓRIOS, MATERIAIS, SERVIÇOS E DEMAIS RECURSOS NECESSÁRIOS À SUA PLENA IMPLANTAÇÃO E OPERAÇÃO, DE ACORDO COM AS CONDIÇÕES, ESPECIFICAÇÕES E QUANTIDADES DESCRITAS NO TERMO DE REFERÊNCIA – ANEXO I DO EDITAL
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quinta, 03/12/2026 às 09:30* (faltam 6 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/14921092000157/2026/212
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92662505002422026
+Nº PNCP 14921092000157-1-000212/2026
+
+════════════════
+
+*📨 MENSAGEM 127/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Estado do Ceara*
+📍 Fortaleza/CE · Estadual
+
+📝 *Objeto:* Prestação dos serviços de Solução de Banco de Dados, incluindo hardware e software, proteção dos dados, serviços de instalação e ativação, Universal Credits, consultoria técnica especializada por demanda pelo período de 60 (sessenta) meses e treinamento de equipe, nas condições estabelecidas neste edital e seus anexos.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 07/12/2026 às 09:00* (faltam 10 dias)
+🟢 Aberta desde 13/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/07954480000179/2026/26814
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=94300105008312026
+Nº PNCP 07954480000179-1-026814/2026
+
+════════════════
+
+*📨 MENSAGEM 128/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Porteirinha*
+📍 Porteirinha/MG · Municipal
+
+📝 *Objeto:* Registro de Preços para futura e eventual aquisição de cestas básicas destinadas às famílias em situação de vulnerabilidade social do município de Porteirinha, em atendimento à Secretaria Municipal de Desenvolvimento Social.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
+📅 *Propostas até terça, 08/12/2026 às 10:00* (faltam 11 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18013326000119/2026/130
+🌐 Disputa: https://app2.licitardigital.com.br/pesquisa/120276
+Nº PNCP 18013326000119-1-000130/2026
+
+════════════════
+
+*📨 MENSAGEM 129/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Espirito Santo Secretaria de Estado da Fazenda*
+📍 Vitória/ES · Estadual
+
+📝 *Objeto:* Contratação de serviços de Security Operation Center – SOC para a Secretaria de Estado da Fazenda do Espírito Santo – SEFAZ/ES.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quinta, 10/12/2026 às 09:30* (faltam 13 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/27080571000130/2026/41
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92574305000012026
+Nº PNCP 27080571000130-1-000041/2026
+
+════════════════
+
+*📨 MENSAGEM 130/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Policia Civil do Estado de Minas Gerais*
+📍 Belo Horizonte/MG · Estadual
+
+📝 *Objeto:* Aquisição de solução integrada de infraestrutura tecnológica de missão crítica, baseada em arquitetura convergente, storages, switches de alto desempenho e conectividade associada, ...
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Portal de Compras do Estado de Minas Gerais
+📅 *Propostas até sexta, 11/12/2026 às 09:00* (faltam 14 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/18715532000170/2026/158
+🌐 Disputa: https://www1.compras.mg.gov.br/n/procedimentolei14133/consulta/eletronico/visualizar/2026/317/1511189
+Nº PNCP 18715532000170-1-000158/2026
+
+════════════════
+
+*📨 MENSAGEM 131/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Secretaria de Estado de Industria, Ciencia e Tecnologia*
+📍 Rio Branco/AC · Estadual
+
+📝 *Objeto:* Contratação de empresa especializada para prestação de serviços continuados de outsourcing de impressão, cópia e digitalização de documentos, mediante franquia mensal de impressão, compreendendo a disponibilização dos equipamentos necessários, instalação, configuração, manutenção preventiva e corretiva, assistência técnica, reposição de peças, fornecimento de softwares de gerenciamento, mão de obra, suprimentos e insumos necessários ao pleno funcionamento da solução, inclusive papel, visando ate
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico · Registro de preços
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 11/12/2026 às 09:15* (faltam 14 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/16958425000148/2026/502
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92799605001922026
+Nº PNCP 16958425000148-1-000502/2026
+
+════════════════
+
+*📨 MENSAGEM 132/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Ministerio da Gestao e da Inovacao Em Servicos Publicos*
+📍 Rio de Janeiro/RJ · Federal
+
+📝 *Objeto:* Aquisição de servidor/appliance de processamento para Inteligência Artificial (IA), destinado à hospedagem e execução de soluções computacionais do Arquivo Nacional, incluindo garantia on-site pelo período de 36 (trinta e seis) meses, com suporte técnico em regime 24x7 (vinte e quatro horas por dia, sete dias por semana), conforme condições, quantidades e exigências estabelecidas no Edital e seus anexos.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até sexta, 11/12/2026 às 11:00* (faltam 14 dias)
+🟢 Aberta desde 27/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00489828000155/2026/800
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=20024705001022026
+Nº PNCP 00489828000155-1-000800/2026
+
+════════════════
+
+*📨 MENSAGEM 133/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Empresa Gestora de Ativos S.a. - Emgea*
+📍 Brasília/DF
+
+📝 *Objeto:* Aquisição de solução composta por servidores físicos do tipo rack e racks para servidores, destinada à modernização do Datacenter da Empresa Gestora de Ativos S.A. – Emgea, incluindo o fornecimento de todos os componentes e acessórios necessários, garantia oficial do fabricante e suporte técnico credenciado pelo período de 60 (sessenta) meses, bem como serviço de acondicionamento, implantação, instalação física, configuração inicial, testes, documentação técnica, entrega técnica da implantação.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até terça, 15/12/2026 às 10:00* (faltam 18 dias)
+🟢 Aberta desde 01/12/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/04527335000113/2026/42
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=17910205000362026
+Nº PNCP 04527335000113-1-000042/2026
+
+════════════════
+
+*📨 MENSAGEM 134/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Brb Banco de Brasilia Sa*
+📍 Brasília/DF
+
+📝 *Objeto:* [Portal de Compras Públicas] - Contratação de serviços de conectividade multicloud, com capacidade de até 5 Gbps, destinados à interligação privada dos Data Centers do BRB, localizados em Brasília/DF, aos provedores de nuvem pública, tais como Microsoft Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), entre outros, conforme condições e especificações constantes deste edital e seus anexos. ITEM 1 – Data Center SIG Serviço de conectividade multicloud para o Data Center SIG, com capacidade física de até 5 Gbps e possibilidade de configuração de circuitos virtuais para conexão com nuvens públicas. ITEM 2 – Data Center SCN Serviço de conectividade multicloud para o Data Center SCN,…
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até sexta, 18/12/2026 às 09:59* (faltam 21 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/00000208000100/2026/27
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/DF/BRB-BANCO-DE-BRASILIA-SA-3635/PE-059-2026-2026-523056
+Nº PNCP 00000208000100-1-000027/2026
+
+════════════════
+
+*📨 MENSAGEM 135/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Juruti*
+📍 Juruti/PA · Municipal
+
+📝 *Objeto:* [Portal de Compras Públicas] - CREDENCIAMENTO DE PESSOAS JURÍDICAS PARA PRESTAÇÃO DE SERVIÇOS DE DIGITADOR E ENTREVISTADOR DO CADASTRO ÚNICO PARA PROGRAMAS SOCIAIS DO GOVERNO FEDERAL – CADÚNICO, em atendimento à Secretaria Municipal de Assistência Social – SEMAS de Juruti/PA
+
+💰 *Valor estimado:* R$ 115.344,96
+⚖️ Credenciamento
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até quarta, 10/11/2027 às 23:59* (faltam 348 dias)
+🟢 Aberta desde 10/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/05257555000137/2026/23
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/PA/Prefeitura-Municipal-de-Juruti-1406/CRED-002-2026-2026-524155
+Nº PNCP 05257555000137-1-000023/2026
+
+════════════════
+
+*📨 MENSAGEM 136/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Ministerio Publico do Estado de Rondonia*
+📍 Porto Velho/RO · Estadual
+
+📝 *Objeto:* Aquisição de Dispositivo inteligente de gravação e transcrição de áudio com inteligência artificial integrada
+
+💰 *Valor estimado:* R$ 64.283,94
+⚖️ Dispensa
+🖥️ Portal: MINISTÉRIO PÚBLICO DO ESTADO DE RONDÔNIA
+📅 *Propostas até segunda, 30/11/2026 às 14:00* (faltam 3 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/04381083000167/2026/229
+Nº PNCP 04381083000167-1-000229/2026
+
+════════════════
+
+*📨 MENSAGEM 137/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Conselho Regional de Quimica 14 Regiao Crq Xiv*
+📍 Manaus/AM · Federal
+
+📝 *Objeto:* Aquisição de 10 (dez) tablets corporativos (com conectividade 5G, caneta touch e capa com teclado integrado) e 16 (dezesseis) aparelhos celulares tipo smartphone.
+
+💰 *Valor estimado:* R$ 52.356,28
+⚖️ Dispensa
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quinta, 03/12/2026 às 08:00* (faltam 6 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/34501320000147/2026/4
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=38927006000042026
+Nº PNCP 34501320000147-1-000004/2026
+
+════════════════
+
+*📨 MENSAGEM 138/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Conselho Federal dos Tecnicos Industriais*
+📍 Brasília/DF · Federal
+
+📝 *Objeto:* Contratação de empresa especializada na prestação continuada de serviços de outsourcing de impressão, cópia e digitalização, com disponibilização de três equipamentos multifuncionais, software de bilhetagem e gerenciamento integrado ao Microsoft Active Directory, reconhecimento óptico de caracteres (OCR), implantação, manutenção preventiva e corretiva, peças, suprimentos, suporte, treinamento e logística reversa, pelo prazo de 24 (vinte e quatro) meses.
+
+💰 *Valor estimado:* R$ 44.590,08
+⚖️ Dispensa
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 30/11/2026 às 08:59* (faltam 3 dias)
+🟢 Aberta desde 24/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/30871497000184/2026/34
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=92716506000342026
+Nº PNCP 30871497000184-1-000034/2026
+
+════════════════
+
+*📨 MENSAGEM 139/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Fundacao de Previdencia Complementar do Servidor Publico do Estado do Rio Grande do Sul - Rs-prev*
+📍 Porto Alegre/RS · Estadual
+
+📝 *Objeto:* Contratação de empresa especializada para prestação de serviços de Administração de Banco de Dados – DBA, compreendendo suporte técnico especializado, monitoramento, manutenção preventiva e corretiva, análise de desempenho, administração de segurança e acessos, acompanhamento das rotinas de backup e recovery, apoio na resolução de incidentes e demais atividades necessárias à manutenção e ao adequado funcionamento do ambiente de banco de dados da RS-Prev.
+
+💰 *Valor estimado:* R$ 39.567,36
+⚖️ Dispensa
+🖥️ Portal: PROCERGS - CENTRO DE TECNOLOGIA DA INFORMACAO E COMUNICACAO DO ESTADO DO RIO GRANDE DO SUL S.A.
+📅 *Propostas até segunda, 30/11/2026 às 08:30* (faltam 3 dias)
+🟢 Aberta desde 25/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/24846794000177/2026/28
+🌐 Disputa: https://pregaobanrisul.com.br/editais/0021_2026/359888
+Nº PNCP 24846794000177-1-000028/2026
+
+════════════════
+
+*📨 MENSAGEM 140/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Fumma - Fundo Municipal de Meio Ambiente*
+📍 Cachoeiras de Macacu/RJ · Municipal
+
+📝 *Objeto:* [LICITANET] - Contratação de empresa especializada para prestação de serviços continuados de acesso à internet por meio de fibra óptica, incluindo o fornecimento de solução de telefonia IP (VoIP), central virtual, ramais, equipamentos em regime de comodato, instalação, configuração, suporte técnico, manutenção preventiva e corretiva, visando atender às necessidades da Secretaria Municipal do Ambiente e Bem-Estar Animal.
+
+💰 *Valor estimado:* R$ 26.985,60
+⚖️ Dispensa
+🖥️ Portal: Licitanet Licitações Eletrônicas LTDA
+📅 *Propostas até quarta, 09/12/2026 às 09:00* (faltam 12 dias)
+🟢 Aberta desde 17/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/14032786000133/2026/11
+🌐 Disputa: https://licitanet.com.br/sessao/208272
+Nº PNCP 14032786000133-1-000011/2026
+
+════════════════
+
+*📨 MENSAGEM 141/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Universidade Federal da Integracao Latino-americana*
+📍 Foz do Iguaçu/PR · Federal
+
+📝 *Objeto:* 01 NOTEBOOK DE ALTO DESEMPENHO - especificações técnicas: Processador: Intel® Core™ Ultra X7 358H com NPU (Neural Processing Unit) dedicada para aceleração de inteligência artificial. Memória RAM: 32 GB LPDDR5X. Armazenamento: SSD 1 TB NVMe. Processador Gráfico (GPU): UASG 158658 2 de 6 Intel® Arc™ B390 integrada (memória compartilhada). Tela: 14,0” Dynamic AMOLED 2X, antirreflexo, com suporte a Touchscreen. Rede sem fio: WiFi 7 (802.11a/b/g/n/ac/ax/be), triband (2.4 GHz / 5 GHz / 6 GHz), MIMO, EHT320, 4096-QAM. Bluetooth: Versão 5.4. 02xvThunderbolt™ 4. 01x USB 3.2 01x HDMI 2.1 (suporte às saídas de vídeo 8K@60Hz e 5K@120Hz). 01x Conector combo áudio (Saída para fone de ouvido / Entrada…
+
+💰 *Valor estimado:* R$ 11.899,00
+⚖️ Dispensa
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até quarta, 02/12/2026 às 09:00* (faltam 5 dias)
+🟢 Aberta desde 26/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/11806275000133/2027/1
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=15865806000372027
+Nº PNCP 11806275000133-1-000001/2027
+
+════════════════
+
+*📨 MENSAGEM 142/142 · 🛠️ OUTROS SERVIÇOS DE TIC (suporte, infra, dados, segurança)*
+
+🏛️ *Municipio de Brasileia*
+📍 Brasiléia/AC · Municipal
+
+📝 *Objeto:* credenciamento permanente de pessoas jurídicas interessadas em integrar o Sistema de Compras Expressas – SICX para fornecimento, sob demanda, de equipamentos e materiais de tecnologia da informação e comunicação – TIC, abrangendo computadores, estações de trabalho, notebooks, monitores, impressoras, scanners, nobreaks, estabilização e proteção elétrica associada à TIC, componentes e periféricos, armazenamento, rede e conectividade, telefonia e comunicação, câmeras e equipamentos de videomonitoramento, acessórios, peças, suprimentos e itens correlatos, por meio de plataforma eletrônica, mediante participação em futuras oportunidades de compra destinadas ao atendimento das necessidades da…
+
+💰 *Valor estimado:* R$ 0,01
+⚖️ Credenciamento
+🖥️ Portal: Licitar Digital - Plataforma de Licitações Online
+📅 *Propostas até quarta, 13/10/2027 às 23:59* (faltam 320 dias)
+🟢 Aberta desde 13/10/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/04508933000145/2026/19
+🌐 Disputa: https://app2.ecompras.org.br/pesquisa/116067
+Nº PNCP 04508933000145-1-000019/2026

@@ -1,0 +1,78 @@
+*💻 DESENVOLVIMENTO E SUSTENTAÇÃO DE SOFTWARE* · 4 mensagens (ordem de prioridade) · lista de 27/11/2026
+
+════════════════
+
+*📨 MENSAGEM 1/4 · 💻 DESENVOLVIMENTO E SUSTENTAÇÃO DE SOFTWARE*
+
+🏛️ *Agencia Nacional de Saude Suplementar*
+📍 Rio de Janeiro/RJ · Federal
+
+📝 *Objeto:* Contratação de empresa especializada no serviço de desenvolvimento de software e atendimento de demandas pontuais relativas às plataformas digitais, a arquitetura de sistemas e inteligência artificial, conforme condições, quantidades e exigências estabelecidas no Edital e seus anexos.
+
+💰 *Valor estimado:* R$ 19,73 mi
+🗓️ *Mensal:* R$ 300.890,91/mês × 12 meses
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 14/12/2026 às 10:00* (faltam 17 dias)
+🟢 Aberta desde 30/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/03589068000146/2026/92
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=25300305001162026
+Nº PNCP 03589068000146-1-000092/2026
+
+════════════════
+
+*📨 MENSAGEM 2/4 · 💻 DESENVOLVIMENTO E SUSTENTAÇÃO DE SOFTWARE*
+
+🏛️ *Servico de Apoio As Micro e Pequenas Empresas do Parana - Sebrae/pr*
+📍 Curitiba/PR
+
+📝 *Objeto:* [Portal de Compras Públicas] - Contratação de serviços especializados de TI para suporte a usuários, sustentação de ambientes tecnológicos, manutenção e desenvolvimento de sistemas, integrações e documentação técnica, com possível uso de Inteligência Artificial conforme as necessidades do Sebrae/PR.
+
+💰 *Valor estimado:* R$ 46.165,00
+⚖️ Pregão - Eletrônico
+🖥️ Portal: ECustomize Consultoria em Software S.A
+📅 *Propostas até segunda, 30/11/2026 às 09:30* (faltam 3 dias)
+🟢 Aberta desde 23/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/75110585000100/2026/20
+🌐 Disputa: https://www.portaldecompraspublicas.com.br/processos/PR/Servico-de-Apoio-as-Micro-e-Pequenas-Empresas-do-Parana-SEBRAE-4504/PEP-19-2026-2026-524290
+Nº PNCP 75110585000100-1-000020/2026
+
+════════════════
+
+*📨 MENSAGEM 3/4 · 💻 DESENVOLVIMENTO E SUSTENTAÇÃO DE SOFTWARE*
+
+🏛️ *Universidade Estadual de Montes Claros*
+📍 Montes Claros/MG · Estadual
+
+📝 *Objeto:* SOLUÇÕES DE INTELIGÊNCIA ARTIFICIAL (SaaS/PaaS) PARA AUTOMAÇÃO, APOIO ADMINISTRATIVO E DESENVOLVIMENTO DE SOFTWARE, E HOSPEDAGEM EM NUVEM (CLOUD DATACENTER) DEDICADA.
+
+💰 *Valor estimado:* R$ 66.278,19
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Portal de Compras do Estado de Minas Gerais
+📅 *Propostas até terça, 01/12/2026 às 09:00* (faltam 4 dias)
+🟢 Aberta desde 16/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/22675359000100/2026/97
+🌐 Disputa: https://www1.compras.mg.gov.br/n/procedimentolei14133/consulta/eletronico/visualizar/2026/95/2311021
+Nº PNCP 22675359000100-1-000097/2026
+
+════════════════
+
+*📨 MENSAGEM 4/4 · 💻 DESENVOLVIMENTO E SUSTENTAÇÃO DE SOFTWARE*
+
+🏛️ *Banco do Nordeste do Brasil*
+📍 Fortaleza/CE · Federal
+
+📝 *Objeto:* Contratação de subscrição Redis Enterprise como solução corporativa de banco de dados em memória, com suporte técnico, assistência especializada e capacitação, para sustentação de aplicações críticas do Banco do Nordeste.
+
+💰 *Valor estimado:* sigiloso
+⚖️ Pregão - Eletrônico
+🖥️ Portal: Compras.gov.br
+📅 *Propostas até segunda, 30/11/2026 às 09:59* (faltam 3 dias)
+🟢 Aberta desde 05/11/2026
+
+🔗 Edital no PNCP: https://pncp.gov.br/app/editais/07237373000120/2026/92
+🌐 Disputa: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-compra?compra=17908505000372026
+Nº PNCP 07237373000120-1-000092/2026
