@@ -1,0 +1,89 @@
+{
+ "inicio": "2026-11-27T21:30:34.273747",
+ "execucao": "46070517108",
+ "passos": {
+  "ibge": 5571,
+  "pncp_propostas_abertas": {
+   "status": "ok",
+   "lidos": 30073,
+   "novos": 30068,
+   "atualizados": 0,
+   "chamadas": 603,
+   "mensagem": null
+  },
+  "pncp_publicados_e_alterados": {
+   "status": "parcial",
+   "lidos": 13238,
+   "novos": 5313,
+   "atualizados": 2,
+   "chamadas": 266,
+   "mensagem": "interrompida pelo limite de tempo da coleta"
+  },
+  "pncp_pregoes_30_dias": {
+   "status": "parcial",
+   "lidos": 12301,
+   "novos": 10134,
+   "atualizados": 0,
+   "chamadas": 247,
+   "mensagem": "interrompida pelo limite de tempo da coleta"
+  },
+  "comprasgov": {
+   "status": "ok",
+   "lidos": 6115,
+   "novos": 2833,
+   "atualizados": 15,
+   "chamadas": 23,
+   "mensagem": null
+  },
+  "pacote_anterior": {
+   "editais": 15022,
+   "documentos": 4304,
+   "textos": 2549
+  },
+  "documentos_relevantes": {
+   "editais": 119,
+   "itens": 1222,
+   "documentos": 334,
+   "baixados": 332,
+   "falhas": [
+    {
+     "id": "pncp:45787678000102-1-000404/2026",
+     "erro": "ErroFonte: HTTP 404: {\"timestamp\":\"2026-11-27T21:50:02.586780747-03:00\",\"status\":\"404\",\"error\":\"404 NOT_FOUND\",\"message\":\"Contratação não cadastrada.\",\"path\":\"/pncp-api/v1/orgaos/45787678000102/compras/2026/404/itens\"}"
+    }
+   ]
+  },
+  "itens_e_documentos_listados": {
+   "alvo": 1599,
+   "com_indicio": 382,
+   "ja_detalhados": 1289,
+   "detalhados": 308,
+   "itens": 2120,
+   "documentos": 722,
+   "falhas": 2
+  },
+  "itens_de_todos_os_editais": {
+   "sem_itens": 13362,
+   "alvo": 4239,
+   "lidos": 2847,
+   "itens": 57333,
+   "viraram_ti_ou_documental": 21,
+   "falhas": 6,
+   "interrompido_por_tempo": true,
+   "restam": 1386
+  },
+  "querido_diario": {
+   "status": "erro",
+   "lidos": 0,
+   "novos": 0,
+   "atualizados": 0,
+   "chamadas": 4,
+   "mensagem": "FalhaTemporaria: HTTP 503 persistente"
+  }
+ },
+ "orcamento_minutos": 280.0,
+ "fim": "2026-11-28T01:55:32.647781",
+ "editais_exportados": 48348,
+ "editais_detalhados": 18290,
+ "municipios": 5571,
+ "exportado_em": "2026-11-28T02:40:39.628748"
+}
